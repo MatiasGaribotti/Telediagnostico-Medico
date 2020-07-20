@@ -22,12 +22,9 @@ Partial Class F_Pacientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Pacientes))
         Me.pnl_contenedor = New System.Windows.Forms.Panel()
         Me.pnl_dgv_pacientes = New System.Windows.Forms.DataGridView()
         Me.pnl_filtrar = New System.Windows.Forms.Panel()
-        Me.btn_minimizar = New System.Windows.Forms.Button()
-        Me.btn_cerrar = New System.Windows.Forms.Button()
         Me.btn_filtrar = New System.Windows.Forms.Button()
         Me.txt_emailFiltrar = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -115,8 +112,6 @@ Partial Class F_Pacientes
         'pnl_filtrar
         '
         Me.pnl_filtrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
-        Me.pnl_filtrar.Controls.Add(Me.btn_minimizar)
-        Me.pnl_filtrar.Controls.Add(Me.btn_cerrar)
         Me.pnl_filtrar.Controls.Add(Me.btn_filtrar)
         Me.pnl_filtrar.Controls.Add(Me.txt_emailFiltrar)
         Me.pnl_filtrar.Controls.Add(Me.Label9)
@@ -143,24 +138,6 @@ Partial Class F_Pacientes
         Me.pnl_filtrar.Name = "pnl_filtrar"
         Me.pnl_filtrar.Size = New System.Drawing.Size(882, 559)
         Me.pnl_filtrar.TabIndex = 1
-        '
-        'btn_minimizar
-        '
-        Me.btn_minimizar.Image = CType(resources.GetObject("btn_minimizar.Image"), System.Drawing.Image)
-        Me.btn_minimizar.Location = New System.Drawing.Point(770, -4)
-        Me.btn_minimizar.Name = "btn_minimizar"
-        Me.btn_minimizar.Size = New System.Drawing.Size(55, 57)
-        Me.btn_minimizar.TabIndex = 52
-        Me.btn_minimizar.UseVisualStyleBackColor = True
-        '
-        'btn_cerrar
-        '
-        Me.btn_cerrar.Image = CType(resources.GetObject("btn_cerrar.Image"), System.Drawing.Image)
-        Me.btn_cerrar.Location = New System.Drawing.Point(828, -4)
-        Me.btn_cerrar.Name = "btn_cerrar"
-        Me.btn_cerrar.Size = New System.Drawing.Size(58, 57)
-        Me.btn_cerrar.TabIndex = 51
-        Me.btn_cerrar.UseVisualStyleBackColor = True
         '
         'btn_filtrar
         '
@@ -824,20 +801,20 @@ Partial Class F_Pacientes
         Me.btn_volver.FlatAppearance.BorderSize = 0
         Me.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_volver.Image = Global.Presentacion.My.Resources.Resources.btn_volver_85x30
-        Me.btn_volver.Location = New System.Drawing.Point(9, 8)
+        Me.btn_volver.Location = New System.Drawing.Point(21, 6)
         Me.btn_volver.Name = "btn_volver"
         Me.btn_volver.Size = New System.Drawing.Size(93, 38)
         Me.btn_volver.TabIndex = 0
         Me.btn_volver.UseVisualStyleBackColor = False
         '
-        'frm_PacientesIngresarFiltrar
+        'F_Pacientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1920, 1080)
         Me.Controls.Add(Me.pnl_contenedor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frm_PacientesIngresarFiltrar"
+        Me.Name = "F_Pacientes"
         Me.ShowInTaskbar = False
         Me.Text = "frmPacientesIngresarFiltrar"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -911,7 +888,5 @@ Partial Class F_Pacientes
     Friend WithEvents txt_calleFiltrar As TextBox
     Friend WithEvents txt_emailFiltrar As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents btn_minimizar As Button
-    Friend WithEvents btn_cerrar As Button
     Friend WithEvents btn_filtrar As Button
 End Class

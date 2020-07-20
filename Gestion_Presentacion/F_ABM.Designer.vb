@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class F_ABM
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,207 +20,236 @@ Partial Class F_ABM
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_ABM))
-        Me.PanelTotal = New System.Windows.Forms.Panel()
-        Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnCerrarSesion = New System.Windows.Forms.Button()
-        Me.btnPacientes = New System.Windows.Forms.Button()
-        Me.btnSintomas = New System.Windows.Forms.Button()
-        Me.btnEnfermedades = New System.Windows.Forms.Button()
-        Me.lblEnfermedades = New System.Windows.Forms.Label()
-        Me.lblSintomas = New System.Windows.Forms.Label()
-        Me.btnHorarios = New System.Windows.Forms.Button()
-        Me.lblHorarios = New System.Windows.Forms.Label()
-        Me.btnPersonal = New System.Windows.Forms.Button()
-        Me.lblPersonal = New System.Windows.Forms.Label()
-        Me.lblPacientes = New System.Windows.Forms.Label()
-        Me.PanelTotal.SuspendLayout()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Btn_Enfermedades = New Guna.UI2.WinForms.Guna2Button()
+        Me.Btn_Sitnomas = New Guna.UI2.WinForms.Guna2Button()
+        Me.Btn_Horarios = New Guna.UI2.WinForms.Guna2Button()
+        Me.Btn_Personal = New Guna.UI2.WinForms.Guna2Button()
+        Me.Btn_Pacientes = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PanelTotal
+        'Guna2Panel1
         '
-        Me.PanelTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.PanelTotal.Controls.Add(Me.btnCerrar)
-        Me.PanelTotal.Controls.Add(Me.btnMinimizar)
-        Me.PanelTotal.Controls.Add(Me.btnCerrarSesion)
-        Me.PanelTotal.Controls.Add(Me.btnPacientes)
-        Me.PanelTotal.Controls.Add(Me.btnSintomas)
-        Me.PanelTotal.Controls.Add(Me.btnEnfermedades)
-        Me.PanelTotal.Controls.Add(Me.lblEnfermedades)
-        Me.PanelTotal.Controls.Add(Me.lblSintomas)
-        Me.PanelTotal.Controls.Add(Me.btnHorarios)
-        Me.PanelTotal.Controls.Add(Me.lblHorarios)
-        Me.PanelTotal.Controls.Add(Me.btnPersonal)
-        Me.PanelTotal.Controls.Add(Me.lblPersonal)
-        Me.PanelTotal.Controls.Add(Me.lblPacientes)
-        Me.PanelTotal.Location = New System.Drawing.Point(1, 0)
-        Me.PanelTotal.Name = "PanelTotal"
-        Me.PanelTotal.Size = New System.Drawing.Size(1920, 1080)
-        Me.PanelTotal.TabIndex = 0
+        Me.Guna2Panel1.Controls.Add(Me.Btn_Minimize)
+        Me.Guna2Panel1.Controls.Add(Me.Btn_Exit)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel3)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel2)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel5)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel4)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Guna2Panel1.Controls.Add(Me.Btn_Enfermedades)
+        Me.Guna2Panel1.Controls.Add(Me.Btn_Sitnomas)
+        Me.Guna2Panel1.Controls.Add(Me.Btn_Horarios)
+        Me.Guna2Panel1.Controls.Add(Me.Btn_Personal)
+        Me.Guna2Panel1.Controls.Add(Me.Btn_Pacientes)
+        Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1920, 1080)
+        Me.Guna2Panel1.TabIndex = 0
         '
-        'btnCerrar
+        'Btn_Minimize
         '
-        Me.btnCerrar.BackColor = System.Drawing.Color.Transparent
-        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.ForeColor = System.Drawing.Color.Transparent
-        Me.btnCerrar.Image = CType(resources.GetObject("btnCerrar.Image"), System.Drawing.Image)
-        Me.btnCerrar.Location = New System.Drawing.Point(1846, -1)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(58, 56)
-        Me.btnCerrar.TabIndex = 12
-        Me.btnCerrar.UseVisualStyleBackColor = False
+        Me.Btn_Minimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Btn_Minimize.Animated = True
+        Me.Btn_Minimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.Btn_Minimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.Btn_Minimize.HoverState.Parent = Me.Btn_Minimize
+        Me.Btn_Minimize.IconColor = System.Drawing.Color.White
+        Me.Btn_Minimize.Location = New System.Drawing.Point(1830, 0)
+        Me.Btn_Minimize.Margin = New System.Windows.Forms.Padding(0)
+        Me.Btn_Minimize.Name = "Btn_Minimize"
+        Me.Btn_Minimize.ShadowDecoration.Parent = Me.Btn_Minimize
+        Me.Btn_Minimize.Size = New System.Drawing.Size(45, 29)
+        Me.Btn_Minimize.TabIndex = 6
         '
-        'btnMinimizar
+        'Btn_Exit
         '
-        Me.btnMinimizar.BackColor = System.Drawing.Color.Transparent
-        Me.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
-        Me.btnMinimizar.Location = New System.Drawing.Point(1782, -1)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(58, 56)
-        Me.btnMinimizar.TabIndex = 11
-        Me.btnMinimizar.UseVisualStyleBackColor = False
+        Me.Btn_Exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Btn_Exit.Animated = True
+        Me.Btn_Exit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.Btn_Exit.HoverState.Parent = Me.Btn_Exit
+        Me.Btn_Exit.IconColor = System.Drawing.Color.White
+        Me.Btn_Exit.Location = New System.Drawing.Point(1875, 0)
+        Me.Btn_Exit.Margin = New System.Windows.Forms.Padding(0)
+        Me.Btn_Exit.Name = "Btn_Exit"
+        Me.Btn_Exit.ShadowDecoration.Parent = Me.Btn_Exit
+        Me.Btn_Exit.Size = New System.Drawing.Size(45, 29)
+        Me.Btn_Exit.TabIndex = 5
         '
-        'btnCerrarSesion
+        'Guna2HtmlLabel3
         '
-        Me.btnCerrarSesion.FlatAppearance.BorderSize = 0
-        Me.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrarSesion.Image = Global.Presentacion.My.Resources.Resources.btn_terminar_sesion
-        Me.btnCerrarSesion.Location = New System.Drawing.Point(847, 859)
-        Me.btnCerrarSesion.Name = "btnCerrarSesion"
-        Me.btnCerrarSesion.Size = New System.Drawing.Size(228, 54)
-        Me.btnCerrarSesion.TabIndex = 10
-        Me.btnCerrarSesion.UseVisualStyleBackColor = True
+        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(1130, 479)
+        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(126, 40)
+        Me.Guna2HtmlLabel3.TabIndex = 2
+        Me.Guna2HtmlLabel3.Text = "Horarios"
         '
-        'btnPacientes
+        'Guna2HtmlLabel2
         '
-        Me.btnPacientes.Location = New System.Drawing.Point(576, 228)
-        Me.btnPacientes.Name = "btnPacientes"
-        Me.btnPacientes.Size = New System.Drawing.Size(250, 250)
-        Me.btnPacientes.TabIndex = 0
-        Me.btnPacientes.UseVisualStyleBackColor = True
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(836, 479)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(129, 40)
+        Me.Guna2HtmlLabel2.TabIndex = 2
+        Me.Guna2HtmlLabel2.Text = "Personal"
         '
-        'btnSintomas
+        'Guna2HtmlLabel5
         '
-        Me.btnSintomas.Location = New System.Drawing.Point(709, 545)
-        Me.btnSintomas.Name = "btnSintomas"
-        Me.btnSintomas.Size = New System.Drawing.Size(250, 250)
-        Me.btnSintomas.TabIndex = 6
-        Me.btnSintomas.UseVisualStyleBackColor = True
+        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(942, 795)
+        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(210, 40)
+        Me.Guna2HtmlLabel5.TabIndex = 2
+        Me.Guna2HtmlLabel5.Text = "Enfermedades"
         '
-        'btnEnfermedades
+        'Guna2HtmlLabel4
         '
-        Me.btnEnfermedades.Location = New System.Drawing.Point(980, 545)
-        Me.btnEnfermedades.Name = "btnEnfermedades"
-        Me.btnEnfermedades.Size = New System.Drawing.Size(250, 250)
-        Me.btnEnfermedades.TabIndex = 9
-        Me.btnEnfermedades.UseVisualStyleBackColor = True
+        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(706, 795)
+        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(138, 40)
+        Me.Guna2HtmlLabel4.TabIndex = 2
+        Me.Guna2HtmlLabel4.Text = "Sintomas"
         '
-        'lblEnfermedades
+        'Guna2HtmlLabel1
         '
-        Me.lblEnfermedades.BackColor = System.Drawing.Color.Transparent
-        Me.lblEnfermedades.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEnfermedades.Location = New System.Drawing.Point(980, 785)
-        Me.lblEnfermedades.Name = "lblEnfermedades"
-        Me.lblEnfermedades.Size = New System.Drawing.Size(250, 52)
-        Me.lblEnfermedades.TabIndex = 8
-        Me.lblEnfermedades.Text = "Enfermedades"
-        Me.lblEnfermedades.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(560, 479)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(144, 40)
+        Me.Guna2HtmlLabel1.TabIndex = 2
+        Me.Guna2HtmlLabel1.Text = "Pacientes"
         '
-        'lblSintomas
+        'Btn_Enfermedades
         '
-        Me.lblSintomas.BackColor = System.Drawing.Color.Transparent
-        Me.lblSintomas.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSintomas.Location = New System.Drawing.Point(709, 785)
-        Me.lblSintomas.Name = "lblSintomas"
-        Me.lblSintomas.Size = New System.Drawing.Size(250, 52)
-        Me.lblSintomas.TabIndex = 7
-        Me.lblSintomas.Text = "Síntomas"
-        Me.lblSintomas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Btn_Enfermedades.Animated = True
+        Me.Btn_Enfermedades.BorderRadius = 33
+        Me.Btn_Enfermedades.CheckedState.Parent = Me.Btn_Enfermedades
+        Me.Btn_Enfermedades.CustomImages.Parent = Me.Btn_Enfermedades
+        Me.Btn_Enfermedades.FillColor = System.Drawing.Color.White
+        Me.Btn_Enfermedades.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Btn_Enfermedades.ForeColor = System.Drawing.Color.White
+        Me.Btn_Enfermedades.HoverState.Parent = Me.Btn_Enfermedades
+        Me.Btn_Enfermedades.Location = New System.Drawing.Point(925, 539)
+        Me.Btn_Enfermedades.Name = "Btn_Enfermedades"
+        Me.Btn_Enfermedades.ShadowDecoration.Parent = Me.Btn_Enfermedades
+        Me.Btn_Enfermedades.Size = New System.Drawing.Size(250, 250)
+        Me.Btn_Enfermedades.TabIndex = 1
         '
-        'btnHorarios
+        'Btn_Sitnomas
         '
-        Me.btnHorarios.Location = New System.Drawing.Point(1118, 228)
-        Me.btnHorarios.Name = "btnHorarios"
-        Me.btnHorarios.Size = New System.Drawing.Size(250, 250)
-        Me.btnHorarios.TabIndex = 5
-        Me.btnHorarios.UseVisualStyleBackColor = True
+        Me.Btn_Sitnomas.Animated = True
+        Me.Btn_Sitnomas.BorderRadius = 33
+        Me.Btn_Sitnomas.CheckedState.Parent = Me.Btn_Sitnomas
+        Me.Btn_Sitnomas.CustomImages.Parent = Me.Btn_Sitnomas
+        Me.Btn_Sitnomas.FillColor = System.Drawing.Color.White
+        Me.Btn_Sitnomas.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Btn_Sitnomas.ForeColor = System.Drawing.Color.White
+        Me.Btn_Sitnomas.HoverState.Parent = Me.Btn_Sitnomas
+        Me.Btn_Sitnomas.Location = New System.Drawing.Point(651, 539)
+        Me.Btn_Sitnomas.Margin = New System.Windows.Forms.Padding(3, 3, 21, 3)
+        Me.Btn_Sitnomas.Name = "Btn_Sitnomas"
+        Me.Btn_Sitnomas.ShadowDecoration.Parent = Me.Btn_Sitnomas
+        Me.Btn_Sitnomas.Size = New System.Drawing.Size(250, 250)
+        Me.Btn_Sitnomas.TabIndex = 1
         '
-        'lblHorarios
+        'Btn_Horarios
         '
-        Me.lblHorarios.BackColor = System.Drawing.Color.Transparent
-        Me.lblHorarios.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHorarios.Location = New System.Drawing.Point(1118, 468)
-        Me.lblHorarios.Name = "lblHorarios"
-        Me.lblHorarios.Size = New System.Drawing.Size(250, 52)
-        Me.lblHorarios.TabIndex = 4
-        Me.lblHorarios.Text = "Horarios"
-        Me.lblHorarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Btn_Horarios.Animated = True
+        Me.Btn_Horarios.BorderRadius = 33
+        Me.Btn_Horarios.CheckedState.Parent = Me.Btn_Horarios
+        Me.Btn_Horarios.CustomImages.Parent = Me.Btn_Horarios
+        Me.Btn_Horarios.FillColor = System.Drawing.Color.White
+        Me.Btn_Horarios.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Btn_Horarios.ForeColor = System.Drawing.Color.White
+        Me.Btn_Horarios.HoverState.Parent = Me.Btn_Horarios
+        Me.Btn_Horarios.Location = New System.Drawing.Point(1062, 223)
+        Me.Btn_Horarios.Margin = New System.Windows.Forms.Padding(3, 3, 27, 3)
+        Me.Btn_Horarios.Name = "Btn_Horarios"
+        Me.Btn_Horarios.ShadowDecoration.Parent = Me.Btn_Horarios
+        Me.Btn_Horarios.Size = New System.Drawing.Size(250, 250)
+        Me.Btn_Horarios.TabIndex = 1
         '
-        'btnPersonal
+        'Btn_Personal
         '
-        Me.btnPersonal.Location = New System.Drawing.Point(847, 228)
-        Me.btnPersonal.Name = "btnPersonal"
-        Me.btnPersonal.Size = New System.Drawing.Size(250, 250)
-        Me.btnPersonal.TabIndex = 3
-        Me.btnPersonal.UseVisualStyleBackColor = True
+        Me.Btn_Personal.Animated = True
+        Me.Btn_Personal.BorderRadius = 33
+        Me.Btn_Personal.CheckedState.Parent = Me.Btn_Personal
+        Me.Btn_Personal.CustomImages.Parent = Me.Btn_Personal
+        Me.Btn_Personal.FillColor = System.Drawing.Color.White
+        Me.Btn_Personal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Btn_Personal.ForeColor = System.Drawing.Color.White
+        Me.Btn_Personal.HoverState.Parent = Me.Btn_Personal
+        Me.Btn_Personal.Location = New System.Drawing.Point(782, 223)
+        Me.Btn_Personal.Margin = New System.Windows.Forms.Padding(3, 3, 27, 3)
+        Me.Btn_Personal.Name = "Btn_Personal"
+        Me.Btn_Personal.ShadowDecoration.Parent = Me.Btn_Personal
+        Me.Btn_Personal.Size = New System.Drawing.Size(250, 250)
+        Me.Btn_Personal.TabIndex = 1
         '
-        'lblPersonal
+        'Btn_Pacientes
         '
-        Me.lblPersonal.BackColor = System.Drawing.Color.Transparent
-        Me.lblPersonal.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPersonal.Location = New System.Drawing.Point(847, 468)
-        Me.lblPersonal.Name = "lblPersonal"
-        Me.lblPersonal.Size = New System.Drawing.Size(250, 52)
-        Me.lblPersonal.TabIndex = 2
-        Me.lblPersonal.Text = "Personal"
-        Me.lblPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Btn_Pacientes.Animated = True
+        Me.Btn_Pacientes.BorderRadius = 33
+        Me.Btn_Pacientes.CheckedState.Parent = Me.Btn_Pacientes
+        Me.Btn_Pacientes.CustomImages.Parent = Me.Btn_Pacientes
+        Me.Btn_Pacientes.FillColor = System.Drawing.Color.White
+        Me.Btn_Pacientes.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Btn_Pacientes.ForeColor = System.Drawing.Color.White
+        Me.Btn_Pacientes.HoverState.Parent = Me.Btn_Pacientes
+        Me.Btn_Pacientes.Location = New System.Drawing.Point(502, 223)
+        Me.Btn_Pacientes.Margin = New System.Windows.Forms.Padding(3, 3, 27, 3)
+        Me.Btn_Pacientes.Name = "Btn_Pacientes"
+        Me.Btn_Pacientes.ShadowDecoration.Parent = Me.Btn_Pacientes
+        Me.Btn_Pacientes.Size = New System.Drawing.Size(250, 250)
+        Me.Btn_Pacientes.TabIndex = 1
         '
-        'lblPacientes
-        '
-        Me.lblPacientes.BackColor = System.Drawing.Color.Transparent
-        Me.lblPacientes.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPacientes.Location = New System.Drawing.Point(576, 468)
-        Me.lblPacientes.Name = "lblPacientes"
-        Me.lblPacientes.Size = New System.Drawing.Size(250, 52)
-        Me.lblPacientes.TabIndex = 1
-        Me.lblPacientes.Text = "Pacientes"
-        Me.lblPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'frmGestionABM
+        'F_ABM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1904, 1041)
-        Me.Controls.Add(Me.PanelTotal)
+        Me.ClientSize = New System.Drawing.Size(1920, 1080)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmGestionABM"
+        Me.Name = "F_ABM"
         Me.Text = "frmGestionABM"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.PanelTotal.ResumeLayout(False)
+        Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents PanelTotal As Panel
-    Friend WithEvents lblPacientes As Label
-    Friend WithEvents btnPacientes As Button
-    Friend WithEvents btnPersonal As Button
-    Friend WithEvents lblPersonal As Label
-    Friend WithEvents btnSintomas As Button
-    Friend WithEvents btnEnfermedades As Button
-    Friend WithEvents lblEnfermedades As Label
-    Friend WithEvents lblSintomas As Label
-    Friend WithEvents btnHorarios As Button
-    Friend WithEvents lblHorarios As Label
-    Friend WithEvents btnCerrar As Button
-    Friend WithEvents btnMinimizar As Button
-    Friend WithEvents btnCerrarSesion As Button
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Btn_Enfermedades As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Btn_Sitnomas As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Btn_Horarios As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Btn_Personal As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Btn_Pacientes As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
 End Class

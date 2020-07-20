@@ -48,36 +48,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FlatButton">
-      <HintPath>dll\FlatButton.dll</HintPath>
-    </Reference>
-    <Reference Include="JDragControl">
-      <HintPath>dll\JDragControl.dll</HintPath>
-    </Reference>
-    <Reference Include="JGradient Panel">
-      <HintPath>dll\JGradient Panel.dll</HintPath>
-    </Reference>
-    <Reference Include="JImageButton">
-      <HintPath>dll\JImageButton.dll</HintPath>
-    </Reference>
-    <Reference Include="JMaterialTextbox">
-      <HintPath>dll\JMaterialTextbox.dll</HintPath>
-    </Reference>
-    <Reference Include="JMetroTextBox">
-      <HintPath>dll\JMetroTextBox.dll</HintPath>
-    </Reference>
-    <Reference Include="JTextBox">
-      <HintPath>dll\JTextBox.dll</HintPath>
-    </Reference>
-    <Reference Include="JTextBox2">
-      <HintPath>dll\JTextBox2.dll</HintPath>
-    </Reference>
-    <Reference Include="JThinButton">
-      <HintPath>dll\JThinButton.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Documents\VS.NET Solutions\ABM Usuarios\ABM Usuarios\mysql-connector-net-8.0.20-noinstall\v4.5.2\MySql.Data.dll</HintPath>
+    <Reference Include="Guna.UI2">
+      <HintPath>dll\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -263,6 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Síntomas L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.vbproj">
+      <Project>{c37289a7-6b3a-4486-8fb3-0ef59dcb349c}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

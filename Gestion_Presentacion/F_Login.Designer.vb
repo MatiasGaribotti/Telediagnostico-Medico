@@ -22,163 +22,196 @@ Partial Class F_Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.pnl_login = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.lbl_Paciente = New System.Windows.Forms.Label()
-        Me.lbl_password = New System.Windows.Forms.Label()
-        Me.lbl_ci = New System.Windows.Forms.Label()
-        Me.pic_ = New System.Windows.Forms.PictureBox()
-        Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Login))
         Me.pic_background = New System.Windows.Forms.PictureBox()
-        Me.pnl_login.SuspendLayout()
-        CType(Me.pic_, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Pnl_Login = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Pic_Login = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Lbl_password = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Lbl_ci = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Btn_Ingresar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Txt_Ci = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         CType(Me.pic_background, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Pnl_Login.SuspendLayout()
+        CType(Me.Pic_Login, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'pnl_login
-        '
-        Me.pnl_login.Controls.Add(Me.TextBox2)
-        Me.pnl_login.Controls.Add(Me.TextBox1)
-        Me.pnl_login.Controls.Add(Me.lbl_Paciente)
-        Me.pnl_login.Controls.Add(Me.lbl_password)
-        Me.pnl_login.Controls.Add(Me.lbl_ci)
-        Me.pnl_login.Controls.Add(Me.pic_)
-        Me.pnl_login.Controls.Add(Me.btnIngresar)
-        Me.pnl_login.Controls.Add(Me.Button1)
-        Me.pnl_login.Location = New System.Drawing.Point(0, 0)
-        Me.pnl_login.Name = "pnl_login"
-        Me.pnl_login.Size = New System.Drawing.Size(500, 1080)
-        Me.pnl_login.TabIndex = 0
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 16.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(237, 574)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(0)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TextBox2.Size = New System.Drawing.Size(230, 29)
-        Me.TextBox2.TabIndex = 4
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 16.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(237, 627)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(230, 29)
-        Me.TextBox1.TabIndex = 4
-        '
-        'lbl_Paciente
-        '
-        Me.lbl_Paciente.AutoSize = True
-        Me.lbl_Paciente.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Paciente.Location = New System.Drawing.Point(3, 1055)
-        Me.lbl_Paciente.Margin = New System.Windows.Forms.Padding(0)
-        Me.lbl_Paciente.Name = "lbl_Paciente"
-        Me.lbl_Paciente.Size = New System.Drawing.Size(67, 21)
-        Me.lbl_Paciente.TabIndex = 3
-        Me.lbl_Paciente.Text = "Paciente"
-        '
-        'lbl_password
-        '
-        Me.lbl_password.AutoSize = True
-        Me.lbl_password.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.lbl_password.Location = New System.Drawing.Point(20, 627)
-        Me.lbl_password.Name = "lbl_password"
-        Me.lbl_password.Size = New System.Drawing.Size(124, 26)
-        Me.lbl_password.TabIndex = 3
-        Me.lbl_password.Text = "Contraseña"
-        '
-        'lbl_ci
-        '
-        Me.lbl_ci.AutoSize = True
-        Me.lbl_ci.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.lbl_ci.Location = New System.Drawing.Point(20, 574)
-        Me.lbl_ci.Name = "lbl_ci"
-        Me.lbl_ci.Size = New System.Drawing.Size(34, 26)
-        Me.lbl_ci.TabIndex = 3
-        Me.lbl_ci.Text = "CI"
-        '
-        'pic_
-        '
-        Me.pic_.Location = New System.Drawing.Point(101, 220)
-        Me.pic_.Name = "pic_"
-        Me.pic_.Size = New System.Drawing.Size(300, 300)
-        Me.pic_.TabIndex = 1
-        Me.pic_.TabStop = False
-        '
-        'btnIngresar
-        '
-        Me.btnIngresar.BackColor = System.Drawing.Color.Transparent
-        Me.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnIngresar.FlatAppearance.BorderSize = 0
-        Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIngresar.Image = Global.Presentacion.My.Resources.Resources.Ingresar_Button
-        Me.btnIngresar.Location = New System.Drawing.Point(170, 700)
-        Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(162, 54)
-        Me.btnIngresar.TabIndex = 0
-        Me.btnIngresar.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.Presentacion.My.Resources.Resources.es_icon
-        Me.Button1.Location = New System.Drawing.Point(7, 7)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(54, 45)
-        Me.Button1.TabIndex = 0
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'pic_background
         '
         Me.pic_background.Image = Global.Presentacion.My.Resources.Resources.background
-        Me.pic_background.Location = New System.Drawing.Point(499, 0)
-        Me.pic_background.Margin = New System.Windows.Forms.Padding(0)
+        resources.ApplyResources(Me.pic_background, "pic_background")
         Me.pic_background.Name = "pic_background"
-        Me.pic_background.Size = New System.Drawing.Size(1420, 1080)
-        Me.pic_background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pic_background.TabIndex = 1
         Me.pic_background.TabStop = False
         '
-        'frmLogin
+        'Pnl_Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.Pnl_Login.Controls.Add(Me.Guna2Button2)
+        Me.Pnl_Login.Controls.Add(Me.Pic_Login)
+        Me.Pnl_Login.Controls.Add(Me.Lbl_password)
+        Me.Pnl_Login.Controls.Add(Me.Lbl_ci)
+        Me.Pnl_Login.Controls.Add(Me.Btn_Ingresar)
+        Me.Pnl_Login.Controls.Add(Me.Guna2TextBox2)
+        Me.Pnl_Login.Controls.Add(Me.Txt_Ci)
+        Me.Pnl_Login.FillColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        resources.ApplyResources(Me.Pnl_Login, "Pnl_Login")
+        Me.Pnl_Login.Name = "Pnl_Login"
+        Me.Pnl_Login.ShadowDecoration.Parent = Me.Pnl_Login
+        '
+        'Guna2Button2
+        '
+        Me.Guna2Button2.Animated = True
+        Me.Guna2Button2.AutoRoundedCorners = True
+        Me.Guna2Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button2.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Button2.BorderRadius = 16
+        Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
+        Me.Guna2Button2.FillColor = System.Drawing.Color.Transparent
+        resources.ApplyResources(Me.Guna2Button2, "Guna2Button2")
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
+        Me.Guna2Button2.ImageSize = New System.Drawing.Size(64, 45)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
+        Me.Guna2Button2.UseTransparentBackground = True
+        '
+        'Pic_Login
+        '
+        Me.Pic_Login.BorderRadius = 33
+        Me.Pic_Login.Image = Global.Presentacion.My.Resources.Resources.background
+        resources.ApplyResources(Me.Pic_Login, "Pic_Login")
+        Me.Pic_Login.Name = "Pic_Login"
+        Me.Pic_Login.ShadowDecoration.Parent = Me.Pic_Login
+        Me.Pic_Login.TabStop = False
+        '
+        'Lbl_password
+        '
+        Me.Lbl_password.BackColor = System.Drawing.Color.Transparent
+        resources.ApplyResources(Me.Lbl_password, "Lbl_password")
+        Me.Lbl_password.Name = "Lbl_password"
+        '
+        'Lbl_ci
+        '
+        Me.Lbl_ci.BackColor = System.Drawing.Color.Transparent
+        resources.ApplyResources(Me.Lbl_ci, "Lbl_ci")
+        Me.Lbl_ci.Name = "Lbl_ci"
+        '
+        'Btn_Ingresar
+        '
+        Me.Btn_Ingresar.Animated = True
+        Me.Btn_Ingresar.AutoRoundedCorners = True
+        Me.Btn_Ingresar.BackColor = System.Drawing.Color.Transparent
+        Me.Btn_Ingresar.BorderRadius = 22
+        Me.Btn_Ingresar.CheckedState.Parent = Me.Btn_Ingresar
+        Me.Btn_Ingresar.CustomImages.Parent = Me.Btn_Ingresar
+        Me.Btn_Ingresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.Btn_Ingresar, "Btn_Ingresar")
+        Me.Btn_Ingresar.ForeColor = System.Drawing.Color.White
+        Me.Btn_Ingresar.HoverState.Parent = Me.Btn_Ingresar
+        Me.Btn_Ingresar.Name = "Btn_Ingresar"
+        Me.Btn_Ingresar.ShadowDecoration.Parent = Me.Btn_Ingresar
+        Me.Btn_Ingresar.UseTransparentBackground = True
+        '
+        'Guna2TextBox2
+        '
+        Me.Guna2TextBox2.Animated = True
+        Me.Guna2TextBox2.BorderRadius = 16
+        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TextBox2.DefaultText = ""
+        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox2.DisabledState.Parent = Me.Guna2TextBox2
+        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox2.FocusedState.Parent = Me.Guna2TextBox2
+        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox2.HoverState.Parent = Me.Guna2TextBox2
+        resources.ApplyResources(Me.Guna2TextBox2, "Guna2TextBox2")
+        Me.Guna2TextBox2.Name = "Guna2TextBox2"
+        Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TextBox2.PlaceholderText = ""
+        Me.Guna2TextBox2.SelectedText = ""
+        Me.Guna2TextBox2.ShadowDecoration.Parent = Me.Guna2TextBox2
+        '
+        'Txt_Ci
+        '
+        Me.Txt_Ci.Animated = True
+        Me.Txt_Ci.BorderRadius = 16
+        Me.Txt_Ci.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Txt_Ci.DefaultText = ""
+        Me.Txt_Ci.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Txt_Ci.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Txt_Ci.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Txt_Ci.DisabledState.Parent = Me.Txt_Ci
+        Me.Txt_Ci.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Txt_Ci.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Txt_Ci.FocusedState.Parent = Me.Txt_Ci
+        Me.Txt_Ci.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Txt_Ci.HoverState.Parent = Me.Txt_Ci
+        resources.ApplyResources(Me.Txt_Ci, "Txt_Ci")
+        Me.Txt_Ci.Name = "Txt_Ci"
+        Me.Txt_Ci.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Txt_Ci.PlaceholderText = ""
+        Me.Txt_Ci.SelectedText = ""
+        Me.Txt_Ci.ShadowDecoration.Parent = Me.Txt_Ci
+        '
+        'Btn_Exit
+        '
+        resources.ApplyResources(Me.Btn_Exit, "Btn_Exit")
+        Me.Btn_Exit.Animated = True
+        Me.Btn_Exit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.Btn_Exit.HoverState.Parent = Me.Btn_Exit
+        Me.Btn_Exit.IconColor = System.Drawing.Color.White
+        Me.Btn_Exit.Name = "Btn_Exit"
+        Me.Btn_Exit.ShadowDecoration.Parent = Me.Btn_Exit
+        '
+        'Btn_Minimize
+        '
+        resources.ApplyResources(Me.Btn_Minimize, "Btn_Minimize")
+        Me.Btn_Minimize.Animated = True
+        Me.Btn_Minimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.Btn_Minimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.Btn_Minimize.HoverState.Parent = Me.Btn_Minimize
+        Me.Btn_Minimize.IconColor = System.Drawing.Color.White
+        Me.Btn_Minimize.Name = "Btn_Minimize"
+        Me.Btn_Minimize.ShadowDecoration.Parent = Me.Btn_Minimize
+        '
+        'F_Login
+        '
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1920, 1080)
+        Me.Controls.Add(Me.Btn_Minimize)
+        Me.Controls.Add(Me.Btn_Exit)
+        Me.Controls.Add(Me.Pnl_Login)
         Me.Controls.Add(Me.pic_background)
-        Me.Controls.Add(Me.pnl_login)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmLogin"
-        Me.Text = "Login"
+        Me.Name = "F_Login"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.pnl_login.ResumeLayout(False)
-        Me.pnl_login.PerformLayout()
-        CType(Me.pic_, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_background, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Pnl_Login.ResumeLayout(False)
+        Me.Pnl_Login.PerformLayout()
+        CType(Me.Pic_Login, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents pnl_login As Panel
     Friend WithEvents pic_background As PictureBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents lbl_password As Label
-    Friend WithEvents lbl_ci As Label
-    Friend WithEvents pic_ As PictureBox
-    Friend WithEvents btnIngresar As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents lbl_Paciente As Label
+    Friend WithEvents Pnl_Login As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Pic_Login As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Lbl_password As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Lbl_ci As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Btn_Ingresar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Txt_Ci As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
 End Class
