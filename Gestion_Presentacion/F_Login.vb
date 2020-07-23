@@ -4,6 +4,7 @@ Imports System.Globalization
 
 Public Class F_Login
 
+
     Public Sub New()
         'Establezco el idioma a inglés (Estados Unidos)
         Thread.CurrentThread.CurrentUICulture = New CultureInfo("en-US")

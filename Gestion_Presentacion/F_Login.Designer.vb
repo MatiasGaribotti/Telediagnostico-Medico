@@ -43,13 +43,14 @@ Partial Class F_Login
         '
         'pic_background
         '
-        Me.pic_background.Image = Global.Presentacion.My.Resources.Resources.background
         resources.ApplyResources(Me.pic_background, "pic_background")
+        Me.pic_background.Image = Global.Presentacion.My.Resources.Resources.background
         Me.pic_background.Name = "pic_background"
         Me.pic_background.TabStop = False
         '
         'Pnl_Login
         '
+        resources.ApplyResources(Me.Pnl_Login, "Pnl_Login")
         Me.Pnl_Login.Controls.Add(Me.Guna2Button2)
         Me.Pnl_Login.Controls.Add(Me.Pic_Login)
         Me.Pnl_Login.Controls.Add(Me.Lbl_password)
@@ -58,12 +59,12 @@ Partial Class F_Login
         Me.Pnl_Login.Controls.Add(Me.Guna2TextBox2)
         Me.Pnl_Login.Controls.Add(Me.Txt_Ci)
         Me.Pnl_Login.FillColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
-        resources.ApplyResources(Me.Pnl_Login, "Pnl_Login")
         Me.Pnl_Login.Name = "Pnl_Login"
         Me.Pnl_Login.ShadowDecoration.Parent = Me.Pnl_Login
         '
         'Guna2Button2
         '
+        resources.ApplyResources(Me.Guna2Button2, "Guna2Button2")
         Me.Guna2Button2.Animated = True
         Me.Guna2Button2.AutoRoundedCorners = True
         Me.Guna2Button2.BackColor = System.Drawing.Color.Transparent
@@ -72,7 +73,6 @@ Partial Class F_Login
         Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
         Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
         Me.Guna2Button2.FillColor = System.Drawing.Color.Transparent
-        resources.ApplyResources(Me.Guna2Button2, "Guna2Button2")
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
         Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
         Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
@@ -83,27 +83,28 @@ Partial Class F_Login
         '
         'Pic_Login
         '
+        resources.ApplyResources(Me.Pic_Login, "Pic_Login")
         Me.Pic_Login.BorderRadius = 33
         Me.Pic_Login.Image = Global.Presentacion.My.Resources.Resources.background
-        resources.ApplyResources(Me.Pic_Login, "Pic_Login")
         Me.Pic_Login.Name = "Pic_Login"
         Me.Pic_Login.ShadowDecoration.Parent = Me.Pic_Login
         Me.Pic_Login.TabStop = False
         '
         'Lbl_password
         '
-        Me.Lbl_password.BackColor = System.Drawing.Color.Transparent
         resources.ApplyResources(Me.Lbl_password, "Lbl_password")
+        Me.Lbl_password.BackColor = System.Drawing.Color.Transparent
         Me.Lbl_password.Name = "Lbl_password"
         '
         'Lbl_ci
         '
-        Me.Lbl_ci.BackColor = System.Drawing.Color.Transparent
         resources.ApplyResources(Me.Lbl_ci, "Lbl_ci")
+        Me.Lbl_ci.BackColor = System.Drawing.Color.Transparent
         Me.Lbl_ci.Name = "Lbl_ci"
         '
         'Btn_Ingresar
         '
+        resources.ApplyResources(Me.Btn_Ingresar, "Btn_Ingresar")
         Me.Btn_Ingresar.Animated = True
         Me.Btn_Ingresar.AutoRoundedCorners = True
         Me.Btn_Ingresar.BackColor = System.Drawing.Color.Transparent
@@ -111,7 +112,6 @@ Partial Class F_Login
         Me.Btn_Ingresar.CheckedState.Parent = Me.Btn_Ingresar
         Me.Btn_Ingresar.CustomImages.Parent = Me.Btn_Ingresar
         Me.Btn_Ingresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        resources.ApplyResources(Me.Btn_Ingresar, "Btn_Ingresar")
         Me.Btn_Ingresar.ForeColor = System.Drawing.Color.White
         Me.Btn_Ingresar.HoverState.Parent = Me.Btn_Ingresar
         Me.Btn_Ingresar.Name = "Btn_Ingresar"
@@ -120,6 +120,7 @@ Partial Class F_Login
         '
         'Guna2TextBox2
         '
+        resources.ApplyResources(Me.Guna2TextBox2, "Guna2TextBox2")
         Me.Guna2TextBox2.Animated = True
         Me.Guna2TextBox2.BorderRadius = 16
         Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -133,7 +134,6 @@ Partial Class F_Login
         Me.Guna2TextBox2.FocusedState.Parent = Me.Guna2TextBox2
         Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox2.HoverState.Parent = Me.Guna2TextBox2
-        resources.ApplyResources(Me.Guna2TextBox2, "Guna2TextBox2")
         Me.Guna2TextBox2.Name = "Guna2TextBox2"
         Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox2.PlaceholderText = ""
@@ -142,6 +142,7 @@ Partial Class F_Login
         '
         'Txt_Ci
         '
+        resources.ApplyResources(Me.Txt_Ci, "Txt_Ci")
         Me.Txt_Ci.Animated = True
         Me.Txt_Ci.BorderRadius = 16
         Me.Txt_Ci.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -155,7 +156,6 @@ Partial Class F_Login
         Me.Txt_Ci.FocusedState.Parent = Me.Txt_Ci
         Me.Txt_Ci.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Txt_Ci.HoverState.Parent = Me.Txt_Ci
-        resources.ApplyResources(Me.Txt_Ci, "Txt_Ci")
         Me.Txt_Ci.Name = "Txt_Ci"
         Me.Txt_Ci.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Txt_Ci.PlaceholderText = ""

@@ -158,6 +158,9 @@
     <EmbeddedResource Include="F_Medicos.resx">
       <DependentUpon>F_Medicos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_Pacientes.en-US.resx">
+      <DependentUpon>F_Pacientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Pacientes.resx">
       <DependentUpon>F_Pacientes.vb</DependentUpon>
     </EmbeddedResource>
@@ -253,9 +256,9 @@
     <None Include="My Project\img\Botones\btn-volver 85x30.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Datos\Datos.vbproj">
-      <Project>{c37289a7-6b3a-4486-8fb3-0ef59dcb349c}</Project>
-      <Name>Datos</Name>
+    <ProjectReference Include="..\Logica\Logica.vbproj">
+      <Project>{b52ef56b-5fc4-4a75-89c1-7534cccedc1c}</Project>
+      <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

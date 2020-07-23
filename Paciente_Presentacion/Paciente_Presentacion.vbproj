@@ -99,6 +99,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -237,9 +238,9 @@
     <None Include="Resources\Síntomas L.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Datos\Datos.vbproj">
-      <Project>{c37289a7-6b3a-4486-8fb3-0ef59dcb349c}</Project>
-      <Name>Datos</Name>
+    <ProjectReference Include="..\Logica\Logica.vbproj">
+      <Project>{b52ef56b-5fc4-4a75-89c1-7534cccedc1c}</Project>
+      <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

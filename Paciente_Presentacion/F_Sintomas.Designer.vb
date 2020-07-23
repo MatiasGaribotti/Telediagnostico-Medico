@@ -270,7 +270,7 @@ Partial Class F_Sintomas
         Me.Btn_Aceptar.TabIndex = 1
         Me.Btn_Aceptar.UseVisualStyleBackColor = False
         '
-        'frm_mainSintomas
+        'F_Sintomas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -282,7 +282,7 @@ Partial Class F_Sintomas
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.IsMdiContainer = True
-        Me.Name = "frm_mainSintomas"
+        Me.Name = "F_Sintomas"
         Me.Text = "Seleccionar Síntomas"
         Me.LeftPanel.ResumeLayout(False)
         Me.LeftPanel.PerformLayout()
