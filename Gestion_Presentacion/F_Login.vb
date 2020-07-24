@@ -12,7 +12,7 @@ Public Class F_Login
         'Color del fondo del formulario
         Me.BackColor = ColorTranslator.FromHtml("#E9F4F5")
         'Testing
-        Txt_Ci.Text = Thread.CurrentThread.CurrentUICulture.ToString
+        TxtCi.Text = Thread.CurrentThread.CurrentUICulture.ToString
     End Sub
 
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click

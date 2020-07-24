@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class F_Enfermedades
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,366 +20,685 @@ Partial Class F_Enfermedades
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Enfermedades))
-        Me.pnl_fondo = New System.Windows.Forms.Panel()
-        Me.btn_minimizar = New System.Windows.Forms.Button()
-        Me.btn_cerrar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.pnl_ingresarFiltrar = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.btn_medMenos = New System.Windows.Forms.Button()
-        Me.btn_medMas = New System.Windows.Forms.Button()
-        Me.btn_filtrar = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.lbl_medicacion = New System.Windows.Forms.Label()
-        Me.lbl_urgencia = New System.Windows.Forms.Label()
-        Me.lbl_enfermedad = New System.Windows.Forms.Label()
-        Me.lbl_ingresar = New System.Windows.Forms.Label()
-        Me.btn_volver = New System.Windows.Forms.Button()
-        Me.lbl_buqueda = New System.Windows.Forms.Label()
-        Me.pnl_fondo.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnl_ingresarFiltrar.SuspendLayout()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.PnlSide = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PnlDgv = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.DgvEnfermedades = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.LblImportar = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.TxtImportar = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
+        Me.TxtIDescripcion = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.LblIDescripcion = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.BtnImportar = New Guna.UI2.WinForms.Guna2Button()
+        Me.LblIngresar = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.BtnIDelItem = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.BtnIAddItem = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.CmbIMedicacion = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbIUrgencia = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.LblIMedicacion = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.LblIUrgencia = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.LblIEnfermedad = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.TxtIEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnVolver = New Guna.UI2.WinForms.Guna2Button()
+        Me.LblBusqueda = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.BtnBDelItem = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.BtnBAddItem = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.CmbBMedicacion = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbBUrgencia = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.LblEnfermedades = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.LblBUrgencia = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.LblBEnfermedad = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.TxtBEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.PnlSide.SuspendLayout()
+        Me.PnlDgv.SuspendLayout()
+        CType(Me.DgvEnfermedades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'pnl_fondo
+        'PnlSide
         '
-        Me.pnl_fondo.Controls.Add(Me.btn_minimizar)
-        Me.pnl_fondo.Controls.Add(Me.btn_cerrar)
-        Me.pnl_fondo.Controls.Add(Me.DataGridView1)
-        Me.pnl_fondo.Controls.Add(Me.pnl_ingresarFiltrar)
-        Me.pnl_fondo.Location = New System.Drawing.Point(0, 0)
-        Me.pnl_fondo.Name = "pnl_fondo"
-        Me.pnl_fondo.Size = New System.Drawing.Size(1920, 1080)
-        Me.pnl_fondo.TabIndex = 0
+        Me.PnlSide.Controls.Add(Me.LblImportar)
+        Me.PnlSide.Controls.Add(Me.TxtImportar)
+        Me.PnlSide.Controls.Add(Me.BtnIngresar)
+        Me.PnlSide.Controls.Add(Me.TxtIDescripcion)
+        Me.PnlSide.Controls.Add(Me.LblIDescripcion)
+        Me.PnlSide.Controls.Add(Me.BtnImportar)
+        Me.PnlSide.Controls.Add(Me.LblIngresar)
+        Me.PnlSide.Controls.Add(Me.BtnIDelItem)
+        Me.PnlSide.Controls.Add(Me.BtnIAddItem)
+        Me.PnlSide.Controls.Add(Me.CmbIMedicacion)
+        Me.PnlSide.Controls.Add(Me.CmbIUrgencia)
+        Me.PnlSide.Controls.Add(Me.LblIMedicacion)
+        Me.PnlSide.Controls.Add(Me.LblIUrgencia)
+        Me.PnlSide.Controls.Add(Me.LblIEnfermedad)
+        Me.PnlSide.Controls.Add(Me.TxtIEnfermedad)
+        Me.PnlSide.Controls.Add(Me.BtnFiltrar)
+        Me.PnlSide.Controls.Add(Me.BtnVolver)
+        Me.PnlSide.Controls.Add(Me.LblBusqueda)
+        Me.PnlSide.Controls.Add(Me.BtnBDelItem)
+        Me.PnlSide.Controls.Add(Me.BtnBAddItem)
+        Me.PnlSide.Controls.Add(Me.CmbBMedicacion)
+        Me.PnlSide.Controls.Add(Me.CmbBUrgencia)
+        Me.PnlSide.Controls.Add(Me.LblEnfermedades)
+        Me.PnlSide.Controls.Add(Me.LblBUrgencia)
+        Me.PnlSide.Controls.Add(Me.LblBEnfermedad)
+        Me.PnlSide.Controls.Add(Me.TxtBEnfermedad)
+        Me.PnlSide.FillColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.PnlSide.Location = New System.Drawing.Point(0, 0)
+        Me.PnlSide.Margin = New System.Windows.Forms.Padding(0)
+        Me.PnlSide.Name = "PnlSide"
+        Me.PnlSide.ShadowDecoration.Parent = Me.PnlSide
+        Me.PnlSide.Size = New System.Drawing.Size(573, 1080)
+        Me.PnlSide.TabIndex = 0
         '
-        'btn_minimizar
+        'PnlDgv
         '
-        Me.btn_minimizar.FlatAppearance.BorderSize = 0
-        Me.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_minimizar.Image = CType(resources.GetObject("btn_minimizar.Image"), System.Drawing.Image)
-        Me.btn_minimizar.Location = New System.Drawing.Point(1783, 0)
-        Me.btn_minimizar.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_minimizar.Name = "btn_minimizar"
-        Me.btn_minimizar.Size = New System.Drawing.Size(58, 56)
-        Me.btn_minimizar.TabIndex = 3
-        Me.btn_minimizar.UseVisualStyleBackColor = True
+        Me.PnlDgv.Controls.Add(Me.BtnMinimize)
+        Me.PnlDgv.Controls.Add(Me.BtnExit)
+        Me.PnlDgv.Controls.Add(Me.DgvEnfermedades)
+        Me.PnlDgv.FillColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.PnlDgv.Location = New System.Drawing.Point(573, 0)
+        Me.PnlDgv.Margin = New System.Windows.Forms.Padding(0)
+        Me.PnlDgv.Name = "PnlDgv"
+        Me.PnlDgv.ShadowDecoration.Parent = Me.PnlDgv
+        Me.PnlDgv.Size = New System.Drawing.Size(1347, 1080)
+        Me.PnlDgv.TabIndex = 1
         '
-        'btn_cerrar
+        'BtnMinimize
         '
-        Me.btn_cerrar.FlatAppearance.BorderSize = 0
-        Me.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_cerrar.Image = CType(resources.GetObject("btn_cerrar.Image"), System.Drawing.Image)
-        Me.btn_cerrar.Location = New System.Drawing.Point(1853, 0)
-        Me.btn_cerrar.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_cerrar.Name = "btn_cerrar"
-        Me.btn_cerrar.Size = New System.Drawing.Size(58, 56)
-        Me.btn_cerrar.TabIndex = 2
-        Me.btn_cerrar.UseVisualStyleBackColor = True
+        Me.BtnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMinimize.Animated = True
+        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
+        Me.BtnMinimize.IconColor = System.Drawing.Color.White
+        Me.BtnMinimize.Location = New System.Drawing.Point(1257, 0)
+        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnMinimize.Name = "BtnMinimize"
+        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
+        Me.BtnMinimize.Size = New System.Drawing.Size(45, 29)
+        Me.BtnMinimize.TabIndex = 28
         '
-        'DataGridView1
+        'BtnExit
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(597, 120)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1300, 839)
-        Me.DataGridView1.TabIndex = 1
+        Me.BtnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnExit.Animated = True
+        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnExit.HoverState.Parent = Me.BtnExit
+        Me.BtnExit.IconColor = System.Drawing.Color.White
+        Me.BtnExit.Location = New System.Drawing.Point(1302, 0)
+        Me.BtnExit.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
+        Me.BtnExit.Size = New System.Drawing.Size(45, 29)
+        Me.BtnExit.TabIndex = 27
         '
-        'pnl_ingresarFiltrar
+        'DgvEnfermedades
         '
-        Me.pnl_ingresarFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.Button1)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.Button2)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.Button3)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.ComboBox3)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.ComboBox4)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.TextBox2)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.Label1)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.Label2)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.Label3)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_medMenos)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_medMas)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_filtrar)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.ComboBox2)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.ComboBox1)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.TextBox1)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_medicacion)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_urgencia)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_enfermedad)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_ingresar)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_volver)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_buqueda)
-        Me.pnl_ingresarFiltrar.Location = New System.Drawing.Point(0, 0)
-        Me.pnl_ingresarFiltrar.Name = "pnl_ingresarFiltrar"
-        Me.pnl_ingresarFiltrar.Size = New System.Drawing.Size(573, 1080)
-        Me.pnl_ingresarFiltrar.TabIndex = 0
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DgvEnfermedades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvEnfermedades.BackgroundColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvEnfermedades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvEnfermedades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvEnfermedades.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DgvEnfermedades.ColumnHeadersHeight = 4
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvEnfermedades.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DgvEnfermedades.EnableHeadersVisualStyles = False
+        Me.DgvEnfermedades.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvEnfermedades.Location = New System.Drawing.Point(21, 121)
+        Me.DgvEnfermedades.Name = "DgvEnfermedades"
+        Me.DgvEnfermedades.RowHeadersVisible = False
+        Me.DgvEnfermedades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvEnfermedades.Size = New System.Drawing.Size(1300, 839)
+        Me.DgvEnfermedades.TabIndex = 26
+        Me.DgvEnfermedades.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvEnfermedades.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.Height = 4
+        Me.DgvEnfermedades.ThemeStyle.ReadOnly = False
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.Height = 22
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'Button1
+        'LblImportar
         '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(468, 517)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(32, 32)
-        Me.Button1.TabIndex = 23
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.LblImportar.BackColor = System.Drawing.Color.Transparent
+        Me.LblImportar.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblImportar.Location = New System.Drawing.Point(56, 592)
+        Me.LblImportar.Name = "LblImportar"
+        Me.LblImportar.Size = New System.Drawing.Size(83, 27)
+        Me.LblImportar.TabIndex = 106
+        Me.LblImportar.Text = "Importar"
         '
-        'Button2
+        'TxtImportar
         '
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(432, 517)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(32, 32)
-        Me.Button2.TabIndex = 22
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.TxtImportar.Animated = True
+        Me.TxtImportar.BorderRadius = 6
+        Me.TxtImportar.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtImportar.DefaultText = ""
+        Me.TxtImportar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtImportar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtImportar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtImportar.DisabledState.Parent = Me.TxtImportar
+        Me.TxtImportar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtImportar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtImportar.FocusedState.Parent = Me.TxtImportar
+        Me.TxtImportar.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.TxtImportar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtImportar.HoverState.Parent = Me.TxtImportar
+        Me.TxtImportar.Location = New System.Drawing.Point(155, 589)
+        Me.TxtImportar.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.TxtImportar.Name = "TxtImportar"
+        Me.TxtImportar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtImportar.PlaceholderText = ""
+        Me.TxtImportar.SelectedText = ""
+        Me.TxtImportar.ShadowDecoration.Parent = Me.TxtImportar
+        Me.TxtImportar.Size = New System.Drawing.Size(382, 32)
+        Me.TxtImportar.TabIndex = 105
         '
-        'Button3
+        'BtnIngresar
         '
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = Global.Presentacion.My.Resources.Resources.Ingresar_Button
-        Me.Button3.Location = New System.Drawing.Point(361, 562)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(162, 54)
-        Me.Button3.TabIndex = 21
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BtnIngresar.Animated = True
+        Me.BtnIngresar.AutoRoundedCorners = True
+        Me.BtnIngresar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnIngresar.BorderRadius = 15
+        Me.BtnIngresar.CheckedState.Parent = Me.BtnIngresar
+        Me.BtnIngresar.CustomImages.Parent = Me.BtnIngresar
+        Me.BtnIngresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnIngresar.Font = New System.Drawing.Font("Roboto", 14.0!)
+        Me.BtnIngresar.ForeColor = System.Drawing.Color.White
+        Me.BtnIngresar.HoverState.Parent = Me.BtnIngresar
+        Me.BtnIngresar.Location = New System.Drawing.Point(446, 520)
+        Me.BtnIngresar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
+        Me.BtnIngresar.Name = "BtnIngresar"
+        Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
+        Me.BtnIngresar.Size = New System.Drawing.Size(91, 32)
+        Me.BtnIngresar.TabIndex = 104
+        Me.BtnIngresar.Text = "Ingresar"
+        Me.BtnIngresar.UseTransparentBackground = True
         '
-        'ComboBox3
+        'TxtIDescripcion
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(182, 517)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(236, 21)
-        Me.ComboBox3.TabIndex = 20
+        Me.TxtIDescripcion.Animated = True
+        Me.TxtIDescripcion.BorderRadius = 6
+        Me.TxtIDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIDescripcion.DefaultText = ""
+        Me.TxtIDescripcion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIDescripcion.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIDescripcion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIDescripcion.DisabledState.Parent = Me.TxtIDescripcion
+        Me.TxtIDescripcion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIDescripcion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIDescripcion.FocusedState.Parent = Me.TxtIDescripcion
+        Me.TxtIDescripcion.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.TxtIDescripcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIDescripcion.HoverState.Parent = Me.TxtIDescripcion
+        Me.TxtIDescripcion.Location = New System.Drawing.Point(236, 451)
+        Me.TxtIDescripcion.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.TxtIDescripcion.Multiline = True
+        Me.TxtIDescripcion.Name = "TxtIDescripcion"
+        Me.TxtIDescripcion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIDescripcion.PlaceholderText = ""
+        Me.TxtIDescripcion.SelectedText = ""
+        Me.TxtIDescripcion.ShadowDecoration.Parent = Me.TxtIDescripcion
+        Me.TxtIDescripcion.Size = New System.Drawing.Size(301, 64)
+        Me.TxtIDescripcion.TabIndex = 103
         '
-        'ComboBox4
+        'LblIDescripcion
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(182, 470)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(236, 21)
-        Me.ComboBox4.TabIndex = 19
+        Me.LblIDescripcion.BackColor = System.Drawing.Color.Transparent
+        Me.LblIDescripcion.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblIDescripcion.Location = New System.Drawing.Point(56, 451)
+        Me.LblIDescripcion.Name = "LblIDescripcion"
+        Me.LblIDescripcion.Size = New System.Drawing.Size(114, 27)
+        Me.LblIDescripcion.TabIndex = 102
+        Me.LblIDescripcion.Text = "Descripción"
         '
-        'TextBox2
+        'BtnImportar
         '
-        Me.TextBox2.Location = New System.Drawing.Point(182, 424)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(236, 30)
-        Me.TextBox2.TabIndex = 18
+        Me.BtnImportar.Animated = True
+        Me.BtnImportar.AutoRoundedCorners = True
+        Me.BtnImportar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnImportar.BorderRadius = 15
+        Me.BtnImportar.CheckedState.Parent = Me.BtnImportar
+        Me.BtnImportar.CustomImages.Parent = Me.BtnImportar
+        Me.BtnImportar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnImportar.Font = New System.Drawing.Font("Roboto", 14.0!)
+        Me.BtnImportar.ForeColor = System.Drawing.Color.White
+        Me.BtnImportar.HoverState.Parent = Me.BtnImportar
+        Me.BtnImportar.Location = New System.Drawing.Point(449, 648)
+        Me.BtnImportar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
+        Me.BtnImportar.Name = "BtnImportar"
+        Me.BtnImportar.ShadowDecoration.Parent = Me.BtnImportar
+        Me.BtnImportar.Size = New System.Drawing.Size(91, 32)
+        Me.BtnImportar.TabIndex = 101
+        Me.BtnImportar.Text = "Importar"
+        Me.BtnImportar.UseTransparentBackground = True
         '
-        'Label1
+        'LblIngresar
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(58, 513)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 23)
-        Me.Label1.TabIndex = 17
-        Me.Label1.Text = "Medicación:"
+        Me.LblIngresar.BackColor = System.Drawing.Color.Transparent
+        Me.LblIngresar.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblIngresar.Location = New System.Drawing.Point(56, 281)
+        Me.LblIngresar.Margin = New System.Windows.Forms.Padding(3, 3, 3, 18)
+        Me.LblIngresar.Name = "LblIngresar"
+        Me.LblIngresar.Size = New System.Drawing.Size(88, 27)
+        Me.LblIngresar.TabIndex = 100
+        Me.LblIngresar.Text = "Ingresar"
         '
-        'Label2
+        'BtnIDelItem
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(58, 469)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 23)
-        Me.Label2.TabIndex = 16
-        Me.Label2.Text = "Urgencia:"
+        Me.BtnIDelItem.Animated = True
+        Me.BtnIDelItem.BackColor = System.Drawing.Color.Transparent
+        Me.BtnIDelItem.CheckedState.Parent = Me.BtnIDelItem
+        Me.BtnIDelItem.CustomImages.Parent = Me.BtnIDelItem
+        Me.BtnIDelItem.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnIDelItem.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.BtnIDelItem.ForeColor = System.Drawing.Color.White
+        Me.BtnIDelItem.HoverState.Parent = Me.BtnIDelItem
+        Me.BtnIDelItem.Location = New System.Drawing.Point(506, 414)
+        Me.BtnIDelItem.Name = "BtnIDelItem"
+        Me.BtnIDelItem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnIDelItem.ShadowDecoration.Parent = Me.BtnIDelItem
+        Me.BtnIDelItem.Size = New System.Drawing.Size(24, 24)
+        Me.BtnIDelItem.TabIndex = 99
+        Me.BtnIDelItem.Text = "-"
         '
-        'Label3
+        'BtnIAddItem
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(58, 424)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(118, 23)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Enfermedad:"
+        Me.BtnIAddItem.Animated = True
+        Me.BtnIAddItem.BackColor = System.Drawing.Color.Transparent
+        Me.BtnIAddItem.CheckedState.Parent = Me.BtnIAddItem
+        Me.BtnIAddItem.CustomImages.Parent = Me.BtnIAddItem
+        Me.BtnIAddItem.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnIAddItem.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.BtnIAddItem.ForeColor = System.Drawing.Color.White
+        Me.BtnIAddItem.HoverState.Parent = Me.BtnIAddItem
+        Me.BtnIAddItem.Location = New System.Drawing.Point(476, 414)
+        Me.BtnIAddItem.Name = "BtnIAddItem"
+        Me.BtnIAddItem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnIAddItem.ShadowDecoration.Parent = Me.BtnIAddItem
+        Me.BtnIAddItem.Size = New System.Drawing.Size(24, 24)
+        Me.BtnIAddItem.TabIndex = 98
+        Me.BtnIAddItem.Text = "+"
         '
-        'btn_medMenos
+        'CmbIMedicacion
         '
-        Me.btn_medMenos.FlatAppearance.BorderSize = 0
-        Me.btn_medMenos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_medMenos.Image = CType(resources.GetObject("btn_medMenos.Image"), System.Drawing.Image)
-        Me.btn_medMenos.Location = New System.Drawing.Point(468, 226)
-        Me.btn_medMenos.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_medMenos.Name = "btn_medMenos"
-        Me.btn_medMenos.Size = New System.Drawing.Size(32, 32)
-        Me.btn_medMenos.TabIndex = 14
-        Me.btn_medMenos.UseVisualStyleBackColor = True
+        Me.CmbIMedicacion.Animated = True
+        Me.CmbIMedicacion.BackColor = System.Drawing.Color.Transparent
+        Me.CmbIMedicacion.BorderRadius = 6
+        Me.CmbIMedicacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbIMedicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbIMedicacion.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIMedicacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIMedicacion.FocusedState.Parent = Me.CmbIMedicacion
+        Me.CmbIMedicacion.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CmbIMedicacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbIMedicacion.HoverState.Parent = Me.CmbIMedicacion
+        Me.CmbIMedicacion.ItemHeight = 30
+        Me.CmbIMedicacion.ItemsAppearance.Parent = Me.CmbIMedicacion
+        Me.CmbIMedicacion.Location = New System.Drawing.Point(236, 408)
+        Me.CmbIMedicacion.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.CmbIMedicacion.Name = "CmbIMedicacion"
+        Me.CmbIMedicacion.ShadowDecoration.Parent = Me.CmbIMedicacion
+        Me.CmbIMedicacion.Size = New System.Drawing.Size(230, 36)
+        Me.CmbIMedicacion.TabIndex = 97
         '
-        'btn_medMas
+        'CmbIUrgencia
         '
-        Me.btn_medMas.FlatAppearance.BorderSize = 0
-        Me.btn_medMas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_medMas.Image = CType(resources.GetObject("btn_medMas.Image"), System.Drawing.Image)
-        Me.btn_medMas.Location = New System.Drawing.Point(432, 226)
-        Me.btn_medMas.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_medMas.Name = "btn_medMas"
-        Me.btn_medMas.Size = New System.Drawing.Size(32, 32)
-        Me.btn_medMas.TabIndex = 13
-        Me.btn_medMas.UseVisualStyleBackColor = True
+        Me.CmbIUrgencia.Animated = True
+        Me.CmbIUrgencia.BackColor = System.Drawing.Color.Transparent
+        Me.CmbIUrgencia.BorderRadius = 6
+        Me.CmbIUrgencia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbIUrgencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbIUrgencia.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIUrgencia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIUrgencia.FocusedState.Parent = Me.CmbIUrgencia
+        Me.CmbIUrgencia.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CmbIUrgencia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbIUrgencia.HoverState.Parent = Me.CmbIUrgencia
+        Me.CmbIUrgencia.ItemHeight = 30
+        Me.CmbIUrgencia.ItemsAppearance.Parent = Me.CmbIUrgencia
+        Me.CmbIUrgencia.Location = New System.Drawing.Point(236, 365)
+        Me.CmbIUrgencia.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.CmbIUrgencia.Name = "CmbIUrgencia"
+        Me.CmbIUrgencia.ShadowDecoration.Parent = Me.CmbIUrgencia
+        Me.CmbIUrgencia.Size = New System.Drawing.Size(230, 36)
+        Me.CmbIUrgencia.TabIndex = 96
         '
-        'btn_filtrar
+        'LblIMedicacion
         '
-        Me.btn_filtrar.FlatAppearance.BorderSize = 0
-        Me.btn_filtrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_filtrar.Image = Global.Presentacion.My.Resources.Resources.btn_filtrar
-        Me.btn_filtrar.Location = New System.Drawing.Point(361, 267)
-        Me.btn_filtrar.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_filtrar.Name = "btn_filtrar"
-        Me.btn_filtrar.Size = New System.Drawing.Size(154, 51)
-        Me.btn_filtrar.TabIndex = 12
-        Me.btn_filtrar.UseVisualStyleBackColor = True
+        Me.LblIMedicacion.BackColor = System.Drawing.Color.Transparent
+        Me.LblIMedicacion.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblIMedicacion.Location = New System.Drawing.Point(56, 413)
+        Me.LblIMedicacion.Name = "LblIMedicacion"
+        Me.LblIMedicacion.Size = New System.Drawing.Size(111, 27)
+        Me.LblIMedicacion.TabIndex = 95
+        Me.LblIMedicacion.Text = "Medicación"
         '
-        'ComboBox2
+        'LblIUrgencia
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(182, 226)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(236, 21)
-        Me.ComboBox2.TabIndex = 11
+        Me.LblIUrgencia.BackColor = System.Drawing.Color.Transparent
+        Me.LblIUrgencia.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblIUrgencia.Location = New System.Drawing.Point(56, 370)
+        Me.LblIUrgencia.Name = "LblIUrgencia"
+        Me.LblIUrgencia.Size = New System.Drawing.Size(86, 27)
+        Me.LblIUrgencia.TabIndex = 94
+        Me.LblIUrgencia.Text = "Urgencia"
         '
-        'ComboBox1
+        'LblIEnfermedad
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(182, 179)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(236, 21)
-        Me.ComboBox1.TabIndex = 10
+        Me.LblIEnfermedad.BackColor = System.Drawing.Color.Transparent
+        Me.LblIEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblIEnfermedad.Location = New System.Drawing.Point(56, 329)
+        Me.LblIEnfermedad.Name = "LblIEnfermedad"
+        Me.LblIEnfermedad.Size = New System.Drawing.Size(116, 27)
+        Me.LblIEnfermedad.TabIndex = 93
+        Me.LblIEnfermedad.Text = "Enfermedad"
         '
-        'TextBox1
+        'TxtIEnfermedad
         '
-        Me.TextBox1.Location = New System.Drawing.Point(182, 133)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(236, 30)
-        Me.TextBox1.TabIndex = 9
+        Me.TxtIEnfermedad.Animated = True
+        Me.TxtIEnfermedad.BorderRadius = 6
+        Me.TxtIEnfermedad.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIEnfermedad.DefaultText = ""
+        Me.TxtIEnfermedad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIEnfermedad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIEnfermedad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIEnfermedad.DisabledState.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIEnfermedad.FocusedState.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.TxtIEnfermedad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIEnfermedad.HoverState.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.Location = New System.Drawing.Point(236, 326)
+        Me.TxtIEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.TxtIEnfermedad.Name = "TxtIEnfermedad"
+        Me.TxtIEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIEnfermedad.PlaceholderText = ""
+        Me.TxtIEnfermedad.SelectedText = ""
+        Me.TxtIEnfermedad.ShadowDecoration.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.Size = New System.Drawing.Size(230, 32)
+        Me.TxtIEnfermedad.TabIndex = 92
         '
-        'lbl_medicacion
+        'BtnFiltrar
         '
-        Me.lbl_medicacion.AutoSize = True
-        Me.lbl_medicacion.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_medicacion.Location = New System.Drawing.Point(58, 222)
-        Me.lbl_medicacion.Name = "lbl_medicacion"
-        Me.lbl_medicacion.Size = New System.Drawing.Size(114, 23)
-        Me.lbl_medicacion.TabIndex = 8
-        Me.lbl_medicacion.Text = "Medicación:"
+        Me.BtnFiltrar.Animated = True
+        Me.BtnFiltrar.AutoRoundedCorners = True
+        Me.BtnFiltrar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnFiltrar.BorderRadius = 15
+        Me.BtnFiltrar.CheckedState.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.CustomImages.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnFiltrar.Font = New System.Drawing.Font("Roboto", 14.0!)
+        Me.BtnFiltrar.ForeColor = System.Drawing.Color.White
+        Me.BtnFiltrar.HoverState.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.Location = New System.Drawing.Point(449, 261)
+        Me.BtnFiltrar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
+        Me.BtnFiltrar.Name = "BtnFiltrar"
+        Me.BtnFiltrar.ShadowDecoration.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.Size = New System.Drawing.Size(81, 32)
+        Me.BtnFiltrar.TabIndex = 91
+        Me.BtnFiltrar.Text = "Filtrar"
+        Me.BtnFiltrar.UseTransparentBackground = True
         '
-        'lbl_urgencia
+        'BtnVolver
         '
-        Me.lbl_urgencia.AutoSize = True
-        Me.lbl_urgencia.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_urgencia.Location = New System.Drawing.Point(58, 178)
-        Me.lbl_urgencia.Name = "lbl_urgencia"
-        Me.lbl_urgencia.Size = New System.Drawing.Size(89, 23)
-        Me.lbl_urgencia.TabIndex = 7
-        Me.lbl_urgencia.Text = "Urgencia:"
+        Me.BtnVolver.Animated = True
+        Me.BtnVolver.AutoRoundedCorners = True
+        Me.BtnVolver.BackColor = System.Drawing.Color.Transparent
+        Me.BtnVolver.BorderRadius = 14
+        Me.BtnVolver.CheckedState.Parent = Me.BtnVolver
+        Me.BtnVolver.CustomImages.Parent = Me.BtnVolver
+        Me.BtnVolver.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnVolver.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.BtnVolver.ForeColor = System.Drawing.Color.White
+        Me.BtnVolver.HoverState.Parent = Me.BtnVolver
+        Me.BtnVolver.Location = New System.Drawing.Point(16, 15)
+        Me.BtnVolver.Name = "BtnVolver"
+        Me.BtnVolver.ShadowDecoration.Parent = Me.BtnVolver
+        Me.BtnVolver.Size = New System.Drawing.Size(85, 30)
+        Me.BtnVolver.TabIndex = 90
+        Me.BtnVolver.Text = "Volver"
+        Me.BtnVolver.UseTransparentBackground = True
         '
-        'lbl_enfermedad
+        'LblBusqueda
         '
-        Me.lbl_enfermedad.AutoSize = True
-        Me.lbl_enfermedad.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_enfermedad.Location = New System.Drawing.Point(58, 133)
-        Me.lbl_enfermedad.Name = "lbl_enfermedad"
-        Me.lbl_enfermedad.Size = New System.Drawing.Size(118, 23)
-        Me.lbl_enfermedad.TabIndex = 6
-        Me.lbl_enfermedad.Text = "Enfermedad:"
+        Me.LblBusqueda.BackColor = System.Drawing.Color.Transparent
+        Me.LblBusqueda.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBusqueda.Location = New System.Drawing.Point(56, 67)
+        Me.LblBusqueda.Margin = New System.Windows.Forms.Padding(3, 3, 3, 18)
+        Me.LblBusqueda.Name = "LblBusqueda"
+        Me.LblBusqueda.Size = New System.Drawing.Size(105, 27)
+        Me.LblBusqueda.TabIndex = 89
+        Me.LblBusqueda.Text = "Búsqueda"
         '
-        'lbl_ingresar
+        'BtnBDelItem
         '
-        Me.lbl_ingresar.AutoSize = True
-        Me.lbl_ingresar.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_ingresar.Location = New System.Drawing.Point(47, 368)
-        Me.lbl_ingresar.Name = "lbl_ingresar"
-        Me.lbl_ingresar.Size = New System.Drawing.Size(86, 23)
-        Me.lbl_ingresar.TabIndex = 5
-        Me.lbl_ingresar.Text = "Ingresar"
+        Me.BtnBDelItem.Animated = True
+        Me.BtnBDelItem.BackColor = System.Drawing.Color.Transparent
+        Me.BtnBDelItem.CheckedState.Parent = Me.BtnBDelItem
+        Me.BtnBDelItem.CustomImages.Parent = Me.BtnBDelItem
+        Me.BtnBDelItem.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnBDelItem.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.BtnBDelItem.ForeColor = System.Drawing.Color.White
+        Me.BtnBDelItem.HoverState.Parent = Me.BtnBDelItem
+        Me.BtnBDelItem.Location = New System.Drawing.Point(506, 197)
+        Me.BtnBDelItem.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.BtnBDelItem.Name = "BtnBDelItem"
+        Me.BtnBDelItem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnBDelItem.ShadowDecoration.Parent = Me.BtnBDelItem
+        Me.BtnBDelItem.Size = New System.Drawing.Size(24, 24)
+        Me.BtnBDelItem.TabIndex = 88
+        Me.BtnBDelItem.Text = "-"
         '
-        'btn_volver
+        'BtnBAddItem
         '
-        Me.btn_volver.FlatAppearance.BorderSize = 0
-        Me.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_volver.Image = Global.Presentacion.My.Resources.Resources.btn_volver
-        Me.btn_volver.Location = New System.Drawing.Point(9, 2)
-        Me.btn_volver.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_volver.Name = "btn_volver"
-        Me.btn_volver.Size = New System.Drawing.Size(156, 78)
-        Me.btn_volver.TabIndex = 4
-        Me.btn_volver.UseVisualStyleBackColor = True
+        Me.BtnBAddItem.Animated = True
+        Me.BtnBAddItem.BackColor = System.Drawing.Color.Transparent
+        Me.BtnBAddItem.CheckedState.Parent = Me.BtnBAddItem
+        Me.BtnBAddItem.CustomImages.Parent = Me.BtnBAddItem
+        Me.BtnBAddItem.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnBAddItem.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.BtnBAddItem.ForeColor = System.Drawing.Color.White
+        Me.BtnBAddItem.HoverState.Parent = Me.BtnBAddItem
+        Me.BtnBAddItem.Location = New System.Drawing.Point(476, 197)
+        Me.BtnBAddItem.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.BtnBAddItem.Name = "BtnBAddItem"
+        Me.BtnBAddItem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnBAddItem.ShadowDecoration.Parent = Me.BtnBAddItem
+        Me.BtnBAddItem.Size = New System.Drawing.Size(24, 24)
+        Me.BtnBAddItem.TabIndex = 87
+        Me.BtnBAddItem.Text = "+"
         '
-        'lbl_buqueda
+        'CmbBMedicacion
         '
-        Me.lbl_buqueda.AutoSize = True
-        Me.lbl_buqueda.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_buqueda.Location = New System.Drawing.Point(47, 80)
-        Me.lbl_buqueda.Name = "lbl_buqueda"
-        Me.lbl_buqueda.Size = New System.Drawing.Size(102, 23)
-        Me.lbl_buqueda.TabIndex = 0
-        Me.lbl_buqueda.Text = "Búsqueda"
+        Me.CmbBMedicacion.Animated = True
+        Me.CmbBMedicacion.BackColor = System.Drawing.Color.Transparent
+        Me.CmbBMedicacion.BorderRadius = 6
+        Me.CmbBMedicacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbBMedicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbBMedicacion.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBMedicacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBMedicacion.FocusedState.Parent = Me.CmbBMedicacion
+        Me.CmbBMedicacion.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CmbBMedicacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbBMedicacion.HoverState.Parent = Me.CmbBMedicacion
+        Me.CmbBMedicacion.ItemHeight = 30
+        Me.CmbBMedicacion.ItemsAppearance.Parent = Me.CmbBMedicacion
+        Me.CmbBMedicacion.Location = New System.Drawing.Point(236, 191)
+        Me.CmbBMedicacion.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.CmbBMedicacion.Name = "CmbBMedicacion"
+        Me.CmbBMedicacion.ShadowDecoration.Parent = Me.CmbBMedicacion
+        Me.CmbBMedicacion.Size = New System.Drawing.Size(230, 36)
+        Me.CmbBMedicacion.TabIndex = 86
         '
-        'Enfermedades
+        'CmbBUrgencia
+        '
+        Me.CmbBUrgencia.Animated = True
+        Me.CmbBUrgencia.BackColor = System.Drawing.Color.Transparent
+        Me.CmbBUrgencia.BorderRadius = 6
+        Me.CmbBUrgencia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbBUrgencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbBUrgencia.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBUrgencia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBUrgencia.FocusedState.Parent = Me.CmbBUrgencia
+        Me.CmbBUrgencia.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CmbBUrgencia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbBUrgencia.HoverState.Parent = Me.CmbBUrgencia
+        Me.CmbBUrgencia.ItemHeight = 30
+        Me.CmbBUrgencia.ItemsAppearance.Parent = Me.CmbBUrgencia
+        Me.CmbBUrgencia.Location = New System.Drawing.Point(236, 148)
+        Me.CmbBUrgencia.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.CmbBUrgencia.Name = "CmbBUrgencia"
+        Me.CmbBUrgencia.ShadowDecoration.Parent = Me.CmbBUrgencia
+        Me.CmbBUrgencia.Size = New System.Drawing.Size(230, 36)
+        Me.CmbBUrgencia.TabIndex = 85
+        '
+        'LblEnfermedades
+        '
+        Me.LblEnfermedades.BackColor = System.Drawing.Color.Transparent
+        Me.LblEnfermedades.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEnfermedades.Location = New System.Drawing.Point(56, 196)
+        Me.LblEnfermedades.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.LblEnfermedades.Name = "LblEnfermedades"
+        Me.LblEnfermedades.Size = New System.Drawing.Size(111, 27)
+        Me.LblEnfermedades.TabIndex = 84
+        Me.LblEnfermedades.Text = "Medicación"
+        '
+        'LblBUrgencia
+        '
+        Me.LblBUrgencia.BackColor = System.Drawing.Color.Transparent
+        Me.LblBUrgencia.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBUrgencia.Location = New System.Drawing.Point(56, 153)
+        Me.LblBUrgencia.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.LblBUrgencia.Name = "LblBUrgencia"
+        Me.LblBUrgencia.Size = New System.Drawing.Size(86, 27)
+        Me.LblBUrgencia.TabIndex = 83
+        Me.LblBUrgencia.Text = "Urgencia"
+        '
+        'LblBEnfermedad
+        '
+        Me.LblBEnfermedad.BackColor = System.Drawing.Color.Transparent
+        Me.LblBEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBEnfermedad.Location = New System.Drawing.Point(56, 112)
+        Me.LblBEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.LblBEnfermedad.Name = "LblBEnfermedad"
+        Me.LblBEnfermedad.Size = New System.Drawing.Size(116, 27)
+        Me.LblBEnfermedad.TabIndex = 82
+        Me.LblBEnfermedad.Text = "Enfermedad"
+        '
+        'TxtBEnfermedad
+        '
+        Me.TxtBEnfermedad.Animated = True
+        Me.TxtBEnfermedad.BorderRadius = 6
+        Me.TxtBEnfermedad.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBEnfermedad.DefaultText = ""
+        Me.TxtBEnfermedad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBEnfermedad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBEnfermedad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBEnfermedad.DisabledState.Parent = Me.TxtBEnfermedad
+        Me.TxtBEnfermedad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBEnfermedad.FocusedState.Parent = Me.TxtBEnfermedad
+        Me.TxtBEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.TxtBEnfermedad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBEnfermedad.HoverState.Parent = Me.TxtBEnfermedad
+        Me.TxtBEnfermedad.Location = New System.Drawing.Point(236, 109)
+        Me.TxtBEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.TxtBEnfermedad.Name = "TxtBEnfermedad"
+        Me.TxtBEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBEnfermedad.PlaceholderText = ""
+        Me.TxtBEnfermedad.SelectedText = ""
+        Me.TxtBEnfermedad.ShadowDecoration.Parent = Me.TxtBEnfermedad
+        Me.TxtBEnfermedad.Size = New System.Drawing.Size(230, 32)
+        Me.TxtBEnfermedad.TabIndex = 81
+        '
+        'F_Enfermedades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1920, 1080)
-        Me.Controls.Add(Me.pnl_fondo)
+        Me.Controls.Add(Me.PnlDgv)
+        Me.Controls.Add(Me.PnlSide)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Enfermedades"
+        Me.Name = "F_Enfermedades"
         Me.Text = "Enfermedades"
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
-        Me.pnl_fondo.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnl_ingresarFiltrar.ResumeLayout(False)
-        Me.pnl_ingresarFiltrar.PerformLayout()
+        Me.PnlSide.ResumeLayout(False)
+        Me.PnlSide.PerformLayout()
+        Me.PnlDgv.ResumeLayout(False)
+        CType(Me.DgvEnfermedades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents pnl_fondo As Panel
-    Friend WithEvents pnl_ingresarFiltrar As Panel
-    Friend WithEvents btn_minimizar As Button
-    Friend WithEvents btn_cerrar As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents btn_volver As Button
-    Friend WithEvents lbl_buqueda As Label
-    Friend WithEvents lbl_urgencia As Label
-    Friend WithEvents lbl_enfermedad As Label
-    Friend WithEvents lbl_ingresar As Label
-    Friend WithEvents lbl_medicacion As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents btn_medMenos As Button
-    Friend WithEvents btn_medMas As Button
-    Friend WithEvents btn_filtrar As Button
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents PnlSide As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents PnlDgv As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents BtnMinimize As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents BtnExit As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents DgvEnfermedades As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents LblImportar As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents TxtImportar As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents BtnIngresar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents TxtIDescripcion As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents LblIDescripcion As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents BtnImportar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LblIngresar As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents BtnIDelItem As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents BtnIAddItem As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents CmbIMedicacion As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbIUrgencia As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents LblIMedicacion As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblIUrgencia As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblIEnfermedad As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents TxtIEnfermedad As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents BtnFiltrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnVolver As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LblBusqueda As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents BtnBDelItem As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents BtnBAddItem As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents CmbBMedicacion As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbBUrgencia As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents LblEnfermedades As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblBUrgencia As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblBEnfermedad As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents TxtBEnfermedad As Guna.UI2.WinForms.Guna2TextBox
 End Class

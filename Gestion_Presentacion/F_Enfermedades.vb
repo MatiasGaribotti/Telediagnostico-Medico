@@ -1,9 +1,7 @@
 ﻿Public Class F_Enfermedades
-    Private Sub lbl_buqueda_Click(sender As Object, e As EventArgs) Handles lbl_buqueda.Click
 
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
+        F_ABM.Show()
+        Me.Close()
     End Sub
 End Class

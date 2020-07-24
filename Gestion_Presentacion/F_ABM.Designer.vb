@@ -35,11 +35,13 @@ Partial Class F_ABM
         Me.Btn_Horarios = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_Personal = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_Pacientes = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnCerrarSesion = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.BtnCerrarSesion)
         Me.Guna2Panel1.Controls.Add(Me.Btn_Minimize)
         Me.Guna2Panel1.Controls.Add(Me.Btn_Exit)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel3)
@@ -223,6 +225,27 @@ Partial Class F_ABM
         Me.Btn_Pacientes.Size = New System.Drawing.Size(250, 250)
         Me.Btn_Pacientes.TabIndex = 1
         '
+        'BtnCerrarSesion
+        '
+        Me.BtnCerrarSesion.Animated = True
+        Me.BtnCerrarSesion.AutoRoundedCorners = True
+        Me.BtnCerrarSesion.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCerrarSesion.BorderRadius = 22
+        Me.BtnCerrarSesion.CheckedState.Parent = Me.BtnCerrarSesion
+        Me.BtnCerrarSesion.CustomImages.Parent = Me.BtnCerrarSesion
+        Me.BtnCerrarSesion.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnCerrarSesion.Font = New System.Drawing.Font("Roboto", 18.0!)
+        Me.BtnCerrarSesion.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrarSesion.HoverState.Parent = Me.BtnCerrarSesion
+        Me.BtnCerrarSesion.Location = New System.Drawing.Point(809, 855)
+        Me.BtnCerrarSesion.Margin = New System.Windows.Forms.Padding(3, 17, 3, 3)
+        Me.BtnCerrarSesion.Name = "BtnCerrarSesion"
+        Me.BtnCerrarSesion.ShadowDecoration.Parent = Me.BtnCerrarSesion
+        Me.BtnCerrarSesion.Size = New System.Drawing.Size(198, 46)
+        Me.BtnCerrarSesion.TabIndex = 91
+        Me.BtnCerrarSesion.Text = "Cerrar Sesion"
+        Me.BtnCerrarSesion.UseTransparentBackground = True
+        '
         'F_ABM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -252,4 +275,5 @@ Partial Class F_ABM
     Friend WithEvents Btn_Pacientes As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents BtnCerrarSesion As Guna.UI2.WinForms.Guna2Button
 End Class
