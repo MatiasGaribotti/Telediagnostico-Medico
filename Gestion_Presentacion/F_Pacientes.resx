@@ -118,1228 +118,1423 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pnl_ingresar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txt_antecedentesLab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txt_email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 209</value>
-  </data>
-  <data name="pnl_dgv_pacientes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1878, 463</value>
-  </data>
-  <data name="lbl_departamentpFiltrar.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_localidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>481, 162</value>
-  </data>
-  <data name="lbl_numero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 122</value>
-  </data>
-  <data name="lbl_edad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 30</value>
-  </data>
-  <data name="txt_edadFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 29</value>
-  </data>
-  <data name="btn_ingresar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>854, 507</value>
-  </data>
-  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 30</value>
-  </data>
-  <data name="&gt;&gt;pnl_filtrar.Name" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;lbl_antecedentesLab.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;cmb_medicacion.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;cmb_detalleFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="lbl_fechaNacimiento.Text" xml:space="preserve">
-    <value>Fecha de nacimiento:</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;lbl_enfermedad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1920, 1080</value>
-  </data>
-  <data name="txt_apellidoM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 29</value>
-  </data>
-  <data name="txt_antecedentesLab.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cmb_detalle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_telefono.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_nucleoFlia.Text" xml:space="preserve">
-    <value>Núcleo Familiar:</value>
-  </data>
-  <data name="&gt;&gt;lbl_apellidos.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="btn_filtrar.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;txt_nucleoFlia.Name" xml:space="preserve">
-    <value>txt_nucleoFlia</value>
-  </data>
-  <data name="txt_departamento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 163</value>
-  </data>
-  <data name="&gt;&gt;txt_tratamientos.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_departamentpFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 208</value>
-  </data>
-  <data name="&gt;&gt;txt_localidad.Name" xml:space="preserve">
-    <value>txt_localidad</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txt_apellidoPFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;cmb_medicacion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_calleFiltrar.Name" xml:space="preserve">
-    <value>txt_calleFiltrar</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Apellidos:</value>
-  </data>
-  <data name="txt_tratamientos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_enfermedad.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;txt_departamento.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
   <data name="dtp_fechaNacimiento.Location" type="System.Drawing.Point, System.Drawing">
     <value>260, 92</value>
   </data>
-  <data name="txt_telefonoFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
+  <data name="Guna2TextBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
   </data>
-  <data name="&gt;&gt;txt_antecedentesFlia.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
+  <data name="&gt;&gt;Guna2TextBox12.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="txt_nucleoFlia.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
+  <data name="&gt;&gt;txt_departamentoFiltrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
+  <data name="txt_departamento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 29</value>
   </data>
-  <data name="&gt;&gt;txt_nucleoFlia.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;txt_email.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="txt_antecedentesFlia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>666, 40</value>
-  </data>
-  <data name="btn_volver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 38</value>
-  </data>
-  <data name="txt_telefonoFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 124</value>
-  </data>
-  <data name="&gt;&gt;txt_edadFiltrar.Name" xml:space="preserve">
-    <value>txt_edadFiltrar</value>
-  </data>
-  <data name="cmb_detalleFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
-  </data>
-  <data name="lbl_email.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="txt_antecedentesFlia.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_nombreFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 29</value>
-  </data>
-  <data name="lbl_email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 209</value>
-  </data>
-  <data name="txt_apellidoPFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="txt_antecedentesFlia.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="txt_localidadFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Dirección:</value>
-  </data>
-  <data name="txt_numero.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="lbl_departamento.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txt_localidadFiltrar.Type" xml:space="preserve">
+  <data name="&gt;&gt;txt_apellidoMFiltrar.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txt_edadFiltrar.Parent" xml:space="preserve">
     <value>pnl_filtrar</value>
   </data>
-  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lbl_tratamientos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 348</value>
-  </data>
-  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="txt_numero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;txt_enfermedad.Name" xml:space="preserve">
-    <value>txt_enfermedad</value>
-  </data>
-  <data name="&gt;&gt;txt_apellidoP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Guna2DateTimePicker1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DateTimePicker, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;txt_nombre.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;lbl_calle.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_medicacion.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbl_localidad.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+  <data name="&gt;&gt;txt_nombreFiltrar.Name" xml:space="preserve">
+    <value>txt_nombreFiltrar</value>
   </data>
-  <data name="&gt;&gt;lbl_nucleoFlia.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="txt_calleFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 29</value>
-  </data>
-  <data name="&gt;&gt;txt_calleFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="lbl_numero.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="txt_apellidoPFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="dtp_fechaNacimiento.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_antecedentesFlia.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;btn_filtrar.Name" xml:space="preserve">
-    <value>btn_filtrar</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>frmPacientesIngresarFiltrar</value>
-  </data>
-  <data name="&gt;&gt;cmb_detalle.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;Guna2DateTimePicker1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbl_enfermedad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 465</value>
-  </data>
-  <data name="&gt;&gt;txt_telefonoFiltrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lbl_localidad.Name" xml:space="preserve">
-    <value>lbl_localidad</value>
-  </data>
-  <data name="txt_numeroFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;cmb_detalle.Name" xml:space="preserve">
-    <value>cmb_detalle</value>
-  </data>
-  <data name="lbl_tratamientos.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;txt_antecedentesFlia.Name" xml:space="preserve">
-    <value>txt_antecedentesFlia</value>
-  </data>
-  <data name="txt_enfermedad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;lbl_calle.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_apellidos.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_calle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_medicacion.Name" xml:space="preserve">
-    <value>lbl_medicacion</value>
-  </data>
-  <data name="lbl_detalle.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="lbl_edad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_nombre.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_apellidoPFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 84</value>
-  </data>
-  <data name="txt_apellidoMFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
+  <data name="txt_telefono.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 85</value>
   </data>
   <data name="&gt;&gt;lbl_edad.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="Guna2Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox17.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="lbl_medicacion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 30</value>
+  </data>
+  <data name="&gt;&gt;txt_antecedentesLab.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;txt_antecedentesFlia.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txt_localidadFiltrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button1.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;DgvEnfermedades.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="Guna2TextBox15.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="&gt;&gt;txt_localidad.Name" xml:space="preserve">
+    <value>txt_localidad</value>
+  </data>
+  <data name="&gt;&gt;lbl_nucleoFlia.Name" xml:space="preserve">
+    <value>lbl_nucleoFlia</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox22.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="lbl_tratamientos.Text" xml:space="preserve">
+    <value>Tratamientos</value>
+  </data>
+  <data name="&gt;&gt;txt_numeroFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txt_enfermedad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="txt_edadFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 29</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Apellidos:</value>
+  </data>
+  <data name="&gt;&gt;txt_localidadFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;txt_antecedentesLab.Name" xml:space="preserve">
+    <value>txt_antecedentesLab</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoP.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lbl_apellidos.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;txt_nombre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_medicacion.Name" xml:space="preserve">
+    <value>lbl_medicacion</value>
+  </data>
+  <data name="lbl_apellidos.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DgvEnfermedades.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 11</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox22.Name" xml:space="preserve">
+    <value>Guna2TextBox22</value>
+  </data>
+  <data name="&gt;&gt;BtnVolver.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnl_ingresar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Guna2TextBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 122</value>
+  </data>
+  <data name="&gt;&gt;lbl_edad.Name" xml:space="preserve">
+    <value>lbl_edad</value>
+  </data>
+  <data name="txt_apellidoPFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 29</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Localidad:</value>
+  </data>
+  <data name="&gt;&gt;Guna2DateTimePicker1.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox12.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox27.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbl_departamento.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;lbl_calle.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="DgvEnfermedades.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button2.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox9.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;cmb_detalle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="Label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="Guna2TextBox12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>834, 122</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox20.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox8.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox22.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Guna2TextBox22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>740, 112</value>
+  </data>
+  <data name="txt_antecedentesFlia.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 298</value>
+  </data>
+  <data name="&gt;&gt;txt_enfermedad.Name" xml:space="preserve">
+    <value>txt_enfermedad</value>
+  </data>
+  <data name="&gt;&gt;lbl_detalle.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="lbl_localidad.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnl_dgv_pacientes.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txt_tratamientos.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;lbl_localidad.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="txt_nombre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 48</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="txt_antecedentesFlia.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lbl_enfermedad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button1.Name" xml:space="preserve">
+    <value>Guna2Button1</value>
+  </data>
+  <data name="lbl_numero.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_emailFiltrar.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_nombre.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="lbl_email.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Número:</value>
+  </data>
+  <data name="lbl_antecedentesLab.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox23.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="txt_enfermedad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 466</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_antecedentesLab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 407</value>
+  </data>
+  <data name="txt_localidad.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="lbl_nucleoFlia.Text" xml:space="preserve">
+    <value>Núcleo Familiar:</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox9.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txt_localidadFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;lbl_departamentpFiltrar.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox8.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cmb_detalle.Name" xml:space="preserve">
+    <value>cmb_detalle</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox18.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="Guna2TextBox26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 150</value>
+  </data>
+  <data name="Guna2TextBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>590, 165</value>
+  </data>
+  <data name="txt_localidadFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="Guna2TextBox27.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btn_volver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 38</value>
+  </data>
+  <data name="&gt;&gt;btn_volver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_departamentpFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 208</value>
+  </data>
+  <data name="lbl_antecedentesFlia.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_localidad.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;lbl_departamento.Name" xml:space="preserve">
+    <value>lbl_departamento</value>
+  </data>
+  <data name="Guna2DateTimePicker1.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="pnl_contenedor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1920, 1080</value>
+  </data>
+  <data name="txt_calleFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_apellidoP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Detalle:</value>
+  </data>
+  <data name="cmb_detalleFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>704, 171</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_nombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="txt_nucleoFlia.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox25.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;lbl_calle.Name" xml:space="preserve">
+    <value>lbl_calle</value>
+  </data>
+  <data name="lbl_fechaNacimiento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 82</value>
+  </data>
+  <data name="txt_apellidoPFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 84</value>
+  </data>
+  <data name="lbl_fechaNacimiento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbl_edad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;lbl_nucleoFlia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_localidad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="Guna2TextBox18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>543, 36</value>
+  </data>
+  <data name="lbl_numero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 30</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Teléfono:</value>
+  </data>
+  <data name="Guna2TextBox15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 517</value>
+  </data>
+  <data name="btn_filtrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>693, 300</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="Guna2TextBox11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 380</value>
+  </data>
+  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox10.Name" xml:space="preserve">
+    <value>Guna2TextBox10</value>
+  </data>
+  <data name="Guna2TextBox17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>708, 36</value>
+  </data>
+  <data name="&gt;&gt;lbl_tratamientos.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox14.Name" xml:space="preserve">
+    <value>Guna2TextBox14</value>
+  </data>
+  <data name="&gt;&gt;lbl_departamentpFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2TextBox13.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox8.Name" xml:space="preserve">
+    <value>Guna2TextBox8</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox18.Name" xml:space="preserve">
+    <value>Guna2TextBox18</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="txt_nucleoFlia.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txt_numero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_nucleoFlia.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btn_volver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 6</value>
+  </data>
+  <data name="&gt;&gt;txt_nombreFiltrar.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="btn_volver.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="Guna2DateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 36</value>
+  </data>
+  <data name="&gt;&gt;lbl_enfermedad.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;cmb_detalleFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="lbl_departamentpFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_antecedentesLab.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="txt_numeroFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btn_volver.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txt_antecedentesLab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnl_ingresar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1008, 559</value>
+  </data>
+  <data name="&gt;&gt;pnl_ingresar.Parent" xml:space="preserve">
+    <value>pnl_contenedor</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox23.Name" xml:space="preserve">
+    <value>Guna2TextBox23</value>
+  </data>
+  <data name="txt_edadFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="txt_departamento.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
+    <value>Label10</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox3.Name" xml:space="preserve">
+    <value>Guna2TextBox3</value>
+  </data>
+  <data name="&gt;&gt;cmb_detalleFiltrar.Name" xml:space="preserve">
+    <value>cmb_detalleFiltrar</value>
+  </data>
+  <data name="&gt;&gt;lbl_departamentpFiltrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmb_medicacion.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox5.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;BtnVolver.Name" xml:space="preserve">
+    <value>BtnVolver</value>
+  </data>
+  <data name="txt_telefonoFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 29</value>
+  </data>
+  <data name="Guna2TextBox19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 36</value>
+  </data>
+  <data name="cmb_detalle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>837, 131</value>
+  </data>
+  <data name="BtnVolver.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;pnl_contenedor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_antecedentesFlia.Name" xml:space="preserve">
+    <value>lbl_antecedentesFlia</value>
+  </data>
+  <data name="TxtBSintoma.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 50</value>
+  </data>
+  <data name="lbl_tratamientos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="txt_enfermedad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>pnl_contenedor</value>
+  </data>
+  <data name="txt_departamento.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;lbl_antecedentesFlia.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;dtp_fechaNacimiento.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;dtp_fechaNacimiento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Guna2TextBox20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 74</value>
+  </data>
+  <data name="txt_tratamientos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_edad.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;cmb_detalleFiltrar.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;btn_filtrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="txt_nombre.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="txt_emailFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 251</value>
+  </data>
+  <data name="&gt;&gt;txt_antecedentesLab.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;lbl_antecedentesLab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox4.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox7.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_antecedentesLab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 30</value>
+  </data>
+  <data name="txt_calle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>357, 29</value>
+  </data>
+  <data name="&gt;&gt;lbl_detalle.Name" xml:space="preserve">
+    <value>lbl_detalle</value>
+  </data>
+  <data name="txt_calleFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;pnl_filtrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_nombreFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="cmb_medicacion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>732, 463</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox14.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cmb_detalleFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_numero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 29</value>
+  </data>
+  <data name="Guna2TextBox19.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox18.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="Guna2TextBox22.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox16.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
+  <data name="txt_enfermedad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 29</value>
+  </data>
+  <data name="lbl_medicacion.Text" xml:space="preserve">
+    <value>Medicación:</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="Guna2TextBox14.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="lbl_departamento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2TextBox27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 182</value>
+  </data>
+  <data name="lbl_detalle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 30</value>
+  </data>
+  <data name="&gt;&gt;pnl_dgv_pacientes.Parent" xml:space="preserve">
+    <value>pnl_contenedor</value>
+  </data>
+  <data name="lbl_detalle.Text" xml:space="preserve">
+    <value>Detalle:</value>
+  </data>
+  <data name="dtp_fechaNacimiento.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="txt_email.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="txt_numeroFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 164</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox21.Name" xml:space="preserve">
+    <value>Guna2TextBox21</value>
+  </data>
+  <data name="txt_localidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 29</value>
+  </data>
+  <data name="&gt;&gt;txt_tratamientos.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="lbl_medicacion.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="lbl_fechaNacimiento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;txt_calleFiltrar.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="txt_enfermedad.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox25.Name" xml:space="preserve">
+    <value>Guna2TextBox25</value>
+  </data>
+  <data name="txt_numero.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;pnl_filtrar.Name" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="txt_antecedentesFlia.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoMFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;txt_nucleoFlia.Name" xml:space="preserve">
+    <value>txt_nucleoFlia</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnl_ingresar.Name" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>693, 300</value>
+  </data>
+  <data name="&gt;&gt;txt_email.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>frmPacientesIngresarFiltrar</value>
+  </data>
+  <data name="&gt;&gt;txt_departamentoFiltrar.Name" xml:space="preserve">
+    <value>txt_departamentoFiltrar</value>
+  </data>
+  <data name="txt_apellidoPFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>629, 164</value>
+  </data>
+  <data name="txt_tratamientos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>774, 46</value>
+  </data>
+  <data name="&gt;&gt;cmb_detalleFiltrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox14.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_telefono.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox4.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;txt_nucleoFlia.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_email.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_antecedentesFlia.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lbl_calle.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="lbl_telefono.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 30</value>
+  </data>
+  <data name="txt_localidad.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="dtp_fechaNacimiento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 20</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox15.Name" xml:space="preserve">
+    <value>Guna2TextBox15</value>
+  </data>
+  <data name="txt_apellidoP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="lbl_edad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 124</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox19.Name" xml:space="preserve">
+    <value>Guna2TextBox19</value>
+  </data>
+  <data name="&gt;&gt;btn_volver.Name" xml:space="preserve">
+    <value>btn_volver</value>
+  </data>
+  <data name="&gt;&gt;lbl_email.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;lbl_numero.Name" xml:space="preserve">
+    <value>lbl_numero</value>
+  </data>
+  <data name="txt_departamentoFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="lbl_departamento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 164</value>
+  </data>
+  <data name="&gt;&gt;txt_localidadFiltrar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Guna2TextBox23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 112</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox15.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoM.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lbl_nombre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 47</value>
+  </data>
+  <data name="&gt;&gt;lbl_antecedentesFlia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_numero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lbl_telefono.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txt_emailFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;pnl_filtrar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txt_departamentoFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="txt_telefonoFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="txt_antecedentesLab.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_numero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_tratamientos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 348</value>
+  </data>
+  <data name="&gt;&gt;Guna2DateTimePicker1.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox26.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btn_filtrar.Name" xml:space="preserve">
+    <value>btn_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox25.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_localidad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>481, 162</value>
+  </data>
+  <data name="&gt;&gt;txt_numero.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox20.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Guna2TextBox24.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Dirección:</value>
+  </data>
+  <data name="txt_nombreFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;txt_calle.Name" xml:space="preserve">
+    <value>txt_calle</value>
+  </data>
+  <data name="lbl_calle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 30</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox5.Name" xml:space="preserve">
+    <value>Guna2TextBox5</value>
+  </data>
+  <data name="lbl_tratamientos.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox18.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbl_departamentpFiltrar.Name" xml:space="preserve">
+    <value>lbl_departamentpFiltrar</value>
+  </data>
+  <data name="&gt;&gt;txt_departamentoFiltrar.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbl_detalle.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="txt_apellidoMFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="txt_antecedentesLab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>672, 44</value>
+  </data>
+  <data name="&gt;&gt;lbl_telefono.Name" xml:space="preserve">
+    <value>lbl_telefono</value>
+  </data>
+  <data name="&gt;&gt;txt_antecedentesFlia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox27.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;txt_antecedentesFlia.Name" xml:space="preserve">
+    <value>txt_antecedentesFlia</value>
+  </data>
+  <data name="lbl_nucleoFlia.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 30</value>
+  </data>
+  <data name="&gt;&gt;dtp_fechaNacimiento.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox21.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbl_apellidos.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;pnl_dgv_pacientes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_antecedentesFlia.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox14.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
   <data name="&gt;&gt;txt_apellidoMFiltrar.Name" xml:space="preserve">
     <value>txt_apellidoMFiltrar</value>
   </data>
-  <data name="lbl_nombre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>20</value>
   </data>
-  <data name="&gt;&gt;lbl_nombre.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
   </data>
-  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Guna2TextBox11.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lbl_departamentpFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
-  <data name="&gt;&gt;lbl_tratamientos.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Guna2TextBox16.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 123</value>
   </data>
-  <data name="txt_apellidoM.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
+  <data name="pnl_contenedor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
+  <data name="txt_antecedentesFlia.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="Guna2DateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>319, 511</value>
+  <data name="&gt;&gt;TxtBSintoma.Name" xml:space="preserve">
+    <value>TxtBSintoma</value>
   </data>
-  <data name="Label9.Text" xml:space="preserve">
-    <value>Email:</value>
+  <data name="&gt;&gt;Guna2TextBox11.Name" xml:space="preserve">
+    <value>Guna2TextBox11</value>
   </data>
-  <data name="txt_nucleoFlia.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="&gt;&gt;txt_departamento.Name" xml:space="preserve">
+    <value>txt_departamento</value>
   </data>
-  <data name="txt_emailFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="txt_localidad.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;lbl_antecedentesLab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_detalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>748, 124</value>
-  </data>
-  <data name="lbl_nombre.Text" xml:space="preserve">
-    <value>Nombre:</value>
-  </data>
-  <data name="txt_nucleoFlia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>745, 42</value>
-  </data>
-  <data name="&gt;&gt;txt_nucleoFlia.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="txt_nucleoFlia.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;cmb_medicacion.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="lbl_telefono.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_calle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 29</value>
-  </data>
-  <data name="&gt;&gt;txt_calle.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="txt_email.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_localidad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_tratamientos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 30</value>
-  </data>
-  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
-    <value>Label4</value>
-  </data>
-  <data name="&gt;&gt;btn_filtrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 83</value>
-  </data>
-  <data name="lbl_antecedentesLab.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;txt_apellidoP.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="txt_localidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>603, 164</value>
-  </data>
-  <data name="&gt;&gt;lbl_departamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btn_ingresar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 30</value>
-  </data>
-  <data name="&gt;&gt;txt_apellidoM.Name" xml:space="preserve">
-    <value>txt_apellidoM</value>
-  </data>
-  <data name="lbl_nucleoFlia.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="txt_localidadFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 29</value>
-  </data>
-  <data name="&gt;&gt;txt_telefonoFiltrar.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="pnl_contenedor.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1920, 1080</value>
   </data>
-  <data name="pnl_dgv_pacientes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 575</value>
+  <data name="lbl_departamentpFiltrar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;lbl_telefono.Name" xml:space="preserve">
-    <value>lbl_telefono</value>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Nombre:</value>
   </data>
-  <data name="&gt;&gt;txt_emailFiltrar.Type" xml:space="preserve">
+  <data name="Guna2TextBox17.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="txt_calleFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;lbl_fechaNacimiento.Name" xml:space="preserve">
+    <value>lbl_fechaNacimiento</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoPFiltrar.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_departamento.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="Label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="txt_calle.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="btn_volver.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbl_telefono.Text" xml:space="preserve">
-    <value>Teléfono:</value>
-  </data>
-  <data name="&gt;&gt;txt_departamento.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_medicacion.Text" xml:space="preserve">
-    <value>Medicación:</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="txt_departamento.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;btn_volver.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
-    <value>Label3</value>
-  </data>
-  <data name="&gt;&gt;txt_apellidoPFiltrar.Name" xml:space="preserve">
-    <value>txt_apellidoPFiltrar</value>
-  </data>
-  <data name="&gt;&gt;txt_email.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_edad.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="txt_antecedentesFlia.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="&gt;&gt;txt_enfermedad.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="txt_nucleoFlia.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lbl_localidad.Text" xml:space="preserve">
-    <value>Localidad:</value>
-  </data>
-  <data name="txt_enfermedad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="txt_edadFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="&gt;&gt;txt_departamentoFiltrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_nucleoFlia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 30</value>
-  </data>
-  <data name="txt_numero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>603, 124</value>
-  </data>
-  <data name="&gt;&gt;txt_apellidoM.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_antecedentesLab.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="lbl_fechaNacimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 30</value>
-  </data>
-  <data name="pnl_contenedor.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_enfermedad.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_departamento.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_nombreFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;txt_antecedentesFlia.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;txt_nombreFiltrar.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;pnl_filtrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_email.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;txt_departamentoFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="lbl_antecedentesLab.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_apellidoM.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;txt_numero.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;pnl_contenedor.Name" xml:space="preserve">
-    <value>pnl_contenedor</value>
-  </data>
-  <data name="&gt;&gt;lbl_edad.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;txt_tratamientos.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="txt_nombreFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;txt_localidadFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="txt_tratamientos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>774, 46</value>
-  </data>
-  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
-    <value>Label6</value>
-  </data>
-  <data name="txt_numeroFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="txt_apellidoM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="&gt;&gt;txt_numeroFiltrar.Name" xml:space="preserve">
-    <value>txt_numeroFiltrar</value>
-  </data>
-  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_departamentoFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 209</value>
-  </data>
-  <data name="lbl_detalle.Text" xml:space="preserve">
-    <value>Detalle:</value>
-  </data>
-  <data name="txt_localidad.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;lbl_antecedentesLab.Name" xml:space="preserve">
-    <value>lbl_antecedentesLab</value>
-  </data>
-  <data name="pnl_dgv_pacientes.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnl_ingresar.Parent" xml:space="preserve">
-    <value>pnl_contenedor</value>
-  </data>
-  <data name="txt_apellidoMFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;cmb_detalleFiltrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_email.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="txt_calle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 123</value>
-  </data>
-  <data name="txt_apellidoP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>603, 48</value>
-  </data>
-  <data name="lbl_edad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 124</value>
-  </data>
-  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lbl_departamentpFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 30</value>
-  </data>
-  <data name="&gt;&gt;txt_nombre.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;txt_numeroFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="txt_telefono.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="lbl_numero.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 165</value>
-  </data>
-  <data name="txt_telefonoFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="lbl_numero.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="txt_numeroFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="btn_filtrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>693, 300</value>
-  </data>
-  <data name="lbl_nombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 47</value>
-  </data>
-  <data name="lbl_fechaNacimiento.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lbl_departamento.Text" xml:space="preserve">
-    <value>Departamento:</value>
-  </data>
-  <data name="lbl_calle.Text" xml:space="preserve">
-    <value>Calle:</value>
-  </data>
-  <data name="&gt;&gt;txt_localidadFiltrar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="txt_apellidoP.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="lbl_antecedentesFlia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 300</value>
-  </data>
-  <data name="&gt;&gt;lbl_nucleoFlia.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dtp_fechaNacimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 20</value>
-  </data>
-  <data name="lbl_calle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 124</value>
-  </data>
-  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 83</value>
-  </data>
-  <data name="lbl_apellidos.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lbl_enfermedad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="lbl_localidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 30</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>F_Pacientes</value>
-  </data>
-  <data name="&gt;&gt;lbl_calle.Name" xml:space="preserve">
-    <value>lbl_calle</value>
-  </data>
-  <data name="&gt;&gt;pnl_ingresar.Name" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;lbl_fechaNacimiento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;dtp_fechaNacimiento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_departamento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 29</value>
-  </data>
-  <data name="lbl_calle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 30</value>
-  </data>
-  <data name="txt_departamentoFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="txt_apellidoPFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;txt_telefonoFiltrar.Name" xml:space="preserve">
-    <value>txt_telefonoFiltrar</value>
-  </data>
-  <data name="&gt;&gt;txt_telefonoFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;lbl_email.Name" xml:space="preserve">
-    <value>lbl_email</value>
-  </data>
-  <data name="lbl_departamento.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;txt_localidad.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;btn_ingresar.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_departamentpFiltrar.Text" xml:space="preserve">
-    <value>Departamento:</value>
-  </data>
-  <data name="cmb_detalleFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 171</value>
-  </data>
-  <data name="lbl_antecedentesLab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 30</value>
-  </data>
-  <data name="&gt;&gt;cmb_medicacion.Name" xml:space="preserve">
-    <value>cmb_medicacion</value>
-  </data>
-  <data name="&gt;&gt;txt_numeroFiltrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_enfermedad.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="txt_apellidoP.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="txt_localidadFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="txt_emailFiltrar.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_localidadFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 209</value>
-  </data>
-  <data name="lbl_telefono.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="&gt;&gt;txt_calleFiltrar.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="txt_emailFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="txt_calleFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 165</value>
-  </data>
-  <data name="&gt;&gt;Guna2DateTimePicker1.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_nucleoFlia.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;dtp_fechaNacimiento.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="txt_antecedentesLab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 407</value>
-  </data>
-  <data name="&gt;&gt;lbl_calle.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;lbl_numero.Name" xml:space="preserve">
-    <value>lbl_numero</value>
-  </data>
-  <data name="&gt;&gt;lbl_edad.Name" xml:space="preserve">
-    <value>lbl_edad</value>
-  </data>
-  <data name="txt_numero.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_antecedentesFlia.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_ingresar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_nombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 29</value>
-  </data>
-  <data name="&gt;&gt;txt_telefono.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_medicacion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>598, 469</value>
-  </data>
-  <data name="txt_nombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;lbl_apellidos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_departamento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="pnl_ingresar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 7</value>
-  </data>
-  <data name="&gt;&gt;txt_numeroFiltrar.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="txt_enfermedad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 466</value>
-  </data>
-  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cmb_detalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 131</value>
-  </data>
-  <data name="txt_numero.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;lbl_medicacion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_emailFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;lbl_edad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_telefonoFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;txt_nombreFiltrar.Name" xml:space="preserve">
-    <value>txt_nombreFiltrar</value>
-  </data>
-  <data name="&gt;&gt;lbl_nucleoFlia.Name" xml:space="preserve">
-    <value>lbl_nucleoFlia</value>
-  </data>
-  <data name="&gt;&gt;txt_calle.Name" xml:space="preserve">
-    <value>txt_calle</value>
-  </data>
-  <data name="lbl_nucleoFlia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 251</value>
-  </data>
-  <data name="lbl_email.Text" xml:space="preserve">
-    <value>Email:</value>
-  </data>
-  <data name="&gt;&gt;btn_filtrar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cmb_detalle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
-  </data>
-  <data name="lbl_departamentpFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="txt_apellidoMFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 83</value>
-  </data>
-  <data name="txt_telefonoFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 29</value>
-  </data>
-  <data name="&gt;&gt;txt_apellidoMFiltrar.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="txt_telefono.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="lbl_enfermedad.Text" xml:space="preserve">
-    <value>Enfermedad:</value>
-  </data>
-  <data name="&gt;&gt;lbl_antecedentesFlia.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="lbl_antecedentesFlia.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;pnl_ingresar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="txt_antecedentesLab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>672, 44</value>
   </data>
   <data name="cmb_detalleFiltrar.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
-  <data name="pnl_contenedor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="txt_calle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
   </data>
-  <data name="txt_antecedentesFlia.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="lbl_detalle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>748, 124</value>
   </data>
-  <data name="Label7.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txt_telefono.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_numero.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 83</value>
+  </data>
+  <data name="txt_nombreFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 29</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15.75pt</value>
   </data>
-  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="txt_apellidoMFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
   </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 30</value>
+  <data name="&gt;&gt;Guna2TextBox26.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txt_numero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
   </data>
-  <data name="txt_numeroFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 164</value>
-  </data>
-  <data name="txt_numeroFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 29</value>
-  </data>
-  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="txt_telefonoFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txt_departamento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 162</value>
+  <data name="&gt;&gt;pnl_ingresar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnl_contenedor.ZOrder" xml:space="preserve">
+  <data name="pnl_ingresar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="txt_edadFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;lbl_nucleoFlia.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
   </data>
-  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_departamentpFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;dtp_fechaNacimiento.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;lbl_nombre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_nombre.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;BtnVolver.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;btn_volver.Name" xml:space="preserve">
-    <value>btn_volver</value>
+  <data name="&gt;&gt;btn_ingresar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txt_apellidoP.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;txt_emailFiltrar.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;txt_antecedentesLab.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
+  <data name="&gt;&gt;txt_apellidoM.Name" xml:space="preserve">
+    <value>txt_apellidoM</value>
   </data>
-  <data name="txt_telefono.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="txt_tratamientos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 348</value>
   </data>
-  <data name="txt_nombreFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 84</value>
+  <data name="&gt;&gt;cmb_medicacion.ZOrder" xml:space="preserve">
+    <value>25</value>
   </data>
-  <data name="&gt;&gt;txt_apellidoMFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;txt_apellidoPFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="lbl_telefono.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 30</value>
-  </data>
-  <data name="lbl_medicacion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 30</value>
-  </data>
-  <data name="&gt;&gt;txt_telefono.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_nombreFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="cmb_detalle.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="lbl_apellidos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>481, 47</value>
-  </data>
-  <data name="txt_enfermedad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 29</value>
-  </data>
-  <data name="lbl_antecedentesLab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 407</value>
-  </data>
-  <data name="lbl_antecedentesFlia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 30</value>
-  </data>
-  <data name="lbl_antecedentesFlia.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;txt_nombre.Name" xml:space="preserve">
-    <value>txt_nombre</value>
-  </data>
-  <data name="txt_localidadFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;lbl_apellidos.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;pnl_dgv_pacientes.Name" xml:space="preserve">
-    <value>pnl_dgv_pacientes</value>
-  </data>
-  <data name="txt_departamentoFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="txt_nombre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 30</value>
-  </data>
-  <data name="txt_enfermedad.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;lbl_tratamientos.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="Label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_antecedentesFlia.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="txt_tratamientos.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="txt_emailFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
   </data>
   <data name="txt_email.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="txt_antecedentesLab.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+  <data name="&gt;&gt;txt_calle.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="txt_apellidoP.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="&gt;&gt;txt_antecedentesLab.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="txt_tratamientos.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="txt_calle.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 251</value>
-  </data>
-  <data name="&gt;&gt;txt_email.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="txt_apellidoMFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 29</value>
-  </data>
-  <data name="lbl_apellidos.Text" xml:space="preserve">
-    <value>Apellidos:</value>
-  </data>
-  <data name="btn_ingresar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 40</value>
-  </data>
-  <data name="&gt;&gt;txt_calle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cmb_detalle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
   </data>
   <data name="txt_localidad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;txt_numero.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_numero.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
-  <data name="btn_volver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 6</value>
+  <data name="&gt;&gt;lbl_tratamientos.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
-  <data name="lbl_medicacion.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+  <data name="&gt;&gt;Guna2TextBox6.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="txt_telefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>603, 85</value>
+  <data name="Guna2TextBox21.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
   </data>
-  <data name="txt_nombreFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
+  <data name="pnl_dgv_pacientes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1878, 463</value>
   </data>
-  <data name="&gt;&gt;lbl_localidad.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btn_filtrar.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txt_emailFiltrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnl_contenedor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnl_dgv_pacientes.Name" xml:space="preserve">
+    <value>pnl_dgv_pacientes</value>
+  </data>
+  <data name="&gt;&gt;txt_antecedentesFlia.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
-  <data name="Guna2DateTimePicker1.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="Label9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbl_edad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15.75pt</value>
   </data>
-  <data name="&gt;&gt;txt_edadFiltrar.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;Guna2TextBox10.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbl_apellidos.Text" xml:space="preserve">
+    <value>Apellidos:</value>
+  </data>
+  <data name="lbl_edad.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2TextBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 314</value>
+  </data>
+  <data name="txt_numeroFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 29</value>
+  </data>
+  <data name="txt_nucleoFlia.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 30</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_departamento.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txt_numero.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txt_nombre.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="Guna2TextBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 243</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox21.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox12.Name" xml:space="preserve">
+    <value>Guna2TextBox12</value>
+  </data>
+  <data name="&gt;&gt;cmb_medicacion.Name" xml:space="preserve">
+    <value>cmb_medicacion</value>
+  </data>
+  <data name="&gt;&gt;lbl_apellidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_apellidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>481, 47</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox16.Name" xml:space="preserve">
+    <value>Guna2TextBox16</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox20.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Guna2DateTimePicker1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DateTimePicker, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoP.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 30</value>
+  </data>
+  <data name="cmb_medicacion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;btn_filtrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_numero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 124</value>
   </data>
   <data name="txt_nucleoFlia.Location" type="System.Drawing.Point, System.Drawing">
     <value>213, 248</value>
   </data>
-  <data name="lbl_medicacion.AutoSize" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;txt_apellidoPFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="txt_tratamientos.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="Guna2TextBox26.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="lbl_telefono.Text" xml:space="preserve">
+    <value>Teléfono:</value>
+  </data>
+  <data name="lbl_edad.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="txt_apellidoPFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button2.Name" xml:space="preserve">
+    <value>Guna2Button2</value>
+  </data>
+  <data name="&gt;&gt;txt_numeroFiltrar.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="txt_telefono.Size" type="System.Drawing.Size, System.Drawing">
     <value>355, 29</value>
   </data>
-  <data name="&gt;&gt;txt_tratamientos.Name" xml:space="preserve">
-    <value>txt_tratamientos</value>
+  <data name="lbl_apellidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 30</value>
   </data>
-  <data name="&gt;&gt;lbl_numero.Type" xml:space="preserve">
+  <data name="txt_antecedentesLab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 407</value>
+  </data>
+  <data name="txt_localidadFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>572, 209</value>
+  </data>
+  <data name="txt_tratamientos.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="lbl_calle.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txt_nucleoFlia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_departamento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 163</value>
+  </data>
+  <data name="lbl_medicacion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>598, 469</value>
+  </data>
+  <data name="&gt;&gt;txt_numeroFiltrar.Name" xml:space="preserve">
+    <value>txt_numeroFiltrar</value>
+  </data>
+  <data name="&gt;&gt;lbl_nombre.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Teléfono:</value>
-  </data>
-  <data name="lbl_email.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lbl_departamento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 164</value>
-  </data>
-  <data name="&gt;&gt;lbl_localidad.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_telefono.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox8.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="txt_departamento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="lbl_calle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="Guna2TextBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox11.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;txt_calle.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;cmb_medicacion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="Guna2TextBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="lbl_email.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbl_email.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox19.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="&gt;&gt;btn_volver.ZOrder" xml:space="preserve">
     <value>35</value>
   </data>
-  <data name="lbl_nombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 30</value>
+  <data name="&gt;&gt;txt_edadFiltrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbl_numero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 30</value>
+  <data name="txt_departamentoFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 209</value>
   </data>
-  <data name="txt_apellidoP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 29</value>
+  <data name="lbl_nucleoFlia.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 251</value>
   </data>
-  <data name="txt_apellidoMFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
+  <data name="Guna2TextBox12.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="lbl_nombre.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox3.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="lbl_edad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 30</value>
+  </data>
+  <data name="txt_tratamientos.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lbl_email.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoP.Name" xml:space="preserve">
+    <value>txt_apellidoP</value>
+  </data>
+  <data name="pnl_dgv_pacientes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 575</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_numeroFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;txt_tratamientos.Name" xml:space="preserve">
+    <value>txt_tratamientos</value>
+  </data>
+  <data name="txt_nombreFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;lbl_nucleoFlia.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="Guna2TextBox13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 447</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox5.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="txt_calleFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 29</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;txt_telefonoFiltrar.Name" xml:space="preserve">
+    <value>txt_telefonoFiltrar</value>
+  </data>
+  <data name="txt_apellidoPFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="lbl_antecedentesFlia.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 30</value>
+  </data>
+  <data name="txt_edadFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="lbl_detalle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2TextBox16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>588, 517</value>
+  </data>
+  <data name="&gt;&gt;txt_telefono.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;txt_nombreFiltrar.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1347,589 +1542,1039 @@
   <data name="&gt;&gt;txt_departamento.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Nombre:</value>
-  </data>
-  <data name="&gt;&gt;txt_apellidoM.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="txt_apellidoMFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="txt_localidadFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txt_numeroFiltrar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 16pt</value>
   </data>
-  <data name="txt_email.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
-    <value>Label9</value>
-  </data>
-  <data name="pnl_filtrar.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="pnl_ingresar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 559</value>
-  </data>
-  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="txt_calleFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txt_antecedentesFlia.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_enfermedad.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;lbl_antecedentesFlia.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_localidad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;btn_ingresar.Name" xml:space="preserve">
-    <value>btn_ingresar</value>
-  </data>
-  <data name="&gt;&gt;pnl_filtrar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txt_departamentoFiltrar.Name" xml:space="preserve">
-    <value>txt_departamentoFiltrar</value>
-  </data>
-  <data name="txt_departamentoFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 29</value>
-  </data>
-  <data name="&gt;&gt;pnl_dgv_pacientes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_emailFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;lbl_telefono.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="lbl_edad.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_antecedentesLab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;lbl_antecedentesFlia.Name" xml:space="preserve">
-    <value>lbl_antecedentesFlia</value>
-  </data>
-  <data name="&gt;&gt;lbl_departamentpFiltrar.Name" xml:space="preserve">
-    <value>lbl_departamentpFiltrar</value>
-  </data>
-  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Guna2DateTimePicker1.Name" xml:space="preserve">
-    <value>Guna2DateTimePicker1</value>
-  </data>
-  <data name="&gt;&gt;lbl_nucleoFlia.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="lbl_numero.Text" xml:space="preserve">
-    <value>Número:</value>
-  </data>
-  <data name="&gt;&gt;txt_emailFiltrar.Name" xml:space="preserve">
-    <value>txt_emailFiltrar</value>
-  </data>
-  <data name="lbl_detalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_fechaNacimiento.Name" xml:space="preserve">
-    <value>lbl_fechaNacimiento</value>
-  </data>
-  <data name="&gt;&gt;lbl_numero.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_tratamientos.Text" xml:space="preserve">
-    <value>Tratamientos</value>
-  </data>
-  <data name="lbl_antecedentesLab.Text" xml:space="preserve">
-    <value>Antecedentes laborales:</value>
-  </data>
-  <data name="lbl_apellidos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;cmb_detalleFiltrar.Name" xml:space="preserve">
-    <value>cmb_detalleFiltrar</value>
-  </data>
-  <data name="&gt;&gt;lbl_detalle.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="lbl_departamentpFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="txt_email.Size" type="System.Drawing.Size, System.Drawing">
-    <value>838, 30</value>
-  </data>
-  <data name="txt_tratamientos.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="txt_antecedentesFlia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 298</value>
-  </data>
-  <data name="txt_apellidoM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Número:</value>
-  </data>
-  <data name="lbl_calle.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lbl_tratamientos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 30</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Detalle:</value>
-  </data>
-  <data name="&gt;&gt;lbl_apellidos.Name" xml:space="preserve">
-    <value>lbl_apellidos</value>
-  </data>
-  <data name="&gt;&gt;dtp_fechaNacimiento.Name" xml:space="preserve">
-    <value>dtp_fechaNacimiento</value>
-  </data>
-  <data name="txt_calleFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 30</value>
-  </data>
-  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>463, 207</value>
-  </data>
-  <data name="&gt;&gt;lbl_medicacion.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;pnl_dgv_pacientes.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txt_email.Name" xml:space="preserve">
-    <value>txt_email</value>
-  </data>
-  <data name="&gt;&gt;lbl_enfermedad.Name" xml:space="preserve">
-    <value>lbl_enfermedad</value>
-  </data>
-  <data name="cmb_medicacion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>732, 463</value>
-  </data>
-  <data name="txt_departamento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="txt_departamento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="cmb_medicacion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="txt_nucleoFlia.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
-    <value>Label7</value>
-  </data>
-  <data name="cmb_medicacion.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="lbl_localidad.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cmb_medicacion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 38</value>
-  </data>
-  <data name="&gt;&gt;lbl_medicacion.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="txt_numeroFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="lbl_calle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_departamentpFiltrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnl_contenedor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_emailFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>726, 30</value>
-  </data>
-  <data name="txt_calle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="txt_localidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 29</value>
-  </data>
-  <data name="txt_edadFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 124</value>
-  </data>
-  <data name="lbl_apellidos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 30</value>
-  </data>
-  <data name="&gt;&gt;lbl_localidad.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="txt_edadFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="lbl_tratamientos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 30</value>
-  </data>
-  <data name="lbl_detalle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;lbl_email.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_detalle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_antecedentesLab.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="txt_departamentoFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;txt_localidad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_volver.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;lbl_telefono.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <data name="txt_edadFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="txt_numero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 29</value>
-  </data>
-  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="lbl_antecedentesFlia.Text" xml:space="preserve">
-    <value>Antecedentes familiares:</value>
-  </data>
-  <data name="lbl_fechaNacimiento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="txt_apellidoPFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 29</value>
-  </data>
-  <data name="&gt;&gt;txt_nucleoFlia.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_departamento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 30</value>
-  </data>
-  <data name="btn_ingresar.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="txt_telefono.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;lbl_tratamientos.Name" xml:space="preserve">
-    <value>lbl_tratamientos</value>
-  </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
-  </data>
-  <data name="&gt;&gt;cmb_detalle.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lbl_fechaNacimiento.ZOrder" xml:space="preserve">
+  <data name="lbl_localidad.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="&gt;&gt;txt_nombre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;txt_departamento.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
   </data>
-  <data name="&gt;&gt;txt_apellidoM.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="lbl_enfermedad.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
   </data>
-  <data name="&gt;&gt;lbl_nombre.Name" xml:space="preserve">
-    <value>lbl_nombre</value>
+  <data name="lbl_email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 209</value>
   </data>
-  <data name="txt_nombre.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+  <data name="lbl_nucleoFlia.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;txt_nombre.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;DgvEnfermedades.Name" xml:space="preserve">
+    <value>DgvEnfermedades</value>
+  </data>
+  <data name="txt_nucleoFlia.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="txt_calleFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="txt_emailFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="lbl_telefono.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lbl_numero.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btn_filtrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="txt_departamentoFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="lbl_calle.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_antecedentesLab.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_enfermedad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 30</value>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txt_departamento.Name" xml:space="preserve">
-    <value>txt_departamento</value>
+  <data name="pnl_contenedor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;txt_apellidoMFiltrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
   </data>
-  <data name="lbl_nucleoFlia.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txt_emailFiltrar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lbl_detalle.Name" xml:space="preserve">
-    <value>lbl_detalle</value>
-  </data>
-  <data name="txt_nombreFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
-  </data>
-  <data name="lbl_email.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lbl_departamento.Name" xml:space="preserve">
-    <value>lbl_departamento</value>
-  </data>
-  <data name="&gt;&gt;btn_ingresar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txt_enfermedad.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="&gt;&gt;lbl_localidad.Name" xml:space="preserve">
+    <value>lbl_localidad</value>
   </data>
   <data name="lbl_medicacion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15.75pt</value>
   </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>629, 164</value>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;pnl_ingresar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Guna2TextBox3.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
-  <data name="lbl_email.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 30</value>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>463, 207</value>
   </data>
-  <data name="&gt;&gt;txt_apellidoP.Name" xml:space="preserve">
-    <value>txt_apellidoP</value>
+  <data name="&gt;&gt;Guna2TextBox7.Name" xml:space="preserve">
+    <value>Guna2TextBox7</value>
   </data>
-  <data name="&gt;&gt;txt_departamentoFiltrar.ZOrder" xml:space="preserve">
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 165</value>
+  </data>
+  <data name="&gt;&gt;txt_enfermedad.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="txt_nombreFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 84</value>
+  </data>
+  <data name="lbl_nombre.Text" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox27.Name" xml:space="preserve">
+    <value>Guna2TextBox27</value>
+  </data>
+  <data name="&gt;&gt;lbl_detalle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_tratamientos.Name" xml:space="preserve">
+    <value>lbl_tratamientos</value>
+  </data>
+  <data name="cmb_medicacion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 38</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 30</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox2.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="lbl_nombre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 30</value>
+  </data>
+  <data name="DgvEnfermedades.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="txt_telefonoFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="txt_antecedentesFlia.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 40</value>
+  </data>
+  <data name="lbl_numero.Text" xml:space="preserve">
+    <value>Número:</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="BtnVolver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 9</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox13.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox15.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_fechaNacimiento.Text" xml:space="preserve">
+    <value>Fecha de nacimiento:</value>
+  </data>
+  <data name="lbl_antecedentesLab.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;lbl_departamento.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
-  <data name="txt_calleFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbl_enfermedad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_calle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 124</value>
+  </data>
+  <data name="txt_apellidoMFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 29</value>
+  </data>
+  <data name="btn_ingresar.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox13.Name" xml:space="preserve">
+    <value>Guna2TextBox13</value>
+  </data>
+  <data name="Guna2TextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="lbl_tratamientos.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="Guna2TextBox21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>505, 74</value>
+  </data>
+  <data name="txt_emailFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>726, 30</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox17.Name" xml:space="preserve">
+    <value>Guna2TextBox17</value>
+  </data>
+  <data name="&gt;&gt;txt_localidad.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoMFiltrar.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;pnl_contenedor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txt_calle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="txt_nombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 48</value>
+  <data name="txt_apellidoM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>795, 47</value>
   </data>
-  <data name="lbl_fechaNacimiento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 82</value>
+  <data name="&gt;&gt;TxtBSintoma.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;txt_calleFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_nucleoFlia.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="txt_telefono.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="txt_telefonoFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;cmb_detalle.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox26.Name" xml:space="preserve">
+    <value>Guna2TextBox26</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_departamentpFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 30</value>
+  </data>
+  <data name="&gt;&gt;TxtBSintoma.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="lbl_apellidos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="btn_filtrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 39</value>
+  </data>
+  <data name="txt_enfermedad.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox19.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="txt_apellidoPFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="Guna2TextBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox6.Name" xml:space="preserve">
+    <value>Guna2TextBox6</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoM.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="txt_edadFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;btn_volver.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="lbl_enfermedad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 465</value>
+  </data>
+  <data name="&gt;&gt;lbl_nombre.Name" xml:space="preserve">
+    <value>lbl_nombre</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 30</value>
+  </data>
+  <data name="btn_ingresar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 40</value>
+  </data>
+  <data name="lbl_telefono.Location" type="System.Drawing.Point, System.Drawing">
+    <value>481, 82</value>
+  </data>
+  <data name="&gt;&gt;lbl_antecedentesLab.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="lbl_calle.Text" xml:space="preserve">
+    <value>Calle:</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox2.Name" xml:space="preserve">
+    <value>Guna2TextBox2</value>
+  </data>
+  <data name="txt_apellidoM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 29</value>
+  </data>
+  <data name="txt_nombre.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="txt_antecedentesLab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;pnl_dgv_pacientes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnl_filtrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>882, 559</value>
+  </data>
+  <data name="Guna2TextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>784, 46</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox23.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Guna2TextBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>590, 125</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txt_localidadFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 29</value>
+  </data>
+  <data name="txt_nombre.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="txt_email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>838, 30</value>
+  </data>
+  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="txt_apellidoMFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="txt_nombre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 29</value>
+  </data>
+  <data name="cmb_detalle.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;lbl_medicacion.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;lbl_medicacion.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;lbl_antecedentesLab.Name" xml:space="preserve">
+    <value>lbl_antecedentesLab</value>
+  </data>
+  <data name="Guna2DateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>319, 511</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_tratamientos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox19.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TxtBSintoma.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;txt_calleFiltrar.Name" xml:space="preserve">
+    <value>txt_calleFiltrar</value>
+  </data>
+  <data name="btn_ingresar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="lbl_fechaNacimiento.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="txt_nucleoFlia.Size" type="System.Drawing.Size, System.Drawing">
+    <value>745, 42</value>
+  </data>
+  <data name="txt_telefono.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;TxtBSintoma.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="lbl_numero.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_apellidoP.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="Guna2TextBox11.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="txt_telefonoFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox9.Name" xml:space="preserve">
+    <value>Guna2TextBox9</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Name" xml:space="preserve">
+    <value>txt_email</value>
+  </data>
+  <data name="&gt;&gt;lbl_apellidos.Name" xml:space="preserve">
+    <value>lbl_apellidos</value>
+  </data>
+  <data name="&gt;&gt;txt_telefono.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox24.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 583</value>
+  </data>
+  <data name="txt_calle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 123</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox17.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txt_calleFiltrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 184</value>
+  </data>
+  <data name="&gt;&gt;lbl_nombre.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="lbl_departamentpFiltrar.Text" xml:space="preserve">
+    <value>Departamento:</value>
+  </data>
+  <data name="lbl_email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 30</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox20.Name" xml:space="preserve">
+    <value>Guna2TextBox20</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox5.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Guna2TextBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox24.Name" xml:space="preserve">
+    <value>Guna2TextBox24</value>
+  </data>
+  <data name="lbl_antecedentesLab.Text" xml:space="preserve">
+    <value>Antecedentes laborales:</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox13.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="Guna2TextBox25.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_apellidoM.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox26.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;txt_nucleoFlia.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;Guna2DateTimePicker1.Name" xml:space="preserve">
+    <value>Guna2DateTimePicker1</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox25.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_localidad.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 30</value>
   </data>
-  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+  <data name="Guna2TextBox14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 517</value>
+  </data>
+  <data name="txt_apellidoM.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="&gt;&gt;txt_localidad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_telefono.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;txt_numeroFiltrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_localidad.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="btn_ingresar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>854, 507</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_numero.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;txt_telefonoFiltrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_numero.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="Guna2TextBox16.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;txt_edadFiltrar.Name" xml:space="preserve">
+    <value>txt_edadFiltrar</value>
+  </data>
+  <data name="Guna2TextBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox24.Parent" xml:space="preserve">
     <value>pnl_filtrar</value>
   </data>
   <data name="txt_email.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 16pt</value>
   </data>
-  <data name="Label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
+  <data name="txt_edadFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 124</value>
   </data>
-  <data name="txt_antecedentesLab.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbl_localidad.Text" xml:space="preserve">
+    <value>Localidad:</value>
+  </data>
+  <data name="&gt;&gt;txt_nombreFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_enfermedad.Text" xml:space="preserve">
+    <value>Enfermedad:</value>
+  </data>
+  <data name="&gt;&gt;lbl_calle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="lbl_departamento.Text" xml:space="preserve">
+    <value>Departamento:</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox15.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="pnl_filtrar.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnl_contenedor.Name" xml:space="preserve">
+    <value>pnl_contenedor</value>
+  </data>
+  <data name="&gt;&gt;txt_telefonoFiltrar.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;lbl_antecedentesFlia.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoPFiltrar.Name" xml:space="preserve">
+    <value>txt_apellidoPFiltrar</value>
+  </data>
+  <data name="&gt;&gt;txt_numero.Name" xml:space="preserve">
+    <value>txt_numero</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox7.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="txt_departamentoFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 29</value>
+  </data>
+  <data name="Guna2TextBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>590, 85</value>
+  </data>
+  <data name="txt_antecedentesFlia.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 16pt</value>
   </data>
-  <data name="&gt;&gt;txt_telefono.Name" xml:space="preserve">
-    <value>txt_telefono</value>
+  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txt_apellidoM.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="txt_calle.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;txt_apellidoPFiltrar.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="Guna2TextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>590, 46</value>
+  </data>
+  <data name="txt_antecedentesLab.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox12.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txt_calle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_ingresar.Name" xml:space="preserve">
+    <value>btn_ingresar</value>
+  </data>
+  <data name="txt_calleFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 165</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_email.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="lbl_nombre.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_email.Name" xml:space="preserve">
+    <value>lbl_email</value>
+  </data>
+  <data name="pnl_ingresar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="&gt;&gt;DgvEnfermedades.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_emailFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="lbl_departamento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 30</value>
+  </data>
+  <data name="&gt;&gt;txt_nombre.Name" xml:space="preserve">
+    <value>txt_nombre</value>
+  </data>
+  <data name="&gt;&gt;lbl_enfermedad.Name" xml:space="preserve">
+    <value>lbl_enfermedad</value>
+  </data>
+  <data name="lbl_edad.Text" xml:space="preserve">
+    <value>Edad:</value>
+  </data>
+  <data name="txt_emailFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="txt_departamentoFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="txt_apellidoM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 30</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="txt_antecedentesLab.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;DgvEnfermedades.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_enfermedad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 30</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox7.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 30</value>
+  </data>
+  <data name="&gt;&gt;cmb_medicacion.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;btn_ingresar.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="txt_tratamientos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="txt_localidad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 164</value>
+  </data>
+  <data name="&gt;&gt;lbl_detalle.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="Guna2TextBox18.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox6.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;txt_enfermedad.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnl_dgv_pacientes.Parent" xml:space="preserve">
-    <value>pnl_contenedor</value>
+  <data name="&gt;&gt;lbl_enfermedad.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="txt_antecedentesLab.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbl_tratamientos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_localidad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="&gt;&gt;BtnVolver.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="txt_apellidoP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 29</value>
+  </data>
+  <data name="txt_numero.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox22.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox21.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox17.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;cmb_detalle.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;txt_enfermedad.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;lbl_fechaNacimiento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_nombre.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2TextBox20.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="lbl_telefono.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 162</value>
+  </data>
+  <data name="txt_email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 209</value>
+  </data>
+  <data name="Guna2TextBox23.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_filtrar.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="txt_departamentoFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="txt_calleFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 83</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox1.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="txt_localidadFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="lbl_numero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 122</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox13.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>F_Pacientes</value>
+  </data>
+  <data name="lbl_antecedentesFlia.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lbl_tratamientos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 30</value>
+  </data>
+  <data name="txt_numeroFiltrar.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;lbl_departamento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox4.Name" xml:space="preserve">
+    <value>Guna2TextBox4</value>
+  </data>
+  <data name="txt_emailFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="Guna2TextBox24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 112</value>
+  </data>
+  <data name="&gt;&gt;lbl_fechaNacimiento.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox6.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox10.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_detalle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
   </data>
   <data name="&gt;&gt;txt_localidadFiltrar.Name" xml:space="preserve">
     <value>txt_localidadFiltrar</value>
   </data>
-  <data name="&gt;&gt;txt_localidad.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
-  <data name="Guna2DateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 36</value>
+  <data name="lbl_calle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;lbl_enfermedad.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
+  <data name="Guna2Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>896, 515</value>
   </data>
-  <data name="&gt;&gt;lbl_departamentpFiltrar.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="lbl_email.Text" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="lbl_medicacion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2TextBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>206, 165</value>
+  </data>
+  <data name="Guna2TextBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="Guna2TextBox25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>543, 150</value>
+  </data>
+  <data name="txt_apellidoMFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>634, 83</value>
+  </data>
+  <data name="lbl_departamento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="lbl_nucleoFlia.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 30</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 251</value>
+  </data>
+  <data name="Guna2Button2.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="lbl_enfermedad.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_telefono.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox24.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Guna2TextBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 204</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 30</value>
+  </data>
+  <data name="lbl_fechaNacimiento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 30</value>
+  </data>
+  <data name="txt_localidadFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
   </data>
   <data name="&gt;&gt;pnl_filtrar.Parent" xml:space="preserve">
     <value>pnl_contenedor</value>
   </data>
-  <data name="&gt;&gt;pnl_contenedor.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="Label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
   </data>
-  <data name="btn_filtrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 39</value>
+  <data name="&gt;&gt;Guna2TextBox11.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
-    <value>Label5</value>
-  </data>
-  <data name="lbl_telefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>481, 82</value>
-  </data>
-  <data name="txt_apellidoP.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_tratamientos.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="&gt;&gt;txt_telefono.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="txt_emailFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 251</value>
-  </data>
-  <data name="txt_apellidoP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txt_apellidoMFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;txt_calle.Parent" xml:space="preserve">
+  <data name="txt_telefonoFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 124</value>
+  </data>
+  <data name="lbl_antecedentesFlia.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 300</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox1.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txt_departamentoFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="txt_edadFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="Guna2TextBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;txt_emailFiltrar.Name" xml:space="preserve">
+    <value>txt_emailFiltrar</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="txt_calle.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lbl_apellidos.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox27.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 151</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox23.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lbl_localidad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtp_fechaNacimiento.Name" xml:space="preserve">
+    <value>dtp_fechaNacimiento</value>
+  </data>
+  <data name="txt_nombreFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;btn_ingresar.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;txt_telefonoFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;txt_edadFiltrar.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbl_antecedentesFlia.Text" xml:space="preserve">
+    <value>Antecedentes familiares:</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox1.Name" xml:space="preserve">
+    <value>Guna2TextBox1</value>
+  </data>
+  <data name="&gt;&gt;lbl_telefono.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="Label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;txt_departamento.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;Guna2TextBox16.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;lbl_fechaNacimiento.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
   <data name="pnl_filtrar.Location" type="System.Drawing.Point, System.Drawing">
     <value>1031, 7</value>
   </data>
-  <data name="txt_email.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;lbl_antecedentesLab.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_email.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
-  <data name="&gt;&gt;lbl_detalle.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;Guna2TextBox9.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txt_apellidoPFiltrar.ZOrder" xml:space="preserve">
-    <value>20</value>
+  <data name="lbl_telefono.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
   </data>
-  <data name="&gt;&gt;lbl_fechaNacimiento.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
+  <data name="&gt;&gt;txt_telefono.Name" xml:space="preserve">
+    <value>txt_telefono</value>
   </data>
-  <data name="txt_apellidoM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>795, 47</value>
+  <data name="&gt;&gt;Guna2TextBox3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="btn_volver.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Localidad:</value>
-  </data>
-  <data name="lbl_edad.Text" xml:space="preserve">
-    <value>Edad:</value>
-  </data>
-  <data name="&gt;&gt;lbl_nombre.ZOrder" xml:space="preserve">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;txt_antecedentesLab.Name" xml:space="preserve">
-    <value>txt_antecedentesLab</value>
-  </data>
-  <data name="&gt;&gt;txt_apellidoPFiltrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmb_detalleFiltrar.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="lbl_fechaNacimiento.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_tratamientos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;txt_calleFiltrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_tratamientos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 348</value>
-  </data>
-  <data name="txt_nombre.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;Guna2TextBox10.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;txt_numero.Name" xml:space="preserve">
-    <value>txt_numero</value>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>Email:</value>
   </data>
-  <data name="&gt;&gt;txt_tratamientos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Guna2Button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>797, 515</value>
   </data>
-  <data name="lbl_detalle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 30</value>
+  <data name="txt_apellidoP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 48</value>
   </data>
-  <data name="pnl_filtrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>882, 559</value>
+  <data name="Guna2TextBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
   </data>
-  <data name="&gt;&gt;txt_edadFiltrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <metadata name="pnl_contenedor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pnl_dgv_pacientes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>en-US</value>
   </metadata>
-  <metadata name="pnl_filtrar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="pnl_dgv_pacientes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="pnl_ingresar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="pnl_contenedor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

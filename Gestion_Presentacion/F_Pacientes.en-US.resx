@@ -118,10 +118,603 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_nombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 30</value>
+  <data name="DgvEnfermedades.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1884, 472</value>
   </data>
-  <data name="lbl_nombre.Text" xml:space="preserve">
-    <value>Name:</value>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 572</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1906, 496</value>
+  </data>
+  <data name="Guna2Button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2Button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 30</value>
+  </data>
+  <data name="Guna2Button2.Text" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="Guna2TextBox27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 468</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Guna2TextBox27.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>774, 32</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 470</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 30</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="Guna2TextBox25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>544, 429</value>
+  </data>
+  <data name="Guna2TextBox25.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 32</value>
+  </data>
+  <data name="Guna2TextBox26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 429</value>
+  </data>
+  <data name="Guna2TextBox26.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 32</value>
+  </data>
+  <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt</value>
+  </data>
+  <data name="Label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 430</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 30</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Localidad:</value>
+  </data>
+  <data name="Label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 431</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 30</value>
+  </data>
+  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>Departamento:</value>
+  </data>
+  <data name="Guna2TextBox22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>741, 391</value>
+  </data>
+  <data name="Guna2TextBox22.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 32</value>
+  </data>
+  <data name="Guna2TextBox23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 391</value>
+  </data>
+  <data name="Guna2TextBox23.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 32</value>
+  </data>
+  <data name="Guna2TextBox24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>535, 391</value>
+  </data>
+  <data name="Guna2TextBox24.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 32</value>
+  </data>
+  <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, 391</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 30</value>
+  </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Detalle:</value>
+  </data>
+  <data name="Label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 391</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 30</value>
+  </data>
+  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Número:</value>
+  </data>
+  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 391</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 30</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Calle:</value>
+  </data>
+  <data name="Guna2TextBox21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>506, 353</value>
+  </data>
+  <data name="Guna2TextBox21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 32</value>
+  </data>
+  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 353</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 30</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Edad:</value>
+  </data>
+  <data name="Guna2TextBox20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 353</value>
+  </data>
+  <data name="Guna2TextBox20.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 32</value>
+  </data>
+  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 353</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 30</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Teléfono:</value>
+  </data>
+  <data name="Guna2TextBox17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>709, 315</value>
+  </data>
+  <data name="Guna2TextBox17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 32</value>
+  </data>
+  <data name="Guna2TextBox18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>544, 315</value>
+  </data>
+  <data name="Guna2TextBox18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 32</value>
+  </data>
+  <data name="Guna2TextBox19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 315</value>
+  </data>
+  <data name="Guna2TextBox19.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 32</value>
+  </data>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 317</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 30</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Apellidos:</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 317</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="pnl_filtrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1026, 7</value>
+  </data>
+  <data name="pnl_filtrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>887, 559</value>
+  </data>
+  <data name="Guna2Button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 30</value>
+  </data>
+  <data name="Guna2Button1.Text" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+  <data name="BtnVolver.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="BtnVolver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 30</value>
+  </data>
+  <data name="BtnVolver.Text" xml:space="preserve">
+    <value>Volver</value>
+  </data>
+  <data name="Guna2TextBox16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>642, 511</value>
+  </data>
+  <data name="Guna2TextBox16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 32</value>
+  </data>
+  <data name="Guna2TextBox15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 511</value>
+  </data>
+  <data name="Guna2TextBox15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 32</value>
+  </data>
+  <data name="Guna2TextBox14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 511</value>
+  </data>
+  <data name="Guna2TextBox14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 32</value>
+  </data>
+  <data name="Guna2TextBox13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 441</value>
+  </data>
+  <data name="Guna2TextBox13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>614, 64</value>
+  </data>
+  <data name="Guna2TextBox12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>825, 112</value>
+  </data>
+  <data name="Guna2TextBox12.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 32</value>
+  </data>
+  <data name="Guna2TextBox11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>236, 370</value>
+  </data>
+  <data name="Guna2TextBox11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>709, 64</value>
+  </data>
+  <data name="Guna2TextBox10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 299</value>
+  </data>
+  <data name="Guna2TextBox10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>606, 64</value>
+  </data>
+  <data name="Guna2TextBox9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 228</value>
+  </data>
+  <data name="Guna2TextBox9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>685, 64</value>
+  </data>
+  <data name="Guna2TextBox8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 189</value>
+  </data>
+  <data name="Guna2TextBox8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>774, 32</value>
+  </data>
+  <data name="Guna2TextBox7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 150</value>
+  </data>
+  <data name="Guna2TextBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 32</value>
+  </data>
+  <data name="Guna2TextBox6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 150</value>
+  </data>
+  <data name="Guna2TextBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 32</value>
+  </data>
+  <data name="Guna2TextBox5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 112</value>
+  </data>
+  <data name="Guna2TextBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 32</value>
+  </data>
+  <data name="Guna2TextBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 112</value>
+  </data>
+  <data name="Guna2TextBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 32</value>
+  </data>
+  <data name="Guna2TextBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 74</value>
+  </data>
+  <data name="Guna2TextBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 32</value>
+  </data>
+  <data name="Guna2TextBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>784, 36</value>
+  </data>
+  <data name="Guna2TextBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 32</value>
+  </data>
+  <data name="Guna2TextBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Guna2TextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 36</value>
+  </data>
+  <data name="Guna2TextBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="Guna2TextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 32</value>
+  </data>
+  <data name="TxtBSintoma.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="TxtBSintoma.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 36</value>
+  </data>
+  <data name="TxtBSintoma.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="TxtBSintoma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 32</value>
+  </data>
+  <data name="Guna2DateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 73</value>
+  </data>
+  <data name="Guna2DateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 34</value>
+  </data>
+  <data name="lbl_localidad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>514, 151</value>
+  </data>
+  <data name="lbl_detalle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>742, 112</value>
+  </data>
+  <data name="lbl_numero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>526, 112</value>
+  </data>
+  <data name="lbl_medicacion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>511, 513</value>
+  </data>
+  <data name="lbl_enfermedad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 511</value>
+  </data>
+  <data name="lbl_antecedentesLab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 441</value>
+  </data>
+  <data name="lbl_tratamientos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 367</value>
+  </data>
+  <data name="lbl_tratamientos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 30</value>
+  </data>
+  <data name="lbl_tratamientos.Text" xml:space="preserve">
+    <value>Tratamientos:</value>
+  </data>
+  <data name="lbl_antecedentesFlia.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 299</value>
+  </data>
+  <data name="lbl_nucleoFlia.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 228</value>
+  </data>
+  <data name="lbl_email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 191</value>
+  </data>
+  <data name="lbl_departamento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 152</value>
+  </data>
+  <data name="lbl_calle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 112</value>
+  </data>
+  <data name="lbl_telefono.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_telefono.Location" type="System.Drawing.Point, System.Drawing">
+    <value>523, 77</value>
+  </data>
+  <data name="lbl_fechaNacimiento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 72</value>
+  </data>
+  <data name="lbl_apellidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>517, 38</value>
+  </data>
+  <data name="lbl_nombre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 38</value>
+  </data>
+  <data name="pnl_ingresar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1013, 559</value>
   </data>
 </root>
