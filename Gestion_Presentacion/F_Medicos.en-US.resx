@@ -118,72 +118,134 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Guna2Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="gbtn_nPassw.Location" type="System.Drawing.Point, System.Drawing">
+    <value>677, 795</value>
+  </data>
+  <data name="gbtn_nPassw.Size" type="System.Drawing.Size, System.Drawing">
+    <value>333, 51</value>
+  </data>
+  <data name="gbtn_nPassw.Text" xml:space="preserve">
+    <value>Request new password</value>
+  </data>
+  <data name="btn_cerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACLz2ctAAAABGdBTUEAALGPC/xhBQAADGdJREFUeF7t
-        3XuMVdUdxfHRzqggw0NAwAc+WmK19RUMsfoHVlsrSoygRmvViFbro7ZTQFGoVdsIBSwiijwEHGZgGMBh
-        kDfI+ERFS61pGhMb25i2sSZtYuJfTZp09649OZc78N3DgMyGJuuPT+6dde/Mjz9W9jln33O16nt1o80O
-        GQzNcsHQLBcMzXLB0CwXDM1ywdAsFwzNcsHQLBcMzXLB0CwXDM1ywdAsFwzNcsHQLBcMzXLB0CwXDM1y
-        wdAsFwzNcsHQLBcMzXLB0CwXDM1ywdAsFwzNcsHQLBcMzXLB0CwXDM1ywdAsFwzNcsHQLBcMzXLBkLx9
-        7NBg1lXUIYIhoSFmKdQhgiGhIWYp1CGCIaEhZinUIYIhoSFmKdQhgiGhIWYp1CGCIaEhZinUIYIhoSFm
-        KdQhgiGhIWYp1CGCIaEhZinUIYIhoSFmKdQhgiGhIWYp1CGCIaEhZinUIYIhoSFmKdQhgiGhIWYp1CGC
-        IaEhZinUIYIhoSFmKdQhgiGhIWYp1CGCIaEhZinUIYIhoSFmKdQhgiGhIWYp1CGCIaEhZinUIYIhoSFm
-        KdQhgiH517SewayrqEMEQxJ2VAWzrqIOEQwJDTFLoQ4RDAkNMUuhDhEMCQ0xS6EOEQwJDTFLoQ4RDAkN
-        +X/w8Zaq8J/X+TXrPtQhgiGhIYe7/75ZFVqe/0b46/oB+Lp1H+oQwZDQkMORVrvP2/qHT7d+Lfxj66Bw
-        7yPjwvqGC8M/tw+N/t12BP6eHVzUIYIhoSGHAxVOxSpKt6NxaHivvjrsaqwKL8/rHVYtOD6sf7Z/zOSN
-        F/qHj9eeHt+r3xH6u/blUIcIhoSGHEo6vH66eWiHwjXOOj183Lr7PZ9uqIqr31vLjyxnWgGXTBtS/h0V
-        8oPmE8uv28FBHSIYEhpyKGnlanm6b/hi2+5yvfTc0PDnRdXhT48fE966tk/YdHWfsHH5NWHNxKPDm5cd
-        Fz4a3yt8tvQr8feKlU9FfnF26WKltCoWf8e+POoQwZDQkENJ53cqzt9nHBPL1XryoFB/6blh+uU9Q8vA
-        IdGy0wbGVXHRFb13Z+cNCHPHDonvf/mCgbGUby+siSspzbEDQx0iGBIacijpvK9hcnVoGjy4XK4lZx4X
-        mu4/KjQO6x9WDTohLL+yNiy5qUdovKFnLKPeqzLq5+J34u/dW+MV8CCjDhEMCQ05lHTo3Dq9pr1cI/vE
-        gtX/rCbMOKNfaLi9R1g6YkR8be5F7YXT6rj4W33CvO/0Kq2APeLzpef3i7+7akZ1XFFpjh0Y6hDBkNCQ
-        w4FWOFHBtAIuvrV3XOUWXN8jFk2v6bko188qn96vAurnz1q8NXOwUYcIhoSG5PTHFe2rHr327jNHxcOo
-        LJ1YHaZMGRRXNW2/qHg6VOu58mcfKq2GpZVy/v3VcQWtvIippHmUW9dQhwiGhIbk8EVzdWgbVxvaftwz
-        Pv6+rhe+T2XatKAmbGnoEx6f1C8WTFRKFU7FnPlwr7Bs7jHxPcroI7rP1x0R3p/UM+yYflSc9bfnq/d6
-        j+0bdYhgSGhIDtq30wqnfTvt52mbhd6nPT+tdJMuPzo8clZtpPPBeCVcuijR1e/Ki/rGc0AVU3uAe/4N
-        rbAqoK6Ki43r1DzrHHWIYEhoSA4qlor3WqkweqzcVNY+nwrWmYU3jghtm1fsU/F5sTay47zF7Y+/W7n3
-        v8n2jTpEMCQ0pLtpRdI5mvb7CipG8frmq3bv78lTF9Z22AeUlTePDLt27Qrv7dwZ3tmxIz6+8UJLeG31
-        rWHXzi1hQ+PK+HpRQBVe54/FPK2CxTzrOuoQwZDQkFz0CYfualk554wOH5tVFnDGmKNj+SaVDsF6XuwP
-        qoAqXesvpodtTS3x8dUpC8IfJiwKr69rjs8rC6jzQs0p5n3U0rs8z7qOOkQwJDQkl99unxFL0traGv6y
-        5eJyXhRQ53hPTjgyTL2jJtJzbclUFnDtwsWxdCrcJ/c3hp13PRM2LmoOr73ySocCypttK8rz9HlzkVvX
-        UYcIhoSG5LKvAi44r2+Y+kBVeHR8daTn2oAuCqjf3fbiS2H7rIZYvFdvnh42zFoUsze2vOwCdgPqEMGQ
-        0JBcVECdvy1fuDDsnD88bhzrUFl5CL7n7kvDpLqTojvuGxMaBh/foYAqnAqow7BWwvefWNFewNL5YFFA
-        XQHrZoUNi2bGldEFPHDUIYIhoSHdTVsw2pNbM+br4cURg8PG7/YN6y4YENZf0r69smp4vw4F/OkD5yUL
-        qMOwFAXUYfjdOatjptfnX3RC/Lua0TLs+Pi4+pYhYcvYvt4LPADUIYIhoSHdTYXYcHH/WDqVcPV1F4b1
-        158WS6GSFAXUR2rFIVib0HquK+L5QwaEJ08aHD8XbpkxM54Hbq17Oq5+elQBVb5YwG+eEf/u1htqY2k1
-        a+sttXG2yugS7h/qEMGQ0JDupkJo83jdtB/GkuiQ+OGa4fE1bdFsHNUnFlCf+ap0Y+6cHC65ZV58rk3o
-        K0beFGqubQ2nXfFEmHryWbGA2naJh9dZczsU8MOmwfHvatXVvmAxr3l0n/hv0OG58t9mnaMOEQwJDelu
-        +hRCq1xlAZsuGxY/ltPrxTmgDrei1a7w86Hnhx9NHhlOveOZ+KgyLhs7tlw4nf/pcFz8XJwDajXVOWAx
-        T5+gbL/z2L3+bdY56hDBkNCQXIqr4Pq68aHpq6fGu52V68ZSnbvtSavfrWeODmPvuTycO+7B9sdvT4yH
-        2TVPTEAfLBgUD7O6j1BF1dWxL0IOHHWIYEhoSA76JGTt+Bvbz+NKq92q4UPjlapeW/1ov3iIXH1Xj9D8
-        g2MjPdfnvTrkHnnj1nhholVQBdTeYDzPK53b6WM8Pdfqpr/7zuz+8cpaNzyohCq6iqhi7vlvsn2jDhEM
-        CQ3pbvpuhy42VJBl55wfV8DKfcBUAVdcUxv3BrUKXnnb2Fg+FVI3n7509sDyxYVKWFnA4u/qEKzyqYiy
-        +cq+/jrnfqIOEQwJDelub5XKoSvhTTPvLp+TdbWAujV/zrB+8UpYlGl1U5lUQK1+KqBuu9qzgMVGtPYd
-        t9x2QvykhW7dsjTqEMGQ0JDu9uHsmnilm/okpLMC6ptwWvF0h7QKprLF1e+G2ri/p0d9MUl5qoCat/NX
-        J8b3Fq9Z11CHCIaEhuSgTz32t4DNYzoWUMXTlbNWvm3je4Xrfn1ZfK5i6efOCqgvK6XumrY06hDBkNCQ
-        XA5KAUuHXx3OVTxtLKuQyl95uEcs4NuJAvoq+MBQhwiGhIbkov+6gb5g3rpoVIfbsbpSwIW3t38HuFjx
-        dPGhCw89FlfEunXrk1U18W/qXE9zinm+HevAUIcIhoSG5KA7lHU3dEHf+yheUwH13d/OClj/2PXxClql
-        0/meyhg/QSldXWtV1Gqob8gVf1NfRqqcV3kDrHUddYhgSGhId9O515PTzgnzZp0S/yNDS549KT7fvOSs
-        8nvmjD4zWcDnRo0Ma2dPCM2PTYzbKSqgVrziC076nFn7fcVenz4N2XOefvZ/NWH/UYcIhoSGdDcd/sY9
-        WBd+8siEcPODE8rPH3r0++X3aH+uoe6U+KlIUcD4/d8JI0JTc33YPP7a0Lbsl/GzX21mq4haBfWola9y
-        o1nFpnnTp15dfo91DXWIYEhoSHfTDQJ3Tb4v/jf+VIbieWUBC1ot10w7Oyz7dalwm1fEGw7uXPCbWKS6
-        52bF58rW1T8WNj11Vfnmg0oqYDFDv3fPlLvj89kzR+31XuscdYhgSGjI4Up3yuhwqi0U3T2jR/3s7ZR8
-        qEMEQ0JDzFKoQwRDQkPMUqhDBENCQ8xSqEMEQ0JDzFKoQwRDQkPMUqhDBENC/09YsxTqEMGQ0BCzFOoQ
-        wZDQELMU6hDBkNAQsxTqEMGQ0BCzFOoQwZDQELMU6hDBkNAQsxTqEMGQ0BCzFOoQwZDQELMU6hDBkNAQ
-        sxTqEMGQ0BCzFOoQwZDQELMU6hDBkNAQsxTqEMGQ0BCzFOoQwZDQELMU6hDBkNAQsxTqEMGQ0BCzFOoQ
-        wZDQELMU6hDBkNAQsxTqEMGQ0BCzFOoQwZDQELMU6hDBkNAQsxTqEMGQ0BCzFOoQwdAsFwzNcsHQLBcM
-        zXLB0CwXDM1ywdAsFwzNcsHQLBcMzXLB0CwXDM1ywdAsFwzNcsHQLBcMzXLB0CwXDM1ywdAsFwzNcsHQ
-        LBcMzXLB0CwXDM1ywdAsFwzNcsHQLBcMzXLB0CwXDM1ywdAsFwzNcsHQLI/RVf8DqRKU7PaZhH4AAAAA
-        SUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAADoAAAA4CAYAAACsc+sjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAiRJREFUaEPt2LFOwkAcx3HfxQfAXXdx5wHkAXgAo5MIg251kkGFSeLCRjcWEkaY
+        cAE2TBxw0vnsbzhSyc/mrvdvqucN34HQK/cJpT1ub//iXP2HAtS3AtS3AtS3AtS3AtS3AtS3AtS2ahSp
+        Rr+vap0Ofb/snKEHzUsVz1/U28fnttn6VdW7j/T4rHCudhyrxeZ9e55W8poda5sz9GEy+YZM1+g/0TEs
+        IMfLFT3PcD6nY2xygh7dXNOJpTsbDOjYdFlIXa1zR8ea5gSt93p0UrtlXX4mSIRLmo03zQl6chvRSbEY
+        FleECRKVCkVx8vthE2OlsUDiZsOOYx0mx6c/1zZnKCYwW6/p5FjA2iJb8ZB+tk3OUGSL1Y8PkySQSASK
+        bLEmSSGRGBRJYiWRSBSKJLDSSCQORZWrphqvzB4buxWBRIVAUR6szZLRtsKg1WQxYXN3RffJupmdS6JC
+        oHmQuqKw4lAXpK4IrChUAqkbL5eqkiz42efkSQxa73bFkDpJrAgUWyhsoqzFZqOep1P6HksK6wzFN8km
+        yALyOLm8Ma6dPC/ZMazSdxiQ6b+QNFJngy11h8H0jzeWhFgasnOYYvHzYONNc4Ka7BllIXUm2NMcu4rp
+        BC7dnxfwJkhdFhbncb0hud+MevxmZIPUMSz7befJGYoAwt4RJgVgNBrl/gZwLozHfjH+yfyq5+hfKEB9
+        K0B9K0B9K0B9K0B9K0B9K0D96lx9AfcKqB3bESyJAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="LblPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 27</value>
+  <data name="gbtn_ingresar.Text" xml:space="preserve">
+    <value>Enter</value>
   </data>
-  <data name="LblPassword.Text" xml:space="preserve">
-    <value>Password</value>
+  <data name="btn_minimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADoAAAA4CAYAAACsc+sjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAa1JREFUaEPtlzFOwzAUhn0EjhA5DNwBJLgBHIEbdKyInWSHgSP0AEFipFtv0Gxh
+        qcSMRGCBOcTOk2jhURcDSf36fumTKj2rfp+eYyUi1qrZBViUGixKDRalBotSg0WpwaLUYFFqsCg1WJQa
+        LEoNFqUGi7o4urpsptV9s6ifm8fXt3+nmJd2T6yXTfASNRv2JbjM4qn2lvUSvSlLtJE+uKsqtCcXXqJY
+        A31hpor15MJLdIhjuwzWkwsv0Wl7fLAG+qCYz9GeXIhYJQ9YYR2HQ11GdW33xnpyIaRWJVZwYTYserqU
+        jKC5hHwlDSJO1QQrUEPITI+wAjXEvlInWIEaIsrzvTjVL1iREsKk/TH7XKBGJ5plp1iRElZ0F46vFTWR
+        OsmxBVQATfpTBc0ulKcKil3sVD3efUMAFD8Sa32GLQwd0FuNTNU1tjhkQG015gj7ftVsK6D2NQfjcUTp
+        eQUtPJRkQen7UJEFnfWhIAsq7tgLKuDbGDQ2j0yS8xCnC+3/LOYoh/a6CK37BZ7dSQgThpZ/H3ukU33b
+        /ulWfgFBm3+bKL04llqPQHw2/MRV8w5Kz/anbfMzlgAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="Btn_Ingresar.Text" xml:space="preserve">
-    <value>Log in</value>
+  <data name="btn_filtrar.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Guna2Button1.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 25</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Speciality:</value>
+  </data>
+  <data name="lbl_fecha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 25</value>
+  </data>
+  <data name="lbl_fecha.Text" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 25</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Last name:</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 31</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>First name:</value>
+  </data>
+  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 25</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>Phone number:</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 25</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="lbl_localidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 25</value>
+  </data>
+  <data name="lbl_localidad.Text" xml:space="preserve">
+    <value>City:</value>
+  </data>
+  <data name="lbl_dirección.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 25</value>
+  </data>
+  <data name="lbl_dirección.Text" xml:space="preserve">
+    <value>Adress:</value>
+  </data>
+  <data name="lbl_especialidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 25</value>
+  </data>
+  <data name="lbl_especialidad.Text" xml:space="preserve">
+    <value>Speciality:</value>
+  </data>
+  <data name="lbl_sucursales.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 25</value>
+  </data>
+  <data name="lbl_sucursales.Text" xml:space="preserve">
+    <value>Branch office:</value>
+  </data>
+  <data name="lbl_ingresar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 25</value>
+  </data>
+  <data name="lbl_ingresar.Text" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="lbl_apellidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 25</value>
+  </data>
+  <data name="lbl_apellidos.Text" xml:space="preserve">
+    <value>Last name:</value>
+  </data>
+  <data name="lbl_nombres.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 31</value>
+  </data>
+  <data name="lbl_nombres.Text" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="lbl_busqueda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 25</value>
+  </data>
+  <data name="lbl_busqueda.Text" xml:space="preserve">
+    <value>Finder</value>
   </data>
 </root>

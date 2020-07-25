@@ -23,33 +23,38 @@ Partial Class F_Medicos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Medicos))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnl_fondo = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.gbtn_nPassw = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_cerrar = New System.Windows.Forms.Button()
+        Me.gbtn_ingresar = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_minimizar = New System.Windows.Forms.Button()
         Me.pnl_ingresarFiltrar = New System.Windows.Forms.Panel()
+        Me.cbtn_menosEspecialidades = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.cbtn_masEspecialidades = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.dtp_fechaNac = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.cmb_detallesI = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cmb_departamentoI = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cmb_especialidadI = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cmb_especialidadF = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cmb_sucursalesF = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.txtb_telI = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_numPuertaI = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_direccionI = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_localidadI = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_apellidoPI = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_apellidoMI = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_apellidoPF = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_apellidoMF = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_ciI = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_nombresI = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_nombresF = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtb_ciF = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btn_filtrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_ingresar = New System.Windows.Forms.Button()
-        Me.btn_filtrar = New System.Windows.Forms.Button()
-        Me.btn_menosEspecialidad = New System.Windows.Forms.Button()
-        Me.cmb_detalles = New System.Windows.Forms.ComboBox()
-        Me.btn_masEspecialidad = New System.Windows.Forms.Button()
-        Me.txt_numero = New System.Windows.Forms.TextBox()
-        Me.dtp_fecha = New System.Windows.Forms.DateTimePicker()
-        Me.cmb_espacialidadI = New System.Windows.Forms.ComboBox()
-        Me.cmb_departamento = New System.Windows.Forms.ComboBox()
-        Me.cmb_especialidad = New System.Windows.Forms.ComboBox()
-        Me.cmb_sucursales = New System.Windows.Forms.ComboBox()
-        Me.txt_apellidoM = New System.Windows.Forms.TextBox()
-        Me.txt_apellidoP = New System.Windows.Forms.TextBox()
-        Me.txt_nombres = New System.Windows.Forms.TextBox()
-        Me.txt_ci = New System.Windows.Forms.TextBox()
-        Me.txt_telefono = New System.Windows.Forms.TextBox()
-        Me.txt_localidad = New System.Windows.Forms.TextBox()
-        Me.txt_direccion = New System.Windows.Forms.TextBox()
-        Me.txt_apellidoMI = New System.Windows.Forms.TextBox()
-        Me.txt_apellidoPI = New System.Windows.Forms.TextBox()
-        Me.txt_nombresI = New System.Windows.Forms.TextBox()
-        Me.txt_ciI = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_fecha = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -66,78 +71,95 @@ Partial Class F_Medicos
         Me.lbl_nombres = New System.Windows.Forms.Label()
         Me.lbl_CI = New System.Windows.Forms.Label()
         Me.lbl_busqueda = New System.Windows.Forms.Label()
-        Me.btn_volver = New System.Windows.Forms.Button()
+        Me.dgv_medicos = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.pnl_fondo.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_ingresarFiltrar.SuspendLayout()
+        CType(Me.dgv_medicos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnl_fondo
         '
-        Me.pnl_fondo.Controls.Add(Me.DataGridView1)
+        Me.pnl_fondo.Controls.Add(Me.gbtn_nPassw)
         Me.pnl_fondo.Controls.Add(Me.btn_cerrar)
+        Me.pnl_fondo.Controls.Add(Me.gbtn_ingresar)
         Me.pnl_fondo.Controls.Add(Me.btn_minimizar)
         Me.pnl_fondo.Controls.Add(Me.pnl_ingresarFiltrar)
-        Me.pnl_fondo.Location = New System.Drawing.Point(0, 0)
+        Me.pnl_fondo.Controls.Add(Me.dgv_medicos)
+        resources.ApplyResources(Me.pnl_fondo, "pnl_fondo")
         Me.pnl_fondo.Name = "pnl_fondo"
-        Me.pnl_fondo.Size = New System.Drawing.Size(1920, 1080)
-        Me.pnl_fondo.TabIndex = 0
         '
-        'DataGridView1
+        'gbtn_nPassw
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(597, 120)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1300, 839)
-        Me.DataGridView1.TabIndex = 47
+        Me.gbtn_nPassw.Animated = True
+        Me.gbtn_nPassw.BackColor = System.Drawing.Color.Transparent
+        Me.gbtn_nPassw.BorderRadius = 26
+        Me.gbtn_nPassw.CheckedState.Parent = Me.gbtn_nPassw
+        Me.gbtn_nPassw.CustomImages.Parent = Me.gbtn_nPassw
+        Me.gbtn_nPassw.FillColor = System.Drawing.Color.DarkCyan
+        resources.ApplyResources(Me.gbtn_nPassw, "gbtn_nPassw")
+        Me.gbtn_nPassw.ForeColor = System.Drawing.Color.White
+        Me.gbtn_nPassw.HoverState.Parent = Me.gbtn_nPassw
+        Me.gbtn_nPassw.Name = "gbtn_nPassw"
+        Me.gbtn_nPassw.ShadowDecoration.Enabled = True
+        Me.gbtn_nPassw.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.gbtn_nPassw.ShadowDecoration.Parent = Me.gbtn_nPassw
         '
         'btn_cerrar
         '
         Me.btn_cerrar.FlatAppearance.BorderSize = 0
-        Me.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_cerrar.Image = CType(resources.GetObject("btn_cerrar.Image"), System.Drawing.Image)
-        Me.btn_cerrar.Location = New System.Drawing.Point(1861, 1)
+        resources.ApplyResources(Me.btn_cerrar, "btn_cerrar")
         Me.btn_cerrar.Name = "btn_cerrar"
-        Me.btn_cerrar.Size = New System.Drawing.Size(56, 61)
-        Me.btn_cerrar.TabIndex = 46
         Me.btn_cerrar.UseVisualStyleBackColor = True
+        '
+        'gbtn_ingresar
+        '
+        Me.gbtn_ingresar.Animated = True
+        Me.gbtn_ingresar.BackColor = System.Drawing.Color.Transparent
+        Me.gbtn_ingresar.BorderRadius = 26
+        Me.gbtn_ingresar.CheckedState.Parent = Me.gbtn_ingresar
+        Me.gbtn_ingresar.CustomImages.Parent = Me.gbtn_ingresar
+        Me.gbtn_ingresar.FillColor = System.Drawing.Color.DarkCyan
+        resources.ApplyResources(Me.gbtn_ingresar, "gbtn_ingresar")
+        Me.gbtn_ingresar.ForeColor = System.Drawing.Color.White
+        Me.gbtn_ingresar.HoverState.Parent = Me.gbtn_ingresar
+        Me.gbtn_ingresar.Name = "gbtn_ingresar"
+        Me.gbtn_ingresar.ShadowDecoration.Enabled = True
+        Me.gbtn_ingresar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.gbtn_ingresar.ShadowDecoration.Parent = Me.gbtn_ingresar
         '
         'btn_minimizar
         '
         Me.btn_minimizar.FlatAppearance.BorderSize = 0
-        Me.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_minimizar.Image = CType(resources.GetObject("btn_minimizar.Image"), System.Drawing.Image)
-        Me.btn_minimizar.Location = New System.Drawing.Point(1795, 1)
+        resources.ApplyResources(Me.btn_minimizar, "btn_minimizar")
         Me.btn_minimizar.Name = "btn_minimizar"
-        Me.btn_minimizar.Size = New System.Drawing.Size(60, 61)
-        Me.btn_minimizar.TabIndex = 45
         Me.btn_minimizar.UseVisualStyleBackColor = True
         '
         'pnl_ingresarFiltrar
         '
         Me.pnl_ingresarFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_ingresar)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.cbtn_menosEspecialidades)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.cbtn_masEspecialidades)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.dtp_fechaNac)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_detallesI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_departamentoI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_especialidadI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_especialidadF)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_sucursalesF)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_telI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_numPuertaI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_direccionI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_localidadI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_apellidoPI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_apellidoMI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_apellidoPF)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_apellidoMF)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_ciI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_nombresI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_nombresF)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_ciF)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_filtrar)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_menosEspecialidad)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_detalles)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_masEspecialidad)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_numero)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.dtp_fecha)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_espacialidadI)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_departamento)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_especialidad)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_sucursales)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_apellidoM)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_apellidoP)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_nombres)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_ci)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_telefono)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_localidad)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_direccion)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_apellidoMI)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_apellidoPI)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_nombresI)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.txt_ciI)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.Guna2Button1)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_ingresar)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label1)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_fecha)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label3)
@@ -154,361 +176,569 @@ Partial Class F_Medicos
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_nombres)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_CI)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_busqueda)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_volver)
-        Me.pnl_ingresarFiltrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pnl_ingresarFiltrar.Location = New System.Drawing.Point(0, 0)
+        resources.ApplyResources(Me.pnl_ingresarFiltrar, "pnl_ingresarFiltrar")
         Me.pnl_ingresarFiltrar.Name = "pnl_ingresarFiltrar"
-        Me.pnl_ingresarFiltrar.Size = New System.Drawing.Size(573, 1080)
-        Me.pnl_ingresarFiltrar.TabIndex = 0
+        '
+        'cbtn_menosEspecialidades
+        '
+        Me.cbtn_menosEspecialidades.CheckedState.Parent = Me.cbtn_menosEspecialidades
+        Me.cbtn_menosEspecialidades.CustomImages.Parent = Me.cbtn_menosEspecialidades
+        Me.cbtn_menosEspecialidades.FillColor = System.Drawing.Color.DarkCyan
+        resources.ApplyResources(Me.cbtn_menosEspecialidades, "cbtn_menosEspecialidades")
+        Me.cbtn_menosEspecialidades.ForeColor = System.Drawing.Color.White
+        Me.cbtn_menosEspecialidades.HoverState.Parent = Me.cbtn_menosEspecialidades
+        Me.cbtn_menosEspecialidades.Name = "cbtn_menosEspecialidades"
+        Me.cbtn_menosEspecialidades.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.cbtn_menosEspecialidades.ShadowDecoration.Parent = Me.cbtn_menosEspecialidades
+        '
+        'cbtn_masEspecialidades
+        '
+        Me.cbtn_masEspecialidades.CheckedState.Parent = Me.cbtn_masEspecialidades
+        Me.cbtn_masEspecialidades.CustomImages.Parent = Me.cbtn_masEspecialidades
+        Me.cbtn_masEspecialidades.FillColor = System.Drawing.Color.DarkCyan
+        resources.ApplyResources(Me.cbtn_masEspecialidades, "cbtn_masEspecialidades")
+        Me.cbtn_masEspecialidades.ForeColor = System.Drawing.Color.White
+        Me.cbtn_masEspecialidades.HoverState.Parent = Me.cbtn_masEspecialidades
+        Me.cbtn_masEspecialidades.Name = "cbtn_masEspecialidades"
+        Me.cbtn_masEspecialidades.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.cbtn_masEspecialidades.ShadowDecoration.Parent = Me.cbtn_masEspecialidades
+        '
+        'dtp_fechaNac
+        '
+        Me.dtp_fechaNac.Animated = True
+        Me.dtp_fechaNac.BorderRadius = 6
+        Me.dtp_fechaNac.CheckedState.Parent = Me.dtp_fechaNac
+        Me.dtp_fechaNac.FillColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.dtp_fechaNac, "dtp_fechaNac")
+        Me.dtp_fechaNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_fechaNac.HoverState.Parent = Me.dtp_fechaNac
+        Me.dtp_fechaNac.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.dtp_fechaNac.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.dtp_fechaNac.Name = "dtp_fechaNac"
+        Me.dtp_fechaNac.ShadowDecoration.Parent = Me.dtp_fechaNac
+        Me.dtp_fechaNac.Value = New Date(2020, 7, 24, 5, 29, 51, 255)
+        '
+        'cmb_detallesI
+        '
+        Me.cmb_detallesI.BackColor = System.Drawing.Color.Transparent
+        Me.cmb_detallesI.BorderRadius = 6
+        Me.cmb_detallesI.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmb_detallesI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_detallesI.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_detallesI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_detallesI.FocusedState.Parent = Me.cmb_detallesI
+        resources.ApplyResources(Me.cmb_detallesI, "cmb_detallesI")
+        Me.cmb_detallesI.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmb_detallesI.HoverState.Parent = Me.cmb_detallesI
+        Me.cmb_detallesI.ItemsAppearance.Parent = Me.cmb_detallesI
+        Me.cmb_detallesI.Name = "cmb_detallesI"
+        Me.cmb_detallesI.ShadowDecoration.Parent = Me.cmb_detallesI
+        '
+        'cmb_departamentoI
+        '
+        Me.cmb_departamentoI.BackColor = System.Drawing.Color.Transparent
+        Me.cmb_departamentoI.BorderRadius = 6
+        Me.cmb_departamentoI.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmb_departamentoI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_departamentoI.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_departamentoI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_departamentoI.FocusedState.Parent = Me.cmb_departamentoI
+        resources.ApplyResources(Me.cmb_departamentoI, "cmb_departamentoI")
+        Me.cmb_departamentoI.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmb_departamentoI.HoverState.Parent = Me.cmb_departamentoI
+        Me.cmb_departamentoI.ItemsAppearance.Parent = Me.cmb_departamentoI
+        Me.cmb_departamentoI.Name = "cmb_departamentoI"
+        Me.cmb_departamentoI.ShadowDecoration.Parent = Me.cmb_departamentoI
+        '
+        'cmb_especialidadI
+        '
+        Me.cmb_especialidadI.BackColor = System.Drawing.Color.Transparent
+        Me.cmb_especialidadI.BorderRadius = 6
+        Me.cmb_especialidadI.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmb_especialidadI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_especialidadI.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_especialidadI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_especialidadI.FocusedState.Parent = Me.cmb_especialidadI
+        resources.ApplyResources(Me.cmb_especialidadI, "cmb_especialidadI")
+        Me.cmb_especialidadI.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmb_especialidadI.HoverState.Parent = Me.cmb_especialidadI
+        Me.cmb_especialidadI.ItemsAppearance.Parent = Me.cmb_especialidadI
+        Me.cmb_especialidadI.Name = "cmb_especialidadI"
+        Me.cmb_especialidadI.ShadowDecoration.Parent = Me.cmb_especialidadI
+        '
+        'cmb_especialidadF
+        '
+        Me.cmb_especialidadF.BackColor = System.Drawing.Color.Transparent
+        Me.cmb_especialidadF.BorderRadius = 6
+        Me.cmb_especialidadF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmb_especialidadF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_especialidadF.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_especialidadF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_especialidadF.FocusedState.Parent = Me.cmb_especialidadF
+        resources.ApplyResources(Me.cmb_especialidadF, "cmb_especialidadF")
+        Me.cmb_especialidadF.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmb_especialidadF.HoverState.Parent = Me.cmb_especialidadF
+        Me.cmb_especialidadF.ItemsAppearance.Parent = Me.cmb_especialidadF
+        Me.cmb_especialidadF.Name = "cmb_especialidadF"
+        Me.cmb_especialidadF.ShadowDecoration.Parent = Me.cmb_especialidadF
+        '
+        'cmb_sucursalesF
+        '
+        Me.cmb_sucursalesF.BackColor = System.Drawing.Color.Transparent
+        Me.cmb_sucursalesF.BorderRadius = 6
+        Me.cmb_sucursalesF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmb_sucursalesF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_sucursalesF.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_sucursalesF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmb_sucursalesF.FocusedState.Parent = Me.cmb_sucursalesF
+        resources.ApplyResources(Me.cmb_sucursalesF, "cmb_sucursalesF")
+        Me.cmb_sucursalesF.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmb_sucursalesF.HoverState.Parent = Me.cmb_sucursalesF
+        Me.cmb_sucursalesF.ItemsAppearance.Parent = Me.cmb_sucursalesF
+        Me.cmb_sucursalesF.Name = "cmb_sucursalesF"
+        Me.cmb_sucursalesF.ShadowDecoration.Parent = Me.cmb_sucursalesF
+        '
+        'txtb_telI
+        '
+        Me.txtb_telI.BorderRadius = 6
+        Me.txtb_telI.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_telI.DefaultText = ""
+        Me.txtb_telI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_telI.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_telI.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_telI.DisabledState.Parent = Me.txtb_telI
+        Me.txtb_telI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_telI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_telI.FocusedState.Parent = Me.txtb_telI
+        resources.ApplyResources(Me.txtb_telI, "txtb_telI")
+        Me.txtb_telI.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_telI.HoverState.Parent = Me.txtb_telI
+        Me.txtb_telI.Name = "txtb_telI"
+        Me.txtb_telI.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_telI.PlaceholderText = ""
+        Me.txtb_telI.SelectedText = ""
+        Me.txtb_telI.ShadowDecoration.Parent = Me.txtb_telI
+        '
+        'txtb_numPuertaI
+        '
+        Me.txtb_numPuertaI.BorderRadius = 6
+        Me.txtb_numPuertaI.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_numPuertaI.DefaultText = ""
+        Me.txtb_numPuertaI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_numPuertaI.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_numPuertaI.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_numPuertaI.DisabledState.Parent = Me.txtb_numPuertaI
+        Me.txtb_numPuertaI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_numPuertaI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_numPuertaI.FocusedState.Parent = Me.txtb_numPuertaI
+        resources.ApplyResources(Me.txtb_numPuertaI, "txtb_numPuertaI")
+        Me.txtb_numPuertaI.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_numPuertaI.HoverState.Parent = Me.txtb_numPuertaI
+        Me.txtb_numPuertaI.Name = "txtb_numPuertaI"
+        Me.txtb_numPuertaI.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_numPuertaI.PlaceholderText = ""
+        Me.txtb_numPuertaI.SelectedText = ""
+        Me.txtb_numPuertaI.ShadowDecoration.Parent = Me.txtb_numPuertaI
+        '
+        'txtb_direccionI
+        '
+        Me.txtb_direccionI.BorderRadius = 6
+        Me.txtb_direccionI.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_direccionI.DefaultText = ""
+        Me.txtb_direccionI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_direccionI.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_direccionI.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_direccionI.DisabledState.Parent = Me.txtb_direccionI
+        Me.txtb_direccionI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_direccionI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_direccionI.FocusedState.Parent = Me.txtb_direccionI
+        resources.ApplyResources(Me.txtb_direccionI, "txtb_direccionI")
+        Me.txtb_direccionI.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_direccionI.HoverState.Parent = Me.txtb_direccionI
+        Me.txtb_direccionI.Name = "txtb_direccionI"
+        Me.txtb_direccionI.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_direccionI.PlaceholderText = ""
+        Me.txtb_direccionI.SelectedText = ""
+        Me.txtb_direccionI.ShadowDecoration.Parent = Me.txtb_direccionI
+        '
+        'txtb_localidadI
+        '
+        Me.txtb_localidadI.BorderRadius = 6
+        Me.txtb_localidadI.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_localidadI.DefaultText = ""
+        Me.txtb_localidadI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_localidadI.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_localidadI.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_localidadI.DisabledState.Parent = Me.txtb_localidadI
+        Me.txtb_localidadI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_localidadI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_localidadI.FocusedState.Parent = Me.txtb_localidadI
+        resources.ApplyResources(Me.txtb_localidadI, "txtb_localidadI")
+        Me.txtb_localidadI.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_localidadI.HoverState.Parent = Me.txtb_localidadI
+        Me.txtb_localidadI.Name = "txtb_localidadI"
+        Me.txtb_localidadI.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_localidadI.PlaceholderText = ""
+        Me.txtb_localidadI.SelectedText = ""
+        Me.txtb_localidadI.ShadowDecoration.Parent = Me.txtb_localidadI
+        '
+        'txtb_apellidoPI
+        '
+        Me.txtb_apellidoPI.BorderRadius = 6
+        Me.txtb_apellidoPI.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_apellidoPI.DefaultText = ""
+        Me.txtb_apellidoPI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_apellidoPI.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_apellidoPI.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_apellidoPI.DisabledState.Parent = Me.txtb_apellidoPI
+        Me.txtb_apellidoPI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_apellidoPI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_apellidoPI.FocusedState.Parent = Me.txtb_apellidoPI
+        resources.ApplyResources(Me.txtb_apellidoPI, "txtb_apellidoPI")
+        Me.txtb_apellidoPI.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_apellidoPI.HoverState.Parent = Me.txtb_apellidoPI
+        Me.txtb_apellidoPI.Name = "txtb_apellidoPI"
+        Me.txtb_apellidoPI.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_apellidoPI.PlaceholderText = ""
+        Me.txtb_apellidoPI.SelectedText = ""
+        Me.txtb_apellidoPI.ShadowDecoration.Parent = Me.txtb_apellidoPI
+        '
+        'txtb_apellidoMI
+        '
+        Me.txtb_apellidoMI.BorderRadius = 6
+        Me.txtb_apellidoMI.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_apellidoMI.DefaultText = ""
+        Me.txtb_apellidoMI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_apellidoMI.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_apellidoMI.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_apellidoMI.DisabledState.Parent = Me.txtb_apellidoMI
+        Me.txtb_apellidoMI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_apellidoMI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_apellidoMI.FocusedState.Parent = Me.txtb_apellidoMI
+        resources.ApplyResources(Me.txtb_apellidoMI, "txtb_apellidoMI")
+        Me.txtb_apellidoMI.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_apellidoMI.HoverState.Parent = Me.txtb_apellidoMI
+        Me.txtb_apellidoMI.Name = "txtb_apellidoMI"
+        Me.txtb_apellidoMI.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_apellidoMI.PlaceholderText = ""
+        Me.txtb_apellidoMI.SelectedText = ""
+        Me.txtb_apellidoMI.ShadowDecoration.Parent = Me.txtb_apellidoMI
+        '
+        'txtb_apellidoPF
+        '
+        Me.txtb_apellidoPF.BorderRadius = 6
+        Me.txtb_apellidoPF.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_apellidoPF.DefaultText = ""
+        Me.txtb_apellidoPF.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_apellidoPF.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_apellidoPF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_apellidoPF.DisabledState.Parent = Me.txtb_apellidoPF
+        Me.txtb_apellidoPF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_apellidoPF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_apellidoPF.FocusedState.Parent = Me.txtb_apellidoPF
+        resources.ApplyResources(Me.txtb_apellidoPF, "txtb_apellidoPF")
+        Me.txtb_apellidoPF.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_apellidoPF.HoverState.Parent = Me.txtb_apellidoPF
+        Me.txtb_apellidoPF.Name = "txtb_apellidoPF"
+        Me.txtb_apellidoPF.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_apellidoPF.PlaceholderText = ""
+        Me.txtb_apellidoPF.SelectedText = ""
+        Me.txtb_apellidoPF.ShadowDecoration.Parent = Me.txtb_apellidoPF
+        '
+        'txtb_apellidoMF
+        '
+        Me.txtb_apellidoMF.BorderRadius = 6
+        Me.txtb_apellidoMF.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_apellidoMF.DefaultText = ""
+        Me.txtb_apellidoMF.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_apellidoMF.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_apellidoMF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_apellidoMF.DisabledState.Parent = Me.txtb_apellidoMF
+        Me.txtb_apellidoMF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_apellidoMF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_apellidoMF.FocusedState.Parent = Me.txtb_apellidoMF
+        resources.ApplyResources(Me.txtb_apellidoMF, "txtb_apellidoMF")
+        Me.txtb_apellidoMF.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_apellidoMF.HoverState.Parent = Me.txtb_apellidoMF
+        Me.txtb_apellidoMF.Name = "txtb_apellidoMF"
+        Me.txtb_apellidoMF.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_apellidoMF.PlaceholderText = ""
+        Me.txtb_apellidoMF.SelectedText = ""
+        Me.txtb_apellidoMF.ShadowDecoration.Parent = Me.txtb_apellidoMF
+        '
+        'txtb_ciI
+        '
+        Me.txtb_ciI.BorderRadius = 6
+        Me.txtb_ciI.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_ciI.DefaultText = ""
+        Me.txtb_ciI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_ciI.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_ciI.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_ciI.DisabledState.Parent = Me.txtb_ciI
+        Me.txtb_ciI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_ciI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_ciI.FocusedState.Parent = Me.txtb_ciI
+        resources.ApplyResources(Me.txtb_ciI, "txtb_ciI")
+        Me.txtb_ciI.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_ciI.HoverState.Parent = Me.txtb_ciI
+        Me.txtb_ciI.Name = "txtb_ciI"
+        Me.txtb_ciI.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_ciI.PlaceholderText = ""
+        Me.txtb_ciI.SelectedText = ""
+        Me.txtb_ciI.ShadowDecoration.Parent = Me.txtb_ciI
+        '
+        'txtb_nombresI
+        '
+        Me.txtb_nombresI.BorderRadius = 6
+        Me.txtb_nombresI.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_nombresI.DefaultText = ""
+        Me.txtb_nombresI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_nombresI.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_nombresI.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_nombresI.DisabledState.Parent = Me.txtb_nombresI
+        Me.txtb_nombresI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_nombresI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_nombresI.FocusedState.Parent = Me.txtb_nombresI
+        resources.ApplyResources(Me.txtb_nombresI, "txtb_nombresI")
+        Me.txtb_nombresI.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_nombresI.HoverState.Parent = Me.txtb_nombresI
+        Me.txtb_nombresI.Name = "txtb_nombresI"
+        Me.txtb_nombresI.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_nombresI.PlaceholderText = ""
+        Me.txtb_nombresI.SelectedText = ""
+        Me.txtb_nombresI.ShadowDecoration.Parent = Me.txtb_nombresI
+        '
+        'txtb_nombresF
+        '
+        Me.txtb_nombresF.BorderRadius = 6
+        Me.txtb_nombresF.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_nombresF.DefaultText = ""
+        Me.txtb_nombresF.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_nombresF.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_nombresF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_nombresF.DisabledState.Parent = Me.txtb_nombresF
+        Me.txtb_nombresF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_nombresF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_nombresF.FocusedState.Parent = Me.txtb_nombresF
+        resources.ApplyResources(Me.txtb_nombresF, "txtb_nombresF")
+        Me.txtb_nombresF.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_nombresF.HoverState.Parent = Me.txtb_nombresF
+        Me.txtb_nombresF.Name = "txtb_nombresF"
+        Me.txtb_nombresF.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_nombresF.PlaceholderText = ""
+        Me.txtb_nombresF.SelectedText = ""
+        Me.txtb_nombresF.ShadowDecoration.Parent = Me.txtb_nombresF
+        '
+        'txtb_ciF
+        '
+        Me.txtb_ciF.BorderRadius = 6
+        Me.txtb_ciF.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtb_ciF.DefaultText = ""
+        Me.txtb_ciF.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtb_ciF.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtb_ciF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_ciF.DisabledState.Parent = Me.txtb_ciF
+        Me.txtb_ciF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtb_ciF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_ciF.FocusedState.Parent = Me.txtb_ciF
+        resources.ApplyResources(Me.txtb_ciF, "txtb_ciF")
+        Me.txtb_ciF.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtb_ciF.HoverState.Parent = Me.txtb_ciF
+        Me.txtb_ciF.Name = "txtb_ciF"
+        Me.txtb_ciF.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtb_ciF.PlaceholderText = ""
+        Me.txtb_ciF.SelectedText = ""
+        Me.txtb_ciF.ShadowDecoration.Parent = Me.txtb_ciF
+        '
+        'btn_filtrar
+        '
+        Me.btn_filtrar.Animated = True
+        Me.btn_filtrar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_filtrar.BorderRadius = 26
+        Me.btn_filtrar.CheckedState.Parent = Me.btn_filtrar
+        Me.btn_filtrar.CustomImages.Parent = Me.btn_filtrar
+        Me.btn_filtrar.FillColor = System.Drawing.Color.DarkCyan
+        resources.ApplyResources(Me.btn_filtrar, "btn_filtrar")
+        Me.btn_filtrar.ForeColor = System.Drawing.Color.White
+        Me.btn_filtrar.HoverState.Parent = Me.btn_filtrar
+        Me.btn_filtrar.Name = "btn_filtrar"
+        Me.btn_filtrar.ShadowDecoration.Enabled = True
+        Me.btn_filtrar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.btn_filtrar.ShadowDecoration.Parent = Me.btn_filtrar
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.Animated = True
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderRadius = 16
+        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
+        Me.Guna2Button1.FillColor = System.Drawing.Color.DarkCyan
+        resources.ApplyResources(Me.Guna2Button1, "Guna2Button1")
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.ShadowDecoration.Enabled = True
+        Me.Guna2Button1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
         '
         'btn_ingresar
         '
         Me.btn_ingresar.FlatAppearance.BorderSize = 0
-        Me.btn_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.btn_ingresar, "btn_ingresar")
         Me.btn_ingresar.Image = Global.Presentacion.My.Resources.Resources.Ingresar_Button
-        Me.btn_ingresar.Location = New System.Drawing.Point(345, 940)
         Me.btn_ingresar.Name = "btn_ingresar"
-        Me.btn_ingresar.Size = New System.Drawing.Size(155, 51)
-        Me.btn_ingresar.TabIndex = 42
         Me.btn_ingresar.UseVisualStyleBackColor = True
-        '
-        'btn_filtrar
-        '
-        Me.btn_filtrar.FlatAppearance.BorderSize = 0
-        Me.btn_filtrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_filtrar.Image = Global.Presentacion.My.Resources.Resources.btn_filtrar
-        Me.btn_filtrar.Location = New System.Drawing.Point(381, 362)
-        Me.btn_filtrar.Name = "btn_filtrar"
-        Me.btn_filtrar.Size = New System.Drawing.Size(155, 51)
-        Me.btn_filtrar.TabIndex = 41
-        Me.btn_filtrar.UseVisualStyleBackColor = True
-        '
-        'btn_menosEspecialidad
-        '
-        Me.btn_menosEspecialidad.FlatAppearance.BorderSize = 0
-        Me.btn_menosEspecialidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_menosEspecialidad.Image = CType(resources.GetObject("btn_menosEspecialidad.Image"), System.Drawing.Image)
-        Me.btn_menosEspecialidad.Location = New System.Drawing.Point(508, 831)
-        Me.btn_menosEspecialidad.Name = "btn_menosEspecialidad"
-        Me.btn_menosEspecialidad.Size = New System.Drawing.Size(28, 35)
-        Me.btn_menosEspecialidad.TabIndex = 44
-        Me.btn_menosEspecialidad.UseVisualStyleBackColor = True
-        '
-        'cmb_detalles
-        '
-        Me.cmb_detalles.FormattingEnabled = True
-        Me.cmb_detalles.Location = New System.Drawing.Point(475, 644)
-        Me.cmb_detalles.Name = "cmb_detalles"
-        Me.cmb_detalles.Size = New System.Drawing.Size(84, 33)
-        Me.cmb_detalles.TabIndex = 40
-        '
-        'btn_masEspecialidad
-        '
-        Me.btn_masEspecialidad.FlatAppearance.BorderSize = 0
-        Me.btn_masEspecialidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_masEspecialidad.Image = CType(resources.GetObject("btn_masEspecialidad.Image"), System.Drawing.Image)
-        Me.btn_masEspecialidad.Location = New System.Drawing.Point(475, 833)
-        Me.btn_masEspecialidad.Name = "btn_masEspecialidad"
-        Me.btn_masEspecialidad.Size = New System.Drawing.Size(27, 33)
-        Me.btn_masEspecialidad.TabIndex = 43
-        Me.btn_masEspecialidad.UseVisualStyleBackColor = True
-        '
-        'txt_numero
-        '
-        Me.txt_numero.Location = New System.Drawing.Point(371, 644)
-        Me.txt_numero.Name = "txt_numero"
-        Me.txt_numero.Size = New System.Drawing.Size(98, 33)
-        Me.txt_numero.TabIndex = 39
-        '
-        'dtp_fecha
-        '
-        Me.dtp_fecha.Location = New System.Drawing.Point(271, 597)
-        Me.dtp_fecha.Name = "dtp_fecha"
-        Me.dtp_fecha.Size = New System.Drawing.Size(200, 33)
-        Me.dtp_fecha.TabIndex = 38
-        '
-        'cmb_espacialidadI
-        '
-        Me.cmb_espacialidadI.FormattingEnabled = True
-        Me.cmb_espacialidadI.Location = New System.Drawing.Point(217, 828)
-        Me.cmb_espacialidadI.Name = "cmb_espacialidadI"
-        Me.cmb_espacialidadI.Size = New System.Drawing.Size(252, 33)
-        Me.cmb_espacialidadI.TabIndex = 37
-        '
-        'cmb_departamento
-        '
-        Me.cmb_departamento.FormattingEnabled = True
-        Me.cmb_departamento.Location = New System.Drawing.Point(217, 741)
-        Me.cmb_departamento.Name = "cmb_departamento"
-        Me.cmb_departamento.Size = New System.Drawing.Size(252, 33)
-        Me.cmb_departamento.TabIndex = 36
-        '
-        'cmb_especialidad
-        '
-        Me.cmb_especialidad.FormattingEnabled = True
-        Me.cmb_especialidad.Location = New System.Drawing.Point(189, 323)
-        Me.cmb_especialidad.Name = "cmb_especialidad"
-        Me.cmb_especialidad.Size = New System.Drawing.Size(229, 33)
-        Me.cmb_especialidad.TabIndex = 35
-        '
-        'cmb_sucursales
-        '
-        Me.cmb_sucursales.FormattingEnabled = True
-        Me.cmb_sucursales.Location = New System.Drawing.Point(189, 284)
-        Me.cmb_sucursales.Name = "cmb_sucursales"
-        Me.cmb_sucursales.Size = New System.Drawing.Size(229, 33)
-        Me.cmb_sucursales.TabIndex = 34
-        '
-        'txt_apellidoM
-        '
-        Me.txt_apellidoM.Location = New System.Drawing.Point(299, 232)
-        Me.txt_apellidoM.Name = "txt_apellidoM"
-        Me.txt_apellidoM.Size = New System.Drawing.Size(119, 33)
-        Me.txt_apellidoM.TabIndex = 33
-        '
-        'txt_apellidoP
-        '
-        Me.txt_apellidoP.Location = New System.Drawing.Point(182, 232)
-        Me.txt_apellidoP.Name = "txt_apellidoP"
-        Me.txt_apellidoP.Size = New System.Drawing.Size(111, 33)
-        Me.txt_apellidoP.TabIndex = 32
-        '
-        'txt_nombres
-        '
-        Me.txt_nombres.Location = New System.Drawing.Point(180, 190)
-        Me.txt_nombres.Name = "txt_nombres"
-        Me.txt_nombres.Size = New System.Drawing.Size(236, 33)
-        Me.txt_nombres.TabIndex = 31
-        '
-        'txt_ci
-        '
-        Me.txt_ci.Location = New System.Drawing.Point(180, 136)
-        Me.txt_ci.Name = "txt_ci"
-        Me.txt_ci.Size = New System.Drawing.Size(236, 33)
-        Me.txt_ci.TabIndex = 30
-        '
-        'txt_telefono
-        '
-        Me.txt_telefono.Location = New System.Drawing.Point(217, 780)
-        Me.txt_telefono.Name = "txt_telefono"
-        Me.txt_telefono.Size = New System.Drawing.Size(252, 33)
-        Me.txt_telefono.TabIndex = 29
-        '
-        'txt_localidad
-        '
-        Me.txt_localidad.Location = New System.Drawing.Point(189, 690)
-        Me.txt_localidad.Name = "txt_localidad"
-        Me.txt_localidad.Size = New System.Drawing.Size(280, 33)
-        Me.txt_localidad.TabIndex = 27
-        '
-        'txt_direccion
-        '
-        Me.txt_direccion.Location = New System.Drawing.Point(186, 644)
-        Me.txt_direccion.Name = "txt_direccion"
-        Me.txt_direccion.Size = New System.Drawing.Size(179, 33)
-        Me.txt_direccion.TabIndex = 26
-        '
-        'txt_apellidoMI
-        '
-        Me.txt_apellidoMI.Location = New System.Drawing.Point(323, 552)
-        Me.txt_apellidoMI.Name = "txt_apellidoMI"
-        Me.txt_apellidoMI.Size = New System.Drawing.Size(148, 33)
-        Me.txt_apellidoMI.TabIndex = 25
-        '
-        'txt_apellidoPI
-        '
-        Me.txt_apellidoPI.Location = New System.Drawing.Point(170, 552)
-        Me.txt_apellidoPI.Name = "txt_apellidoPI"
-        Me.txt_apellidoPI.Size = New System.Drawing.Size(147, 33)
-        Me.txt_apellidoPI.TabIndex = 24
-        '
-        'txt_nombresI
-        '
-        Me.txt_nombresI.Location = New System.Drawing.Point(170, 504)
-        Me.txt_nombresI.Name = "txt_nombresI"
-        Me.txt_nombresI.Size = New System.Drawing.Size(301, 33)
-        Me.txt_nombresI.TabIndex = 23
-        '
-        'txt_ciI
-        '
-        Me.txt_ciI.Location = New System.Drawing.Point(170, 456)
-        Me.txt_ciI.Name = "txt_ciI"
-        Me.txt_ciI.Size = New System.Drawing.Size(301, 33)
-        Me.txt_ciI.TabIndex = 22
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(86, 831)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(121, 25)
-        Me.Label1.TabIndex = 21
-        Me.Label1.Text = "Especialidad:"
         '
         'lbl_fecha
         '
-        Me.lbl_fecha.AutoSize = True
-        Me.lbl_fecha.Location = New System.Drawing.Point(86, 603)
+        resources.ApplyResources(Me.lbl_fecha, "lbl_fecha")
         Me.lbl_fecha.Name = "lbl_fecha"
-        Me.lbl_fecha.Size = New System.Drawing.Size(190, 25)
-        Me.lbl_fecha.TabIndex = 20
-        Me.lbl_fecha.Text = "Fecha de nacimiento:"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(84, 555)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 25)
-        Me.Label3.TabIndex = 19
-        Me.Label3.Text = "Apellidos:"
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(84, 507)
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 31)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Nombres:"
         Me.Label4.UseCompatibleTextRendering = True
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(84, 459)
+        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 25)
-        Me.Label5.TabIndex = 17
-        Me.Label5.Text = "C.I:"
         '
         'Label11
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(86, 783)
+        resources.ApplyResources(Me.Label11, "Label11")
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(88, 25)
-        Me.Label11.TabIndex = 16
-        Me.Label11.Text = "Teléfono:"
         '
         'Label12
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(86, 742)
+        resources.ApplyResources(Me.Label12, "Label12")
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(137, 25)
-        Me.Label12.TabIndex = 15
-        Me.Label12.Text = "Departamento:"
         '
         'lbl_localidad
         '
-        Me.lbl_localidad.AutoSize = True
-        Me.lbl_localidad.Location = New System.Drawing.Point(86, 693)
+        resources.ApplyResources(Me.lbl_localidad, "lbl_localidad")
         Me.lbl_localidad.Name = "lbl_localidad"
-        Me.lbl_localidad.Size = New System.Drawing.Size(97, 25)
-        Me.lbl_localidad.TabIndex = 14
-        Me.lbl_localidad.Text = "Localidad:"
         '
         'lbl_dirección
         '
-        Me.lbl_dirección.AutoSize = True
-        Me.lbl_dirección.Location = New System.Drawing.Point(84, 647)
+        resources.ApplyResources(Me.lbl_dirección, "lbl_dirección")
         Me.lbl_dirección.Name = "lbl_dirección"
-        Me.lbl_dirección.Size = New System.Drawing.Size(96, 25)
-        Me.lbl_dirección.TabIndex = 13
-        Me.lbl_dirección.Text = "Dirección:"
         '
         'lbl_especialidad
         '
-        Me.lbl_especialidad.AutoSize = True
-        Me.lbl_especialidad.Location = New System.Drawing.Point(75, 330)
+        resources.ApplyResources(Me.lbl_especialidad, "lbl_especialidad")
         Me.lbl_especialidad.Name = "lbl_especialidad"
-        Me.lbl_especialidad.Size = New System.Drawing.Size(121, 25)
-        Me.lbl_especialidad.TabIndex = 7
-        Me.lbl_especialidad.Text = "Especialidad:"
         '
         'lbl_sucursales
         '
-        Me.lbl_sucursales.AutoSize = True
-        Me.lbl_sucursales.Location = New System.Drawing.Point(75, 287)
+        resources.ApplyResources(Me.lbl_sucursales, "lbl_sucursales")
         Me.lbl_sucursales.Name = "lbl_sucursales"
-        Me.lbl_sucursales.Size = New System.Drawing.Size(105, 25)
-        Me.lbl_sucursales.TabIndex = 6
-        Me.lbl_sucursales.Text = "Sucursales:"
         '
         'lbl_ingresar
         '
-        Me.lbl_ingresar.AutoSize = True
-        Me.lbl_ingresar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_ingresar.Location = New System.Drawing.Point(81, 417)
+        resources.ApplyResources(Me.lbl_ingresar, "lbl_ingresar")
         Me.lbl_ingresar.Name = "lbl_ingresar"
-        Me.lbl_ingresar.Size = New System.Drawing.Size(86, 25)
-        Me.lbl_ingresar.TabIndex = 5
-        Me.lbl_ingresar.Text = "Ingresar"
         '
         'lbl_apellidos
         '
-        Me.lbl_apellidos.AutoSize = True
-        Me.lbl_apellidos.Location = New System.Drawing.Point(79, 240)
+        resources.ApplyResources(Me.lbl_apellidos, "lbl_apellidos")
         Me.lbl_apellidos.Name = "lbl_apellidos"
-        Me.lbl_apellidos.Size = New System.Drawing.Size(94, 25)
-        Me.lbl_apellidos.TabIndex = 4
-        Me.lbl_apellidos.Text = "Apellidos:"
         '
         'lbl_nombres
         '
-        Me.lbl_nombres.AutoSize = True
-        Me.lbl_nombres.Location = New System.Drawing.Point(80, 193)
+        resources.ApplyResources(Me.lbl_nombres, "lbl_nombres")
         Me.lbl_nombres.Name = "lbl_nombres"
-        Me.lbl_nombres.Size = New System.Drawing.Size(91, 31)
-        Me.lbl_nombres.TabIndex = 3
-        Me.lbl_nombres.Text = "Nombres:"
         Me.lbl_nombres.UseCompatibleTextRendering = True
         '
         'lbl_CI
         '
-        Me.lbl_CI.AutoSize = True
-        Me.lbl_CI.Location = New System.Drawing.Point(80, 144)
+        resources.ApplyResources(Me.lbl_CI, "lbl_CI")
         Me.lbl_CI.Name = "lbl_CI"
-        Me.lbl_CI.Size = New System.Drawing.Size(37, 25)
-        Me.lbl_CI.TabIndex = 2
-        Me.lbl_CI.Text = "C.I:"
         '
         'lbl_busqueda
         '
-        Me.lbl_busqueda.AutoSize = True
-        Me.lbl_busqueda.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_busqueda.Location = New System.Drawing.Point(75, 101)
+        resources.ApplyResources(Me.lbl_busqueda, "lbl_busqueda")
         Me.lbl_busqueda.Name = "lbl_busqueda"
-        Me.lbl_busqueda.Size = New System.Drawing.Size(92, 25)
-        Me.lbl_busqueda.TabIndex = 1
-        Me.lbl_busqueda.Text = "Búqueda"
         '
-        'btn_volver
+        'dgv_medicos
         '
-        Me.btn_volver.FlatAppearance.BorderSize = 0
-        Me.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_volver.Image = Global.Presentacion.My.Resources.Resources.btn_volver
-        Me.btn_volver.Location = New System.Drawing.Point(3, 3)
-        Me.btn_volver.Name = "btn_volver"
-        Me.btn_volver.Size = New System.Drawing.Size(155, 51)
-        Me.btn_volver.TabIndex = 0
-        Me.btn_volver.UseVisualStyleBackColor = True
+        Me.dgv_medicos.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgv_medicos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgv_medicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv_medicos.BackgroundColor = System.Drawing.Color.DarkGray
+        Me.dgv_medicos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgv_medicos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgv_medicos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_medicos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        resources.ApplyResources(Me.dgv_medicos, "dgv_medicos")
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_medicos.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgv_medicos.EnableHeadersVisualStyles = False
+        Me.dgv_medicos.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgv_medicos.Name = "dgv_medicos"
+        Me.dgv_medicos.RowHeadersVisible = False
+        Me.dgv_medicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect
+        Me.dgv_medicos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
+        Me.dgv_medicos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgv_medicos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgv_medicos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgv_medicos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgv_medicos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgv_medicos.ThemeStyle.BackColor = System.Drawing.Color.DarkGray
+        Me.dgv_medicos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgv_medicos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgv_medicos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgv_medicos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgv_medicos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgv_medicos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgv_medicos.ThemeStyle.HeaderStyle.Height = 4
+        Me.dgv_medicos.ThemeStyle.ReadOnly = False
+        Me.dgv_medicos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgv_medicos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgv_medicos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgv_medicos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgv_medicos.ThemeStyle.RowsStyle.Height = 22
+        Me.dgv_medicos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgv_medicos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'frm_MedicosIngresarFiltrar
+        'F_Medicos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1920, 1080)
         Me.Controls.Add(Me.pnl_fondo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frm_MedicosIngresarFiltrar"
-        Me.Text = "Form1"
+        Me.Name = "F_Medicos"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnl_fondo.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnl_ingresarFiltrar.ResumeLayout(False)
         Me.pnl_ingresarFiltrar.PerformLayout()
+        CType(Me.dgv_medicos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -516,7 +746,6 @@ Partial Class F_Medicos
     Friend WithEvents pnl_fondo As Panel
     Friend WithEvents pnl_ingresarFiltrar As Panel
     Friend WithEvents lbl_busqueda As Label
-    Friend WithEvents btn_volver As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents lbl_localidad As Label
@@ -532,29 +761,32 @@ Partial Class F_Medicos
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents cmb_especialidad As ComboBox
-    Friend WithEvents cmb_sucursales As ComboBox
-    Friend WithEvents txt_apellidoM As TextBox
-    Friend WithEvents txt_apellidoP As TextBox
-    Friend WithEvents txt_nombres As TextBox
-    Friend WithEvents txt_ci As TextBox
-    Friend WithEvents txt_telefono As TextBox
-    Friend WithEvents txt_localidad As TextBox
-    Friend WithEvents txt_direccion As TextBox
-    Friend WithEvents txt_apellidoMI As TextBox
-    Friend WithEvents txt_apellidoPI As TextBox
-    Friend WithEvents txt_nombresI As TextBox
-    Friend WithEvents txt_ciI As TextBox
-    Friend WithEvents dtp_fecha As DateTimePicker
-    Friend WithEvents cmb_espacialidadI As ComboBox
-    Friend WithEvents cmb_departamento As ComboBox
-    Friend WithEvents cmb_detalles As ComboBox
-    Friend WithEvents txt_numero As TextBox
     Friend WithEvents btn_cerrar As Button
     Friend WithEvents btn_minimizar As Button
     Friend WithEvents btn_ingresar As Button
-    Friend WithEvents btn_filtrar As Button
-    Friend WithEvents btn_menosEspecialidad As Button
-    Friend WithEvents btn_masEspecialidad As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtn_nPassw As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents gbtn_ingresar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents cmb_sucursalesF As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents txtb_telI As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_numPuertaI As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_direccionI As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_localidadI As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_apellidoPI As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_apellidoMI As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_apellidoPF As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_apellidoMF As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_ciI As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_nombresI As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_nombresF As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtb_ciF As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents btn_filtrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents cmb_especialidadF As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cbtn_menosEspecialidades As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents cbtn_masEspecialidades As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents dtp_fechaNac As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents cmb_detallesI As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cmb_departamentoI As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cmb_especialidadI As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents dgv_medicos As Guna.UI2.WinForms.Guna2DataGridView
 End Class

@@ -117,39 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PicBackground.Location" type="System.Drawing.Point, System.Drawing">
-    <value>500, 0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PicBackground.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="PicBackground.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1420, 1080</value>
-  </data>
-  <data name="PicBackground.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PicBackground.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="BtnMinimize.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;PicBackground.Name" xml:space="preserve">
-    <value>PicBackground</value>
-  </data>
-  <data name="&gt;&gt;PicBackground.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PicBackground.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PicBackground.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Guna2Button2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Guna2Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACLz2ctAAAABGdBTUEAALGPC/xhBQAADGdJREFUeF7t
@@ -209,191 +181,90 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="Guna2Button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 7</value>
+  <data name="PicBackground.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="Guna2Button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 34</value>
-  </data>
-  <data name="Guna2Button2.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;Guna2Button2.Name" xml:space="preserve">
-    <value>Guna2Button2</value>
+  <data name="Guna2Button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="&gt;&gt;Guna2Button2.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Guna2Button2.Parent" xml:space="preserve">
-    <value>Pnl_Login</value>
-  </data>
-  <data name="&gt;&gt;Guna2Button2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PicLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 220</value>
-  </data>
-  <data name="PicLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 300</value>
-  </data>
-  <data name="PicLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;PicLogin.Name" xml:space="preserve">
-    <value>PicLogin</value>
-  </data>
-  <data name="&gt;&gt;PicLogin.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;PicLogin.Parent" xml:space="preserve">
-    <value>Pnl_Login</value>
-  </data>
-  <data name="&gt;&gt;PicLogin.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="LblPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 16pt</value>
-  </data>
-  <data name="LblPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 687</value>
-  </data>
-  <data name="LblPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 27</value>
-  </data>
-  <data name="LblPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="LblPassword.Text" xml:space="preserve">
-    <value>Contraseña</value>
-  </data>
-  <data name="&gt;&gt;LblPassword.Name" xml:space="preserve">
-    <value>LblPassword</value>
-  </data>
-  <data name="&gt;&gt;LblPassword.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LblPassword.Parent" xml:space="preserve">
-    <value>Pnl_Login</value>
-  </data>
-  <data name="&gt;&gt;LblPassword.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="LblCi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 16pt</value>
-  </data>
-  <data name="LblCi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 624</value>
-  </data>
-  <data name="LblCi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 27</value>
-  </data>
-  <data name="LblCi.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="LblCi.Text" xml:space="preserve">
-    <value>CI</value>
-  </data>
-  <data name="&gt;&gt;LblCi.Name" xml:space="preserve">
-    <value>LblCi</value>
-  </data>
-  <data name="&gt;&gt;LblCi.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LblCi.Parent" xml:space="preserve">
-    <value>Pnl_Login</value>
-  </data>
-  <data name="&gt;&gt;LblCi.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Btn_Ingresar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 16pt</value>
-  </data>
-  <data name="Btn_Ingresar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 755</value>
-  </data>
-  <data name="Btn_Ingresar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 46</value>
-  </data>
-  <data name="Btn_Ingresar.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="Btn_Ingresar.Text" xml:space="preserve">
-    <value>Ingresar</value>
+  <data name="BtnMinimize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1830, 0</value>
   </data>
   <data name="&gt;&gt;Btn_Ingresar.Name" xml:space="preserve">
     <value>Btn_Ingresar</value>
   </data>
-  <data name="&gt;&gt;Btn_Ingresar.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  <data name="PicLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 300</value>
   </data>
-  <data name="&gt;&gt;Btn_Ingresar.Parent" xml:space="preserve">
-    <value>Pnl_Login</value>
+  <data name="&gt;&gt;BtnMinimize.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;Btn_Ingresar.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="TxtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 687</value>
-  </data>
-  <data name="TxtPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 36</value>
-  </data>
-  <data name="TxtPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;TxtPassword.Name" xml:space="preserve">
-    <value>TxtPassword</value>
-  </data>
-  <data name="&gt;&gt;TxtPassword.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TxtPassword.Parent" xml:space="preserve">
-    <value>Pnl_Login</value>
-  </data>
-  <data name="&gt;&gt;TxtPassword.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="TxtCi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 624</value>
+  <data name="&gt;&gt;BtnExit.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ControlBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="TxtCi.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 36</value>
   </data>
-  <data name="TxtCi.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>F_Login</value>
   </data>
-  <data name="&gt;&gt;TxtCi.Name" xml:space="preserve">
-    <value>TxtCi</value>
+  <data name="&gt;&gt;BtnMinimize.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;TxtCi.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  <data name="Btn_Ingresar.Text" xml:space="preserve">
+    <value>Ingresar</value>
   </data>
-  <data name="&gt;&gt;TxtCi.Parent" xml:space="preserve">
+  <data name="Guna2Button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 34</value>
+  </data>
+  <data name="&gt;&gt;LblPassword.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Pnl_Login.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblPassword.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;PicLogin.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Btn_Ingresar.Parent" xml:space="preserve">
     <value>Pnl_Login</value>
   </data>
-  <data name="&gt;&gt;TxtCi.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;PicBackground.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="Pnl_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;LblPassword.Parent" xml:space="preserve">
+    <value>Pnl_Login</value>
   </data>
-  <data name="Pnl_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="Pnl_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>500, 1080</value>
-  </data>
-  <data name="Pnl_Login.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;BtnMinimize.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ControlBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Pnl_Login.Name" xml:space="preserve">
     <value>Pnl_Login</value>
   </data>
-  <data name="&gt;&gt;Pnl_Login.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  <data name="LblPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 687</value>
   </data>
-  <data name="&gt;&gt;Pnl_Login.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="TxtPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 36</value>
+  </data>
+  <data name="&gt;&gt;TxtCi.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;PicBackground.Name" xml:space="preserve">
+    <value>PicBackground</value>
   </data>
   <data name="&gt;&gt;Pnl_Login.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -401,14 +272,71 @@
   <data name="BtnExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="LblCi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 624</value>
+  </data>
+  <data name="&gt;&gt;BtnMinimize.Name" xml:space="preserve">
+    <value>BtnMinimize</value>
+  </data>
+  <data name="Btn_Ingresar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 755</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnMinimize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 29</value>
+  </data>
+  <data name="LblCi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 27</value>
+  </data>
+  <data name="&gt;&gt;TxtPassword.Parent" xml:space="preserve">
+    <value>Pnl_Login</value>
+  </data>
   <data name="BtnExit.Location" type="System.Drawing.Point, System.Drawing">
     <value>1875, 0</value>
   </data>
-  <data name="BtnExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="&gt;&gt;TxtCi.Parent" xml:space="preserve">
+    <value>Pnl_Login</value>
+  </data>
+  <data name="&gt;&gt;Btn_Ingresar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="LblPassword.Text" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="&gt;&gt;TxtPassword.Name" xml:space="preserve">
+    <value>TxtPassword</value>
+  </data>
+  <data name="PicBackground.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 0</value>
+  </data>
+  <data name="PicBackground.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="BtnExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 29</value>
+  <data name="Pnl_Login.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="LblPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="Pnl_Login.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 1080</value>
+  </data>
+  <data name="&gt;&gt;LblPassword.Name" xml:space="preserve">
+    <value>LblPassword</value>
+  </data>
+  <data name="&gt;&gt;Btn_Ingresar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Pnl_Login.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PicLogin.Parent" xml:space="preserve">
+    <value>Pnl_Login</value>
+  </data>
+  <data name="&gt;&gt;LblCi.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="BtnExit.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -416,41 +344,134 @@
   <data name="&gt;&gt;BtnExit.Name" xml:space="preserve">
     <value>BtnExit</value>
   </data>
-  <data name="&gt;&gt;BtnExit.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ControlBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BtnExit.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BtnExit.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PicLogin.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="LblPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 27</value>
+  </data>
+  <data name="&gt;&gt;PicBackground.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblCi.Parent" xml:space="preserve">
+    <value>Pnl_Login</value>
+  </data>
+  <data name="&gt;&gt;PicLogin.Name" xml:space="preserve">
+    <value>PicLogin</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PicBackground.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="BtnMinimize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="BtnMinimize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1830, 0</value>
+  <data name="&gt;&gt;TxtCi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LblCi.Name" xml:space="preserve">
+    <value>LblCi</value>
+  </data>
+  <data name="PicBackground.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Guna2AnimateWindow1.Name" xml:space="preserve">
+    <value>Guna2AnimateWindow1</value>
+  </data>
+  <data name="LblPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;TxtPassword.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Guna2Button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="Btn_Ingresar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 46</value>
+  </data>
+  <data name="&gt;&gt;LblCi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Pnl_Login.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Guna2AnimateWindow1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2AnimateWindow, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="LblCi.Text" xml:space="preserve">
+    <value>CI</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button2.Parent" xml:space="preserve">
+    <value>Pnl_Login</value>
+  </data>
+  <data name="&gt;&gt;Guna2Button2.Name" xml:space="preserve">
+    <value>Guna2Button2</value>
+  </data>
+  <data name="TxtPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Btn_Ingresar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
   </data>
   <data name="BtnMinimize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="BtnMinimize.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PicLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 220</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="PicLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="TxtCi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 624</value>
+  </data>
+  <data name="BtnExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 29</value>
   </data>
-  <data name="BtnMinimize.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1140, 829</value>
   </data>
-  <data name="&gt;&gt;BtnMinimize.Name" xml:space="preserve">
-    <value>BtnMinimize</value>
+  <data name="LblCi.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;BtnMinimize.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ControlBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BtnMinimize.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="TxtCi.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;BtnMinimize.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="Btn_Ingresar.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Pnl_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;TxtCi.Name" xml:space="preserve">
+    <value>TxtCi</value>
+  </data>
+  <data name="TxtPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 687</value>
+  </data>
+  <data name="Guna2Button2.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;TxtPassword.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="LblCi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="PicBackground.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1420, 1080</value>
   </data>
   <metadata name="Guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -458,25 +479,4 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1920, 1061</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="&gt;&gt;Guna2AnimateWindow1.Name" xml:space="preserve">
-    <value>Guna2AnimateWindow1</value>
-  </data>
-  <data name="&gt;&gt;Guna2AnimateWindow1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2AnimateWindow, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>F_Login</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>

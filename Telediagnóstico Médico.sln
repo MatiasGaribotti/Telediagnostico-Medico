@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gestion_Presentacion", "Gestion_Presentacion\Gestion_Presentacion.vbproj", "{BA8753D1-11B6-452C-BF80-6ED3E4B41E83}"
 EndProject

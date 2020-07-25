@@ -11,9 +11,10 @@
     <AssemblyName>Presentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -142,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Login.es-UY.resx">
       <DependentUpon>F_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Medicos.en-US.resx">
+      <DependentUpon>F_Medicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Medicos_Horarios.en-US.resx">
+      <DependentUpon>F_Medicos_Horarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Medicos_Horarios.resx">
       <DependentUpon>F_Medicos_Horarios.vb</DependentUpon>
