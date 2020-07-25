@@ -26,27 +26,31 @@ Public Class F_Pacientes
 
     End Sub
 
-    Private Sub lbl_tratamientos_Click(sender As Object, e As EventArgs) Handles lbl_tratamientos.Click
+    Private Sub lbl_tratamientos_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub lbl_telefono_Click(sender As Object, e As EventArgs) Handles lbl_telefono.Click
+    Private Sub lbl_telefono_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub pnl_filtrar_Paint(sender As Object, e As PaintEventArgs) Handles pnl_filtrar.Paint
+    Private Sub pnl_filtrar_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+    Private Sub Label10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Guna2TextBox27_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox27.TextChanged
+    Private Sub Guna2TextBox27_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub pnl_contenedor_Paint(sender As Object, e As PaintEventArgs) Handles pnl_contenedor.Paint
+
+    End Sub
+
+    Private Sub Guna2TextBox17_TextChanged(sender As Object, e As EventArgs) Handles TxtBApellidos2.TextChanged
 
     End Sub
 End Class
