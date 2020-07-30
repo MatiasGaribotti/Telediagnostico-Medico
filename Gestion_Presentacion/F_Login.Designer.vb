@@ -38,7 +38,6 @@ Partial Class F_Login
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.BtnTestConnection = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.PicBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_Login.SuspendLayout()
         CType(Me.PicLogin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +52,6 @@ Partial Class F_Login
         '
         'Pnl_Login
         '
-        Me.Pnl_Login.Controls.Add(Me.BtnTestConnection)
         Me.Pnl_Login.Controls.Add(Me.BtnChangeLang)
         Me.Pnl_Login.Controls.Add(Me.PicLogin)
         Me.Pnl_Login.Controls.Add(Me.LblPassword)
@@ -208,19 +206,6 @@ Partial Class F_Login
         Me.Btn_Exit.Name = "Btn_Exit"
         Me.Btn_Exit.ShadowDecoration.Parent = Me.Btn_Exit
         '
-        'BtnTestConnection
-        '
-        Me.BtnTestConnection.AutoRoundedCorners = True
-        Me.BtnTestConnection.BorderRadius = 21
-        Me.BtnTestConnection.CheckedState.Parent = Me.BtnTestConnection
-        Me.BtnTestConnection.CustomImages.Parent = Me.BtnTestConnection
-        Me.BtnTestConnection.FillColor = System.Drawing.Color.Gray
-        resources.ApplyResources(Me.BtnTestConnection, "BtnTestConnection")
-        Me.BtnTestConnection.ForeColor = System.Drawing.Color.White
-        Me.BtnTestConnection.HoverState.Parent = Me.BtnTestConnection
-        Me.BtnTestConnection.Name = "BtnTestConnection"
-        Me.BtnTestConnection.ShadowDecoration.Parent = Me.BtnTestConnection
-        '
         'F_Login
         '
         resources.ApplyResources(Me, "$this")
@@ -256,5 +241,4 @@ Partial Class F_Login
     Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
     Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents BtnTestConnection As Guna.UI2.WinForms.Guna2Button
 End Class

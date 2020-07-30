@@ -33,8 +33,4 @@ Public Class F_Login
         Me.Close()
     End Sub
 
-    Private Sub BtnTestConnection_Click(sender As Object, e As EventArgs) Handles BtnTestConnection.Click
-        Dim p As New Logica.Persona()
-        MsgBox(p.TestDBCon().ToString)
-    End Sub
 End Class

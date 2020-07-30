@@ -1,9 +1,20 @@
 Imports MySql.Data.MySqlClient
 
-Public Class DBConnection
-    Private ReadOnly ConnectionString As String = "server=127.0.0.1; port=3306; database=sistema_telediagnostico; uid=root; pwd="
+Public MustInherit Class DBConnection
+    Protected User As String
+    Protected Password As String
+    Protected ConnectionString As String = "server=127.0.0.1; port=3306; database=sistema_telediagnostico;uid=" & User & "; pwd=" & Password
 
-    Private Function Conectar() As MySqlConnection
+    Protected Sub New()
+
+    End Sub
+
+    Protected Sub New(user As String, password As String)
+        Me.User = user
+        Me.Password = password
+    End Sub
+
+    Protected Function Conectar() As MySqlConnection
         Dim conexion As New MySqlConnection(ConnectionString)
         Try
             conexion.Open()
@@ -13,7 +24,7 @@ Public Class DBConnection
         End Try
     End Function
 
-    Public Function HasConnection() As Boolean
+    Protected Function HasConnection() As Boolean
         Try
             Dim bd As New MySqlConnection(ConnectionString)
             bd.Open()
