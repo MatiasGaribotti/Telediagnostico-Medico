@@ -57,6 +57,11 @@ Public Class Paciente
         _Fecha_Nacimiento = fecha_nacimiento
         _Password = password
         _Email = email
+        _NucleoFlia = "Sin ingresar"
+        _AntecedentesFlia = "Sin ingresar"
+        _AntecedentesLab = "Sin ingresar"
+        _Medicacion = "Sin ingresar"
+        _Tratamiento = "Sin ingresar"
 
 
     End Sub

@@ -18,7 +18,7 @@ Public Class F_Pacientes
 
         Dim paciente As New Paciente(
            11111111, "n1 n2", "ap1", "ap2",
-           New Direccion("8 de Octubre", 1245, "Montevideo", Direccion.Departamentos.Montevideo), 91111111,
+           New Direccion("8 de Octubre", 1245, "Montevideo", "Montevideo"), 91111111,
            New Date(2001, 5, 19), "password", "email@test.com")
         MsgBox(paciente.Direccion.Departamento)
     End Sub
