@@ -1,6 +1,7 @@
 ﻿'Requerido para soportar varios idiomas
 Imports System.Threading
 Imports System.Globalization
+Imports Logica
 
 Public Class F_Login
 
