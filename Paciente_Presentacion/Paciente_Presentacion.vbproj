@@ -240,7 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Logica\Logica.vbproj">
-      <Project>{b52ef56b-5fc4-4a75-89c1-7534cccedc1c}</Project>
+      <Project>{9d668d47-2571-413f-9bd3-b6e77b1c9ae4}</Project>
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
