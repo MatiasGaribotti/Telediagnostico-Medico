@@ -10,7 +10,7 @@ Public MustInherit Class Persona
     Protected _Fecha_Nacimiento As Date
     Protected _Password As String
 
-    Protected Property Ci() As Integer
+    Public Property Ci() As Integer
         Get
             Return _Ci
         End Get
@@ -19,7 +19,7 @@ Public MustInherit Class Persona
         End Set
     End Property
 
-    Protected Property Nombre As String
+    Public Property Nombre As String
         Get
             Return _Nombre
         End Get
@@ -28,7 +28,7 @@ Public MustInherit Class Persona
         End Set
     End Property
 
-    Protected Property ApellidoP As String
+    Public Property ApellidoP As String
         Get
             Return _ApellidoP
         End Get
@@ -37,7 +37,7 @@ Public MustInherit Class Persona
         End Set
     End Property
 
-    Protected Property ApellidoM As String
+    Public Property ApellidoM As String
         Get
             Return _ApellidoM
         End Get
@@ -46,7 +46,7 @@ Public MustInherit Class Persona
         End Set
     End Property
 
-    Protected Property Direccion As Direccion
+    Public Property Direccion As Direccion
         Get
             Return _Direccion
         End Get
@@ -55,7 +55,7 @@ Public MustInherit Class Persona
         End Set
     End Property
 
-    Protected Property Telefono As Integer
+    Public Property Telefono As Integer
         Get
             Return _Telefono
         End Get
@@ -64,7 +64,7 @@ Public MustInherit Class Persona
         End Set
     End Property
 
-    Protected Property Fecha_Nacimiento As Date
+    Public Property Fecha_Nacimiento As Date
         Get
             Return _Fecha_Nacimiento
         End Get
@@ -73,7 +73,7 @@ Public MustInherit Class Persona
         End Set
     End Property
 
-    Protected Property Password As String
+    Public Property Password As String
         Get
             Return _Password
         End Get
@@ -104,7 +104,7 @@ Public MustInherit Class Persona
         _Password = password
     End Sub
 
-    Protected Function ValidateCi() As Boolean
+    Public Function ValidateCi() As Boolean
         'Valida que la cédula de identidad sea válida
         Dim valida As Boolean = True
 

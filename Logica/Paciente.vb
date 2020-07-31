@@ -17,28 +17,51 @@ Public Class Paciente
                    telefono As Integer,
                    fecha_nacimiento As Date,
                    password As String,
-                   Email As String,
+                   email As String,
                    NucleoFlia As String,
                    AntecedentesFlia As String,
                    antecedentesLab As String,
                    medicacion As String,
                    tratamiento As String)
-
-        MyBase.New(ci,
-                   nombre,
-                   apellidoP,
-                   apellidoM,
-                   direccion,
-                   telefono,
-                   fecha_nacimiento,
-                   password)
-        _Email = Email
+        _Ci = ci
+        _Nombre = nombre
+        _ApellidoP = apellidoP
+        _ApellidoM = apellidoM
+        _Direccion = direccion
+        _Telefono = telefono
+        _Fecha_Nacimiento = fecha_nacimiento
+        _Password = password
+        _Email = email
         _NucleoFlia = NucleoFlia
         _AntecedentesFlia = AntecedentesFlia
         _AntecedentesLab = antecedentesLab
         _Medicacion = medicacion
         _Tratamiento = tratamiento
     End Sub
+
+    Public Sub New(ci As Integer,
+                   nombre As String,
+                   apellidoP As String,
+                   apellidoM As String,
+                   direccion As Direccion,
+                   telefono As Integer,
+                   fecha_nacimiento As Date,
+                   password As String,
+                   email As String)
+        _Ci = ci
+        _Nombre = nombre
+        _ApellidoP = apellidoP
+        _ApellidoM = apellidoM
+        _Direccion = direccion
+        _Telefono = telefono
+        _Fecha_Nacimiento = fecha_nacimiento
+        _Password = password
+        _Email = email
+
+
+    End Sub
+
+
 
     Property Email As String
         Get
@@ -93,4 +116,10 @@ Public Class Paciente
             _Tratamiento = Value
         End Set
     End Property
+
+    Public Function Insert(p As Paciente) As Boolean
+
+
+
+    End Function
 End Class
