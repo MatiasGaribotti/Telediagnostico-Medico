@@ -2,6 +2,7 @@
 Public MustInherit Class Persona
 
     Protected _Ci As Integer
+    Protected _Foto As String
     Protected _Nombre As String
     Protected _ApellidoP As String
     Protected _ApellidoM As String
@@ -16,6 +17,14 @@ Public MustInherit Class Persona
         End Get
         Set(ByVal value As Integer)
             _Ci = value
+        End Set
+    End Property
+    Public Property Foto() As String
+        Get
+            Return _Foto
+        End Get
+        Set(ByVal value As String)
+            _Foto = value
         End Set
     End Property
 

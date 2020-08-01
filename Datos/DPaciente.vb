@@ -19,7 +19,7 @@ Public Class DPaciente
             departamento As String,
             detalle As String,
             telefono As Integer,
-            fecha_nacimiento As Date,
+            fecha_nacimiento As String,
             password As String,
             email As String,
             NucleoFlia As String,
@@ -31,25 +31,40 @@ Public Class DPaciente
         Dim rs As Recordset
 
         ' Sentencia para ingresar la direccion
-        Dim insertDireccion = "INSERT INTO direcciones
-                               (calle, numero, localidad, departamento, detalle) 
-                               VALUES (" &
-                               calle & "," &
-                               nro.ToString & "," &
-                               localidad & "," &
-                               departamento & "," &
-                               detalle & ");"
+        Dim insertDireccion = "INSERT INTO direcciones" &
+                               "(calle, numero, localidad, departamento, detalle)" &
+                               "VALUES ('" &
+                               calle & "'," &
+                               nro & ",'" &
+                               localidad & "','" &
+                               departamento & "','" &
+                               detalle & "');"
 
         ' Consulta para obtener el id de la dirección ingresada
         Dim getIdDireccion = "SELECT id FROM direcciones" &
-                              "WHERE calle='" & calle & "'" &
-                              " AND nro='" & nro.ToString & "'" &
+                              " WHERE calle='" & calle & "'" &
+                              " AND numero='" & nro & "'" &
                               " AND localidad='" & localidad & "'" &
                               " AND departamento='" & departamento & "';"
-        Dim idDireccion As Integer
 
-        ' Sentencia para ingresar un paciente
-        Dim insertPaciente = "INSERT INTO personas(" &
+        'Abro la conexión con la base de datos
+        Dim con As Connection = Conectar()
+
+        Try
+            'Abro transacción
+            con.BeginTrans()
+            MsgBox(insertDireccion)
+            'Ingreso la dirección a la DB
+            con.Execute(insertDireccion)
+
+            'Obtener idDireccion
+            MsgBox(getIdDireccion)
+            rs = con.Execute(getIdDireccion)
+            MsgBox("ID Direccion: " & rs.Fields("id").Value)
+            Dim idDireccion As Integer = rs.Fields("id").Value
+
+            ' Sentencia para ingresar un paciente
+            Dim insertPaciente = "INSERT INTO personas(" &
                               "ci," &
                               "foto," &
                               "nombre," &
@@ -67,38 +82,24 @@ Public Class DPaciente
                               " password," &
                               " idDireccion)" &
                               "VALUES(" &
-                              ci.ToString & ",'" &
+                              ci & ",'" &
                               foto & "','" &
                               nombre & "','" &
                               apellidoP & "','" &
                               apellidoM & "'," &
-                              fecha_nacimiento & "," & ' #IMPORTANTE: CONVERTIR FECHA AL FORMATO CORRESPONDIENTE. WORK IN PROGRESS
+                              fecha_nacimiento & "," &
                               telefono & "," &
-                              "True" & "," &
-                              email & "," &
-                              NucleoFlia & "," &
-                              AntecedentesFlia & "," &
-                              antecedentesLab & "," &
-                              medicacion & "," &
-                              tratamiento & "," &
-                              password & "," &
-                              idDireccion.ToString &
+                              "True" & ",'" &
+                              email & "','" &
+                              NucleoFlia & "','" &
+                              AntecedentesFlia & "','" &
+                              antecedentesLab & "','" &
+                              medicacion & "','" &
+                              tratamiento & "','" &
+                              password & "'," &
+                              idDireccion &
                               ");"
-
-        'Abro la conexión con la base de datos
-        Dim con As Connection = Conectar()
-
-        Try
-            'Abro transacción
-            con.BeginTrans()
-
-            'Ingreso la dirección a la DB
-            con.Execute(insertDireccion)
-
-            'Obtener idDireccion
-
-            rs = con.Execute(getIdDireccion)
-            'idDireccion = 
+            MsgBox("Query Paciente: " & insertPaciente)
 
             'Ingreso los datos del paciente a la DB
             con.Execute(insertPaciente)
@@ -111,7 +112,7 @@ Public Class DPaciente
             'Hubo una excepción, por lo que debo hacer un rollback
             'para mantener la integridad de los datos.
             con.RollbackTrans()
-            Console.WriteLine("No se pudo insertar el paciente.") ' Mensaje en consola para debug
+            Console.WriteLine("No se pudo insertar el paciente." & vbCrLf & ex.Message) ' Mensaje en consola para debug
 
             'Retorno False, significando esto que la transacción
             'no se pudo concretar.
