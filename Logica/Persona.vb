@@ -1,5 +1,4 @@
-﻿Imports Datos
-Public MustInherit Class Persona
+﻿Public MustInherit Class Persona
 
     Protected _Ci As Integer
     Protected _Foto As String
@@ -90,28 +89,6 @@ Public MustInherit Class Persona
             _Password = value
         End Set
     End Property
-
-    Protected Sub New()
-
-    End Sub
-
-    Protected Sub New(ci As Integer,
-                      nombre As String,
-                      apellidoP As String,
-                      apellidoM As String,
-                      direccion As Direccion,
-                      telefono As Integer,
-                      fecha_Nacimiento As Date,
-                      password As String)
-        _Ci = ci
-        _Nombre = nombre
-        _ApellidoP = apellidoP
-        _ApellidoM = apellidoM
-        _Direccion = direccion
-        _Telefono = telefono
-        _Fecha_Nacimiento = fecha_Nacimiento
-        _Password = password
-    End Sub
 
     Public Function ValidateCi() As Boolean
         'Valida que la cédula de identidad sea válida

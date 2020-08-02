@@ -3,7 +3,8 @@ Public MustInherit Class DBConnection
 
     Protected _User As String
     Protected _Password As String
-    Protected _Con As Connection
+    Protected Con As Connection
+    Protected _ConStr As String
 
     Public Property User() As String
         Get
@@ -23,44 +24,31 @@ Public MustInherit Class DBConnection
         End Set
     End Property
 
-    Protected Sub New()
-        _User = "root"
-        _Password = ""
-
-        _Con = New Connection() With {.ConnectionString = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
-                                      "server=127.0.0.1;" &
-                                      "port=3306;" &
-                                      "database=sistema_telediagnostico;" &
-                                      "uid=" & _User & ";" &
-                                      "pwd=" & _Password & ";"
-                                      }
-    End Sub
-
-    Public Sub New(user As String, password As String)
-        _User = user
-        _Password = password
-        _Con.ConnectionString = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
-                                      "server=127.0.0.1;" &
-                                      "port=3306;" &
-                                      "database=sistema_telediagnostico;" &
-                                      "uid=" & _User & ";" &
-                                      "pwd=" & _Password & ";"
-    End Sub
+    Public Property ConStr() As String
+        Get
+            Return _ConStr
+        End Get
+        Set(ByVal value As String)
+            _ConStr = value
+        End Set
+    End Property
 
     'Funcion que retorna una conexión a la base de datos
     Protected Function Conectar() As Connection
-        _Con.Open()
-        Return _Con
+        Con = New Connection() With {.ConnectionString = _ConStr}
+        Con.Open()
+        Return Con
     End Function
 
     Protected Function HasConnection() As Boolean
         Try
-            _Con.Open()
+            Con = New Connection() With {.ConnectionString = _ConStr}
             'Intento abrir la conexión
-            _Con.Open()
-            _Con.Close()
+            Con.Open()
+            Con.Close()
             Return True
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
 

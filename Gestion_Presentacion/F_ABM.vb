@@ -2,12 +2,12 @@
 
     Private Sub Btn_Pacientes_Click(sender As Object, e As EventArgs) Handles Btn_Pacientes.Click
         F_Pacientes.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Personal_Click(sender As Object, e As EventArgs) Handles Btn_Personal.Click
         F_Medicos.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Horarios_Click(sender As Object, e As EventArgs) Handles Btn_Horarios.Click

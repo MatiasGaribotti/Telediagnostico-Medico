@@ -7,6 +7,27 @@
     Private _Departamento As String
     Private _Detalle As String
 
+    Public Shared ReadOnly Departamentos As New List(Of String)({"Montevideo",
+                                                                 "Canelones",
+                                                                 "San_Jose",
+                                                                 "Colonia",
+                                                                "Maldonado",
+                                                                "Rocha",
+                                                                "Lavalleja",
+                                                                "Florida",
+                                                                "Flores",
+                                                                "Soriano",
+                                                                "Rio_Negro",
+                                                                "Durazno",
+                                                                "Treinta_y_Tres",
+                                                                "Cerro_Largo",
+                                                                "Tacuarembó",
+                                                                "Paysandú",
+                                                                "Salto",
+                                                                "Rivera",
+                                                                "Artigas"}
+                                                                )
+
     Public Sub New(calle As String,
                    nro As Integer,
                    localidad As String,

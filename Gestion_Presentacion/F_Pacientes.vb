@@ -20,7 +20,7 @@ Public Class F_Pacientes
                             New Direccion(TxtICalle.Text,
                                             CInt(TxtINumero.Text),
                                             TxtILocalidad.Text,
-                                            CmbBDepartamento.SelectedItem.ToString),
+                                            CmbIDepartamento.SelectedItem.ToString),
                             CInt(TxtITelefono.Text),
                             Format(DTPickerFNac.Value, "yyyy-MM-dd"),
                             "password",
@@ -28,5 +28,11 @@ Public Class F_Pacientes
                             )
 
         paciente.Insert()
+    End Sub
+
+    Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
+        For Each departamento As String In Direccion.Departamentos
+            CmbIDepartamento.Items.Add(departamento)
+        Next
     End Sub
 End Class

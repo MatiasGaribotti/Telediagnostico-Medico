@@ -2,9 +2,26 @@
 Public Class DPaciente
     Inherits DBConnection
 
+    Public Sub New()
+        _User = "admin"
+        _Password = "123456789"
+        _ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
+                                      "server=127.0.0.1;" &
+                                      "port=3306;" &
+                                      "database=sistema_telediagnostico;" &
+                                      "uid=" & _User & ";" &
+                                      "pwd=" & _Password & ";"
+    End Sub
+
     Public Sub New(user As String, password As String)
         _User = user
         _Password = password
+        _ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
+                                      "server=127.0.0.1;" &
+                                      "port=3306;" &
+                                      "database=sistema_telediagnostico;" &
+                                      "uid=" & _User & ";" &
+                                      "pwd=" & _Password & ";"
     End Sub
 
     Public Function Insert(

@@ -9,6 +9,8 @@ Public Class Paciente
     Private _Medicacion As String
     Private _Tratamiento As String
 
+
+    'Constructor comúm completo
     Public Sub New(ci As Integer,
                    foto As String,
                    nombre As String,
@@ -41,6 +43,8 @@ Public Class Paciente
         _Tratamiento = tratamiento
     End Sub
 
+    ' Constructor común para recepcionistas
+    ' Con foto
     Public Sub New(ci As Integer,
                    foto As String,
                    nombre As String,
@@ -68,6 +72,8 @@ Public Class Paciente
         _Tratamiento = "Sin ingresar"
     End Sub
 
+    ' Constructor común para recepcionistas
+    ' Sin foto
     Public Sub New(ci As Integer,
                    nombre As String,
                    apellidoP As String,
@@ -152,7 +158,7 @@ Public Class Paciente
 
     Public Sub Insert()
 
-        Dim db As New DPaciente("root", "")
+        Dim db As New DPaciente("admin", "123456789")
         Dim result = db.Insert(Ci,
                                Foto,
                                Nombre,
