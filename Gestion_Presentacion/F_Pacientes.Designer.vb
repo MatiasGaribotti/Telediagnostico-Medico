@@ -32,26 +32,26 @@ Partial Class F_Pacientes
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DgvPacientes = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.pnl_filtrar = New System.Windows.Forms.Panel()
-        Me.CmblDepartamentoAlt = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.CmblDetalleAlt = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbBDepartamento = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbBDetalle = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TxtBFiltrar = New Guna.UI2.WinForms.Guna2Button()
-        Me.TxtBEmailAlt = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TxtBLocalidadAlt = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBLocalidad = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TxtBCalleAlt = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBNumeroAlt = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBCalle = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBNumero = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TxtBEdad = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtBTelefonoAlt = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBTelefono = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtBApellidos2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBApellidos1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBNombreAlt = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBApellidoM = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBApellidoP = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBNombre = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnl_ingresar = New System.Windows.Forms.Panel()
@@ -61,18 +61,18 @@ Partial Class F_Pacientes
         Me.CmbIDepartamento = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnVolver = New Guna.UI2.WinForms.Guna2Button()
-        Me.TxtBAntLab = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBTratamientos = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBAntFam = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBNFam = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBEmail = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBLocalidad = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBCalle = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBNumero = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBTelefono = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBApellido2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBApellido1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtBNombre = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtIAntLab = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtITratamientos = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtIAntFam = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtINFam = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtIEmail = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtILocalidad = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtICalle = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtINumero = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtITelefono = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtIApellidoM = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtIApellidoP = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtINombre = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DTPickerFNac = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.lbl_localidad = New System.Windows.Forms.Label()
         Me.lbl_detalle = New System.Windows.Forms.Label()
@@ -90,6 +90,10 @@ Partial Class F_Pacientes
         Me.lbl_fechaNacimiento = New System.Windows.Forms.Label()
         Me.lbl_apellidos = New System.Windows.Forms.Label()
         Me.lbl_nombre = New System.Windows.Forms.Label()
+        Me.TxtICi = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.LblCi = New System.Windows.Forms.Label()
+        Me.TxtBCi = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.LblBCi = New System.Windows.Forms.Label()
         Me.pnl_contenedor.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DgvPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -193,64 +197,66 @@ Partial Class F_Pacientes
         'pnl_filtrar
         '
         Me.pnl_filtrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
-        Me.pnl_filtrar.Controls.Add(Me.CmblDepartamentoAlt)
-        Me.pnl_filtrar.Controls.Add(Me.CmblDetalleAlt)
+        Me.pnl_filtrar.Controls.Add(Me.TxtBCi)
+        Me.pnl_filtrar.Controls.Add(Me.LblBCi)
+        Me.pnl_filtrar.Controls.Add(Me.CmbBDepartamento)
+        Me.pnl_filtrar.Controls.Add(Me.CmbBDetalle)
         Me.pnl_filtrar.Controls.Add(Me.TxtBFiltrar)
-        Me.pnl_filtrar.Controls.Add(Me.TxtBEmailAlt)
+        Me.pnl_filtrar.Controls.Add(Me.TxtBEmail)
         Me.pnl_filtrar.Controls.Add(Me.Label10)
-        Me.pnl_filtrar.Controls.Add(Me.TxtBLocalidadAlt)
+        Me.pnl_filtrar.Controls.Add(Me.TxtBLocalidad)
         Me.pnl_filtrar.Controls.Add(Me.Label8)
         Me.pnl_filtrar.Controls.Add(Me.Label9)
-        Me.pnl_filtrar.Controls.Add(Me.TxtBCalleAlt)
-        Me.pnl_filtrar.Controls.Add(Me.TxtBNumeroAlt)
+        Me.pnl_filtrar.Controls.Add(Me.TxtBCalle)
+        Me.pnl_filtrar.Controls.Add(Me.TxtBNumero)
         Me.pnl_filtrar.Controls.Add(Me.Label5)
         Me.pnl_filtrar.Controls.Add(Me.Label6)
         Me.pnl_filtrar.Controls.Add(Me.Label7)
         Me.pnl_filtrar.Controls.Add(Me.TxtBEdad)
         Me.pnl_filtrar.Controls.Add(Me.Label4)
-        Me.pnl_filtrar.Controls.Add(Me.TxtBTelefonoAlt)
+        Me.pnl_filtrar.Controls.Add(Me.TxtBTelefono)
         Me.pnl_filtrar.Controls.Add(Me.Label3)
-        Me.pnl_filtrar.Controls.Add(Me.TxtBApellidos2)
-        Me.pnl_filtrar.Controls.Add(Me.TxtBApellidos1)
-        Me.pnl_filtrar.Controls.Add(Me.TxtBNombreAlt)
+        Me.pnl_filtrar.Controls.Add(Me.TxtBApellidoM)
+        Me.pnl_filtrar.Controls.Add(Me.TxtBApellidoP)
+        Me.pnl_filtrar.Controls.Add(Me.TxtBNombre)
         Me.pnl_filtrar.Controls.Add(Me.Label1)
         Me.pnl_filtrar.Controls.Add(Me.Label2)
         resources.ApplyResources(Me.pnl_filtrar, "pnl_filtrar")
         Me.pnl_filtrar.Name = "pnl_filtrar"
         '
-        'CmblDepartamentoAlt
+        'CmbBDepartamento
         '
-        Me.CmblDepartamentoAlt.Animated = True
-        Me.CmblDepartamentoAlt.BackColor = System.Drawing.Color.Transparent
-        Me.CmblDepartamentoAlt.BorderRadius = 6
-        Me.CmblDepartamentoAlt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmblDepartamentoAlt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmblDepartamentoAlt.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmblDepartamentoAlt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmblDepartamentoAlt.FocusedState.Parent = Me.CmblDepartamentoAlt
-        resources.ApplyResources(Me.CmblDepartamentoAlt, "CmblDepartamentoAlt")
-        Me.CmblDepartamentoAlt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmblDepartamentoAlt.HoverState.Parent = Me.CmblDepartamentoAlt
-        Me.CmblDepartamentoAlt.ItemsAppearance.Parent = Me.CmblDepartamentoAlt
-        Me.CmblDepartamentoAlt.Name = "CmblDepartamentoAlt"
-        Me.CmblDepartamentoAlt.ShadowDecoration.Parent = Me.CmblDepartamentoAlt
+        Me.CmbBDepartamento.Animated = True
+        Me.CmbBDepartamento.BackColor = System.Drawing.Color.Transparent
+        Me.CmbBDepartamento.BorderRadius = 6
+        Me.CmbBDepartamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbBDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbBDepartamento.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBDepartamento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBDepartamento.FocusedState.Parent = Me.CmbBDepartamento
+        resources.ApplyResources(Me.CmbBDepartamento, "CmbBDepartamento")
+        Me.CmbBDepartamento.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbBDepartamento.HoverState.Parent = Me.CmbBDepartamento
+        Me.CmbBDepartamento.ItemsAppearance.Parent = Me.CmbBDepartamento
+        Me.CmbBDepartamento.Name = "CmbBDepartamento"
+        Me.CmbBDepartamento.ShadowDecoration.Parent = Me.CmbBDepartamento
         '
-        'CmblDetalleAlt
+        'CmbBDetalle
         '
-        Me.CmblDetalleAlt.Animated = True
-        Me.CmblDetalleAlt.BackColor = System.Drawing.Color.Transparent
-        Me.CmblDetalleAlt.BorderRadius = 6
-        Me.CmblDetalleAlt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmblDetalleAlt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmblDetalleAlt.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmblDetalleAlt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmblDetalleAlt.FocusedState.Parent = Me.CmblDetalleAlt
-        resources.ApplyResources(Me.CmblDetalleAlt, "CmblDetalleAlt")
-        Me.CmblDetalleAlt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmblDetalleAlt.HoverState.Parent = Me.CmblDetalleAlt
-        Me.CmblDetalleAlt.ItemsAppearance.Parent = Me.CmblDetalleAlt
-        Me.CmblDetalleAlt.Name = "CmblDetalleAlt"
-        Me.CmblDetalleAlt.ShadowDecoration.Parent = Me.CmblDetalleAlt
+        Me.CmbBDetalle.Animated = True
+        Me.CmbBDetalle.BackColor = System.Drawing.Color.Transparent
+        Me.CmbBDetalle.BorderRadius = 6
+        Me.CmbBDetalle.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbBDetalle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbBDetalle.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBDetalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBDetalle.FocusedState.Parent = Me.CmbBDetalle
+        resources.ApplyResources(Me.CmbBDetalle, "CmbBDetalle")
+        Me.CmbBDetalle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbBDetalle.HoverState.Parent = Me.CmbBDetalle
+        Me.CmbBDetalle.ItemsAppearance.Parent = Me.CmbBDetalle
+        Me.CmbBDetalle.Name = "CmbBDetalle"
+        Me.CmbBDetalle.ShadowDecoration.Parent = Me.CmbBDetalle
         '
         'TxtBFiltrar
         '
@@ -268,27 +274,27 @@ Partial Class F_Pacientes
         Me.TxtBFiltrar.ShadowDecoration.Parent = Me.TxtBFiltrar
         Me.TxtBFiltrar.UseTransparentBackground = True
         '
-        'TxtBEmailAlt
+        'TxtBEmail
         '
-        Me.TxtBEmailAlt.Animated = True
-        Me.TxtBEmailAlt.BorderRadius = 6
-        Me.TxtBEmailAlt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBEmailAlt.DefaultText = ""
-        Me.TxtBEmailAlt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBEmailAlt.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBEmailAlt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBEmailAlt.DisabledState.Parent = Me.TxtBEmailAlt
-        Me.TxtBEmailAlt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBEmailAlt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBEmailAlt.FocusedState.Parent = Me.TxtBEmailAlt
-        resources.ApplyResources(Me.TxtBEmailAlt, "TxtBEmailAlt")
-        Me.TxtBEmailAlt.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBEmailAlt.HoverState.Parent = Me.TxtBEmailAlt
-        Me.TxtBEmailAlt.Name = "TxtBEmailAlt"
-        Me.TxtBEmailAlt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBEmailAlt.PlaceholderText = ""
-        Me.TxtBEmailAlt.SelectedText = ""
-        Me.TxtBEmailAlt.ShadowDecoration.Parent = Me.TxtBEmailAlt
+        Me.TxtBEmail.Animated = True
+        Me.TxtBEmail.BorderRadius = 6
+        Me.TxtBEmail.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBEmail.DefaultText = ""
+        Me.TxtBEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBEmail.DisabledState.Parent = Me.TxtBEmail
+        Me.TxtBEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBEmail.FocusedState.Parent = Me.TxtBEmail
+        resources.ApplyResources(Me.TxtBEmail, "TxtBEmail")
+        Me.TxtBEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBEmail.HoverState.Parent = Me.TxtBEmail
+        Me.TxtBEmail.Name = "TxtBEmail"
+        Me.TxtBEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBEmail.PlaceholderText = ""
+        Me.TxtBEmail.SelectedText = ""
+        Me.TxtBEmail.ShadowDecoration.Parent = Me.TxtBEmail
         '
         'Label10
         '
@@ -296,27 +302,27 @@ Partial Class F_Pacientes
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Name = "Label10"
         '
-        'TxtBLocalidadAlt
+        'TxtBLocalidad
         '
-        Me.TxtBLocalidadAlt.Animated = True
-        Me.TxtBLocalidadAlt.BorderRadius = 6
-        Me.TxtBLocalidadAlt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBLocalidadAlt.DefaultText = ""
-        Me.TxtBLocalidadAlt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBLocalidadAlt.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBLocalidadAlt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBLocalidadAlt.DisabledState.Parent = Me.TxtBLocalidadAlt
-        Me.TxtBLocalidadAlt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBLocalidadAlt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBLocalidadAlt.FocusedState.Parent = Me.TxtBLocalidadAlt
-        resources.ApplyResources(Me.TxtBLocalidadAlt, "TxtBLocalidadAlt")
-        Me.TxtBLocalidadAlt.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBLocalidadAlt.HoverState.Parent = Me.TxtBLocalidadAlt
-        Me.TxtBLocalidadAlt.Name = "TxtBLocalidadAlt"
-        Me.TxtBLocalidadAlt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBLocalidadAlt.PlaceholderText = ""
-        Me.TxtBLocalidadAlt.SelectedText = ""
-        Me.TxtBLocalidadAlt.ShadowDecoration.Parent = Me.TxtBLocalidadAlt
+        Me.TxtBLocalidad.Animated = True
+        Me.TxtBLocalidad.BorderRadius = 6
+        Me.TxtBLocalidad.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBLocalidad.DefaultText = ""
+        Me.TxtBLocalidad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBLocalidad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBLocalidad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBLocalidad.DisabledState.Parent = Me.TxtBLocalidad
+        Me.TxtBLocalidad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBLocalidad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBLocalidad.FocusedState.Parent = Me.TxtBLocalidad
+        resources.ApplyResources(Me.TxtBLocalidad, "TxtBLocalidad")
+        Me.TxtBLocalidad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBLocalidad.HoverState.Parent = Me.TxtBLocalidad
+        Me.TxtBLocalidad.Name = "TxtBLocalidad"
+        Me.TxtBLocalidad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBLocalidad.PlaceholderText = ""
+        Me.TxtBLocalidad.SelectedText = ""
+        Me.TxtBLocalidad.ShadowDecoration.Parent = Me.TxtBLocalidad
         '
         'Label8
         '
@@ -330,49 +336,49 @@ Partial Class F_Pacientes
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Name = "Label9"
         '
-        'TxtBCalleAlt
+        'TxtBCalle
         '
-        Me.TxtBCalleAlt.Animated = True
-        Me.TxtBCalleAlt.BorderRadius = 6
-        Me.TxtBCalleAlt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBCalleAlt.DefaultText = ""
-        Me.TxtBCalleAlt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBCalleAlt.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBCalleAlt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBCalleAlt.DisabledState.Parent = Me.TxtBCalleAlt
-        Me.TxtBCalleAlt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBCalleAlt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBCalleAlt.FocusedState.Parent = Me.TxtBCalleAlt
-        resources.ApplyResources(Me.TxtBCalleAlt, "TxtBCalleAlt")
-        Me.TxtBCalleAlt.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBCalleAlt.HoverState.Parent = Me.TxtBCalleAlt
-        Me.TxtBCalleAlt.Name = "TxtBCalleAlt"
-        Me.TxtBCalleAlt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBCalleAlt.PlaceholderText = ""
-        Me.TxtBCalleAlt.SelectedText = ""
-        Me.TxtBCalleAlt.ShadowDecoration.Parent = Me.TxtBCalleAlt
+        Me.TxtBCalle.Animated = True
+        Me.TxtBCalle.BorderRadius = 6
+        Me.TxtBCalle.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBCalle.DefaultText = ""
+        Me.TxtBCalle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBCalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBCalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBCalle.DisabledState.Parent = Me.TxtBCalle
+        Me.TxtBCalle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBCalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBCalle.FocusedState.Parent = Me.TxtBCalle
+        resources.ApplyResources(Me.TxtBCalle, "TxtBCalle")
+        Me.TxtBCalle.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBCalle.HoverState.Parent = Me.TxtBCalle
+        Me.TxtBCalle.Name = "TxtBCalle"
+        Me.TxtBCalle.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBCalle.PlaceholderText = ""
+        Me.TxtBCalle.SelectedText = ""
+        Me.TxtBCalle.ShadowDecoration.Parent = Me.TxtBCalle
         '
-        'TxtBNumeroAlt
+        'TxtBNumero
         '
-        Me.TxtBNumeroAlt.Animated = True
-        Me.TxtBNumeroAlt.BorderRadius = 6
-        Me.TxtBNumeroAlt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBNumeroAlt.DefaultText = ""
-        Me.TxtBNumeroAlt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBNumeroAlt.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBNumeroAlt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNumeroAlt.DisabledState.Parent = Me.TxtBNumeroAlt
-        Me.TxtBNumeroAlt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNumeroAlt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNumeroAlt.FocusedState.Parent = Me.TxtBNumeroAlt
-        resources.ApplyResources(Me.TxtBNumeroAlt, "TxtBNumeroAlt")
-        Me.TxtBNumeroAlt.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNumeroAlt.HoverState.Parent = Me.TxtBNumeroAlt
-        Me.TxtBNumeroAlt.Name = "TxtBNumeroAlt"
-        Me.TxtBNumeroAlt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBNumeroAlt.PlaceholderText = ""
-        Me.TxtBNumeroAlt.SelectedText = ""
-        Me.TxtBNumeroAlt.ShadowDecoration.Parent = Me.TxtBNumeroAlt
+        Me.TxtBNumero.Animated = True
+        Me.TxtBNumero.BorderRadius = 6
+        Me.TxtBNumero.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBNumero.DefaultText = ""
+        Me.TxtBNumero.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBNumero.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBNumero.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBNumero.DisabledState.Parent = Me.TxtBNumero
+        Me.TxtBNumero.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBNumero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBNumero.FocusedState.Parent = Me.TxtBNumero
+        resources.ApplyResources(Me.TxtBNumero, "TxtBNumero")
+        Me.TxtBNumero.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBNumero.HoverState.Parent = Me.TxtBNumero
+        Me.TxtBNumero.Name = "TxtBNumero"
+        Me.TxtBNumero.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBNumero.PlaceholderText = ""
+        Me.TxtBNumero.SelectedText = ""
+        Me.TxtBNumero.ShadowDecoration.Parent = Me.TxtBNumero
         '
         'Label5
         '
@@ -420,27 +426,27 @@ Partial Class F_Pacientes
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Name = "Label4"
         '
-        'TxtBTelefonoAlt
+        'TxtBTelefono
         '
-        Me.TxtBTelefonoAlt.Animated = True
-        Me.TxtBTelefonoAlt.BorderRadius = 6
-        Me.TxtBTelefonoAlt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBTelefonoAlt.DefaultText = ""
-        Me.TxtBTelefonoAlt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBTelefonoAlt.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBTelefonoAlt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBTelefonoAlt.DisabledState.Parent = Me.TxtBTelefonoAlt
-        Me.TxtBTelefonoAlt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBTelefonoAlt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBTelefonoAlt.FocusedState.Parent = Me.TxtBTelefonoAlt
-        resources.ApplyResources(Me.TxtBTelefonoAlt, "TxtBTelefonoAlt")
-        Me.TxtBTelefonoAlt.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBTelefonoAlt.HoverState.Parent = Me.TxtBTelefonoAlt
-        Me.TxtBTelefonoAlt.Name = "TxtBTelefonoAlt"
-        Me.TxtBTelefonoAlt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBTelefonoAlt.PlaceholderText = ""
-        Me.TxtBTelefonoAlt.SelectedText = ""
-        Me.TxtBTelefonoAlt.ShadowDecoration.Parent = Me.TxtBTelefonoAlt
+        Me.TxtBTelefono.Animated = True
+        Me.TxtBTelefono.BorderRadius = 6
+        Me.TxtBTelefono.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBTelefono.DefaultText = ""
+        Me.TxtBTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBTelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBTelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBTelefono.DisabledState.Parent = Me.TxtBTelefono
+        Me.TxtBTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBTelefono.FocusedState.Parent = Me.TxtBTelefono
+        resources.ApplyResources(Me.TxtBTelefono, "TxtBTelefono")
+        Me.TxtBTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBTelefono.HoverState.Parent = Me.TxtBTelefono
+        Me.TxtBTelefono.Name = "TxtBTelefono"
+        Me.TxtBTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBTelefono.PlaceholderText = ""
+        Me.TxtBTelefono.SelectedText = ""
+        Me.TxtBTelefono.ShadowDecoration.Parent = Me.TxtBTelefono
         '
         'Label3
         '
@@ -448,71 +454,71 @@ Partial Class F_Pacientes
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Name = "Label3"
         '
-        'TxtBApellidos2
+        'TxtBApellidoM
         '
-        Me.TxtBApellidos2.Animated = True
-        Me.TxtBApellidos2.BorderRadius = 6
-        Me.TxtBApellidos2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBApellidos2.DefaultText = ""
-        Me.TxtBApellidos2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBApellidos2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBApellidos2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBApellidos2.DisabledState.Parent = Me.TxtBApellidos2
-        Me.TxtBApellidos2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBApellidos2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBApellidos2.FocusedState.Parent = Me.TxtBApellidos2
-        resources.ApplyResources(Me.TxtBApellidos2, "TxtBApellidos2")
-        Me.TxtBApellidos2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBApellidos2.HoverState.Parent = Me.TxtBApellidos2
-        Me.TxtBApellidos2.Name = "TxtBApellidos2"
-        Me.TxtBApellidos2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBApellidos2.PlaceholderText = ""
-        Me.TxtBApellidos2.SelectedText = ""
-        Me.TxtBApellidos2.ShadowDecoration.Parent = Me.TxtBApellidos2
+        Me.TxtBApellidoM.Animated = True
+        Me.TxtBApellidoM.BorderRadius = 6
+        Me.TxtBApellidoM.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBApellidoM.DefaultText = ""
+        Me.TxtBApellidoM.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBApellidoM.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBApellidoM.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBApellidoM.DisabledState.Parent = Me.TxtBApellidoM
+        Me.TxtBApellidoM.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBApellidoM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBApellidoM.FocusedState.Parent = Me.TxtBApellidoM
+        resources.ApplyResources(Me.TxtBApellidoM, "TxtBApellidoM")
+        Me.TxtBApellidoM.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBApellidoM.HoverState.Parent = Me.TxtBApellidoM
+        Me.TxtBApellidoM.Name = "TxtBApellidoM"
+        Me.TxtBApellidoM.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBApellidoM.PlaceholderText = ""
+        Me.TxtBApellidoM.SelectedText = ""
+        Me.TxtBApellidoM.ShadowDecoration.Parent = Me.TxtBApellidoM
         '
-        'TxtBApellidos1
+        'TxtBApellidoP
         '
-        Me.TxtBApellidos1.Animated = True
-        Me.TxtBApellidos1.BorderRadius = 6
-        Me.TxtBApellidos1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBApellidos1.DefaultText = ""
-        Me.TxtBApellidos1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBApellidos1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBApellidos1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBApellidos1.DisabledState.Parent = Me.TxtBApellidos1
-        Me.TxtBApellidos1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBApellidos1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBApellidos1.FocusedState.Parent = Me.TxtBApellidos1
-        resources.ApplyResources(Me.TxtBApellidos1, "TxtBApellidos1")
-        Me.TxtBApellidos1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBApellidos1.HoverState.Parent = Me.TxtBApellidos1
-        Me.TxtBApellidos1.Name = "TxtBApellidos1"
-        Me.TxtBApellidos1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBApellidos1.PlaceholderText = ""
-        Me.TxtBApellidos1.SelectedText = ""
-        Me.TxtBApellidos1.ShadowDecoration.Parent = Me.TxtBApellidos1
+        Me.TxtBApellidoP.Animated = True
+        Me.TxtBApellidoP.BorderRadius = 6
+        Me.TxtBApellidoP.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBApellidoP.DefaultText = ""
+        Me.TxtBApellidoP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBApellidoP.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBApellidoP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBApellidoP.DisabledState.Parent = Me.TxtBApellidoP
+        Me.TxtBApellidoP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBApellidoP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBApellidoP.FocusedState.Parent = Me.TxtBApellidoP
+        resources.ApplyResources(Me.TxtBApellidoP, "TxtBApellidoP")
+        Me.TxtBApellidoP.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBApellidoP.HoverState.Parent = Me.TxtBApellidoP
+        Me.TxtBApellidoP.Name = "TxtBApellidoP"
+        Me.TxtBApellidoP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBApellidoP.PlaceholderText = ""
+        Me.TxtBApellidoP.SelectedText = ""
+        Me.TxtBApellidoP.ShadowDecoration.Parent = Me.TxtBApellidoP
         '
-        'TxtBNombreAlt
+        'TxtBNombre
         '
-        Me.TxtBNombreAlt.Animated = True
-        Me.TxtBNombreAlt.BorderRadius = 6
-        Me.TxtBNombreAlt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBNombreAlt.DefaultText = ""
-        Me.TxtBNombreAlt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBNombreAlt.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBNombreAlt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNombreAlt.DisabledState.Parent = Me.TxtBNombreAlt
-        Me.TxtBNombreAlt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNombreAlt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNombreAlt.FocusedState.Parent = Me.TxtBNombreAlt
-        resources.ApplyResources(Me.TxtBNombreAlt, "TxtBNombreAlt")
-        Me.TxtBNombreAlt.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNombreAlt.HoverState.Parent = Me.TxtBNombreAlt
-        Me.TxtBNombreAlt.Name = "TxtBNombreAlt"
-        Me.TxtBNombreAlt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBNombreAlt.PlaceholderText = ""
-        Me.TxtBNombreAlt.SelectedText = ""
-        Me.TxtBNombreAlt.ShadowDecoration.Parent = Me.TxtBNombreAlt
+        Me.TxtBNombre.Animated = True
+        Me.TxtBNombre.BorderRadius = 6
+        Me.TxtBNombre.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBNombre.DefaultText = ""
+        Me.TxtBNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBNombre.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBNombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBNombre.DisabledState.Parent = Me.TxtBNombre
+        Me.TxtBNombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBNombre.FocusedState.Parent = Me.TxtBNombre
+        resources.ApplyResources(Me.TxtBNombre, "TxtBNombre")
+        Me.TxtBNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBNombre.HoverState.Parent = Me.TxtBNombre
+        Me.TxtBNombre.Name = "TxtBNombre"
+        Me.TxtBNombre.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBNombre.PlaceholderText = ""
+        Me.TxtBNombre.SelectedText = ""
+        Me.TxtBNombre.ShadowDecoration.Parent = Me.TxtBNombre
         '
         'Label1
         '
@@ -529,24 +535,26 @@ Partial Class F_Pacientes
         'pnl_ingresar
         '
         Me.pnl_ingresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_ingresar.Controls.Add(Me.TxtICi)
+        Me.pnl_ingresar.Controls.Add(Me.LblCi)
         Me.pnl_ingresar.Controls.Add(Me.CmblMedicacion)
         Me.pnl_ingresar.Controls.Add(Me.CmblEnfermedad)
         Me.pnl_ingresar.Controls.Add(Me.CmblDetalle)
         Me.pnl_ingresar.Controls.Add(Me.CmbIDepartamento)
         Me.pnl_ingresar.Controls.Add(Me.BtnIngresar)
         Me.pnl_ingresar.Controls.Add(Me.BtnVolver)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBAntLab)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBTratamientos)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBAntFam)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBNFam)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBEmail)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBLocalidad)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBCalle)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBNumero)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBTelefono)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBApellido2)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBApellido1)
-        Me.pnl_ingresar.Controls.Add(Me.TxtBNombre)
+        Me.pnl_ingresar.Controls.Add(Me.TxtIAntLab)
+        Me.pnl_ingresar.Controls.Add(Me.TxtITratamientos)
+        Me.pnl_ingresar.Controls.Add(Me.TxtIAntFam)
+        Me.pnl_ingresar.Controls.Add(Me.TxtINFam)
+        Me.pnl_ingresar.Controls.Add(Me.TxtIEmail)
+        Me.pnl_ingresar.Controls.Add(Me.TxtILocalidad)
+        Me.pnl_ingresar.Controls.Add(Me.TxtICalle)
+        Me.pnl_ingresar.Controls.Add(Me.TxtINumero)
+        Me.pnl_ingresar.Controls.Add(Me.TxtITelefono)
+        Me.pnl_ingresar.Controls.Add(Me.TxtIApellidoM)
+        Me.pnl_ingresar.Controls.Add(Me.TxtIApellidoP)
+        Me.pnl_ingresar.Controls.Add(Me.TxtINombre)
         Me.pnl_ingresar.Controls.Add(Me.DTPickerFNac)
         Me.pnl_ingresar.Controls.Add(Me.lbl_localidad)
         Me.pnl_ingresar.Controls.Add(Me.lbl_detalle)
@@ -667,273 +675,273 @@ Partial Class F_Pacientes
         Me.BtnVolver.ShadowDecoration.Parent = Me.BtnVolver
         Me.BtnVolver.UseTransparentBackground = True
         '
-        'TxtBAntLab
+        'TxtIAntLab
         '
-        Me.TxtBAntLab.Animated = True
-        Me.TxtBAntLab.BorderRadius = 6
-        Me.TxtBAntLab.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBAntLab.DefaultText = ""
-        Me.TxtBAntLab.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBAntLab.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBAntLab.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBAntLab.DisabledState.Parent = Me.TxtBAntLab
-        Me.TxtBAntLab.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBAntLab.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBAntLab.FocusedState.Parent = Me.TxtBAntLab
-        resources.ApplyResources(Me.TxtBAntLab, "TxtBAntLab")
-        Me.TxtBAntLab.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBAntLab.HoverState.Parent = Me.TxtBAntLab
-        Me.TxtBAntLab.Multiline = True
-        Me.TxtBAntLab.Name = "TxtBAntLab"
-        Me.TxtBAntLab.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBAntLab.PlaceholderText = ""
-        Me.TxtBAntLab.SelectedText = ""
-        Me.TxtBAntLab.ShadowDecoration.Parent = Me.TxtBAntLab
+        Me.TxtIAntLab.Animated = True
+        Me.TxtIAntLab.BorderRadius = 6
+        Me.TxtIAntLab.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIAntLab.DefaultText = ""
+        Me.TxtIAntLab.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIAntLab.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIAntLab.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIAntLab.DisabledState.Parent = Me.TxtIAntLab
+        Me.TxtIAntLab.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIAntLab.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIAntLab.FocusedState.Parent = Me.TxtIAntLab
+        resources.ApplyResources(Me.TxtIAntLab, "TxtIAntLab")
+        Me.TxtIAntLab.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIAntLab.HoverState.Parent = Me.TxtIAntLab
+        Me.TxtIAntLab.Multiline = True
+        Me.TxtIAntLab.Name = "TxtIAntLab"
+        Me.TxtIAntLab.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIAntLab.PlaceholderText = ""
+        Me.TxtIAntLab.SelectedText = ""
+        Me.TxtIAntLab.ShadowDecoration.Parent = Me.TxtIAntLab
         '
-        'TxtBTratamientos
+        'TxtITratamientos
         '
-        Me.TxtBTratamientos.Animated = True
-        Me.TxtBTratamientos.BorderRadius = 6
-        Me.TxtBTratamientos.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBTratamientos.DefaultText = ""
-        Me.TxtBTratamientos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBTratamientos.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBTratamientos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBTratamientos.DisabledState.Parent = Me.TxtBTratamientos
-        Me.TxtBTratamientos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBTratamientos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBTratamientos.FocusedState.Parent = Me.TxtBTratamientos
-        resources.ApplyResources(Me.TxtBTratamientos, "TxtBTratamientos")
-        Me.TxtBTratamientos.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBTratamientos.HoverState.Parent = Me.TxtBTratamientos
-        Me.TxtBTratamientos.Multiline = True
-        Me.TxtBTratamientos.Name = "TxtBTratamientos"
-        Me.TxtBTratamientos.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBTratamientos.PlaceholderText = ""
-        Me.TxtBTratamientos.SelectedText = ""
-        Me.TxtBTratamientos.ShadowDecoration.Parent = Me.TxtBTratamientos
+        Me.TxtITratamientos.Animated = True
+        Me.TxtITratamientos.BorderRadius = 6
+        Me.TxtITratamientos.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtITratamientos.DefaultText = ""
+        Me.TxtITratamientos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtITratamientos.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtITratamientos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtITratamientos.DisabledState.Parent = Me.TxtITratamientos
+        Me.TxtITratamientos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtITratamientos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtITratamientos.FocusedState.Parent = Me.TxtITratamientos
+        resources.ApplyResources(Me.TxtITratamientos, "TxtITratamientos")
+        Me.TxtITratamientos.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtITratamientos.HoverState.Parent = Me.TxtITratamientos
+        Me.TxtITratamientos.Multiline = True
+        Me.TxtITratamientos.Name = "TxtITratamientos"
+        Me.TxtITratamientos.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtITratamientos.PlaceholderText = ""
+        Me.TxtITratamientos.SelectedText = ""
+        Me.TxtITratamientos.ShadowDecoration.Parent = Me.TxtITratamientos
         '
-        'TxtBAntFam
+        'TxtIAntFam
         '
-        Me.TxtBAntFam.Animated = True
-        Me.TxtBAntFam.BorderRadius = 6
-        Me.TxtBAntFam.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBAntFam.DefaultText = ""
-        Me.TxtBAntFam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBAntFam.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBAntFam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBAntFam.DisabledState.Parent = Me.TxtBAntFam
-        Me.TxtBAntFam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBAntFam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBAntFam.FocusedState.Parent = Me.TxtBAntFam
-        resources.ApplyResources(Me.TxtBAntFam, "TxtBAntFam")
-        Me.TxtBAntFam.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBAntFam.HoverState.Parent = Me.TxtBAntFam
-        Me.TxtBAntFam.Multiline = True
-        Me.TxtBAntFam.Name = "TxtBAntFam"
-        Me.TxtBAntFam.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBAntFam.PlaceholderText = ""
-        Me.TxtBAntFam.SelectedText = ""
-        Me.TxtBAntFam.ShadowDecoration.Parent = Me.TxtBAntFam
+        Me.TxtIAntFam.Animated = True
+        Me.TxtIAntFam.BorderRadius = 6
+        Me.TxtIAntFam.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIAntFam.DefaultText = ""
+        Me.TxtIAntFam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIAntFam.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIAntFam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIAntFam.DisabledState.Parent = Me.TxtIAntFam
+        Me.TxtIAntFam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIAntFam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIAntFam.FocusedState.Parent = Me.TxtIAntFam
+        resources.ApplyResources(Me.TxtIAntFam, "TxtIAntFam")
+        Me.TxtIAntFam.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIAntFam.HoverState.Parent = Me.TxtIAntFam
+        Me.TxtIAntFam.Multiline = True
+        Me.TxtIAntFam.Name = "TxtIAntFam"
+        Me.TxtIAntFam.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIAntFam.PlaceholderText = ""
+        Me.TxtIAntFam.SelectedText = ""
+        Me.TxtIAntFam.ShadowDecoration.Parent = Me.TxtIAntFam
         '
-        'TxtBNFam
+        'TxtINFam
         '
-        Me.TxtBNFam.Animated = True
-        Me.TxtBNFam.BorderRadius = 6
-        Me.TxtBNFam.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBNFam.DefaultText = ""
-        Me.TxtBNFam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBNFam.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBNFam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNFam.DisabledState.Parent = Me.TxtBNFam
-        Me.TxtBNFam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNFam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNFam.FocusedState.Parent = Me.TxtBNFam
-        resources.ApplyResources(Me.TxtBNFam, "TxtBNFam")
-        Me.TxtBNFam.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNFam.HoverState.Parent = Me.TxtBNFam
-        Me.TxtBNFam.Multiline = True
-        Me.TxtBNFam.Name = "TxtBNFam"
-        Me.TxtBNFam.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBNFam.PlaceholderText = ""
-        Me.TxtBNFam.SelectedText = ""
-        Me.TxtBNFam.ShadowDecoration.Parent = Me.TxtBNFam
+        Me.TxtINFam.Animated = True
+        Me.TxtINFam.BorderRadius = 6
+        Me.TxtINFam.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtINFam.DefaultText = ""
+        Me.TxtINFam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtINFam.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtINFam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtINFam.DisabledState.Parent = Me.TxtINFam
+        Me.TxtINFam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtINFam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtINFam.FocusedState.Parent = Me.TxtINFam
+        resources.ApplyResources(Me.TxtINFam, "TxtINFam")
+        Me.TxtINFam.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtINFam.HoverState.Parent = Me.TxtINFam
+        Me.TxtINFam.Multiline = True
+        Me.TxtINFam.Name = "TxtINFam"
+        Me.TxtINFam.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtINFam.PlaceholderText = ""
+        Me.TxtINFam.SelectedText = ""
+        Me.TxtINFam.ShadowDecoration.Parent = Me.TxtINFam
         '
-        'TxtBEmail
+        'TxtIEmail
         '
-        Me.TxtBEmail.Animated = True
-        Me.TxtBEmail.BorderRadius = 6
-        Me.TxtBEmail.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBEmail.DefaultText = ""
-        Me.TxtBEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBEmail.DisabledState.Parent = Me.TxtBEmail
-        Me.TxtBEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBEmail.FocusedState.Parent = Me.TxtBEmail
-        resources.ApplyResources(Me.TxtBEmail, "TxtBEmail")
-        Me.TxtBEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBEmail.HoverState.Parent = Me.TxtBEmail
-        Me.TxtBEmail.Name = "TxtBEmail"
-        Me.TxtBEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBEmail.PlaceholderText = ""
-        Me.TxtBEmail.SelectedText = ""
-        Me.TxtBEmail.ShadowDecoration.Parent = Me.TxtBEmail
+        Me.TxtIEmail.Animated = True
+        Me.TxtIEmail.BorderRadius = 6
+        Me.TxtIEmail.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIEmail.DefaultText = ""
+        Me.TxtIEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIEmail.DisabledState.Parent = Me.TxtIEmail
+        Me.TxtIEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIEmail.FocusedState.Parent = Me.TxtIEmail
+        resources.ApplyResources(Me.TxtIEmail, "TxtIEmail")
+        Me.TxtIEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIEmail.HoverState.Parent = Me.TxtIEmail
+        Me.TxtIEmail.Name = "TxtIEmail"
+        Me.TxtIEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIEmail.PlaceholderText = ""
+        Me.TxtIEmail.SelectedText = ""
+        Me.TxtIEmail.ShadowDecoration.Parent = Me.TxtIEmail
         '
-        'TxtBLocalidad
+        'TxtILocalidad
         '
-        Me.TxtBLocalidad.Animated = True
-        Me.TxtBLocalidad.BorderRadius = 6
-        Me.TxtBLocalidad.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBLocalidad.DefaultText = ""
-        Me.TxtBLocalidad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBLocalidad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBLocalidad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBLocalidad.DisabledState.Parent = Me.TxtBLocalidad
-        Me.TxtBLocalidad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBLocalidad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBLocalidad.FocusedState.Parent = Me.TxtBLocalidad
-        resources.ApplyResources(Me.TxtBLocalidad, "TxtBLocalidad")
-        Me.TxtBLocalidad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBLocalidad.HoverState.Parent = Me.TxtBLocalidad
-        Me.TxtBLocalidad.Name = "TxtBLocalidad"
-        Me.TxtBLocalidad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBLocalidad.PlaceholderText = ""
-        Me.TxtBLocalidad.SelectedText = ""
-        Me.TxtBLocalidad.ShadowDecoration.Parent = Me.TxtBLocalidad
+        Me.TxtILocalidad.Animated = True
+        Me.TxtILocalidad.BorderRadius = 6
+        Me.TxtILocalidad.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtILocalidad.DefaultText = ""
+        Me.TxtILocalidad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtILocalidad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtILocalidad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtILocalidad.DisabledState.Parent = Me.TxtILocalidad
+        Me.TxtILocalidad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtILocalidad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtILocalidad.FocusedState.Parent = Me.TxtILocalidad
+        resources.ApplyResources(Me.TxtILocalidad, "TxtILocalidad")
+        Me.TxtILocalidad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtILocalidad.HoverState.Parent = Me.TxtILocalidad
+        Me.TxtILocalidad.Name = "TxtILocalidad"
+        Me.TxtILocalidad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtILocalidad.PlaceholderText = ""
+        Me.TxtILocalidad.SelectedText = ""
+        Me.TxtILocalidad.ShadowDecoration.Parent = Me.TxtILocalidad
         '
-        'TxtBCalle
+        'TxtICalle
         '
-        Me.TxtBCalle.Animated = True
-        Me.TxtBCalle.BorderRadius = 6
-        Me.TxtBCalle.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBCalle.DefaultText = ""
-        Me.TxtBCalle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBCalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBCalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBCalle.DisabledState.Parent = Me.TxtBCalle
-        Me.TxtBCalle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBCalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBCalle.FocusedState.Parent = Me.TxtBCalle
-        resources.ApplyResources(Me.TxtBCalle, "TxtBCalle")
-        Me.TxtBCalle.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBCalle.HoverState.Parent = Me.TxtBCalle
-        Me.TxtBCalle.Name = "TxtBCalle"
-        Me.TxtBCalle.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBCalle.PlaceholderText = ""
-        Me.TxtBCalle.SelectedText = ""
-        Me.TxtBCalle.ShadowDecoration.Parent = Me.TxtBCalle
+        Me.TxtICalle.Animated = True
+        Me.TxtICalle.BorderRadius = 6
+        Me.TxtICalle.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtICalle.DefaultText = ""
+        Me.TxtICalle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtICalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtICalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtICalle.DisabledState.Parent = Me.TxtICalle
+        Me.TxtICalle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtICalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtICalle.FocusedState.Parent = Me.TxtICalle
+        resources.ApplyResources(Me.TxtICalle, "TxtICalle")
+        Me.TxtICalle.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtICalle.HoverState.Parent = Me.TxtICalle
+        Me.TxtICalle.Name = "TxtICalle"
+        Me.TxtICalle.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtICalle.PlaceholderText = ""
+        Me.TxtICalle.SelectedText = ""
+        Me.TxtICalle.ShadowDecoration.Parent = Me.TxtICalle
         '
-        'TxtBNumero
+        'TxtINumero
         '
-        Me.TxtBNumero.Animated = True
-        Me.TxtBNumero.BorderRadius = 6
-        Me.TxtBNumero.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBNumero.DefaultText = ""
-        Me.TxtBNumero.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBNumero.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBNumero.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNumero.DisabledState.Parent = Me.TxtBNumero
-        Me.TxtBNumero.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNumero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNumero.FocusedState.Parent = Me.TxtBNumero
-        resources.ApplyResources(Me.TxtBNumero, "TxtBNumero")
-        Me.TxtBNumero.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNumero.HoverState.Parent = Me.TxtBNumero
-        Me.TxtBNumero.Name = "TxtBNumero"
-        Me.TxtBNumero.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBNumero.PlaceholderText = ""
-        Me.TxtBNumero.SelectedText = ""
-        Me.TxtBNumero.ShadowDecoration.Parent = Me.TxtBNumero
+        Me.TxtINumero.Animated = True
+        Me.TxtINumero.BorderRadius = 6
+        Me.TxtINumero.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtINumero.DefaultText = ""
+        Me.TxtINumero.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtINumero.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtINumero.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtINumero.DisabledState.Parent = Me.TxtINumero
+        Me.TxtINumero.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtINumero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtINumero.FocusedState.Parent = Me.TxtINumero
+        resources.ApplyResources(Me.TxtINumero, "TxtINumero")
+        Me.TxtINumero.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtINumero.HoverState.Parent = Me.TxtINumero
+        Me.TxtINumero.Name = "TxtINumero"
+        Me.TxtINumero.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtINumero.PlaceholderText = ""
+        Me.TxtINumero.SelectedText = ""
+        Me.TxtINumero.ShadowDecoration.Parent = Me.TxtINumero
         '
-        'TxtBTelefono
+        'TxtITelefono
         '
-        Me.TxtBTelefono.Animated = True
-        Me.TxtBTelefono.BorderRadius = 6
-        Me.TxtBTelefono.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBTelefono.DefaultText = ""
-        Me.TxtBTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBTelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBTelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBTelefono.DisabledState.Parent = Me.TxtBTelefono
-        Me.TxtBTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBTelefono.FocusedState.Parent = Me.TxtBTelefono
-        resources.ApplyResources(Me.TxtBTelefono, "TxtBTelefono")
-        Me.TxtBTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBTelefono.HoverState.Parent = Me.TxtBTelefono
-        Me.TxtBTelefono.Name = "TxtBTelefono"
-        Me.TxtBTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBTelefono.PlaceholderText = ""
-        Me.TxtBTelefono.SelectedText = ""
-        Me.TxtBTelefono.ShadowDecoration.Parent = Me.TxtBTelefono
+        Me.TxtITelefono.Animated = True
+        Me.TxtITelefono.BorderRadius = 6
+        Me.TxtITelefono.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtITelefono.DefaultText = ""
+        Me.TxtITelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtITelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtITelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtITelefono.DisabledState.Parent = Me.TxtITelefono
+        Me.TxtITelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtITelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtITelefono.FocusedState.Parent = Me.TxtITelefono
+        resources.ApplyResources(Me.TxtITelefono, "TxtITelefono")
+        Me.TxtITelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtITelefono.HoverState.Parent = Me.TxtITelefono
+        Me.TxtITelefono.Name = "TxtITelefono"
+        Me.TxtITelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtITelefono.PlaceholderText = ""
+        Me.TxtITelefono.SelectedText = ""
+        Me.TxtITelefono.ShadowDecoration.Parent = Me.TxtITelefono
         '
-        'TxtBApellido2
+        'TxtIApellidoM
         '
-        Me.TxtBApellido2.Animated = True
-        Me.TxtBApellido2.BorderRadius = 6
-        Me.TxtBApellido2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBApellido2.DefaultText = ""
-        Me.TxtBApellido2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBApellido2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBApellido2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBApellido2.DisabledState.Parent = Me.TxtBApellido2
-        Me.TxtBApellido2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBApellido2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBApellido2.FocusedState.Parent = Me.TxtBApellido2
-        resources.ApplyResources(Me.TxtBApellido2, "TxtBApellido2")
-        Me.TxtBApellido2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBApellido2.HoverState.Parent = Me.TxtBApellido2
-        Me.TxtBApellido2.Name = "TxtBApellido2"
-        Me.TxtBApellido2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBApellido2.PlaceholderText = ""
-        Me.TxtBApellido2.SelectedText = ""
-        Me.TxtBApellido2.ShadowDecoration.Parent = Me.TxtBApellido2
+        Me.TxtIApellidoM.Animated = True
+        Me.TxtIApellidoM.BorderRadius = 6
+        Me.TxtIApellidoM.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIApellidoM.DefaultText = ""
+        Me.TxtIApellidoM.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIApellidoM.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIApellidoM.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIApellidoM.DisabledState.Parent = Me.TxtIApellidoM
+        Me.TxtIApellidoM.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIApellidoM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIApellidoM.FocusedState.Parent = Me.TxtIApellidoM
+        resources.ApplyResources(Me.TxtIApellidoM, "TxtIApellidoM")
+        Me.TxtIApellidoM.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIApellidoM.HoverState.Parent = Me.TxtIApellidoM
+        Me.TxtIApellidoM.Name = "TxtIApellidoM"
+        Me.TxtIApellidoM.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIApellidoM.PlaceholderText = ""
+        Me.TxtIApellidoM.SelectedText = ""
+        Me.TxtIApellidoM.ShadowDecoration.Parent = Me.TxtIApellidoM
         '
-        'TxtBApellido1
+        'TxtIApellidoP
         '
-        Me.TxtBApellido1.Animated = True
-        Me.TxtBApellido1.BorderRadius = 6
-        Me.TxtBApellido1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBApellido1.DefaultText = ""
-        Me.TxtBApellido1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBApellido1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBApellido1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBApellido1.DisabledState.Parent = Me.TxtBApellido1
-        Me.TxtBApellido1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBApellido1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBApellido1.FocusedState.Parent = Me.TxtBApellido1
-        resources.ApplyResources(Me.TxtBApellido1, "TxtBApellido1")
-        Me.TxtBApellido1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBApellido1.HoverState.Parent = Me.TxtBApellido1
-        Me.TxtBApellido1.Name = "TxtBApellido1"
-        Me.TxtBApellido1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBApellido1.PlaceholderText = ""
-        Me.TxtBApellido1.SelectedText = ""
-        Me.TxtBApellido1.ShadowDecoration.Parent = Me.TxtBApellido1
+        Me.TxtIApellidoP.Animated = True
+        Me.TxtIApellidoP.BorderRadius = 6
+        Me.TxtIApellidoP.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIApellidoP.DefaultText = ""
+        Me.TxtIApellidoP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIApellidoP.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIApellidoP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIApellidoP.DisabledState.Parent = Me.TxtIApellidoP
+        Me.TxtIApellidoP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIApellidoP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIApellidoP.FocusedState.Parent = Me.TxtIApellidoP
+        resources.ApplyResources(Me.TxtIApellidoP, "TxtIApellidoP")
+        Me.TxtIApellidoP.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIApellidoP.HoverState.Parent = Me.TxtIApellidoP
+        Me.TxtIApellidoP.Name = "TxtIApellidoP"
+        Me.TxtIApellidoP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIApellidoP.PlaceholderText = ""
+        Me.TxtIApellidoP.SelectedText = ""
+        Me.TxtIApellidoP.ShadowDecoration.Parent = Me.TxtIApellidoP
         '
-        'TxtBNombre
+        'TxtINombre
         '
-        Me.TxtBNombre.Animated = True
-        Me.TxtBNombre.BorderRadius = 6
-        Me.TxtBNombre.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBNombre.DefaultText = ""
-        Me.TxtBNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBNombre.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBNombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNombre.DisabledState.Parent = Me.TxtBNombre
-        Me.TxtBNombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNombre.FocusedState.Parent = Me.TxtBNombre
-        resources.ApplyResources(Me.TxtBNombre, "TxtBNombre")
-        Me.TxtBNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBNombre.HoverState.Parent = Me.TxtBNombre
-        Me.TxtBNombre.Name = "TxtBNombre"
-        Me.TxtBNombre.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBNombre.PlaceholderText = ""
-        Me.TxtBNombre.SelectedText = ""
-        Me.TxtBNombre.ShadowDecoration.Parent = Me.TxtBNombre
+        Me.TxtINombre.Animated = True
+        Me.TxtINombre.BorderRadius = 6
+        Me.TxtINombre.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtINombre.DefaultText = ""
+        Me.TxtINombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtINombre.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtINombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtINombre.DisabledState.Parent = Me.TxtINombre
+        Me.TxtINombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtINombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtINombre.FocusedState.Parent = Me.TxtINombre
+        resources.ApplyResources(Me.TxtINombre, "TxtINombre")
+        Me.TxtINombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtINombre.HoverState.Parent = Me.TxtINombre
+        Me.TxtINombre.Name = "TxtINombre"
+        Me.TxtINombre.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtINombre.PlaceholderText = ""
+        Me.TxtINombre.SelectedText = ""
+        Me.TxtINombre.ShadowDecoration.Parent = Me.TxtINombre
         '
         'DTPickerFNac
         '
@@ -1047,6 +1055,62 @@ Partial Class F_Pacientes
         Me.lbl_nombre.BackColor = System.Drawing.Color.Transparent
         Me.lbl_nombre.Name = "lbl_nombre"
         '
+        'TxtICi
+        '
+        Me.TxtICi.Animated = True
+        Me.TxtICi.BorderRadius = 6
+        Me.TxtICi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtICi.DefaultText = ""
+        Me.TxtICi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtICi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtICi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtICi.DisabledState.Parent = Me.TxtICi
+        Me.TxtICi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtICi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtICi.FocusedState.Parent = Me.TxtICi
+        resources.ApplyResources(Me.TxtICi, "TxtICi")
+        Me.TxtICi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtICi.HoverState.Parent = Me.TxtICi
+        Me.TxtICi.Name = "TxtICi"
+        Me.TxtICi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtICi.PlaceholderText = ""
+        Me.TxtICi.SelectedText = ""
+        Me.TxtICi.ShadowDecoration.Parent = Me.TxtICi
+        '
+        'LblCi
+        '
+        resources.ApplyResources(Me.LblCi, "LblCi")
+        Me.LblCi.BackColor = System.Drawing.Color.Transparent
+        Me.LblCi.Name = "LblCi"
+        '
+        'TxtBCi
+        '
+        Me.TxtBCi.Animated = True
+        Me.TxtBCi.BorderRadius = 6
+        Me.TxtBCi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBCi.DefaultText = ""
+        Me.TxtBCi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBCi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBCi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBCi.DisabledState.Parent = Me.TxtBCi
+        Me.TxtBCi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBCi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBCi.FocusedState.Parent = Me.TxtBCi
+        resources.ApplyResources(Me.TxtBCi, "TxtBCi")
+        Me.TxtBCi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBCi.HoverState.Parent = Me.TxtBCi
+        Me.TxtBCi.Name = "TxtBCi"
+        Me.TxtBCi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBCi.PlaceholderText = ""
+        Me.TxtBCi.SelectedText = ""
+        Me.TxtBCi.ShadowDecoration.Parent = Me.TxtBCi
+        '
+        'LblBCi
+        '
+        resources.ApplyResources(Me.LblBCi, "LblBCi")
+        Me.LblBCi.BackColor = System.Drawing.Color.Transparent
+        Me.LblBCi.Name = "LblBCi"
+        '
         'F_Pacientes
         '
         resources.ApplyResources(Me, "$this")
@@ -1071,18 +1135,18 @@ Partial Class F_Pacientes
     Friend WithEvents pnl_ingresar As Panel
     Friend WithEvents BtnIngresar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnVolver As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents TxtBAntLab As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBTratamientos As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBAntFam As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBNFam As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBEmail As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBLocalidad As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBCalle As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBNumero As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBTelefono As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBApellido2 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBApellido1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBNombre As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtIAntLab As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtITratamientos As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtIAntFam As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtINFam As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtIEmail As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtILocalidad As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtICalle As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtINumero As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtITelefono As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtIApellidoM As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtIApellidoP As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtINombre As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents DTPickerFNac As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents lbl_localidad As Label
     Friend WithEvents lbl_detalle As Label
@@ -1102,33 +1166,37 @@ Partial Class F_Pacientes
     Friend WithEvents lbl_nombre As Label
     Friend WithEvents pnl_filtrar As Panel
     Friend WithEvents TxtBFiltrar As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents TxtBEmailAlt As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtBEmail As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TxtBLocalidadAlt As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtBLocalidad As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents TxtBCalleAlt As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBNumeroAlt As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtBCalle As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtBNumero As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents TxtBEdad As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TxtBTelefonoAlt As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtBTelefono As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TxtBApellidos2 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBApellidos1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtBNombreAlt As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtBApellidoM As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtBApellidoP As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtBNombre As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DgvPacientes As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents CmblDepartamentoAlt As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents CmblDetalleAlt As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbBDepartamento As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbBDetalle As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmblMedicacion As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmblEnfermedad As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmblDetalle As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmbIDepartamento As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents BtnMinimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents BtnExit As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents TxtBCi As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents LblBCi As Label
+    Friend WithEvents TxtICi As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents LblCi As Label
 End Class

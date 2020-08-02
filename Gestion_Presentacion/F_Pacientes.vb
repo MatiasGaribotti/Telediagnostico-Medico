@@ -11,15 +11,21 @@ Public Class F_Pacientes
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
-        'Dim paciente As New Paciente(
-        '    11111111, "n1 n2", "ap1", "ap2",
-        '    New Direccion("8 de Octubre", 1245, "Montevideo", Direccion.Departamentos.Montevideo), 91111111,
-        '    New Date(2001, 5, 19), "password", "email@test.com")
 
         Dim paciente As New Paciente(
-           11111111, "n1 n2", "ap1", "ap2",
-           New Direccion("8 de Octubre", 1245, "Montevideo", "Montevideo"), 91111111,
-           New Date(2001, 5, 19), "password", "email@test.com")
+                            CInt(TxtICi.Text),
+                            TxtINombre.Text,
+                            TxtIApellidoP.Text,
+                            TxtIApellidoM.Text,
+                            New Direccion(TxtICalle.Text,
+                                            CInt(TxtINumero.Text),
+                                            TxtILocalidad.Text,
+                                            CmbBDepartamento.SelectedItem.ToString),
+                            CInt(TxtITelefono.Text),
+                            Format(DTPickerFNac.Value, "yyyy-MM-dd"),
+                            "password",
+                            TxtIEmail.Text
+                            )
 
         paciente.Insert()
     End Sub

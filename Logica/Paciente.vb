@@ -175,7 +175,7 @@ Public Class Paciente
         If result Then
             MsgBox("Paciente Ingresado exitosamente", MsgBoxStyle.Information, "Información")
         Else
-            MsgBox("No se pudo ingresar al paciente. Por favor verifique los datos.", MsgBoxStyle.Critical, "Error en el ingreso de paciente")
+            MsgBox("No se pudo ingresar al paciente.", MsgBoxStyle.Critical, "Error en el ingreso de paciente")
 
         End If
     End Sub

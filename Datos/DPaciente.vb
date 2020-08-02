@@ -28,96 +28,102 @@ Public Class DPaciente
             medicacion As String,
             tratamiento As String) As Boolean
 
-        Dim rs As Recordset
+        If HasConnection() Then
 
-        ' Sentencia para ingresar la direccion
-        Dim insertDireccion = "INSERT INTO direcciones" &
-                               "(calle, numero, localidad, departamento, detalle)" &
-                               "VALUES ('" &
-                               calle & "'," &
-                               nro & ",'" &
-                               localidad & "','" &
-                               departamento & "','" &
-                               detalle & "');"
+            Dim rs As Recordset
 
-        ' Consulta para obtener el id de la dirección ingresada
-        Dim getIdDireccion = "SELECT id FROM direcciones" &
-                              " WHERE calle='" & calle & "'" &
-                              " AND numero='" & nro & "'" &
-                              " AND localidad='" & localidad & "'" &
-                              " AND departamento='" & departamento & "';"
+            ' Sentencia para ingresar la direccion
+            Dim insertDireccion = "INSERT INTO direcciones" &
+                                   "(calle, numero, localidad, departamento, detalle)" &
+                                   "VALUES ('" &
+                                   calle & "'," &
+                                   nro & ",'" &
+                                   localidad & "','" &
+                                   departamento & "','" &
+                                   detalle & "');"
 
-        'Abro la conexión con la base de datos
-        Dim con As Connection = Conectar()
+            ' Consulta para obtener el id de la dirección ingresada
+            Dim getIdDireccion = "SELECT id FROM direcciones" &
+                                  " WHERE calle='" & calle & "'" &
+                                  " AND numero='" & nro & "'" &
+                                  " AND localidad='" & localidad & "'" &
+                                  " AND departamento='" & departamento & "';"
 
-        Try
-            'Abro transacción
-            con.BeginTrans()
-            MsgBox(insertDireccion)
-            'Ingreso la dirección a la DB
-            con.Execute(insertDireccion)
+            'Abro la conexión con la base de datos
+            Dim con As Connection = Conectar()
 
-            'Obtener idDireccion
-            MsgBox(getIdDireccion)
-            rs = con.Execute(getIdDireccion)
-            MsgBox("ID Direccion: " & rs.Fields("id").Value)
-            Dim idDireccion As Integer = rs.Fields("id").Value
+            Try
+                'Abro transacción
+                con.BeginTrans()
+                MsgBox(insertDireccion)
+                'Ingreso la dirección a la DB
+                con.Execute(insertDireccion)
 
-            ' Sentencia para ingresar un paciente
-            Dim insertPaciente = "INSERT INTO personas(" &
-                              "ci," &
-                              "foto," &
-                              "nombre," &
-                              " apellidoP," &
-                              " apellidoM," &
-                              " fechaNacimiento," &
-                              " telefono," &
-                              " esPaciente," &
-                              " email," &
-                              " nucleoFlia," &
-                              " antecedentesFlia," &
-                              " antecedentesLab," &
-                              " medicacion," &
-                              " tratamiento," &
-                              " password," &
-                              " idDireccion)" &
-                              "VALUES(" &
-                              ci & ",'" &
-                              foto & "','" &
-                              nombre & "','" &
-                              apellidoP & "','" &
-                              apellidoM & "'," &
-                              fecha_nacimiento & "," &
-                              telefono & "," &
-                              "True" & ",'" &
-                              email & "','" &
-                              NucleoFlia & "','" &
-                              AntecedentesFlia & "','" &
-                              antecedentesLab & "','" &
-                              medicacion & "','" &
-                              tratamiento & "','" &
-                              password & "'," &
-                              idDireccion &
-                              ");"
-            MsgBox("Query Paciente: " & insertPaciente)
+                'Obtener idDireccion
+                MsgBox(getIdDireccion)
+                rs = con.Execute(getIdDireccion)
+                MsgBox("ID Direccion: " & rs.Fields("id").Value)
+                Dim idDireccion As Integer = rs.Fields("id").Value
 
-            'Ingreso los datos del paciente a la DB
-            con.Execute(insertPaciente)
+                ' Sentencia para ingresar un paciente
+                Dim insertPaciente = "INSERT INTO personas(" &
+                                  "ci," &
+                                  "foto," &
+                                  "nombre," &
+                                  " apellidoP," &
+                                  " apellidoM," &
+                                  " fechaNacimiento," &
+                                  " telefono," &
+                                  " esPaciente," &
+                                  " email," &
+                                  " nucleoFlia," &
+                                  " antecedentesFlia," &
+                                  " antecedentesLab," &
+                                  " medicacion," &
+                                  " tratamiento," &
+                                  " password," &
+                                  " idDireccion)" &
+                                  "VALUES(" &
+                                  ci & ",'" &
+                                  foto & "','" &
+                                  nombre & "','" &
+                                  apellidoP & "','" &
+                                  apellidoM & "'," &
+                                  fecha_nacimiento & "," &
+                                  telefono & "," &
+                                  "True" & ",'" &
+                                  email & "','" &
+                                  NucleoFlia & "','" &
+                                  AntecedentesFlia & "','" &
+                                  antecedentesLab & "','" &
+                                  medicacion & "','" &
+                                  tratamiento & "','" &
+                                  password & "'," &
+                                  idDireccion &
+                                  ");"
+                MsgBox("Query Paciente: " & insertPaciente)
 
-            'Hago el commit de la transacción y retorno True
-            con.CommitTrans()
-            Return True
+                'Ingreso los datos del paciente a la DB
+                con.Execute(insertPaciente)
 
-        Catch ex As Exception
-            'Hubo una excepción, por lo que debo hacer un rollback
-            'para mantener la integridad de los datos.
-            con.RollbackTrans()
-            Console.WriteLine("No se pudo insertar el paciente." & vbCrLf & ex.Message) ' Mensaje en consola para debug
+                'Hago el commit de la transacción y retorno True
+                con.CommitTrans()
+                Return True
 
-            'Retorno False, significando esto que la transacción
-            'no se pudo concretar.
+            Catch ex As Exception
+                'Hubo una excepción, por lo que debo hacer un rollback
+                'para mantener la integridad de los datos.
+                con.RollbackTrans()
+                Console.WriteLine("No se pudo insertar el paciente." & vbCrLf & ex.Message) ' Mensaje en consola para debug
+
+                'Retorno False, significando esto que la transacción
+                'no se pudo concretar.
+                Return False
+
+            End Try
+        Else
+            MsgBox("No hay conexión con la base de datos.", MsgBoxStyle.Critical, "Error")
             Return False
-
-        End Try
+        End If
     End Function
 End Class

@@ -1,8 +1,10 @@
 Imports ADODB
 Public MustInherit Class DBConnection
 
-    Private Protected _User As String
-    Private Protected _Password As String
+    Protected _User As String
+    Protected _Password As String
+    Protected _Con As Connection
+
     Public Property User() As String
         Get
             Return _User
@@ -24,34 +26,44 @@ Public MustInherit Class DBConnection
     Protected Sub New()
         _User = "root"
         _Password = ""
-    End Sub
 
-    Public Sub New(user As String, password As String)
-        _User = user
-        _Password = password
-    End Sub
-
-    'Funcion que retorna una conexión a la base de datos
-    Protected Function Conectar() As Connection
-
-        Dim connection As New Connection With {
-            .ConnectionString = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
+        _Con = New Connection() With {.ConnectionString = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
                                       "server=127.0.0.1;" &
                                       "port=3306;" &
                                       "database=sistema_telediagnostico;" &
                                       "uid=" & _User & ";" &
                                       "pwd=" & _Password & ";"
-        }
-        Try
-            'Intento abrir la conexión
-            connection.Open()
-            Return connection
+                                      }
+    End Sub
 
-        Catch ex As Exception
-            Console.WriteLine("No se pudo conectar a la base de datos.")
-            Return New Connection() 'retorna una conexión vacia
-        End Try
+    Public Sub New(user As String, password As String)
+        _User = user
+        _Password = password
+        _Con.ConnectionString = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
+                                      "server=127.0.0.1;" &
+                                      "port=3306;" &
+                                      "database=sistema_telediagnostico;" &
+                                      "uid=" & _User & ";" &
+                                      "pwd=" & _Password & ";"
+    End Sub
 
+    'Funcion que retorna una conexión a la base de datos
+    Protected Function Conectar() As Connection
+        _Con.Open()
+        Return _Con
     End Function
 
+    Protected Function HasConnection() As Boolean
+        Try
+            _Con.Open()
+            'Intento abrir la conexión
+            _Con.Open()
+            _Con.Close()
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+
+    End Function
 End Class
