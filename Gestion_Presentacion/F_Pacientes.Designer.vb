@@ -23,15 +23,17 @@ Partial Class F_Pacientes
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Pacientes))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnl_contenedor = New System.Windows.Forms.Panel()
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DgvPacientes = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.pnl_filtrar = New System.Windows.Forms.Panel()
+        Me.TxtBCi = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.LblBCi = New System.Windows.Forms.Label()
         Me.CmbBDepartamento = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.CmbBDetalle = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TxtBFiltrar = New Guna.UI2.WinForms.Guna2Button()
@@ -55,6 +57,8 @@ Partial Class F_Pacientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnl_ingresar = New System.Windows.Forms.Panel()
+        Me.TxtICi = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.LblCi = New System.Windows.Forms.Label()
         Me.CmblMedicacion = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.CmblEnfermedad = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.CmblDetalle = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -90,10 +94,6 @@ Partial Class F_Pacientes
         Me.lbl_fechaNacimiento = New System.Windows.Forms.Label()
         Me.lbl_apellidos = New System.Windows.Forms.Label()
         Me.lbl_nombre = New System.Windows.Forms.Label()
-        Me.TxtICi = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.LblCi = New System.Windows.Forms.Label()
-        Me.TxtBCi = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.LblBCi = New System.Windows.Forms.Label()
         Me.pnl_contenedor.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DgvPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,30 +142,30 @@ Partial Class F_Pacientes
         '
         'DgvPacientes
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DgvPacientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.DgvPacientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvPacientes.BackgroundColor = System.Drawing.Color.White
         Me.DgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         resources.ApplyResources(Me.DgvPacientes, "DgvPacientes")
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvPacientes.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvPacientes.DefaultCellStyle = DataGridViewCellStyle9
         Me.DgvPacientes.EnableHeadersVisualStyles = False
         Me.DgvPacientes.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvPacientes.Name = "DgvPacientes"
@@ -223,6 +223,34 @@ Partial Class F_Pacientes
         Me.pnl_filtrar.Controls.Add(Me.Label2)
         resources.ApplyResources(Me.pnl_filtrar, "pnl_filtrar")
         Me.pnl_filtrar.Name = "pnl_filtrar"
+        '
+        'TxtBCi
+        '
+        Me.TxtBCi.Animated = True
+        Me.TxtBCi.BorderRadius = 6
+        Me.TxtBCi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBCi.DefaultText = ""
+        Me.TxtBCi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBCi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBCi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBCi.DisabledState.Parent = Me.TxtBCi
+        Me.TxtBCi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBCi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBCi.FocusedState.Parent = Me.TxtBCi
+        resources.ApplyResources(Me.TxtBCi, "TxtBCi")
+        Me.TxtBCi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBCi.HoverState.Parent = Me.TxtBCi
+        Me.TxtBCi.Name = "TxtBCi"
+        Me.TxtBCi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBCi.PlaceholderText = ""
+        Me.TxtBCi.SelectedText = ""
+        Me.TxtBCi.ShadowDecoration.Parent = Me.TxtBCi
+        '
+        'LblBCi
+        '
+        resources.ApplyResources(Me.LblBCi, "LblBCi")
+        Me.LblBCi.BackColor = System.Drawing.Color.Transparent
+        Me.LblBCi.Name = "LblBCi"
         '
         'CmbBDepartamento
         '
@@ -574,6 +602,34 @@ Partial Class F_Pacientes
         Me.pnl_ingresar.Controls.Add(Me.lbl_nombre)
         resources.ApplyResources(Me.pnl_ingresar, "pnl_ingresar")
         Me.pnl_ingresar.Name = "pnl_ingresar"
+        '
+        'TxtICi
+        '
+        Me.TxtICi.Animated = True
+        Me.TxtICi.BorderRadius = 6
+        Me.TxtICi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtICi.DefaultText = ""
+        Me.TxtICi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtICi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtICi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtICi.DisabledState.Parent = Me.TxtICi
+        Me.TxtICi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtICi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtICi.FocusedState.Parent = Me.TxtICi
+        resources.ApplyResources(Me.TxtICi, "TxtICi")
+        Me.TxtICi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtICi.HoverState.Parent = Me.TxtICi
+        Me.TxtICi.Name = "TxtICi"
+        Me.TxtICi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtICi.PlaceholderText = ""
+        Me.TxtICi.SelectedText = ""
+        Me.TxtICi.ShadowDecoration.Parent = Me.TxtICi
+        '
+        'LblCi
+        '
+        resources.ApplyResources(Me.LblCi, "LblCi")
+        Me.LblCi.BackColor = System.Drawing.Color.Transparent
+        Me.LblCi.Name = "LblCi"
         '
         'CmblMedicacion
         '
@@ -1054,62 +1110,6 @@ Partial Class F_Pacientes
         resources.ApplyResources(Me.lbl_nombre, "lbl_nombre")
         Me.lbl_nombre.BackColor = System.Drawing.Color.Transparent
         Me.lbl_nombre.Name = "lbl_nombre"
-        '
-        'TxtICi
-        '
-        Me.TxtICi.Animated = True
-        Me.TxtICi.BorderRadius = 6
-        Me.TxtICi.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtICi.DefaultText = ""
-        Me.TxtICi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtICi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtICi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtICi.DisabledState.Parent = Me.TxtICi
-        Me.TxtICi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtICi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtICi.FocusedState.Parent = Me.TxtICi
-        resources.ApplyResources(Me.TxtICi, "TxtICi")
-        Me.TxtICi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtICi.HoverState.Parent = Me.TxtICi
-        Me.TxtICi.Name = "TxtICi"
-        Me.TxtICi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtICi.PlaceholderText = ""
-        Me.TxtICi.SelectedText = ""
-        Me.TxtICi.ShadowDecoration.Parent = Me.TxtICi
-        '
-        'LblCi
-        '
-        resources.ApplyResources(Me.LblCi, "LblCi")
-        Me.LblCi.BackColor = System.Drawing.Color.Transparent
-        Me.LblCi.Name = "LblCi"
-        '
-        'TxtBCi
-        '
-        Me.TxtBCi.Animated = True
-        Me.TxtBCi.BorderRadius = 6
-        Me.TxtBCi.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBCi.DefaultText = ""
-        Me.TxtBCi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBCi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBCi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBCi.DisabledState.Parent = Me.TxtBCi
-        Me.TxtBCi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBCi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBCi.FocusedState.Parent = Me.TxtBCi
-        resources.ApplyResources(Me.TxtBCi, "TxtBCi")
-        Me.TxtBCi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBCi.HoverState.Parent = Me.TxtBCi
-        Me.TxtBCi.Name = "TxtBCi"
-        Me.TxtBCi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBCi.PlaceholderText = ""
-        Me.TxtBCi.SelectedText = ""
-        Me.TxtBCi.ShadowDecoration.Parent = Me.TxtBCi
-        '
-        'LblBCi
-        '
-        resources.ApplyResources(Me.LblBCi, "LblBCi")
-        Me.LblBCi.BackColor = System.Drawing.Color.Transparent
-        Me.LblBCi.Name = "LblBCi"
         '
         'F_Pacientes
         '

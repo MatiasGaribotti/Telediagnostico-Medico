@@ -9,6 +9,9 @@
     Protected _Telefono As Integer
     Protected _Fecha_Nacimiento As Date
     Protected _Password As String
+    Protected _Especialidad As String
+
+
 
     Public Property Ci() As Integer
         Get
@@ -87,6 +90,15 @@
         End Get
         Set(value As String)
             _Password = value
+        End Set
+    End Property
+
+    Public Property Especialidad As String
+        Get
+            Return _Especialidad
+        End Get
+        Set(value As String)
+            _Especialidad = value
         End Set
     End Property
 

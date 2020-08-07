@@ -35,4 +35,16 @@ Public Class F_Pacientes
             CmbIDepartamento.Items.Add(departamento)
         Next
     End Sub
+
+    Private Sub TxtICi_TextChanged(sender As Object, e As EventArgs) Handles TxtICi.TextChanged
+
+    End Sub
+
+    Private Sub TxtICalle_TextChanged(sender As Object, e As EventArgs) Handles TxtICalle.TextChanged
+
+    End Sub
+
+    Private Sub CmbIDepartamento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbIDepartamento.SelectedIndexChanged
+
+    End Sub
 End Class
