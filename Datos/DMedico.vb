@@ -95,8 +95,8 @@ Public Class DMedico
                                   foto & "','" &
                                   nombre & "','" &
                                   apellidoP & "','" &
-                                  apellidoM & "'," &
-                                  fecha_nacimiento & "," &
+                                  apellidoM & "','" &
+                                  fecha_nacimiento & "'," &
                                   telefono & "," &
                                   "True" & ",'" &
                                   especialidad & "','" &

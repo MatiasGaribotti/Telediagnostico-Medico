@@ -105,8 +105,8 @@ Public Class DPaciente
                                   foto & "','" &
                                   nombre & "','" &
                                   apellidoP & "','" &
-                                  apellidoM & "'," &
-                                  fecha_nacimiento & "," &
+                                  apellidoM & "','" &
+                                  fecha_nacimiento & "'," &
                                   telefono & "," &
                                   "True" & ",'" &
                                   email & "','" &
