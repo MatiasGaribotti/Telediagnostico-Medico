@@ -85,6 +85,7 @@
     <Compile Include="Medico.vb" />
     <Compile Include="Paciente.vb" />
     <Compile Include="Password.vb" />
+    <Compile Include="Horario.vb" />
     <Compile Include="Persona.vb" />
   </ItemGroup>
   <ItemGroup>

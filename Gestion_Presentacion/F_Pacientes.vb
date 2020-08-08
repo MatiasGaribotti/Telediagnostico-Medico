@@ -47,4 +47,8 @@ Public Class F_Pacientes
     Private Sub CmbIDepartamento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbIDepartamento.SelectedIndexChanged
 
     End Sub
+
+    Private Sub TxtIApellidoM_TextChanged(sender As Object, e As EventArgs) Handles TxtIApellidoM.TextChanged
+
+    End Sub
 End Class

@@ -67,6 +67,7 @@
     <Compile Include="DBConnection.vb" />
     <Compile Include="DChat.vb" />
     <Compile Include="DConsulta.vb" />
+    <Compile Include="DHorario.vb" />
     <Compile Include="DMedico.vb" />
     <Compile Include="DPaciente.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
