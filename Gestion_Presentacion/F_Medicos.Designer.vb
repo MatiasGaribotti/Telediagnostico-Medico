@@ -54,7 +54,6 @@ Partial Class F_Medicos
         Me.txtb_ciF = New Guna.UI2.WinForms.Guna2TextBox()
         Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn_ingresar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_fecha = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -79,9 +78,7 @@ Partial Class F_Medicos
         '
         'pnl_fondo
         '
-        Me.pnl_fondo.Controls.Add(Me.gbtn_nPassw)
         Me.pnl_fondo.Controls.Add(Me.btn_cerrar)
-        Me.pnl_fondo.Controls.Add(Me.BtnIngresar)
         Me.pnl_fondo.Controls.Add(Me.btn_minimizar)
         Me.pnl_fondo.Controls.Add(Me.pnl_ingresarFiltrar)
         Me.pnl_fondo.Controls.Add(Me.dgv_medicos)
@@ -137,8 +134,10 @@ Partial Class F_Medicos
         'pnl_ingresarFiltrar
         '
         Me.pnl_ingresarFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.gbtn_nPassw)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.cbtn_menosEspecialidades)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.cbtn_masEspecialidades)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnIngresar)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.DTPickerFNac)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.cmbDetalles)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbIDepartamento)
@@ -159,7 +158,6 @@ Partial Class F_Medicos
         Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_ciF)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnFiltrar)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Guna2Button1)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.btn_ingresar)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label1)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_fecha)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label3)
@@ -582,14 +580,6 @@ Partial Class F_Medicos
         Me.Guna2Button1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
         '
-        'btn_ingresar
-        '
-        Me.btn_ingresar.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.btn_ingresar, "btn_ingresar")
-        Me.btn_ingresar.Image = Global.Presentacion.My.Resources.Resources.Ingresar_Button
-        Me.btn_ingresar.Name = "btn_ingresar"
-        Me.btn_ingresar.UseVisualStyleBackColor = True
-        '
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
@@ -763,7 +753,6 @@ Partial Class F_Medicos
     Friend WithEvents Label5 As Label
     Friend WithEvents btn_cerrar As Button
     Friend WithEvents btn_minimizar As Button
-    Friend WithEvents btn_ingresar As Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents gbtn_nPassw As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnIngresar As Guna.UI2.WinForms.Guna2Button

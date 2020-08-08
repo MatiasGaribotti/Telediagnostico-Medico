@@ -53,4 +53,11 @@ Public Class F_Medicos
 
     End Sub
 
+    Private Sub gbtn_nPassw_Click(sender As Object, e As EventArgs) Handles gbtn_nPassw.Click
+
+    End Sub
+
+    Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
+
+    End Sub
 End Class

@@ -86,8 +86,7 @@ Public Class DMedico
                                   " apellidoM," &
                                   " fechaNacimiento," &
                                   " telefono," &
-                                  " esPaciente," &
-                                  " email," &
+                                  " esMedico," &
                                   " especialidad," &
                                   " password," &
                                   " idDireccion)" &

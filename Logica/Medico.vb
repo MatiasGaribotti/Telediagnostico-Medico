@@ -39,8 +39,8 @@ Public Class Medico
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
-                   password As String,
-                   especialidad As String)
+                   especialidad As String,
+                   Password As String)
         _Ci = ci
         _Foto = ""
         _Nombre = nombre
@@ -49,7 +49,7 @@ Public Class Medico
         _Direccion = direccion
         _Telefono = telefono
         _Fecha_Nacimiento = fecha_nacimiento
-        _Password = password
+        _Password = Password
         _Especialidad = especialidad
 
     End Sub
