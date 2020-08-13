@@ -34,7 +34,7 @@ Public Class F_Login
         Me.Close()
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
         Dim mailing As New Mailing("")
         mailing.Send()
     End Sub
