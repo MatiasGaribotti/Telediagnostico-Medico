@@ -26,7 +26,6 @@ Public Class DMedico
 
     Public Function Insert(
             ci As Integer,
-            foto As String,
             nombre As String,
             apellidoP As String,
             apellidoM As String,
@@ -80,7 +79,6 @@ Public Class DMedico
                 ' Sentencia para ingresar un paciente
                 Dim insertMedico = "INSERT INTO personas(" &
                                   "ci," &
-                                  "foto," &
                                   "nombre," &
                                   " apellidoP," &
                                   " apellidoM," &
@@ -92,7 +90,6 @@ Public Class DMedico
                                   " idDireccion)" &
                                   "VALUES(" &
                                   ci & ",'" &
-                                  foto & "','" &
                                   nombre & "','" &
                                   apellidoP & "','" &
                                   apellidoM & "','" &
