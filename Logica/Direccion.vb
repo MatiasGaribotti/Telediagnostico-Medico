@@ -1,6 +1,6 @@
 ﻿Public Class Direccion
 
-    Public Property Id As UInteger
+    Public Property Id As Integer
     Public Property Calle As String
     Public Property Nro As Integer
     Public Property Localidad As String
@@ -26,6 +26,14 @@
                                                                 "Rivera",
                                                                 "Artigas"}
                                                                 )
+
+    Public Sub New()
+        Id = -1
+        Calle = "Default"
+        Nro = -1
+        Localidad = "Default"
+        Departamento = "Default"
+    End Sub
 
     Public Sub New(
             id As UInteger,

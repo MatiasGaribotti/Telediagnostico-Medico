@@ -60,4 +60,13 @@ Public Class F_Medicos
     Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
 
     End Sub
+
+    Private Sub BtnHorarios_Click(sender As Object, e As EventArgs) Handles BtnHorarios.Click
+        F_Medicos_Horarios.Show()
+        Close()
+    End Sub
+
+    Private Sub cbtn_masEspecialidades_Click(sender As Object, e As EventArgs) Handles cbtn_masEspecialidades.Click
+
+    End Sub
 End Class

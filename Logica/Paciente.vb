@@ -40,7 +40,6 @@ Public Class Paciente
         Me.Tratamiento = tratamiento
     End Sub
 
-
     ' Constructor común Parcial
     Public Sub New(ci As Integer,
                    nombre As String,
@@ -60,11 +59,11 @@ Public Class Paciente
         Me.Fecha_Nacimiento = fecha_nacimiento
         Me.Password = password
         Me.Email = email
-        NucleoFlia = "Sin ingresar"
-        AntecedentesFlia = "Sin ingresar"
-        AntecedentesLab = "Sin ingresar"
-        Medicacion = "Sin ingresar"
-        Tratamiento = "Sin ingresar"
+        Me.NucleoFlia = "Sin ingresar"
+        Me.AntecedentesFlia = "Sin ingresar"
+        Me.AntecedentesLab = "Sin ingresar"
+        Me.Medicacion = "Sin ingresar"
+        Me.Tratamiento = "Sin ingresar"
     End Sub
 
     Public Sub Insert()

@@ -120,11 +120,120 @@
   <metadata name="pnl_fondo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnHacerAdmin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
+  </data>
+  <data name="BtnHacerAdmin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1124, 44</value>
+  </data>
+  <data name="BtnHacerAdmin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 51</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnHacerAdmin.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="BtnHacerAdmin.Text" xml:space="preserve">
+    <value>Hacer Administrador</value>
+  </data>
+  <data name="&gt;&gt;BtnHacerAdmin.Name" xml:space="preserve">
+    <value>BtnHacerAdmin</value>
+  </data>
+  <data name="&gt;&gt;BtnHacerAdmin.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnHacerAdmin.Parent" xml:space="preserve">
+    <value>pnl_fondo</value>
+  </data>
+  <data name="&gt;&gt;BtnHacerAdmin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
+  </data>
+  <data name="BtnEliminar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 44</value>
+  </data>
+  <data name="BtnEliminar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 51</value>
+  </data>
+  <data name="BtnEliminar.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="BtnEliminar.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.Name" xml:space="preserve">
+    <value>BtnEliminar</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.Parent" xml:space="preserve">
+    <value>pnl_fondo</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
+  </data>
+  <data name="BtnModificar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>598, 44</value>
+  </data>
+  <data name="BtnModificar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 51</value>
+  </data>
+  <data name="BtnModificar.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="BtnModificar.Text" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.Name" xml:space="preserve">
+    <value>BtnModificar</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.Parent" xml:space="preserve">
+    <value>pnl_fondo</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gbtn_nPassw.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
+  </data>
+  <data name="gbtn_nPassw.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 44</value>
+  </data>
+  <data name="gbtn_nPassw.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 51</value>
+  </data>
+  <data name="gbtn_nPassw.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="gbtn_nPassw.Text" xml:space="preserve">
+    <value>Restablecer Contraseña</value>
+  </data>
+  <data name="&gt;&gt;gbtn_nPassw.Name" xml:space="preserve">
+    <value>gbtn_nPassw</value>
+  </data>
+  <data name="&gt;&gt;gbtn_nPassw.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gbtn_nPassw.Parent" xml:space="preserve">
+    <value>pnl_fondo</value>
+  </data>
+  <data name="&gt;&gt;gbtn_nPassw.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_cerrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_cerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADoAAAA4CAYAAACsc+sjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -146,7 +255,6 @@
   <data name="btn_cerrar.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 61</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_cerrar.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
@@ -160,7 +268,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;btn_cerrar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="btn_minimizar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -197,36 +305,36 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;btn_minimizar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <metadata name="pnl_ingresarFiltrar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="gbtn_nPassw.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="BtnHorarios.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt</value>
   </data>
-  <data name="gbtn_nPassw.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 1005</value>
+  <data name="BtnHorarios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 932</value>
   </data>
-  <data name="gbtn_nPassw.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 51</value>
+  <data name="BtnHorarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 51</value>
   </data>
-  <data name="gbtn_nPassw.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
+  <data name="BtnHorarios.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
   </data>
-  <data name="gbtn_nPassw.Text" xml:space="preserve">
-    <value>Solicitar nueva contrasenna</value>
+  <data name="BtnHorarios.Text" xml:space="preserve">
+    <value>Horarios</value>
   </data>
-  <data name="&gt;&gt;gbtn_nPassw.Name" xml:space="preserve">
-    <value>gbtn_nPassw</value>
+  <data name="&gt;&gt;BtnHorarios.Name" xml:space="preserve">
+    <value>BtnHorarios</value>
   </data>
-  <data name="&gt;&gt;gbtn_nPassw.Type" xml:space="preserve">
+  <data name="&gt;&gt;BtnHorarios.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;gbtn_nPassw.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BtnHorarios.Parent" xml:space="preserve">
     <value>pnl_ingresarFiltrar</value>
   </data>
-  <data name="&gt;&gt;gbtn_nPassw.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BtnHorarios.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="cbtn_menosEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
@@ -1307,31 +1415,31 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;pnl_ingresarFiltrar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
-  <data name="dgv_medicos.ColumnHeadersHeight" type="System.Int32, mscorlib">
+  <data name="Dgv_Medicos.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="dgv_medicos.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Dgv_Medicos.Location" type="System.Drawing.Point, System.Drawing">
     <value>597, 120</value>
   </data>
-  <data name="dgv_medicos.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Dgv_Medicos.Size" type="System.Drawing.Size, System.Drawing">
     <value>1300, 839</value>
   </data>
-  <data name="dgv_medicos.TabIndex" type="System.Int32, mscorlib">
+  <data name="Dgv_Medicos.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
-  <data name="&gt;&gt;dgv_medicos.Name" xml:space="preserve">
-    <value>dgv_medicos</value>
+  <data name="&gt;&gt;Dgv_Medicos.Name" xml:space="preserve">
+    <value>Dgv_Medicos</value>
   </data>
-  <data name="&gt;&gt;dgv_medicos.Type" xml:space="preserve">
+  <data name="&gt;&gt;Dgv_Medicos.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;dgv_medicos.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Dgv_Medicos.Parent" xml:space="preserve">
     <value>pnl_fondo</value>
   </data>
-  <data name="&gt;&gt;dgv_medicos.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;Dgv_Medicos.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="pnl_fondo.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>

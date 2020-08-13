@@ -2,21 +2,21 @@
 Imports System.Globalization
 Imports Logica
 Public Class F_Medicos_Horarios
-    Private Sub btn_volver_Click(sender As Object, e As EventArgs) Handles btn_volver.Click
-        F_ABM.Show()
+    Private Sub Btn_volver_Click(sender As Object, e As EventArgs) Handles btn_volver.Click
+        F_Medicos.Show()
         Me.Close()
     End Sub
 
-    Private Sub btn_ingresar_Click(sender As Object, e As EventArgs) Handles btn_ingresar.Click
-        Dim horario
+    Private Sub Btn_ingresar_Click(sender As Object, e As EventArgs) Handles btn_ingresar.Click
+        Dim horario As Horario
         'dia
         'If (RbtnL.Checked) Then
 
         'End If
         horario = New Horario(
-                    CInt(TxtCi.Text),
+                    CInt(TxtICi.Text),
                     CByte(CmbISucursal.SelectedItem.ToString),
-                    "lunes",
+                    Horario.Dias.Lunes,
                     TxtIHoraIn.Text,
                     TxtIHoraOut.Text
                     )
@@ -24,4 +24,7 @@ Public Class F_Medicos_Horarios
         horario.Insert()
     End Sub
 
+    Private Sub pnl_ingresar_Paint(sender As Object, e As PaintEventArgs) Handles pnl_ingresar.Paint
+
+    End Sub
 End Class

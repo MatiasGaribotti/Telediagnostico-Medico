@@ -22,15 +22,17 @@ Partial Class F_Medicos_Horarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Medicos_Horarios))
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnl_fondo = New System.Windows.Forms.Panel()
         Me.dgw_horarios = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.btn_minimizar = New System.Windows.Forms.Button()
         Me.btn_cerrar = New System.Windows.Forms.Button()
         Me.pnl_ingresar = New System.Windows.Forms.Panel()
+        Me.TxtIHoraOut = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtIHoraIn = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btn_volver = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_filtrar = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_ingresar = New Guna.UI2.WinForms.Guna2Button()
@@ -52,7 +54,7 @@ Partial Class F_Medicos_Horarios
         Me.RbtnS = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.RbtnL = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.CmbISucursal = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.TxtCi = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtICi = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lbl_a = New System.Windows.Forms.Label()
         Me.lbl_rango = New System.Windows.Forms.Label()
         Me.lbl_diasB = New System.Windows.Forms.Label()
@@ -64,9 +66,10 @@ Partial Class F_Medicos_Horarios
         Me.lbl_sucursal = New System.Windows.Forms.Label()
         Me.lbl_ingresoHorarios = New System.Windows.Forms.Label()
         Me.lbl_ci = New System.Windows.Forms.Label()
-        Me.lbl_profesional = New System.Windows.Forms.Label()
-        Me.TxtIHoraIn = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtIHoraOut = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBCi = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.LblBCi = New System.Windows.Forms.Label()
+        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.pnl_fondo.SuspendLayout()
         CType(Me.dgw_horarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_ingresar.SuspendLayout()
@@ -74,6 +77,8 @@ Partial Class F_Medicos_Horarios
         '
         'pnl_fondo
         '
+        Me.pnl_fondo.Controls.Add(Me.BtnEliminar)
+        Me.pnl_fondo.Controls.Add(Me.BtnModificar)
         Me.pnl_fondo.Controls.Add(Me.dgw_horarios)
         Me.pnl_fondo.Controls.Add(Me.btn_minimizar)
         Me.pnl_fondo.Controls.Add(Me.btn_cerrar)
@@ -84,30 +89,30 @@ Partial Class F_Medicos_Horarios
         'dgw_horarios
         '
         Me.dgw_horarios.AllowUserToDeleteRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.dgw_horarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgw_horarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgw_horarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgw_horarios.BackgroundColor = System.Drawing.Color.DarkGray
         Me.dgw_horarios.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgw_horarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgw_horarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgw_horarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgw_horarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         resources.ApplyResources(Me.dgw_horarios, "dgw_horarios")
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgw_horarios.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgw_horarios.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgw_horarios.EnableHeadersVisualStyles = False
         Me.dgw_horarios.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgw_horarios.Name = "dgw_horarios"
@@ -153,6 +158,8 @@ Partial Class F_Medicos_Horarios
         'pnl_ingresar
         '
         Me.pnl_ingresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_ingresar.Controls.Add(Me.TxtBCi)
+        Me.pnl_ingresar.Controls.Add(Me.LblBCi)
         Me.pnl_ingresar.Controls.Add(Me.TxtIHoraOut)
         Me.pnl_ingresar.Controls.Add(Me.TxtIHoraIn)
         Me.pnl_ingresar.Controls.Add(Me.btn_volver)
@@ -176,7 +183,7 @@ Partial Class F_Medicos_Horarios
         Me.pnl_ingresar.Controls.Add(Me.RbtnS)
         Me.pnl_ingresar.Controls.Add(Me.RbtnL)
         Me.pnl_ingresar.Controls.Add(Me.CmbISucursal)
-        Me.pnl_ingresar.Controls.Add(Me.TxtCi)
+        Me.pnl_ingresar.Controls.Add(Me.TxtICi)
         Me.pnl_ingresar.Controls.Add(Me.lbl_a)
         Me.pnl_ingresar.Controls.Add(Me.lbl_rango)
         Me.pnl_ingresar.Controls.Add(Me.lbl_diasB)
@@ -188,9 +195,52 @@ Partial Class F_Medicos_Horarios
         Me.pnl_ingresar.Controls.Add(Me.lbl_sucursal)
         Me.pnl_ingresar.Controls.Add(Me.lbl_ingresoHorarios)
         Me.pnl_ingresar.Controls.Add(Me.lbl_ci)
-        Me.pnl_ingresar.Controls.Add(Me.lbl_profesional)
         resources.ApplyResources(Me.pnl_ingresar, "pnl_ingresar")
         Me.pnl_ingresar.Name = "pnl_ingresar"
+        '
+        'TxtIHoraOut
+        '
+        Me.TxtIHoraOut.Animated = True
+        Me.TxtIHoraOut.BorderRadius = 6
+        Me.TxtIHoraOut.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIHoraOut.DefaultText = ""
+        Me.TxtIHoraOut.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIHoraOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIHoraOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIHoraOut.DisabledState.Parent = Me.TxtIHoraOut
+        Me.TxtIHoraOut.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIHoraOut.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIHoraOut.FocusedState.Parent = Me.TxtIHoraOut
+        Me.TxtIHoraOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIHoraOut.HoverState.Parent = Me.TxtIHoraOut
+        resources.ApplyResources(Me.TxtIHoraOut, "TxtIHoraOut")
+        Me.TxtIHoraOut.Name = "TxtIHoraOut"
+        Me.TxtIHoraOut.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIHoraOut.PlaceholderText = ""
+        Me.TxtIHoraOut.SelectedText = ""
+        Me.TxtIHoraOut.ShadowDecoration.Parent = Me.TxtIHoraOut
+        '
+        'TxtIHoraIn
+        '
+        Me.TxtIHoraIn.Animated = True
+        Me.TxtIHoraIn.BorderRadius = 6
+        Me.TxtIHoraIn.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIHoraIn.DefaultText = ""
+        Me.TxtIHoraIn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIHoraIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIHoraIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIHoraIn.DisabledState.Parent = Me.TxtIHoraIn
+        Me.TxtIHoraIn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIHoraIn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIHoraIn.FocusedState.Parent = Me.TxtIHoraIn
+        Me.TxtIHoraIn.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIHoraIn.HoverState.Parent = Me.TxtIHoraIn
+        resources.ApplyResources(Me.TxtIHoraIn, "TxtIHoraIn")
+        Me.TxtIHoraIn.Name = "TxtIHoraIn"
+        Me.TxtIHoraIn.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIHoraIn.PlaceholderText = ""
+        Me.TxtIHoraIn.SelectedText = ""
+        Me.TxtIHoraIn.ShadowDecoration.Parent = Me.TxtIHoraIn
         '
         'btn_volver
         '
@@ -502,27 +552,27 @@ Partial Class F_Medicos_Horarios
         Me.CmbISucursal.Name = "CmbISucursal"
         Me.CmbISucursal.ShadowDecoration.Parent = Me.CmbISucursal
         '
-        'TxtCi
+        'TxtICi
         '
-        Me.TxtCi.Animated = True
-        Me.TxtCi.BorderRadius = 6
-        Me.TxtCi.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtCi.DefaultText = ""
-        Me.TxtCi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtCi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtCi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtCi.DisabledState.Parent = Me.TxtCi
-        Me.TxtCi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtCi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtCi.FocusedState.Parent = Me.TxtCi
-        Me.TxtCi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtCi.HoverState.Parent = Me.TxtCi
-        resources.ApplyResources(Me.TxtCi, "TxtCi")
-        Me.TxtCi.Name = "TxtCi"
-        Me.TxtCi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtCi.PlaceholderText = ""
-        Me.TxtCi.SelectedText = ""
-        Me.TxtCi.ShadowDecoration.Parent = Me.TxtCi
+        Me.TxtICi.Animated = True
+        Me.TxtICi.BorderRadius = 6
+        Me.TxtICi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtICi.DefaultText = ""
+        Me.TxtICi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtICi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtICi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtICi.DisabledState.Parent = Me.TxtICi
+        Me.TxtICi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtICi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtICi.FocusedState.Parent = Me.TxtICi
+        Me.TxtICi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtICi.HoverState.Parent = Me.TxtICi
+        resources.ApplyResources(Me.TxtICi, "TxtICi")
+        Me.TxtICi.Name = "TxtICi"
+        Me.TxtICi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtICi.PlaceholderText = ""
+        Me.TxtICi.SelectedText = ""
+        Me.TxtICi.ShadowDecoration.Parent = Me.TxtICi
         '
         'lbl_a
         '
@@ -579,54 +629,64 @@ Partial Class F_Medicos_Horarios
         resources.ApplyResources(Me.lbl_ci, "lbl_ci")
         Me.lbl_ci.Name = "lbl_ci"
         '
-        'lbl_profesional
+        'TxtBCi
         '
-        resources.ApplyResources(Me.lbl_profesional, "lbl_profesional")
-        Me.lbl_profesional.Name = "lbl_profesional"
+        Me.TxtBCi.Animated = True
+        Me.TxtBCi.BorderRadius = 6
+        Me.TxtBCi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBCi.DefaultText = ""
+        Me.TxtBCi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBCi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBCi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBCi.DisabledState.Parent = Me.TxtBCi
+        Me.TxtBCi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBCi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBCi.FocusedState.Parent = Me.TxtBCi
+        Me.TxtBCi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBCi.HoverState.Parent = Me.TxtBCi
+        resources.ApplyResources(Me.TxtBCi, "TxtBCi")
+        Me.TxtBCi.Name = "TxtBCi"
+        Me.TxtBCi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBCi.PlaceholderText = ""
+        Me.TxtBCi.SelectedText = ""
+        Me.TxtBCi.ShadowDecoration.Parent = Me.TxtBCi
         '
-        'TxtIHoraIn
+        'LblBCi
         '
-        Me.TxtIHoraIn.Animated = True
-        Me.TxtIHoraIn.BorderRadius = 6
-        Me.TxtIHoraIn.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtIHoraIn.DefaultText = ""
-        Me.TxtIHoraIn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtIHoraIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtIHoraIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtIHoraIn.DisabledState.Parent = Me.TxtIHoraIn
-        Me.TxtIHoraIn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtIHoraIn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtIHoraIn.FocusedState.Parent = Me.TxtIHoraIn
-        Me.TxtIHoraIn.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtIHoraIn.HoverState.Parent = Me.TxtIHoraIn
-        resources.ApplyResources(Me.TxtIHoraIn, "TxtIHoraIn")
-        Me.TxtIHoraIn.Name = "TxtIHoraIn"
-        Me.TxtIHoraIn.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtIHoraIn.PlaceholderText = ""
-        Me.TxtIHoraIn.SelectedText = ""
-        Me.TxtIHoraIn.ShadowDecoration.Parent = Me.TxtIHoraIn
+        resources.ApplyResources(Me.LblBCi, "LblBCi")
+        Me.LblBCi.Name = "LblBCi"
         '
-        'TxtIHoraOut
+        'BtnEliminar
         '
-        Me.TxtIHoraOut.Animated = True
-        Me.TxtIHoraOut.BorderRadius = 6
-        Me.TxtIHoraOut.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtIHoraOut.DefaultText = ""
-        Me.TxtIHoraOut.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtIHoraOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtIHoraOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtIHoraOut.DisabledState.Parent = Me.TxtIHoraOut
-        Me.TxtIHoraOut.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtIHoraOut.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtIHoraOut.FocusedState.Parent = Me.TxtIHoraOut
-        Me.TxtIHoraOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtIHoraOut.HoverState.Parent = Me.TxtIHoraOut
-        resources.ApplyResources(Me.TxtIHoraOut, "TxtIHoraOut")
-        Me.TxtIHoraOut.Name = "TxtIHoraOut"
-        Me.TxtIHoraOut.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtIHoraOut.PlaceholderText = ""
-        Me.TxtIHoraOut.SelectedText = ""
-        Me.TxtIHoraOut.ShadowDecoration.Parent = Me.TxtIHoraOut
+        Me.BtnEliminar.Animated = True
+        Me.BtnEliminar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnEliminar.BorderRadius = 26
+        Me.BtnEliminar.CheckedState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.CustomImages.Parent = Me.BtnEliminar
+        Me.BtnEliminar.FillColor = System.Drawing.Color.DarkCyan
+        resources.ApplyResources(Me.BtnEliminar, "BtnEliminar")
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
+        Me.BtnEliminar.HoverState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.ShadowDecoration.Enabled = True
+        Me.BtnEliminar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnEliminar.ShadowDecoration.Parent = Me.BtnEliminar
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.Animated = True
+        Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.BorderRadius = 26
+        Me.BtnModificar.CheckedState.Parent = Me.BtnModificar
+        Me.BtnModificar.CustomImages.Parent = Me.BtnModificar
+        Me.BtnModificar.FillColor = System.Drawing.Color.DarkCyan
+        resources.ApplyResources(Me.BtnModificar, "BtnModificar")
+        Me.BtnModificar.ForeColor = System.Drawing.Color.White
+        Me.BtnModificar.HoverState.Parent = Me.BtnModificar
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.ShadowDecoration.Enabled = True
+        Me.BtnModificar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnModificar.ShadowDecoration.Parent = Me.BtnModificar
         '
         'F_Medicos_Horarios
         '
@@ -656,11 +716,10 @@ Partial Class F_Medicos_Horarios
     Friend WithEvents lbl_sucursal As Label
     Friend WithEvents lbl_ingresoHorarios As Label
     Friend WithEvents lbl_ci As Label
-    Friend WithEvents lbl_profesional As Label
     Friend WithEvents btn_minimizar As Button
     Friend WithEvents btn_cerrar As Button
     Friend WithEvents lbl_a As Label
-    Friend WithEvents TxtCi As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtICi As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CmbISucursal As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents RbtnJ As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents RbtnV As Guna.UI2.WinForms.Guna2RadioButton
@@ -685,4 +744,8 @@ Partial Class F_Medicos_Horarios
     Friend WithEvents btn_filtrar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TxtIHoraOut As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TxtIHoraIn As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtBCi As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents LblBCi As Label
+    Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
 End Class

@@ -5,6 +5,28 @@ Public MustInherit Class DBConnection
     Public Property Password() As String
     Public Property ConStr() As String
 
+    Public Sub New()
+        Me.User = "admin"
+        Me.Password = "123456789"
+        Me.ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
+                                      "server=127.0.0.1;" &
+                                      "port=3306;" &
+                                      "database=sistema_telediagnostico;" &
+                                      "uid=" & Me.User & ";" &
+                                      "pwd=" & Me.Password & ";"
+    End Sub
+
+    Public Sub New(user As String, password As String)
+        Me.User = user
+        Me.Password = password
+        Me.ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
+                                      "server=127.0.0.1;" &
+                                      "port=3306;" &
+                                      "database=sistema_telediagnostico;" &
+                                      "uid=" & Me.User & ";" &
+                                      "pwd=" & Me.Password & ";"
+    End Sub
+
     'Funcion que retorna una conexión a la base de datos
     Protected Function Conectar() As Connection
         Con = New Connection() With {.ConnectionString = Me.ConStr}

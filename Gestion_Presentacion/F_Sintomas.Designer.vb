@@ -56,9 +56,11 @@ Partial Class F_Sintomas
         Me.LblBSintoma = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TxtBSintoma = New Guna.UI2.WinForms.Guna2TextBox()
         Me.PnlDgv = New Guna.UI2.WinForms.Guna2Panel()
-        Me.DgvSintomas = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.DgvSintomas = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.PnlSide.SuspendLayout()
         Me.PnlDgv.SuspendLayout()
         CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -572,6 +574,8 @@ Partial Class F_Sintomas
         'PnlDgv
         '
         Me.PnlDgv.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.PnlDgv.Controls.Add(Me.BtnEliminar)
+        Me.PnlDgv.Controls.Add(Me.BtnModificar)
         Me.PnlDgv.Controls.Add(Me.BtnMinimize)
         Me.PnlDgv.Controls.Add(Me.BtnExit)
         Me.PnlDgv.Controls.Add(Me.DgvSintomas)
@@ -580,6 +584,35 @@ Partial Class F_Sintomas
         Me.PnlDgv.ShadowDecoration.Parent = Me.PnlDgv
         Me.PnlDgv.Size = New System.Drawing.Size(1347, 1080)
         Me.PnlDgv.TabIndex = 24
+        '
+        'BtnMinimize
+        '
+        Me.BtnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMinimize.Animated = True
+        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
+        Me.BtnMinimize.IconColor = System.Drawing.Color.White
+        Me.BtnMinimize.Location = New System.Drawing.Point(1259, 0)
+        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnMinimize.Name = "BtnMinimize"
+        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
+        Me.BtnMinimize.Size = New System.Drawing.Size(45, 29)
+        Me.BtnMinimize.TabIndex = 25
+        '
+        'BtnExit
+        '
+        Me.BtnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnExit.Animated = True
+        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnExit.HoverState.Parent = Me.BtnExit
+        Me.BtnExit.IconColor = System.Drawing.Color.White
+        Me.BtnExit.Location = New System.Drawing.Point(1304, 0)
+        Me.BtnExit.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
+        Me.BtnExit.Size = New System.Drawing.Size(45, 29)
+        Me.BtnExit.TabIndex = 24
         '
         'DgvSintomas
         '
@@ -638,34 +671,45 @@ Partial Class F_Sintomas
         Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'BtnMinimize
+        'BtnEliminar
         '
-        Me.BtnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMinimize.Animated = True
-        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
-        Me.BtnMinimize.IconColor = System.Drawing.Color.White
-        Me.BtnMinimize.Location = New System.Drawing.Point(1259, 0)
-        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnMinimize.Name = "BtnMinimize"
-        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
-        Me.BtnMinimize.Size = New System.Drawing.Size(45, 29)
-        Me.BtnMinimize.TabIndex = 25
+        Me.BtnEliminar.Animated = True
+        Me.BtnEliminar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnEliminar.BorderRadius = 26
+        Me.BtnEliminar.CheckedState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.CustomImages.Parent = Me.BtnEliminar
+        Me.BtnEliminar.FillColor = System.Drawing.Color.DarkCyan
+        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
+        Me.BtnEliminar.HoverState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.Location = New System.Drawing.Point(144, 55)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.ShadowDecoration.Enabled = True
+        Me.BtnEliminar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnEliminar.ShadowDecoration.Parent = Me.BtnEliminar
+        Me.BtnEliminar.Size = New System.Drawing.Size(115, 51)
+        Me.BtnEliminar.TabIndex = 66
+        Me.BtnEliminar.Text = "Eliminar"
         '
-        'BtnExit
+        'BtnModificar
         '
-        Me.BtnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnExit.Animated = True
-        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnExit.HoverState.Parent = Me.BtnExit
-        Me.BtnExit.IconColor = System.Drawing.Color.White
-        Me.BtnExit.Location = New System.Drawing.Point(1304, 0)
-        Me.BtnExit.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
-        Me.BtnExit.Size = New System.Drawing.Size(45, 29)
-        Me.BtnExit.TabIndex = 24
+        Me.BtnModificar.Animated = True
+        Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.BorderRadius = 26
+        Me.BtnModificar.CheckedState.Parent = Me.BtnModificar
+        Me.BtnModificar.CustomImages.Parent = Me.BtnModificar
+        Me.BtnModificar.FillColor = System.Drawing.Color.DarkCyan
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.BtnModificar.ForeColor = System.Drawing.Color.White
+        Me.BtnModificar.HoverState.Parent = Me.BtnModificar
+        Me.BtnModificar.Location = New System.Drawing.Point(23, 55)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.ShadowDecoration.Enabled = True
+        Me.BtnModificar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnModificar.ShadowDecoration.Parent = Me.BtnModificar
+        Me.BtnModificar.Size = New System.Drawing.Size(115, 51)
+        Me.BtnModificar.TabIndex = 65
+        Me.BtnModificar.Text = "Modificar"
         '
         'F_Sintomas
         '
@@ -720,4 +764,6 @@ Partial Class F_Sintomas
     Friend WithEvents DgvSintomas As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents BtnMinimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents BtnExit As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
 End Class

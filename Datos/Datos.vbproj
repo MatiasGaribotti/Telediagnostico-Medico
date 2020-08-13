@@ -70,10 +70,13 @@
     <Compile Include="DHorario.vb" />
     <Compile Include="DMedico.vb" />
     <Compile Include="DPaciente.vb" />
+    <Compile Include="DSintoma.vb" />
+    <Compile Include="Enfermedad.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>

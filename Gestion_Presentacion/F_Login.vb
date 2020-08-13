@@ -8,23 +8,25 @@ Public Class F_Login
     Public Sub New()
         'Se obtienen el idioma a emplear de la propiedad estática (Shared)
         'Ubicada en la clase LanguageControl
-        Thread.CurrentThread.CurrentUICulture = Logica.Env.CurrentLangugage
+        Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
     End Sub
 
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click
-        'Abre el formulario de ABM y cierra este
-        F_ABM.Show()
-        Me.Close()
+        If Authentication.Authenticate(New Empleado(TxtCi.Text, TxtPassword.Text)) Then
+            'Abre el formulario de ABM y cierra este
+            F_ABM.Show()
+            Me.Close()
+        End If
     End Sub
 
     Private Sub BtnChangeLang_Click(sender As Object, e As EventArgs) Handles BtnChangeLang.Click
 
-        If (Logica.Env.CurrentLangugage.ToString = "es-UY") Then
-            Logica.Env.CurrentLangugage = New CultureInfo("en-US")
+        If (Env.CurrentLangugage.ToString = "es-UY") Then
+            Env.ChangeLanguage(Env.Cultures.Ingles)
 
-        ElseIf (Logica.Env.CurrentLangugage.ToString = "en-US") Then
-            Logica.Env.CurrentLangugage = New CultureInfo("es-UY")
+        ElseIf (Env.CurrentLangugage.ToString = "en-US") Then
+            Env.ChangeLanguage(Env.Cultures.Espannol)
         End If
 
         'Esta nueva ventana inicializará los componentes
@@ -32,10 +34,5 @@ Public Class F_Login
         Dim window As New F_Login()
         window.Show()
         Me.Close()
-    End Sub
-
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
-        Dim mailing As New Mailing("")
-        mailing.Send()
     End Sub
 End Class

@@ -1,7 +1,14 @@
 ﻿Imports Datos2
 
 Public Class Medico
-    Inherits Persona
+    Inherits Empleado
+    Public Property Especialidad As String
+
+    'Constructor por defecto
+    Public Sub New()
+        MyBase.New()
+        Especialidad = "Default"
+    End Sub
 
     'Constructor comúm completo
     Public Sub New(ci As Integer,
@@ -50,4 +57,6 @@ Public Class Medico
         End If
 
     End Sub
+
+
 End Class
