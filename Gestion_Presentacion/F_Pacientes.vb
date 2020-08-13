@@ -5,7 +5,7 @@ Imports Logica
 Public Class F_Pacientes
 
     Public Sub New()
-        Thread.CurrentThread.CurrentUICulture = Logica.LanguageControl.CurrentLangugage
+        Thread.CurrentThread.CurrentUICulture = Logica.Env.CurrentLangugage
         InitializeComponent()
 
     End Sub

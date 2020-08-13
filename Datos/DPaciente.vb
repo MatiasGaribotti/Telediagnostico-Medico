@@ -26,7 +26,6 @@ Public Class DPaciente
 
     Public Function Insert(
             ci As Integer,
-            foto As String,
             nombre As String,
             apellidoP As String,
             apellidoM As String,
@@ -85,7 +84,6 @@ Public Class DPaciente
                 ' Sentencia para ingresar un paciente
                 Dim insertPaciente = "INSERT INTO personas(" &
                                   "ci," &
-                                  "foto," &
                                   "nombre," &
                                   " apellidoP," &
                                   " apellidoM," &
@@ -102,7 +100,6 @@ Public Class DPaciente
                                   " idDireccion)" &
                                   "VALUES(" &
                                   ci & ",'" &
-                                  foto & "','" &
                                   nombre & "','" &
                                   apellidoP & "','" &
                                   apellidoM & "','" &

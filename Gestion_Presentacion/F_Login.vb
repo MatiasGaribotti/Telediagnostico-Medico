@@ -8,7 +8,7 @@ Public Class F_Login
     Public Sub New()
         'Se obtienen el idioma a emplear de la propiedad estática (Shared)
         'Ubicada en la clase LanguageControl
-        Thread.CurrentThread.CurrentUICulture = Logica.LanguageControl.CurrentLangugage
+        Thread.CurrentThread.CurrentUICulture = Logica.Env.CurrentLangugage
         InitializeComponent()
     End Sub
 
@@ -20,11 +20,11 @@ Public Class F_Login
 
     Private Sub BtnChangeLang_Click(sender As Object, e As EventArgs) Handles BtnChangeLang.Click
 
-        If (Logica.LanguageControl.CurrentLangugage.ToString = "es-UY") Then
-            Logica.LanguageControl.CurrentLangugage = New CultureInfo("en-US")
+        If (Logica.Env.CurrentLangugage.ToString = "es-UY") Then
+            Logica.Env.CurrentLangugage = New CultureInfo("en-US")
 
-        ElseIf (Logica.LanguageControl.CurrentLangugage.ToString = "en-US") Then
-            Logica.LanguageControl.CurrentLangugage = New CultureInfo("es-UY")
+        ElseIf (Logica.Env.CurrentLangugage.ToString = "en-US") Then
+            Logica.Env.CurrentLangugage = New CultureInfo("es-UY")
         End If
 
         'Esta nueva ventana inicializará los componentes
