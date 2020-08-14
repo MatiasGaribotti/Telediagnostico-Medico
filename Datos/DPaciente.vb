@@ -108,6 +108,7 @@ Public Class DPaciente
 
                 'Hago el commit de la transacción y retorno True
                 con.CommitTrans()
+                con.Close()
                 Return True
 
             Catch ex As Exception

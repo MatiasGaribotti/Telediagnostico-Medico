@@ -67,6 +67,7 @@
     <Compile Include="Authentication.vb" />
     <Compile Include="Direccion.vb" />
     <Compile Include="Empleado.vb" />
+    <Compile Include="Enfermedad.vb" />
     <Compile Include="Env.vb" />
     <Compile Include="Mailing.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

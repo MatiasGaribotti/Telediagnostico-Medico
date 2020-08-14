@@ -2,6 +2,7 @@
 Imports System.Threading
 Imports System.Globalization
 Imports Logica
+Imports System.Text.RegularExpressions
 
 Public Class F_Login
 
@@ -13,10 +14,16 @@ Public Class F_Login
     End Sub
 
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click
-        If Authentication.Authenticate(New Empleado(TxtCi.Text, TxtPassword.Text)) Then
+
+        Dim user = GetUser()
+
+        If Authentication.Authenticate(user) Then
             'Abre el formulario de ABM y cierra este
             F_ABM.Show()
             Me.Close()
+            Env.CurrentUser = user
+        Else
+            MsgBox("CI y/o contraseña incorrecta.")
         End If
     End Sub
 
@@ -35,4 +42,30 @@ Public Class F_Login
         window.Show()
         Me.Close()
     End Sub
+    'Función que valida el formato de los campos
+    Private Function ValidateFields() As Boolean
+        Dim valid = True
+
+        Dim ci = TxtCi.Text
+        Dim password = TxtPassword.Text
+
+        Dim expression As String = ""
+        If Regex.IsMatch(ci, expression) Then
+            'valid = False
+        ElseIf Regex.IsMatch(password, expression) Then
+            'valid = False
+        End If
+
+        Return valid
+    End Function
+
+    Private Function GetUser() As Empleado
+        If ValidateFields() Then
+            Return New Empleado(CInt(TxtCi.Text), TxtPassword.Text)
+        Else
+            MsgBox("El formato de la CI no es válido.")
+            Return Nothing
+        End If
+
+    End Function
 End Class

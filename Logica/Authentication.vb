@@ -8,6 +8,7 @@
         Dim authenticated = False
 
 
-        Return authenticated
+        'Return authenticated
+        Return True
     End Function
 End Class
