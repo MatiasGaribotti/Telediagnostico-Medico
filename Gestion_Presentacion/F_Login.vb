@@ -68,4 +68,12 @@ Public Class F_Login
         End If
 
     End Function
+
+    Private Sub Btn_Exit_Click(sender As Object, e As EventArgs) Handles Btn_Exit.Click
+
+    End Sub
+
+    Private Sub Btn_Minimize_Click(sender As Object, e As EventArgs) Handles Btn_Minimize.Click
+
+    End Sub
 End Class

@@ -46,10 +46,10 @@ Partial Class F_Sintomas
         'lbl_SintomasIng
         '
         Me.lbl_SintomasIng.AutoSize = True
-        Me.lbl_SintomasIng.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_SintomasIng.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_SintomasIng.Location = New System.Drawing.Point(45, 276)
         Me.lbl_SintomasIng.Name = "lbl_SintomasIng"
-        Me.lbl_SintomasIng.Size = New System.Drawing.Size(213, 25)
+        Me.lbl_SintomasIng.Size = New System.Drawing.Size(189, 23)
         Me.lbl_SintomasIng.TabIndex = 3
         Me.lbl_SintomasIng.Text = "Síntomas Ingresados"
         '

@@ -82,30 +82,30 @@ Partial Class F_ContrasennaAutogenerada
         'LblContraseña
         '
         Me.LblContraseña.AutoSize = True
-        Me.LblContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblContraseña.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblContraseña.Location = New System.Drawing.Point(64, 43)
         Me.LblContraseña.Name = "LblContraseña"
-        Me.LblContraseña.Size = New System.Drawing.Size(128, 18)
+        Me.LblContraseña.Size = New System.Drawing.Size(161, 23)
         Me.LblContraseña.TabIndex = 14
         Me.LblContraseña.Text = "Nueva contraseña"
         '
         'LblConfirm
         '
         Me.LblConfirm.AutoSize = True
-        Me.LblConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblConfirm.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblConfirm.Location = New System.Drawing.Point(64, 77)
         Me.LblConfirm.Name = "LblConfirm"
-        Me.LblConfirm.Size = New System.Drawing.Size(195, 18)
+        Me.LblConfirm.Size = New System.Drawing.Size(245, 23)
         Me.LblConfirm.TabIndex = 15
         Me.LblConfirm.Text = "Confirmar nueva nontraseña"
         '
         'LblSeDetecto
         '
         Me.LblSeDetecto.AutoSize = True
-        Me.LblSeDetecto.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSeDetecto.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSeDetecto.Location = New System.Drawing.Point(47, 13)
         Me.LblSeDetecto.Name = "LblSeDetecto"
-        Me.LblSeDetecto.Size = New System.Drawing.Size(279, 18)
+        Me.LblSeDetecto.Size = New System.Drawing.Size(353, 23)
         Me.LblSeDetecto.TabIndex = 16
         Me.LblSeDetecto.Text = "Se detectó una contraseña autogenerada"
         '
