@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAuthentication.vb" />
     <Compile Include="DBConnection.vb" />
     <Compile Include="DChat.vb" />
     <Compile Include="DConsulta.vb" />

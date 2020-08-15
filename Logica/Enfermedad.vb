@@ -25,7 +25,7 @@ Public Class Enfermedad
     End Sub
 
     Public Sub New(nombre As String, descripcion As String, urgencia As Urgencias)
-        Me.New(nombre)
+        Me.Nombre = nombre
         Me.Descripcion = descripcion
         Me.Urgencia = urgencia
     End Sub

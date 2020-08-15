@@ -921,31 +921,31 @@
   <data name="&gt;&gt;txtb_ciF.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <data name="Guna2Button1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="BtnVolver.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16pt</value>
   </data>
-  <data name="Guna2Button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BtnVolver.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 22</value>
   </data>
-  <data name="Guna2Button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BtnVolver.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 33</value>
   </data>
-  <data name="Guna2Button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="BtnVolver.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="Guna2Button1.Text" xml:space="preserve">
+  <data name="BtnVolver.Text" xml:space="preserve">
     <value>Volver</value>
   </data>
-  <data name="&gt;&gt;Guna2Button1.Name" xml:space="preserve">
-    <value>Guna2Button1</value>
+  <data name="&gt;&gt;BtnVolver.Name" xml:space="preserve">
+    <value>BtnVolver</value>
   </data>
-  <data name="&gt;&gt;Guna2Button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;BtnVolver.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Guna2Button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BtnVolver.Parent" xml:space="preserve">
     <value>pnl_ingresarFiltrar</value>
   </data>
-  <data name="&gt;&gt;Guna2Button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BtnVolver.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">

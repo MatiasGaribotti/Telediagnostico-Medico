@@ -22,6 +22,7 @@ Public Class F_Login
             F_ABM.Show()
             Me.Close()
             Env.CurrentUser = user
+            'Env.UserType = 
         Else
             MsgBox("CI y/o contraseña incorrecta.")
         End If

@@ -1,13 +1,53 @@
 ﻿Imports ADODB
 Public Class DSintoma
     Inherits DBConnection
-    Public Sub New()
-        MyBase.New()
-    End Sub
+
+    Public Property Id As Short
+    Public Property Nombre As String
+    Public Property Descripcion As String
+    Public Property Tipo As TiposSintomas
+    Public Property Enfermedades As List(Of DEnfermedad)
+
+    Public Enum TiposSintomas
+        Cabeza = 1 'inicializo en 1 el primer miembro para que coincida con la BD.
+        Torso
+        Extremidades
+    End Enum
 
     Public Sub New(user As String, password As String)
         MyBase.New(user, password)
     End Sub
+
+    Public Sub New()
+        MyBase.New()
+        Me.Id = -1
+        Me.Nombre = "Default"
+        Me.Descripcion = "Default"
+        Me.Tipo = TiposSintomas.Cabeza
+        Me.Enfermedades = New List(Of DEnfermedad)
+    End Sub
+
+    Public Sub New(id As Short,
+                   nombre As String,
+                   descripcion As String,
+                   tipo As TiposSintomas,
+                   enfermedades As List(Of DEnfermedad))
+        Me.Id = id
+        Me.Nombre = nombre
+        Me.Descripcion = descripcion
+        Me.Tipo = tipo
+        Me.Enfermedades = enfermedades
+    End Sub
+
+    Public Sub New(nombre As String, descripcion As String, Tipo As TiposSintomas)
+        Me.Id = -1
+        Me.Nombre = nombre
+        Me.Descripcion = descripcion
+        Me.Tipo = Tipo
+        Me.Enfermedades = New List(Of DEnfermedad)
+    End Sub
+
+
 
     Public Function Insert(nombre As String, descripcion As String, tipo As String, enfermedades As List(Of Short)) As Boolean
         If HasConnection() Then
@@ -54,33 +94,6 @@ Public Class DSintoma
             Return False
         End If
 
-    End Function
-
-    Public Function ExistEnfermedades(enfermedades As List(Of String)) As Boolean
-        Dim exist = False
-
-        Dim query As String
-        If HasConnection() Then
-            Dim con As Connection = Conectar()
-            Dim recordSet As Recordset
-
-            Try
-                For Each enfermedad As String In enfermedades
-                    query = "SELECT id FROM enfermedades " &
-                            "WHERE nombre='" & enfermedad & "';"
-
-                    recordSet = con.Execute(query)
-
-                    If Not recordSet.RecordCount = 1 Then
-                        Return exist = False
-                    End If
-                Next
-            Catch ex As Exception
-                MsgBox("ERROR: " & ex.Message, MsgBoxStyle.Critical)
-            End Try
-        End If
-
-        Return exist
     End Function
 
     Public Sub AsociarSintomaEnfermedad(idSintoma As Short, idEnfermedad As Short, con As Connection)

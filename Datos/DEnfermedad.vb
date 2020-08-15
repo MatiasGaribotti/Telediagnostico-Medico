@@ -1,12 +1,50 @@
 ﻿Imports ADODB
 Public Class DEnfermedad
     Inherits DBConnection
+    Public Property Id As Short
+    Public Property Nombre As String
+    Public Property Descripcion As String
+    Public Property Urgencia As Urgencias
+    Public Enum Urgencias
+        Baja = 1 'inicializo en 1 el primer miembro para que coincida con la BD.
+        Media
+        Alta
+    End Enum
+
+
     Public Sub New()
         MyBase.New()
     End Sub
 
     Public Sub New(user As String, password As String)
         MyBase.New(user, password)
+        Me.Id = -1
+        Me.Nombre = "Default"
+        Me.Descripcion = "Default"
+        Me.Urgencia = Urgencias.Baja
+    End Sub
+
+    Public Sub New(user As String, password As String, nombre As String)
+        MyBase.New(user, password)
+        Me.Id = -1
+        Me.Nombre = nombre
+        Me.Descripcion = "Default"
+        Me.Urgencia = Urgencias.Baja
+    End Sub
+
+    Public Sub New(user As String, password As String, nombre As String, descripcion As String, urgencia As Urgencias)
+        MyBase.New(user, password)
+        Me.Nombre = nombre
+        Me.Descripcion = descripcion
+        Me.Urgencia = urgencia
+    End Sub
+
+    Public Sub New(user As String, password As String, id As Short, nombre As String, descripcion As String, urgencia As Urgencias)
+        MyBase.New(user, password)
+        Me.Id = id
+        Me.Nombre = nombre
+        Me.Descripcion = descripcion
+        Me.Urgencia = urgencia
     End Sub
 
     Public Function Find(nombre) As Short

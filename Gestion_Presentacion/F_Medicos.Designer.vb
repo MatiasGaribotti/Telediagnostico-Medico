@@ -22,11 +22,13 @@ Partial Class F_Medicos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Medicos))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Medicos))
         Me.pnl_fondo = New System.Windows.Forms.Panel()
+        Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnResetPassword = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnHacerAdmin = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
@@ -55,7 +57,7 @@ Partial Class F_Medicos
         Me.TxtINombre = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtb_nombresF = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtb_ciF = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnVolver = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_fecha = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -73,8 +75,6 @@ Partial Class F_Medicos
         Me.lbl_CI = New System.Windows.Forms.Label()
         Me.lbl_busqueda = New System.Windows.Forms.Label()
         Me.Dgv_Medicos = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.pnl_fondo.SuspendLayout()
         Me.pnl_ingresarFiltrar.SuspendLayout()
         CType(Me.Dgv_Medicos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,6 +92,27 @@ Partial Class F_Medicos
         Me.pnl_fondo.Controls.Add(Me.Dgv_Medicos)
         resources.ApplyResources(Me.pnl_fondo, "pnl_fondo")
         Me.pnl_fondo.Name = "pnl_fondo"
+        '
+        'BtnMinimize
+        '
+        resources.ApplyResources(Me.BtnMinimize, "BtnMinimize")
+        Me.BtnMinimize.Animated = True
+        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
+        Me.BtnMinimize.IconColor = System.Drawing.Color.White
+        Me.BtnMinimize.Name = "BtnMinimize"
+        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
+        '
+        'BtnExit
+        '
+        resources.ApplyResources(Me.BtnExit, "BtnExit")
+        Me.BtnExit.Animated = True
+        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnExit.HoverState.Parent = Me.BtnExit
+        Me.BtnExit.IconColor = System.Drawing.Color.White
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
         '
         'BtnResetPassword
         '
@@ -175,7 +196,7 @@ Partial Class F_Medicos
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtINombre)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_nombresF)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_ciF)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.Guna2Button1)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnVolver)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label1)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_fecha)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label3)
@@ -612,21 +633,21 @@ Partial Class F_Medicos
         Me.txtb_ciF.SelectedText = ""
         Me.txtb_ciF.ShadowDecoration.Parent = Me.txtb_ciF
         '
-        'Guna2Button1
+        'BtnVolver
         '
-        Me.Guna2Button1.Animated = True
-        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.BorderRadius = 16
-        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
-        Me.Guna2Button1.FillColor = System.Drawing.Color.DarkCyan
-        resources.ApplyResources(Me.Guna2Button1, "Guna2Button1")
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.ShadowDecoration.Enabled = True
-        Me.Guna2Button1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
+        Me.BtnVolver.Animated = True
+        Me.BtnVolver.BackColor = System.Drawing.Color.Transparent
+        Me.BtnVolver.BorderRadius = 16
+        Me.BtnVolver.CheckedState.Parent = Me.BtnVolver
+        Me.BtnVolver.CustomImages.Parent = Me.BtnVolver
+        Me.BtnVolver.FillColor = System.Drawing.Color.DarkCyan
+        resources.ApplyResources(Me.BtnVolver, "BtnVolver")
+        Me.BtnVolver.ForeColor = System.Drawing.Color.White
+        Me.BtnVolver.HoverState.Parent = Me.BtnVolver
+        Me.BtnVolver.Name = "BtnVolver"
+        Me.BtnVolver.ShadowDecoration.Enabled = True
+        Me.BtnVolver.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnVolver.ShadowDecoration.Parent = Me.BtnVolver
         '
         'Label1
         '
@@ -765,27 +786,6 @@ Partial Class F_Medicos
         Me.Dgv_Medicos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Dgv_Medicos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'BtnMinimize
-        '
-        resources.ApplyResources(Me.BtnMinimize, "BtnMinimize")
-        Me.BtnMinimize.Animated = True
-        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
-        Me.BtnMinimize.IconColor = System.Drawing.Color.White
-        Me.BtnMinimize.Name = "BtnMinimize"
-        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
-        '
-        'BtnExit
-        '
-        resources.ApplyResources(Me.BtnExit, "BtnExit")
-        Me.BtnExit.Animated = True
-        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnExit.HoverState.Parent = Me.BtnExit
-        Me.BtnExit.IconColor = System.Drawing.Color.White
-        Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
-        '
         'F_Medicos
         '
         resources.ApplyResources(Me, "$this")
@@ -820,7 +820,7 @@ Partial Class F_Medicos
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnVolver As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents cmb_sucursalesF As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents TxtITelefono As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TxtINumero As Guna.UI2.WinForms.Guna2TextBox

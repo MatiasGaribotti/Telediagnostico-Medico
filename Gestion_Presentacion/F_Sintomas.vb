@@ -30,7 +30,7 @@ Public Class F_Sintomas
     End Function
     Private Function GetSintoma() As Sintoma
         If ValidateFields() Then
-            Dim tipo = [Enum].Parse(GetType(Sintoma.TiposSintomas), CmbITipo.SelectedIndex)
+            Dim tipo = [Enum].Parse(GetType(Sintoma.TiposSintomas), CmbITipo.SelectedIndex + 1)
 
             Dim sintoma As New Sintoma(TxtISintoma.Text, TxtIDescripcion.Text, tipo)
             Dim cant_enfermedades = CmbIEnfermedad.Items.Count
