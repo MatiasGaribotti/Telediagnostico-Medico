@@ -120,21 +120,75 @@
   <metadata name="pnl_fondo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnMinimize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnMinimize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1830, 0</value>
+  </data>
+  <data name="BtnMinimize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="BtnMinimize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 29</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnMinimize.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;BtnMinimize.Name" xml:space="preserve">
+    <value>BtnMinimize</value>
+  </data>
+  <data name="&gt;&gt;BtnMinimize.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ControlBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnMinimize.Parent" xml:space="preserve">
+    <value>pnl_fondo</value>
+  </data>
+  <data name="&gt;&gt;BtnMinimize.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BtnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1875, 0</value>
+  </data>
+  <data name="BtnExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="BtnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 29</value>
+  </data>
+  <data name="BtnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.Name" xml:space="preserve">
+    <value>BtnExit</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ControlBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.Parent" xml:space="preserve">
+    <value>pnl_fondo</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="BtnResetPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="BtnResetPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>907, 66</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnResetPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 15, 15</value>
   </data>
   <data name="BtnResetPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 36</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnResetPassword.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
   </data>
@@ -151,7 +205,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnResetPassword.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="BtnHacerAdmin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -181,7 +235,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnHacerAdmin.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -211,7 +265,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnEliminar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -241,82 +295,6 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnModificar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btn_cerrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btn_cerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADoAAAA4CAYAAACsc+sjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAiRJREFUaEPt2LFOwkAcx3HfxQfAXXdx5wHkAXgAo5MIg251kkGFSeLCRjcWEkaY
-        cAE2TBxw0vnsbzhSyc/mrvdvqucN34HQK/cJpT1ub//iXP2HAtS3AtS3AtS3AtS3AtS3AtS3AtS2ahSp
-        Rr+vap0Ofb/snKEHzUsVz1/U28fnttn6VdW7j/T4rHCudhyrxeZ9e55W8poda5sz9GEy+YZM1+g/0TEs
-        IMfLFT3PcD6nY2xygh7dXNOJpTsbDOjYdFlIXa1zR8ea5gSt93p0UrtlXX4mSIRLmo03zQl6chvRSbEY
-        FleECRKVCkVx8vthE2OlsUDiZsOOYx0mx6c/1zZnKCYwW6/p5FjA2iJb8ZB+tk3OUGSL1Y8PkySQSASK
-        bLEmSSGRGBRJYiWRSBSKJLDSSCQORZWrphqvzB4buxWBRIVAUR6szZLRtsKg1WQxYXN3RffJupmdS6JC
-        oHmQuqKw4lAXpK4IrChUAqkbL5eqkiz42efkSQxa73bFkDpJrAgUWyhsoqzFZqOep1P6HksK6wzFN8km
-        yALyOLm8Ma6dPC/ZMazSdxiQ6b+QNFJngy11h8H0jzeWhFgasnOYYvHzYONNc4Ka7BllIXUm2NMcu4rp
-        BC7dnxfwJkhdFhbncb0hud+MevxmZIPUMSz7befJGYoAwt4RJgVgNBrl/gZwLozHfjH+yfyq5+hfKEB9
-        K0B9K0B9K0B9K0B9K0B9K0D96lx9AfcKqB3bESyJAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btn_cerrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1861, 1</value>
-  </data>
-  <data name="btn_cerrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 61</value>
-  </data>
-  <data name="btn_cerrar.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="&gt;&gt;btn_cerrar.Name" xml:space="preserve">
-    <value>btn_cerrar</value>
-  </data>
-  <data name="&gt;&gt;btn_cerrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_cerrar.Parent" xml:space="preserve">
-    <value>pnl_fondo</value>
-  </data>
-  <data name="&gt;&gt;btn_cerrar.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btn_minimizar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btn_minimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADoAAAA4CAYAAACsc+sjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAa1JREFUaEPtlzFOwzAUhn0EjhA5DNwBJLgBHIEbdKyInWSHgSP0AEFipFtv0Gxh
-        qcSMRGCBOcTOk2jhURcDSf36fumTKj2rfp+eYyUi1qrZBViUGixKDRalBotSg0WpwaLUYFFqsCg1WJQa
-        LEoNFqUGi7o4urpsptV9s6ifm8fXt3+nmJd2T6yXTfASNRv2JbjM4qn2lvUSvSlLtJE+uKsqtCcXXqJY
-        A31hpor15MJLdIhjuwzWkwsv0Wl7fLAG+qCYz9GeXIhYJQ9YYR2HQ11GdW33xnpyIaRWJVZwYTYserqU
-        jKC5hHwlDSJO1QQrUEPITI+wAjXEvlInWIEaIsrzvTjVL1iREsKk/TH7XKBGJ5plp1iRElZ0F46vFTWR
-        OsmxBVQATfpTBc0ulKcKil3sVD3efUMAFD8Sa32GLQwd0FuNTNU1tjhkQG015gj7ftVsK6D2NQfjcUTp
-        eQUtPJRkQen7UJEFnfWhIAsq7tgLKuDbGDQ2j0yS8xCnC+3/LOYoh/a6CK37BZ7dSQgThpZ/H3ukU33b
-        /ulWfgFBm3+bKL04llqPQHw2/MRV8w5Kz/anbfMzlgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btn_minimizar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1795, 1</value>
-  </data>
-  <data name="btn_minimizar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 61</value>
-  </data>
-  <data name="btn_minimizar.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;btn_minimizar.Name" xml:space="preserve">
-    <value>btn_minimizar</value>
-  </data>
-  <data name="&gt;&gt;btn_minimizar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_minimizar.Parent" xml:space="preserve">
-    <value>pnl_fondo</value>
-  </data>
-  <data name="&gt;&gt;btn_minimizar.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <metadata name="pnl_ingresarFiltrar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -22,19 +22,17 @@ Partial Class F_Medicos_Horarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Medicos_Horarios))
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnl_fondo = New System.Windows.Forms.Panel()
-        Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.dgw_horarios = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.btn_minimizar = New System.Windows.Forms.Button()
-        Me.btn_cerrar = New System.Windows.Forms.Button()
         Me.pnl_ingresar = New System.Windows.Forms.Panel()
+        Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtBCi = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblBCi = New System.Windows.Forms.Label()
         Me.TxtIHoraOut = New Guna.UI2.WinForms.Guna2TextBox()
@@ -70,6 +68,8 @@ Partial Class F_Medicos_Horarios
         Me.lbl_sucursal = New System.Windows.Forms.Label()
         Me.lbl_ingresoHorarios = New System.Windows.Forms.Label()
         Me.lbl_ci = New System.Windows.Forms.Label()
+        Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.pnl_fondo.SuspendLayout()
         CType(Me.dgw_horarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_ingresar.SuspendLayout()
@@ -77,44 +77,14 @@ Partial Class F_Medicos_Horarios
         '
         'pnl_fondo
         '
+        Me.pnl_fondo.Controls.Add(Me.BtnMinimize)
+        Me.pnl_fondo.Controls.Add(Me.BtnExit)
         Me.pnl_fondo.Controls.Add(Me.BtnEliminar)
         Me.pnl_fondo.Controls.Add(Me.BtnModificar)
         Me.pnl_fondo.Controls.Add(Me.dgw_horarios)
-        Me.pnl_fondo.Controls.Add(Me.btn_minimizar)
-        Me.pnl_fondo.Controls.Add(Me.btn_cerrar)
         Me.pnl_fondo.Controls.Add(Me.pnl_ingresar)
         resources.ApplyResources(Me.pnl_fondo, "pnl_fondo")
         Me.pnl_fondo.Name = "pnl_fondo"
-        '
-        'BtnFiltrar
-        '
-        Me.BtnFiltrar.Animated = True
-        Me.BtnFiltrar.AutoRoundedCorners = True
-        Me.BtnFiltrar.BorderRadius = 17
-        Me.BtnFiltrar.CheckedState.Parent = Me.BtnFiltrar
-        Me.BtnFiltrar.CustomImages.Parent = Me.BtnFiltrar
-        Me.BtnFiltrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        resources.ApplyResources(Me.BtnFiltrar, "BtnFiltrar")
-        Me.BtnFiltrar.ForeColor = System.Drawing.Color.White
-        Me.BtnFiltrar.HoverState.Parent = Me.BtnFiltrar
-        Me.BtnFiltrar.Name = "BtnFiltrar"
-        Me.BtnFiltrar.ShadowDecoration.Parent = Me.BtnFiltrar
-        '
-        'BtnIngresar
-        '
-        Me.BtnIngresar.Animated = True
-        Me.BtnIngresar.AutoRoundedCorners = True
-        Me.BtnIngresar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnIngresar.BorderRadius = 17
-        Me.BtnIngresar.CheckedState.Parent = Me.BtnIngresar
-        Me.BtnIngresar.CustomImages.Parent = Me.BtnIngresar
-        Me.BtnIngresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        resources.ApplyResources(Me.BtnIngresar, "BtnIngresar")
-        Me.BtnIngresar.ForeColor = System.Drawing.Color.White
-        Me.BtnIngresar.HoverState.Parent = Me.BtnIngresar
-        Me.BtnIngresar.Name = "BtnIngresar"
-        Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
-        Me.BtnIngresar.UseTransparentBackground = True
         '
         'BtnEliminar
         '
@@ -147,30 +117,30 @@ Partial Class F_Medicos_Horarios
         'dgw_horarios
         '
         Me.dgw_horarios.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dgw_horarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgw_horarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgw_horarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgw_horarios.BackgroundColor = System.Drawing.Color.DarkGray
         Me.dgw_horarios.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgw_horarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgw_horarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgw_horarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgw_horarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         resources.ApplyResources(Me.dgw_horarios, "dgw_horarios")
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgw_horarios.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgw_horarios.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgw_horarios.EnableHeadersVisualStyles = False
         Me.dgw_horarios.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgw_horarios.Name = "dgw_horarios"
@@ -198,20 +168,6 @@ Partial Class F_Medicos_Horarios
         Me.dgw_horarios.ThemeStyle.RowsStyle.Height = 22
         Me.dgw_horarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgw_horarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'btn_minimizar
-        '
-        Me.btn_minimizar.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.btn_minimizar, "btn_minimizar")
-        Me.btn_minimizar.Name = "btn_minimizar"
-        Me.btn_minimizar.UseVisualStyleBackColor = True
-        '
-        'btn_cerrar
-        '
-        Me.btn_cerrar.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.btn_cerrar, "btn_cerrar")
-        Me.btn_cerrar.Name = "btn_cerrar"
-        Me.btn_cerrar.UseVisualStyleBackColor = True
         '
         'pnl_ingresar
         '
@@ -255,6 +211,36 @@ Partial Class F_Medicos_Horarios
         Me.pnl_ingresar.Controls.Add(Me.lbl_ci)
         resources.ApplyResources(Me.pnl_ingresar, "pnl_ingresar")
         Me.pnl_ingresar.Name = "pnl_ingresar"
+        '
+        'BtnFiltrar
+        '
+        Me.BtnFiltrar.Animated = True
+        Me.BtnFiltrar.AutoRoundedCorners = True
+        Me.BtnFiltrar.BorderRadius = 17
+        Me.BtnFiltrar.CheckedState.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.CustomImages.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnFiltrar, "BtnFiltrar")
+        Me.BtnFiltrar.ForeColor = System.Drawing.Color.White
+        Me.BtnFiltrar.HoverState.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.Name = "BtnFiltrar"
+        Me.BtnFiltrar.ShadowDecoration.Parent = Me.BtnFiltrar
+        '
+        'BtnIngresar
+        '
+        Me.BtnIngresar.Animated = True
+        Me.BtnIngresar.AutoRoundedCorners = True
+        Me.BtnIngresar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnIngresar.BorderRadius = 17
+        Me.BtnIngresar.CheckedState.Parent = Me.BtnIngresar
+        Me.BtnIngresar.CustomImages.Parent = Me.BtnIngresar
+        Me.BtnIngresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnIngresar, "BtnIngresar")
+        Me.BtnIngresar.ForeColor = System.Drawing.Color.White
+        Me.BtnIngresar.HoverState.Parent = Me.BtnIngresar
+        Me.BtnIngresar.Name = "BtnIngresar"
+        Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
+        Me.BtnIngresar.UseTransparentBackground = True
         '
         'TxtBCi
         '
@@ -682,6 +668,27 @@ Partial Class F_Medicos_Horarios
         resources.ApplyResources(Me.lbl_ci, "lbl_ci")
         Me.lbl_ci.Name = "lbl_ci"
         '
+        'BtnMinimize
+        '
+        resources.ApplyResources(Me.BtnMinimize, "BtnMinimize")
+        Me.BtnMinimize.Animated = True
+        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
+        Me.BtnMinimize.IconColor = System.Drawing.Color.White
+        Me.BtnMinimize.Name = "BtnMinimize"
+        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
+        '
+        'BtnExit
+        '
+        resources.ApplyResources(Me.BtnExit, "BtnExit")
+        Me.BtnExit.Animated = True
+        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnExit.HoverState.Parent = Me.BtnExit
+        Me.BtnExit.IconColor = System.Drawing.Color.White
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
+        '
         'F_Medicos_Horarios
         '
         resources.ApplyResources(Me, "$this")
@@ -710,8 +717,6 @@ Partial Class F_Medicos_Horarios
     Friend WithEvents lbl_sucursal As Label
     Friend WithEvents lbl_ingresoHorarios As Label
     Friend WithEvents lbl_ci As Label
-    Friend WithEvents btn_minimizar As Button
-    Friend WithEvents btn_cerrar As Button
     Friend WithEvents lbl_a As Label
     Friend WithEvents TxtICi As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CmbISucursal As Guna.UI2.WinForms.Guna2ComboBox
@@ -742,4 +747,6 @@ Partial Class F_Medicos_Horarios
     Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnIngresar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnMinimize As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents BtnExit As Guna.UI2.WinForms.Guna2ControlBox
 End Class

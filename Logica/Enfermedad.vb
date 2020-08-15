@@ -1,10 +1,11 @@
-﻿Public Class Enfermedad
+﻿Imports Datos2
+Public Class Enfermedad
     Public Property Id As Short
     Public Property Nombre As String
     Public Property Descripcion As String
     Public Property Urgencia As Urgencias
     Public Enum Urgencias
-        Baja
+        Baja = 1 'inicializo en 1 el primer miembro para que coincida con la BD.
         Media
         Alta
     End Enum
@@ -23,10 +24,34 @@
         Me.Urgencia = Urgencias.Baja
     End Sub
 
+    Public Sub New(nombre As String, descripcion As String, urgencia As Urgencias)
+        Me.New(nombre)
+        Me.Descripcion = descripcion
+        Me.Urgencia = urgencia
+    End Sub
+
     Public Sub New(id As Short, nombre As String, descripcion As String, urgencia As Urgencias)
         Me.Id = id
         Me.Nombre = nombre
         Me.Descripcion = descripcion
         Me.Urgencia = urgencia
     End Sub
+
+    Public Function Insert() As Boolean
+        Dim saved = False
+
+        Dim db As New DEnfermedad("admin", "123456789")
+        Dim idFound = db.Find(Nombre)
+        Console.WriteLine("Enfermedad encontrada:" & idFound)
+        MsgBox("Urgencia seleccionada: " & Urgencia)
+
+        If idFound = -1 Then
+            saved = db.Insert(Nombre, Descripcion, Urgencia)
+        Else
+            saved = False
+        End If
+
+        Return saved
+    End Function
+
 End Class

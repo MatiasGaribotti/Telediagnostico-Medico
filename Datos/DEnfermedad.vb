@@ -57,4 +57,24 @@ Public Class DEnfermedad
         End If
         Return id
     End Function
+
+    Public Function Insert(nombre As String, descripcion As String, urgencia As String) As Boolean
+        Dim saved = False
+
+        If HasConnection() Then
+            Dim con = Conectar()
+            Dim insertQuery = "INSERT INTO enfermedades(nombre, descripcion, urgencia) " &
+                              "VALUES('" & nombre & "','" & descripcion & "'," & urgencia & ");"
+
+            Try
+                con.Execute(insertQuery)
+                saved = True
+            Catch ex As Exception
+                Console.WriteLine("Exception at DEnfermedad insert" & vbCrLf & ex.Message)
+                saved = False
+            End Try
+            con.Close()
+        End If
+        Return saved
+    End Function
 End Class
