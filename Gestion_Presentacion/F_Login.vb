@@ -76,4 +76,8 @@ Public Class F_Login
     Private Sub Btn_Minimize_Click(sender As Object, e As EventArgs) Handles Btn_Minimize.Click
 
     End Sub
+
+    Private Sub TxtPassword_TextChanged(sender As Object, e As EventArgs) Handles TxtPassword.TextChanged
+
+    End Sub
 End Class

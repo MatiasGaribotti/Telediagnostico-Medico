@@ -4,11 +4,8 @@
 
     End Sub
 
-    Private Sub Btn_Exit_Click(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub Btn_Minimize_Click(sender As Object, e As EventArgs)
-
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
+        Close()
     End Sub
 End Class

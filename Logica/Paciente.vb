@@ -94,4 +94,10 @@ Public Class Paciente
 
         End If
     End Sub
+
+    Public Sub New(ci As Integer, pass As String)
+        MyBase.Ci = ci
+        MyBase.Password = pass
+    End Sub
+
 End Class

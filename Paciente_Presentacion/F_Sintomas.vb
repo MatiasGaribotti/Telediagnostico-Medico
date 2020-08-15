@@ -8,7 +8,7 @@
 
     End Sub
 
-    Private Sub Btn_Cancelar_Click(sender As Object, e As EventArgs) Handles Btn_Cancelar.Click, Btn_Aceptar.Click
+    Private Sub Btn_Cancelar_Click(sender As Object, e As EventArgs) Handles Btn_Cancelar.Click
         OpenMainRightPanel()
     End Sub
 
@@ -34,6 +34,11 @@
     End Sub
 
     Private Sub Btn_HC_Click(sender As Object, e As EventArgs) Handles Btn_HC.Click
+        F_Login.Show()
+        Close()
+    End Sub
+
+    Private Sub Btn_Aceptar_Click(sender As Object, e As EventArgs) Handles Btn_Aceptar.Click
         OpenMainRightPanel2()
     End Sub
 End Class
