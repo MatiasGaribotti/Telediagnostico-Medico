@@ -32,11 +32,14 @@ Partial Class F_Pacientes
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DgvPacientes = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.pnl_filtrar = New System.Windows.Forms.Panel()
+        Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnResetPassword = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtBCi = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblBCi = New System.Windows.Forms.Label()
         Me.CmbBDepartamento = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.CmbBDetalle = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.TxtBFiltrar = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtBEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TxtBLocalidad = New Guna.UI2.WinForms.Guna2TextBox()
@@ -197,11 +200,14 @@ Partial Class F_Pacientes
         'pnl_filtrar
         '
         Me.pnl_filtrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_filtrar.Controls.Add(Me.BtnFiltrar)
+        Me.pnl_filtrar.Controls.Add(Me.BtnResetPassword)
+        Me.pnl_filtrar.Controls.Add(Me.BtnEliminar)
+        Me.pnl_filtrar.Controls.Add(Me.BtnModificar)
         Me.pnl_filtrar.Controls.Add(Me.TxtBCi)
         Me.pnl_filtrar.Controls.Add(Me.LblBCi)
         Me.pnl_filtrar.Controls.Add(Me.CmbBDepartamento)
         Me.pnl_filtrar.Controls.Add(Me.CmbBDetalle)
-        Me.pnl_filtrar.Controls.Add(Me.TxtBFiltrar)
         Me.pnl_filtrar.Controls.Add(Me.TxtBEmail)
         Me.pnl_filtrar.Controls.Add(Me.Label10)
         Me.pnl_filtrar.Controls.Add(Me.TxtBLocalidad)
@@ -223,6 +229,62 @@ Partial Class F_Pacientes
         Me.pnl_filtrar.Controls.Add(Me.Label2)
         resources.ApplyResources(Me.pnl_filtrar, "pnl_filtrar")
         Me.pnl_filtrar.Name = "pnl_filtrar"
+        '
+        'BtnFiltrar
+        '
+        Me.BtnFiltrar.Animated = True
+        Me.BtnFiltrar.AutoRoundedCorners = True
+        Me.BtnFiltrar.BorderRadius = 17
+        Me.BtnFiltrar.CheckedState.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.CustomImages.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnFiltrar, "BtnFiltrar")
+        Me.BtnFiltrar.ForeColor = System.Drawing.Color.White
+        Me.BtnFiltrar.HoverState.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.Name = "BtnFiltrar"
+        Me.BtnFiltrar.ShadowDecoration.Parent = Me.BtnFiltrar
+        '
+        'BtnResetPassword
+        '
+        Me.BtnResetPassword.Animated = True
+        Me.BtnResetPassword.AutoRoundedCorners = True
+        Me.BtnResetPassword.BorderRadius = 17
+        Me.BtnResetPassword.CheckedState.Parent = Me.BtnResetPassword
+        Me.BtnResetPassword.CustomImages.Parent = Me.BtnResetPassword
+        Me.BtnResetPassword.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnResetPassword, "BtnResetPassword")
+        Me.BtnResetPassword.ForeColor = System.Drawing.Color.White
+        Me.BtnResetPassword.HoverState.Parent = Me.BtnResetPassword
+        Me.BtnResetPassword.Name = "BtnResetPassword"
+        Me.BtnResetPassword.ShadowDecoration.Parent = Me.BtnResetPassword
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Animated = True
+        Me.BtnEliminar.AutoRoundedCorners = True
+        Me.BtnEliminar.BorderRadius = 17
+        Me.BtnEliminar.CheckedState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.CustomImages.Parent = Me.BtnEliminar
+        Me.BtnEliminar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnEliminar, "BtnEliminar")
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
+        Me.BtnEliminar.HoverState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.ShadowDecoration.Parent = Me.BtnEliminar
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.Animated = True
+        Me.BtnModificar.AutoRoundedCorners = True
+        Me.BtnModificar.BorderRadius = 17
+        Me.BtnModificar.CheckedState.Parent = Me.BtnModificar
+        Me.BtnModificar.CustomImages.Parent = Me.BtnModificar
+        Me.BtnModificar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnModificar, "BtnModificar")
+        Me.BtnModificar.ForeColor = System.Drawing.Color.White
+        Me.BtnModificar.HoverState.Parent = Me.BtnModificar
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.ShadowDecoration.Parent = Me.BtnModificar
         '
         'TxtBCi
         '
@@ -285,22 +347,6 @@ Partial Class F_Pacientes
         Me.CmbBDetalle.ItemsAppearance.Parent = Me.CmbBDetalle
         Me.CmbBDetalle.Name = "CmbBDetalle"
         Me.CmbBDetalle.ShadowDecoration.Parent = Me.CmbBDetalle
-        '
-        'TxtBFiltrar
-        '
-        Me.TxtBFiltrar.Animated = True
-        Me.TxtBFiltrar.AutoRoundedCorners = True
-        Me.TxtBFiltrar.BackColor = System.Drawing.Color.Transparent
-        Me.TxtBFiltrar.BorderRadius = 14
-        Me.TxtBFiltrar.CheckedState.Parent = Me.TxtBFiltrar
-        Me.TxtBFiltrar.CustomImages.Parent = Me.TxtBFiltrar
-        Me.TxtBFiltrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        resources.ApplyResources(Me.TxtBFiltrar, "TxtBFiltrar")
-        Me.TxtBFiltrar.ForeColor = System.Drawing.Color.White
-        Me.TxtBFiltrar.HoverState.Parent = Me.TxtBFiltrar
-        Me.TxtBFiltrar.Name = "TxtBFiltrar"
-        Me.TxtBFiltrar.ShadowDecoration.Parent = Me.TxtBFiltrar
-        Me.TxtBFiltrar.UseTransparentBackground = True
         '
         'TxtBEmail
         '
@@ -704,7 +750,7 @@ Partial Class F_Pacientes
         Me.BtnIngresar.Animated = True
         Me.BtnIngresar.AutoRoundedCorners = True
         Me.BtnIngresar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnIngresar.BorderRadius = 14
+        Me.BtnIngresar.BorderRadius = 17
         Me.BtnIngresar.CheckedState.Parent = Me.BtnIngresar
         Me.BtnIngresar.CustomImages.Parent = Me.BtnIngresar
         Me.BtnIngresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
@@ -1006,9 +1052,9 @@ Partial Class F_Pacientes
         Me.DTPickerFNac.BorderRadius = 16
         Me.DTPickerFNac.CheckedState.Parent = Me.DTPickerFNac
         Me.DTPickerFNac.FillColor = System.Drawing.Color.White
-        Me.DTPickerFNac.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.DTPickerFNac.HoverState.Parent = Me.DTPickerFNac
         resources.ApplyResources(Me.DTPickerFNac, "DTPickerFNac")
+        Me.DTPickerFNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPickerFNac.HoverState.Parent = Me.DTPickerFNac
         Me.DTPickerFNac.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.DTPickerFNac.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.DTPickerFNac.Name = "DTPickerFNac"
@@ -1165,7 +1211,6 @@ Partial Class F_Pacientes
     Friend WithEvents lbl_apellidos As Label
     Friend WithEvents lbl_nombre As Label
     Friend WithEvents pnl_filtrar As Panel
-    Friend WithEvents TxtBFiltrar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TxtBEmail As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TxtBLocalidad As Guna.UI2.WinForms.Guna2TextBox
@@ -1199,4 +1244,8 @@ Partial Class F_Pacientes
     Friend WithEvents LblBCi As Label
     Friend WithEvents TxtICi As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents LblCi As Label
+    Friend WithEvents BtnFiltrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnResetPassword As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
 End Class

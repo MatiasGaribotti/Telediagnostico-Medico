@@ -51,4 +51,25 @@ Public Class F_Pacientes
     Private Sub TxtIApellidoM_TextChanged(sender As Object, e As EventArgs) Handles TxtIApellidoM.TextChanged
 
     End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub CmbBDetalle_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbBDetalle.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub TxtBLocalidad_TextChanged(sender As Object, e As EventArgs) Handles TxtBLocalidad.TextChanged
+
+    End Sub
+
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
+        F_ABM.Show()
+        Close()
+    End Sub
 End Class

@@ -7,7 +7,7 @@ Public Class Sintoma
     Public Property Enfermedades As List(Of Enfermedad)
 
     Public Enum TiposSintomas
-        Cabeza
+        Cabeza = 1 'inicializo en 1 el primer miembro para que coincida con la BD.
         Torso
         Extremidades
     End Enum

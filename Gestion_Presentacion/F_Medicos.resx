@@ -121,21 +121,55 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BtnHacerAdmin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
+  <data name="BtnResetPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
   </data>
-  <data name="BtnHacerAdmin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1124, 44</value>
+  <data name="BtnResetPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>907, 66</value>
   </data>
-  <data name="BtnHacerAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 51</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnResetPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnResetPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 36</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnResetPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="BtnResetPassword.Text" xml:space="preserve">
+    <value>Restablecer Contraseña</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.Name" xml:space="preserve">
+    <value>BtnResetPassword</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.Parent" xml:space="preserve">
+    <value>pnl_fondo</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnHacerAdmin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnHacerAdmin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1156, 66</value>
+  </data>
+  <data name="BtnHacerAdmin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnHacerAdmin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 36</value>
+  </data>
   <data name="BtnHacerAdmin.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
+    <value>71</value>
   </data>
   <data name="BtnHacerAdmin.Text" xml:space="preserve">
-    <value>Hacer Administrador</value>
+    <value>Hacer Admin</value>
   </data>
   <data name="&gt;&gt;BtnHacerAdmin.Name" xml:space="preserve">
     <value>BtnHacerAdmin</value>
@@ -147,19 +181,22 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnHacerAdmin.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="BtnEliminar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>719, 44</value>
+    <value>752, 66</value>
+  </data>
+  <data name="BtnEliminar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
   </data>
   <data name="BtnEliminar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 51</value>
+    <value>137, 36</value>
   </data>
   <data name="BtnEliminar.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
+    <value>70</value>
   </data>
   <data name="BtnEliminar.Text" xml:space="preserve">
     <value>Eliminar</value>
@@ -174,19 +211,22 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnEliminar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="BtnModificar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>598, 44</value>
+    <value>597, 66</value>
+  </data>
+  <data name="BtnModificar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
   </data>
   <data name="BtnModificar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 51</value>
+    <value>137, 36</value>
   </data>
   <data name="BtnModificar.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
+    <value>69</value>
   </data>
   <data name="BtnModificar.Text" xml:space="preserve">
     <value>Modificar</value>
@@ -201,36 +241,8 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnModificar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="gbtn_nPassw.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
-  </data>
-  <data name="gbtn_nPassw.Location" type="System.Drawing.Point, System.Drawing">
-    <value>840, 44</value>
-  </data>
-  <data name="gbtn_nPassw.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 51</value>
-  </data>
-  <data name="gbtn_nPassw.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="gbtn_nPassw.Text" xml:space="preserve">
-    <value>Restablecer Contraseña</value>
-  </data>
-  <data name="&gt;&gt;gbtn_nPassw.Name" xml:space="preserve">
-    <value>gbtn_nPassw</value>
-  </data>
-  <data name="&gt;&gt;gbtn_nPassw.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;gbtn_nPassw.Parent" xml:space="preserve">
-    <value>pnl_fondo</value>
-  </data>
-  <data name="&gt;&gt;gbtn_nPassw.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_cerrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -311,16 +323,16 @@
     <value>True</value>
   </metadata>
   <data name="BtnHorarios.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="BtnHorarios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 932</value>
+    <value>282, 894</value>
   </data>
   <data name="BtnHorarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 51</value>
+    <value>99, 36</value>
   </data>
   <data name="BtnHorarios.TabIndex" type="System.Int32, mscorlib">
-    <value>82</value>
+    <value>115</value>
   </data>
   <data name="BtnHorarios.Text" xml:space="preserve">
     <value>Horarios</value>
@@ -336,6 +348,63 @@
   </data>
   <data name="&gt;&gt;BtnHorarios.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 372</value>
+  </data>
+  <data name="BtnFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 36</value>
+  </data>
+  <data name="BtnFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="BtnFiltrar.Text" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Name" xml:space="preserve">
+    <value>BtnFiltrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Parent" xml:space="preserve">
+    <value>pnl_ingresarFiltrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnIngresar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnIngresar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 894</value>
+  </data>
+  <data name="BtnIngresar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 36</value>
+  </data>
+  <data name="BtnIngresar.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
+  <data name="BtnIngresar.Text" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+  <data name="&gt;&gt;BtnIngresar.Name" xml:space="preserve">
+    <value>BtnIngresar</value>
+  </data>
+  <data name="&gt;&gt;BtnIngresar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnIngresar.Parent" xml:space="preserve">
+    <value>pnl_ingresarFiltrar</value>
+  </data>
+  <data name="&gt;&gt;BtnIngresar.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="cbtn_menosEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
@@ -362,7 +431,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;cbtn_menosEspecialidades.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="cbtn_masEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
@@ -389,34 +458,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;cbtn_masEspecialidades.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="BtnIngresar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
-  </data>
-  <data name="BtnIngresar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 932</value>
-  </data>
-  <data name="BtnIngresar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 51</value>
-  </data>
-  <data name="BtnIngresar.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="BtnIngresar.Text" xml:space="preserve">
-    <value>Ingresar</value>
-  </data>
-  <data name="&gt;&gt;BtnIngresar.Name" xml:space="preserve">
-    <value>BtnIngresar</value>
-  </data>
-  <data name="&gt;&gt;BtnIngresar.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BtnIngresar.Parent" xml:space="preserve">
-    <value>pnl_ingresarFiltrar</value>
-  </data>
-  <data name="&gt;&gt;BtnIngresar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="DTPickerFNac.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
@@ -440,7 +482,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;DTPickerFNac.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="cmbDetalles.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -467,7 +509,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;cmbDetalles.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="CmbIDepartamento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -494,7 +536,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbIDepartamento.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="cmb_especialidadI.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -521,7 +563,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;cmb_especialidadI.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="cmb_especialidadF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -548,7 +590,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;cmb_especialidadF.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="cmb_sucursalesF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -575,7 +617,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;cmb_sucursalesF.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="TxtITelefono.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -602,7 +644,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtITelefono.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="TxtINumero.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -629,7 +671,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtINumero.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="TxtICalle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -656,7 +698,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtICalle.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="TxtILocalidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -683,7 +725,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtILocalidad.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="TxtIApellidoP.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -710,7 +752,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtIApellidoP.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="TxtIApellidoM.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -737,7 +779,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtIApellidoM.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="txtb_apellidoPF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -764,7 +806,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_apellidoPF.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="txtb_apellidoMF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -791,7 +833,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_apellidoMF.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="TxtICi.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -818,7 +860,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtICi.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="TxtINombre.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -845,7 +887,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtINombre.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="txtb_nombresF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -872,7 +914,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_nombresF.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="txtb_ciF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -899,33 +941,6 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_ciF.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
-  </data>
-  <data name="BtnFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 375</value>
-  </data>
-  <data name="BtnFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 51</value>
-  </data>
-  <data name="BtnFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="BtnFiltrar.Text" xml:space="preserve">
-    <value>Filtrar</value>
-  </data>
-  <data name="&gt;&gt;BtnFiltrar.Name" xml:space="preserve">
-    <value>BtnFiltrar</value>
-  </data>
-  <data name="&gt;&gt;BtnFiltrar.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BtnFiltrar.Parent" xml:space="preserve">
-    <value>pnl_ingresarFiltrar</value>
-  </data>
-  <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
   <data name="Guna2Button1.Font" type="System.Drawing.Font, System.Drawing">

@@ -22,18 +22,23 @@ Partial Class F_Medicos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Medicos))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnl_fondo = New System.Windows.Forms.Panel()
+        Me.BtnResetPassword = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnHacerAdmin = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_cerrar = New System.Windows.Forms.Button()
         Me.btn_minimizar = New System.Windows.Forms.Button()
         Me.pnl_ingresarFiltrar = New System.Windows.Forms.Panel()
-        Me.gbtn_nPassw = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnHorarios = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
         Me.cbtn_menosEspecialidades = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.cbtn_masEspecialidades = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
         Me.DTPickerFNac = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.cmbDetalles = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.CmbIDepartamento = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -52,7 +57,6 @@ Partial Class F_Medicos
         Me.TxtINombre = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtb_nombresF = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtb_ciF = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_fecha = New System.Windows.Forms.Label()
@@ -71,10 +75,6 @@ Partial Class F_Medicos
         Me.lbl_CI = New System.Windows.Forms.Label()
         Me.lbl_busqueda = New System.Windows.Forms.Label()
         Me.Dgv_Medicos = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnHacerAdmin = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnHorarios = New Guna.UI2.WinForms.Guna2Button()
         Me.pnl_fondo.SuspendLayout()
         Me.pnl_ingresarFiltrar.SuspendLayout()
         CType(Me.Dgv_Medicos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,16 +82,72 @@ Partial Class F_Medicos
         '
         'pnl_fondo
         '
+        Me.pnl_fondo.Controls.Add(Me.BtnResetPassword)
         Me.pnl_fondo.Controls.Add(Me.BtnHacerAdmin)
         Me.pnl_fondo.Controls.Add(Me.BtnEliminar)
         Me.pnl_fondo.Controls.Add(Me.BtnModificar)
-        Me.pnl_fondo.Controls.Add(Me.gbtn_nPassw)
         Me.pnl_fondo.Controls.Add(Me.btn_cerrar)
         Me.pnl_fondo.Controls.Add(Me.btn_minimizar)
         Me.pnl_fondo.Controls.Add(Me.pnl_ingresarFiltrar)
         Me.pnl_fondo.Controls.Add(Me.Dgv_Medicos)
         resources.ApplyResources(Me.pnl_fondo, "pnl_fondo")
         Me.pnl_fondo.Name = "pnl_fondo"
+        '
+        'BtnResetPassword
+        '
+        Me.BtnResetPassword.Animated = True
+        Me.BtnResetPassword.AutoRoundedCorners = True
+        Me.BtnResetPassword.BorderRadius = 17
+        Me.BtnResetPassword.CheckedState.Parent = Me.BtnResetPassword
+        Me.BtnResetPassword.CustomImages.Parent = Me.BtnResetPassword
+        Me.BtnResetPassword.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnResetPassword, "BtnResetPassword")
+        Me.BtnResetPassword.ForeColor = System.Drawing.Color.White
+        Me.BtnResetPassword.HoverState.Parent = Me.BtnResetPassword
+        Me.BtnResetPassword.Name = "BtnResetPassword"
+        Me.BtnResetPassword.ShadowDecoration.Parent = Me.BtnResetPassword
+        '
+        'BtnHacerAdmin
+        '
+        Me.BtnHacerAdmin.Animated = True
+        Me.BtnHacerAdmin.AutoRoundedCorners = True
+        Me.BtnHacerAdmin.BorderRadius = 17
+        Me.BtnHacerAdmin.CheckedState.Parent = Me.BtnHacerAdmin
+        Me.BtnHacerAdmin.CustomImages.Parent = Me.BtnHacerAdmin
+        Me.BtnHacerAdmin.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnHacerAdmin, "BtnHacerAdmin")
+        Me.BtnHacerAdmin.ForeColor = System.Drawing.Color.White
+        Me.BtnHacerAdmin.HoverState.Parent = Me.BtnHacerAdmin
+        Me.BtnHacerAdmin.Name = "BtnHacerAdmin"
+        Me.BtnHacerAdmin.ShadowDecoration.Parent = Me.BtnHacerAdmin
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Animated = True
+        Me.BtnEliminar.AutoRoundedCorners = True
+        Me.BtnEliminar.BorderRadius = 17
+        Me.BtnEliminar.CheckedState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.CustomImages.Parent = Me.BtnEliminar
+        Me.BtnEliminar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnEliminar, "BtnEliminar")
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
+        Me.BtnEliminar.HoverState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.ShadowDecoration.Parent = Me.BtnEliminar
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.Animated = True
+        Me.BtnModificar.AutoRoundedCorners = True
+        Me.BtnModificar.BorderRadius = 17
+        Me.BtnModificar.CheckedState.Parent = Me.BtnModificar
+        Me.BtnModificar.CustomImages.Parent = Me.BtnModificar
+        Me.BtnModificar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnModificar, "BtnModificar")
+        Me.BtnModificar.ForeColor = System.Drawing.Color.White
+        Me.BtnModificar.HoverState.Parent = Me.BtnModificar
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.ShadowDecoration.Parent = Me.BtnModificar
         '
         'btn_cerrar
         '
@@ -111,9 +167,10 @@ Partial Class F_Medicos
         '
         Me.pnl_ingresarFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnHorarios)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnFiltrar)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnIngresar)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.cbtn_menosEspecialidades)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.cbtn_masEspecialidades)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnIngresar)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.DTPickerFNac)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.cmbDetalles)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbIDepartamento)
@@ -132,7 +189,6 @@ Partial Class F_Medicos
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtINombre)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_nombresF)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_ciF)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnFiltrar)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Guna2Button1)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label1)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_fecha)
@@ -153,27 +209,57 @@ Partial Class F_Medicos
         resources.ApplyResources(Me.pnl_ingresarFiltrar, "pnl_ingresarFiltrar")
         Me.pnl_ingresarFiltrar.Name = "pnl_ingresarFiltrar"
         '
-        'gbtn_nPassw
+        'BtnHorarios
         '
-        Me.gbtn_nPassw.Animated = True
-        Me.gbtn_nPassw.BackColor = System.Drawing.Color.Transparent
-        Me.gbtn_nPassw.BorderRadius = 26
-        Me.gbtn_nPassw.CheckedState.Parent = Me.gbtn_nPassw
-        Me.gbtn_nPassw.CustomImages.Parent = Me.gbtn_nPassw
-        Me.gbtn_nPassw.FillColor = System.Drawing.Color.DarkCyan
-        resources.ApplyResources(Me.gbtn_nPassw, "gbtn_nPassw")
-        Me.gbtn_nPassw.ForeColor = System.Drawing.Color.White
-        Me.gbtn_nPassw.HoverState.Parent = Me.gbtn_nPassw
-        Me.gbtn_nPassw.Name = "gbtn_nPassw"
-        Me.gbtn_nPassw.ShadowDecoration.Enabled = True
-        Me.gbtn_nPassw.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.gbtn_nPassw.ShadowDecoration.Parent = Me.gbtn_nPassw
+        Me.BtnHorarios.Animated = True
+        Me.BtnHorarios.AutoRoundedCorners = True
+        Me.BtnHorarios.BackColor = System.Drawing.Color.Transparent
+        Me.BtnHorarios.BorderRadius = 17
+        Me.BtnHorarios.CheckedState.Parent = Me.BtnHorarios
+        Me.BtnHorarios.CustomImages.Parent = Me.BtnHorarios
+        Me.BtnHorarios.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnHorarios, "BtnHorarios")
+        Me.BtnHorarios.ForeColor = System.Drawing.Color.White
+        Me.BtnHorarios.HoverState.Parent = Me.BtnHorarios
+        Me.BtnHorarios.Name = "BtnHorarios"
+        Me.BtnHorarios.ShadowDecoration.Parent = Me.BtnHorarios
+        Me.BtnHorarios.UseTransparentBackground = True
+        '
+        'BtnFiltrar
+        '
+        Me.BtnFiltrar.Animated = True
+        Me.BtnFiltrar.AutoRoundedCorners = True
+        Me.BtnFiltrar.BorderRadius = 17
+        Me.BtnFiltrar.CheckedState.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.CustomImages.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnFiltrar, "BtnFiltrar")
+        Me.BtnFiltrar.ForeColor = System.Drawing.Color.White
+        Me.BtnFiltrar.HoverState.Parent = Me.BtnFiltrar
+        Me.BtnFiltrar.Name = "BtnFiltrar"
+        Me.BtnFiltrar.ShadowDecoration.Parent = Me.BtnFiltrar
+        '
+        'BtnIngresar
+        '
+        Me.BtnIngresar.Animated = True
+        Me.BtnIngresar.AutoRoundedCorners = True
+        Me.BtnIngresar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnIngresar.BorderRadius = 17
+        Me.BtnIngresar.CheckedState.Parent = Me.BtnIngresar
+        Me.BtnIngresar.CustomImages.Parent = Me.BtnIngresar
+        Me.BtnIngresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnIngresar, "BtnIngresar")
+        Me.BtnIngresar.ForeColor = System.Drawing.Color.White
+        Me.BtnIngresar.HoverState.Parent = Me.BtnIngresar
+        Me.BtnIngresar.Name = "BtnIngresar"
+        Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
+        Me.BtnIngresar.UseTransparentBackground = True
         '
         'cbtn_menosEspecialidades
         '
         Me.cbtn_menosEspecialidades.CheckedState.Parent = Me.cbtn_menosEspecialidades
         Me.cbtn_menosEspecialidades.CustomImages.Parent = Me.cbtn_menosEspecialidades
-        Me.cbtn_menosEspecialidades.FillColor = System.Drawing.Color.DarkCyan
+        Me.cbtn_menosEspecialidades.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
         resources.ApplyResources(Me.cbtn_menosEspecialidades, "cbtn_menosEspecialidades")
         Me.cbtn_menosEspecialidades.ForeColor = System.Drawing.Color.White
         Me.cbtn_menosEspecialidades.HoverState.Parent = Me.cbtn_menosEspecialidades
@@ -185,29 +271,13 @@ Partial Class F_Medicos
         '
         Me.cbtn_masEspecialidades.CheckedState.Parent = Me.cbtn_masEspecialidades
         Me.cbtn_masEspecialidades.CustomImages.Parent = Me.cbtn_masEspecialidades
-        Me.cbtn_masEspecialidades.FillColor = System.Drawing.Color.DarkCyan
+        Me.cbtn_masEspecialidades.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
         resources.ApplyResources(Me.cbtn_masEspecialidades, "cbtn_masEspecialidades")
         Me.cbtn_masEspecialidades.ForeColor = System.Drawing.Color.White
         Me.cbtn_masEspecialidades.HoverState.Parent = Me.cbtn_masEspecialidades
         Me.cbtn_masEspecialidades.Name = "cbtn_masEspecialidades"
         Me.cbtn_masEspecialidades.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.cbtn_masEspecialidades.ShadowDecoration.Parent = Me.cbtn_masEspecialidades
-        '
-        'BtnIngresar
-        '
-        Me.BtnIngresar.Animated = True
-        Me.BtnIngresar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnIngresar.BorderRadius = 26
-        Me.BtnIngresar.CheckedState.Parent = Me.BtnIngresar
-        Me.BtnIngresar.CustomImages.Parent = Me.BtnIngresar
-        Me.BtnIngresar.FillColor = System.Drawing.Color.DarkCyan
-        resources.ApplyResources(Me.BtnIngresar, "BtnIngresar")
-        Me.BtnIngresar.ForeColor = System.Drawing.Color.White
-        Me.BtnIngresar.HoverState.Parent = Me.BtnIngresar
-        Me.BtnIngresar.Name = "BtnIngresar"
-        Me.BtnIngresar.ShadowDecoration.Enabled = True
-        Me.BtnIngresar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
         '
         'DTPickerFNac
         '
@@ -556,22 +626,6 @@ Partial Class F_Medicos
         Me.txtb_ciF.SelectedText = ""
         Me.txtb_ciF.ShadowDecoration.Parent = Me.txtb_ciF
         '
-        'BtnFiltrar
-        '
-        Me.BtnFiltrar.Animated = True
-        Me.BtnFiltrar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnFiltrar.BorderRadius = 26
-        Me.BtnFiltrar.CheckedState.Parent = Me.BtnFiltrar
-        Me.BtnFiltrar.CustomImages.Parent = Me.BtnFiltrar
-        Me.BtnFiltrar.FillColor = System.Drawing.Color.DarkCyan
-        resources.ApplyResources(Me.BtnFiltrar, "BtnFiltrar")
-        Me.BtnFiltrar.ForeColor = System.Drawing.Color.White
-        Me.BtnFiltrar.HoverState.Parent = Me.BtnFiltrar
-        Me.BtnFiltrar.Name = "BtnFiltrar"
-        Me.BtnFiltrar.ShadowDecoration.Enabled = True
-        Me.BtnFiltrar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnFiltrar.ShadowDecoration.Parent = Me.BtnFiltrar
-        '
         'Guna2Button1
         '
         Me.Guna2Button1.Animated = True
@@ -673,30 +727,30 @@ Partial Class F_Medicos
         'Dgv_Medicos
         '
         Me.Dgv_Medicos.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.Dgv_Medicos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.Dgv_Medicos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Dgv_Medicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.Dgv_Medicos.BackgroundColor = System.Drawing.Color.DarkGray
         Me.Dgv_Medicos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Dgv_Medicos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.Dgv_Medicos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgv_Medicos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgv_Medicos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         resources.ApplyResources(Me.Dgv_Medicos, "Dgv_Medicos")
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Dgv_Medicos.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Dgv_Medicos.DefaultCellStyle = DataGridViewCellStyle3
         Me.Dgv_Medicos.EnableHeadersVisualStyles = False
         Me.Dgv_Medicos.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Dgv_Medicos.Name = "Dgv_Medicos"
@@ -724,70 +778,6 @@ Partial Class F_Medicos
         Me.Dgv_Medicos.ThemeStyle.RowsStyle.Height = 22
         Me.Dgv_Medicos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Dgv_Medicos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'BtnModificar
-        '
-        Me.BtnModificar.Animated = True
-        Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.BorderRadius = 26
-        Me.BtnModificar.CheckedState.Parent = Me.BtnModificar
-        Me.BtnModificar.CustomImages.Parent = Me.BtnModificar
-        Me.BtnModificar.FillColor = System.Drawing.Color.DarkCyan
-        resources.ApplyResources(Me.BtnModificar, "BtnModificar")
-        Me.BtnModificar.ForeColor = System.Drawing.Color.White
-        Me.BtnModificar.HoverState.Parent = Me.BtnModificar
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.ShadowDecoration.Enabled = True
-        Me.BtnModificar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnModificar.ShadowDecoration.Parent = Me.BtnModificar
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Animated = True
-        Me.BtnEliminar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnEliminar.BorderRadius = 26
-        Me.BtnEliminar.CheckedState.Parent = Me.BtnEliminar
-        Me.BtnEliminar.CustomImages.Parent = Me.BtnEliminar
-        Me.BtnEliminar.FillColor = System.Drawing.Color.DarkCyan
-        resources.ApplyResources(Me.BtnEliminar, "BtnEliminar")
-        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
-        Me.BtnEliminar.HoverState.Parent = Me.BtnEliminar
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.ShadowDecoration.Enabled = True
-        Me.BtnEliminar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnEliminar.ShadowDecoration.Parent = Me.BtnEliminar
-        '
-        'BtnHacerAdmin
-        '
-        Me.BtnHacerAdmin.Animated = True
-        Me.BtnHacerAdmin.BackColor = System.Drawing.Color.Transparent
-        Me.BtnHacerAdmin.BorderRadius = 26
-        Me.BtnHacerAdmin.CheckedState.Parent = Me.BtnHacerAdmin
-        Me.BtnHacerAdmin.CustomImages.Parent = Me.BtnHacerAdmin
-        Me.BtnHacerAdmin.FillColor = System.Drawing.Color.DarkCyan
-        resources.ApplyResources(Me.BtnHacerAdmin, "BtnHacerAdmin")
-        Me.BtnHacerAdmin.ForeColor = System.Drawing.Color.White
-        Me.BtnHacerAdmin.HoverState.Parent = Me.BtnHacerAdmin
-        Me.BtnHacerAdmin.Name = "BtnHacerAdmin"
-        Me.BtnHacerAdmin.ShadowDecoration.Enabled = True
-        Me.BtnHacerAdmin.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnHacerAdmin.ShadowDecoration.Parent = Me.BtnHacerAdmin
-        '
-        'BtnHorarios
-        '
-        Me.BtnHorarios.Animated = True
-        Me.BtnHorarios.BackColor = System.Drawing.Color.Transparent
-        Me.BtnHorarios.BorderRadius = 26
-        Me.BtnHorarios.CheckedState.Parent = Me.BtnHorarios
-        Me.BtnHorarios.CustomImages.Parent = Me.BtnHorarios
-        Me.BtnHorarios.FillColor = System.Drawing.Color.DarkCyan
-        resources.ApplyResources(Me.BtnHorarios, "BtnHorarios")
-        Me.BtnHorarios.ForeColor = System.Drawing.Color.White
-        Me.BtnHorarios.HoverState.Parent = Me.BtnHorarios
-        Me.BtnHorarios.Name = "BtnHorarios"
-        Me.BtnHorarios.ShadowDecoration.Enabled = True
-        Me.BtnHorarios.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnHorarios.ShadowDecoration.Parent = Me.BtnHorarios
         '
         'F_Medicos
         '
@@ -826,8 +816,6 @@ Partial Class F_Medicos
     Friend WithEvents btn_cerrar As Button
     Friend WithEvents btn_minimizar As Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents gbtn_nPassw As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BtnIngresar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents cmb_sucursalesF As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents TxtITelefono As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TxtINumero As Guna.UI2.WinForms.Guna2TextBox
@@ -841,7 +829,6 @@ Partial Class F_Medicos
     Friend WithEvents TxtINombre As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtb_nombresF As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtb_ciF As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents BtnFiltrar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents cmb_especialidadF As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cbtn_menosEspecialidades As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents cbtn_masEspecialidades As Guna.UI2.WinForms.Guna2CircleButton
@@ -850,8 +837,11 @@ Partial Class F_Medicos
     Friend WithEvents CmbIDepartamento As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cmb_especialidadI As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Dgv_Medicos As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents BtnHacerAdmin As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnResetPassword As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnHacerAdmin As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnHorarios As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnFiltrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnIngresar As Guna.UI2.WinForms.Guna2Button
 End Class

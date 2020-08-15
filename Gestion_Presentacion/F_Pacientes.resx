@@ -222,17 +222,137 @@
   <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 531</value>
+  </data>
+  <data name="BtnFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 36</value>
+  </data>
+  <data name="BtnFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="BtnFiltrar.Text" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Name" xml:space="preserve">
+    <value>BtnFiltrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnResetPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnResetPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>638, 531</value>
+  </data>
+  <data name="BtnResetPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnResetPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 36</value>
+  </data>
+  <data name="BtnResetPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="BtnResetPassword.Text" xml:space="preserve">
+    <value>Restablecer Contraseña</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.Name" xml:space="preserve">
+    <value>BtnResetPassword</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnEliminar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>517, 531</value>
+  </data>
+  <data name="BtnEliminar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnEliminar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 36</value>
+  </data>
+  <data name="BtnEliminar.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="BtnEliminar.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.Name" xml:space="preserve">
+    <value>BtnEliminar</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnModificar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 531</value>
+  </data>
+  <data name="BtnModificar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnModificar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 36</value>
+  </data>
+  <data name="BtnModificar.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="BtnModificar.Text" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.Name" xml:space="preserve">
+    <value>BtnModificar</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="TxtBCi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBCi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 276</value>
+    <value>144, 280</value>
   </data>
   <data name="TxtBCi.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBCi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 32</value>
+    <value>288, 29</value>
   </data>
   <data name="TxtBCi.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
@@ -247,28 +367,28 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBCi.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="LblBCi.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="LblBCi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="LblBCi.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="LblBCi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 278</value>
+    <value>32, 280</value>
   </data>
   <data name="LblBCi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 26</value>
+    <value>32, 23</value>
   </data>
   <data name="LblBCi.TabIndex" type="System.Int32, mscorlib">
     <value>103</value>
   </data>
   <data name="LblBCi.Text" xml:space="preserve">
-    <value>Nombre:</value>
+    <value>CI:</value>
   </data>
   <data name="&gt;&gt;LblBCi.Name" xml:space="preserve">
     <value>LblBCi</value>
@@ -280,22 +400,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;LblBCi.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="CmbBDepartamento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="CmbBDepartamento.ItemHeight" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
   <data name="CmbBDepartamento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 428</value>
+    <value>169, 410</value>
   </data>
   <data name="CmbBDepartamento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 7</value>
   </data>
   <data name="CmbBDepartamento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 36</value>
+    <value>266, 36</value>
   </data>
   <data name="CmbBDepartamento.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
@@ -310,22 +430,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;CmbBDepartamento.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="CmbBDetalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="CmbBDetalle.ItemHeight" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
   <data name="CmbBDetalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>747, 389</value>
+    <value>726, 373</value>
   </data>
   <data name="CmbBDetalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 7</value>
   </data>
   <data name="CmbBDetalle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 36</value>
+    <value>106, 36</value>
   </data>
   <data name="CmbBDetalle.TabIndex" type="System.Int32, mscorlib">
     <value>98</value>
@@ -340,46 +460,19 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;CmbBDetalle.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TxtBFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
-  </data>
-  <data name="TxtBFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>797, 515</value>
-  </data>
-  <data name="TxtBFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 30</value>
-  </data>
-  <data name="TxtBFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>93</value>
-  </data>
-  <data name="TxtBFiltrar.Text" xml:space="preserve">
-    <value>Filtrar</value>
-  </data>
-  <data name="&gt;&gt;TxtBFiltrar.Name" xml:space="preserve">
-    <value>TxtBFiltrar</value>
-  </data>
-  <data name="&gt;&gt;TxtBFiltrar.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TxtBFiltrar.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;TxtBFiltrar.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="TxtBEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 468</value>
+    <value>144, 457</value>
   </data>
   <data name="TxtBEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>774, 32</value>
+    <value>688, 29</value>
   </data>
   <data name="TxtBEmail.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
@@ -394,22 +487,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBEmail.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 470</value>
+    <value>32, 463</value>
   </data>
   <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 26</value>
+    <value>63, 23</value>
   </data>
   <data name="Label10.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
@@ -427,19 +520,19 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="TxtBLocalidad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBLocalidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>544, 429</value>
+    <value>533, 412</value>
   </data>
   <data name="TxtBLocalidad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBLocalidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 32</value>
+    <value>299, 29</value>
   </data>
   <data name="TxtBLocalidad.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
@@ -454,22 +547,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBLocalidad.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>439, 430</value>
+    <value>438, 416</value>
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 26</value>
+    <value>98, 23</value>
   </data>
   <data name="Label8.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
@@ -487,22 +580,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 431</value>
+    <value>32, 418</value>
   </data>
   <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 26</value>
+    <value>134, 23</value>
   </data>
   <data name="Label9.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
@@ -520,19 +613,19 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="TxtBCalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBCalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 391</value>
+    <value>144, 377</value>
   </data>
   <data name="TxtBCalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBCalle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>341, 32</value>
+    <value>291, 29</value>
   </data>
   <data name="TxtBCalle.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -547,19 +640,19 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBCalle.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="TxtBNumero.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBNumero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>535, 391</value>
+    <value>533, 377</value>
   </data>
   <data name="TxtBNumero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBNumero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 32</value>
+    <value>110, 29</value>
   </data>
   <data name="TxtBNumero.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
@@ -574,22 +667,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBNumero.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>658, 391</value>
+    <value>650, 380</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 26</value>
+    <value>73, 23</value>
   </data>
   <data name="Label5.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
@@ -607,22 +700,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 391</value>
+    <value>438, 382</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 26</value>
+    <value>83, 23</value>
   </data>
   <data name="Label6.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -640,22 +733,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 391</value>
+    <value>32, 380</value>
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 26</value>
+    <value>57, 23</value>
   </data>
   <data name="Label7.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -673,19 +766,19 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <data name="TxtBEdad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBEdad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>506, 353</value>
+    <value>533, 345</value>
   </data>
   <data name="TxtBEdad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBEdad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 32</value>
+    <value>147, 29</value>
   </data>
   <data name="TxtBEdad.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -700,22 +793,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBEdad.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 353</value>
+    <value>438, 347</value>
   </data>
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 26</value>
+    <value>58, 23</value>
   </data>
   <data name="Label4.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
@@ -733,19 +826,19 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="TxtBTelefono.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBTelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 353</value>
+    <value>144, 345</value>
   </data>
   <data name="TxtBTelefono.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBTelefono.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 32</value>
+    <value>291, 29</value>
   </data>
   <data name="TxtBTelefono.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -760,22 +853,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBTelefono.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 353</value>
+    <value>32, 349</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 26</value>
+    <value>89, 23</value>
   </data>
   <data name="Label3.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -793,19 +886,19 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
   <data name="TxtBApellidoM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBApellidoM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>709, 315</value>
+    <value>683, 309</value>
   </data>
   <data name="TxtBApellidoM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBApellidoM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 32</value>
+    <value>147, 29</value>
   </data>
   <data name="TxtBApellidoM.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -820,19 +913,19 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBApellidoM.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
   <data name="TxtBApellidoP.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBApellidoP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>544, 315</value>
+    <value>533, 309</value>
   </data>
   <data name="TxtBApellidoP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBApellidoP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 32</value>
+    <value>147, 29</value>
   </data>
   <data name="TxtBApellidoP.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -847,19 +940,19 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBApellidoP.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>23</value>
   </data>
   <data name="TxtBNombre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtBNombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 315</value>
+    <value>144, 313</value>
   </data>
   <data name="TxtBNombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
+    <value>0, 0, 0, 6</value>
   </data>
   <data name="TxtBNombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 32</value>
+    <value>290, 29</value>
   </data>
   <data name="TxtBNombre.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -874,22 +967,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBNombre.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>24</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 317</value>
+    <value>438, 311</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 26</value>
+    <value>95, 23</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -907,22 +1000,22 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>25</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 317</value>
+    <value>32, 319</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 26</value>
+    <value>84, 23</value>
   </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -940,7 +1033,7 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>26</value>
   </data>
   <data name="pnl_filtrar.Location" type="System.Drawing.Point, System.Drawing">
     <value>1026, 9</value>
@@ -964,7 +1057,7 @@
     <value>3</value>
   </data>
   <data name="TxtICi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtICi.Location" type="System.Drawing.Point, System.Drawing">
     <value>192, 19</value>
@@ -994,16 +1087,16 @@
     <value>True</value>
   </data>
   <data name="LblCi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="LblCi.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="LblCi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 21</value>
+    <value>93, 24</value>
   </data>
   <data name="LblCi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 26</value>
+    <value>32, 23</value>
   </data>
   <data name="LblCi.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
@@ -1024,7 +1117,7 @@
     <value>1</value>
   </data>
   <data name="CmblMedicacion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="CmblMedicacion.ItemHeight" type="System.Int32, mscorlib">
     <value>30</value>
@@ -1054,7 +1147,7 @@
     <value>2</value>
   </data>
   <data name="CmblEnfermedad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="CmblEnfermedad.ItemHeight" type="System.Int32, mscorlib">
     <value>30</value>
@@ -1084,7 +1177,7 @@
     <value>3</value>
   </data>
   <data name="CmblDetalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="CmblDetalle.ItemHeight" type="System.Int32, mscorlib">
     <value>30</value>
@@ -1114,13 +1207,13 @@
     <value>4</value>
   </data>
   <data name="CmbIDepartamento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="CmbIDepartamento.ItemHeight" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
   <data name="CmbIDepartamento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 171</value>
+    <value>259, 172</value>
   </data>
   <data name="CmbIDepartamento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 7</value>
@@ -1144,13 +1237,13 @@
     <value>5</value>
   </data>
   <data name="BtnIngresar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="BtnIngresar.Location" type="System.Drawing.Point, System.Drawing">
     <value>899, 537</value>
   </data>
   <data name="BtnIngresar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 30</value>
+    <value>99, 36</value>
   </data>
   <data name="BtnIngresar.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
@@ -1198,7 +1291,7 @@
     <value>7</value>
   </data>
   <data name="TxtIAntLab.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtIAntLab.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 463</value>
@@ -1225,7 +1318,7 @@
     <value>8</value>
   </data>
   <data name="TxtITratamientos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtITratamientos.Location" type="System.Drawing.Point, System.Drawing">
     <value>235, 392</value>
@@ -1252,7 +1345,7 @@
     <value>9</value>
   </data>
   <data name="TxtIAntFam.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtIAntFam.Location" type="System.Drawing.Point, System.Drawing">
     <value>349, 321</value>
@@ -1279,7 +1372,7 @@
     <value>10</value>
   </data>
   <data name="TxtINFam.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtINFam.Location" type="System.Drawing.Point, System.Drawing">
     <value>268, 250</value>
@@ -1306,10 +1399,10 @@
     <value>11</value>
   </data>
   <data name="TxtIEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtIEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 211</value>
+    <value>169, 215</value>
   </data>
   <data name="TxtIEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 7</value>
@@ -1333,7 +1426,7 @@
     <value>12</value>
   </data>
   <data name="TxtILocalidad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtILocalidad.Location" type="System.Drawing.Point, System.Drawing">
     <value>627, 172</value>
@@ -1360,7 +1453,7 @@
     <value>13</value>
   </data>
   <data name="TxtICalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtICalle.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 134</value>
@@ -1387,7 +1480,7 @@
     <value>14</value>
   </data>
   <data name="TxtINumero.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtINumero.Location" type="System.Drawing.Point, System.Drawing">
     <value>627, 134</value>
@@ -1414,7 +1507,7 @@
     <value>15</value>
   </data>
   <data name="TxtITelefono.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtITelefono.Location" type="System.Drawing.Point, System.Drawing">
     <value>627, 96</value>
@@ -1441,7 +1534,7 @@
     <value>16</value>
   </data>
   <data name="TxtIApellidoM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtIApellidoM.Location" type="System.Drawing.Point, System.Drawing">
     <value>783, 58</value>
@@ -1468,7 +1561,7 @@
     <value>17</value>
   </data>
   <data name="TxtIApellidoP.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtIApellidoP.Location" type="System.Drawing.Point, System.Drawing">
     <value>627, 58</value>
@@ -1495,10 +1588,10 @@
     <value>18</value>
   </data>
   <data name="TxtINombre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtINombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 58</value>
+    <value>192, 55</value>
   </data>
   <data name="TxtINombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 7</value>
@@ -1521,8 +1614,11 @@
   <data name="&gt;&gt;TxtINombre.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
+  <data name="DTPickerFNac.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 9.75pt</value>
+  </data>
   <data name="DTPickerFNac.Location" type="System.Drawing.Point, System.Drawing">
-    <value>319, 95</value>
+    <value>319, 94</value>
   </data>
   <data name="DTPickerFNac.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 34</value>
@@ -1546,7 +1642,7 @@
     <value>True</value>
   </data>
   <data name="lbl_localidad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_localidad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1555,7 +1651,7 @@
     <value>513, 173</value>
   </data>
   <data name="lbl_localidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 26</value>
+    <value>98, 23</value>
   </data>
   <data name="lbl_localidad.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -1579,16 +1675,16 @@
     <value>True</value>
   </data>
   <data name="lbl_detalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_detalle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_detalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>741, 134</value>
+    <value>754, 139</value>
   </data>
   <data name="lbl_detalle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 26</value>
+    <value>73, 23</value>
   </data>
   <data name="lbl_detalle.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -1612,7 +1708,7 @@
     <value>True</value>
   </data>
   <data name="lbl_numero.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_numero.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1621,7 +1717,7 @@
     <value>525, 134</value>
   </data>
   <data name="lbl_numero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 26</value>
+    <value>83, 23</value>
   </data>
   <data name="lbl_numero.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -1645,7 +1741,7 @@
     <value>True</value>
   </data>
   <data name="lbl_medicacion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_medicacion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1654,7 +1750,7 @@
     <value>510, 535</value>
   </data>
   <data name="lbl_medicacion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 26</value>
+    <value>114, 23</value>
   </data>
   <data name="lbl_medicacion.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -1678,7 +1774,7 @@
     <value>True</value>
   </data>
   <data name="lbl_enfermedad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_enfermedad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1687,7 +1783,7 @@
     <value>93, 533</value>
   </data>
   <data name="lbl_enfermedad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 26</value>
+    <value>118, 23</value>
   </data>
   <data name="lbl_enfermedad.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -1711,7 +1807,7 @@
     <value>True</value>
   </data>
   <data name="lbl_antecedentesLab.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_antecedentesLab.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1720,7 +1816,7 @@
     <value>93, 463</value>
   </data>
   <data name="lbl_antecedentesLab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 26</value>
+    <value>213, 23</value>
   </data>
   <data name="lbl_antecedentesLab.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -1744,16 +1840,16 @@
     <value>True</value>
   </data>
   <data name="lbl_tratamientos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_tratamientos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_tratamientos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 389</value>
+    <value>93, 389</value>
   </data>
   <data name="lbl_tratamientos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 26</value>
+    <value>126, 23</value>
   </data>
   <data name="lbl_tratamientos.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -1777,16 +1873,16 @@
     <value>True</value>
   </data>
   <data name="lbl_antecedentesFlia.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_antecedentesFlia.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_antecedentesFlia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 321</value>
+    <value>93, 321</value>
   </data>
   <data name="lbl_antecedentesFlia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 26</value>
+    <value>220, 23</value>
   </data>
   <data name="lbl_antecedentesFlia.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -1810,16 +1906,16 @@
     <value>True</value>
   </data>
   <data name="lbl_nucleoFlia.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_nucleoFlia.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_nucleoFlia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 250</value>
+    <value>93, 250</value>
   </data>
   <data name="lbl_nucleoFlia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 26</value>
+    <value>149, 23</value>
   </data>
   <data name="lbl_nucleoFlia.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1843,16 +1939,16 @@
     <value>True</value>
   </data>
   <data name="lbl_email.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_email.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 213</value>
+    <value>92, 220</value>
   </data>
   <data name="lbl_email.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 26</value>
+    <value>63, 23</value>
   </data>
   <data name="lbl_email.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1876,16 +1972,16 @@
     <value>True</value>
   </data>
   <data name="lbl_departamento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_departamento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_departamento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 174</value>
+    <value>93, 179</value>
   </data>
   <data name="lbl_departamento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 26</value>
+    <value>134, 23</value>
   </data>
   <data name="lbl_departamento.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1909,16 +2005,16 @@
     <value>True</value>
   </data>
   <data name="lbl_calle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_calle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_calle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 134</value>
+    <value>93, 139</value>
   </data>
   <data name="lbl_calle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 26</value>
+    <value>57, 23</value>
   </data>
   <data name="lbl_calle.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1942,7 +2038,7 @@
     <value>True</value>
   </data>
   <data name="lbl_telefono.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_telefono.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1951,7 +2047,7 @@
     <value>522, 99</value>
   </data>
   <data name="lbl_telefono.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 26</value>
+    <value>89, 23</value>
   </data>
   <data name="lbl_telefono.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1975,16 +2071,16 @@
     <value>True</value>
   </data>
   <data name="lbl_fechaNacimiento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_fechaNacimiento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_fechaNacimiento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 94</value>
+    <value>93, 100</value>
   </data>
   <data name="lbl_fechaNacimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 26</value>
+    <value>191, 23</value>
   </data>
   <data name="lbl_fechaNacimiento.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2008,7 +2104,7 @@
     <value>True</value>
   </data>
   <data name="lbl_apellidos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_apellidos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2017,7 +2113,7 @@
     <value>516, 60</value>
   </data>
   <data name="lbl_apellidos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 26</value>
+    <value>95, 23</value>
   </data>
   <data name="lbl_apellidos.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2041,7 +2137,7 @@
     <value>True</value>
   </data>
   <data name="lbl_nombre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_nombre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2050,7 +2146,7 @@
     <value>93, 60</value>
   </data>
   <data name="lbl_nombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 26</value>
+    <value>84, 23</value>
   </data>
   <data name="lbl_nombre.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

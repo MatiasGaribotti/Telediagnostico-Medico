@@ -7,7 +7,7 @@ Public Class F_Medicos_Horarios
         Me.Close()
     End Sub
 
-    Private Sub Btn_ingresar_Click(sender As Object, e As EventArgs) Handles btn_ingresar.Click
+    Private Sub Btn_ingresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         Dim horario As Horario
         'dia
         'If (RbtnL.Checked) Then
@@ -25,6 +25,11 @@ Public Class F_Medicos_Horarios
     End Sub
 
     Private Sub pnl_ingresar_Paint(sender As Object, e As PaintEventArgs) Handles pnl_ingresar.Paint
+
+    End Sub
+
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

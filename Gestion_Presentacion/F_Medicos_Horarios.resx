@@ -122,17 +122,21 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="BtnEliminar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>718, 49</value>
+    <value>714, 66</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnEliminar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
   </data>
   <data name="BtnEliminar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 51</value>
+    <value>103, 36</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnEliminar.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
+    <value>111</value>
   </data>
   <data name="BtnEliminar.Text" xml:space="preserve">
     <value>Eliminar</value>
@@ -150,16 +154,19 @@
     <value>0</value>
   </data>
   <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
+    <value>Roboto, 14.25pt</value>
   </data>
   <data name="BtnModificar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>597, 49</value>
+    <value>597, 66</value>
+  </data>
+  <data name="BtnModificar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
   </data>
   <data name="BtnModificar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 51</value>
+    <value>99, 36</value>
   </data>
   <data name="BtnModificar.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
+    <value>110</value>
   </data>
   <data name="BtnModificar.Text" xml:space="preserve">
     <value>Modificar</value>
@@ -200,7 +207,6 @@
   <data name="&gt;&gt;dgw_horarios.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_minimizar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -280,6 +286,63 @@
   <metadata name="pnl_ingresar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 375</value>
+  </data>
+  <data name="BtnFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 36</value>
+  </data>
+  <data name="BtnFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="BtnFiltrar.Text" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Name" xml:space="preserve">
+    <value>BtnFiltrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnIngresar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnIngresar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 706</value>
+  </data>
+  <data name="BtnIngresar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 36</value>
+  </data>
+  <data name="BtnIngresar.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="BtnIngresar.Text" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+  <data name="&gt;&gt;BtnIngresar.Name" xml:space="preserve">
+    <value>BtnIngresar</value>
+  </data>
+  <data name="&gt;&gt;BtnIngresar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnIngresar.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;BtnIngresar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="TxtBCi.Location" type="System.Drawing.Point, System.Drawing">
     <value>219, 517</value>
   </data>
@@ -299,7 +362,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;TxtBCi.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="LblBCi.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -332,10 +395,10 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;LblBCi.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="TxtIHoraOut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 330</value>
+    <value>219, 330</value>
   </data>
   <data name="TxtIHoraOut.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 27</value>
@@ -353,10 +416,10 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;TxtIHoraOut.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="TxtIHoraIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 290</value>
+    <value>219, 290</value>
   </data>
   <data name="TxtIHoraIn.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 25</value>
@@ -374,7 +437,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;TxtIHoraIn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="btn_volver.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16pt</value>
@@ -401,60 +464,6 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;btn_volver.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btn_filtrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
-  </data>
-  <data name="btn_filtrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 712</value>
-  </data>
-  <data name="btn_filtrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 51</value>
-  </data>
-  <data name="btn_filtrar.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="btn_filtrar.Text" xml:space="preserve">
-    <value>Filtrar</value>
-  </data>
-  <data name="&gt;&gt;btn_filtrar.Name" xml:space="preserve">
-    <value>btn_filtrar</value>
-  </data>
-  <data name="&gt;&gt;btn_filtrar.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_filtrar.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;btn_filtrar.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btn_ingresar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
-  </data>
-  <data name="btn_ingresar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 380</value>
-  </data>
-  <data name="btn_ingresar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 51</value>
-  </data>
-  <data name="btn_ingresar.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="btn_ingresar.Text" xml:space="preserve">
-    <value>Ingresar</value>
-  </data>
-  <data name="&gt;&gt;btn_ingresar.Name" xml:space="preserve">
-    <value>btn_ingresar</value>
-  </data>
-  <data name="&gt;&gt;btn_ingresar.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_ingresar.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;btn_ingresar.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="dtp_rangoSalida.Font" type="System.Drawing.Font, System.Drawing">
@@ -518,7 +527,7 @@
     <value>Policlínica del Congo</value>
   </data>
   <data name="cmb_sucursalF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 559</value>
+    <value>217, 559</value>
   </data>
   <data name="cmb_sucursalF.Size" type="System.Drawing.Size, System.Drawing">
     <value>279, 36</value>
@@ -545,7 +554,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="rbtn_dF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>463, 559</value>
+    <value>467, 619</value>
   </data>
   <data name="rbtn_dF.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 17</value>
@@ -755,7 +764,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="RbtnD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>461, 260</value>
+    <value>463, 260</value>
   </data>
   <data name="RbtnD.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 17</value>
@@ -971,7 +980,7 @@
     <value>1</value>
   </data>
   <data name="CmbISucursal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 213</value>
+    <value>219, 213</value>
   </data>
   <data name="CmbISucursal.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 36</value>
@@ -992,7 +1001,7 @@
     <value>24</value>
   </data>
   <data name="TxtICi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 171</value>
+    <value>219, 171</value>
   </data>
   <data name="TxtICi.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 36</value>

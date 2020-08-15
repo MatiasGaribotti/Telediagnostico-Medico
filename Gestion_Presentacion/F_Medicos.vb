@@ -16,7 +16,7 @@ Public Class F_Medicos
         Me.Close()
     End Sub
 
-    Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
+    Private Sub BtnIngresar_Click(sender As Object, e As EventArgs)
         Dim medico As New Medico(
                             CInt(TxtICi.Text),
                             TxtINombre.Text,
@@ -41,32 +41,13 @@ Public Class F_Medicos
         Next
     End Sub
 
-    Private Sub TxtICi_TextChanged(sender As Object, e As EventArgs) Handles TxtICi.TextChanged
-
-    End Sub
-
-    Private Sub TxtICalle_TextChanged(sender As Object, e As EventArgs) Handles TxtICalle.TextChanged
-
-    End Sub
-
-    Private Sub CmbIDepartamento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbIDepartamento.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub gbtn_nPassw_Click(sender As Object, e As EventArgs) Handles gbtn_nPassw.Click
-
-    End Sub
-
-    Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
-
-    End Sub
-
     Private Sub BtnHorarios_Click(sender As Object, e As EventArgs) Handles BtnHorarios.Click
         F_Medicos_Horarios.Show()
         Close()
     End Sub
 
-    Private Sub cbtn_masEspecialidades_Click(sender As Object, e As EventArgs) Handles cbtn_masEspecialidades.Click
+    Private Sub BtnFiltrar_Click_1(sender As Object, e As EventArgs)
 
     End Sub
+
 End Class

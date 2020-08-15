@@ -24,8 +24,6 @@ Public Class DSintoma
             Dim selectSintoma = "SELECT id FROM sintomas " &
                                 "WHERE nombre='" & nombre & "' AND descripcion='" & descripcion & "' AND tipo=" & tipo & ";"
 
-
-
             Try
                 con.BeginTrans()
                 con.Execute(insertSintoma)
@@ -86,15 +84,13 @@ Public Class DSintoma
     End Function
 
     Public Sub AsociarSintomaEnfermedad(idSintoma As Short, idEnfermedad As Short, con As Connection)
-        If HasConnection() Then
-            Dim insert = "INSERT INTO enfermedades_sintomas(idSintoma, idEnfermedad) " &
-                         "VALUES(" & idSintoma & "," & idEnfermedad & ");"
-            Try
-                con.Execute(insert)
-            Catch ex As Exception
-                MsgBox("ERROR en asociar sintoma enfermedad: " & ex.Message)
-                con.RollbackTrans()
-            End Try
-        End If
+        Dim insert = "INSERT INTO enfermedades_sintomas(idSintoma, idEnfermedad) " &
+                     "VALUES(" & idSintoma & "," & idEnfermedad & ");"
+        Try
+            con.Execute(insert)
+        Catch ex As Exception
+            MsgBox("ERROR en asociar sintoma enfermedad: " & ex.Message)
+            con.RollbackTrans()
+        End Try
     End Sub
 End Class
