@@ -23,11 +23,6 @@ Partial Class F_Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.pnl_login = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lbl_Paciente = New System.Windows.Forms.Label()
         Me.lbl_password = New System.Windows.Forms.Label()
         Me.lbl_ci = New System.Windows.Forms.Label()
@@ -35,24 +30,17 @@ Partial Class F_Login
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.pic_background = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.TxtCi = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.pnl_login.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_background, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnl_login
         '
-        Me.pnl_login.Controls.Add(Me.PictureBox4)
-        Me.pnl_login.Controls.Add(Me.PictureBox3)
-        Me.pnl_login.Controls.Add(Me.PictureBox2)
-        Me.pnl_login.Controls.Add(Me.PictureBox1)
-        Me.pnl_login.Controls.Add(Me.TextBox2)
-        Me.pnl_login.Controls.Add(Me.TextBox1)
+        Me.pnl_login.Controls.Add(Me.TxtPassword)
+        Me.pnl_login.Controls.Add(Me.TxtCi)
         Me.pnl_login.Controls.Add(Me.lbl_Paciente)
         Me.pnl_login.Controls.Add(Me.lbl_password)
         Me.pnl_login.Controls.Add(Me.lbl_ci)
@@ -63,57 +51,6 @@ Partial Class F_Login
         Me.pnl_login.Name = "pnl_login"
         Me.pnl_login.Size = New System.Drawing.Size(500, 1080)
         Me.pnl_login.TabIndex = 0
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Presentacion.My.Resources.Resources.Left_32_Texbox
-        Me.PictureBox3.Location = New System.Drawing.Point(237, 574)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(16, 32)
-        Me.PictureBox3.TabIndex = 7
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Presentacion.My.Resources.Resources.Right_32_Textbox
-        Me.PictureBox2.Location = New System.Drawing.Point(451, 574)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(16, 32)
-        Me.PictureBox2.TabIndex = 6
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Presentacion.My.Resources.Resources.Right_32_Textbox
-        Me.PictureBox1.Location = New System.Drawing.Point(451, 627)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(16, 32)
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 18.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(253, 574)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(0)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TextBox2.Size = New System.Drawing.Size(198, 32)
-        Me.TextBox2.TabIndex = 4
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 18.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(253, 627)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(198, 32)
-        Me.TextBox1.TabIndex = 4
         '
         'lbl_Paciente
         '
@@ -193,17 +130,55 @@ Partial Class F_Login
         Me.pic_background.TabIndex = 1
         Me.pic_background.TabStop = False
         '
-        'PictureBox4
+        'TxtCi
         '
-        Me.PictureBox4.Image = Global.Presentacion.My.Resources.Resources.Left_32_Texbox
-        Me.PictureBox4.Location = New System.Drawing.Point(237, 627)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(0)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(16, 32)
-        Me.PictureBox4.TabIndex = 8
-        Me.PictureBox4.TabStop = False
+        Me.TxtCi.Animated = True
+        Me.TxtCi.BorderRadius = 16
+        Me.TxtCi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtCi.DefaultText = ""
+        Me.TxtCi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtCi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtCi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtCi.DisabledState.Parent = Me.TxtCi
+        Me.TxtCi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtCi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtCi.FocusedState.Parent = Me.TxtCi
+        Me.TxtCi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtCi.HoverState.Parent = Me.TxtCi
+        Me.TxtCi.Location = New System.Drawing.Point(201, 574)
+        Me.TxtCi.Name = "TxtCi"
+        Me.TxtCi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtCi.PlaceholderText = ""
+        Me.TxtCi.SelectedText = ""
+        Me.TxtCi.ShadowDecoration.Parent = Me.TxtCi
+        Me.TxtCi.Size = New System.Drawing.Size(200, 36)
+        Me.TxtCi.TabIndex = 11
         '
-        'frmLogin
+        'TxtPassword
+        '
+        Me.TxtPassword.Animated = True
+        Me.TxtPassword.BorderRadius = 16
+        Me.TxtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtPassword.DefaultText = ""
+        Me.TxtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtPassword.DisabledState.Parent = Me.TxtPassword
+        Me.TxtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtPassword.FocusedState.Parent = Me.TxtPassword
+        Me.TxtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtPassword.HoverState.Parent = Me.TxtPassword
+        Me.TxtPassword.Location = New System.Drawing.Point(201, 627)
+        Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtPassword.PlaceholderText = ""
+        Me.TxtPassword.SelectedText = ""
+        Me.TxtPassword.ShadowDecoration.Parent = Me.TxtPassword
+        Me.TxtPassword.Size = New System.Drawing.Size(200, 36)
+        Me.TxtPassword.TabIndex = 12
+        '
+        'F_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -212,17 +187,13 @@ Partial Class F_Login
         Me.Controls.Add(Me.pic_background)
         Me.Controls.Add(Me.pnl_login)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmLogin"
+        Me.Name = "F_Login"
         Me.Text = "Login"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnl_login.ResumeLayout(False)
         Me.pnl_login.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_background, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -234,11 +205,7 @@ Partial Class F_Login
     Friend WithEvents lbl_ci As Label
     Friend WithEvents pic_ As PictureBox
     Friend WithEvents btnIngresar As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents lbl_Paciente As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents TxtPassword As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtCi As Guna.UI2.WinForms.Guna2TextBox
 End Class

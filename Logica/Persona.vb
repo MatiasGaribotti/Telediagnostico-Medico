@@ -1,4 +1,6 @@
-﻿Public MustInherit Class Persona
+﻿Imports System.Diagnostics.Eventing.Reader
+
+Public MustInherit Class Persona
     Public Property Ci As Integer
     Public Property Nombre As String
     Public Property ApellidoP As String
@@ -29,9 +31,21 @@
         Me.Fecha_Nacimiento = New Date(1, 1, 1)
         Me.Password = password
     End Sub
-    Public Function ValidateCi() As Boolean
+    Public Function ValidateCi(ciAValidar As Integer) As Boolean
         'Valida que la cédula de identidad sea válida
         Dim valida As Boolean = True
+        Dim ci As String = ciAValidar.ToString()
+
+        If (ci.Length <> 8) Then
+
+            valida = False
+
+        ElseIf valida Then
+
+            Dim digitoVerificador As Integer = Integer.Parse(ci.ToCharArray.Last.ToString)
+
+            'ElseIF
+        End If
 
         Return valida
     End Function
