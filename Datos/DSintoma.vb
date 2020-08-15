@@ -10,13 +10,12 @@ Public Class DSintoma
     End Sub
 
     Public Function Insert(nombre As String, descripcion As String, tipo As String, enfermedades As List(Of Short)) As Boolean
-
         If HasConnection() Then
             Dim con As Connection = Conectar()
             Dim recordSet As Recordset
             Dim idSintoma As Short
 
-            Dim insertSintoma = "INSERT INTO sintomas(nombre,decripcion,tipo) " &
+            Dim insertSintoma = "INSERT INTO sintomas(nombre,descripcion,tipo) " &
                                 "VALUES('" &
                                 nombre & "','" &
                                 descripcion & "'," &
@@ -38,18 +37,23 @@ Public Class DSintoma
 
 
                 For Each idEnfermedad As Short In enfermedades
-                    AsociarSintomaEnfermedad(idSintoma, idEnfermedad)
+                    AsociarSintomaEnfermedad(idSintoma, idEnfermedad, con)
                 Next
                 con.CommitTrans()
+                Return True
+
             Catch ex As Exception
 
-                MsgBox("ERROR: " & ex.Message, MsgBoxStyle.Critical)
+                MsgBox("ERROR: " & ex.Message, MsgBoxStyle.Critical, "Insert Síntoma")
                 con.RollbackTrans()
                 Return False
 
             End Try
+
+            con.Close()
         Else
-            MsgBox("Las enfermedades asociadas no existen.")
+            MsgBox("No hay conexión con la base de datos.")
+            Return False
         End If
 
     End Function
@@ -81,16 +85,15 @@ Public Class DSintoma
         Return exist
     End Function
 
-    Public Sub AsociarSintomaEnfermedad(idSintoma As Short, idEnfermedad As Short)
+    Public Sub AsociarSintomaEnfermedad(idSintoma As Short, idEnfermedad As Short, con As Connection)
         If HasConnection() Then
-            Dim con As Connection = Conectar()
             Dim insert = "INSERT INTO enfermedades_sintomas(idSintoma, idEnfermedad) " &
                          "VALUES(" & idSintoma & "," & idEnfermedad & ");"
             Try
-                Con.Execute(insert)
+                con.Execute(insert)
             Catch ex As Exception
                 MsgBox("ERROR en asociar sintoma enfermedad: " & ex.Message)
-                Con.RollbackTrans()
+                con.RollbackTrans()
             End Try
         End If
     End Sub

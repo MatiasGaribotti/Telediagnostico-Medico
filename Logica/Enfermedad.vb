@@ -13,7 +13,14 @@
         Me.Id = -1
         Me.Nombre = "Default"
         Me.Descripcion = "Default"
-        Me.Urgencia = "Default"
+        Me.Urgencia = Urgencias.Baja
+    End Sub
+
+    Public Sub New(nombre As String)
+        Me.Id = -1
+        Me.Nombre = nombre
+        Me.Descripcion = "Default"
+        Me.Urgencia = Urgencias.Baja
     End Sub
 
     Public Sub New(id As Short, nombre As String, descripcion As String, urgencia As Urgencias)

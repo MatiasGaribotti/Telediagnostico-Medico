@@ -23,9 +23,9 @@ Partial Class F_Sintomas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Sintomas))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btn_minimizar = New System.Windows.Forms.Button()
         Me.btn_cerrar = New System.Windows.Forms.Button()
         Me.PnlSide = New Guna.UI2.WinForms.Guna2Panel()
@@ -49,18 +49,20 @@ Partial Class F_Sintomas
         Me.LblBusqueda = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnBDelItem = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.BtnBAddItem = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.CmbBEnfermedades = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbBEnfermedad = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.CmbBTipo = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.LblEnfermedades = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LblBTipo = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LblBSintoma = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TxtBSintoma = New Guna.UI2.WinForms.Guna2TextBox()
         Me.PnlDgv = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.DgvSintomas = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
+        Me.TxtIEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtBEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
         Me.PnlSide.SuspendLayout()
         Me.PnlDgv.SuspendLayout()
         CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,6 +93,8 @@ Partial Class F_Sintomas
         'PnlSide
         '
         Me.PnlSide.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.PnlSide.Controls.Add(Me.TxtBEnfermedad)
+        Me.PnlSide.Controls.Add(Me.TxtIEnfermedad)
         Me.PnlSide.Controls.Add(Me.LblImportar)
         Me.PnlSide.Controls.Add(Me.TxtImportar)
         Me.PnlSide.Controls.Add(Me.BtnIngresar)
@@ -111,7 +115,7 @@ Partial Class F_Sintomas
         Me.PnlSide.Controls.Add(Me.LblBusqueda)
         Me.PnlSide.Controls.Add(Me.BtnBDelItem)
         Me.PnlSide.Controls.Add(Me.BtnBAddItem)
-        Me.PnlSide.Controls.Add(Me.CmbBEnfermedades)
+        Me.PnlSide.Controls.Add(Me.CmbBEnfermedad)
         Me.PnlSide.Controls.Add(Me.CmbBTipo)
         Me.PnlSide.Controls.Add(Me.LblEnfermedades)
         Me.PnlSide.Controls.Add(Me.LblBTipo)
@@ -128,7 +132,7 @@ Partial Class F_Sintomas
         '
         Me.LblImportar.BackColor = System.Drawing.Color.Transparent
         Me.LblImportar.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblImportar.Location = New System.Drawing.Point(56, 592)
+        Me.LblImportar.Location = New System.Drawing.Point(56, 651)
         Me.LblImportar.Name = "LblImportar"
         Me.LblImportar.Size = New System.Drawing.Size(83, 27)
         Me.LblImportar.TabIndex = 80
@@ -150,7 +154,7 @@ Partial Class F_Sintomas
         Me.TxtImportar.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.TxtImportar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtImportar.HoverState.Parent = Me.TxtImportar
-        Me.TxtImportar.Location = New System.Drawing.Point(155, 589)
+        Me.TxtImportar.Location = New System.Drawing.Point(155, 648)
         Me.TxtImportar.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.TxtImportar.Name = "TxtImportar"
         Me.TxtImportar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -172,7 +176,7 @@ Partial Class F_Sintomas
         Me.BtnIngresar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnIngresar.ForeColor = System.Drawing.Color.White
         Me.BtnIngresar.HoverState.Parent = Me.BtnIngresar
-        Me.BtnIngresar.Location = New System.Drawing.Point(446, 520)
+        Me.BtnIngresar.Location = New System.Drawing.Point(446, 568)
         Me.BtnIngresar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnIngresar.Name = "BtnIngresar"
         Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
@@ -197,7 +201,7 @@ Partial Class F_Sintomas
         Me.TxtIDescripcion.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.TxtIDescripcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtIDescripcion.HoverState.Parent = Me.TxtIDescripcion
-        Me.TxtIDescripcion.Location = New System.Drawing.Point(236, 451)
+        Me.TxtIDescripcion.Location = New System.Drawing.Point(236, 491)
         Me.TxtIDescripcion.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.TxtIDescripcion.Multiline = True
         Me.TxtIDescripcion.Name = "TxtIDescripcion"
@@ -212,7 +216,7 @@ Partial Class F_Sintomas
         '
         Me.LblIDescripcion.BackColor = System.Drawing.Color.Transparent
         Me.LblIDescripcion.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIDescripcion.Location = New System.Drawing.Point(56, 451)
+        Me.LblIDescripcion.Location = New System.Drawing.Point(56, 491)
         Me.LblIDescripcion.Name = "LblIDescripcion"
         Me.LblIDescripcion.Size = New System.Drawing.Size(114, 27)
         Me.LblIDescripcion.TabIndex = 76
@@ -230,7 +234,7 @@ Partial Class F_Sintomas
         Me.BtnImportar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnImportar.ForeColor = System.Drawing.Color.White
         Me.BtnImportar.HoverState.Parent = Me.BtnImportar
-        Me.BtnImportar.Location = New System.Drawing.Point(449, 651)
+        Me.BtnImportar.Location = New System.Drawing.Point(449, 710)
         Me.BtnImportar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnImportar.Name = "BtnImportar"
         Me.BtnImportar.ShadowDecoration.Parent = Me.BtnImportar
@@ -258,7 +262,7 @@ Partial Class F_Sintomas
         Me.BtnIDelItem.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.BtnIDelItem.ForeColor = System.Drawing.Color.White
         Me.BtnIDelItem.HoverState.Parent = Me.BtnIDelItem
-        Me.BtnIDelItem.Location = New System.Drawing.Point(506, 414)
+        Me.BtnIDelItem.Location = New System.Drawing.Point(476, 453)
         Me.BtnIDelItem.Name = "BtnIDelItem"
         Me.BtnIDelItem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.BtnIDelItem.ShadowDecoration.Parent = Me.BtnIDelItem
@@ -274,7 +278,7 @@ Partial Class F_Sintomas
         Me.BtnIAddItem.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.BtnIAddItem.ForeColor = System.Drawing.Color.White
         Me.BtnIAddItem.HoverState.Parent = Me.BtnIAddItem
-        Me.BtnIAddItem.Location = New System.Drawing.Point(476, 414)
+        Me.BtnIAddItem.Location = New System.Drawing.Point(476, 411)
         Me.BtnIAddItem.Name = "BtnIAddItem"
         Me.BtnIAddItem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.BtnIAddItem.ShadowDecoration.Parent = Me.BtnIAddItem
@@ -285,6 +289,7 @@ Partial Class F_Sintomas
         'CmbIEnfermedad
         '
         Me.CmbIEnfermedad.Animated = True
+        Me.CmbIEnfermedad.AutoCompleteCustomSource.AddRange(New String() {"Hola", "Chau"})
         Me.CmbIEnfermedad.BackColor = System.Drawing.Color.Transparent
         Me.CmbIEnfermedad.BorderRadius = 6
         Me.CmbIEnfermedad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
@@ -297,7 +302,7 @@ Partial Class F_Sintomas
         Me.CmbIEnfermedad.HoverState.Parent = Me.CmbIEnfermedad
         Me.CmbIEnfermedad.ItemHeight = 30
         Me.CmbIEnfermedad.ItemsAppearance.Parent = Me.CmbIEnfermedad
-        Me.CmbIEnfermedad.Location = New System.Drawing.Point(236, 408)
+        Me.CmbIEnfermedad.Location = New System.Drawing.Point(236, 447)
         Me.CmbIEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.CmbIEnfermedad.Name = "CmbIEnfermedad"
         Me.CmbIEnfermedad.ShadowDecoration.Parent = Me.CmbIEnfermedad
@@ -308,7 +313,6 @@ Partial Class F_Sintomas
         '
         Me.CmbITipo.Animated = True
         Me.CmbITipo.BackColor = System.Drawing.Color.Transparent
-        Me.CmbITipo.BorderRadius = 6
         Me.CmbITipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.CmbITipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbITipo.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -330,7 +334,7 @@ Partial Class F_Sintomas
         '
         Me.LblIEnfermedades.BackColor = System.Drawing.Color.Transparent
         Me.LblIEnfermedades.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIEnfermedades.Location = New System.Drawing.Point(56, 413)
+        Me.LblIEnfermedades.Location = New System.Drawing.Point(56, 410)
         Me.LblIEnfermedades.Name = "LblIEnfermedades"
         Me.LblIEnfermedades.Size = New System.Drawing.Size(138, 27)
         Me.LblIEnfermedades.TabIndex = 69
@@ -394,7 +398,7 @@ Partial Class F_Sintomas
         Me.BtnFiltrar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnFiltrar.ForeColor = System.Drawing.Color.White
         Me.BtnFiltrar.HoverState.Parent = Me.BtnFiltrar
-        Me.BtnFiltrar.Location = New System.Drawing.Point(449, 261)
+        Me.BtnFiltrar.Location = New System.Drawing.Point(449, 276)
         Me.BtnFiltrar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnFiltrar.Name = "BtnFiltrar"
         Me.BtnFiltrar.ShadowDecoration.Parent = Me.BtnFiltrar
@@ -442,7 +446,7 @@ Partial Class F_Sintomas
         Me.BtnBDelItem.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.BtnBDelItem.ForeColor = System.Drawing.Color.White
         Me.BtnBDelItem.HoverState.Parent = Me.BtnBDelItem
-        Me.BtnBDelItem.Location = New System.Drawing.Point(506, 197)
+        Me.BtnBDelItem.Location = New System.Drawing.Point(476, 236)
         Me.BtnBDelItem.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.BtnBDelItem.Name = "BtnBDelItem"
         Me.BtnBDelItem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
@@ -459,7 +463,7 @@ Partial Class F_Sintomas
         Me.BtnBAddItem.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.BtnBAddItem.ForeColor = System.Drawing.Color.White
         Me.BtnBAddItem.HoverState.Parent = Me.BtnBAddItem
-        Me.BtnBAddItem.Location = New System.Drawing.Point(476, 197)
+        Me.BtnBAddItem.Location = New System.Drawing.Point(476, 195)
         Me.BtnBAddItem.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.BtnBAddItem.Name = "BtnBAddItem"
         Me.BtnBAddItem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
@@ -468,27 +472,27 @@ Partial Class F_Sintomas
         Me.BtnBAddItem.TabIndex = 61
         Me.BtnBAddItem.Text = "+"
         '
-        'CmbBEnfermedades
+        'CmbBEnfermedad
         '
-        Me.CmbBEnfermedades.Animated = True
-        Me.CmbBEnfermedades.BackColor = System.Drawing.Color.Transparent
-        Me.CmbBEnfermedades.BorderRadius = 6
-        Me.CmbBEnfermedades.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmbBEnfermedades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmbBEnfermedades.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbBEnfermedades.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbBEnfermedades.FocusedState.Parent = Me.CmbBEnfermedades
-        Me.CmbBEnfermedades.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.CmbBEnfermedades.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmbBEnfermedades.HoverState.Parent = Me.CmbBEnfermedades
-        Me.CmbBEnfermedades.ItemHeight = 30
-        Me.CmbBEnfermedades.ItemsAppearance.Parent = Me.CmbBEnfermedades
-        Me.CmbBEnfermedades.Location = New System.Drawing.Point(236, 191)
-        Me.CmbBEnfermedades.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.CmbBEnfermedades.Name = "CmbBEnfermedades"
-        Me.CmbBEnfermedades.ShadowDecoration.Parent = Me.CmbBEnfermedades
-        Me.CmbBEnfermedades.Size = New System.Drawing.Size(230, 36)
-        Me.CmbBEnfermedades.TabIndex = 60
+        Me.CmbBEnfermedad.Animated = True
+        Me.CmbBEnfermedad.BackColor = System.Drawing.Color.Transparent
+        Me.CmbBEnfermedad.BorderRadius = 6
+        Me.CmbBEnfermedad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbBEnfermedad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbBEnfermedad.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBEnfermedad.FocusedState.Parent = Me.CmbBEnfermedad
+        Me.CmbBEnfermedad.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CmbBEnfermedad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbBEnfermedad.HoverState.Parent = Me.CmbBEnfermedad
+        Me.CmbBEnfermedad.ItemHeight = 30
+        Me.CmbBEnfermedad.ItemsAppearance.Parent = Me.CmbBEnfermedad
+        Me.CmbBEnfermedad.Location = New System.Drawing.Point(236, 230)
+        Me.CmbBEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.CmbBEnfermedad.Name = "CmbBEnfermedad"
+        Me.CmbBEnfermedad.ShadowDecoration.Parent = Me.CmbBEnfermedad
+        Me.CmbBEnfermedad.Size = New System.Drawing.Size(230, 36)
+        Me.CmbBEnfermedad.TabIndex = 60
         '
         'CmbBTipo
         '
@@ -585,92 +589,6 @@ Partial Class F_Sintomas
         Me.PnlDgv.Size = New System.Drawing.Size(1347, 1080)
         Me.PnlDgv.TabIndex = 24
         '
-        'BtnMinimize
-        '
-        Me.BtnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMinimize.Animated = True
-        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
-        Me.BtnMinimize.IconColor = System.Drawing.Color.White
-        Me.BtnMinimize.Location = New System.Drawing.Point(1259, 0)
-        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnMinimize.Name = "BtnMinimize"
-        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
-        Me.BtnMinimize.Size = New System.Drawing.Size(45, 29)
-        Me.BtnMinimize.TabIndex = 25
-        '
-        'BtnExit
-        '
-        Me.BtnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnExit.Animated = True
-        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnExit.HoverState.Parent = Me.BtnExit
-        Me.BtnExit.IconColor = System.Drawing.Color.White
-        Me.BtnExit.Location = New System.Drawing.Point(1304, 0)
-        Me.BtnExit.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
-        Me.BtnExit.Size = New System.Drawing.Size(45, 29)
-        Me.BtnExit.TabIndex = 24
-        '
-        'DgvSintomas
-        '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.DgvSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
-        Me.DgvSintomas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvSintomas.BackgroundColor = System.Drawing.Color.White
-        Me.DgvSintomas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DgvSintomas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvSintomas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.DgvSintomas.ColumnHeadersHeight = 4
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvSintomas.DefaultCellStyle = DataGridViewCellStyle9
-        Me.DgvSintomas.EnableHeadersVisualStyles = False
-        Me.DgvSintomas.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSintomas.Location = New System.Drawing.Point(23, 121)
-        Me.DgvSintomas.Name = "DgvSintomas"
-        Me.DgvSintomas.RowHeadersVisible = False
-        Me.DgvSintomas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvSintomas.Size = New System.Drawing.Size(1300, 839)
-        Me.DgvSintomas.TabIndex = 23
-        Me.DgvSintomas.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
-        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.DgvSintomas.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.DgvSintomas.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSintomas.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSintomas.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvSintomas.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvSintomas.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.DgvSintomas.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.DgvSintomas.ThemeStyle.HeaderStyle.Height = 4
-        Me.DgvSintomas.ThemeStyle.ReadOnly = False
-        Me.DgvSintomas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvSintomas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvSintomas.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvSintomas.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.DgvSintomas.ThemeStyle.RowsStyle.Height = 22
-        Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
         'BtnEliminar
         '
         Me.BtnEliminar.Animated = True
@@ -710,6 +628,144 @@ Partial Class F_Sintomas
         Me.BtnModificar.Size = New System.Drawing.Size(115, 51)
         Me.BtnModificar.TabIndex = 65
         Me.BtnModificar.Text = "Modificar"
+        '
+        'BtnMinimize
+        '
+        Me.BtnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMinimize.Animated = True
+        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
+        Me.BtnMinimize.IconColor = System.Drawing.Color.White
+        Me.BtnMinimize.Location = New System.Drawing.Point(1259, 0)
+        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnMinimize.Name = "BtnMinimize"
+        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
+        Me.BtnMinimize.Size = New System.Drawing.Size(45, 29)
+        Me.BtnMinimize.TabIndex = 25
+        '
+        'BtnExit
+        '
+        Me.BtnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnExit.Animated = True
+        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnExit.HoverState.Parent = Me.BtnExit
+        Me.BtnExit.IconColor = System.Drawing.Color.White
+        Me.BtnExit.Location = New System.Drawing.Point(1304, 0)
+        Me.BtnExit.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
+        Me.BtnExit.Size = New System.Drawing.Size(45, 29)
+        Me.BtnExit.TabIndex = 24
+        '
+        'DgvSintomas
+        '
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
+        Me.DgvSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        Me.DgvSintomas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvSintomas.BackgroundColor = System.Drawing.Color.White
+        Me.DgvSintomas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvSintomas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvSintomas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        Me.DgvSintomas.ColumnHeadersHeight = 4
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvSintomas.DefaultCellStyle = DataGridViewCellStyle18
+        Me.DgvSintomas.EnableHeadersVisualStyles = False
+        Me.DgvSintomas.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvSintomas.Location = New System.Drawing.Point(23, 121)
+        Me.DgvSintomas.Name = "DgvSintomas"
+        Me.DgvSintomas.RowHeadersVisible = False
+        Me.DgvSintomas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvSintomas.Size = New System.Drawing.Size(1300, 839)
+        Me.DgvSintomas.TabIndex = 23
+        Me.DgvSintomas.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvSintomas.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DgvSintomas.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.Height = 4
+        Me.DgvSintomas.ThemeStyle.ReadOnly = False
+        Me.DgvSintomas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvSintomas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvSintomas.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvSintomas.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DgvSintomas.ThemeStyle.RowsStyle.Height = 22
+        Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'TxtIEnfermedad
+        '
+        Me.TxtIEnfermedad.Animated = True
+        Me.TxtIEnfermedad.BorderRadius = 6
+        Me.TxtIEnfermedad.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIEnfermedad.DefaultText = ""
+        Me.TxtIEnfermedad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIEnfermedad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIEnfermedad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIEnfermedad.DisabledState.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIEnfermedad.FocusedState.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.TxtIEnfermedad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIEnfermedad.HoverState.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.Location = New System.Drawing.Point(236, 408)
+        Me.TxtIEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.TxtIEnfermedad.Name = "TxtIEnfermedad"
+        Me.TxtIEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIEnfermedad.PlaceholderText = ""
+        Me.TxtIEnfermedad.SelectedText = ""
+        Me.TxtIEnfermedad.ShadowDecoration.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.Size = New System.Drawing.Size(230, 32)
+        Me.TxtIEnfermedad.TabIndex = 81
+        '
+        'TxtBEnfermedad
+        '
+        Me.TxtBEnfermedad.Animated = True
+        Me.TxtBEnfermedad.BorderRadius = 6
+        Me.TxtBEnfermedad.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBEnfermedad.DefaultText = ""
+        Me.TxtBEnfermedad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBEnfermedad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBEnfermedad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBEnfermedad.DisabledState.Parent = Me.TxtBEnfermedad
+        Me.TxtBEnfermedad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBEnfermedad.FocusedState.Parent = Me.TxtBEnfermedad
+        Me.TxtBEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.TxtBEnfermedad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBEnfermedad.HoverState.Parent = Me.TxtBEnfermedad
+        Me.TxtBEnfermedad.Location = New System.Drawing.Point(236, 191)
+        Me.TxtBEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.TxtBEnfermedad.Name = "TxtBEnfermedad"
+        Me.TxtBEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBEnfermedad.PlaceholderText = ""
+        Me.TxtBEnfermedad.SelectedText = ""
+        Me.TxtBEnfermedad.ShadowDecoration.Parent = Me.TxtBEnfermedad
+        Me.TxtBEnfermedad.Size = New System.Drawing.Size(230, 32)
+        Me.TxtBEnfermedad.TabIndex = 82
         '
         'F_Sintomas
         '
@@ -754,7 +810,7 @@ Partial Class F_Sintomas
     Friend WithEvents LblBusqueda As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BtnBDelItem As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents BtnBAddItem As Guna.UI2.WinForms.Guna2CircleButton
-    Friend WithEvents CmbBEnfermedades As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbBEnfermedad As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmbBTipo As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents LblEnfermedades As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblBTipo As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -766,4 +822,6 @@ Partial Class F_Sintomas
     Friend WithEvents BtnExit As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents TxtBEnfermedad As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtIEnfermedad As Guna.UI2.WinForms.Guna2TextBox
 End Class

@@ -8,7 +8,11 @@ Public Class F_Sintomas
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         Dim sintoma = GetSintoma()
-        sintoma.Insert()
+        If sintoma.Insert() Then
+            MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
+        Else
+            MsgBox("No se ingresó el síntoma.", MsgBoxStyle.Critical)
+        End If
 
     End Sub
 
@@ -18,14 +22,46 @@ Public Class F_Sintomas
     End Function
     Private Function GetSintoma() As Sintoma
         If ValidateFields() Then
-            Dim sintoma As New Sintoma() With {
-                .Nombre = TxtISintoma.Text,
-                .Descripcion = TxtIDescripcion.Text,
-                .Tipo = CmbITipo.SelectedItem.ToString()
-            }
+            Dim tipo = [Enum].Parse(GetType(Sintoma.TiposSintomas), CmbITipo.SelectedIndex)
+
+            Dim sintoma As New Sintoma(TxtISintoma.Text, TxtIDescripcion.Text, tipo)
+            Dim cant_enfermedades = CmbIEnfermedad.Items.Count
+
+            For item As Integer = 0 To cant_enfermedades - 1
+                Dim nombreEnfermedad As String = CmbIEnfermedad.Items.Item(item).ToString
+                sintoma.AsociarEnfermedad(New Enfermedad(nombreEnfermedad))
+            Next
+
             Return sintoma
         Else
             Return Nothing
         End If
     End Function
+
+    Private Sub PnlSide_Paint(sender As Object, e As PaintEventArgs) Handles PnlSide.Paint
+
+    End Sub
+
+    Private Sub F_Sintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CmbITipo.DataSource = [Enum].GetValues(GetType(Sintoma.TiposSintomas))
+        CmbBTipo.DataSource = [Enum].GetValues(GetType(Sintoma.TiposSintomas))
+    End Sub
+
+    Private Sub BtnBAddItem_Click(sender As Object, e As EventArgs) Handles BtnBAddItem.Click
+        CmbBEnfermedad.Items.Add(TxtBEnfermedad.Text)
+        TxtBEnfermedad.Text = ""
+    End Sub
+
+    Private Sub BtnIAddItem_Click(sender As Object, e As EventArgs) Handles BtnIAddItem.Click
+        CmbIEnfermedad.Items.Add(TxtIEnfermedad.Text)
+        TxtIEnfermedad.Text = ""
+    End Sub
+
+    Private Sub BtnBDelItem_Click(sender As Object, e As EventArgs) Handles BtnBDelItem.Click
+        CmbBEnfermedad.Items.Remove(CmbBEnfermedad.SelectedItem)
+    End Sub
+
+    Private Sub BtnIDelItem_Click(sender As Object, e As EventArgs) Handles BtnIDelItem.Click
+        CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
+    End Sub
 End Class

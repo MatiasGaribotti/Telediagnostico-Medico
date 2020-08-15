@@ -51,17 +51,15 @@ Public Class Sintoma
         Dim DBEnfermedad As New DEnfermedad("admin", "123456789")
         Dim idEnfermedades As New List(Of Short)
 
-        MsgBox("tipo Sintoma: " & Tipo)
-
         'Veificar que existan las enfermedades
-        Dim existenEnfermedades As Boolean
+        Dim existenEnfermedades = False
 
         For Each enfermedad As Enfermedad In Enfermedades
             Dim id = DBEnfermedad.Find(enfermedad.Nombre)
+
             If id <> -1 Then
                 idEnfermedades.Add(id)
-            Else
-                existenEnfermedades = False
+                existenEnfermedades = True
             End If
         Next
 

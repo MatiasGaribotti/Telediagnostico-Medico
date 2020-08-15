@@ -10,36 +10,51 @@ Public Class DEnfermedad
     End Sub
 
     Public Function Find(nombre) As Short
-        Dim id = -1
+        Dim id As Short = -1
         Dim recordSet As Recordset
         Dim query = "SELECT id FROM enfermedades " &
                     "WHERE nombre='" & nombre & "';"
 
         If HasConnection() Then
+            'Obtengo la conexión
             Dim con = Conectar()
 
             Try
                 recordSet = con.Execute(query)
 
-                If recordSet.RecordCount = 0 Then
-                    MsgBox("No se ha encontrado la enfermedad " & nombre & ".")
-                    id = -1
 
-                ElseIf recordSet.RecordCount > 1 Then
-                    MsgBox("Se ha encontrado más de una enfermedad.")
-                    id = -1
-                ElseIf recordSet.RecordCount = 1 Then
-                    'Mensaje de Debug
-                    Console.WriteLine("ENFERMEDAD FOUND: " & nombre & "," & id)
-                    id = recordSet.Fields("id").Value
+                'Si BOF (antes del primer registro) es verdadero
+                'quiere decir que no hay registros.
+                'No se encontró ninguna enfermedad con ese nombre.
+                If Not recordSet.BOF Then
+
+                    'Cuento la cantidad de registros
+                    'Solo me servirá si el nombre coincide con
+                    'una única enfermedad
+                    Dim count As Integer = 0
+
+                    ' Mientras que no esté mas adelante que
+                    ' el último registro (EOF), ejecuto.
+                    While Not recordSet.EOF
+                        count += 1
+                        id = CShort(recordSet.Fields("id").Value)
+                        recordSet.MoveNext()
+                    End While
+
+                    If count > 1 Then
+                        MsgBox("Más de una enfermedad encontrada para el nombre: " & nombre, MsgBoxStyle.Critical)
+                    End If
+                Else
+                    'No se encontraron registros
+                    MsgBox("No se encontró ninguna enfermedad con el nombre: " & nombre)
                 End If
 
             Catch ex As Exception
-                MsgBox("No se ha encontrado la enfermedad " & nombre & ".")
-                id = -1
+                MsgBox("ERROR: " & ex.Message, MsgBoxStyle.Critical, "Find Enfermedad")
             End Try
-        End If
 
+            con.Close()
+        End If
         Return id
     End Function
 End Class
