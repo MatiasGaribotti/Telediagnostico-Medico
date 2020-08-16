@@ -50,14 +50,7 @@ Public Class Paciente
                    fecha_nacimiento As Date,
                    password As String,
                    email As String)
-        Me.Ci = ci
-        Me.Nombre = nombre
-        Me.ApellidoP = apellidoP
-        Me.ApellidoM = apellidoM
-        Me.Direccion = direccion
-        Me.Telefono = telefono
-        Me.Fecha_Nacimiento = fecha_nacimiento
-        Me.Password = password
+        MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
         Me.Email = email
         Me.NucleoFlia = "Sin ingresar"
         Me.AntecedentesFlia = "Sin ingresar"
@@ -67,32 +60,49 @@ Public Class Paciente
     End Sub
 
     Public Sub Insert()
+        Dim db As DPaciente
 
-        Dim db As New DPaciente("admin", "123456789")
-        Dim result = db.Insert(Ci,
-                               Nombre,
-                               ApellidoP,
-                               ApellidoM,
-                               Direccion.Calle,
-                               Direccion.Nro,
-                               Direccion.Localidad,
-                               Direccion.Departamento,
-                               Direccion.Detalle,
-                               Telefono,
-                               Format(Fecha_Nacimiento, "yyyy-MM-dd"),
-                               Password,
-                               Email,
-                               NucleoFlia,
-                               AntecedentesFlia,
-                               AntecedentesLab,
-                               Medicacion,
-                               Tratamiento)
-        If result Then
-            MsgBox("Paciente Ingresado exitosamente", MsgBoxStyle.Information, "Información")
-        Else
-            MsgBox("No se pudo ingresar al paciente.", MsgBoxStyle.Critical, "Error en el ingreso de paciente")
+        If Env.UserType = Env.UserTypes.Recepcionista Then
+            db = New DPaciente(
+                "rrhh",
+                "dbrrhhST",
+                Ci,
+                Nombre,
+                ApellidoP,
+                ApellidoM,
+                New DDireccion("rrhh",
+                                "dbrrhhST",
+                                Direccion.Calle,
+                                Direccion.Nro,
+                                Direccion.Localidad,
+                                Direccion.Departamento,
+                                Direccion.Detalle),
+                Telefono,
+                Fecha_Nacimiento,
+                Password,
+                Email,
+                NucleoFlia,
+                AntecedentesFlia,
+                AntecedentesLab,
+                Medicacion,
+                Tratamiento)
+
+        ElseIf Env.UserType = Env.UserTypes.Administrador Then
+            db = New DPaciente("administrador", "dbadminST")
 
         End If
+        Try
+            Dim result = db.Insert()
+            If result Then
+                MsgBox("Paciente Ingresado exitosamente", MsgBoxStyle.Information, "Información")
+            Else
+                MsgBox("No se pudo ingresar al paciente.", MsgBoxStyle.Critical, "Error en el ingreso de paciente")
+
+            End If
+
+        Catch ex As Exception
+            Console.WriteLine("ERROR en Paciente trycatch" & vbCrLf & ex.Message)
+        End Try
     End Sub
 
     Public Sub New(ci As Integer, pass As String)

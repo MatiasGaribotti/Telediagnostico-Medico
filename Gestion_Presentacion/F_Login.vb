@@ -9,23 +9,26 @@ Public Class F_Login
     Public Sub New()
         'Se obtienen el idioma a emplear de la propiedad estática (Shared)
         'Ubicada en la clase LanguageControl
+        Env.CurrentApp = Env.Apps.Gestion
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
     End Sub
 
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click
 
-        Dim user = GetUser()
+        If ValidateFields() Then
+            Dim user = GetUser()
 
-        If Authentication.Authenticate(user) Then
-            'Abre el formulario de ABM y cierra este
-            F_ABM.Show()
-            Me.Close()
-            Env.CurrentUser = user
-            'Env.UserType = 
-        Else
-            MsgBox("CI y/o contraseña incorrecta.")
+            If Authentication.Authenticate(user) Then
+                'Abre el formulario de ABM y cierra este
+                F_ABM.Show()
+                Me.Close()
+                Env.CurrentUser = user
+            Else
+                MsgBox("CI y/o contraseña incorrecta.")
+            End If
         End If
+
     End Sub
 
     Private Sub BtnChangeLang_Click(sender As Object, e As EventArgs) Handles BtnChangeLang.Click
@@ -50,24 +53,26 @@ Public Class F_Login
         Dim ci = TxtCi.Text
         Dim password = TxtPassword.Text
 
-        Dim expression As String = ""
-        If Regex.IsMatch(ci, expression) Then
-            'valid = False
-        ElseIf Regex.IsMatch(password, expression) Then
-            'valid = False
+        If Not ci.Equals("") And Not password.Equals("") Then
+            'Expresion regular que valida los campos
+            Dim expression As String = ""
+            If Regex.IsMatch(ci, expression) Then
+                'valid = False
+            ElseIf Regex.IsMatch(password, expression) Then
+                'valid = False
+            End If
+        Else
+            MsgBox("La CI o contraseña no pueden ser vacías.")
+            valid = False
         End If
+
+
 
         Return valid
     End Function
 
     Private Function GetUser() As Empleado
-        If ValidateFields() Then
-            Return New Empleado(CInt(TxtCi.Text), TxtPassword.Text)
-        Else
-            MsgBox("El formato de la CI no es válido.")
-            Return Nothing
-        End If
-
+        Return New Empleado(CInt(TxtCi.Text), TxtPassword.Text)
     End Function
 
     Private Sub Btn_Exit_Click(sender As Object, e As EventArgs) Handles Btn_Exit.Click

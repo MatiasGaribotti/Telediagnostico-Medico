@@ -12,10 +12,11 @@ Public Class Empleado
     End Sub
 
     Public Function NuevoTrabajo(horario As Horario) As Boolean
-        Dim Db As New DHorario()
+        Dim Db As New DHorario("rrhh", "dbrrhhST", Me.Ci, horario.Sucursal, horario.Dia, horario.HoraInicio, horario.HoraFin)
 
         Try
-            Db.Insert(Ci, horario.Sucursal, horario.Dia, horario.HoraInicio, horario.HoraFin)
+            Db.Insert()
+            Horarios.Add(horario)
             Return True
         Catch ex As Exception
             Return False

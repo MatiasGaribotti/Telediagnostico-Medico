@@ -8,10 +8,54 @@ Public Class Authentication
 
     Public Shared Function Authenticate(user As Persona) As Boolean
         Dim authenticated = False
-        Dim db As New DAuthentication("system", "kHzRj1&5")
-        'Dim RecordSet As RecordSet
+        Dim db As New DAuthentication()
+        Dim results As List(Of Boolean) = db.Find(user.Ci, user.Password)
 
-        'Return authenticated
-        Return True
+        If results.Count = 5 Then
+
+            Select Case Env.CurrentApp
+                Case Env.Apps.Gestion
+                    'Administrador
+                    If results.ElementAt(1) = True Then
+                        Env.UserType = Env.UserTypes.Administrador
+                        authenticated = True
+
+                        'RRHH
+                    ElseIf results.ElementAt(3) = True Then
+                        Env.UserType = Env.UserTypes.RRHH
+                        authenticated = True
+
+                        'Recepcionista
+                    ElseIf results.ElementAt(4) = True Then
+                        Env.UserType = Env.UserTypes.Recepcionista
+                        authenticated = True
+
+                        'Ninguno de los anteriores
+                    Else
+                        authenticated = False
+                    End If
+
+                Case Env.Apps.Medico
+                    'Solo tienen acceso los médicos
+                    If results.ElementAt(0) = True Then
+                        Env.UserType = Env.UserTypes.Medico
+                        authenticated = True
+                    Else
+                        authenticated = False
+                    End If
+
+                Case Env.Apps.Paciente
+                    If results.ElementAt(2) = True Then
+                        Env.UserType = Env.UserTypes.Paciente
+                        authenticated = True
+                    Else
+                        authenticated = False
+                    End If
+            End Select
+        Else
+            authenticated = False
+        End If
+
+        Return authenticated
     End Function
 End Class

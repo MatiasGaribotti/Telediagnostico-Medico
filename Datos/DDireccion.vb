@@ -1,5 +1,5 @@
-﻿Public Class Direccion
-
+﻿Public Class DDireccion
+    Inherits DBConnection
     Public Property Id As Integer
     Public Property Calle As String
     Public Property Nro As Integer
@@ -30,6 +30,7 @@
     End Enum
 
     Public Sub New()
+        MyBase.New()
         Id = -1
         Calle = "Default"
         Nro = -1
@@ -37,37 +38,54 @@
         Departamento = Departamentos.Montevideo
     End Sub
 
-    Public Sub New(
-            id As UInteger,
-            calle As String,
-            nro As Integer,
-            localidad As String,
-            departamento As Departamentos,
-            detalle As String)
-        Me.Id = id
-        Me.Calle = calle
-        Me.Nro = nro
-        Me.Localidad = localidad
-        Me.Departamento = departamento
-        Me.Detalle = detalle
+    Public Sub New(Id As UInteger,
+                   Calle As String,
+                   Nro As Integer,
+                   Localidad As String,
+                   Departamento As Departamentos,
+                   Detalle As String)
+        MyBase.New()
+        Me.Id = Id
+        Me.Calle = Calle
+        Me.Nro = Nro
+        Me.Localidad = Localidad
+        Me.Departamento = Departamento
+        Me.Detalle = Detalle
     End Sub
-    Public Sub New(calle As String,
+    Public Sub New(DB_User As String,
+                   DB_Password As String,
+                   calle As String,
                    nro As Integer,
                    localidad As String,
                    departamento As Departamentos,
                    detalle As String)
-        Me.New(calle, nro, localidad, departamento)
+        Me.DB_User = DB_User
+        Me.DB_Password = DB_Password
+        Me.Calle = calle
+        Me.Nro = nro
+        Me.Localidad = localidad
+        Me.Departamento = departamento
         Me.Detalle = detalle
     End Sub
 
-    Public Sub New(calle As String,
+    Public Sub New(DB_User As String,
+                   DB_Password As String,
+                   calle As String,
                    nro As Integer,
                    localidad As String,
                    departamento As Departamentos)
+        Me.DB_User = DB_User
+        Me.DB_Password = DB_Password
         Me.Calle = calle
         Me.Nro = nro
         Me.Localidad = localidad
         Me.Departamento = departamento
     End Sub
+
+    Public Function Insert() As Boolean
+        If HasConnection() Then
+            Dim con = Conectar()
+        End If
+    End Function
 
 End Class

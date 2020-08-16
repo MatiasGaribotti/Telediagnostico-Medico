@@ -16,6 +16,11 @@ Public Class DSintoma
 
     Public Sub New(user As String, password As String)
         MyBase.New(user, password)
+        Me.Id = -1
+        Me.Nombre = "Default"
+        Me.Descripcion = "Default"
+        Me.Tipo = TiposSintomas.Cabeza
+        Me.Enfermedades = New List(Of DEnfermedad)
     End Sub
 
     Public Sub New()
@@ -27,11 +32,13 @@ Public Class DSintoma
         Me.Enfermedades = New List(Of DEnfermedad)
     End Sub
 
-    Public Sub New(id As Short,
+    Public Sub New(user As String, password As String,
+                  id As Short,
                    nombre As String,
                    descripcion As String,
                    tipo As TiposSintomas,
                    enfermedades As List(Of DEnfermedad))
+        MyBase.New(user, password)
         Me.Id = id
         Me.Nombre = nombre
         Me.Descripcion = descripcion
@@ -39,7 +46,8 @@ Public Class DSintoma
         Me.Enfermedades = enfermedades
     End Sub
 
-    Public Sub New(nombre As String, descripcion As String, Tipo As TiposSintomas)
+    Public Sub New(user As String, password As String, nombre As String, descripcion As String, Tipo As TiposSintomas)
+        MyBase.New(user, password)
         Me.Id = -1
         Me.Nombre = nombre
         Me.Descripcion = descripcion

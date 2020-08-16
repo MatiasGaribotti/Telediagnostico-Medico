@@ -68,10 +68,13 @@
     <Compile Include="DBConnection.vb" />
     <Compile Include="DChat.vb" />
     <Compile Include="DConsulta.vb" />
+    <Compile Include="DDireccion.vb" />
+    <Compile Include="DEmpleado.vb" />
     <Compile Include="DEnfermedad.vb" />
     <Compile Include="DHorario.vb" />
     <Compile Include="DMedico.vb" />
     <Compile Include="DPaciente.vb" />
+    <Compile Include="DPersona.vb" />
     <Compile Include="DSintoma.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

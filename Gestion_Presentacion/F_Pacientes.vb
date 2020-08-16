@@ -31,11 +31,8 @@ Public Class F_Pacientes
     End Sub
 
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
-        For Each departamento As String In Direccion.Departamentos
-            CmbIDepartamento.Items.Add(departamento)
-        Next
+        CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
     End Sub
-
     Private Sub TxtICi_TextChanged(sender As Object, e As EventArgs) Handles TxtICi.TextChanged
 
     End Sub

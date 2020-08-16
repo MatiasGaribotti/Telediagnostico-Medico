@@ -1,34 +1,77 @@
 ﻿Imports ADODB
 Public Class DPaciente
-    Inherits DBConnection
+    Inherits DPersona
 
-    Public Sub New()
-        MyBase.New()
-    End Sub
+    Public Property Email As String
+    Public Property NucleoFlia As String
+    Public Property AntecedentesFlia As String
+    Public Property AntecedentesLab As String
+    Public Property Medicacion As String
+    Public Property Tratamiento As String
 
     Public Sub New(user As String, password As String)
         MyBase.New(user, password)
     End Sub
 
-    Public Function Insert(
+    'Constructor comúm completo
+    Public Sub New(
+            DB_User As String,
+            DB_Password As String,
             ci As Integer,
             nombre As String,
             apellidoP As String,
             apellidoM As String,
-            calle As String,
-            nro As Integer,
-            localidad As String,
-            departamento As String,
-            detalle As String,
+            direccion As DDireccion,
             telefono As Integer,
-            fecha_nacimiento As String,
+            fecha_nacimiento As Date,
             password As String,
             email As String,
             NucleoFlia As String,
             AntecedentesFlia As String,
             antecedentesLab As String,
             medicacion As String,
-            tratamiento As String) As Boolean
+            tratamiento As String)
+        MyBase.New(DB_User, DB_Password, ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
+        Me.Ci = ci
+        Me.Nombre = nombre
+        Me.ApellidoP = apellidoP
+        Me.ApellidoM = apellidoM
+        Me.Direccion = direccion
+        Me.Telefono = telefono
+        Me.Fecha_Nacimiento = fecha_nacimiento
+        Me.User_Password = password
+        Me.Email = email
+        Me.NucleoFlia = NucleoFlia
+        Me.AntecedentesFlia = AntecedentesFlia
+        Me.AntecedentesLab = antecedentesLab
+        Me.Medicacion = medicacion
+        Me.Tratamiento = tratamiento
+    End Sub
+
+    ' Constructor común Parcial
+    Public Sub New(
+            DB_User As String,
+            DB_Password As String,
+            ci As Integer,
+            nombre As String,
+            apellidoP As String,
+            apellidoM As String,
+            direccion As DDireccion,
+            telefono As Integer,
+            fecha_nacimiento As Date,
+            password As String,
+            email As String)
+        MyBase.New(DB_User, DB_Password, ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
+        Me.Email = email
+        Me.NucleoFlia = "Sin ingresar"
+        Me.AntecedentesFlia = "Sin ingresar"
+        Me.AntecedentesLab = "Sin ingresar"
+        Me.Medicacion = "Sin ingresar"
+        Me.Tratamiento = "Sin ingresar"
+    End Sub
+
+
+    Public Function Insert() As Boolean
 
         If HasConnection() Then
 
@@ -38,18 +81,18 @@ Public Class DPaciente
             Dim insertDireccion = "INSERT INTO direcciones" &
                                    "(calle, numero, localidad, departamento, detalle)" &
                                    "VALUES ('" &
-                                   calle & "'," &
-                                   nro & ",'" &
-                                   localidad & "','" &
-                                   departamento & "','" &
-                                   detalle & "');"
+                                   Me.Direccion.Calle & "'," &
+                                   Me.Direccion.Nro & ",'" &
+                                   Me.Direccion.Localidad & "','" &
+                                   Me.Direccion.Departamento & "','" &
+                                   Me.Direccion.Detalle & "');"
 
             ' Consulta para obtener el id de la dirección ingresada
             Dim getIdDireccion = "SELECT id FROM direcciones" &
-                                  " WHERE calle='" & calle & "'" &
-                                  " AND numero='" & nro & "'" &
-                                  " AND localidad='" & localidad & "'" &
-                                  " AND departamento='" & departamento & "';"
+                                  " WHERE calle='" & Me.Direccion.Calle & "'" &
+                                  " AND numero='" & Me.Direccion.Nro & "'" &
+                                  " AND localidad='" & Me.Direccion.Localidad & "'" &
+                                  " AND departamento='" & Me.Direccion.Departamento & "';"
 
             'Abro la conexión con la base de datos
             Dim con As Connection = Conectar()
@@ -85,20 +128,20 @@ Public Class DPaciente
                                   " password," &
                                   " idDireccion)" &
                                   "VALUES(" &
-                                  ci & ",'" &
-                                  nombre & "','" &
-                                  apellidoP & "','" &
-                                  apellidoM & "','" &
-                                  fecha_nacimiento & "'," &
-                                  telefono & "," &
+                                  Ci & ",'" &
+                                  Nombre & "','" &
+                                  ApellidoP & "','" &
+                                  ApellidoM & "','" &
+                                  Format(Fecha_Nacimiento, "yyyy-MM-dd") & "'," &
+                                  Telefono & "," &
                                   "True" & ",'" &
-                                  email & "','" &
+                                  Email & "','" &
                                   NucleoFlia & "','" &
                                   AntecedentesFlia & "','" &
-                                  antecedentesLab & "','" &
-                                  medicacion & "','" &
-                                  tratamiento & "','" &
-                                  password & "'," &
+                                  AntecedentesLab & "','" &
+                                  Medicacion & "','" &
+                                  Tratamiento & "','" &
+                                  User_Password & "'," &
                                   idDireccion &
                                   ");"
                 MsgBox("Query Paciente: " & insertPaciente)

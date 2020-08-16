@@ -11,7 +11,7 @@ Public Class F_Login
 
     End Sub
 
-    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+    Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         F_Sintomas.Show()
 
         Me.Hide()

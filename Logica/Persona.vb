@@ -1,5 +1,4 @@
-﻿Imports System.Diagnostics.Eventing.Reader
-
+﻿
 Public MustInherit Class Persona
     Public Property Ci As Integer
     Public Property Nombre As String
@@ -31,6 +30,25 @@ Public MustInherit Class Persona
         Me.Fecha_Nacimiento = New Date(1, 1, 1)
         Me.Password = password
     End Sub
+
+    Public Sub New(ci As Integer,
+                   nombre As String,
+                   apellidoP As String,
+                   apellidoM As String,
+                   direccion As Direccion,
+                   telefono As Integer,
+                   fecha_Nacimiento As Date,
+                   password As String)
+        Me.Ci = ci
+        Me.Nombre = nombre
+        Me.ApellidoP = apellidoP
+        Me.ApellidoM = apellidoM
+        Me.Direccion = direccion
+        Me.Telefono = telefono
+        Me.Fecha_Nacimiento = fecha_Nacimiento
+        Me.Password = password
+    End Sub
+
     Public Function ValidateCi(ciAValidar As Integer) As Boolean
         'Valida que la cédula de identidad sea válida
         Dim valida As Boolean = True

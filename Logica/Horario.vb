@@ -7,7 +7,7 @@ Public Class Horario
     Public Property HoraInicio As String
     Public Property HoraFin As String
     Public Enum Dias
-        Lunes
+        Lunes = 1
         Martes
         Miercoles
         Jueves
@@ -29,17 +29,10 @@ Public Class Horario
 
     End Sub
 
-
-
-
     Public Sub Insert()
 
-        Dim db As New DHorario("admin", "123456789")
-        Dim result = db.Insert(Ci,
-                               Sucursal,
-                               Dia,
-                               HoraInicio,
-                               HoraFin)
+        Dim db As New DHorario("rrhh", "dbrrhhST", Me.Ci, Me.Sucursal, Me.Dia, Me.HoraInicio, Me.HoraFin)
+        Dim result = db.Insert()
         If result Then
             MsgBox("Horario Ingresado exitosamente", MsgBoxStyle.Information, "Información")
         Else

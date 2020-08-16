@@ -2,20 +2,38 @@
 Public Class DHorario
     Inherits DBConnection
 
-    Public Sub New()
-        MyBase.New()
+    Public Property Ci As Integer
+    Public Property Sucursal As String
+    Public Property Dia As Dias
+    Public Property HoraInicio As String
+    Public Property HoraFin As String
+    Public Enum Dias
+        Lunes
+        Martes
+        Miercoles
+        Jueves
+        Viernes
+        Sabado
+        Domingo
+    End Enum
+
+    Public Sub New(DB_User As String,
+                   DB_Pasword As String,
+                   Ci As String,
+                   Sucursal As String,
+                   Dia As Dias,
+                   horaInicio As String,
+                   horaFin As String)
+        MyBase.New(DB_User, DB_Pasword)
+        Me.Ci = Ci
+        Me.Sucursal = Sucursal
+        Me.Dia = Dia
+        Me.HoraInicio = horaInicio
+        Me.HoraFin = horaFin
+
     End Sub
 
-    Public Sub New(user As String, password As String)
-        MyBase.New(user, password)
-    End Sub
-
-    Public Function Insert(
-            ci As Integer,
-            sucursal As Byte,
-            dia As String,
-            horaInicio As String,
-            horaFin As String) As Boolean
+    Public Function Insert() As Boolean
 
         If HasConnection() Then
             'Abro la conexión con la base de datos
@@ -33,11 +51,11 @@ Public Class DHorario
                                   " horaEntrada," &
                                   " horaSalida)" &
                                   "VALUES(" &
-                                  ci & ",'" &
-                                  sucursal & "','" &
-                                  dia & "','" &
-                                  horaInicio & "'," &
-                                  horaFin &
+                                  Ci & ",'" &
+                                  Sucursal & "','" &
+                                  Dia & "','" &
+                                  HoraInicio & "'," &
+                                  HoraFin &
                                   ");"
                 MsgBox("Query Medico: " & insertHorario)
 
@@ -52,7 +70,7 @@ Public Class DHorario
                 'Hubo una excepción, por lo que debo hacer un rollback
                 'para mantener la integridad de los datos.
                 con.RollbackTrans()
-                Console.WriteLine("No se pudo insertar el horario del médico." & vbCrLf & ex.Message) ' Mensaje en consola para debug
+                Console.WriteLine("No se pudo insertar el horario." & vbCrLf & ex.Message) ' Mensaje en consola para debug
 
                 'Retorno False, significando esto que la transacción
                 'no se pudo concretar.

@@ -1,10 +1,6 @@
 ﻿Imports ADODB
 Public Class DMedico
-    Inherits DBConnection
-
-    Public Sub New()
-        MyBase.New()
-    End Sub
+    Inherits DEmpleado
 
     Public Sub New(user As String, password As String)
         MyBase.New(user, password)
