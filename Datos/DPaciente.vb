@@ -92,7 +92,7 @@ Public Class DPaciente
                                   " WHERE calle='" & Me.Direccion.Calle & "'" &
                                   " AND numero='" & Me.Direccion.Nro & "'" &
                                   " AND localidad='" & Me.Direccion.Localidad & "'" &
-                                  " AND departamento='" & Me.Direccion.Departamento & "';"
+                                  " AND departamento=" & Me.Direccion.Departamento & ";"
 
             'Abro la conexión con la base de datos
             Dim con As Connection = Conectar()
@@ -100,14 +100,14 @@ Public Class DPaciente
             Try
                 'Abro transacción
                 con.BeginTrans()
-                MsgBox(insertDireccion)
+                'MsgBox(insertDireccion)
                 'Ingreso la dirección a la DB
                 con.Execute(insertDireccion)
 
                 'Obtener idDireccion
-                MsgBox(getIdDireccion)
+                'MsgBox(getIdDireccion)
                 rs = con.Execute(getIdDireccion)
-                MsgBox("ID Direccion: " & rs.Fields("id").Value)
+                'MsgBox("ID Direccion: " & rs.Fields("id").Value)
                 Dim idDireccion As Integer = rs.Fields("id").Value
 
                 ' Sentencia para ingresar un paciente
@@ -144,7 +144,7 @@ Public Class DPaciente
                                   User_Password & "'," &
                                   idDireccion &
                                   ");"
-                MsgBox("Query Paciente: " & insertPaciente)
+                ' MsgBox("Query Paciente: " & insertPaciente)
 
                 'Ingreso los datos del paciente a la DB
                 con.Execute(insertPaciente)

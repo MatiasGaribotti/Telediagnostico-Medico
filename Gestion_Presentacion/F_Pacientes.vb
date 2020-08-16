@@ -7,12 +7,97 @@ Public Class F_Pacientes
     Public Sub New()
         Thread.CurrentThread.CurrentUICulture = Logica.Env.CurrentLangugage
         InitializeComponent()
+        ConfigMode()
+    End Sub
 
+    Public Sub ConfigMode()
+        Select Case Env.UserType
+            Case Env.UserTypes.Recepcionista
+                'Buttons
+                BtnModificar.Enabled = False
+                BtnEliminar.Enabled = False
+                BtnAddEnfermedad.Enabled = False
+                BtnDelEnfermedad.Enabled = False
+                BtnIAddMed.Enabled = False
+                BtnIDelMed.Enabled = False
+
+
+                'Fields
+                TxtINFam.Enabled = False
+                TxtIAntFam.Enabled = False
+                TxtITratamientos.Enabled = False
+                TxtIAntLab.Enabled = False
+                TxtIMedicacion.Enabled = False
+                TxtIEnfermedad.Enabled = False
+                CmbIEnfermedad.Enabled = False
+                CmbIMedicacion.Enabled = False
+
+
+            Case Env.UserTypes.RRHH
+                BtnIngresar.Enabled = False
+                BtnModificar.Enabled = False
+                BtnEliminar.Enabled = False
+                BtnResetPassword.Enabled = False
+                BtnAddEnfermedad.Enabled = False
+                BtnDelEnfermedad.Enabled = False
+                BtnIAddMed.Enabled = False
+                BtnIDelMed.Enabled = False
+
+
+                'Fields
+                TxtINFam.Enabled = False
+                TxtIAntFam.Enabled = False
+                TxtITratamientos.Enabled = False
+                TxtIAntLab.Enabled = False
+                TxtIMedicacion.Enabled = False
+
+            Case Env.UserTypes.Administrador
+                BtnResetPassword.Enabled = False
+        End Select
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
+        If ValidateFields() Then
+            Dim paciente = GetPaciente()
+            paciente.Insert()
+        End If
+    End Sub
 
-        Dim paciente As New Paciente(
+    Private Function ValidateFields() As Boolean
+
+        Return True
+    End Function
+
+    Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
+    End Sub
+
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
+        F_ABM.Show()
+        Close()
+    End Sub
+
+    Private Sub BtnIAddItem_Click(sender As Object, e As EventArgs) Handles BtnIAddMed.Click
+        CmbIMedicacion.Items.Add(TxtIMedicacion.Text)
+    End Sub
+
+    Private Sub BtnIDelItem_Click(sender As Object, e As EventArgs) Handles BtnIDelMed.Click
+        CmbIMedicacion.Items.RemoveAt(CmbIMedicacion.SelectedIndex)
+    End Sub
+
+    Private Sub BtnAddEnfermedad_Click(sender As Object, e As EventArgs) Handles BtnAddEnfermedad.Click
+        CmbIEnfermedad.Items.Add(TxtIEnfermedad.Text)
+    End Sub
+
+    Private Sub BtnDelEnfermedad_Click(sender As Object, e As EventArgs) Handles BtnDelEnfermedad.Click
+        CmbIEnfermedad.Items.RemoveAt(CmbIEnfermedad.SelectedIndex)
+    End Sub
+
+    Public Function GetPaciente() As Paciente
+        Dim paciente As Paciente
+        Try
+            If Env.UserType = Env.UserTypes.Recepcionista Then
+                paciente = New Paciente(
                             CInt(TxtICi.Text),
                             TxtINombre.Text,
                             TxtIApellidoP.Text,
@@ -20,53 +105,51 @@ Public Class F_Pacientes
                             New Direccion(TxtICalle.Text,
                                             CInt(TxtINumero.Text),
                                             TxtILocalidad.Text,
-                                            CmbIDepartamento.SelectedItem.ToString),
+                                            CmbIDepartamento.SelectedIndex + 1),
                             CInt(TxtITelefono.Text),
                             Format(DTPickerFNac.Value, "yyyy-MM-dd"),
                             "password",
                             TxtIEmail.Text
                             )
+            ElseIf Env.UserType = Env.UserTypes.Administrador Then
 
-        paciente.Insert()
-    End Sub
+                Dim medicacion As String = ""
+                For i As Integer = 0 To CmbIMedicacion.Items.Count - 1
+                    medicacion += CmbIMedicacion.Items.Item(i).ToString
+                    If i < CmbIMedicacion.Items.Count - 1 Then
+                        medicacion += ","
+                    End If
+                Next
 
-    Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
-    End Sub
-    Private Sub TxtICi_TextChanged(sender As Object, e As EventArgs) Handles TxtICi.TextChanged
+                paciente = New Paciente(
+                            CInt(TxtICi.Text),
+                            TxtINombre.Text,
+                            TxtIApellidoP.Text,
+                            TxtIApellidoM.Text,
+                            New Direccion(TxtICalle.Text,
+                                            CInt(TxtINumero.Text),
+                                            TxtILocalidad.Text,
+                                            CmbIDepartamento.SelectedIndex + 1),
+                            CInt(TxtITelefono.Text),
+                            Format(DTPickerFNac.Value, "yyyy-MM-dd"),
+                            "password",
+                            TxtIEmail.Text,
+                            TxtINFam.Text,
+                            TxtIAntFam.Text,
+                            TxtIAntLab.Text,
+                            medicacion,
+                            TxtITratamientos.Text
+                            )
 
-    End Sub
+            End If
+        Catch ex As Exception
+            MsgBox("Algo ha salido mal.")
+        End Try
 
-    Private Sub TxtICalle_TextChanged(sender As Object, e As EventArgs) Handles TxtICalle.TextChanged
+        Return paciente
+    End Function
 
-    End Sub
+    Private Sub pnl_contenedor_Paint(sender As Object, e As PaintEventArgs) Handles pnl_contenedor.Paint
 
-    Private Sub CmbIDepartamento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbIDepartamento.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub TxtIApellidoM_TextChanged(sender As Object, e As EventArgs) Handles TxtIApellidoM.TextChanged
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub CmbBDetalle_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbBDetalle.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
-    End Sub
-
-    Private Sub TxtBLocalidad_TextChanged(sender As Object, e As EventArgs) Handles TxtBLocalidad.TextChanged
-
-    End Sub
-
-    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
-        F_ABM.Show()
-        Close()
     End Sub
 End Class

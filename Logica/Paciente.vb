@@ -64,14 +64,31 @@ Public Class Paciente
 
         If Env.UserType = Env.UserTypes.Recepcionista Then
             db = New DPaciente(
-                "rrhh",
-                "dbrrhhST",
+                "recepcionista",
+                "dbrecepcionistaST",
                 Ci,
                 Nombre,
                 ApellidoP,
                 ApellidoM,
-                New DDireccion("rrhh",
-                                "dbrrhhST",
+                New DDireccion("recepcionista",
+                                "dbrecepcionistaST",
+                                Direccion.Calle,
+                                Direccion.Nro,
+                                Direccion.Localidad,
+                                Direccion.Departamento,
+                                Direccion.Detalle),
+                Telefono,
+                Fecha_Nacimiento,
+                Password,
+                Email)
+
+        ElseIf Env.UserType = Env.UserTypes.Administrador Then
+            db = New DPaciente("administrador", "dbadminST", Ci,
+                Nombre,
+                ApellidoP,
+                ApellidoM,
+                New DDireccion("recepcionista",
+                                "dbrecepcionistaST",
                                 Direccion.Calle,
                                 Direccion.Nro,
                                 Direccion.Localidad,
@@ -86,9 +103,6 @@ Public Class Paciente
                 AntecedentesLab,
                 Medicacion,
                 Tratamiento)
-
-        ElseIf Env.UserType = Env.UserTypes.Administrador Then
-            db = New DPaciente("administrador", "dbadminST")
 
         End If
         Try

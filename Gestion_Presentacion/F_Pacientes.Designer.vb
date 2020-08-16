@@ -23,9 +23,9 @@ Partial Class F_Pacientes
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Pacientes))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnl_contenedor = New System.Windows.Forms.Panel()
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
@@ -60,10 +60,16 @@ Partial Class F_Pacientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnl_ingresar = New System.Windows.Forms.Panel()
+        Me.BtnDelEnfermedad = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.BtnAddEnfermedad = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.TxtIEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.BtnIDelMed = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.BtnIAddMed = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.TxtIMedicacion = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TxtICi = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblCi = New System.Windows.Forms.Label()
-        Me.CmblMedicacion = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.CmblEnfermedad = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbIMedicacion = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbIEnfermedad = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.CmblDetalle = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.CmbIDepartamento = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
@@ -145,30 +151,30 @@ Partial Class F_Pacientes
         '
         'DgvPacientes
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DgvPacientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.DgvPacientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvPacientes.BackgroundColor = System.Drawing.Color.White
         Me.DgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         resources.ApplyResources(Me.DgvPacientes, "DgvPacientes")
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvPacientes.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvPacientes.DefaultCellStyle = DataGridViewCellStyle6
         Me.DgvPacientes.EnableHeadersVisualStyles = False
         Me.DgvPacientes.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvPacientes.Name = "DgvPacientes"
@@ -609,10 +615,16 @@ Partial Class F_Pacientes
         'pnl_ingresar
         '
         Me.pnl_ingresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_ingresar.Controls.Add(Me.BtnDelEnfermedad)
+        Me.pnl_ingresar.Controls.Add(Me.BtnAddEnfermedad)
+        Me.pnl_ingresar.Controls.Add(Me.TxtIEnfermedad)
+        Me.pnl_ingresar.Controls.Add(Me.BtnIDelMed)
+        Me.pnl_ingresar.Controls.Add(Me.BtnIAddMed)
+        Me.pnl_ingresar.Controls.Add(Me.TxtIMedicacion)
         Me.pnl_ingresar.Controls.Add(Me.TxtICi)
         Me.pnl_ingresar.Controls.Add(Me.LblCi)
-        Me.pnl_ingresar.Controls.Add(Me.CmblMedicacion)
-        Me.pnl_ingresar.Controls.Add(Me.CmblEnfermedad)
+        Me.pnl_ingresar.Controls.Add(Me.CmbIMedicacion)
+        Me.pnl_ingresar.Controls.Add(Me.CmbIEnfermedad)
         Me.pnl_ingresar.Controls.Add(Me.CmblDetalle)
         Me.pnl_ingresar.Controls.Add(Me.CmbIDepartamento)
         Me.pnl_ingresar.Controls.Add(Me.BtnIngresar)
@@ -649,6 +661,98 @@ Partial Class F_Pacientes
         resources.ApplyResources(Me.pnl_ingresar, "pnl_ingresar")
         Me.pnl_ingresar.Name = "pnl_ingresar"
         '
+        'BtnDelEnfermedad
+        '
+        Me.BtnDelEnfermedad.CheckedState.Parent = Me.BtnDelEnfermedad
+        Me.BtnDelEnfermedad.CustomImages.Parent = Me.BtnDelEnfermedad
+        Me.BtnDelEnfermedad.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnDelEnfermedad, "BtnDelEnfermedad")
+        Me.BtnDelEnfermedad.ForeColor = System.Drawing.Color.White
+        Me.BtnDelEnfermedad.HoverState.Parent = Me.BtnDelEnfermedad
+        Me.BtnDelEnfermedad.Name = "BtnDelEnfermedad"
+        Me.BtnDelEnfermedad.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnDelEnfermedad.ShadowDecoration.Parent = Me.BtnDelEnfermedad
+        '
+        'BtnAddEnfermedad
+        '
+        Me.BtnAddEnfermedad.CheckedState.Parent = Me.BtnAddEnfermedad
+        Me.BtnAddEnfermedad.CustomImages.Parent = Me.BtnAddEnfermedad
+        Me.BtnAddEnfermedad.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnAddEnfermedad, "BtnAddEnfermedad")
+        Me.BtnAddEnfermedad.ForeColor = System.Drawing.Color.White
+        Me.BtnAddEnfermedad.HoverState.Parent = Me.BtnAddEnfermedad
+        Me.BtnAddEnfermedad.Name = "BtnAddEnfermedad"
+        Me.BtnAddEnfermedad.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnAddEnfermedad.ShadowDecoration.Parent = Me.BtnAddEnfermedad
+        '
+        'TxtIEnfermedad
+        '
+        Me.TxtIEnfermedad.Animated = True
+        Me.TxtIEnfermedad.BorderRadius = 6
+        Me.TxtIEnfermedad.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIEnfermedad.DefaultText = ""
+        Me.TxtIEnfermedad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIEnfermedad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIEnfermedad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIEnfermedad.DisabledState.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIEnfermedad.FocusedState.Parent = Me.TxtIEnfermedad
+        resources.ApplyResources(Me.TxtIEnfermedad, "TxtIEnfermedad")
+        Me.TxtIEnfermedad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIEnfermedad.HoverState.Parent = Me.TxtIEnfermedad
+        Me.TxtIEnfermedad.Name = "TxtIEnfermedad"
+        Me.TxtIEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIEnfermedad.PlaceholderText = ""
+        Me.TxtIEnfermedad.SelectedText = ""
+        Me.TxtIEnfermedad.ShadowDecoration.Parent = Me.TxtIEnfermedad
+        '
+        'BtnIDelMed
+        '
+        Me.BtnIDelMed.CheckedState.Parent = Me.BtnIDelMed
+        Me.BtnIDelMed.CustomImages.Parent = Me.BtnIDelMed
+        Me.BtnIDelMed.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnIDelMed, "BtnIDelMed")
+        Me.BtnIDelMed.ForeColor = System.Drawing.Color.White
+        Me.BtnIDelMed.HoverState.Parent = Me.BtnIDelMed
+        Me.BtnIDelMed.Name = "BtnIDelMed"
+        Me.BtnIDelMed.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnIDelMed.ShadowDecoration.Parent = Me.BtnIDelMed
+        '
+        'BtnIAddMed
+        '
+        Me.BtnIAddMed.CheckedState.Parent = Me.BtnIAddMed
+        Me.BtnIAddMed.CustomImages.Parent = Me.BtnIAddMed
+        Me.BtnIAddMed.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnIAddMed, "BtnIAddMed")
+        Me.BtnIAddMed.ForeColor = System.Drawing.Color.White
+        Me.BtnIAddMed.HoverState.Parent = Me.BtnIAddMed
+        Me.BtnIAddMed.Name = "BtnIAddMed"
+        Me.BtnIAddMed.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnIAddMed.ShadowDecoration.Parent = Me.BtnIAddMed
+        '
+        'TxtIMedicacion
+        '
+        Me.TxtIMedicacion.Animated = True
+        Me.TxtIMedicacion.BorderRadius = 6
+        Me.TxtIMedicacion.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIMedicacion.DefaultText = ""
+        Me.TxtIMedicacion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIMedicacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIMedicacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIMedicacion.DisabledState.Parent = Me.TxtIMedicacion
+        Me.TxtIMedicacion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIMedicacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIMedicacion.FocusedState.Parent = Me.TxtIMedicacion
+        resources.ApplyResources(Me.TxtIMedicacion, "TxtIMedicacion")
+        Me.TxtIMedicacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIMedicacion.HoverState.Parent = Me.TxtIMedicacion
+        Me.TxtIMedicacion.Name = "TxtIMedicacion"
+        Me.TxtIMedicacion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIMedicacion.PlaceholderText = ""
+        Me.TxtIMedicacion.SelectedText = ""
+        Me.TxtIMedicacion.ShadowDecoration.Parent = Me.TxtIMedicacion
+        '
         'TxtICi
         '
         Me.TxtICi.Animated = True
@@ -677,39 +781,39 @@ Partial Class F_Pacientes
         Me.LblCi.BackColor = System.Drawing.Color.Transparent
         Me.LblCi.Name = "LblCi"
         '
-        'CmblMedicacion
+        'CmbIMedicacion
         '
-        Me.CmblMedicacion.Animated = True
-        Me.CmblMedicacion.BackColor = System.Drawing.Color.Transparent
-        Me.CmblMedicacion.BorderRadius = 6
-        Me.CmblMedicacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmblMedicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmblMedicacion.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmblMedicacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmblMedicacion.FocusedState.Parent = Me.CmblMedicacion
-        resources.ApplyResources(Me.CmblMedicacion, "CmblMedicacion")
-        Me.CmblMedicacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmblMedicacion.HoverState.Parent = Me.CmblMedicacion
-        Me.CmblMedicacion.ItemsAppearance.Parent = Me.CmblMedicacion
-        Me.CmblMedicacion.Name = "CmblMedicacion"
-        Me.CmblMedicacion.ShadowDecoration.Parent = Me.CmblMedicacion
+        Me.CmbIMedicacion.Animated = True
+        Me.CmbIMedicacion.BackColor = System.Drawing.Color.Transparent
+        Me.CmbIMedicacion.BorderRadius = 6
+        Me.CmbIMedicacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbIMedicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbIMedicacion.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIMedicacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIMedicacion.FocusedState.Parent = Me.CmbIMedicacion
+        resources.ApplyResources(Me.CmbIMedicacion, "CmbIMedicacion")
+        Me.CmbIMedicacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbIMedicacion.HoverState.Parent = Me.CmbIMedicacion
+        Me.CmbIMedicacion.ItemsAppearance.Parent = Me.CmbIMedicacion
+        Me.CmbIMedicacion.Name = "CmbIMedicacion"
+        Me.CmbIMedicacion.ShadowDecoration.Parent = Me.CmbIMedicacion
         '
-        'CmblEnfermedad
+        'CmbIEnfermedad
         '
-        Me.CmblEnfermedad.Animated = True
-        Me.CmblEnfermedad.BackColor = System.Drawing.Color.Transparent
-        Me.CmblEnfermedad.BorderRadius = 6
-        Me.CmblEnfermedad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmblEnfermedad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmblEnfermedad.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmblEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmblEnfermedad.FocusedState.Parent = Me.CmblEnfermedad
-        resources.ApplyResources(Me.CmblEnfermedad, "CmblEnfermedad")
-        Me.CmblEnfermedad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmblEnfermedad.HoverState.Parent = Me.CmblEnfermedad
-        Me.CmblEnfermedad.ItemsAppearance.Parent = Me.CmblEnfermedad
-        Me.CmblEnfermedad.Name = "CmblEnfermedad"
-        Me.CmblEnfermedad.ShadowDecoration.Parent = Me.CmblEnfermedad
+        Me.CmbIEnfermedad.Animated = True
+        Me.CmbIEnfermedad.BackColor = System.Drawing.Color.Transparent
+        Me.CmbIEnfermedad.BorderRadius = 6
+        Me.CmbIEnfermedad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbIEnfermedad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbIEnfermedad.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIEnfermedad.FocusedState.Parent = Me.CmbIEnfermedad
+        resources.ApplyResources(Me.CmbIEnfermedad, "CmbIEnfermedad")
+        Me.CmbIEnfermedad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbIEnfermedad.HoverState.Parent = Me.CmbIEnfermedad
+        Me.CmbIEnfermedad.ItemsAppearance.Parent = Me.CmbIEnfermedad
+        Me.CmbIEnfermedad.Name = "CmbIEnfermedad"
+        Me.CmbIEnfermedad.ShadowDecoration.Parent = Me.CmbIEnfermedad
         '
         'CmblDetalle
         '
@@ -1234,8 +1338,8 @@ Partial Class F_Pacientes
     Friend WithEvents DgvPacientes As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents CmbBDepartamento As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmbBDetalle As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents CmblMedicacion As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents CmblEnfermedad As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbIMedicacion As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbIEnfermedad As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmblDetalle As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmbIDepartamento As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents BtnMinimize As Guna.UI2.WinForms.Guna2ControlBox
@@ -1248,4 +1352,10 @@ Partial Class F_Pacientes
     Friend WithEvents BtnResetPassword As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents TxtIMedicacion As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents BtnIDelMed As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents BtnIAddMed As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents BtnDelEnfermedad As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents BtnAddEnfermedad As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents TxtIEnfermedad As Guna.UI2.WinForms.Guna2TextBox
 End Class
