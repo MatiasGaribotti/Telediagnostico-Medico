@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class F_Sintomas_Buscar_Tipo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class F_Sintomas_Buscar_Tipo
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TxtBuscador = New System.Windows.Forms.TextBox()
         Me.BtnCross = New System.Windows.Forms.Button()
@@ -32,6 +32,7 @@ Partial Class F_Sintomas_Buscar_Tipo
         Me.lblCabeza = New System.Windows.Forms.Label()
         Me.LblTorso = New System.Windows.Forms.Label()
         Me.LblExtremidades = New System.Windows.Forms.Label()
+        Me.PnlBackgroundBuscador.SuspendLayout()
         CType(Me.PicCabeza, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicTorso, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicExtremidades, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,11 +41,11 @@ Partial Class F_Sintomas_Buscar_Tipo
         'TxtBuscador
         '
         Me.TxtBuscador.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtBuscador.Font = New System.Drawing.Font("Roboto", 28.0!)
-        Me.TxtBuscador.Location = New System.Drawing.Point(291, 82)
+        Me.TxtBuscador.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBuscador.Location = New System.Drawing.Point(1, 19)
         Me.TxtBuscador.Margin = New System.Windows.Forms.Padding(0)
         Me.TxtBuscador.Name = "TxtBuscador"
-        Me.TxtBuscador.Size = New System.Drawing.Size(375, 45)
+        Me.TxtBuscador.Size = New System.Drawing.Size(375, 23)
         Me.TxtBuscador.TabIndex = 0
         '
         'BtnCross
@@ -76,13 +77,15 @@ Partial Class F_Sintomas_Buscar_Tipo
         'PnlBackgroundBuscador
         '
         Me.PnlBackgroundBuscador.BackColor = System.Drawing.Color.White
+        Me.PnlBackgroundBuscador.Controls.Add(Me.TxtBuscador)
         Me.PnlBackgroundBuscador.Location = New System.Drawing.Point(290, 73)
         Me.PnlBackgroundBuscador.Name = "PnlBackgroundBuscador"
-        Me.PnlBackgroundBuscador.Size = New System.Drawing.Size(376, 65)
+        Me.PnlBackgroundBuscador.Size = New System.Drawing.Size(386, 65)
         Me.PnlBackgroundBuscador.TabIndex = 2
         '
         'PicCabeza
         '
+        Me.PicCabeza.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.PicCabeza.Location = New System.Drawing.Point(85, 400)
         Me.PicCabeza.Margin = New System.Windows.Forms.Padding(20)
         Me.PicCabeza.Name = "PicCabeza"
@@ -92,6 +95,7 @@ Partial Class F_Sintomas_Buscar_Tipo
         '
         'PicTorso
         '
+        Me.PicTorso.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.PicTorso.Location = New System.Drawing.Point(355, 400)
         Me.PicTorso.Margin = New System.Windows.Forms.Padding(20)
         Me.PicTorso.Name = "PicTorso"
@@ -101,6 +105,7 @@ Partial Class F_Sintomas_Buscar_Tipo
         '
         'PicExtremidades
         '
+        Me.PicExtremidades.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.PicExtremidades.Location = New System.Drawing.Point(624, 400)
         Me.PicExtremidades.Margin = New System.Windows.Forms.Padding(20)
         Me.PicExtremidades.Name = "PicExtremidades"
@@ -111,34 +116,38 @@ Partial Class F_Sintomas_Buscar_Tipo
         'lblCabeza
         '
         Me.lblCabeza.AutoSize = True
-        Me.lblCabeza.Location = New System.Drawing.Point(189, 670)
+        Me.lblCabeza.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCabeza.Location = New System.Drawing.Point(166, 670)
         Me.lblCabeza.Name = "lblCabeza"
-        Me.lblCabeza.Size = New System.Drawing.Size(43, 13)
+        Me.lblCabeza.Size = New System.Drawing.Size(72, 23)
         Me.lblCabeza.TabIndex = 4
         Me.lblCabeza.Text = "Cabeza"
         '
         'LblTorso
         '
         Me.LblTorso.AutoSize = True
-        Me.LblTorso.Location = New System.Drawing.Point(463, 670)
+        Me.LblTorso.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTorso.Location = New System.Drawing.Point(440, 670)
         Me.LblTorso.Name = "LblTorso"
-        Me.LblTorso.Size = New System.Drawing.Size(34, 13)
+        Me.LblTorso.Size = New System.Drawing.Size(58, 23)
         Me.LblTorso.TabIndex = 4
         Me.LblTorso.Text = "Torso"
         '
         'LblExtremidades
         '
         Me.LblExtremidades.AutoSize = True
-        Me.LblExtremidades.Location = New System.Drawing.Point(714, 670)
+        Me.LblExtremidades.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblExtremidades.Location = New System.Drawing.Point(691, 670)
         Me.LblExtremidades.Name = "LblExtremidades"
-        Me.LblExtremidades.Size = New System.Drawing.Size(70, 13)
+        Me.LblExtremidades.Size = New System.Drawing.Size(126, 23)
         Me.LblExtremidades.TabIndex = 4
         Me.LblExtremidades.Text = "Extremidades"
         '
-        'Frm_Sintomas_Buscar_Tipo
+        'F_Sintomas_Buscar_Tipo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(960, 1080)
         Me.Controls.Add(Me.LblExtremidades)
         Me.Controls.Add(Me.LblTorso)
@@ -148,12 +157,13 @@ Partial Class F_Sintomas_Buscar_Tipo
         Me.Controls.Add(Me.PicCabeza)
         Me.Controls.Add(Me.BtnSearch)
         Me.Controls.Add(Me.BtnCross)
-        Me.Controls.Add(Me.TxtBuscador)
         Me.Controls.Add(Me.PnlBackgroundBuscador)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Frm_Sintomas_Buscar_Tipo"
+        Me.Name = "F_Sintomas_Buscar_Tipo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Frm_Sintomas_Buscar_Tipo"
+        Me.PnlBackgroundBuscador.ResumeLayout(False)
+        Me.PnlBackgroundBuscador.PerformLayout()
         CType(Me.PicCabeza, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicTorso, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicExtremidades, System.ComponentModel.ISupportInitialize).EndInit()
