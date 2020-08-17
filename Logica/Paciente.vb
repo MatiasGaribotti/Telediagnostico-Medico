@@ -9,6 +9,27 @@ Public Class Paciente
     Public Property Tratamiento As String
 
 
+    Public Sub New()
+        Me.Ci = -1
+        Me.Nombre = "Default"
+        Me.ApellidoP = "Default"
+        Me.ApellidoM = "Default"
+        Me.Direccion = New Direccion
+        Me.Telefono = -1
+        Me.Fecha_Nacimiento = New Date(1, 1, 1)
+        Me.Password = "password"
+        Me.Email = "Default"
+        Me.NucleoFlia = "Default"
+        Me.AntecedentesFlia = "Sin ingresar"
+        Me.AntecedentesLab = "Sin ingresar"
+        Me.Medicacion = "Sin ingresar"
+        Me.Tratamiento = "Sin ingresar"
+    End Sub
+    Public Sub New(ci As Integer, pass As String)
+        MyBase.Ci = ci
+        MyBase.Password = pass
+    End Sub
+
     'Constructor comúm completo
     Public Sub New(ci As Integer,
                    nombre As String,
@@ -119,9 +140,9 @@ Public Class Paciente
         End Try
     End Sub
 
-    Public Sub New(ci As Integer, pass As String)
-        MyBase.Ci = ci
-        MyBase.Password = pass
-    End Sub
-
+    Public Function GetDgvData() As DataTable
+        Dim db As New DPaciente("recepcionista", "dbrecepcionistaST")
+        Dim dt As DataTable = db.GetDgvData()
+        Return dt
+    End Function
 End Class

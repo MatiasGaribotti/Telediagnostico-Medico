@@ -60,7 +60,14 @@ Public Class F_Pacientes
         If ValidateFields() Then
             Dim paciente = GetPaciente()
             paciente.Insert()
+            LoadDgv()
+            ClearFields()
         End If
+    End Sub
+
+    'Procedimiento que limpia el contenido de los campos
+    Private Sub ClearFields()
+
     End Sub
 
     Private Function ValidateFields() As Boolean
@@ -70,7 +77,9 @@ Public Class F_Pacientes
 
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
         CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
+        LoadDgv()
     End Sub
+
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         F_ABM.Show()
@@ -93,7 +102,7 @@ Public Class F_Pacientes
         CmbIEnfermedad.Items.RemoveAt(CmbIEnfermedad.SelectedIndex)
     End Sub
 
-    Public Function GetPaciente() As Paciente
+    Private Function GetPaciente() As Paciente
         Dim paciente As Paciente
         Try
             If Env.UserType = Env.UserTypes.Recepcionista Then
@@ -148,8 +157,10 @@ Public Class F_Pacientes
 
         Return paciente
     End Function
-
-    Private Sub pnl_contenedor_Paint(sender As Object, e As PaintEventArgs) Handles pnl_contenedor.Paint
-
+    Private Sub LoadDgv()
+        Dim paciente As New Paciente()
+        Dim dt As DataTable = paciente.GetDgvData()
+        DgvPacientes.DataSource = dt
     End Sub
+
 End Class

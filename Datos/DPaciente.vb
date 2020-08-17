@@ -1,4 +1,5 @@
 ﻿Imports ADODB
+Imports System.Data.Odbc
 Public Class DPaciente
     Inherits DPersona
 
@@ -170,4 +171,24 @@ Public Class DPaciente
             Return False
         End If
     End Function
+
+    Public Function GetDgvData() As DataTable
+        Dim dt As New DataTable()
+
+        'Consulto los datos a la vista "pacientes"
+        Dim query As String = "SELECT * FROM Pacientes;"
+
+
+        If HasConnection() Then
+
+            Dim con As New OdbcConnection("dsn=VM_DB_sistema_telediagnostico;uid=" & DB_User & ";pwd=" & DB_Password & ";")
+            con.Open()
+            Dim cmd As New OdbcCommand(query, con)
+            Dim dataReader = cmd.ExecuteReader()
+            dt.Load(dataReader)
+
+        End If
+        Return dt
+    End Function
+
 End Class

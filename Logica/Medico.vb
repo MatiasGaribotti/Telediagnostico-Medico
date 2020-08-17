@@ -58,5 +58,9 @@ Public Class Medico
 
     End Sub
 
-
+    Public Function GetDgvData() As DataTable
+        Dim db As New DMedico("rrhh", "dbrrhhST")
+        Dim dt = db.GetDgvData()
+        Return dt
+    End Function
 End Class

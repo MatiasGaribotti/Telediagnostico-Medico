@@ -36,7 +36,7 @@ Public Class F_Medicos
         Me.Close()
     End Sub
 
-    Private Sub BtnIngresar_Click(sender As Object, e As EventArgs)
+    Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         Dim medico As New Medico(
                             CInt(TxtICi.Text),
                             TxtINombre.Text,
@@ -53,15 +53,23 @@ Public Class F_Medicos
                             )
 
         medico.Insert()
+        LoadDgv()
     End Sub
 
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
         CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
+        LoadDgv()
     End Sub
 
     Private Sub BtnHorarios_Click(sender As Object, e As EventArgs) Handles BtnHorarios.Click
         F_Medicos_Horarios.Show()
         Close()
+    End Sub
+
+    Private Sub LoadDgv()
+        Dim medico As New Medico()
+        Dim dt As DataTable = medico.GetDgvData()
+        DgvMedicos.DataSource = dt
     End Sub
 
 End Class

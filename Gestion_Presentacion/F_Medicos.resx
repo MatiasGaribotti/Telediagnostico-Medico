@@ -120,11 +120,42 @@
   <metadata name="pnl_fondo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DgvMedicos.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="DgvMedicos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>597, 120</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DgvMedicos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>20, 20, 20, 20</value>
+  </data>
+  <data name="DgvMedicos.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="DgvMedicos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1300, 839</value>
+  </data>
+  <data name="DgvMedicos.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="&gt;&gt;DgvMedicos.Name" xml:space="preserve">
+    <value>DgvMedicos</value>
+  </data>
+  <data name="&gt;&gt;DgvMedicos.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;DgvMedicos.Parent" xml:space="preserve">
+    <value>pnl_fondo</value>
+  </data>
+  <data name="&gt;&gt;DgvMedicos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="BtnMinimize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BtnMinimize.Location" type="System.Drawing.Point, System.Drawing">
     <value>1830, 0</value>
   </data>
@@ -134,7 +165,6 @@
   <data name="BtnMinimize.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 29</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnMinimize.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
   </data>
@@ -148,7 +178,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnMinimize.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BtnExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -175,7 +205,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnExit.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="BtnResetPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -205,7 +235,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnResetPassword.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="BtnHacerAdmin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -235,7 +265,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnHacerAdmin.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -265,7 +295,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnEliminar.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -295,7 +325,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnModificar.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="pnl_ingresarFiltrar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1408,30 +1438,6 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;pnl_ingresarFiltrar.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="Dgv_Medicos.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="Dgv_Medicos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>597, 120</value>
-  </data>
-  <data name="Dgv_Medicos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1300, 839</value>
-  </data>
-  <data name="Dgv_Medicos.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;Dgv_Medicos.Name" xml:space="preserve">
-    <value>Dgv_Medicos</value>
-  </data>
-  <data name="&gt;&gt;Dgv_Medicos.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Dgv_Medicos.Parent" xml:space="preserve">
-    <value>pnl_fondo</value>
-  </data>
-  <data name="&gt;&gt;Dgv_Medicos.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="pnl_fondo.Location" type="System.Drawing.Point, System.Drawing">

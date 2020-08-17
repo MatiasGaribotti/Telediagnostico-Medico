@@ -22,11 +22,12 @@ Partial Class F_Medicos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Medicos))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Medicos))
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnl_fondo = New System.Windows.Forms.Panel()
+        Me.DgvMedicos = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnResetPassword = New Guna.UI2.WinForms.Guna2Button()
@@ -74,14 +75,14 @@ Partial Class F_Medicos
         Me.lbl_nombres = New System.Windows.Forms.Label()
         Me.lbl_CI = New System.Windows.Forms.Label()
         Me.lbl_busqueda = New System.Windows.Forms.Label()
-        Me.Dgv_Medicos = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.pnl_fondo.SuspendLayout()
+        CType(Me.DgvMedicos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_ingresarFiltrar.SuspendLayout()
-        CType(Me.Dgv_Medicos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnl_fondo
         '
+        Me.pnl_fondo.Controls.Add(Me.DgvMedicos)
         Me.pnl_fondo.Controls.Add(Me.BtnMinimize)
         Me.pnl_fondo.Controls.Add(Me.BtnExit)
         Me.pnl_fondo.Controls.Add(Me.BtnResetPassword)
@@ -89,9 +90,68 @@ Partial Class F_Medicos
         Me.pnl_fondo.Controls.Add(Me.BtnEliminar)
         Me.pnl_fondo.Controls.Add(Me.BtnModificar)
         Me.pnl_fondo.Controls.Add(Me.pnl_ingresarFiltrar)
-        Me.pnl_fondo.Controls.Add(Me.Dgv_Medicos)
         resources.ApplyResources(Me.pnl_fondo, "pnl_fondo")
         Me.pnl_fondo.Name = "pnl_fondo"
+        '
+        'DgvMedicos
+        '
+        Me.DgvMedicos.AllowUserToAddRows = False
+        Me.DgvMedicos.AllowUserToDeleteRows = False
+        Me.DgvMedicos.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.DgvMedicos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DgvMedicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvMedicos.BackgroundColor = System.Drawing.Color.White
+        Me.DgvMedicos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvMedicos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvMedicos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvMedicos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        resources.ApplyResources(Me.DgvMedicos, "DgvMedicos")
+        Me.DgvMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvMedicos.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DgvMedicos.EnableHeadersVisualStyles = False
+        Me.DgvMedicos.GridColor = System.Drawing.Color.Gray
+        Me.DgvMedicos.MultiSelect = False
+        Me.DgvMedicos.Name = "DgvMedicos"
+        Me.DgvMedicos.ReadOnly = True
+        Me.DgvMedicos.RowHeadersVisible = False
+        Me.DgvMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvMedicos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
+        Me.DgvMedicos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.DgvMedicos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvMedicos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvMedicos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvMedicos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvMedicos.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DgvMedicos.ThemeStyle.GridColor = System.Drawing.Color.Gray
+        Me.DgvMedicos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.DgvMedicos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvMedicos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvMedicos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvMedicos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DgvMedicos.ThemeStyle.HeaderStyle.Height = 40
+        Me.DgvMedicos.ThemeStyle.ReadOnly = True
+        Me.DgvMedicos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvMedicos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvMedicos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvMedicos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DgvMedicos.ThemeStyle.RowsStyle.Height = 22
+        Me.DgvMedicos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.DgvMedicos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'BtnMinimize
         '
@@ -731,61 +791,6 @@ Partial Class F_Medicos
         resources.ApplyResources(Me.lbl_busqueda, "lbl_busqueda")
         Me.lbl_busqueda.Name = "lbl_busqueda"
         '
-        'Dgv_Medicos
-        '
-        Me.Dgv_Medicos.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.Dgv_Medicos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.Dgv_Medicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.Dgv_Medicos.BackgroundColor = System.Drawing.Color.DarkGray
-        Me.Dgv_Medicos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Dgv_Medicos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.Dgv_Medicos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgv_Medicos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        resources.ApplyResources(Me.Dgv_Medicos, "Dgv_Medicos")
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Dgv_Medicos.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Dgv_Medicos.EnableHeadersVisualStyles = False
-        Me.Dgv_Medicos.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Dgv_Medicos.Name = "Dgv_Medicos"
-        Me.Dgv_Medicos.RowHeadersVisible = False
-        Me.Dgv_Medicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect
-        Me.Dgv_Medicos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
-        Me.Dgv_Medicos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.Dgv_Medicos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.Dgv_Medicos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.Dgv_Medicos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.Dgv_Medicos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.Dgv_Medicos.ThemeStyle.BackColor = System.Drawing.Color.DarkGray
-        Me.Dgv_Medicos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Dgv_Medicos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Dgv_Medicos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.Dgv_Medicos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.Dgv_Medicos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.Dgv_Medicos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.Dgv_Medicos.ThemeStyle.HeaderStyle.Height = 4
-        Me.Dgv_Medicos.ThemeStyle.ReadOnly = False
-        Me.Dgv_Medicos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.Dgv_Medicos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.Dgv_Medicos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.Dgv_Medicos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.Dgv_Medicos.ThemeStyle.RowsStyle.Height = 22
-        Me.Dgv_Medicos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Dgv_Medicos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
         'F_Medicos
         '
         resources.ApplyResources(Me, "$this")
@@ -795,9 +800,9 @@ Partial Class F_Medicos
         Me.Name = "F_Medicos"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnl_fondo.ResumeLayout(False)
+        CType(Me.DgvMedicos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnl_ingresarFiltrar.ResumeLayout(False)
         Me.pnl_ingresarFiltrar.PerformLayout()
-        CType(Me.Dgv_Medicos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -841,7 +846,6 @@ Partial Class F_Medicos
     Friend WithEvents cmbDetalles As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmbIDepartamento As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cmb_especialidadI As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Dgv_Medicos As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnResetPassword As Guna.UI2.WinForms.Guna2Button
@@ -851,4 +855,5 @@ Partial Class F_Medicos
     Friend WithEvents BtnIngresar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnMinimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents BtnExit As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents DgvMedicos As Guna.UI2.WinForms.Guna2DataGridView
 End Class
