@@ -15,9 +15,8 @@ Public MustInherit Class DBConnection
                                       "pwd=" & Me.DB_Password & ";"
     End Sub
 
-    Public Sub New(user As String, password As String)
-        Me.DB_User = user
-        Me.DB_Password = password
+    Public Sub New(userType As Short)
+        CredentialsByUserType(userType)
         Me.ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
                                       "server=192.168.1.131;" &
                                       "port=3306;" &
@@ -46,4 +45,29 @@ Public MustInherit Class DBConnection
         End Try
 
     End Function
+
+    Protected Sub CredentialsByUserType(userType As Short)
+        Select Case userType
+            'Paciente
+            Case 0
+                Me.DB_User = "paciente"
+                Me.DB_Password = "dbpacienteST"
+            'Medico
+            Case 1
+
+
+            'Administrador
+            Case 2
+                Me.DB_User = "administrador"
+                Me.DB_Password = "dbadminST"
+            'RRHH
+            Case 3
+                Me.DB_User = "rrhh"
+                Me.DB_Password = "dbrrhhST"
+            'Recepcionista
+            Case 4
+                Me.DB_User = "recepcionista"
+                Me.DB_Password = "dbrecepcionistaST"
+        End Select
+    End Sub
 End Class

@@ -10,8 +10,8 @@
     Public Property Fecha_Nacimiento As Date
     Public Property User_Password As String
 
-    Public Sub New(user As String, password As String)
-        MyBase.New(user, password)
+    Public Sub New(userType As Short)
+        MyBase.New(userType)
         Me.Ci = 11111111
         Me.Nombre = "Default"
         Me.ApellidoP = "Default"
@@ -23,8 +23,8 @@
     End Sub
 
     'Este constructor se utilizará unicamente para autenticación
-    Public Sub New(ci As Integer, user_password As String)
-        MyBase.New("system", "kHzRj1&5")
+    Public Sub New(userType As Short, ci As Integer, user_password As String)
+        MyBase.New(userType)
         Me.Ci = ci
         Me.Nombre = "Default"
         Me.ApellidoP = "Default"
@@ -36,9 +36,8 @@
     End Sub
 
     Public Sub New(
-            DB_User As String,
-            DB_Password As String,
-            ci As Integer,
+            userType As Short,
+            Ci As Integer,
             nombre As String,
             apellidoP As String,
             apellidoM As String,
@@ -46,8 +45,8 @@
             telefono As Integer,
             fecha_Nacimiento As Date,
             user_Password As String)
-        Me.New(DB_User, DB_Password)
-        Me.Ci = ci
+        Me.New(userType)
+        Me.Ci = Ci
         Me.Nombre = nombre
         Me.ApellidoP = apellidoP
         Me.ApellidoM = apellidoM

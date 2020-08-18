@@ -31,7 +31,7 @@ Public Class Horario
 
     Public Sub Insert()
 
-        Dim db As New DHorario("rrhh", "dbrrhhST", Me.Ci, Me.Sucursal, Me.Dia, Me.HoraInicio, Me.HoraFin)
+        Dim db As New DHorario(Env.UserType, Me.Ci, Me.Sucursal, Me.Dia, Me.HoraInicio, Me.HoraFin)
         Dim result = db.Insert()
         If result Then
             MsgBox("Horario Ingresado exitosamente", MsgBoxStyle.Information, "Información")

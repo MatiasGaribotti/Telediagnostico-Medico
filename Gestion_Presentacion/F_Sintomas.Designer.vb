@@ -23,9 +23,9 @@ Partial Class F_Sintomas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Sintomas))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btn_minimizar = New System.Windows.Forms.Button()
         Me.btn_cerrar = New System.Windows.Forms.Button()
         Me.PnlSide = New Guna.UI2.WinForms.Guna2Panel()
@@ -58,11 +58,11 @@ Partial Class F_Sintomas
         Me.LblBSintoma = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TxtBSintoma = New Guna.UI2.WinForms.Guna2TextBox()
         Me.PnlDgv = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.DgvSintomas = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
         Me.PnlSide.SuspendLayout()
         Me.PnlDgv.SuspendLayout()
         CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -642,6 +642,42 @@ Partial Class F_Sintomas
         Me.PnlDgv.Size = New System.Drawing.Size(1347, 1080)
         Me.PnlDgv.TabIndex = 24
         '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Animated = True
+        Me.BtnEliminar.AutoRoundedCorners = True
+        Me.BtnEliminar.BorderRadius = 17
+        Me.BtnEliminar.CheckedState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.CustomImages.Parent = Me.BtnEliminar
+        Me.BtnEliminar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnEliminar.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
+        Me.BtnEliminar.HoverState.Parent = Me.BtnEliminar
+        Me.BtnEliminar.Location = New System.Drawing.Point(180, 58)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.ShadowDecoration.Parent = Me.BtnEliminar
+        Me.BtnEliminar.Size = New System.Drawing.Size(137, 36)
+        Me.BtnEliminar.TabIndex = 68
+        Me.BtnEliminar.Text = "Eliminar"
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.Animated = True
+        Me.BtnModificar.AutoRoundedCorners = True
+        Me.BtnModificar.BorderRadius = 17
+        Me.BtnModificar.CheckedState.Parent = Me.BtnModificar
+        Me.BtnModificar.CustomImages.Parent = Me.BtnModificar
+        Me.BtnModificar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnModificar.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.Color.White
+        Me.BtnModificar.HoverState.Parent = Me.BtnModificar
+        Me.BtnModificar.Location = New System.Drawing.Point(23, 58)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.ShadowDecoration.Parent = Me.BtnModificar
+        Me.BtnModificar.Size = New System.Drawing.Size(137, 36)
+        Me.BtnModificar.TabIndex = 67
+        Me.BtnModificar.Text = "Modificar"
+        '
         'BtnMinimize
         '
         Me.BtnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -673,30 +709,30 @@ Partial Class F_Sintomas
         '
         'DgvSintomas
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DgvSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.DgvSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DgvSintomas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvSintomas.BackgroundColor = System.Drawing.Color.White
         Me.DgvSintomas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvSintomas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvSintomas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DgvSintomas.ColumnHeadersHeight = 4
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvSintomas.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvSintomas.DefaultCellStyle = DataGridViewCellStyle6
         Me.DgvSintomas.EnableHeadersVisualStyles = False
         Me.DgvSintomas.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSintomas.Location = New System.Drawing.Point(23, 121)
@@ -727,42 +763,6 @@ Partial Class F_Sintomas
         Me.DgvSintomas.ThemeStyle.RowsStyle.Height = 22
         Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'BtnModificar
-        '
-        Me.BtnModificar.Animated = True
-        Me.BtnModificar.AutoRoundedCorners = True
-        Me.BtnModificar.BorderRadius = 17
-        Me.BtnModificar.CheckedState.Parent = Me.BtnModificar
-        Me.BtnModificar.CustomImages.Parent = Me.BtnModificar
-        Me.BtnModificar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnModificar.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModificar.ForeColor = System.Drawing.Color.White
-        Me.BtnModificar.HoverState.Parent = Me.BtnModificar
-        Me.BtnModificar.Location = New System.Drawing.Point(23, 58)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.ShadowDecoration.Parent = Me.BtnModificar
-        Me.BtnModificar.Size = New System.Drawing.Size(137, 36)
-        Me.BtnModificar.TabIndex = 67
-        Me.BtnModificar.Text = "Modificar"
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Animated = True
-        Me.BtnEliminar.AutoRoundedCorners = True
-        Me.BtnEliminar.BorderRadius = 17
-        Me.BtnEliminar.CheckedState.Parent = Me.BtnEliminar
-        Me.BtnEliminar.CustomImages.Parent = Me.BtnEliminar
-        Me.BtnEliminar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnEliminar.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
-        Me.BtnEliminar.HoverState.Parent = Me.BtnEliminar
-        Me.BtnEliminar.Location = New System.Drawing.Point(180, 58)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.ShadowDecoration.Parent = Me.BtnEliminar
-        Me.BtnEliminar.Size = New System.Drawing.Size(137, 36)
-        Me.BtnEliminar.TabIndex = 68
-        Me.BtnEliminar.Text = "Eliminar"
         '
         'F_Sintomas
         '

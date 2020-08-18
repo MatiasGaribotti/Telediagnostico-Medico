@@ -10,15 +10,14 @@ Public Class DPaciente
     Public Property Medicacion As String
     Public Property Tratamiento As String
 
-    Public Sub New(user As String, password As String)
-        MyBase.New(user, password)
+    Public Sub New(userType As Short)
+        MyBase.New(userType)
     End Sub
 
     'Constructor comúm completo
     Public Sub New(
-            DB_User As String,
-            DB_Password As String,
-            ci As Integer,
+            userType As Short,
+            Ci As Integer,
             nombre As String,
             apellidoP As String,
             apellidoM As String,
@@ -32,8 +31,8 @@ Public Class DPaciente
             antecedentesLab As String,
             medicacion As String,
             tratamiento As String)
-        MyBase.New(DB_User, DB_Password, ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
-        Me.Ci = ci
+        MyBase.New(userType, Ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
+        Me.Ci = Ci
         Me.Nombre = nombre
         Me.ApellidoP = apellidoP
         Me.ApellidoM = apellidoM
@@ -51,8 +50,7 @@ Public Class DPaciente
 
     ' Constructor común Parcial
     Public Sub New(
-            DB_User As String,
-            DB_Password As String,
+            userType As Short,
             ci As Integer,
             nombre As String,
             apellidoP As String,
@@ -62,7 +60,7 @@ Public Class DPaciente
             fecha_nacimiento As Date,
             password As String,
             email As String)
-        MyBase.New(DB_User, DB_Password, ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
+        MyBase.New(userType, ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
         Me.Email = email
         Me.NucleoFlia = "Sin ingresar"
         Me.AntecedentesFlia = "Sin ingresar"
@@ -159,6 +157,7 @@ Public Class DPaciente
                 'Hubo una excepción, por lo que debo hacer un rollback
                 'para mantener la integridad de los datos.
                 con.RollbackTrans()
+                con.Close()
                 Console.WriteLine("No se pudo insertar el paciente." & vbCrLf & ex.Message) ' Mensaje en consola para debug
 
                 'Retorno False, significando esto que la transacción
@@ -183,9 +182,11 @@ Public Class DPaciente
 
             Dim con As New OdbcConnection("dsn=VM_DB_sistema_telediagnostico;uid=" & DB_User & ";pwd=" & DB_Password & ";")
             con.Open()
+
             Dim cmd As New OdbcCommand(query, con)
             Dim dataReader = cmd.ExecuteReader()
             dt.Load(dataReader)
+            con.Close()
 
         End If
         Return dt

@@ -3,15 +3,14 @@
 
     Public Property Horarios As List(Of DHorario)
 
-    Public Sub New(DB_User As String,
-                   DB_Password As String)
-        MyBase.New(DB_User, DB_Password)
+    Public Sub New(userType As Short)
+        MyBase.New(userType)
     End Sub
 
     'Constructor para autenticación
-    Public Sub New(ci As Integer,
+    Public Sub New(userType As Short, ci As Integer,
                    password As String)
-        MyBase.New(ci, password)
+        MyBase.New(userType, ci, password)
     End Sub
 
 End Class

@@ -17,14 +17,13 @@ Public Class DHorario
         Domingo
     End Enum
 
-    Public Sub New(DB_User As String,
-                   DB_Pasword As String,
+    Public Sub New(userType As Short,
                    Ci As String,
                    Sucursal As String,
                    Dia As Dias,
                    horaInicio As String,
                    horaFin As String)
-        MyBase.New(DB_User, DB_Pasword)
+        MyBase.New(userType)
         Me.Ci = Ci
         Me.Sucursal = Sucursal
         Me.Dia = Dia

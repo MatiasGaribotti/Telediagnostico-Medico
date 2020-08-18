@@ -85,8 +85,7 @@ Public Class Paciente
 
         If Env.UserType = Env.UserTypes.Recepcionista Then
             db = New DPaciente(
-                "recepcionista",
-                "dbrecepcionistaST",
+                Env.UserType,
                 Ci,
                 Nombre,
                 ApellidoP,
@@ -104,7 +103,7 @@ Public Class Paciente
                 Email)
 
         ElseIf Env.UserType = Env.UserTypes.Administrador Then
-            db = New DPaciente("administrador", "dbadminST", Ci,
+            db = New DPaciente(Env.UserType, Ci,
                 Nombre,
                 ApellidoP,
                 ApellidoM,
@@ -141,7 +140,7 @@ Public Class Paciente
     End Sub
 
     Public Function GetDgvData() As DataTable
-        Dim db As New DPaciente("recepcionista", "dbrecepcionistaST")
+        Dim db As New DPaciente(Env.UserType)
         Dim dt As DataTable = db.GetDgvData()
         Return dt
     End Function

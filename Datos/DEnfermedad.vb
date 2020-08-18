@@ -16,31 +16,31 @@ Public Class DEnfermedad
         MyBase.New()
     End Sub
 
-    Public Sub New(user As String, password As String)
-        MyBase.New(user, password)
+    Public Sub New(userType As Short)
+        MyBase.New(userType)
         Me.Id = -1
         Me.Nombre = "Default"
         Me.Descripcion = "Default"
         Me.Urgencia = Urgencias.Baja
     End Sub
 
-    Public Sub New(user As String, password As String, nombre As String)
-        MyBase.New(user, password)
+    Public Sub New(userType As Short, nombre As String)
+        MyBase.New(userType)
         Me.Id = -1
         Me.Nombre = nombre
         Me.Descripcion = "Default"
         Me.Urgencia = Urgencias.Baja
     End Sub
 
-    Public Sub New(user As String, password As String, nombre As String, descripcion As String, urgencia As Urgencias)
-        MyBase.New(user, password)
+    Public Sub New(userType As Short, nombre As String, descripcion As String, urgencia As Urgencias)
+        MyBase.New(userType)
         Me.Nombre = nombre
         Me.Descripcion = descripcion
         Me.Urgencia = urgencia
     End Sub
 
-    Public Sub New(user As String, password As String, id As Short, nombre As String, descripcion As String, urgencia As Urgencias)
-        MyBase.New(user, password)
+    Public Sub New(userType As Short, id As Short, nombre As String, descripcion As String, urgencia As Urgencias)
+        MyBase.New(userType)
         Me.Id = id
         Me.Nombre = nombre
         Me.Descripcion = descripcion

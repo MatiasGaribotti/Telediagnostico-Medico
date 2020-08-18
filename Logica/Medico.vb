@@ -35,7 +35,7 @@ Public Class Medico
 
     Public Sub Insert()
 
-        Dim db As New DMedico("admin", "123456789")
+        Dim db As New DMedico(Env.UserType)
         Dim result = db.Insert(Ci,
         Nombre,
         ApellidoP,
@@ -59,7 +59,7 @@ Public Class Medico
     End Sub
 
     Public Function GetDgvData() As DataTable
-        Dim db As New DMedico("rrhh", "dbrrhhST")
+        Dim db As New DMedico(Env.UserType)
         Dim dt = db.GetDgvData()
         Return dt
     End Function

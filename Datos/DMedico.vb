@@ -3,8 +3,8 @@ Imports ADODB
 Public Class DMedico
     Inherits DEmpleado
 
-    Public Sub New(user As String, password As String)
-        MyBase.New(user, password)
+    Public Sub New(userType As Short)
+        MyBase.New(userType)
     End Sub
 
     Public Function Insert(
