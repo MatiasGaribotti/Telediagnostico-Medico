@@ -10,7 +10,8 @@ Public Class F_Sintomas
     End Sub
 
     Private Property Modo As Modos = Modos.Ingresar
-
+    Private Property sintomaMod As Short
+    Private Property DelIds As New List(Of Short)
     Private Enum Modos
         Buscar
         Ingresar
@@ -34,7 +35,12 @@ Public Class F_Sintomas
                         MsgBox("No se ingresó el síntoma.", MsgBoxStyle.Critical)
                     End If
                 Case Modos.Modificar
-                    sintoma.Modify()
+                    sintoma.Id = sintomaMod
+                    If sintoma.Modify(DelIds) Then
+                        MsgBox("Sintoma modificado correctamente.")
+                    Else
+                        MsgBox("Error.")
+                    End If
             End Select
         End If
     End Sub
@@ -88,7 +94,12 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub BtnIDelItem_Click(sender As Object, e As EventArgs) Handles BtnIDelItem.Click
-        CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
+        If Modo.Modificar Then
+            CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
+        Else
+            CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
+        End If
+
     End Sub
 
     Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
@@ -140,21 +151,32 @@ Public Class F_Sintomas
     End Sub
 
     Private Function GetSintomaSelected() As Sintoma
-        Dim sintoma As Sintoma
 
         Dim id = DgvSintomas.SelectedRows.Item(0).Cells.Item(0).Value
         Dim nombre = DgvSintomas.SelectedRows.Item(0).Cells.Item(1).Value
         Dim descripcion = DgvSintomas.SelectedRows.Item(0).Cells.Item(2).Value
         Dim tipo = DgvSintomas.SelectedRows.Item(0).Cells.Item(3).Value
 
-        Return New Sintoma(id, nombre, descripcion, tipo)
+        Return New Sintoma(id, nombre, descripcion, [Enum].Parse(GetType(Sintoma.TiposSintomas), tipo))
     End Function
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         Modo = Modos.Modificar
-        Dim sintoma = GetSintoma()
-        sintoma.Find()
+        Dim sintoma = GetSintomaSelected()
+        Dim enfermedades = sintoma.GetEnfermedadesAsociadas()
+        sintomaMod = sintoma.Id
+        DelIds = New List(Of Short)
 
+        TxtISintoma.Text = sintoma.Nombre
+        TxtIEnfermedad.Text = ""
+        CmbITipo.SelectedIndex = sintoma.Tipo - 1
+        TxtIDescripcion.Text = sintoma.Descripcion
 
+        For Each enf In enfermedades
+            CmbIEnfermedad.Items.Add(enf.Nombre)
+            sintoma.AsociarEnfermedad(enf)
+            DelIds.Add(enf.Id)
+        Next
     End Sub
+
 End Class

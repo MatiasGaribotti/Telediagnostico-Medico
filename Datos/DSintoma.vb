@@ -211,34 +211,82 @@ Public Class DSintoma
                 Return False
             End Try
         End If
+        Return False
     End Function
 
-    Public Function Modify() As Boolean
+    Public Function Modify(DelIds As List(Of Short)) As Boolean
+        Dim updateSintoma As String = "UPDATE sintomas SET nombre='" & Nombre & "', descripcion='" & Descripcion & "', tipo=" & Tipo & " WHERE id= " & Me.Id & ""
+        Dim updateEnfermedad As String = "DELETE FROM enfermedades_sintomas WHERE "
 
+        'For i As Integer = 0 To Enfermedades.Count - 1
+        '    If i < Enfermedades.Count - 1 Then
+        '        updateEnfermedad += "idEnfermedad=" & Enfermedades.ElementAt(i).Id & " OR "
+        '    Else
+        '        updateEnfermedad += "idEnfermedad=" & Enfermedades.ElementAt(i).Id & ";"
+        '    End If
+        'Next
 
-        Dim updateSintoma As String = "UPDATE sintomas SET nombre='" & Nombre & "', descripcion='" & Descripcion & "', tipo=" & Tipo & ", "
-        Dim updateEnfermedad As String = "UPDATE sintomas SET nombre='" & Nombre & "', descripcion='" & Descripcion & "', tipo=" & Tipo & ", "
+        For i As Integer = 0 To DelIds.Count - 1
+            If i < DelIds.Count - 1 Then
+                updateEnfermedad += "idEnfermedad=" & DelIds.ElementAt(i) & " OR "
+            Else
+                updateEnfermedad += "idEnfermedad=" & DelIds.ElementAt(i) & ";"
+            End If
+        Next
+
+        Console.WriteLine(updateEnfermedad)
 
         If HasConnection() Then
             Dim con = Conectar()
-
             Try
-                con.BeginTransaction()
+                con.BeginTrans()
                 con.Execute(updateSintoma)
+                con.Execute(updateEnfermedad)
+
+                For Each enfermeadad In Enfermedades
+                    AsociarSintomaEnfermedad(Id, enfermeadad.Id, con)
+                Next
 
                 con.CommitTrans()
                 con.Close()
                 Return True
             Catch ex As Exception
-
                 con.RollbackTrans()
                 con.Close()
                 Console.WriteLine("ERROR: " & ex.Message)
                 Return False
             End Try
-
+        Else
+            Console.WriteLine("No hay conexión con la base de datos.")
+            Return False
         End If
 
     End Function
+
+    Public Function GetEnfermedadesAsociadas() As List(Of DEnfermedad)
+        Dim rs As New Recordset()
+        Dim query = "SELECT ES.idEnfermedad, E.nombre FROM enfermedades_sintomas AS ES JOIN enfermedades AS E ON(ES.idEnfermedad = E.id) WHERE idSintoma=" & Id & ";"
+        Dim enfermedades As New List(Of DEnfermedad)
+
+        If HasConnection() Then
+            Dim con = Conectar()
+            Try
+                rs = con.Execute(query)
+                While Not rs.EOF
+                    Dim id = CShort(rs.Fields("idEnfermedad").Value)
+                    Dim nombre = rs.Fields("nombre").Value.ToString
+                    enfermedades.Add(New DEnfermedad(id, nombre, ""))
+                    rs.MoveNext()
+                End While
+                con.Close()
+            Catch ex As Exception
+                con.Close()
+                Console.WriteLine("ERROR: " & ex.Message)
+            End Try
+
+        End If
+        Return enfermedades
+    End Function
+
 
 End Class

@@ -22,9 +22,9 @@ Partial Class F_Enfermedades
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlSide = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblImportar = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TxtImportar = New Guna.UI2.WinForms.Guna2TextBox()
@@ -45,11 +45,11 @@ Partial Class F_Enfermedades
         Me.LblBEnfermedad = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TxtBEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
         Me.PnlDgv = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.DgvEnfermedades = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.PnlSide.SuspendLayout()
         Me.PnlDgv.SuspendLayout()
         CType(Me.DgvEnfermedades, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -418,92 +418,6 @@ Partial Class F_Enfermedades
         Me.PnlDgv.Size = New System.Drawing.Size(1347, 1080)
         Me.PnlDgv.TabIndex = 1
         '
-        'BtnMinimize
-        '
-        Me.BtnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMinimize.Animated = True
-        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
-        Me.BtnMinimize.IconColor = System.Drawing.Color.White
-        Me.BtnMinimize.Location = New System.Drawing.Point(1257, 0)
-        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnMinimize.Name = "BtnMinimize"
-        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
-        Me.BtnMinimize.Size = New System.Drawing.Size(45, 29)
-        Me.BtnMinimize.TabIndex = 28
-        '
-        'BtnExit
-        '
-        Me.BtnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnExit.Animated = True
-        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnExit.HoverState.Parent = Me.BtnExit
-        Me.BtnExit.IconColor = System.Drawing.Color.White
-        Me.BtnExit.Location = New System.Drawing.Point(1302, 0)
-        Me.BtnExit.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
-        Me.BtnExit.Size = New System.Drawing.Size(45, 29)
-        Me.BtnExit.TabIndex = 27
-        '
-        'DgvEnfermedades
-        '
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
-        Me.DgvEnfermedades.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
-        Me.DgvEnfermedades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvEnfermedades.BackgroundColor = System.Drawing.Color.White
-        Me.DgvEnfermedades.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DgvEnfermedades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvEnfermedades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvEnfermedades.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
-        Me.DgvEnfermedades.ColumnHeadersHeight = 4
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvEnfermedades.DefaultCellStyle = DataGridViewCellStyle18
-        Me.DgvEnfermedades.EnableHeadersVisualStyles = False
-        Me.DgvEnfermedades.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvEnfermedades.Location = New System.Drawing.Point(21, 121)
-        Me.DgvEnfermedades.Name = "DgvEnfermedades"
-        Me.DgvEnfermedades.RowHeadersVisible = False
-        Me.DgvEnfermedades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvEnfermedades.Size = New System.Drawing.Size(1300, 839)
-        Me.DgvEnfermedades.TabIndex = 26
-        Me.DgvEnfermedades.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
-        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.DgvEnfermedades.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.DgvEnfermedades.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.Height = 4
-        Me.DgvEnfermedades.ThemeStyle.ReadOnly = False
-        Me.DgvEnfermedades.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvEnfermedades.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvEnfermedades.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvEnfermedades.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.DgvEnfermedades.ThemeStyle.RowsStyle.Height = 22
-        Me.DgvEnfermedades.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvEnfermedades.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
         'BtnEliminar
         '
         Me.BtnEliminar.Animated = True
@@ -541,6 +455,92 @@ Partial Class F_Enfermedades
         Me.BtnModificar.Size = New System.Drawing.Size(99, 36)
         Me.BtnModificar.TabIndex = 107
         Me.BtnModificar.Text = "Modificar"
+        '
+        'BtnMinimize
+        '
+        Me.BtnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMinimize.Animated = True
+        Me.BtnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.BtnMinimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnMinimize.HoverState.Parent = Me.BtnMinimize
+        Me.BtnMinimize.IconColor = System.Drawing.Color.White
+        Me.BtnMinimize.Location = New System.Drawing.Point(1257, 0)
+        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnMinimize.Name = "BtnMinimize"
+        Me.BtnMinimize.ShadowDecoration.Parent = Me.BtnMinimize
+        Me.BtnMinimize.Size = New System.Drawing.Size(45, 29)
+        Me.BtnMinimize.TabIndex = 28
+        '
+        'BtnExit
+        '
+        Me.BtnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnExit.Animated = True
+        Me.BtnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnExit.HoverState.Parent = Me.BtnExit
+        Me.BtnExit.IconColor = System.Drawing.Color.White
+        Me.BtnExit.Location = New System.Drawing.Point(1302, 0)
+        Me.BtnExit.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.ShadowDecoration.Parent = Me.BtnExit
+        Me.BtnExit.Size = New System.Drawing.Size(45, 29)
+        Me.BtnExit.TabIndex = 27
+        '
+        'DgvEnfermedades
+        '
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DgvEnfermedades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvEnfermedades.BackgroundColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvEnfermedades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvEnfermedades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvEnfermedades.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DgvEnfermedades.ColumnHeadersHeight = 4
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvEnfermedades.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DgvEnfermedades.EnableHeadersVisualStyles = False
+        Me.DgvEnfermedades.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvEnfermedades.Location = New System.Drawing.Point(21, 121)
+        Me.DgvEnfermedades.Name = "DgvEnfermedades"
+        Me.DgvEnfermedades.RowHeadersVisible = False
+        Me.DgvEnfermedades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvEnfermedades.Size = New System.Drawing.Size(1300, 839)
+        Me.DgvEnfermedades.TabIndex = 26
+        Me.DgvEnfermedades.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvEnfermedades.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvEnfermedades.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DgvEnfermedades.ThemeStyle.HeaderStyle.Height = 4
+        Me.DgvEnfermedades.ThemeStyle.ReadOnly = False
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.Height = 22
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvEnfermedades.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'F_Enfermedades
         '

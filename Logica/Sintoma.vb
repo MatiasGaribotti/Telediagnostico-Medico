@@ -119,8 +119,15 @@ Public Class Sintoma
         Return db.GetSintomasFound()
     End Function
 
-    Public Function Find() As Sintoma
+    Public Function GetEnfermedadesAsociadas() As List(Of Enfermedad)
+        Dim db As New DSintoma(Env.UserType, Id)
+        Dim DEnfermedades = db.GetEnfermedadesAsociadas()
+        Dim enfermedades As New List(Of Enfermedad)
+        For Each i In DEnfermedades
+            enfermedades.Add(New Enfermedad(i.Id, i.Nombre))
+        Next
 
+        Return enfermedades
     End Function
 
     Public Function Delete() As Boolean
@@ -128,16 +135,32 @@ Public Class Sintoma
         Return db.Delete()
     End Function
 
-    Public Function Modify() As Boolean
+    Public Function Modify(Del_ids As List(Of Short)) As Boolean
+        Dim idEnfermedades As New List(Of Short)
+        Dim DBEnfermedad As New DEnfermedad(Env.UserType)
+        'Veificar que existan las enfermedades
+        Dim existenEnfermedades = False
+
+        For Each enfermedad As Enfermedad In Enfermedades
+            Dim id = DBEnfermedad.Find(enfermedad.Nombre)
+
+            If id <> -1 Then
+                idEnfermedades.Add(id)
+                existenEnfermedades = True
+            End If
+        Next
+
+
         Dim DEnfermedades = EnfermedadToDEnfermeadad()
+
         Dim db As New DSintoma(Env.UserType, Id, Nombre, Descripcion, Tipo, DEnfermedades)
-        Return db.Modify()
+        Return db.Modify(Del_ids)
     End Function
 
     Private Function EnfermedadToDEnfermeadad() As List(Of DEnfermedad)
         Dim DEnfermedades As New List(Of DEnfermedad)
         For Each enf In Enfermedades
-            DEnfermedades.Add(New DEnfermedad(enf.Nombre))
+            DEnfermedades.Add(New DEnfermedad(Env.UserType, enf.Nombre))
         Next
         Return DEnfermedades
     End Function

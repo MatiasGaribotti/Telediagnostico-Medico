@@ -46,5 +46,13 @@ Public Class F_Enfermedades
     Private Sub F_Enfermedades_Load(sender As Object, e As EventArgs) Handles Me.Load
         CmbIUrgencia.DataSource = [Enum].GetValues(GetType(Enfermedad.Urgencias))
         CmbBUrgencia.DataSource = [Enum].GetValues(GetType(Enfermedad.Urgencias))
+        LoadDgv()
+    End Sub
+
+    Public Sub LoadDgv()
+        'Dim logica As New Enfermedad()
+        'Dim dt As DataTable = logica.GetDgvData()
+        'DgvSintomas.DataSource = dt
+        'DgvSintomas.Refresh()
     End Sub
 End Class

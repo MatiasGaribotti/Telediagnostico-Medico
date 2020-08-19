@@ -32,6 +32,14 @@ Public Class DEnfermedad
         Me.Urgencia = Urgencias.Baja
     End Sub
 
+    Public Sub New(id As Short, nombre As String, descripcion As String)
+        MyBase.New()
+        Me.Id = id
+        Me.Nombre = nombre
+        Me.Descripcion = descripcion
+        Me.Urgencia = Urgencias.Baja
+    End Sub
+
     Public Sub New(userType As Short, nombre As String, descripcion As String, urgencia As Urgencias)
         MyBase.New(userType)
         Me.Nombre = nombre
@@ -47,7 +55,7 @@ Public Class DEnfermedad
         Me.Urgencia = urgencia
     End Sub
 
-    Public Function Find(nombre) As Short
+    Public Function Find(nombre As String) As Short
         Dim id As Short = -1
         Dim recordSet As Recordset
         Dim query = "SELECT id FROM enfermedades " &

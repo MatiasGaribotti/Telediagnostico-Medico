@@ -24,6 +24,13 @@ Public Class Enfermedad
         Me.Urgencia = Urgencias.Baja
     End Sub
 
+    Public Sub New(id As Short, nombre As String)
+        Me.Id = id
+        Me.Nombre = nombre
+        Me.Descripcion = Descripcion
+        Me.Urgencia = Urgencia
+    End Sub
+
     Public Sub New(nombre As String, descripcion As String, urgencia As Urgencias)
         Me.Nombre = nombre
         Me.Descripcion = descripcion
