@@ -10,8 +10,7 @@ Public Class F_Sintomas
     End Sub
 
     Private Property Modo As Modos = Modos.Ingresar
-    Private Property sintomaMod As Short
-    Private Property DelIds As New List(Of Short)
+    Private Property sintomaMod As Sintoma
     Private Enum Modos
         Buscar
         Ingresar
@@ -24,32 +23,53 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
-        If ValidateFields() Then
-            Dim sintoma = GetSintoma()
+        Select Case Modo
+            Case Modos.Ingresar
+                Try
+                    Dim sintoma = GetSintoma()
+                    sintoma.Insert()
+                    LoadDgv()
+                    MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
 
-            Select Case Modo
-                Case Modos.Ingresar
-                    If sintoma.Insert() Then
-                        MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
-                    Else
-                        MsgBox("No se ingresó el síntoma.", MsgBoxStyle.Critical)
-                    End If
-                Case Modos.Modificar
-                    sintoma.Id = sintomaMod
-                    If sintoma.Modify(DelIds) Then
-                        MsgBox("Sintoma modificado correctamente.")
-                    Else
-                        MsgBox("Error.")
-                    End If
-            End Select
+            Case Modos.Modificar
+                'Cargo el id en el nuevo síntoma
+                Try
+                    Dim sintoma = GetSintoma()
+                    sintoma.Id = sintomaMod.Id
+                    sintoma.Enfermedades = sintoma.GetEnfermedades()
+                    sintoma.Modify()
+                    LoadDgv()
+                    ClearFields()
+                    MsgBox("Sintoma modificado correctamente.")
+                    Modo = Modos.Ingresar
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+
+                Finally
+                End Try
+        End Select
+    End Sub
+
+    Private Sub ValidateFields()
+        If TxtISintoma.Text = "" Then
+            Throw New NoNullAllowedException("El nombre del síntoma no puede ser vacío.")
+
         End If
     End Sub
 
-    Private Function ValidateFields() As Boolean
-        Return True
-    End Function
+    Private Sub ClearFields()
+        TxtISintoma.Text = ""
+        TxtIDescripcion.Text = ""
+        CmbITipo.SelectedIndex = 0
+        CmbIEnfermedad.Items.Clear()
+    End Sub
+
     Private Function GetSintoma() As Sintoma
-        If ValidateFields() Then
+        Try
+            ValidateFields()
             Dim tipo = [Enum].Parse(GetType(Sintoma.TiposSintomas), CmbITipo.SelectedIndex + 1)
 
             Dim sintoma As New Sintoma(TxtISintoma.Text, TxtIDescripcion.Text, tipo)
@@ -59,16 +79,13 @@ Public Class F_Sintomas
                 Dim nombreEnfermedad As String = CmbIEnfermedad.Items.Item(item).ToString
                 sintoma.AsociarEnfermedad(New Enfermedad(nombreEnfermedad))
             Next
-
             Return sintoma
-        Else
-            Return Nothing
-        End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Function
 
-    Private Sub PnlSide_Paint(sender As Object, e As PaintEventArgs) Handles PnlSide.Paint
-
-    End Sub
 
     Private Sub F_Sintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
         CmbITipo.DataSource = [Enum].GetValues(GetType(Sintoma.TiposSintomas))
@@ -94,20 +111,13 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub BtnIDelItem_Click(sender As Object, e As EventArgs) Handles BtnIDelItem.Click
-        If Modo.Modificar Then
-            CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
-        Else
-            CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
-        End If
-
+        CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
     End Sub
 
     Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
-        If ValidateFields() Then
-            Dim sintoma = GetPatern()
-            Dim found As DataTable = sintoma.Filter()
-            LoadDgv(found)
-        End If
+        Dim sintoma = GetPatern()
+        Dim found As DataTable = sintoma.Filter()
+        LoadDgv(found)
     End Sub
 
     Public Sub LoadDgv()
@@ -146,6 +156,7 @@ Public Class F_Sintomas
             Else
                 MsgBox("No se pudo eliminar el síntoma: ")
             End If
+            LoadDgv()
         End If
 
     End Sub
@@ -163,20 +174,19 @@ Public Class F_Sintomas
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         Modo = Modos.Modificar
         Dim sintoma = GetSintomaSelected()
-        Dim enfermedades = sintoma.GetEnfermedadesAsociadas()
-        sintomaMod = sintoma.Id
-        DelIds = New List(Of Short)
+        sintoma.Enfermedades = sintoma.GetEnfermedadesAsociadas()
+
+        'Variable que alamcena el síntoma que
+        'se está modificando
+        sintomaMod = sintoma
 
         TxtISintoma.Text = sintoma.Nombre
         TxtIEnfermedad.Text = ""
         CmbITipo.SelectedIndex = sintoma.Tipo - 1
         TxtIDescripcion.Text = sintoma.Descripcion
 
-        For Each enf In enfermedades
+        For Each enf In sintoma.Enfermedades
             CmbIEnfermedad.Items.Add(enf.Nombre)
-            sintoma.AsociarEnfermedad(enf)
-            DelIds.Add(enf.Id)
         Next
     End Sub
-
 End Class

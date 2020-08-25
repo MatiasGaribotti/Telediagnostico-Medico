@@ -1,4 +1,5 @@
-﻿Public Class DDireccion
+﻿Imports System.Data.Odbc
+Public Class DDireccion
     Inherits DBConnection
     Public Property Id As Integer
     Public Property Calle As String
@@ -44,7 +45,6 @@
                    Localidad As String,
                    Departamento As Departamentos,
                    Detalle As String)
-        MyBase.New()
         Me.Id = Id
         Me.Calle = Calle
         Me.Nro = Nro
@@ -52,15 +52,12 @@
         Me.Departamento = Departamento
         Me.Detalle = Detalle
     End Sub
-    Public Sub New(DB_User As String,
-                   DB_Password As String,
+    Public Sub New(
                    calle As String,
                    nro As Integer,
                    localidad As String,
                    departamento As Departamentos,
                    detalle As String)
-        Me.DB_User = DB_User
-        Me.DB_Password = DB_Password
         Me.Calle = calle
         Me.Nro = nro
         Me.Localidad = localidad
@@ -68,24 +65,32 @@
         Me.Detalle = detalle
     End Sub
 
-    Public Sub New(DB_User As String,
-                   DB_Password As String,
+    Public Sub New(
                    calle As String,
                    nro As Integer,
                    localidad As String,
                    departamento As Departamentos)
-        Me.DB_User = DB_User
-        Me.DB_Password = DB_Password
         Me.Calle = calle
         Me.Nro = nro
         Me.Localidad = localidad
         Me.Departamento = departamento
+        Me.Detalle = ""
     End Sub
 
-    Public Function Insert() As Boolean
+    Public Sub Insert(connection As OdbcConnection)
         If HasConnection() Then
-            Dim con = Conectar()
+            Try
+                Dim query = "INSERT INTO direcciones(calle, numero, localidad, departamento, detalles) VALUES(?,?,?,?,?)"
+                Dim cmd As New OdbcCommand(query, connection)
+                cmd.Parameters.Add(New OdbcParameter("calle", Me.Calle))
+                cmd.Parameters.Add(New OdbcParameter("numero", Me.Nro))
+                cmd.Parameters.Add(New OdbcParameter("localidad", Me.Localidad))
+                cmd.Parameters.Add(New OdbcParameter("departamento", Me.Departamento))
+                cmd.Parameters.Add(New OdbcParameter("detalle", Me.Detalle))
+                cmd.ExecuteNonQuery()
+            Catch ex As Exception
+                Throw ex
+            End Try
         End If
-    End Function
-
+    End Sub
 End Class

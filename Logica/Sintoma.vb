@@ -71,47 +71,36 @@ Public Class Sintoma
         Me.Enfermedades.Add(enfermedad)
     End Sub
 
-    Public Function Insert() As Boolean
-        Dim saved As Boolean = False
-
+    Public Sub Insert()
         Dim DBSintoma As New DSintoma(Env.UserType, Nombre, Descripcion, Tipo)
         Dim DBEnfermedad As New DEnfermedad(Env.UserType)
         Dim idEnfermedades As New List(Of Short)
 
-        'Veificar que existan las enfermedades
-        Dim existenEnfermedades = False
-
-        For Each enfermedad As Enfermedad In Enfermedades
-            Dim id = DBEnfermedad.Find(enfermedad.Nombre)
-
-            If id <> -1 Then
-                idEnfermedades.Add(id)
-                existenEnfermedades = True
-            End If
-        Next
-
-        If existenEnfermedades Then
-            saved = DBSintoma.Insert(Nombre, Descripcion, Tipo, idEnfermedades)
-        End If
-        Return saved
-    End Function
+        Try
+            Enfermedades = GetEnfermedades()
+            DBSintoma.Insert()
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 
     Public Function GetDgvData() As DataTable
-        Dim db As DSintoma
+        Dim db As New DSintoma()
 
-        If Enfermedades.Count > 0 Then
-            Dim dbenfermedades = EnfermedadToDEnfermeadad()
-            dbenfermedades = New List(Of DEnfermedad)
+        'If Enfermedades.Count > 0 Then
+        '    Dim dbenfermedades = EnfermedadToDEnfermeadad()
+        '    dbenfermedades = New List(Of DEnfermedad)
 
-            For Each enf In Enfermedades
-                dbenfermedades.Add(New DEnfermedad(enf.Nombre))
-            Next
-            db = New DSintoma(Env.UserType, Nombre, Tipo, dbenfermedades)
-        Else
-            db = New DSintoma(Env.UserType, Me.Nombre, Me.Tipo)
-        End If
+        '    For Each enf In Enfermedades
+        '        dbenfermedades.Add(New DEnfermedad(enf.Nombre))
+        '    Next
+        '    db = New DSintoma(Env.UserType, Nombre, Tipo, dbenfermedades)
+        'Else
+        '    db = New DSintoma(Env.UserType, Me.Nombre, Me.Tipo)
+        'End If
 
-        Return db.GetDgvData()
+        'Return db.GetDgvData()
+        Return db.test()
     End Function
 
     Public Function Filter() As DataTable
@@ -135,33 +124,47 @@ Public Class Sintoma
         Return db.Delete()
     End Function
 
-    Public Function Modify(Del_ids As List(Of Short)) As Boolean
-        Dim idEnfermedades As New List(Of Short)
-        Dim DBEnfermedad As New DEnfermedad(Env.UserType)
-        'Veificar que existan las enfermedades
-        Dim existenEnfermedades = False
-
-        For Each enfermedad As Enfermedad In Enfermedades
-            Dim id = DBEnfermedad.Find(enfermedad.Nombre)
-
-            If id <> -1 Then
-                idEnfermedades.Add(id)
-                existenEnfermedades = True
-            End If
-        Next
-
-
+    Public Function Modify() As Boolean
         Dim DEnfermedades = EnfermedadToDEnfermeadad()
+        Dim dsintoma As New DSintoma(Env.UserType, Id, Nombre, Descripcion, Tipo, DEnfermedades)
 
-        Dim db As New DSintoma(Env.UserType, Id, Nombre, Descripcion, Tipo, DEnfermedades)
-        Return db.Modify(Del_ids)
+        Try
+            dsintoma.Modify()
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        'Return db.Modify()
+
+    End Function
+
+
+    'Funcion que retorna la información de las enfermedades ingresadas, si es que existen
+    Public Function GetEnfermedades() As List(Of Enfermedad)
+        Dim DBEnfermedad As New DEnfermedad(Env.UserType)
+        Dim found As New List(Of Enfermedad)
+
+        'Veifico que existan las enfermedades y las agrego a la lista de enfermedades
+        For Each enfermedad In Enfermedades
+            Dim id = DBEnfermedad.Find(enfermedad.Nombre)
+            found.Add(New Enfermedad(id, Nombre))
+
+        Next
+        Return found
     End Function
 
     Private Function EnfermedadToDEnfermeadad() As List(Of DEnfermedad)
         Dim DEnfermedades As New List(Of DEnfermedad)
         For Each enf In Enfermedades
-            DEnfermedades.Add(New DEnfermedad(Env.UserType, enf.Nombre))
+            DEnfermedades.Add(New DEnfermedad(CShort(Env.UserType), enf.Id, enf.Nombre))
         Next
         Return DEnfermedades
+    End Function
+
+    'Compara los síntomas y devuelve uno como resultado que va a
+    'contener las enfermedades que debe agregar
+    Public Function Compare() As Sintoma
+
     End Function
 End Class

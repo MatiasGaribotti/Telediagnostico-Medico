@@ -27,9 +27,13 @@ Public MustInherit Class DBConnection
 
     'Funcion que retorna una conexión a la base de datos
     Protected Function Conectar() As Connection
-        Dim Con = New Connection() With {.ConnectionString = Me.ConStr}
-        Con.Open()
-        Return Con
+        Try
+            Dim Con = New Connection() With {.ConnectionString = ConStr}
+            Con.Open()
+            Return Con
+        Catch ex As Exception
+            Throw New ApplicationException("Error al conectar con la base de datos")
+        End Try
     End Function
 
     Protected Function HasConnection() As Boolean

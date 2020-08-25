@@ -85,7 +85,7 @@ Public Class DSintoma
 
 
 
-    Public Function Insert(nombre As String, descripcion As String, tipo As String, enfermedades As List(Of Short)) As Boolean
+    Public Sub Insert()
         If HasConnection() Then
             Dim con As Connection = Conectar()
             Dim recordSet As Recordset
@@ -93,12 +93,12 @@ Public Class DSintoma
 
             Dim insertSintoma = "INSERT INTO sintomas(nombre,descripcion,tipo) " &
                                 "VALUES('" &
-                                nombre & "','" &
-                                descripcion & "'," &
-                                tipo & ");"
+                                Nombre & "','" &
+                                Descripcion & "'," &
+                                Tipo & ");"
 
             Dim selectSintoma = "SELECT id FROM sintomas " &
-                                "WHERE nombre='" & nombre & "' AND descripcion='" & descripcion & "' AND tipo=" & tipo & ";"
+                                "WHERE nombre='" & Nombre & "' AND descripcion='" & Descripcion & "' AND tipo=" & Tipo & ";"
 
             Try
                 con.BeginTrans()
@@ -109,36 +109,39 @@ Public Class DSintoma
                 'a la variable idSintoma
                 idSintoma = recordSet.Fields("id").Value
 
-
-                For Each idEnfermedad As Short In enfermedades
-                    AsociarSintomaEnfermedad(idSintoma, idEnfermedad, con)
+                For Each enfermedad In Enfermedades
+                    AddSintomaEnfermedad(idSintoma, enfermedad.Id, con)
                 Next
                 con.CommitTrans()
-                Return True
 
             Catch ex As Exception
-
-                MsgBox("ERROR: " & ex.Message, MsgBoxStyle.Critical, "Insert Síntoma")
                 con.RollbackTrans()
-                Return False
+                Throw ex
+            Finally
+                con.Close()
 
             End Try
-
-            con.Close()
         Else
-            MsgBox("No hay conexión con la base de datos.")
-            Return False
+            Throw New ApplicationException("No hay conexión con la base de datos.")
         End If
+    End Sub
 
-    End Function
-
-    Public Sub AsociarSintomaEnfermedad(idSintoma As Short, idEnfermedad As Short, con As Connection)
+    Public Sub AddSintomaEnfermedad(idSintoma As Short, idEnfermedad As Short, con As Connection)
         Dim insert = "INSERT INTO enfermedades_sintomas(idSintoma, idEnfermedad) " &
                      "VALUES(" & idSintoma & "," & idEnfermedad & ");"
         Try
             con.Execute(insert)
         Catch ex As Exception
             MsgBox("ERROR en asociar sintoma enfermedad: " & ex.Message)
+            con.RollbackTrans()
+        End Try
+    End Sub
+
+    Public Sub DelSintomaEnfermedad(con As Connection)
+        Dim query = "DELETE FROM enfermedades_sintomas WHERE idSintoma=" & Me.Id & ";"
+        Try
+            con.Execute(query)
+        Catch ex As Exception
             con.RollbackTrans()
         End Try
     End Sub
@@ -158,6 +161,14 @@ Public Class DSintoma
         End If
         Return dt
 
+    End Function
+
+    Public Function test() As DataTable
+        Dim connection = Conectar()
+        Dim rs = connection.Execute("SELECT id,nombre,descripcion,tipo FROM sintomas WHERE ENABLED=1")
+        Dim da As New OleDb.OleDbDataAdapter()
+        Dim dt As New DataTable
+        da.Fill(dt, rs)
         Return dt
     End Function
 
@@ -214,53 +225,31 @@ Public Class DSintoma
         Return False
     End Function
 
-    Public Function Modify(DelIds As List(Of Short)) As Boolean
-        Dim updateSintoma As String = "UPDATE sintomas SET nombre='" & Nombre & "', descripcion='" & Descripcion & "', tipo=" & Tipo & " WHERE id= " & Me.Id & ""
-        Dim updateEnfermedad As String = "DELETE FROM enfermedades_sintomas WHERE "
-
-        'For i As Integer = 0 To Enfermedades.Count - 1
-        '    If i < Enfermedades.Count - 1 Then
-        '        updateEnfermedad += "idEnfermedad=" & Enfermedades.ElementAt(i).Id & " OR "
-        '    Else
-        '        updateEnfermedad += "idEnfermedad=" & Enfermedades.ElementAt(i).Id & ";"
-        '    End If
-        'Next
-
-        For i As Integer = 0 To DelIds.Count - 1
-            If i < DelIds.Count - 1 Then
-                updateEnfermedad += "idEnfermedad=" & DelIds.ElementAt(i) & " OR "
-            Else
-                updateEnfermedad += "idEnfermedad=" & DelIds.ElementAt(i) & ";"
-            End If
-        Next
-
-        Console.WriteLine(updateEnfermedad)
+    Public Function Modify() As Boolean
+        Dim Updatequery As String = "UPDATE sintomas SET nombre='" & Nombre & "', descripcion='" & Descripcion & "', tipo=" & Tipo & " WHERE id= " & Me.Id & ""
 
         If HasConnection() Then
             Dim con = Conectar()
             Try
                 con.BeginTrans()
-                con.Execute(updateSintoma)
-                con.Execute(updateEnfermedad)
+                con.Execute(Updatequery)
+                DelSintomaEnfermedad(con)
 
                 For Each enfermeadad In Enfermedades
-                    AsociarSintomaEnfermedad(Id, enfermeadad.Id, con)
+                    AddSintomaEnfermedad(Id, enfermeadad.Id, con)
                 Next
-
                 con.CommitTrans()
-                con.Close()
                 Return True
             Catch ex As Exception
                 con.RollbackTrans()
-                con.Close()
-                Console.WriteLine("ERROR: " & ex.Message)
+                Throw ex
                 Return False
+            Finally
+                con.Close()
             End Try
         Else
-            Console.WriteLine("No hay conexión con la base de datos.")
-            Return False
+            Throw New ApplicationException("No hay conexión con la base de datos")
         End If
-
     End Function
 
     Public Function GetEnfermedadesAsociadas() As List(Of DEnfermedad)
@@ -278,10 +267,10 @@ Public Class DSintoma
                     enfermedades.Add(New DEnfermedad(id, nombre, ""))
                     rs.MoveNext()
                 End While
-                con.Close()
             Catch ex As Exception
-                con.Close()
                 Console.WriteLine("ERROR: " & ex.Message)
+            Finally
+                con.Close()
             End Try
 
         End If

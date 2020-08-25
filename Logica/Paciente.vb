@@ -90,8 +90,7 @@ Public Class Paciente
                 Nombre,
                 ApellidoP,
                 ApellidoM,
-                New DDireccion("recepcionista",
-                                "dbrecepcionistaST",
+                New DDireccion(
                                 Direccion.Calle,
                                 Direccion.Nro,
                                 Direccion.Localidad,
@@ -107,8 +106,7 @@ Public Class Paciente
                 Nombre,
                 ApellidoP,
                 ApellidoM,
-                New DDireccion("recepcionista",
-                                "dbrecepcionistaST",
+                New DDireccion(
                                 Direccion.Calle,
                                 Direccion.Nro,
                                 Direccion.Localidad,

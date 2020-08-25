@@ -32,6 +32,14 @@ Public Class DEnfermedad
         Me.Urgencia = Urgencias.Baja
     End Sub
 
+    Public Sub New(userType As Short, id As Short, nombre As String)
+        MyBase.New(userType)
+        Me.Id = id
+        Me.Nombre = nombre
+        Me.Descripcion = "Default"
+        Me.Urgencia = Urgencias.Baja
+    End Sub
+
     Public Sub New(id As Short, nombre As String, descripcion As String)
         MyBase.New()
         Me.Id = id
@@ -88,20 +96,22 @@ Public Class DEnfermedad
                     End While
 
                     If count > 1 Then
-                        MsgBox("Más de una enfermedad encontrada para el nombre: " & nombre, MsgBoxStyle.Critical)
+                        Throw New Exception("Más de una enfermedad encontrada para el nombre: " & nombre)
+                    Else
+                        Return id
                     End If
                 Else
                     'No se encontraron registros
-                    MsgBox("No se encontró ninguna enfermedad con el nombre: " & nombre)
+                    Throw New KeyNotFoundException("No se encontró ninguna enfermedad con el nombre: " & nombre)
                 End If
 
             Catch ex As Exception
-                MsgBox("ERROR: " & ex.Message, MsgBoxStyle.Critical, "Find Enfermedad")
-            End Try
+                Throw ex
 
-            con.Close()
+            Finally
+                con.Close()
+            End Try
         End If
-        Return id
     End Function
 
     Public Function Insert(nombre As String, descripcion As String, urgencia As String) As Boolean

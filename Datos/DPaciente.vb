@@ -101,7 +101,8 @@ Public Class DPaciente
                 con.BeginTrans()
                 'MsgBox(insertDireccion)
                 'Ingreso la dirección a la DB
-                con.Execute(insertDireccion)
+                Dim dbDireccion As New DDireccion(Direccion.Calle, Direccion.Nro, Direccion.Localidad, Direccion.Departamento, Direccion.Detalle)
+                dbDireccion.Insert(con)
 
                 'Obtener idDireccion
                 'MsgBox(getIdDireccion)
