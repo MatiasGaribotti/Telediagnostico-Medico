@@ -142,7 +142,6 @@ Public Class F_Sintomas
             Dim nombreEnfermedad As String = CmbIEnfermedad.Items.Item(item).ToString
             sintoma.AsociarEnfermedad(New Enfermedad(nombreEnfermedad))
         Next
-
         Return sintoma
     End Function
 

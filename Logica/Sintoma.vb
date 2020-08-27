@@ -74,11 +74,10 @@ Public Class Sintoma
     Public Sub Insert()
         Dim DBSintoma As New DSintoma(Env.UserType, Nombre, Descripcion, Tipo)
         Dim DBEnfermedad As New DEnfermedad(Env.UserType)
-        Dim idEnfermedades As New List(Of Short)
 
         Try
             Enfermedades = GetEnfermedades()
-            DBSintoma.Insert()
+            DBSintoma.Insert() '<<===============================CHECK
         Catch ex As Exception
             Throw ex
         End Try
@@ -86,19 +85,6 @@ Public Class Sintoma
 
     Public Function GetDgvData() As DataTable
         Dim db As New DSintoma()
-
-        'If Enfermedades.Count > 0 Then
-        '    Dim dbenfermedades = EnfermedadToDEnfermeadad()
-        '    dbenfermedades = New List(Of DEnfermedad)
-
-        '    For Each enf In Enfermedades
-        '        dbenfermedades.Add(New DEnfermedad(enf.Nombre))
-        '    Next
-        '    db = New DSintoma(Env.UserType, Nombre, Tipo, dbenfermedades)
-        'Else
-        '    db = New DSintoma(Env.UserType, Me.Nombre, Me.Tipo)
-        'End If
-
         'Return db.GetDgvData()
         Return db.test()
     End Function
@@ -139,7 +125,6 @@ Public Class Sintoma
 
     End Function
 
-
     'Funcion que retorna la información de las enfermedades ingresadas, si es que existen
     Public Function GetEnfermedades() As List(Of Enfermedad)
         Dim DBEnfermedad As New DEnfermedad(Env.UserType)
@@ -148,8 +133,7 @@ Public Class Sintoma
         'Veifico que existan las enfermedades y las agrego a la lista de enfermedades
         For Each enfermedad In Enfermedades
             Dim id = DBEnfermedad.Find(enfermedad.Nombre)
-            found.Add(New Enfermedad(id, Nombre))
-
+            found.Add(New Enfermedad(id, enfermedad.Nombre))
         Next
         Return found
     End Function
@@ -162,9 +146,4 @@ Public Class Sintoma
         Return DEnfermedades
     End Function
 
-    'Compara los síntomas y devuelve uno como resultado que va a
-    'contener las enfermedades que debe agregar
-    Public Function Compare() As Sintoma
-
-    End Function
 End Class
