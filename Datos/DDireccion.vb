@@ -1,4 +1,4 @@
-﻿Imports System.Data.Odbc
+﻿Imports ADODB
 Public Class DDireccion
     Inherits DBConnection
     Public Property Id As Integer
@@ -77,19 +77,15 @@ Public Class DDireccion
         Me.Detalle = ""
     End Sub
 
-    Public Sub Insert(connection As OdbcConnection)
+    Public Sub Insert(con As Connection)
         If HasConnection() Then
+            Dim query As String = "INSERT INTO direcciones(calle, numero, localidad, departamento, detalles) VALUES('" & Calle & "'," & Nro & ",'" & Localidad & "'," & Departamento & ",'" & Detalle & "')"
             Try
-                Dim query = "INSERT INTO direcciones(calle, numero, localidad, departamento, detalles) VALUES(?,?,?,?,?)"
-                Dim cmd As New OdbcCommand(query, connection)
-                cmd.Parameters.Add(New OdbcParameter("calle", Me.Calle))
-                cmd.Parameters.Add(New OdbcParameter("numero", Me.Nro))
-                cmd.Parameters.Add(New OdbcParameter("localidad", Me.Localidad))
-                cmd.Parameters.Add(New OdbcParameter("departamento", Me.Departamento))
-                cmd.Parameters.Add(New OdbcParameter("detalle", Me.Detalle))
-                cmd.ExecuteNonQuery()
+                con.Execute(query)
             Catch ex As Exception
-                Throw ex
+                'Rollback a la transacción en curso
+                con.RollbackTrans()
+                Throw New ApplicationException("No se pudo ingresar la dirección del paciente.")
             End Try
         End If
     End Sub

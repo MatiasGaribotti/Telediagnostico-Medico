@@ -28,17 +28,4 @@ Public Class Horario
         Me.HoraFin = horaFin
 
     End Sub
-
-    Public Sub Insert()
-
-        Dim db As New DHorario(Env.UserType, Me.Ci, Me.Sucursal, Me.Dia, Me.HoraInicio, Me.HoraFin)
-        Dim result = db.Insert()
-        If result Then
-            MsgBox("Horario Ingresado exitosamente", MsgBoxStyle.Information, "Información")
-        Else
-            MsgBox("No se pudo ingresar la franja horaria.", MsgBoxStyle.Critical, "Error en el ingreso del horario")
-
-        End If
-    End Sub
-
 End Class

@@ -32,18 +32,17 @@ Public Class DHorario
 
     End Sub
 
-    Public Function Insert() As Boolean
+    Public Sub Insert()
 
         If HasConnection() Then
             'Abro la conexión con la base de datos
             Dim con As Connection = Conectar()
 
-            Try
-                'Abro transacción
-                con.BeginTrans()
+            'Abro transacción
+            con.BeginTrans()
 
-                ' Sentencia para ingresar un paciente
-                Dim insertHorario = "INSERT INTO trabajanMe.horario(" &
+            ' Sentencia para ingresar un paciente
+            Dim insertHorario = "INSERT INTO trabajanMe.horario(" &
                                   "ciMedico," &
                                   "idSucursal," &
                                   "diaGuardia," &
@@ -56,30 +55,23 @@ Public Class DHorario
                                   HoraInicio & "'," &
                                   HoraFin &
                                   ");"
-                MsgBox("Query Medico: " & insertHorario)
 
+            Try
                 'Ingreso el horario del médico a la DB
                 con.Execute(insertHorario)
 
                 'Hago el commit de la transacción y retorno True
                 con.CommitTrans()
-                Return True
 
             Catch ex As Exception
-                'Hubo una excepción, por lo que debo hacer un rollback
-                'para mantener la integridad de los datos.
+                Throw New Exception("No se pudo insertar el horario.")
                 con.RollbackTrans()
-                Console.WriteLine("No se pudo insertar el horario." & vbCrLf & ex.Message) ' Mensaje en consola para debug
-
-                'Retorno False, significando esto que la transacción
-                'no se pudo concretar.
-                Return False
-
+            Finally
+                con.Close()
             End Try
         Else
-            MsgBox("No hay conexión con la base de datos.", MsgBoxStyle.Critical, "Error")
-            Return False
+            Throw New Exception("No hay conexión con la base de datos.")
         End If
-    End Function
+    End Sub
 
 End Class

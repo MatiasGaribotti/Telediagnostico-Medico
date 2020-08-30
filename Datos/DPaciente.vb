@@ -153,6 +153,10 @@ Public Class DPaciente
                 con.CommitTrans()
                 con.Close()
 
+            Catch ex As ApplicationException
+                'Excepcion que se produce durante el ingreso de direcciones
+                Throw ex
+
             Catch ex As Exception
                 'Hubo una excepción, por lo que debo hacer un rollback
                 'para mantener la integridad de los datos.

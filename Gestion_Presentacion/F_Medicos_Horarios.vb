@@ -20,16 +20,13 @@ Public Class F_Medicos_Horarios
                     TxtIHoraIn.Text,
                     TxtIHoraOut.Text
                     )
+        Try
+            Dim objRRHHH As RRHH = Env.CurrentUser
+            objRRHHH.NuevoHorario(horario)
+            MsgBox("Horario agregado con éxito", MsgBoxStyle.Information, "Información")
 
-        horario.Insert()
-    End Sub
-
-    Private Sub pnl_ingresar_Paint(sender As Object, e As PaintEventArgs) Handles pnl_ingresar.Paint
-
-    End Sub
-
-
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
-
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

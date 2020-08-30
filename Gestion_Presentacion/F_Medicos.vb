@@ -51,9 +51,14 @@ Public Class F_Medicos
                             "Medicina In General",
                             "password"
                             )
+        Try
+            Dim objRRHH As RRHH = Env.CurrentUser
+            objRRHH.IngresarMedico(medico)
+            LoadDgv()
 
-        medico.Insert()
-        LoadDgv()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -67,9 +72,8 @@ Public Class F_Medicos
     End Sub
 
     Private Sub LoadDgv()
-        Dim medico As New Medico()
-        Dim dt As DataTable = medico.GetDgvData()
+        Dim objMedico As New Medico()
+        Dim dt As DataTable = objMedico.GetDgvData()
         DgvMedicos.DataSource = dt
     End Sub
-
 End Class

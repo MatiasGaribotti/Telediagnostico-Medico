@@ -228,6 +228,33 @@
   <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="TxtBDetalle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="TxtBDetalle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>726, 377</value>
+  </data>
+  <data name="TxtBDetalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="TxtBDetalle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 32</value>
+  </data>
+  <data name="TxtBDetalle.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="&gt;&gt;TxtBDetalle.Name" xml:space="preserve">
+    <value>TxtBDetalle</value>
+  </data>
+  <data name="&gt;&gt;TxtBDetalle.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBDetalle.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBDetalle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
@@ -256,7 +283,7 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BtnResetPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -286,7 +313,7 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;BtnResetPassword.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -316,7 +343,7 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;BtnEliminar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -346,7 +373,7 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;BtnModificar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="TxtBCi.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -373,7 +400,7 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;TxtBCi.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="LblBCi.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -406,7 +433,7 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;LblBCi.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="CmbBDepartamento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -436,36 +463,6 @@
     <value>pnl_filtrar</value>
   </data>
   <data name="&gt;&gt;CmbBDepartamento.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="CmbBDetalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14.25pt</value>
-  </data>
-  <data name="CmbBDetalle.ItemHeight" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="CmbBDetalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 373</value>
-  </data>
-  <data name="CmbBDetalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
-  </data>
-  <data name="CmbBDetalle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 36</value>
-  </data>
-  <data name="CmbBDetalle.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="&gt;&gt;CmbBDetalle.Name" xml:space="preserve">
-    <value>CmbBDetalle</value>
-  </data>
-  <data name="&gt;&gt;CmbBDetalle.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CmbBDetalle.Parent" xml:space="preserve">
-    <value>pnl_filtrar</value>
-  </data>
-  <data name="&gt;&gt;CmbBDetalle.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="TxtBEmail.Font" type="System.Drawing.Font, System.Drawing">
@@ -1062,6 +1059,33 @@
   <data name="&gt;&gt;pnl_filtrar.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="TxtIDetalle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="TxtIDetalle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>830, 134</value>
+  </data>
+  <data name="TxtIDetalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="TxtIDetalle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 32</value>
+  </data>
+  <data name="TxtIDetalle.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="&gt;&gt;TxtIDetalle.Name" xml:space="preserve">
+    <value>TxtIDetalle</value>
+  </data>
+  <data name="&gt;&gt;TxtIDetalle.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtIDetalle.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;TxtIDetalle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="BtnDelEnfermedad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 16pt</value>
   </data>
@@ -1087,7 +1111,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;BtnDelEnfermedad.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BtnAddEnfermedad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 16pt</value>
@@ -1114,7 +1138,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;BtnAddEnfermedad.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="TxtIEnfermedad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1141,7 +1165,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;TxtIEnfermedad.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="BtnIDelMed.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 16pt</value>
@@ -1168,7 +1192,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;BtnIDelMed.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="BtnIAddMed.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 16pt</value>
@@ -1195,7 +1219,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;BtnIAddMed.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="TxtIMedicacion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1222,7 +1246,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;TxtIMedicacion.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="TxtICi.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1249,7 +1273,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;TxtICi.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="LblCi.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1282,7 +1306,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;LblCi.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="CmbIMedicacion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1312,7 +1336,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;CmbIMedicacion.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="CmbIEnfermedad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1342,36 +1366,6 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;CmbIEnfermedad.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="CmblDetalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14.25pt</value>
-  </data>
-  <data name="CmblDetalle.ItemHeight" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="CmblDetalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>830, 132</value>
-  </data>
-  <data name="CmblDetalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
-  </data>
-  <data name="CmblDetalle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 36</value>
-  </data>
-  <data name="CmblDetalle.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="&gt;&gt;CmblDetalle.Name" xml:space="preserve">
-    <value>CmblDetalle</value>
-  </data>
-  <data name="&gt;&gt;CmblDetalle.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CmblDetalle.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;CmblDetalle.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="CmbIDepartamento.Font" type="System.Drawing.Font, System.Drawing">

@@ -10,6 +10,13 @@ Public Class F_Pacientes
         ConfigMode()
     End Sub
 
+    Public Property modo As Modos
+
+    Public Enum Modos
+        Ingresar
+        Modificar
+    End Enum
+
     Public Sub ConfigMode()
         Select Case Env.UserType
             Case Env.UserTypes.Recepcionista
@@ -58,21 +65,71 @@ Public Class F_Pacientes
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         If ValidateFields() Then
+
             Dim paciente = GetPaciente()
-            Try
-                paciente.Insert()
-                LoadDgv()
-                ClearFields()
-                MsgBox("Paciente ingresado con éxito.")
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
+
+            Select Case Env.UserType
+                Case Env.UserTypes.Recepcionista
+                    Dim recepcionista As Recepcionista = Env.CurrentUser
+                    Try
+                        recepcionista.IngresarPaciente(paciente)
+                        MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
+                        LoadDgv()
+                        ClearFields()
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+
+                Case Env.UserTypes.Administrador
+                    Dim administrador As Administrador = Env.CurrentUser
+                    Try
+                        administrador.IngresarPaciente(paciente)
+                        MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
+                        LoadDgv()
+                        ClearFields()
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+            End Select
         End If
     End Sub
 
     'Procedimiento que limpia el contenido de los campos
     Private Sub ClearFields()
-
+        Select Case modo
+            Case Modos.Ingresar
+                'Se limpian los campos de ingreso
+                TxtICi.ResetText()
+                TxtINombre.ResetText()
+                TxtIApellidoP.ResetText()
+                TxtIApellidoM.ResetText()
+                TxtITelefono.ResetText()
+                TxtICalle.ResetText()
+                TxtINumero.ResetText()
+                TxtBLocalidad.ResetText()
+                CmbBDepartamento.SelectedItem = 0
+                TxtIDetalle.ResetText()
+                TxtIEmail.ResetText()
+                TxtINFam.ResetText()
+                TxtIAntFam.ResetText()
+                TxtITratamientos.ResetText()
+                TxtIAntLab.ResetText()
+                CmbIEnfermedad.Items.Clear()
+                CmbIMedicacion.Items.Clear()
+            Case Else
+                'Se limpian los campos de búsqueda
+                TxtBCi.ResetText()
+                TxtBNombre.ResetText()
+                TxtBApellidoP.ResetText()
+                TxtBApellidoM.ResetText()
+                TxtBTelefono.ResetText()
+                TxtBCalle.ResetText()
+                TxtBNumero.ResetText()
+                TxtBLocalidad.ResetText()
+                CmbBDepartamento.SelectedItem = 0
+                TxtBDetalle.ResetText()
+                TxtBEmail.ResetText()
+        End Select
     End Sub
 
     Private Function ValidateFields() As Boolean
@@ -109,8 +166,10 @@ Public Class F_Pacientes
 
     Private Function GetPaciente() As Paciente
         Dim paciente As Paciente
-        If Env.UserType = Env.UserTypes.Recepcionista Then
-            paciente = New Paciente(
+
+        Select Case Env.UserType
+            Case Env.UserTypes.Recepcionista
+                paciente = New Paciente(
                         CInt(TxtICi.Text),
                         TxtINombre.Text,
                         TxtIApellidoP.Text,
@@ -124,17 +183,17 @@ Public Class F_Pacientes
                         "password",
                         TxtIEmail.Text
                         )
-        ElseIf Env.UserType = Env.UserTypes.Administrador Then
 
-            Dim medicacion As String = ""
-            For i As Integer = 0 To CmbIMedicacion.Items.Count - 1
-                medicacion += CmbIMedicacion.Items.Item(i).ToString
-                If i < CmbIMedicacion.Items.Count - 1 Then
-                    medicacion += ","
-                End If
-            Next
+            Case Env.UserTypes.Administrador
+                Dim medicacion As String = ""
+                For i As Integer = 0 To CmbIMedicacion.Items.Count - 1
+                    medicacion += CmbIMedicacion.Items.Item(i).ToString
+                    If i < CmbIMedicacion.Items.Count - 1 Then
+                        medicacion += ","
+                    End If
+                Next
 
-            paciente = New Paciente(
+                paciente = New Paciente(
                             CInt(TxtICi.Text),
                             TxtINombre.Text,
                             TxtIApellidoP.Text,
@@ -153,17 +212,15 @@ Public Class F_Pacientes
                             medicacion,
                             TxtITratamientos.Text
                             )
-
-        End If
+        End Select
 
         Return paciente
     End Function
     Private Sub LoadDgv()
-        Dim paciente As New Paciente()
+        Dim objPaciente As New Paciente()
         Try
-            Dim dt As DataTable = paciente.GetPacientes()
+            Dim dt As DataTable = objPaciente.GetPacientes()
             DgvPacientes.DataSource = dt
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

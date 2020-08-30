@@ -30,6 +30,7 @@ Public Class F_Sintomas
                     sintoma.Insert()
                     LoadDgv()
                     MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
+                    ClearFields()
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
@@ -39,7 +40,7 @@ Public Class F_Sintomas
                 Try
                     Dim sintoma = GetSintoma()
                     sintoma.Id = sintomaMod.Id
-                    sintoma.Enfermedades = sintoma.GetEnfermedades()
+                    sintoma.Enfermedades = sintoma.GetEnfermedadesAsociadas()
                     sintoma.Modify()
                     LoadDgv()
                     ClearFields()
@@ -150,11 +151,13 @@ Public Class F_Sintomas
         If result.Equals(vbYes) Then
             Dim idSintoma As Short = GetSintomaSelected().Id
             Dim sintoma As New Sintoma(idSintoma)
-            If sintoma.Delete() Then
+
+            Try
+                sintoma.Delete()
                 MsgBox("Baja del síntoma efectuada correctamente.", MsgBoxStyle.Information)
-            Else
-                MsgBox("No se pudo eliminar el síntoma: ")
-            End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
             LoadDgv()
         End If
 
