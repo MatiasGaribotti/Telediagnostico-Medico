@@ -70,7 +70,7 @@ Public Class DPaciente
     End Sub
 
 
-    Public Function Insert() As Boolean
+    Public Sub Insert()
 
         If HasConnection() Then
 
@@ -152,28 +152,24 @@ Public Class DPaciente
                 'Hago el commit de la transacción y retorno True
                 con.CommitTrans()
                 con.Close()
-                Return True
 
             Catch ex As Exception
                 'Hubo una excepción, por lo que debo hacer un rollback
                 'para mantener la integridad de los datos.
                 con.RollbackTrans()
+                Throw New Exception("Error al ingresar el paciente.")
+            Finally
                 con.Close()
-                Console.WriteLine("No se pudo insertar el paciente." & vbCrLf & ex.Message) ' Mensaje en consola para debug
-
-                'Retorno False, significando esto que la transacción
-                'no se pudo concretar.
-                Return False
-
             End Try
         Else
-            MsgBox("No hay conexión con la base de datos.", MsgBoxStyle.Critical, "Error")
-            Return False
+            Throw New Exception("No hay conexión con la base de datos.")
         End If
-    End Function
+    End Sub
 
-    Public Function GetDgvData() As DataTable
+    Public Function GetPacientes() As DataTable
         Dim dt As New DataTable()
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter()
 
         'Consulto los datos a la vista "pacientes"
         Dim query As String = "SELECT * FROM Pacientes;"
@@ -181,14 +177,15 @@ Public Class DPaciente
 
         If HasConnection() Then
 
-            Dim con As New OdbcConnection("dsn=VM_DB_sistema_telediagnostico;uid=" & DB_User & ";pwd=" & DB_Password & ";")
-            con.Open()
-
-            Dim cmd As New OdbcCommand(query, con)
-            Dim dataReader = cmd.ExecuteReader()
-            dt.Load(dataReader)
-            con.Close()
-
+            Dim con = Conectar()
+            Try
+                rs = con.Execute(query)
+                da.Fill(dt, rs)
+            Catch ex As Exception
+                Throw ex
+            Finally
+                con.Close()
+            End Try
         End If
         Return dt
     End Function

@@ -59,9 +59,14 @@ Public Class F_Pacientes
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         If ValidateFields() Then
             Dim paciente = GetPaciente()
-            paciente.Insert()
-            LoadDgv()
-            ClearFields()
+            Try
+                paciente.Insert()
+                LoadDgv()
+                ClearFields()
+                MsgBox("Paciente ingresado con éxito.")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
         End If
     End Sub
 
@@ -104,33 +109,32 @@ Public Class F_Pacientes
 
     Private Function GetPaciente() As Paciente
         Dim paciente As Paciente
-        Try
-            If Env.UserType = Env.UserTypes.Recepcionista Then
-                paciente = New Paciente(
-                            CInt(TxtICi.Text),
-                            TxtINombre.Text,
-                            TxtIApellidoP.Text,
-                            TxtIApellidoM.Text,
-                            New Direccion(TxtICalle.Text,
-                                            CInt(TxtINumero.Text),
-                                            TxtILocalidad.Text,
-                                            CmbIDepartamento.SelectedIndex + 1),
-                            CInt(TxtITelefono.Text),
-                            Format(DTPickerFNac.Value, "yyyy-MM-dd"),
-                            "password",
-                            TxtIEmail.Text
-                            )
-            ElseIf Env.UserType = Env.UserTypes.Administrador Then
+        If Env.UserType = Env.UserTypes.Recepcionista Then
+            paciente = New Paciente(
+                        CInt(TxtICi.Text),
+                        TxtINombre.Text,
+                        TxtIApellidoP.Text,
+                        TxtIApellidoM.Text,
+                        New Direccion(TxtICalle.Text,
+                                        CInt(TxtINumero.Text),
+                                        TxtILocalidad.Text,
+                                        CmbIDepartamento.SelectedIndex + 1),
+                        CInt(TxtITelefono.Text),
+                        Format(DTPickerFNac.Value, "yyyy-MM-dd"),
+                        "password",
+                        TxtIEmail.Text
+                        )
+        ElseIf Env.UserType = Env.UserTypes.Administrador Then
 
-                Dim medicacion As String = ""
-                For i As Integer = 0 To CmbIMedicacion.Items.Count - 1
-                    medicacion += CmbIMedicacion.Items.Item(i).ToString
-                    If i < CmbIMedicacion.Items.Count - 1 Then
-                        medicacion += ","
-                    End If
-                Next
+            Dim medicacion As String = ""
+            For i As Integer = 0 To CmbIMedicacion.Items.Count - 1
+                medicacion += CmbIMedicacion.Items.Item(i).ToString
+                If i < CmbIMedicacion.Items.Count - 1 Then
+                    medicacion += ","
+                End If
+            Next
 
-                paciente = New Paciente(
+            paciente = New Paciente(
                             CInt(TxtICi.Text),
                             TxtINombre.Text,
                             TxtIApellidoP.Text,
@@ -150,17 +154,18 @@ Public Class F_Pacientes
                             TxtITratamientos.Text
                             )
 
-            End If
-        Catch ex As Exception
-            MsgBox("Algo ha salido mal.")
-        End Try
+        End If
 
         Return paciente
     End Function
     Private Sub LoadDgv()
         Dim paciente As New Paciente()
-        Dim dt As DataTable = paciente.GetDgvData()
-        DgvPacientes.DataSource = dt
-    End Sub
+        Try
+            Dim dt As DataTable = paciente.GetPacientes()
+            DgvPacientes.DataSource = dt
 
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

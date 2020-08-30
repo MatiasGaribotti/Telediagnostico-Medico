@@ -20,6 +20,17 @@ Public MustInherit Class Persona
         Me.Password = "Default"
     End Sub
 
+    Public Sub New(ci As Integer)
+        Me.Ci = ci
+        Me.Nombre = "Default"
+        Me.ApellidoP = "Default"
+        Me.ApellidoM = "Default"
+        Me.Direccion = New Direccion()
+        Me.Telefono = -1
+        Me.Fecha_Nacimiento = New Date(1, 1, 1)
+        Me.Password = "Default"
+    End Sub
+
     Public Sub New(ci As Integer, password As String)
         Me.Ci = ci
         Me.Nombre = "Default"

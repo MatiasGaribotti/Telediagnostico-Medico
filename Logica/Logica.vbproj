@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador.vb" />
     <Compile Include="Authentication.vb" />
     <Compile Include="Direccion.vb" />
     <Compile Include="Empleado.vb" />
@@ -91,6 +92,8 @@
     <Compile Include="Password.vb" />
     <Compile Include="Horario.vb" />
     <Compile Include="Persona.vb" />
+    <Compile Include="Recepcionista.vb" />
+    <Compile Include="RRHH.vb" />
     <Compile Include="Sintoma.vb" />
     <Compile Include="Sucursal.vb" />
   </ItemGroup>

@@ -122,7 +122,7 @@ Public Class F_Sintomas
 
     Public Sub LoadDgv()
         Dim logica As New Sintoma()
-        Dim dt As DataTable = logica.GetDgvData()
+        Dim dt As DataTable = logica.GetSintomas()
         DgvSintomas.DataSource = dt
         DgvSintomas.Refresh()
     End Sub

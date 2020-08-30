@@ -3,26 +3,14 @@ Public MustInherit Class DBConnection
     Public Property DB_User() As String
     Public Property DB_Password() As String
     Public Property ConStr() As String
-
     Public Sub New()
-        Me.DB_User = "system"
-        Me.DB_Password = "kHzRj1&5"
-        Me.ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
-                                      "server=192.168.1.131;" &
-                                      "port=3306;" &
-                                      "database=sistema_telediagnostico;" &
-                                      "uid=" & Me.DB_User & ";" &
-                                      "pwd=" & Me.DB_Password & ";"
+        CredentialsByUserType(-1)
+        SetConnectionString()
     End Sub
 
     Public Sub New(userType As Short)
         CredentialsByUserType(userType)
-        Me.ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
-                                      "server=192.168.1.131;" &
-                                      "port=3306;" &
-                                      "database=sistema_telediagnostico;" &
-                                      "uid=" & Me.DB_User & ";" &
-                                      "pwd=" & Me.DB_Password & ";"
+        SetConnectionString()
     End Sub
 
     'Funcion que retorna una conexión a la base de datos
@@ -44,7 +32,6 @@ Public MustInherit Class DBConnection
             Con.Close()
             Return True
         Catch ex As Exception
-            MsgBox(ex.Message)
             Return False
         End Try
 
@@ -52,6 +39,9 @@ Public MustInherit Class DBConnection
 
     Protected Sub CredentialsByUserType(userType As Short)
         Select Case userType
+            Case -1
+                Me.DB_User = "system"
+                Me.DB_Password = "kHzRj1&5"
             'Paciente
             Case 0
                 Me.DB_User = "paciente"
@@ -73,5 +63,13 @@ Public MustInherit Class DBConnection
                 Me.DB_User = "recepcionista"
                 Me.DB_Password = "dbrecepcionistaST"
         End Select
+    End Sub
+    Private Sub SetConnectionString()
+        Me.ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
+                                      "server=192.168.1.131;" &
+                                      "port=3306;" &
+                                      "database=sistema_telediagnostico;" &
+                                      "uid=" & Me.DB_User & ";" &
+                                      "pwd=" & Me.DB_Password & ";"
     End Sub
 End Class

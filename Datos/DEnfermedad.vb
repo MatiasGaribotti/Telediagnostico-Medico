@@ -133,4 +133,14 @@ Public Class DEnfermedad
         End If
         Return saved
     End Function
+
+    ' Funcion que obtiene de la BD las enfermedades
+    ' que se encuentran en el sistema
+    Public Function GetEnfermedades() As DataTable
+        Dim dt As DataTable
+
+
+        Return dt
+    End Function
+
 End Class

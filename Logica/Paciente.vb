@@ -25,6 +25,10 @@ Public Class Paciente
         Me.Medicacion = "Sin ingresar"
         Me.Tratamiento = "Sin ingresar"
     End Sub
+    Public Sub New(ci As Integer)
+        MyBase.New(ci)
+    End Sub
+
     Public Sub New(ci As Integer, pass As String)
         MyBase.Ci = ci
         MyBase.Password = pass
@@ -81,10 +85,10 @@ Public Class Paciente
     End Sub
 
     Public Sub Insert()
-        Dim db As DPaciente
+        Dim DPaciente As DPaciente
 
         If Env.UserType = Env.UserTypes.Recepcionista Then
-            db = New DPaciente(
+            DPaciente = New DPaciente(
                 Env.UserType,
                 Ci,
                 Nombre,
@@ -102,7 +106,7 @@ Public Class Paciente
                 Email)
 
         ElseIf Env.UserType = Env.UserTypes.Administrador Then
-            db = New DPaciente(Env.UserType, Ci,
+            DPaciente = New DPaciente(Env.UserType, Ci,
                 Nombre,
                 ApellidoP,
                 ApellidoM,
@@ -124,22 +128,21 @@ Public Class Paciente
 
         End If
         Try
-            Dim result = db.Insert()
-            If result Then
-                MsgBox("Paciente Ingresado exitosamente", MsgBoxStyle.Information, "Información")
-            Else
-                MsgBox("No se pudo ingresar al paciente.", MsgBoxStyle.Critical, "Error en el ingreso de paciente")
-
-            End If
-
+            DPaciente.Insert()
         Catch ex As Exception
-            Console.WriteLine("ERROR en Paciente trycatch" & vbCrLf & ex.Message)
+            Throw ex
         End Try
     End Sub
 
-    Public Function GetDgvData() As DataTable
+    Public Function GetPacientes() As DataTable
         Dim db As New DPaciente(Env.UserType)
-        Dim dt As DataTable = db.GetDgvData()
+        Dim dt As DataTable
+        Try
+            dt = db.GetPacientes()
+
+        Catch ex As Exception
+            Throw ex
+        End Try
         Return dt
     End Function
 End Class

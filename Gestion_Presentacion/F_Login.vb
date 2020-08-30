@@ -16,19 +16,21 @@ Public Class F_Login
 
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click
 
-        If ValidateFields() Then
-            Dim user = GetUser()
+        Try
+            If ValidateFields() Then
+                Dim user = GetUser()
+                If Authentication.Authenticate(user) Then
+                    'Abre el formulario de ABM y cierra este
+                    F_ABM.Show()
+                    Me.Close()
+                Else
+                    MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
+                End If
 
-            If Authentication.Authenticate(user) Then
-                'Abre el formulario de ABM y cierra este
-                F_ABM.Show()
-                Me.Close()
-                Env.CurrentUser = user
-            Else
-                MsgBox("CI y/o contraseña incorrecta.")
             End If
-        End If
-
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
+        End Try
     End Sub
 
     Private Sub BtnChangeLang_Click(sender As Object, e As EventArgs) Handles BtnChangeLang.Click
@@ -53,37 +55,29 @@ Public Class F_Login
         Dim ci = TxtCi.Text
         Dim password = TxtPassword.Text
 
-        If Not ci.Equals("") And Not password.Equals("") Then
-            'Expresion regular que valida los campos
-            Dim expression As String = ""
-            If Regex.IsMatch(ci, expression) Then
-                'valid = False
-            ElseIf Regex.IsMatch(password, expression) Then
-                'valid = False
+        If Not ci.Length = 0 And Not password.Length = 0 Then
+            If Not ci.Length > 8 Then
+                Dim chars = ci.ToCharArray
+
+
+                For Each caracter In chars
+                    If Not Char.IsDigit(caracter) Then
+                        Throw New FormatException("La cédula de identidad debe contener solo números.")
+                    End If
+                Next
+
+            Else
+                Throw New FormatException("La cédula de identidad es obligatoria.")
             End If
+
         Else
             MsgBox("La CI o contraseña no pueden ser vacías.")
             valid = False
         End If
-
-
-
         Return valid
     End Function
 
     Private Function GetUser() As Empleado
         Return New Empleado(CInt(TxtCi.Text), TxtPassword.Text)
     End Function
-
-    Private Sub Btn_Exit_Click(sender As Object, e As EventArgs) Handles Btn_Exit.Click
-
-    End Sub
-
-    Private Sub Btn_Minimize_Click(sender As Object, e As EventArgs) Handles Btn_Minimize.Click
-
-    End Sub
-
-    Private Sub TxtPassword_TextChanged(sender As Object, e As EventArgs) Handles TxtPassword.TextChanged
-
-    End Sub
 End Class

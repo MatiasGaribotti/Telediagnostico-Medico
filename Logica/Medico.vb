@@ -10,6 +10,10 @@ Public Class Medico
         Especialidad = "Default"
     End Sub
 
+    Public Sub New(ci As Integer)
+        MyBase.New(ci)
+    End Sub
+
     'Constructor comúm completo
     Public Sub New(ci As Integer,
                    nombre As String,
@@ -21,16 +25,8 @@ Public Class Medico
                    especialidad As String,
                    password As String
                    )
-        Me.Ci = ci
-        Me.Nombre = nombre
-        Me.ApellidoP = apellidoP
-        Me.ApellidoM = apellidoM
-        Me.Direccion = direccion
-        Me.Telefono = telefono
-        Me.Fecha_Nacimiento = fecha_nacimiento
+        MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
         Me.Especialidad = especialidad
-        Me.Password = password
-
     End Sub
 
     Public Sub Insert()

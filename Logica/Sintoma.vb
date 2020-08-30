@@ -73,25 +73,30 @@ Public Class Sintoma
 
     Public Sub Insert()
         Dim DBSintoma As New DSintoma(Env.UserType, Nombre, Descripcion, Tipo)
-        Dim DBEnfermedad As New DEnfermedad(Env.UserType)
+        Dim objEnfermedad As New Enfermedad()
+        Dim listDEnfermedades As New List(Of DEnfermedad)
+
+        For Each enfermedad In GetEnfermedadesAsociadas()
+            Dim converted = objEnfermedad.ToDEnfermedad(enfermedad)
+            listDEnfermedades.Add(converted)
+        Next
+        DBSintoma.Enfermedades = listDEnfermedades
 
         Try
-            Enfermedades = GetEnfermedades()
-            DBSintoma.Insert() '<<===============================CHECK
+            DBSintoma.Insert()
         Catch ex As Exception
             Throw ex
         End Try
     End Sub
 
-    Public Function GetDgvData() As DataTable
+    Public Function GetSintomas() As DataTable
         Dim db As New DSintoma()
-        'Return db.GetDgvData()
-        Return db.test()
+        Return db.GetSintomas()
     End Function
 
     Public Function Filter() As DataTable
         Dim db As New DSintoma(Env.UserType, Nombre, Tipo)
-        Return db.GetSintomasFound()
+        Return db.Filter()
     End Function
 
     Public Function GetEnfermedadesAsociadas() As List(Of Enfermedad)
@@ -101,49 +106,34 @@ Public Class Sintoma
         For Each i In DEnfermedades
             enfermedades.Add(New Enfermedad(i.Id, i.Nombre))
         Next
-
         Return enfermedades
     End Function
 
-    Public Function Delete() As Boolean
+    Public Sub Delete()
         Dim db As New DSintoma(Env.UserType, Id)
-        Return db.Delete()
-    End Function
+        db.Delete()
+    End Sub
 
-    Public Function Modify() As Boolean
-        Dim DEnfermedades = EnfermedadToDEnfermeadad()
+    Public Sub Modify()
+        'objeto para utilizar las utilidades de la clase Enfermedad
+        Dim objEnfermedad As New Enfermedad()
+
+        'Lista de enfermedades pero adaptadas para ir hacia la BD
+        Dim DEnfermedades As New List(Of DEnfermedad)
+
+        'Para cada enfermedad, la convierto en una enfermedad compatible con la BD y la agrego a la lista
+        For Each enfermedad In Me.Enfermedades
+            Dim converted As DEnfermedad = objEnfermedad.ToDEnfermedad(enfermedad)
+            DEnfermedades.Add(converted)
+        Next
+
+        'Creo el objeto del sintoma con los datos modificados
         Dim dsintoma As New DSintoma(Env.UserType, Id, Nombre, Descripcion, Tipo, DEnfermedades)
-
         Try
             dsintoma.Modify()
 
         Catch ex As Exception
             Throw ex
         End Try
-
-        'Return db.Modify()
-
-    End Function
-
-    'Funcion que retorna la información de las enfermedades ingresadas, si es que existen
-    Public Function GetEnfermedades() As List(Of Enfermedad)
-        Dim DBEnfermedad As New DEnfermedad(Env.UserType)
-        Dim found As New List(Of Enfermedad)
-
-        'Veifico que existan las enfermedades y las agrego a la lista de enfermedades
-        For Each enfermedad In Enfermedades
-            Dim id = DBEnfermedad.Find(enfermedad.Nombre)
-            found.Add(New Enfermedad(id, enfermedad.Nombre))
-        Next
-        Return found
-    End Function
-
-    Private Function EnfermedadToDEnfermeadad() As List(Of DEnfermedad)
-        Dim DEnfermedades As New List(Of DEnfermedad)
-        For Each enf In Enfermedades
-            DEnfermedades.Add(New DEnfermedad(CShort(Env.UserType), enf.Id, enf.Nombre))
-        Next
-        Return DEnfermedades
-    End Function
-
+    End Sub
 End Class

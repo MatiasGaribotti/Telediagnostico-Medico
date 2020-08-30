@@ -1,5 +1,4 @@
 ﻿Imports ADODB
-Imports System.Data.Odbc
 Public Class DSintoma
     Inherits DBConnection
 
@@ -119,7 +118,6 @@ Public Class DSintoma
                 Throw ex
             Finally
                 con.Close()
-
             End Try
         Else
             Throw New ApplicationException("No hay conexión con la base de datos.")
@@ -132,7 +130,7 @@ Public Class DSintoma
         Try
             con.Execute(insert)
         Catch ex As Exception
-            MsgBox("ERROR en asociar sintoma enfermedad: " & ex.Message)
+            Throw New Exception("Error al asociar el síntoma con una enfermedad.")
             con.RollbackTrans()
         End Try
     End Sub
@@ -146,24 +144,7 @@ Public Class DSintoma
         End Try
     End Sub
 
-    Public Function GetDgvData() As DataTable
-        Dim dt As New DataTable()
-        Dim query As String = "SELECT id,nombre,descripcion,tipo FROM sintomas WHERE ENABLED=1"
-
-        If HasConnection() Then
-
-            Dim con As New OdbcConnection("dsn=VM_DB_sistema_telediagnostico;uid=" & DB_User & ";pwd=" & DB_Password & ";")
-            con.Open()
-            Dim cmd As New OdbcCommand(query, con)
-            Dim dataReader = cmd.ExecuteReader()
-            dt.Load(dataReader)
-            con.Close()
-        End If
-        Return dt
-
-    End Function
-
-    Public Function test() As DataTable
+    Public Function GetSintomas() As DataTable
         Dim connection = Conectar()
         Dim rs = connection.Execute("SELECT id,nombre,descripcion,tipo FROM sintomas WHERE ENABLED=1")
         Dim da As New OleDb.OleDbDataAdapter()
@@ -172,8 +153,17 @@ Public Class DSintoma
         Return dt
     End Function
 
+    Public Function GetSintomas(query As String) As DataTable
+        Dim connection = Conectar()
+        Dim rs = connection.Execute(query)
+        Dim da As New OleDb.OleDbDataAdapter()
+        Dim dt As New DataTable
+        da.Fill(dt, rs)
+        Return dt
+    End Function
 
-    Public Function GetSintomasFound() As DataTable
+
+    Public Function Filter() As DataTable
         Dim dt As New DataTable()
         Dim query As String = "SELECT S.id AS ID," &
                                 "S.nombre AS Sintoma, " &
@@ -191,39 +181,29 @@ Public Class DSintoma
         End If
         query += "AND ENABLED=1 ORDER BY S.nombre;"
 
-        Console.WriteLine(query)
-
         If HasConnection() Then
-
-            Dim con As New OdbcConnection("dsn=VM_DB_sistema_telediagnostico;uid=" & DB_User & ";pwd=" & DB_Password & ";")
-            con.Open()
-
-            Dim cmd As New OdbcCommand(query, con)
-            Dim dataReader = cmd.ExecuteReader()
-            dt.Load(dataReader)
-            con.Close()
+            GetSintomas(query)
         End If
+
         Return dt
     End Function
 
-    Public Function Delete() As Boolean
+    'Método que da la baja lógica a un síntoma
+    Public Sub Delete()
         Dim query As String = "UPDATE sintomas SET ENABLED=0 WHERE id=" & Id & ";"
 
         If HasConnection() Then
-            Dim con As New OdbcConnection("dsn=VM_DB_sistema_telediagnostico;uid=" & DB_User & ";pwd=" & DB_Password & ";")
+            Dim con = Conectar()
+
             Try
-                con.Open()
-                Dim cmd As New OdbcCommand(query, con)
-                cmd.ExecuteNonQuery()
-                con.Close()
-                Return True
+                con.Execute(query)
             Catch ex As Exception
+                Throw New Exception("Error al eliminar síntoma.")
+            Finally
                 con.Close()
-                Return False
             End Try
         End If
-        Return False
-    End Function
+    End Sub
 
     Public Function Modify() As Boolean
         Dim Updatequery As String = "UPDATE sintomas SET nombre='" & Nombre & "', descripcion='" & Descripcion & "', tipo=" & Tipo & " WHERE id= " & Me.Id & ""

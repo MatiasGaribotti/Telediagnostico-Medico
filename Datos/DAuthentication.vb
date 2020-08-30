@@ -1,5 +1,4 @@
 ﻿Imports ADODB
-Imports System.Data
 Public Class DAuthentication
     Inherits DBConnection
     Public Sub New()
@@ -16,6 +15,8 @@ Public Class DAuthentication
             Try
                 rs = con.Execute(query)
 
+                ' Si BOF es True, entonces estoy antes del primer registro
+                ' esto significa que no se encontraron registros.
                 If Not rs.BOF Then
                     dataFound.Add(CBool(rs.Fields("esMedico").Value))
                     dataFound.Add(CBool(rs.Fields("extendido").Value))
@@ -23,16 +24,15 @@ Public Class DAuthentication
                     dataFound.Add(CBool(rs.Fields("esPersonalRRHH").Value))
                     dataFound.Add(CBool(rs.Fields("esRecepcionista").Value))
                 Else
-                    dataFound.Add(False)
+                    'Arrojo una exception
+                    Throw New KeyNotFoundException("Usuario no encontrado")
                 End If
-
-
             Catch ex As Exception
-                Console.WriteLine("ERROR en DAuthentication Find" & vbCrLf & ex.Message)
-                dataFound.Add(False)
+                Throw ex
+            Finally
+                con.Close()
             End Try
         End If
-
         Return dataFound
     End Function
 End Class

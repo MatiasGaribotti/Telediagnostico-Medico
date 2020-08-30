@@ -9,14 +9,14 @@ Public Class F_Enfermedades
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         If ValidateFields() Then
             Dim enfermedad As Enfermedad = GetEnfermedad()
-            Dim saved = enfermedad.Insert()
-
-            If saved Then
+            Try
+                enfermedad.Insert()
                 MsgBox("Enfermedad ingresada con éxito.", MsgBoxStyle.Information)
                 ClearFields()
-            Else
-                MsgBox("No se pudo ingresar la enfermedad.", MsgBoxStyle.Critical)
-            End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+
+            End Try
         End If
     End Sub
 
@@ -50,9 +50,9 @@ Public Class F_Enfermedades
     End Sub
 
     Public Sub LoadDgv()
-        'Dim logica As New Enfermedad()
-        'Dim dt As DataTable = logica.GetDgvData()
-        'DgvSintomas.DataSource = dt
-        'DgvSintomas.Refresh()
+        Dim objEnfermedad As New Enfermedad()
+        Dim dt As DataTable = objEnfermedad.GetEnfermedades()
+        DgvEnfermedades.DataSource = dt
+        DgvEnfermedades.Refresh()
     End Sub
 End Class
