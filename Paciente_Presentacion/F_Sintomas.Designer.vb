@@ -22,34 +22,26 @@ Partial Class F_Sintomas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Sintomas))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lbl_SintomasIng = New System.Windows.Forms.Label()
         Me.Btn_HC = New System.Windows.Forms.Button()
         Me.LeftPanel = New System.Windows.Forms.Panel()
-        Me.PicBgSintomasIngresados = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.tblPane = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.Btn_Cancelar = New System.Windows.Forms.Button()
         Me.Btn_Aceptar = New System.Windows.Forms.Button()
+        Me.DgvSintomas = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.LeftPanel.SuspendLayout()
-        CType(Me.PicBgSintomasIngresados, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tblPane.SuspendLayout()
+        CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lbl_SintomasIng
         '
         Me.lbl_SintomasIng.AutoSize = True
-        Me.lbl_SintomasIng.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_SintomasIng.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_SintomasIng.Location = New System.Drawing.Point(45, 276)
         Me.lbl_SintomasIng.Name = "lbl_SintomasIng"
-        Me.lbl_SintomasIng.Size = New System.Drawing.Size(189, 23)
+        Me.lbl_SintomasIng.Size = New System.Drawing.Size(185, 24)
         Me.lbl_SintomasIng.TabIndex = 3
         Me.lbl_SintomasIng.Text = "Síntomas Ingresados"
         '
@@ -71,9 +63,7 @@ Partial Class F_Sintomas
         'LeftPanel
         '
         Me.LeftPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.LeftPanel.Controls.Add(Me.PicBgSintomasIngresados)
-        Me.LeftPanel.Controls.Add(Me.PictureBox1)
-        Me.LeftPanel.Controls.Add(Me.tblPane)
+        Me.LeftPanel.Controls.Add(Me.DgvSintomas)
         Me.LeftPanel.Controls.Add(Me.lbl_SintomasIng)
         Me.LeftPanel.Controls.Add(Me.Btn_Cancelar)
         Me.LeftPanel.Controls.Add(Me.Btn_Aceptar)
@@ -83,162 +73,6 @@ Partial Class F_Sintomas
         Me.LeftPanel.Name = "LeftPanel"
         Me.LeftPanel.Size = New System.Drawing.Size(960, 1080)
         Me.LeftPanel.TabIndex = 4
-        '
-        'PicBgSintomasIngresados
-        '
-        Me.PicBgSintomasIngresados.BackgroundImage = Global.Presentacion.My.Resources.Resources.Síntomas_L
-        Me.PicBgSintomasIngresados.Location = New System.Drawing.Point(50, 323)
-        Me.PicBgSintomasIngresados.Margin = New System.Windows.Forms.Padding(0)
-        Me.PicBgSintomasIngresados.Name = "PicBgSintomasIngresados"
-        Me.PicBgSintomasIngresados.Size = New System.Drawing.Size(7, 391)
-        Me.PicBgSintomasIngresados.TabIndex = 5
-        Me.PicBgSintomasIngresados.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.Presentacion.My.Resources.Resources.Síntomas_R
-        Me.PictureBox1.Location = New System.Drawing.Point(902, 323)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(7, 391)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
-        '
-        'tblPane
-        '
-        Me.tblPane.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
-        Me.tblPane.ColumnCount = 1
-        Me.tblPane.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tblPane.Controls.Add(Me.Button2, 0, 3)
-        Me.tblPane.Controls.Add(Me.Button3, 0, 1)
-        Me.tblPane.Controls.Add(Me.Button4, 0, 2)
-        Me.tblPane.Controls.Add(Me.Button5, 0, 5)
-        Me.tblPane.Controls.Add(Me.Button6, 0, 4)
-        Me.tblPane.Controls.Add(Me.Button7, 0, 0)
-        Me.tblPane.Location = New System.Drawing.Point(57, 323)
-        Me.tblPane.Name = "tblPane"
-        Me.tblPane.RowCount = 6
-        Me.tblPane.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tblPane.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tblPane.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tblPane.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tblPane.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tblPane.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tblPane.Size = New System.Drawing.Size(846, 391)
-        Me.tblPane.TabIndex = 2
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(0, 199)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Padding = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button2.Size = New System.Drawing.Size(846, 57)
-        Me.Button2.TabIndex = 4
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(0, 69)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Padding = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button3.Size = New System.Drawing.Size(846, 57)
-        Me.Button3.TabIndex = 2
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Button4.BackColor = System.Drawing.Color.Transparent
-        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver
-        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(0, 134)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Padding = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button4.Size = New System.Drawing.Size(846, 57)
-        Me.Button4.TabIndex = 3
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Button5
-        '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Button5.BackColor = System.Drawing.Color.Transparent
-        Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver
-        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(0, 329)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Padding = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button5.Size = New System.Drawing.Size(846, 58)
-        Me.Button5.TabIndex = 4
-        Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button6
-        '
-        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Button6.BackColor = System.Drawing.Color.Transparent
-        Me.Button6.BackgroundImage = CType(resources.GetObject("Button6.BackgroundImage"), System.Drawing.Image)
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver
-        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(0, 264)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Padding = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button6.Size = New System.Drawing.Size(846, 57)
-        Me.Button6.TabIndex = 0
-        Me.Button6.UseVisualStyleBackColor = False
-        '
-        'Button7
-        '
-        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Button7.BackColor = System.Drawing.Color.Transparent
-        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver
-        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(0, 4)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(0, 4, 0, 4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(846, 57)
-        Me.Button7.TabIndex = 0
-        Me.Button7.UseVisualStyleBackColor = False
         '
         'Btn_Cancelar
         '
@@ -270,6 +104,71 @@ Partial Class F_Sintomas
         Me.Btn_Aceptar.TabIndex = 1
         Me.Btn_Aceptar.UseVisualStyleBackColor = False
         '
+        'DgvSintomas
+        '
+        Me.DgvSintomas.AllowUserToAddRows = False
+        Me.DgvSintomas.AllowUserToDeleteRows = False
+        Me.DgvSintomas.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.DgvSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DgvSintomas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvSintomas.BackgroundColor = System.Drawing.Color.White
+        Me.DgvSintomas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvSintomas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvSintomas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DgvSintomas.ColumnHeadersHeight = 40
+        Me.DgvSintomas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvSintomas.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DgvSintomas.EnableHeadersVisualStyles = False
+        Me.DgvSintomas.GridColor = System.Drawing.Color.Gray
+        Me.DgvSintomas.Location = New System.Drawing.Point(50, 320)
+        Me.DgvSintomas.Margin = New System.Windows.Forms.Padding(20)
+        Me.DgvSintomas.MultiSelect = False
+        Me.DgvSintomas.Name = "DgvSintomas"
+        Me.DgvSintomas.ReadOnly = True
+        Me.DgvSintomas.RowHeadersVisible = False
+        Me.DgvSintomas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.DgvSintomas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvSintomas.Size = New System.Drawing.Size(846, 391)
+        Me.DgvSintomas.TabIndex = 5
+        Me.DgvSintomas.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvSintomas.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DgvSintomas.ThemeStyle.GridColor = System.Drawing.Color.Gray
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DgvSintomas.ThemeStyle.HeaderStyle.Height = 40
+        Me.DgvSintomas.ThemeStyle.ReadOnly = True
+        Me.DgvSintomas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvSintomas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvSintomas.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvSintomas.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DgvSintomas.ThemeStyle.RowsStyle.Height = 22
+        Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
         'F_Sintomas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -286,9 +185,7 @@ Partial Class F_Sintomas
         Me.Text = "Seleccionar Síntomas"
         Me.LeftPanel.ResumeLayout(False)
         Me.LeftPanel.PerformLayout()
-        CType(Me.PicBgSintomasIngresados, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tblPane.ResumeLayout(False)
+        CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -297,13 +194,5 @@ Partial Class F_Sintomas
     Friend WithEvents LeftPanel As Panel
     Friend WithEvents Btn_Cancelar As Button
     Friend WithEvents Btn_Aceptar As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PicBgSintomasIngresados As PictureBox
-    Friend WithEvents tblPane As TableLayoutPanel
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents DgvSintomas As Guna.UI2.WinForms.Guna2DataGridView
 End Class

@@ -4,8 +4,7 @@
 
         InitializeComponent()
         LeftPanel.BackColor = ColorTranslator.FromHtml("#E9F4F5")
-        tblPane.BackColor = ColorTranslator.FromHtml("#B7E1DE")
-
+        OpenMainRightPanel()
     End Sub
 
     Private Sub Btn_Cancelar_Click(sender As Object, e As EventArgs) Handles Btn_Cancelar.Click
@@ -40,5 +39,9 @@
 
     Private Sub Btn_Aceptar_Click(sender As Object, e As EventArgs) Handles Btn_Aceptar.Click
         OpenMainRightPanel2()
+    End Sub
+
+    Private Sub DgvPacientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSintomas.CellContentClick
+
     End Sub
 End Class
