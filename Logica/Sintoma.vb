@@ -94,6 +94,15 @@ Public Class Sintoma
         Return db.GetSintomas()
     End Function
 
+    Public Function GetSintomas(pattern As String, type As TiposSintomas) As DataTable
+        Dim db As New DSintoma()
+        Dim query = "SELECT id,nombre,descripcion,tipo FROM sintomas  WHERE ENABLED=1" & " AND nombre LIKE '%" & pattern & "%'" & " AND s.tipo=" & type.ToString & ";"
+        If type = 0 Then
+            query = "SELECT id,nombre,descripcion,tipo FROM sintomas  WHERE ENABLED=1" & " AND nombre LIKE '%" & pattern & "%';"
+        End If
+        Return db.GetSintomas(query)
+    End Function
+
     Public Function Filter() As DataTable
         Dim db As New DSintoma(Env.UserType, Nombre, Tipo)
         Return db.Filter()

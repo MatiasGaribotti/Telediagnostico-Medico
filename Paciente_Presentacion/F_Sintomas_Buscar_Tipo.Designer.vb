@@ -41,11 +41,11 @@ Partial Class F_Sintomas_Buscar_Tipo
         'TxtBuscador
         '
         Me.TxtBuscador.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtBuscador.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBuscador.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtBuscador.Location = New System.Drawing.Point(1, 19)
         Me.TxtBuscador.Margin = New System.Windows.Forms.Padding(0)
         Me.TxtBuscador.Name = "TxtBuscador"
-        Me.TxtBuscador.Size = New System.Drawing.Size(375, 23)
+        Me.TxtBuscador.Size = New System.Drawing.Size(375, 22)
         Me.TxtBuscador.TabIndex = 0
         '
         'BtnCross
@@ -116,30 +116,30 @@ Partial Class F_Sintomas_Buscar_Tipo
         'lblCabeza
         '
         Me.lblCabeza.AutoSize = True
-        Me.lblCabeza.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCabeza.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCabeza.Location = New System.Drawing.Point(166, 670)
         Me.lblCabeza.Name = "lblCabeza"
-        Me.lblCabeza.Size = New System.Drawing.Size(72, 23)
+        Me.lblCabeza.Size = New System.Drawing.Size(74, 24)
         Me.lblCabeza.TabIndex = 4
         Me.lblCabeza.Text = "Cabeza"
         '
         'LblTorso
         '
         Me.LblTorso.AutoSize = True
-        Me.LblTorso.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTorso.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTorso.Location = New System.Drawing.Point(440, 670)
         Me.LblTorso.Name = "LblTorso"
-        Me.LblTorso.Size = New System.Drawing.Size(58, 23)
+        Me.LblTorso.Size = New System.Drawing.Size(59, 24)
         Me.LblTorso.TabIndex = 4
         Me.LblTorso.Text = "Torso"
         '
         'LblExtremidades
         '
         Me.LblExtremidades.AutoSize = True
-        Me.LblExtremidades.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblExtremidades.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblExtremidades.Location = New System.Drawing.Point(691, 670)
         Me.LblExtremidades.Name = "LblExtremidades"
-        Me.LblExtremidades.Size = New System.Drawing.Size(126, 23)
+        Me.LblExtremidades.Size = New System.Drawing.Size(126, 24)
         Me.LblExtremidades.TabIndex = 4
         Me.LblExtremidades.Text = "Extremidades"
         '
