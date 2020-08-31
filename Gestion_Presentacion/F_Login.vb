@@ -15,7 +15,6 @@ Public Class F_Login
     End Sub
 
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click
-
         Try
             If ValidateFields() Then
                 Dim user = GetUser()
@@ -48,6 +47,8 @@ Public Class F_Login
         window.Show()
         Me.Close()
     End Sub
+
+
     'Función que valida el formato de los campos
     Private Function ValidateFields() As Boolean
         Dim valid = True

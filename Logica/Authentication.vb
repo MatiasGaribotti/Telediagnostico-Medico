@@ -8,10 +8,13 @@ Public Class Authentication
 
     Public Shared Function Authenticate(user As Persona) As Boolean
         Dim authenticated = False
-        Dim db As New DAuthentication()
+        Dim DAuth As New DAuthentication()
+
+        user.Password = Password.Hash(user.Password)
+
         Dim results As List(Of Boolean)
         Try
-            results = db.Find(user.Ci, user.Password)
+            results = DAuth.Find(user.Ci, user.Password)
 
         Catch ex As Exception
             Return False
