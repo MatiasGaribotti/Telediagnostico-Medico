@@ -177,24 +177,6 @@
   <data name="&gt;&gt;BtnExit.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="DgvPacientes.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="DgvPacientes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 20</value>
-  </data>
-  <data name="DgvPacientes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>20, 20, 20, 20</value>
-  </data>
-  <data name="DgvPacientes.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="DgvPacientes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1880, 453</value>
-  </data>
-  <data name="DgvPacientes.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;DgvPacientes.Name" xml:space="preserve">
     <value>DgvPacientes</value>
   </data>
@@ -228,21 +210,6 @@
   <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="TxtBDetalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBDetalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 377</value>
-  </data>
-  <data name="TxtBDetalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
-  </data>
-  <data name="TxtBDetalle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 32</value>
-  </data>
-  <data name="TxtBDetalle.TabIndex" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
   <data name="&gt;&gt;TxtBDetalle.Name" xml:space="preserve">
     <value>TxtBDetalle</value>
   </data>
@@ -254,24 +221,6 @@
   </data>
   <data name="&gt;&gt;TxtBDetalle.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="BtnFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>283, 531</value>
-  </data>
-  <data name="BtnFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 15, 15</value>
-  </data>
-  <data name="BtnFiltrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 36</value>
-  </data>
-  <data name="BtnFiltrar.TabIndex" type="System.Int32, mscorlib">
-    <value>109</value>
-  </data>
-  <data name="BtnFiltrar.Text" xml:space="preserve">
-    <value>Filtrar</value>
   </data>
   <data name="&gt;&gt;BtnFiltrar.Name" xml:space="preserve">
     <value>BtnFiltrar</value>
@@ -285,24 +234,6 @@
   <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="BtnResetPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="BtnResetPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>638, 531</value>
-  </data>
-  <data name="BtnResetPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 15, 15</value>
-  </data>
-  <data name="BtnResetPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 36</value>
-  </data>
-  <data name="BtnResetPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>108</value>
-  </data>
-  <data name="BtnResetPassword.Text" xml:space="preserve">
-    <value>Restablecer Contraseña</value>
-  </data>
   <data name="&gt;&gt;BtnResetPassword.Name" xml:space="preserve">
     <value>BtnResetPassword</value>
   </data>
@@ -314,24 +245,6 @@
   </data>
   <data name="&gt;&gt;BtnResetPassword.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="BtnEliminar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 531</value>
-  </data>
-  <data name="BtnEliminar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 15, 15</value>
-  </data>
-  <data name="BtnEliminar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 36</value>
-  </data>
-  <data name="BtnEliminar.TabIndex" type="System.Int32, mscorlib">
-    <value>106</value>
-  </data>
-  <data name="BtnEliminar.Text" xml:space="preserve">
-    <value>Eliminar</value>
   </data>
   <data name="&gt;&gt;BtnEliminar.Name" xml:space="preserve">
     <value>BtnEliminar</value>
@@ -345,24 +258,6 @@
   <data name="&gt;&gt;BtnEliminar.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="BtnModificar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 531</value>
-  </data>
-  <data name="BtnModificar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 15, 15</value>
-  </data>
-  <data name="BtnModificar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 36</value>
-  </data>
-  <data name="BtnModificar.TabIndex" type="System.Int32, mscorlib">
-    <value>105</value>
-  </data>
-  <data name="BtnModificar.Text" xml:space="preserve">
-    <value>Modificar</value>
-  </data>
   <data name="&gt;&gt;BtnModificar.Name" xml:space="preserve">
     <value>BtnModificar</value>
   </data>
@@ -374,21 +269,6 @@
   </data>
   <data name="&gt;&gt;BtnModificar.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="TxtBCi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBCi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 280</value>
-  </data>
-  <data name="TxtBCi.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBCi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 29</value>
-  </data>
-  <data name="TxtBCi.TabIndex" type="System.Int32, mscorlib">
-    <value>104</value>
   </data>
   <data name="&gt;&gt;TxtBCi.Name" xml:space="preserve">
     <value>TxtBCi</value>
@@ -402,27 +282,6 @@
   <data name="&gt;&gt;TxtBCi.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="LblBCi.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LblBCi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="LblBCi.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LblBCi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 280</value>
-  </data>
-  <data name="LblBCi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 24</value>
-  </data>
-  <data name="LblBCi.TabIndex" type="System.Int32, mscorlib">
-    <value>103</value>
-  </data>
-  <data name="LblBCi.Text" xml:space="preserve">
-    <value>CI:</value>
-  </data>
   <data name="&gt;&gt;LblBCi.Name" xml:space="preserve">
     <value>LblBCi</value>
   </data>
@@ -434,24 +293,6 @@
   </data>
   <data name="&gt;&gt;LblBCi.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="CmbBDepartamento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="CmbBDepartamento.ItemHeight" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="CmbBDepartamento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 410</value>
-  </data>
-  <data name="CmbBDepartamento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 7</value>
-  </data>
-  <data name="CmbBDepartamento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 36</value>
-  </data>
-  <data name="CmbBDepartamento.TabIndex" type="System.Int32, mscorlib">
-    <value>99</value>
   </data>
   <data name="&gt;&gt;CmbBDepartamento.Name" xml:space="preserve">
     <value>CmbBDepartamento</value>
@@ -465,21 +306,6 @@
   <data name="&gt;&gt;CmbBDepartamento.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="TxtBEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 457</value>
-  </data>
-  <data name="TxtBEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>688, 29</value>
-  </data>
-  <data name="TxtBEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
   <data name="&gt;&gt;TxtBEmail.Name" xml:space="preserve">
     <value>TxtBEmail</value>
   </data>
@@ -491,27 +317,6 @@
   </data>
   <data name="&gt;&gt;TxtBEmail.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 463</value>
-  </data>
-  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 24</value>
-  </data>
-  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
-  </data>
-  <data name="Label10.Text" xml:space="preserve">
-    <value>Email:</value>
   </data>
   <data name="&gt;&gt;Label10.Name" xml:space="preserve">
     <value>Label10</value>
@@ -525,21 +330,6 @@
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="TxtBLocalidad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBLocalidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>533, 412</value>
-  </data>
-  <data name="TxtBLocalidad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBLocalidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 29</value>
-  </data>
-  <data name="TxtBLocalidad.TabIndex" type="System.Int32, mscorlib">
-    <value>78</value>
-  </data>
   <data name="&gt;&gt;TxtBLocalidad.Name" xml:space="preserve">
     <value>TxtBLocalidad</value>
   </data>
@@ -551,27 +341,6 @@
   </data>
   <data name="&gt;&gt;TxtBLocalidad.ZOrder" xml:space="preserve">
     <value>10</value>
-  </data>
-  <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 416</value>
-  </data>
-  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 24</value>
-  </data>
-  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="Label8.Text" xml:space="preserve">
-    <value>Localidad:</value>
   </data>
   <data name="&gt;&gt;Label8.Name" xml:space="preserve">
     <value>Label8</value>
@@ -585,27 +354,6 @@
   <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 418</value>
-  </data>
-  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 24</value>
-  </data>
-  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="Label9.Text" xml:space="preserve">
-    <value>Departamento:</value>
-  </data>
   <data name="&gt;&gt;Label9.Name" xml:space="preserve">
     <value>Label9</value>
   </data>
@@ -617,21 +365,6 @@
   </data>
   <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
     <value>12</value>
-  </data>
-  <data name="TxtBCalle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBCalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 377</value>
-  </data>
-  <data name="TxtBCalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBCalle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 29</value>
-  </data>
-  <data name="TxtBCalle.TabIndex" type="System.Int32, mscorlib">
-    <value>73</value>
   </data>
   <data name="&gt;&gt;TxtBCalle.Name" xml:space="preserve">
     <value>TxtBCalle</value>
@@ -645,21 +378,6 @@
   <data name="&gt;&gt;TxtBCalle.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="TxtBNumero.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBNumero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>533, 377</value>
-  </data>
-  <data name="TxtBNumero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBNumero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 29</value>
-  </data>
-  <data name="TxtBNumero.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
   <data name="&gt;&gt;TxtBNumero.Name" xml:space="preserve">
     <value>TxtBNumero</value>
   </data>
@@ -671,27 +389,6 @@
   </data>
   <data name="&gt;&gt;TxtBNumero.ZOrder" xml:space="preserve">
     <value>14</value>
-  </data>
-  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 380</value>
-  </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 24</value>
-  </data>
-  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Detalle:</value>
   </data>
   <data name="&gt;&gt;Label5.Name" xml:space="preserve">
     <value>Label5</value>
@@ -705,27 +402,6 @@
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 382</value>
-  </data>
-  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 24</value>
-  </data>
-  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Número:</value>
-  </data>
   <data name="&gt;&gt;Label6.Name" xml:space="preserve">
     <value>Label6</value>
   </data>
@@ -737,27 +413,6 @@
   </data>
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
     <value>16</value>
-  </data>
-  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 380</value>
-  </data>
-  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 24</value>
-  </data>
-  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Calle:</value>
   </data>
   <data name="&gt;&gt;Label7.Name" xml:space="preserve">
     <value>Label7</value>
@@ -771,21 +426,6 @@
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="TxtBEdad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBEdad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>533, 345</value>
-  </data>
-  <data name="TxtBEdad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBEdad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 29</value>
-  </data>
-  <data name="TxtBEdad.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
   <data name="&gt;&gt;TxtBEdad.Name" xml:space="preserve">
     <value>TxtBEdad</value>
   </data>
@@ -797,27 +437,6 @@
   </data>
   <data name="&gt;&gt;TxtBEdad.ZOrder" xml:space="preserve">
     <value>18</value>
-  </data>
-  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 347</value>
-  </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 24</value>
-  </data>
-  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Edad:</value>
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
@@ -831,21 +450,6 @@
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="TxtBTelefono.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBTelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 345</value>
-  </data>
-  <data name="TxtBTelefono.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBTelefono.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 29</value>
-  </data>
-  <data name="TxtBTelefono.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
   <data name="&gt;&gt;TxtBTelefono.Name" xml:space="preserve">
     <value>TxtBTelefono</value>
   </data>
@@ -857,27 +461,6 @@
   </data>
   <data name="&gt;&gt;TxtBTelefono.ZOrder" xml:space="preserve">
     <value>20</value>
-  </data>
-  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 349</value>
-  </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 24</value>
-  </data>
-  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Teléfono:</value>
   </data>
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
@@ -891,21 +474,6 @@
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <data name="TxtBApellidoM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBApellidoM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>683, 309</value>
-  </data>
-  <data name="TxtBApellidoM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBApellidoM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 29</value>
-  </data>
-  <data name="TxtBApellidoM.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
   <data name="&gt;&gt;TxtBApellidoM.Name" xml:space="preserve">
     <value>TxtBApellidoM</value>
   </data>
@@ -917,21 +485,6 @@
   </data>
   <data name="&gt;&gt;TxtBApellidoM.ZOrder" xml:space="preserve">
     <value>22</value>
-  </data>
-  <data name="TxtBApellidoP.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBApellidoP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>533, 309</value>
-  </data>
-  <data name="TxtBApellidoP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBApellidoP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 29</value>
-  </data>
-  <data name="TxtBApellidoP.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
   </data>
   <data name="&gt;&gt;TxtBApellidoP.Name" xml:space="preserve">
     <value>TxtBApellidoP</value>
@@ -945,21 +498,6 @@
   <data name="&gt;&gt;TxtBApellidoP.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="TxtBNombre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="TxtBNombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 313</value>
-  </data>
-  <data name="TxtBNombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 6</value>
-  </data>
-  <data name="TxtBNombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 29</value>
-  </data>
-  <data name="TxtBNombre.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
   <data name="&gt;&gt;TxtBNombre.Name" xml:space="preserve">
     <value>TxtBNombre</value>
   </data>
@@ -972,27 +510,6 @@
   <data name="&gt;&gt;TxtBNombre.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 311</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 24</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Apellidos:</value>
-  </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
   </data>
@@ -1004,27 +521,6 @@
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>25</value>
-  </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 319</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 24</value>
-  </data>
-  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Nombre:</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
@@ -2369,6 +1865,846 @@
   </data>
   <data name="&gt;&gt;pnl_contenedor.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="DgvPacientes.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="DgvPacientes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 20</value>
+  </data>
+  <data name="DgvPacientes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>20, 20, 20, 20</value>
+  </data>
+  <data name="DgvPacientes.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="DgvPacientes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1880, 453</value>
+  </data>
+  <data name="DgvPacientes.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DgvPacientes.Name" xml:space="preserve">
+    <value>DgvPacientes</value>
+  </data>
+  <data name="&gt;&gt;DgvPacientes.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;DgvPacientes.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;DgvPacientes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TxtBDetalle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBDetalle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>726, 377</value>
+  </data>
+  <data name="TxtBDetalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="TxtBDetalle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 32</value>
+  </data>
+  <data name="TxtBDetalle.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="&gt;&gt;TxtBDetalle.Name" xml:space="preserve">
+    <value>TxtBDetalle</value>
+  </data>
+  <data name="&gt;&gt;TxtBDetalle.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBDetalle.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBDetalle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="BtnFiltrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 531</value>
+  </data>
+  <data name="BtnFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnFiltrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 36</value>
+  </data>
+  <data name="BtnFiltrar.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="BtnFiltrar.Text" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Name" xml:space="preserve">
+    <value>BtnFiltrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnResetPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="BtnResetPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>638, 531</value>
+  </data>
+  <data name="BtnResetPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnResetPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 36</value>
+  </data>
+  <data name="BtnResetPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="BtnResetPassword.Text" xml:space="preserve">
+    <value>Restablecer Contraseña</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.Name" xml:space="preserve">
+    <value>BtnResetPassword</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnResetPassword.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="BtnEliminar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>517, 531</value>
+  </data>
+  <data name="BtnEliminar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnEliminar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 36</value>
+  </data>
+  <data name="BtnEliminar.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="BtnEliminar.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.Name" xml:space="preserve">
+    <value>BtnEliminar</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnEliminar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="BtnModificar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 531</value>
+  </data>
+  <data name="BtnModificar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnModificar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 36</value>
+  </data>
+  <data name="BtnModificar.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="BtnModificar.Text" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.Name" xml:space="preserve">
+    <value>BtnModificar</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;BtnModificar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TxtBCi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBCi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 280</value>
+  </data>
+  <data name="TxtBCi.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBCi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 29</value>
+  </data>
+  <data name="TxtBCi.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="&gt;&gt;TxtBCi.Name" xml:space="preserve">
+    <value>TxtBCi</value>
+  </data>
+  <data name="&gt;&gt;TxtBCi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBCi.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBCi.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="LblBCi.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LblBCi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="LblBCi.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LblBCi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 280</value>
+  </data>
+  <data name="LblBCi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 24</value>
+  </data>
+  <data name="LblBCi.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="LblBCi.Text" xml:space="preserve">
+    <value>CI:</value>
+  </data>
+  <data name="&gt;&gt;LblBCi.Name" xml:space="preserve">
+    <value>LblBCi</value>
+  </data>
+  <data name="&gt;&gt;LblBCi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblBCi.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;LblBCi.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CmbBDepartamento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="CmbBDepartamento.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="CmbBDepartamento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 410</value>
+  </data>
+  <data name="CmbBDepartamento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 7</value>
+  </data>
+  <data name="CmbBDepartamento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 36</value>
+  </data>
+  <data name="CmbBDepartamento.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="&gt;&gt;CmbBDepartamento.Name" xml:space="preserve">
+    <value>CmbBDepartamento</value>
+  </data>
+  <data name="&gt;&gt;CmbBDepartamento.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CmbBDepartamento.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;CmbBDepartamento.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TxtBEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 457</value>
+  </data>
+  <data name="TxtBEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>688, 29</value>
+  </data>
+  <data name="TxtBEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="&gt;&gt;TxtBEmail.Name" xml:space="preserve">
+    <value>TxtBEmail</value>
+  </data>
+  <data name="&gt;&gt;TxtBEmail.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBEmail.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBEmail.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 463</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 24</value>
+  </data>
+  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
+    <value>Label10</value>
+  </data>
+  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="TxtBLocalidad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBLocalidad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 412</value>
+  </data>
+  <data name="TxtBLocalidad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBLocalidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 29</value>
+  </data>
+  <data name="TxtBLocalidad.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;TxtBLocalidad.Name" xml:space="preserve">
+    <value>TxtBLocalidad</value>
+  </data>
+  <data name="&gt;&gt;TxtBLocalidad.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBLocalidad.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBLocalidad.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 416</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 24</value>
+  </data>
+  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Localidad:</value>
+  </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
+  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 418</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 24</value>
+  </data>
+  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>Departamento:</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="TxtBCalle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBCalle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 377</value>
+  </data>
+  <data name="TxtBCalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBCalle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 29</value>
+  </data>
+  <data name="TxtBCalle.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;TxtBCalle.Name" xml:space="preserve">
+    <value>TxtBCalle</value>
+  </data>
+  <data name="&gt;&gt;TxtBCalle.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBCalle.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBCalle.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="TxtBNumero.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBNumero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 377</value>
+  </data>
+  <data name="TxtBNumero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBNumero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 29</value>
+  </data>
+  <data name="TxtBNumero.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;TxtBNumero.Name" xml:space="preserve">
+    <value>TxtBNumero</value>
+  </data>
+  <data name="&gt;&gt;TxtBNumero.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBNumero.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBNumero.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 380</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 24</value>
+  </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Detalle:</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 382</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 24</value>
+  </data>
+  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Número:</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 380</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 24</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Calle:</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="TxtBEdad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBEdad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 345</value>
+  </data>
+  <data name="TxtBEdad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBEdad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 29</value>
+  </data>
+  <data name="TxtBEdad.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;TxtBEdad.Name" xml:space="preserve">
+    <value>TxtBEdad</value>
+  </data>
+  <data name="&gt;&gt;TxtBEdad.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBEdad.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBEdad.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 347</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 24</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Edad:</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="TxtBTelefono.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBTelefono.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 345</value>
+  </data>
+  <data name="TxtBTelefono.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBTelefono.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 29</value>
+  </data>
+  <data name="TxtBTelefono.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;TxtBTelefono.Name" xml:space="preserve">
+    <value>TxtBTelefono</value>
+  </data>
+  <data name="&gt;&gt;TxtBTelefono.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBTelefono.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBTelefono.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 349</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 24</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Teléfono:</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="TxtBApellidoM.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBApellidoM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>683, 309</value>
+  </data>
+  <data name="TxtBApellidoM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBApellidoM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 29</value>
+  </data>
+  <data name="TxtBApellidoM.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;TxtBApellidoM.Name" xml:space="preserve">
+    <value>TxtBApellidoM</value>
+  </data>
+  <data name="&gt;&gt;TxtBApellidoM.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBApellidoM.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBApellidoM.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="TxtBApellidoP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBApellidoP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 309</value>
+  </data>
+  <data name="TxtBApellidoP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBApellidoP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 29</value>
+  </data>
+  <data name="TxtBApellidoP.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;TxtBApellidoP.Name" xml:space="preserve">
+    <value>TxtBApellidoP</value>
+  </data>
+  <data name="&gt;&gt;TxtBApellidoP.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBApellidoP.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBApellidoP.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="TxtBNombre.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="TxtBNombre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 313</value>
+  </data>
+  <data name="TxtBNombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 6</value>
+  </data>
+  <data name="TxtBNombre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 29</value>
+  </data>
+  <data name="TxtBNombre.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;TxtBNombre.Name" xml:space="preserve">
+    <value>TxtBNombre</value>
+  </data>
+  <data name="&gt;&gt;TxtBNombre.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBNombre.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;TxtBNombre.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 311</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 24</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Apellidos:</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 319</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 24</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>pnl_filtrar</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

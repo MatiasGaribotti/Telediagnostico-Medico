@@ -68,6 +68,7 @@
         Me.Nro = nro
         Me.Localidad = localidad
         Me.Departamento = departamento
+        Me.Detalle = ""
     End Sub
 
 End Class

@@ -55,15 +55,15 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub ValidateFields()
-        If TxtISintoma.Text = "" Then
+        If String.IsNullOrWhiteSpace(TxtISintoma.Text) Then
             Throw New NoNullAllowedException("El nombre del síntoma no puede ser vacío.")
 
         End If
     End Sub
 
     Private Sub ClearFields()
-        TxtISintoma.Text = ""
-        TxtIDescripcion.Text = ""
+        TxtISintoma.ResetText()
+        TxtIDescripcion.ResetText()
         CmbITipo.SelectedIndex = 0
         CmbIEnfermedad.Items.Clear()
     End Sub

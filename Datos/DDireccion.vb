@@ -79,7 +79,7 @@ Public Class DDireccion
 
     Public Sub Insert(con As Connection)
         If HasConnection() Then
-            Dim query As String = "INSERT INTO direcciones(calle, numero, localidad, departamento, detalles) VALUES('" & Calle & "'," & Nro & ",'" & Localidad & "'," & Departamento & ",'" & Detalle & "')"
+            Dim query As String = "INSERT INTO direcciones(calle, numero, localidad, departamento, detalle) VALUES('" & Calle & "'," & Nro & ",'" & Localidad & "'," & Departamento & ",'" & Detalle & "');"
             Try
                 con.Execute(query)
             Catch ex As Exception
