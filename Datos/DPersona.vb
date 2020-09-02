@@ -56,4 +56,24 @@
         Me.User_Password = user_Password
     End Sub
 
+    Public Sub Modify()
+
+    End Sub
+
+    Public Sub ActualizarContraseña(ci As Integer, password As String)
+        If HasConnection() Then
+            Dim con = Conectar()
+            Dim query As String = "UPDATE personas SET password='" & password & "' WHERE ci='" & ci & "';"
+
+            Try
+                con.Execute(query)
+            Catch ex As Exception
+                'Debug
+                Console.WriteLine("Mensaje de la excepción: " & ex.Message & vbCrLf & "StackTrace: " & ex.StackTrace)
+                Throw New Exception("No se pudo actualizar la contraseña.")
+            Finally
+                con.Close()
+            End Try
+        End If
+    End Sub
 End Class

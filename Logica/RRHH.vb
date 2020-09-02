@@ -66,7 +66,14 @@ Public Class RRHH
     End Sub
 
     Public Sub ResetPassword(empleado As Empleado)
+        Dim objEmpleado As New DEmpleado(Env.UserType)
+        empleado.Password = Logica.Password.Generate(New Random)
+        Try
+            objEmpleado.ActualizarContraseña(empleado.Ci, empleado.Password)
 
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     Public Sub DoAdministrator(medico As Medico)

@@ -287,7 +287,7 @@ Public Class F_Pacientes
                                     CmbIDepartamento.SelectedIndex + 1),
                     telefono,
                     Format(DTPickerFNac.Value, "yyyy-MM-dd"),
-                    "password",
+                    Password.Generate(New Random),
                     TxtIEmail.Text
                     )
 
@@ -312,7 +312,7 @@ Public Class F_Pacientes
                                             TxtIDetalle.Text),
                             CInt(TxtITelefono.Text),
                             Format(DTPickerFNac.Value, "yyyy-MM-dd"),
-                            "password",
+                            Password.Generate(New Random),
                             TxtIEmail.Text,
                             TxtINFam.Text,
                             TxtIAntFam.Text,
@@ -328,6 +328,85 @@ Public Class F_Pacientes
         Try
             Dim dt As DataTable = objPaciente.GetPacientes()
             DgvPacientes.DataSource = dt
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub BtnResetPassword_Click(sender As Object, e As EventArgs) Handles BtnResetPassword.Click
+        Dim objRecepcionista As Recepcionista = Env.CurrentUser
+        Try
+            Dim paciente = GetSelected()
+            objRecepcionista.ResetPassword(paciente)
+            MsgBox("Contraseña restablecida correctamente.", MsgBoxStyle.Information, "Información")
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    Private Function GetSelected() As Paciente
+        Dim paciente As New Paciente()
+        Dim direccion As New Direccion()
+        Dim cells As DataGridViewCellCollection = DgvPacientes.SelectedRows.Item(0).Cells
+
+        Try
+            paciente.Ci = cells.Item(0).Value
+
+            ' La consulta concatena el la información de la siguiente manera
+            ' nombre,apellidoP,apellidoM
+            Dim nombreCompleto = cells.Item(1).Value.ToString.Split(" ")
+
+
+            paciente.Nombre = nombreCompleto.ElementAt(0)
+            paciente.ApellidoP = nombreCompleto.ElementAt(1)
+            paciente.ApellidoM = nombreCompleto.ElementAt(2)
+
+            Dim tmpFechaNacimiento = cells.Item(2).Value.ToString.Substring(0, 10).Split(".")
+
+
+            ' Obtengo la fecha de nacimiento
+            Dim year, month, day As Integer
+            year = tmpFechaNacimiento.ElementAt(2)
+            month = tmpFechaNacimiento.ElementAt(1)
+            day = tmpFechaNacimiento.ElementAt(0)
+
+            paciente.Fecha_Nacimiento = New Date(year, month, day)
+
+            paciente.Telefono = cells.Item(3).Value
+            paciente.Email = cells.Item(4).Value
+
+            ' Direccion
+            ' Formato: calle,numero,localidad,departamento,detalle
+
+            Dim tmpDireccion = cells.Item(5).Value.ToString.Split(",")
+
+            direccion.Calle = tmpDireccion.ElementAt(0)
+            direccion.Nro = Integer.Parse(tmpDireccion.ElementAt(1))
+            direccion.Localidad = tmpDireccion.ElementAt(2)
+            direccion.Departamento = [Enum].Parse(GetType(Direccion.Departamentos), tmpDireccion.ElementAt(3))
+            direccion.Detalle = tmpDireccion.ElementAt(4)
+
+            ' Nucleo Familiar
+            paciente.NucleoFlia = cells.Item(6).Value.ToString
+
+            ' Antecedentes Familiares
+            paciente.AntecedentesFlia = cells.Item(7).Value.ToString
+
+            'Antecedentes Laborales
+            paciente.AntecedentesLab = cells.Item(8).Value.ToString
+
+        Catch ex As Exception
+            Throw New Exception("Error al procesar los datos del paciente.")
+        End Try
+        Return paciente
+    End Function
+
+    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+        ' NOT IMPLEMENTED
+        Try
+            Dim paciente As Paciente = GetSelected()
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

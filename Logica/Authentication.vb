@@ -10,7 +10,8 @@ Public Class Authentication
         Dim authenticated = False
         Dim DAuth As New DAuthentication()
 
-        user.Password = Password.Hash(user.Password)
+        ' NOT IMPLEMENTED 
+        'user.Password = Password.Hash(user.Password)
 
         Dim results As List(Of Boolean)
         Try
