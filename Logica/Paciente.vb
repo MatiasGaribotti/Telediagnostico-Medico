@@ -5,8 +5,6 @@ Public Class Paciente
     Public Property NucleoFlia As String
     Public Property AntecedentesFlia As String
     Public Property AntecedentesLab As String
-    Public Property Medicacion As String
-    Public Property Tratamiento As String
 
 
     Public Sub New()
@@ -22,8 +20,6 @@ Public Class Paciente
         Me.NucleoFlia = "Default"
         Me.AntecedentesFlia = "Sin ingresar"
         Me.AntecedentesLab = "Sin ingresar"
-        Me.Medicacion = "Sin ingresar"
-        Me.Tratamiento = "Sin ingresar"
     End Sub
     Public Sub New(ci As Integer)
         MyBase.New(ci)
@@ -46,9 +42,7 @@ Public Class Paciente
                    email As String,
                    NucleoFlia As String,
                    AntecedentesFlia As String,
-                   antecedentesLab As String,
-                   medicacion As String,
-                   tratamiento As String)
+                   antecedentesLab As String)
         Me.Ci = ci
         Me.Nombre = nombre
         Me.ApellidoP = apellidoP
@@ -61,8 +55,6 @@ Public Class Paciente
         Me.NucleoFlia = NucleoFlia
         Me.AntecedentesFlia = AntecedentesFlia
         Me.AntecedentesLab = antecedentesLab
-        Me.Medicacion = medicacion
-        Me.Tratamiento = tratamiento
     End Sub
 
     ' Constructor común Parcial
@@ -80,8 +72,6 @@ Public Class Paciente
         Me.NucleoFlia = "Sin ingresar"
         Me.AntecedentesFlia = "Sin ingresar"
         Me.AntecedentesLab = "Sin ingresar"
-        Me.Medicacion = "Sin ingresar"
-        Me.Tratamiento = "Sin ingresar"
     End Sub
 
     Public Sub Insert()
@@ -122,9 +112,7 @@ Public Class Paciente
                 Email,
                 NucleoFlia,
                 AntecedentesFlia,
-                AntecedentesLab,
-                Medicacion,
-                Tratamiento)
+                AntecedentesLab)
 
         End If
         Try

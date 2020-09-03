@@ -25,9 +25,7 @@ Public Class Administrador
                                         paciente.Email,
                                         paciente.NucleoFlia,
                                         paciente.AntecedentesFlia,
-                                        paciente.AntecedentesLab,
-                                        paciente.Medicacion,
-                                        paciente.Tratamiento
+                                        paciente.AntecedentesLab
                                         )
 
         Try
@@ -38,5 +36,12 @@ Public Class Administrador
         End Try
 
     End Sub
+
+    Public Function GetPaciente(ci As Integer) As Paciente
+        Dim objDPaciente As New DPaciente(Env.UserType)
+        Dim paciente As Paciente
+
+
+    End Function
 
 End Class

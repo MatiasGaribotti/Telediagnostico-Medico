@@ -1,5 +1,4 @@
 ﻿Imports ADODB
-Imports System.Data.Odbc
 Public Class DPaciente
     Inherits DPersona
 
@@ -7,8 +6,6 @@ Public Class DPaciente
     Public Property NucleoFlia As String
     Public Property AntecedentesFlia As String
     Public Property AntecedentesLab As String
-    Public Property Medicacion As String
-    Public Property Tratamiento As String
 
     Public Sub New(userType As Short)
         MyBase.New(userType)
@@ -28,9 +25,7 @@ Public Class DPaciente
             email As String,
             NucleoFlia As String,
             AntecedentesFlia As String,
-            antecedentesLab As String,
-            medicacion As String,
-            tratamiento As String)
+            antecedentesLab As String)
         MyBase.New(userType, Ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
         Me.Ci = Ci
         Me.Nombre = nombre
@@ -44,8 +39,6 @@ Public Class DPaciente
         Me.NucleoFlia = NucleoFlia
         Me.AntecedentesFlia = AntecedentesFlia
         Me.AntecedentesLab = antecedentesLab
-        Me.Medicacion = medicacion
-        Me.Tratamiento = tratamiento
     End Sub
 
     ' Constructor común Parcial
@@ -65,8 +58,6 @@ Public Class DPaciente
         Me.NucleoFlia = "Sin ingresar"
         Me.AntecedentesFlia = "Sin ingresar"
         Me.AntecedentesLab = "Sin ingresar"
-        Me.Medicacion = "Sin ingresar"
-        Me.Tratamiento = "Sin ingresar"
     End Sub
 
 
@@ -123,8 +114,6 @@ Public Class DPaciente
                                   " nucleoFlia," &
                                   " antecedentesFlia," &
                                   " antecedentesLab," &
-                                  " medicacion," &
-                                  " tratamiento," &
                                   " password," &
                                   " idDireccion)" &
                                   "VALUES(" &
@@ -139,8 +128,6 @@ Public Class DPaciente
                                   NucleoFlia & "','" &
                                   AntecedentesFlia & "','" &
                                   AntecedentesLab & "','" &
-                                  Medicacion & "','" &
-                                  Tratamiento & "','" &
                                   User_Password & "'," &
                                   idDireccion &
                                   ");"
@@ -151,7 +138,6 @@ Public Class DPaciente
 
                 'Hago el commit de la transacción y retorno True
                 con.CommitTrans()
-                con.Close()
 
             Catch ex As ApplicationException
                 'Excepcion que se produce durante el ingreso de direcciones
@@ -193,4 +179,20 @@ Public Class DPaciente
         End If
         Return dt
     End Function
+
+    Public Function Find(ci As Integer) As DPaciente
+        Dim dpaciente As DPaciente
+
+        If HasConnection() Then
+            Dim con = Conectar()
+            Dim query As String = ""
+
+
+        Else
+            Throw New Exception("No hay conexión con la base de datos.")
+        End If
+
+        Return dpaciente
+    End Function
+
 End Class

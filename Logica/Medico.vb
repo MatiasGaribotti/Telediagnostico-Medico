@@ -68,7 +68,7 @@ Public Class Medico
                    password)
     End Sub
 
-    Public Function GetDgvData() As DataTable
+    Public Function GetMedicos() As DataTable
         Dim db As New DMedico(Env.UserType)
         Dim dt = db.GetDgvData()
         Return dt

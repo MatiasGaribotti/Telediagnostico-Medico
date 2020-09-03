@@ -73,7 +73,7 @@ Public Class F_Medicos
 
     Private Sub LoadDgv()
         Dim objMedico As New Medico()
-        Dim dt As DataTable = objMedico.GetDgvData()
+        Dim dt As DataTable = objMedico.GetMedicos()
         DgvMedicos.DataSource = dt
     End Sub
 End Class

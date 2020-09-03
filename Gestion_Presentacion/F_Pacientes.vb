@@ -25,40 +25,23 @@ Public Class F_Pacientes
                 'Buttons
                 BtnModificar.Enabled = False
                 BtnEliminar.Enabled = False
-                BtnAddEnfermedad.Enabled = False
-                BtnDelEnfermedad.Enabled = False
-                BtnIAddMed.Enabled = False
-                BtnIDelMed.Enabled = False
 
 
                 'Fields
                 TxtINFam.Enabled = False
                 TxtIAntFam.Enabled = False
-                TxtITratamientos.Enabled = False
                 TxtIAntLab.Enabled = False
-                TxtIMedicacion.Enabled = False
-                TxtIEnfermedad.Enabled = False
-                CmbIEnfermedad.Enabled = False
-                CmbIMedicacion.Enabled = False
-
 
             Case Env.UserTypes.RRHH
                 BtnIngresar.Enabled = False
                 BtnModificar.Enabled = False
                 BtnEliminar.Enabled = False
                 BtnResetPassword.Enabled = False
-                BtnAddEnfermedad.Enabled = False
-                BtnDelEnfermedad.Enabled = False
-                BtnIAddMed.Enabled = False
-                BtnIDelMed.Enabled = False
-
 
                 'Fields
                 TxtINFam.Enabled = False
                 TxtIAntFam.Enabled = False
-                TxtITratamientos.Enabled = False
                 TxtIAntLab.Enabled = False
-                TxtIMedicacion.Enabled = False
 
             Case Env.UserTypes.Administrador
                 BtnResetPassword.Enabled = False
@@ -118,10 +101,7 @@ Public Class F_Pacientes
                 TxtIEmail.ResetText()
                 TxtINFam.ResetText()
                 TxtIAntFam.ResetText()
-                TxtITratamientos.ResetText()
                 TxtIAntLab.ResetText()
-                CmbIEnfermedad.Items.Clear()
-                CmbIMedicacion.Items.Clear()
             Case Else
                 'Se limpian los campos de búsqueda
                 TxtBCi.ResetText()
@@ -196,9 +176,6 @@ Public Class F_Pacientes
             ' Antecedentes familiares contiene símbolos
             Throw New FormatException("El formato del campo antecedentes familiares no es correcto.")
 
-        ElseIf ContainsSymbol(TxtITratamientos.Text) Then
-            ' Tratamientos contiene símbolos
-            Throw New FormatException("El formato del campo tratamiento no es correcto.")
 
         ElseIf ContainsSymbol(TxtIAntLab.Text) Then
             ' Antecedentes laborales contiene símbolos
@@ -247,22 +224,6 @@ Public Class F_Pacientes
         Close()
     End Sub
 
-    Private Sub BtnIAddItem_Click(sender As Object, e As EventArgs) Handles BtnIAddMed.Click
-        CmbIMedicacion.Items.Add(TxtIMedicacion.Text)
-    End Sub
-
-    Private Sub BtnIDelItem_Click(sender As Object, e As EventArgs) Handles BtnIDelMed.Click
-        CmbIMedicacion.Items.RemoveAt(CmbIMedicacion.SelectedIndex)
-    End Sub
-
-    Private Sub BtnAddEnfermedad_Click(sender As Object, e As EventArgs) Handles BtnAddEnfermedad.Click
-        CmbIEnfermedad.Items.Add(TxtIEnfermedad.Text)
-    End Sub
-
-    Private Sub BtnDelEnfermedad_Click(sender As Object, e As EventArgs) Handles BtnDelEnfermedad.Click
-        CmbIEnfermedad.Items.RemoveAt(CmbIEnfermedad.SelectedIndex)
-    End Sub
-
     Private Function GetPaciente() As Paciente
         Dim paciente As Paciente
 
@@ -273,6 +234,8 @@ Public Class F_Pacientes
         Else
             telefono = CInt(TxtITelefono.Text)
         End If
+
+        Dim pwd As String = Password.Hash(Password.Generate(New Random))
 
         Select Case Env.UserType
             Case Env.UserTypes.Recepcionista
@@ -287,18 +250,11 @@ Public Class F_Pacientes
                                     CmbIDepartamento.SelectedIndex + 1),
                     telefono,
                     Format(DTPickerFNac.Value, "yyyy-MM-dd"),
-                    Password.Generate(New Random),
+                    pwd,
                     TxtIEmail.Text
                     )
 
             Case Env.UserTypes.Administrador
-                Dim medicacion As String = ""
-                For i As Integer = 0 To CmbIMedicacion.Items.Count - 1
-                    medicacion += CmbIMedicacion.Items.Item(i).ToString
-                    If i < CmbIMedicacion.Items.Count - 1 Then
-                        medicacion += ","
-                    End If
-                Next
 
                 paciente = New Paciente(
                             CInt(TxtICi.Text),
@@ -312,14 +268,13 @@ Public Class F_Pacientes
                                             TxtIDetalle.Text),
                             CInt(TxtITelefono.Text),
                             Format(DTPickerFNac.Value, "yyyy-MM-dd"),
-                            Password.Generate(New Random),
+                            pwd,
                             TxtIEmail.Text,
                             TxtINFam.Text,
                             TxtIAntFam.Text,
-                            TxtIAntLab.Text,
-                            medicacion,
-                            TxtITratamientos.Text
+                            TxtIAntLab.Text
                             )
+
         End Select
         Return paciente
     End Function
@@ -328,6 +283,8 @@ Public Class F_Pacientes
         Try
             Dim dt As DataTable = objPaciente.GetPacientes()
             DgvPacientes.DataSource = dt
+            'DgvPacientes.Columns.Item(0).Visible = False
+            'DgvPacientes.Columns.Item(1).Visible = False
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -404,11 +361,34 @@ Public Class F_Pacientes
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         ' NOT IMPLEMENTED
+        Dim admin As Administrador = Env.CurrentUser
         Try
             Dim paciente As Paciente = GetSelected()
+            'Dim enfermedades As List(Of Enfermedad) = admin.GetPaciente(ci)
+            'LoadFields(paciente)
 
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub LoadFields(p As Paciente, enfermedades As List(Of Enfermedad))
+
+        TxtICi.Text = p.Ci
+        TxtINombre.Text = p.Nombre
+        TxtIApellidoP.Text = p.ApellidoP
+        TxtIApellidoM.Text = p.ApellidoM
+        DTPickerFNac.Value = p.Fecha_Nacimiento
+        TxtITelefono.Text = p.Telefono
+        TxtICalle.Text = p.Direccion.Calle
+        TxtINumero.Text = p.Direccion.Nro
+        CmbIDepartamento.SelectedIndex = p.Direccion.Departamento
+        TxtIDetalle.Text = p.Direccion.Detalle
+        TxtIEmail.Text = p.Email
+        TxtINFam.Text = p.NucleoFlia
+        TxtIAntFam.Text = p.AntecedentesFlia
+        TxtIAntLab.Text = p.AntecedentesLab
+
+    End Sub
+
 End Class

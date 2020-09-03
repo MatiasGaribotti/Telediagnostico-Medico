@@ -78,15 +78,14 @@ Public Class DDireccion
     End Sub
 
     Public Sub Insert(con As Connection)
-        If HasConnection() Then
-            Dim query As String = "INSERT INTO direcciones(calle, numero, localidad, departamento, detalle) VALUES('" & Calle & "'," & Nro & ",'" & Localidad & "'," & Departamento & ",'" & Detalle & "');"
-            Try
-                con.Execute(query)
-            Catch ex As Exception
-                'Rollback a la transacción en curso
-                con.RollbackTrans()
-                Throw New ApplicationException("No se pudo ingresar la dirección del paciente.")
-            End Try
-        End If
+        Dim query As String = "INSERT INTO direcciones(calle, numero, localidad, departamento, detalle) VALUES('" & Calle & "'," & Nro & ",'" & Localidad & "'," & Departamento & ",'" & Detalle & "');"
+
+        Try
+            con.Execute(query)
+        Catch ex As Exception
+            'Rollback a la transacción en curso
+            con.RollbackTrans()
+            Throw New ApplicationException("No se pudo ingresar la dirección del paciente.")
+        End Try
     End Sub
 End Class
