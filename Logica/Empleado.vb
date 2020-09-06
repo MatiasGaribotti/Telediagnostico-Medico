@@ -69,4 +69,5 @@ Public Class Empleado
     '        Return False
     '    End Try
     'End Function
+
 End Class

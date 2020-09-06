@@ -37,6 +37,8 @@ Public Class F_Medicos
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
+
+        Dim empleado = GetEmpleado()
         Dim medico As New Medico(
                             CInt(TxtICi.Text),
                             TxtINombre.Text,
@@ -61,6 +63,19 @@ Public Class F_Medicos
         End Try
     End Sub
 
+    Public Function GetEmpleado() As Empleado
+        Try
+            ValidateFields()
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+    Public Sub ValidateFields()
+
+    End Sub
+
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
         CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
         LoadDgv()
@@ -73,7 +88,27 @@ Public Class F_Medicos
 
     Private Sub LoadDgv()
         Dim objMedico As New Medico()
-        Dim dt As DataTable = objMedico.GetMedicos()
-        DgvMedicos.DataSource = dt
+        Try
+            Dim dt As DataTable = objMedico.GetMedicos()
+            DgvMedicos.DataSource = dt
+            HideBooleansDgv()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub HideBooleansDgv()
+        Dim count = DgvMedicos.Columns.Count
+        DgvMedicos.Columns.Item(count - 1).Visible = False
+        DgvMedicos.Columns.Item(count - 2).Visible = False
+        DgvMedicos.Columns.Item(count - 3).Visible = False
+        DgvMedicos.Columns.Item(count - 4).Visible = False
+
+    End Sub
+
+    Private Sub CmbBRol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbBRol.SelectedIndexChanged
+        ' Si el rol seleccionado es el de médico, el ComboBox
+        ' de Especialidades se habilita
+
     End Sub
 End Class

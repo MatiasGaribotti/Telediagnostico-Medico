@@ -22,7 +22,7 @@ Public Class Password
         Dim password As New StringBuilder("#")
 
         ' Caracteres aceptados para la contraseña
-        Dim accepetedChars As String = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+        Const accepetedChars As String = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
         'Longitud de la password entre 15 y 20 caracteres
         Dim lenght As Integer = r.Next(15, 20)

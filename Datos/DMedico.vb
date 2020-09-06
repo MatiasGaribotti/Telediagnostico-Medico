@@ -1,5 +1,4 @@
-﻿Imports System.Data.Odbc
-Imports ADODB
+﻿Imports ADODB
 Public Class DMedico
     Inherits DEmpleado
 
@@ -101,21 +100,29 @@ Public Class DMedico
         End If
     End Sub
 
-    Public Function GetDgvData() As DataTable
+    Public Function GetEmpleados() As DataTable
+        Dim con As Connection
+        Dim rs As Recordset
         Dim dt As New DataTable()
+        Dim da As New OleDb.OleDbDataAdapter
 
         'Consulto los datos a la vista "pacientes"
-        Dim query As String = "SELECT * FROM Medicos;"
+        Dim query As String = "SELECT * FROM Empleados;"
 
         If HasConnection() Then
+            con = Conectar()
+            Try
+                rs = con.Execute(query)
 
-            Dim con As New OdbcConnection("dsn=VM_DB_sistema_telediagnostico;uid=" & DB_User & ";pwd=" & DB_Password & ";")
-            con.Open()
-            Dim cmd As New OdbcCommand(query, con)
-            Dim dataReader = cmd.ExecuteReader()
-            dt.Load(dataReader)
+                da.Fill(dt, rs)
 
+            Catch ex As Exception
+                Throw New Exception("Error al obtener los datos de los Empeleados.")
+            Finally
+                con.Close()
+            End Try
         End If
+
         Return dt
     End Function
 End Class

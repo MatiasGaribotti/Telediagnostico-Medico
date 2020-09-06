@@ -70,7 +70,12 @@ Public Class Medico
 
     Public Function GetMedicos() As DataTable
         Dim db As New DMedico(Env.UserType)
-        Dim dt = db.GetDgvData()
-        Return dt
+        Try
+            Dim dt = db.GetEmpleados()
+            Return dt
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 End Class
