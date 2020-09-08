@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class F_Medicos
+Partial Class F_Empleados
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,7 +24,7 @@ Partial Class F_Medicos
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Medicos))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Empleados))
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnl_fondo = New System.Windows.Forms.Panel()
         Me.DgvMedicos = New Guna.UI2.WinForms.Guna2DataGridView()
@@ -35,6 +35,13 @@ Partial Class F_Medicos
         Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.pnl_ingresarFiltrar = New System.Windows.Forms.Panel()
+        Me.TxtBTelefono = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.CmbBRol = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.LblBRol = New System.Windows.Forms.Label()
+        Me.TxtIDetalle = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.CmbRol = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.lblRol = New System.Windows.Forms.Label()
         Me.BtnHorarios = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
@@ -42,8 +49,8 @@ Partial Class F_Medicos
         Me.cbtn_masEspecialidades = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.DTPickerFNac = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.CmbIDepartamento = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cmb_especialidadI = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cmb_especialidadF = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbEspecialidadesIng = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbBEspecialidades = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cmb_sucursalesF = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TxtITelefono = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TxtINumero = New Guna.UI2.WinForms.Guna2TextBox()
@@ -74,14 +81,7 @@ Partial Class F_Medicos
         Me.lbl_nombres = New System.Windows.Forms.Label()
         Me.lbl_CI = New System.Windows.Forms.Label()
         Me.lbl_busqueda = New System.Windows.Forms.Label()
-        Me.lblRol = New System.Windows.Forms.Label()
-        Me.CmbRol = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.TxtIEspecialidad = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtIDetalle = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.LblBRol = New System.Windows.Forms.Label()
-        Me.CmbBRol = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.TxtBTelefono = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.CmbIEspecialidades = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.pnl_fondo.SuspendLayout()
         CType(Me.DgvMedicos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_ingresarFiltrar.SuspendLayout()
@@ -240,12 +240,12 @@ Partial Class F_Medicos
         'pnl_ingresarFiltrar
         '
         Me.pnl_ingresarFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbIEspecialidades)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtBTelefono)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label2)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbBRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.LblBRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtIDetalle)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtIEspecialidad)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lblRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnHorarios)
@@ -255,8 +255,8 @@ Partial Class F_Medicos
         Me.pnl_ingresarFiltrar.Controls.Add(Me.cbtn_masEspecialidades)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.DTPickerFNac)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbIDepartamento)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_especialidadI)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_especialidadF)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbEspecialidadesIng)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbBEspecialidades)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.cmb_sucursalesF)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtITelefono)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtINumero)
@@ -289,6 +289,95 @@ Partial Class F_Medicos
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_busqueda)
         resources.ApplyResources(Me.pnl_ingresarFiltrar, "pnl_ingresarFiltrar")
         Me.pnl_ingresarFiltrar.Name = "pnl_ingresarFiltrar"
+        '
+        'TxtBTelefono
+        '
+        Me.TxtBTelefono.BorderRadius = 6
+        Me.TxtBTelefono.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtBTelefono.DefaultText = ""
+        Me.TxtBTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtBTelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtBTelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBTelefono.DisabledState.Parent = Me.TxtBTelefono
+        Me.TxtBTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtBTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBTelefono.FocusedState.Parent = Me.TxtBTelefono
+        resources.ApplyResources(Me.TxtBTelefono, "TxtBTelefono")
+        Me.TxtBTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtBTelefono.HoverState.Parent = Me.TxtBTelefono
+        Me.TxtBTelefono.Name = "TxtBTelefono"
+        Me.TxtBTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtBTelefono.PlaceholderText = ""
+        Me.TxtBTelefono.SelectedText = ""
+        Me.TxtBTelefono.ShadowDecoration.Parent = Me.TxtBTelefono
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.Name = "Label2"
+        '
+        'CmbBRol
+        '
+        Me.CmbBRol.BackColor = System.Drawing.Color.Transparent
+        Me.CmbBRol.BorderRadius = 6
+        Me.CmbBRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbBRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbBRol.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBRol.FocusedState.Parent = Me.CmbBRol
+        resources.ApplyResources(Me.CmbBRol, "CmbBRol")
+        Me.CmbBRol.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbBRol.HoverState.Parent = Me.CmbBRol
+        Me.CmbBRol.ItemsAppearance.Parent = Me.CmbBRol
+        Me.CmbBRol.Name = "CmbBRol"
+        Me.CmbBRol.ShadowDecoration.Parent = Me.CmbBRol
+        '
+        'LblBRol
+        '
+        resources.ApplyResources(Me.LblBRol, "LblBRol")
+        Me.LblBRol.Name = "LblBRol"
+        '
+        'TxtIDetalle
+        '
+        Me.TxtIDetalle.BorderRadius = 6
+        Me.TxtIDetalle.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtIDetalle.DefaultText = ""
+        Me.TxtIDetalle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtIDetalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtIDetalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIDetalle.DisabledState.Parent = Me.TxtIDetalle
+        Me.TxtIDetalle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtIDetalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIDetalle.FocusedState.Parent = Me.TxtIDetalle
+        resources.ApplyResources(Me.TxtIDetalle, "TxtIDetalle")
+        Me.TxtIDetalle.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtIDetalle.HoverState.Parent = Me.TxtIDetalle
+        Me.TxtIDetalle.Name = "TxtIDetalle"
+        Me.TxtIDetalle.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtIDetalle.PlaceholderText = ""
+        Me.TxtIDetalle.SelectedText = ""
+        Me.TxtIDetalle.ShadowDecoration.Parent = Me.TxtIDetalle
+        '
+        'CmbRol
+        '
+        Me.CmbRol.BackColor = System.Drawing.Color.Transparent
+        Me.CmbRol.BorderRadius = 6
+        Me.CmbRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbRol.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbRol.FocusedState.Parent = Me.CmbRol
+        resources.ApplyResources(Me.CmbRol, "CmbRol")
+        Me.CmbRol.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbRol.HoverState.Parent = Me.CmbRol
+        Me.CmbRol.ItemsAppearance.Parent = Me.CmbRol
+        Me.CmbRol.Name = "CmbRol"
+        Me.CmbRol.ShadowDecoration.Parent = Me.CmbRol
+        '
+        'lblRol
+        '
+        resources.ApplyResources(Me.lblRol, "lblRol")
+        Me.lblRol.Name = "lblRol"
         '
         'BtnHorarios
         '
@@ -391,37 +480,37 @@ Partial Class F_Medicos
         Me.CmbIDepartamento.Name = "CmbIDepartamento"
         Me.CmbIDepartamento.ShadowDecoration.Parent = Me.CmbIDepartamento
         '
-        'cmb_especialidadI
+        'CmbEspecialidadesIng
         '
-        Me.cmb_especialidadI.BackColor = System.Drawing.Color.Transparent
-        Me.cmb_especialidadI.BorderRadius = 6
-        Me.cmb_especialidadI.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmb_especialidadI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_especialidadI.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_especialidadI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_especialidadI.FocusedState.Parent = Me.cmb_especialidadI
-        resources.ApplyResources(Me.cmb_especialidadI, "cmb_especialidadI")
-        Me.cmb_especialidadI.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cmb_especialidadI.HoverState.Parent = Me.cmb_especialidadI
-        Me.cmb_especialidadI.ItemsAppearance.Parent = Me.cmb_especialidadI
-        Me.cmb_especialidadI.Name = "cmb_especialidadI"
-        Me.cmb_especialidadI.ShadowDecoration.Parent = Me.cmb_especialidadI
+        Me.CmbEspecialidadesIng.BackColor = System.Drawing.Color.Transparent
+        Me.CmbEspecialidadesIng.BorderRadius = 6
+        Me.CmbEspecialidadesIng.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbEspecialidadesIng.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbEspecialidadesIng.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbEspecialidadesIng.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbEspecialidadesIng.FocusedState.Parent = Me.CmbEspecialidadesIng
+        resources.ApplyResources(Me.CmbEspecialidadesIng, "CmbEspecialidadesIng")
+        Me.CmbEspecialidadesIng.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbEspecialidadesIng.HoverState.Parent = Me.CmbEspecialidadesIng
+        Me.CmbEspecialidadesIng.ItemsAppearance.Parent = Me.CmbEspecialidadesIng
+        Me.CmbEspecialidadesIng.Name = "CmbEspecialidadesIng"
+        Me.CmbEspecialidadesIng.ShadowDecoration.Parent = Me.CmbEspecialidadesIng
         '
-        'cmb_especialidadF
+        'CmbBEspecialidades
         '
-        Me.cmb_especialidadF.BackColor = System.Drawing.Color.Transparent
-        Me.cmb_especialidadF.BorderRadius = 6
-        Me.cmb_especialidadF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmb_especialidadF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_especialidadF.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_especialidadF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmb_especialidadF.FocusedState.Parent = Me.cmb_especialidadF
-        resources.ApplyResources(Me.cmb_especialidadF, "cmb_especialidadF")
-        Me.cmb_especialidadF.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cmb_especialidadF.HoverState.Parent = Me.cmb_especialidadF
-        Me.cmb_especialidadF.ItemsAppearance.Parent = Me.cmb_especialidadF
-        Me.cmb_especialidadF.Name = "cmb_especialidadF"
-        Me.cmb_especialidadF.ShadowDecoration.Parent = Me.cmb_especialidadF
+        Me.CmbBEspecialidades.BackColor = System.Drawing.Color.Transparent
+        Me.CmbBEspecialidades.BorderRadius = 6
+        Me.CmbBEspecialidades.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbBEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbBEspecialidades.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBEspecialidades.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbBEspecialidades.FocusedState.Parent = Me.CmbBEspecialidades
+        resources.ApplyResources(Me.CmbBEspecialidades, "CmbBEspecialidades")
+        Me.CmbBEspecialidades.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbBEspecialidades.HoverState.Parent = Me.CmbBEspecialidades
+        Me.CmbBEspecialidades.ItemsAppearance.Parent = Me.CmbBEspecialidades
+        Me.CmbBEspecialidades.Name = "CmbBEspecialidades"
+        Me.CmbBEspecialidades.ShadowDecoration.Parent = Me.CmbBEspecialidades
         '
         'cmb_sucursalesF
         '
@@ -789,115 +878,21 @@ Partial Class F_Medicos
         resources.ApplyResources(Me.lbl_busqueda, "lbl_busqueda")
         Me.lbl_busqueda.Name = "lbl_busqueda"
         '
-        'lblRol
+        'CmbIEspecialidades
         '
-        resources.ApplyResources(Me.lblRol, "lblRol")
-        Me.lblRol.Name = "lblRol"
-        '
-        'CmbRol
-        '
-        Me.CmbRol.BackColor = System.Drawing.Color.Transparent
-        Me.CmbRol.BorderRadius = 6
-        Me.CmbRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmbRol.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbRol.FocusedState.Parent = Me.CmbRol
-        resources.ApplyResources(Me.CmbRol, "CmbRol")
-        Me.CmbRol.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmbRol.HoverState.Parent = Me.CmbRol
-        Me.CmbRol.ItemsAppearance.Parent = Me.CmbRol
-        Me.CmbRol.Name = "CmbRol"
-        Me.CmbRol.ShadowDecoration.Parent = Me.CmbRol
-        '
-        'TxtIEspecialidad
-        '
-        Me.TxtIEspecialidad.BorderRadius = 6
-        Me.TxtIEspecialidad.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtIEspecialidad.DefaultText = ""
-        Me.TxtIEspecialidad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtIEspecialidad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtIEspecialidad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtIEspecialidad.DisabledState.Parent = Me.TxtIEspecialidad
-        Me.TxtIEspecialidad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtIEspecialidad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtIEspecialidad.FocusedState.Parent = Me.TxtIEspecialidad
-        resources.ApplyResources(Me.TxtIEspecialidad, "TxtIEspecialidad")
-        Me.TxtIEspecialidad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtIEspecialidad.HoverState.Parent = Me.TxtIEspecialidad
-        Me.TxtIEspecialidad.Name = "TxtIEspecialidad"
-        Me.TxtIEspecialidad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtIEspecialidad.PlaceholderText = ""
-        Me.TxtIEspecialidad.SelectedText = ""
-        Me.TxtIEspecialidad.ShadowDecoration.Parent = Me.TxtIEspecialidad
-        '
-        'TxtIDetalle
-        '
-        Me.TxtIDetalle.BorderRadius = 6
-        Me.TxtIDetalle.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtIDetalle.DefaultText = ""
-        Me.TxtIDetalle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtIDetalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtIDetalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtIDetalle.DisabledState.Parent = Me.TxtIDetalle
-        Me.TxtIDetalle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtIDetalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtIDetalle.FocusedState.Parent = Me.TxtIDetalle
-        resources.ApplyResources(Me.TxtIDetalle, "TxtIDetalle")
-        Me.TxtIDetalle.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtIDetalle.HoverState.Parent = Me.TxtIDetalle
-        Me.TxtIDetalle.Name = "TxtIDetalle"
-        Me.TxtIDetalle.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtIDetalle.PlaceholderText = ""
-        Me.TxtIDetalle.SelectedText = ""
-        Me.TxtIDetalle.ShadowDecoration.Parent = Me.TxtIDetalle
-        '
-        'LblBRol
-        '
-        resources.ApplyResources(Me.LblBRol, "LblBRol")
-        Me.LblBRol.Name = "LblBRol"
-        '
-        'CmbBRol
-        '
-        Me.CmbBRol.BackColor = System.Drawing.Color.Transparent
-        Me.CmbBRol.BorderRadius = 6
-        Me.CmbBRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmbBRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmbBRol.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbBRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbBRol.FocusedState.Parent = Me.CmbBRol
-        resources.ApplyResources(Me.CmbBRol, "CmbBRol")
-        Me.CmbBRol.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmbBRol.HoverState.Parent = Me.CmbBRol
-        Me.CmbBRol.ItemsAppearance.Parent = Me.CmbBRol
-        Me.CmbBRol.Name = "CmbBRol"
-        Me.CmbBRol.ShadowDecoration.Parent = Me.CmbBRol
-        '
-        'TxtBTelefono
-        '
-        Me.TxtBTelefono.BorderRadius = 6
-        Me.TxtBTelefono.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBTelefono.DefaultText = ""
-        Me.TxtBTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtBTelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtBTelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBTelefono.DisabledState.Parent = Me.TxtBTelefono
-        Me.TxtBTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtBTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBTelefono.FocusedState.Parent = Me.TxtBTelefono
-        resources.ApplyResources(Me.TxtBTelefono, "TxtBTelefono")
-        Me.TxtBTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtBTelefono.HoverState.Parent = Me.TxtBTelefono
-        Me.TxtBTelefono.Name = "TxtBTelefono"
-        Me.TxtBTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtBTelefono.PlaceholderText = ""
-        Me.TxtBTelefono.SelectedText = ""
-        Me.TxtBTelefono.ShadowDecoration.Parent = Me.TxtBTelefono
-        '
-        'Label2
-        '
-        resources.ApplyResources(Me.Label2, "Label2")
-        Me.Label2.Name = "Label2"
+        Me.CmbIEspecialidades.BackColor = System.Drawing.Color.Transparent
+        Me.CmbIEspecialidades.BorderRadius = 6
+        Me.CmbIEspecialidades.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbIEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbIEspecialidades.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIEspecialidades.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIEspecialidades.FocusedState.Parent = Me.CmbIEspecialidades
+        resources.ApplyResources(Me.CmbIEspecialidades, "CmbIEspecialidades")
+        Me.CmbIEspecialidades.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbIEspecialidades.HoverState.Parent = Me.CmbIEspecialidades
+        Me.CmbIEspecialidades.ItemsAppearance.Parent = Me.CmbIEspecialidades
+        Me.CmbIEspecialidades.Name = "CmbIEspecialidades"
+        Me.CmbIEspecialidades.ShadowDecoration.Parent = Me.CmbIEspecialidades
         '
         'F_Medicos
         '
@@ -947,12 +942,12 @@ Partial Class F_Medicos
     Friend WithEvents TxtINombre As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtb_nombresF As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtb_ciF As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents cmb_especialidadF As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbBEspecialidades As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cbtn_menosEspecialidades As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents cbtn_masEspecialidades As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents DTPickerFNac As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents CmbIDepartamento As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents cmb_especialidadI As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbEspecialidadesIng As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnResetPassword As Guna.UI2.WinForms.Guna2Button
@@ -966,9 +961,9 @@ Partial Class F_Medicos
     Friend WithEvents CmbBRol As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents LblBRol As Label
     Friend WithEvents TxtIDetalle As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtIEspecialidad As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CmbRol As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents lblRol As Label
     Friend WithEvents TxtBTelefono As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents CmbIEspecialidades As Guna.UI2.WinForms.Guna2ComboBox
 End Class

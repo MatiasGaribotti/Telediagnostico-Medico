@@ -1,5 +1,7 @@
 Imports ADODB
 Public MustInherit Class DBConnection
+
+    Protected Property con As Connection
     Public Property DB_User() As String
     Public Property DB_Password() As String
     Public Property ConStr() As String
@@ -15,11 +17,11 @@ Public MustInherit Class DBConnection
 
     'Funcion que retorna una conexión a la base de datos
     Protected Function Conectar() As Connection
-        Dim Con = New Connection() With {.ConnectionString = ConStr}
+        con = New Connection() With {.ConnectionString = ConStr}
         If HasConnection() Then
             Try
-                Con.Open()
-                Return Con
+                con.Open()
+                Return con
             Catch ex As Exception
                 Throw New ApplicationException("Error al conectar con la base de datos")
             End Try
@@ -30,9 +32,8 @@ Public MustInherit Class DBConnection
 
     Protected Function HasConnection() As Boolean
         Try
-            Dim Con = New Connection() With {.ConnectionString = Me.ConStr}
             'Intento abrir la conexión
-            Con.Open()
+            con.Open()
             Con.Close()
             Return True
         Catch ex As Exception

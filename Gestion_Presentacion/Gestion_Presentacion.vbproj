@@ -92,16 +92,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="F_Medicos_Horarios.Designer.vb">
-      <DependentUpon>F_Medicos_Horarios.vb</DependentUpon>
+    <Compile Include="F_Empleados_Horarios.Designer.vb">
+      <DependentUpon>F_Empleados_Horarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="F_Medicos_Horarios.vb">
+    <Compile Include="F_Empleados_Horarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Medicos.Designer.vb">
-      <DependentUpon>F_Medicos.vb</DependentUpon>
+    <Compile Include="F_Empleados.Designer.vb">
+      <DependentUpon>F_Empleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="F_Medicos.vb">
+    <Compile Include="F_Empleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="F_ABM.Designer.vb">
@@ -159,14 +159,14 @@
     <EmbeddedResource Include="F_Login.es-UY.resx">
       <DependentUpon>F_Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Medicos.en-US.resx">
-      <DependentUpon>F_Medicos.vb</DependentUpon>
+    <EmbeddedResource Include="F_Empleados.en-US.resx">
+      <DependentUpon>F_Empleados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Medicos_Horarios.en-US.resx">
-      <DependentUpon>F_Medicos_Horarios.vb</DependentUpon>
+    <EmbeddedResource Include="F_Empleados_Horarios.en-US.resx">
+      <DependentUpon>F_Empleados_Horarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Medicos_Horarios.resx">
-      <DependentUpon>F_Medicos_Horarios.vb</DependentUpon>
+    <EmbeddedResource Include="F_Empleados_Horarios.resx">
+      <DependentUpon>F_Empleados_Horarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_ABM.resx">
       <DependentUpon>F_ABM.vb</DependentUpon>
@@ -177,8 +177,8 @@
     <EmbeddedResource Include="F_Login.resx">
       <DependentUpon>F_Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Medicos.resx">
-      <DependentUpon>F_Medicos.vb</DependentUpon>
+    <EmbeddedResource Include="F_Empleados.resx">
+      <DependentUpon>F_Empleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Pacientes.en-US.resx">
       <DependentUpon>F_Pacientes.vb</DependentUpon>

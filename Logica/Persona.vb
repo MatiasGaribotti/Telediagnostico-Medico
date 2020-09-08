@@ -80,9 +80,7 @@ Public MustInherit Class Persona
     End Function
 
     ''' <summary>
-    ''' Valida que los datos de entrada sean válidos.
-    ''' Este procedimiento deberá ser heredado para
-    ''' adaptarlo a la entidad correspondiente.
+    ''' Valida los datos de entrada.
     ''' </summary>
     ''' <param name="ci"></param>
     ''' <param name="nombres"></param>

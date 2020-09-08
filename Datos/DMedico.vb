@@ -94,6 +94,8 @@ Public Class DMedico
                 'para mantener la integridad de los datos.
                 con.RollbackTrans()
                 Throw New Exception("No se pudo insertar el médico.")
+            Finally
+                con.Close()
             End Try
         Else
             Throw New Exception("No hay conexión con la base de datos.")
@@ -109,20 +111,40 @@ Public Class DMedico
         'Consulto los datos a la vista "pacientes"
         Dim query As String = "SELECT * FROM Empleados;"
 
-        If HasConnection() Then
-            con = Conectar()
-            Try
-                rs = con.Execute(query)
+        con = Conectar()
+        Try
+            rs = con.Execute(query)
 
-                da.Fill(dt, rs)
+            da.Fill(dt, rs)
 
-            Catch ex As Exception
-                Throw New Exception("Error al obtener los datos de los Empeleados.")
-            Finally
-                con.Close()
-            End Try
-        End If
+        Catch ex As Exception
+            Throw New Exception("Error al obtener los datos de los Empeleados.")
+        Finally
+            con.Close()
+        End Try
 
         Return dt
     End Function
+
+    Public Function GetEspecialidades() As DataTable
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim dt As New DataTable
+
+        Dim query = "SELECT * FROM especialidades;"
+
+        con = Conectar()
+
+        Try
+            rs = con.Execute(query)
+            da.Fill(dt, rs)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al buscar especialidades.")
+        Finally
+            con.Close()
+        End Try
+
+    End Function
+
 End Class

@@ -2,7 +2,7 @@
 Imports System.Globalization
 Imports Logica
 
-Public Class F_Medicos
+Public Class F_Empleados
 
     Public Sub New()
         Thread.CurrentThread.CurrentUICulture = Logica.Env.CurrentLangugage
@@ -10,9 +10,15 @@ Public Class F_Medicos
         ConfigMode()
     End Sub
 
-    'Configura los controles de acuerdo con el usuario que ingresa
-    'a la ventana, dado que ciertos usuarios no pueden realizar
-    'determinadas tareas (Permisos en la base de datos).
+
+    Private especialidades As List(Of Especialidad)
+    Private empleado As Empleado
+
+    ''' <summary>
+    ''' Configura los controles de acuerdo con el usuario que ingresa
+    ''' a la ventana, dado que ciertos usuarios no pueden realizar
+    ''' determinadas tareas(Permisos en la base de datos).
+    ''' </summary>
     Public Sub ConfigMode()
         Select Case Env.UserType
             Case Env.UserType = Env.UserTypes.Recepcionista Or Env.UserType = Env.UserTypes.Administrador
@@ -78,18 +84,20 @@ Public Class F_Medicos
 
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
         CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
+        ConfigRoles()
+        ConfigComboBox()
         LoadDgv()
     End Sub
 
     Private Sub BtnHorarios_Click(sender As Object, e As EventArgs) Handles BtnHorarios.Click
-        F_Medicos_Horarios.Show()
+        F_Empleados_Horarios.Show()
         Close()
     End Sub
 
     Private Sub LoadDgv()
         Dim objMedico As New Medico()
         Try
-            Dim dt As DataTable = objMedico.GetMedicos()
+            Dim dt As DataTable = objMedico.GetEmpleados()
             DgvMedicos.DataSource = dt
             HideBooleansDgv()
         Catch ex As Exception
@@ -109,6 +117,24 @@ Public Class F_Medicos
     Private Sub CmbBRol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbBRol.SelectedIndexChanged
         ' Si el rol seleccionado es el de médico, el ComboBox
         ' de Especialidades se habilita
+
+    End Sub
+
+    Private Sub ConfigRoles()
+        Dim LogicaEmpleado As New Empleado
+        Dim roles As List(Of String) = LogicaEmpleado.GetRoles()
+        CmbBRol.DataSource = roles
+        CmbRol.DataSource = roles
+    End Sub
+
+    Public Sub ConfigComboBox()
+        Dim LogicaMedico As New Medico
+        Dim especialidades As List(Of Especialidad) = LogicaMedico.GetEspecialidades()
+
+        For Each i As Especialidad In especialidades
+            CmbBEspecialidades.Items.Add(i.Nombre)
+            CmbIEspecialidades.Items.Add(i.Nombre)
+        Next
 
     End Sub
 End Class

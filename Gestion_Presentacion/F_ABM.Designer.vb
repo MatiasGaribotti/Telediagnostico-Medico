@@ -28,15 +28,11 @@ Partial Class F_ABM
         Me.BtnCerrarSesion = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.LblAdministradores = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.LblMedicos = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LblPacientes = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Btn_Enfermedades = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_Sitnomas = New Guna.UI2.WinForms.Guna2Button()
-        Me.Btn_Administradores = New Guna.UI2.WinForms.Guna2Button()
-        Me.Btn_Medicos = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_Pacientes = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -48,15 +44,11 @@ Partial Class F_ABM
         Me.Guna2Panel1.Controls.Add(Me.BtnCerrarSesion)
         Me.Guna2Panel1.Controls.Add(Me.Btn_Minimize)
         Me.Guna2Panel1.Controls.Add(Me.Btn_Exit)
-        Me.Guna2Panel1.Controls.Add(Me.LblAdministradores)
-        Me.Guna2Panel1.Controls.Add(Me.LblMedicos)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel5)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel4)
         Me.Guna2Panel1.Controls.Add(Me.LblPacientes)
         Me.Guna2Panel1.Controls.Add(Me.Btn_Enfermedades)
         Me.Guna2Panel1.Controls.Add(Me.Btn_Sitnomas)
-        Me.Guna2Panel1.Controls.Add(Me.Btn_Administradores)
-        Me.Guna2Panel1.Controls.Add(Me.Btn_Medicos)
         Me.Guna2Panel1.Controls.Add(Me.Btn_Pacientes)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
@@ -70,7 +62,7 @@ Partial Class F_ABM
         '
         Me.LblEmpleados.BackColor = System.Drawing.Color.Transparent
         Me.LblEmpleados.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEmpleados.Location = New System.Drawing.Point(1250, 478)
+        Me.LblEmpleados.Location = New System.Drawing.Point(969, 478)
         Me.LblEmpleados.Name = "LblEmpleados"
         Me.LblEmpleados.Size = New System.Drawing.Size(162, 40)
         Me.LblEmpleados.TabIndex = 93
@@ -86,7 +78,7 @@ Partial Class F_ABM
         Me.Btn_Empleados.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Btn_Empleados.ForeColor = System.Drawing.Color.White
         Me.Btn_Empleados.HoverState.Parent = Me.Btn_Empleados
-        Me.Btn_Empleados.Location = New System.Drawing.Point(1206, 222)
+        Me.Btn_Empleados.Location = New System.Drawing.Point(925, 222)
         Me.Btn_Empleados.Margin = New System.Windows.Forms.Padding(3, 3, 27, 3)
         Me.Btn_Empleados.Name = "Btn_Empleados"
         Me.Btn_Empleados.ShadowDecoration.Parent = Me.Btn_Empleados
@@ -143,26 +135,6 @@ Partial Class F_ABM
         Me.Btn_Exit.Size = New System.Drawing.Size(45, 29)
         Me.Btn_Exit.TabIndex = 5
         '
-        'LblAdministradores
-        '
-        Me.LblAdministradores.BackColor = System.Drawing.Color.Transparent
-        Me.LblAdministradores.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAdministradores.Location = New System.Drawing.Point(931, 478)
-        Me.LblAdministradores.Name = "LblAdministradores"
-        Me.LblAdministradores.Size = New System.Drawing.Size(240, 40)
-        Me.LblAdministradores.TabIndex = 2
-        Me.LblAdministradores.Text = "Administradores"
-        '
-        'LblMedicos
-        '
-        Me.LblMedicos.BackColor = System.Drawing.Color.Transparent
-        Me.LblMedicos.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblMedicos.Location = New System.Drawing.Point(705, 478)
-        Me.LblMedicos.Name = "LblMedicos"
-        Me.LblMedicos.Size = New System.Drawing.Size(126, 40)
-        Me.LblMedicos.TabIndex = 2
-        Me.LblMedicos.Text = "Médicos"
-        '
         'Guna2HtmlLabel5
         '
         Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
@@ -187,7 +159,7 @@ Partial Class F_ABM
         '
         Me.LblPacientes.BackColor = System.Drawing.Color.Transparent
         Me.LblPacientes.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPacientes.Location = New System.Drawing.Point(419, 478)
+        Me.LblPacientes.Location = New System.Drawing.Point(709, 478)
         Me.LblPacientes.Name = "LblPacientes"
         Me.LblPacientes.Size = New System.Drawing.Size(144, 40)
         Me.LblPacientes.TabIndex = 2
@@ -226,40 +198,6 @@ Partial Class F_ABM
         Me.Btn_Sitnomas.Size = New System.Drawing.Size(250, 250)
         Me.Btn_Sitnomas.TabIndex = 1
         '
-        'Btn_Administradores
-        '
-        Me.Btn_Administradores.Animated = True
-        Me.Btn_Administradores.BorderRadius = 33
-        Me.Btn_Administradores.CheckedState.Parent = Me.Btn_Administradores
-        Me.Btn_Administradores.CustomImages.Parent = Me.Btn_Administradores
-        Me.Btn_Administradores.FillColor = System.Drawing.Color.White
-        Me.Btn_Administradores.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Btn_Administradores.ForeColor = System.Drawing.Color.White
-        Me.Btn_Administradores.HoverState.Parent = Me.Btn_Administradores
-        Me.Btn_Administradores.Location = New System.Drawing.Point(926, 222)
-        Me.Btn_Administradores.Margin = New System.Windows.Forms.Padding(3, 3, 27, 3)
-        Me.Btn_Administradores.Name = "Btn_Administradores"
-        Me.Btn_Administradores.ShadowDecoration.Parent = Me.Btn_Administradores
-        Me.Btn_Administradores.Size = New System.Drawing.Size(250, 250)
-        Me.Btn_Administradores.TabIndex = 1
-        '
-        'Btn_Medicos
-        '
-        Me.Btn_Medicos.Animated = True
-        Me.Btn_Medicos.BorderRadius = 33
-        Me.Btn_Medicos.CheckedState.Parent = Me.Btn_Medicos
-        Me.Btn_Medicos.CustomImages.Parent = Me.Btn_Medicos
-        Me.Btn_Medicos.FillColor = System.Drawing.Color.White
-        Me.Btn_Medicos.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Btn_Medicos.ForeColor = System.Drawing.Color.White
-        Me.Btn_Medicos.HoverState.Parent = Me.Btn_Medicos
-        Me.Btn_Medicos.Location = New System.Drawing.Point(651, 222)
-        Me.Btn_Medicos.Margin = New System.Windows.Forms.Padding(3, 3, 27, 3)
-        Me.Btn_Medicos.Name = "Btn_Medicos"
-        Me.Btn_Medicos.ShadowDecoration.Parent = Me.Btn_Medicos
-        Me.Btn_Medicos.Size = New System.Drawing.Size(250, 250)
-        Me.Btn_Medicos.TabIndex = 1
-        '
         'Btn_Pacientes
         '
         Me.Btn_Pacientes.Animated = True
@@ -270,7 +208,7 @@ Partial Class F_ABM
         Me.Btn_Pacientes.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Btn_Pacientes.ForeColor = System.Drawing.Color.White
         Me.Btn_Pacientes.HoverState.Parent = Me.Btn_Pacientes
-        Me.Btn_Pacientes.Location = New System.Drawing.Point(361, 222)
+        Me.Btn_Pacientes.Location = New System.Drawing.Point(651, 222)
         Me.Btn_Pacientes.Margin = New System.Windows.Forms.Padding(3, 3, 27, 3)
         Me.Btn_Pacientes.Name = "Btn_Pacientes"
         Me.Btn_Pacientes.ShadowDecoration.Parent = Me.Btn_Pacientes
@@ -294,15 +232,11 @@ Partial Class F_ABM
     End Sub
 
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents LblAdministradores As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblMedicos As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblPacientes As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Btn_Enfermedades As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Btn_Sitnomas As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Btn_Administradores As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Btn_Medicos As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Btn_Pacientes As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox

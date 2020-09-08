@@ -1,9 +1,9 @@
 ﻿Imports System.Threading
 Imports System.Globalization
 Imports Logica
-Public Class F_Medicos_Horarios
+Public Class F_Empleados_Horarios
     Private Sub Btn_volver_Click(sender As Object, e As EventArgs) Handles btn_volver.Click
-        F_Medicos.Show()
+        F_Empleados.Show()
         Me.Close()
     End Sub
 

@@ -6,15 +6,6 @@ Public Class F_ABM
         Me.Close()
     End Sub
 
-    Private Sub Btn_Medicos_Click(sender As Object, e As EventArgs) Handles Btn_Medicos.Click
-        F_Medicos.Show()
-        Me.Close()
-    End Sub
-
-    Private Sub Btn_Administradores_Click(sender As Object, e As EventArgs) Handles Btn_Administradores.Click
-        MsgBox("Work in progress.")
-    End Sub
-
     Private Sub Btn_Sitnomas_Click(sender As Object, e As EventArgs) Handles Btn_Sitnomas.Click
         F_Sintomas.Show()
         Me.Close()
@@ -33,6 +24,7 @@ Public Class F_ABM
     End Sub
 
     Private Sub Btn_Empleados_Click(sender As Object, e As EventArgs) Handles Btn_Empleados.Click
-        MsgBox("Work in Progress.")
+        F_Empleados.Show()
+        Close()
     End Sub
 End Class

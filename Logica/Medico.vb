@@ -68,7 +68,7 @@ Public Class Medico
                    password)
     End Sub
 
-    Public Function GetMedicos() As DataTable
+    Public Function GetEmpleados() As DataTable
         Dim db As New DMedico(Env.UserType)
         Try
             Dim dt = db.GetEmpleados()
@@ -78,4 +78,5 @@ Public Class Medico
             Throw ex
         End Try
     End Function
+
 End Class
