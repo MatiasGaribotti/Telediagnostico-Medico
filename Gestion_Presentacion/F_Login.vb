@@ -2,13 +2,13 @@
 Imports System.Threading
 Imports System.Globalization
 Imports Logica
-Imports System.Text.RegularExpressions
-
+Imports Dominio
 Public Class F_Login
 
+    ''' <summary>
+    ''' Constructor por defecto.
+    ''' </summary>
     Public Sub New()
-        'Se obtienen el idioma a emplear de la propiedad estática (Shared)
-        'Ubicada en la clase LanguageControl
         Env.CurrentApp = Env.Apps.Gestion
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
@@ -16,17 +16,17 @@ Public Class F_Login
 
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click
         Try
-            If ValidateFields() Then
-                Dim user = GetUser()
-                If Authentication.Authenticate(user) Then
-                    'Abre el formulario de ABM y cierra este
-                    F_ABM.Show()
-                    Me.Close()
-                Else
-                    MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
-                End If
+            AuthenticationBUS.ValidateFields(TxtCi.Text, TxtPassword.Text)
+            Dim user = New Persona(CInt(TxtCi.Text), TxtPassword.Text)
 
+            If AuthenticationBUS.Authenticate(user) Then
+                'Abre el formulario de ABM y cierra este
+                F_ABM.Show()
+                Me.Close()
+            Else
+                MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
             End If
+
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
         End Try
@@ -48,37 +48,4 @@ Public Class F_Login
         Me.Close()
     End Sub
 
-
-    'Función que valida el formato de los campos
-    Private Function ValidateFields() As Boolean
-        Dim valid = True
-
-        Dim ci = TxtCi.Text
-        Dim password = TxtPassword.Text
-
-        If Not ci.Length = 0 And Not password.Length = 0 Then
-            If Not ci.Length > 8 Then
-                Dim chars = ci.ToCharArray
-
-
-                For Each caracter In chars
-                    If Not Char.IsDigit(caracter) Then
-                        Throw New FormatException("La cédula de identidad debe contener solo números.")
-                    End If
-                Next
-
-            Else
-                Throw New FormatException("La cédula de identidad es obligatoria.")
-            End If
-
-        Else
-            MsgBox("La CI o contraseña no pueden ser vacías.")
-            valid = False
-        End If
-        Return valid
-    End Function
-
-    Private Function GetUser() As Empleado
-        Return New Empleado(CInt(TxtCi.Text), TxtPassword.Text)
-    End Function
 End Class

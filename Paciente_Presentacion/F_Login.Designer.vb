@@ -22,37 +22,117 @@ Partial Class F_Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Login))
         Me.pnl_login = New System.Windows.Forms.Panel()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Btn_Ingresar = New Guna.UI2.WinForms.Guna2Button()
+        Me.PicLogin = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TxtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TxtCi = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.lbl_Paciente = New System.Windows.Forms.Label()
-        Me.lbl_password = New System.Windows.Forms.Label()
-        Me.lbl_ci = New System.Windows.Forms.Label()
-        Me.pic_ = New System.Windows.Forms.PictureBox()
-        Me.btnIngresar = New System.Windows.Forms.Button()
         Me.BtnChangeLang = New System.Windows.Forms.Button()
+        Me.lbl_Paciente = New System.Windows.Forms.Label()
         Me.pic_background = New System.Windows.Forms.PictureBox()
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.pnl_login.SuspendLayout()
-        CType(Me.pic_, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel1.SuspendLayout()
+        CType(Me.PicLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_background, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnl_login
         '
-        Me.pnl_login.Controls.Add(Me.TxtPassword)
-        Me.pnl_login.Controls.Add(Me.TxtCi)
+        Me.pnl_login.Controls.Add(Me.Guna2Panel1)
         Me.pnl_login.Controls.Add(Me.lbl_Paciente)
-        Me.pnl_login.Controls.Add(Me.lbl_password)
-        Me.pnl_login.Controls.Add(Me.lbl_ci)
-        Me.pnl_login.Controls.Add(Me.pic_)
-        Me.pnl_login.Controls.Add(Me.btnIngresar)
-        Me.pnl_login.Controls.Add(Me.BtnChangeLang)
         Me.pnl_login.Location = New System.Drawing.Point(0, 0)
         Me.pnl_login.Name = "pnl_login"
         Me.pnl_login.Size = New System.Drawing.Size(500, 1080)
         Me.pnl_login.TabIndex = 0
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.Controls.Add(Me.Btn_Ingresar)
+        Me.Guna2Panel1.Controls.Add(Me.PicLogin)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel3)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel2)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Guna2Panel1.Controls.Add(Me.TxtPassword)
+        Me.Guna2Panel1.Controls.Add(Me.TxtCi)
+        Me.Guna2Panel1.Controls.Add(Me.BtnChangeLang)
+        Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(500, 1080)
+        Me.Guna2Panel1.TabIndex = 4
+        '
+        'Btn_Ingresar
+        '
+        Me.Btn_Ingresar.Animated = True
+        Me.Btn_Ingresar.AutoRoundedCorners = True
+        Me.Btn_Ingresar.BackColor = System.Drawing.Color.Transparent
+        Me.Btn_Ingresar.BorderRadius = 22
+        Me.Btn_Ingresar.CheckedState.Parent = Me.Btn_Ingresar
+        Me.Btn_Ingresar.CustomImages.Parent = Me.Btn_Ingresar
+        Me.Btn_Ingresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.Btn_Ingresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.Btn_Ingresar.ForeColor = System.Drawing.Color.White
+        Me.Btn_Ingresar.HoverState.Parent = Me.Btn_Ingresar
+        Me.Btn_Ingresar.Location = New System.Drawing.Point(202, 743)
+        Me.Btn_Ingresar.Name = "Btn_Ingresar"
+        Me.Btn_Ingresar.ShadowDecoration.Parent = Me.Btn_Ingresar
+        Me.Btn_Ingresar.Size = New System.Drawing.Size(154, 46)
+        Me.Btn_Ingresar.TabIndex = 23
+        Me.Btn_Ingresar.Text = "Ingresar"
+        Me.Btn_Ingresar.UseTransparentBackground = True
+        '
+        'PicLogin
+        '
+        Me.PicLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PicLogin.BorderRadius = 33
+        Me.PicLogin.Image = Global.Presentacion.My.Resources.Resources.Kartoffel_Solutions_Logo
+        Me.PicLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PicLogin.InitialImage = Global.Presentacion.My.Resources.Resources.Kartoffel_Solutions_Logo
+        Me.PicLogin.Location = New System.Drawing.Point(128, 271)
+        Me.PicLogin.Name = "PicLogin"
+        Me.PicLogin.ShadowDecoration.Parent = Me.PicLogin
+        Me.PicLogin.Size = New System.Drawing.Size(300, 300)
+        Me.PicLogin.TabIndex = 22
+        Me.PicLogin.TabStop = False
+        '
+        'Guna2HtmlLabel3
+        '
+        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(3, 1049)
+        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(84, 27)
+        Me.Guna2HtmlLabel3.TabIndex = 21
+        Me.Guna2HtmlLabel3.Text = "Paciente"
+        '
+        'Guna2HtmlLabel2
+        '
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(128, 685)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(96, 27)
+        Me.Guna2HtmlLabel2.TabIndex = 20
+        Me.Guna2HtmlLabel2.Text = "Password"
+        '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(128, 632)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(23, 27)
+        Me.Guna2HtmlLabel1.TabIndex = 19
+        Me.Guna2HtmlLabel1.Text = "CI"
         '
         'TxtPassword
         '
@@ -69,14 +149,14 @@ Partial Class F_Login
         Me.TxtPassword.FocusedState.Parent = Me.TxtPassword
         Me.TxtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtPassword.HoverState.Parent = Me.TxtPassword
-        Me.TxtPassword.Location = New System.Drawing.Point(201, 627)
+        Me.TxtPassword.Location = New System.Drawing.Point(241, 680)
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPassword.PlaceholderText = ""
         Me.TxtPassword.SelectedText = ""
         Me.TxtPassword.ShadowDecoration.Parent = Me.TxtPassword
         Me.TxtPassword.Size = New System.Drawing.Size(200, 36)
-        Me.TxtPassword.TabIndex = 12
+        Me.TxtPassword.TabIndex = 18
         '
         'TxtCi
         '
@@ -93,14 +173,28 @@ Partial Class F_Login
         Me.TxtCi.FocusedState.Parent = Me.TxtCi
         Me.TxtCi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtCi.HoverState.Parent = Me.TxtCi
-        Me.TxtCi.Location = New System.Drawing.Point(201, 574)
+        Me.TxtCi.Location = New System.Drawing.Point(241, 627)
         Me.TxtCi.Name = "TxtCi"
         Me.TxtCi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtCi.PlaceholderText = ""
         Me.TxtCi.SelectedText = ""
         Me.TxtCi.ShadowDecoration.Parent = Me.TxtCi
         Me.TxtCi.Size = New System.Drawing.Size(200, 36)
-        Me.TxtCi.TabIndex = 11
+        Me.TxtCi.TabIndex = 17
+        '
+        'BtnChangeLang
+        '
+        Me.BtnChangeLang.BackColor = System.Drawing.Color.Transparent
+        Me.BtnChangeLang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnChangeLang.FlatAppearance.BorderSize = 0
+        Me.BtnChangeLang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnChangeLang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnChangeLang.Image = CType(resources.GetObject("BtnChangeLang.Image"), System.Drawing.Image)
+        Me.BtnChangeLang.Location = New System.Drawing.Point(7, 3)
+        Me.BtnChangeLang.Name = "BtnChangeLang"
+        Me.BtnChangeLang.Size = New System.Drawing.Size(64, 34)
+        Me.BtnChangeLang.TabIndex = 0
+        Me.BtnChangeLang.UseVisualStyleBackColor = False
         '
         'lbl_Paciente
         '
@@ -112,64 +206,6 @@ Partial Class F_Login
         Me.lbl_Paciente.Size = New System.Drawing.Size(67, 21)
         Me.lbl_Paciente.TabIndex = 3
         Me.lbl_Paciente.Text = "Paciente"
-        '
-        'lbl_password
-        '
-        Me.lbl_password.AutoSize = True
-        Me.lbl_password.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_password.Location = New System.Drawing.Point(20, 627)
-        Me.lbl_password.Name = "lbl_password"
-        Me.lbl_password.Size = New System.Drawing.Size(135, 32)
-        Me.lbl_password.TabIndex = 3
-        Me.lbl_password.Text = "Contraseña"
-        '
-        'lbl_ci
-        '
-        Me.lbl_ci.AutoSize = True
-        Me.lbl_ci.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_ci.Location = New System.Drawing.Point(20, 574)
-        Me.lbl_ci.Name = "lbl_ci"
-        Me.lbl_ci.Size = New System.Drawing.Size(36, 32)
-        Me.lbl_ci.TabIndex = 3
-        Me.lbl_ci.Text = "CI"
-        '
-        'pic_
-        '
-        Me.pic_.BackgroundImage = Global.Presentacion.My.Resources.Resources.background
-        Me.pic_.InitialImage = Global.Presentacion.My.Resources.Resources.background
-        Me.pic_.Location = New System.Drawing.Point(101, 220)
-        Me.pic_.Name = "pic_"
-        Me.pic_.Size = New System.Drawing.Size(300, 300)
-        Me.pic_.TabIndex = 1
-        Me.pic_.TabStop = False
-        '
-        'btnIngresar
-        '
-        Me.btnIngresar.BackColor = System.Drawing.Color.Transparent
-        Me.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnIngresar.FlatAppearance.BorderSize = 0
-        Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIngresar.Image = Global.Presentacion.My.Resources.Resources.Ingresar_Button
-        Me.btnIngresar.Location = New System.Drawing.Point(170, 700)
-        Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(162, 54)
-        Me.btnIngresar.TabIndex = 0
-        Me.btnIngresar.UseVisualStyleBackColor = False
-        '
-        'BtnChangeLang
-        '
-        Me.BtnChangeLang.BackColor = System.Drawing.Color.Transparent
-        Me.BtnChangeLang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnChangeLang.FlatAppearance.BorderSize = 0
-        Me.BtnChangeLang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnChangeLang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnChangeLang.Image = Global.Presentacion.My.Resources.Resources.es_icon
-        Me.BtnChangeLang.Location = New System.Drawing.Point(12, 12)
-        Me.BtnChangeLang.Name = "BtnChangeLang"
-        Me.BtnChangeLang.Size = New System.Drawing.Size(64, 34)
-        Me.BtnChangeLang.TabIndex = 0
-        Me.BtnChangeLang.UseVisualStyleBackColor = False
         '
         'pic_background
         '
@@ -227,7 +263,9 @@ Partial Class F_Login
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnl_login.ResumeLayout(False)
         Me.pnl_login.PerformLayout()
-        CType(Me.pic_, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel1.PerformLayout()
+        CType(Me.PicLogin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_background, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -236,13 +274,15 @@ Partial Class F_Login
     Friend WithEvents pnl_login As Panel
     Friend WithEvents pic_background As PictureBox
     Friend WithEvents BtnChangeLang As Button
-    Friend WithEvents lbl_password As Label
-    Friend WithEvents lbl_ci As Label
-    Friend WithEvents pic_ As PictureBox
-    Friend WithEvents btnIngresar As Button
     Friend WithEvents lbl_Paciente As Label
-    Friend WithEvents TxtPassword As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TxtCi As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents TxtPassword As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TxtCi As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents PicLogin As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Btn_Ingresar As Guna.UI2.WinForms.Guna2Button
 End Class

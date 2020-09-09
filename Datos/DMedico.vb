@@ -133,16 +133,16 @@ Public Class DMedico
 
         Dim query = "SELECT * FROM especialidades;"
 
-        con = Conectar()
+        Conn = Conectar()
 
         Try
-            rs = con.Execute(query)
+            rs = Conn.Execute(query)
             da.Fill(dt, rs)
             Return dt
         Catch ex As Exception
             Throw New Exception("Error al buscar especialidades.")
         Finally
-            con.Close()
+            Conn.Close()
         End Try
 
     End Function

@@ -1,27 +1,23 @@
 Imports ADODB
+Imports Dominio
 Public MustInherit Class DBConnection
 
-    Protected Property con As Connection
+    Protected Property Conn As Connection
     Public Property DB_User() As String
     Public Property DB_Password() As String
     Public Property ConStr() As String
     Public Sub New()
-        CredentialsByUserType(-1)
-        SetConnectionString()
-    End Sub
-
-    Public Sub New(userType As Short)
-        CredentialsByUserType(userType)
+        CredentialsByUserType()
         SetConnectionString()
     End Sub
 
     'Funcion que retorna una conexión a la base de datos
     Protected Function Conectar() As Connection
-        con = New Connection() With {.ConnectionString = ConStr}
+        Conn = New Connection() With {.ConnectionString = ConStr}
         If HasConnection() Then
             Try
-                con.Open()
-                Return con
+                Conn.Open()
+                Return Conn
             Catch ex As Exception
                 Throw New ApplicationException("Error al conectar con la base de datos")
             End Try
@@ -30,11 +26,11 @@ Public MustInherit Class DBConnection
         End If
     End Function
 
-    Protected Function HasConnection() As Boolean
+    Private Function HasConnection() As Boolean
         Try
             'Intento abrir la conexión
-            con.Open()
-            Con.Close()
+            Conn.Open()
+            Conn.Close()
             Return True
         Catch ex As Exception
             Return False
@@ -42,8 +38,8 @@ Public MustInherit Class DBConnection
 
     End Function
 
-    Protected Sub CredentialsByUserType(userType As Short)
-        Select Case userType
+    Protected Sub CredentialsByUserType()
+        Select Case Env.UserType
             Case -1
                 Me.DB_User = "system"
                 Me.DB_Password = "kHzRj1&5"

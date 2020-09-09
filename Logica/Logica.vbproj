@@ -64,14 +64,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrador.vb" />
-    <Compile Include="Authentication.vb" />
-    <Compile Include="Direccion.vb" />
-    <Compile Include="Empleado.vb" />
-    <Compile Include="Enfermedad.vb" />
-    <Compile Include="Env.vb" />
-    <Compile Include="Especialidad.vb" />
+    <Compile Include="AdministradoBUS.vb" />
+    <Compile Include="AuthenticationBUS.vb" />
+    <Compile Include="EmpleadoBUS.vb" />
+    <Compile Include="EnfermedadBUS.vb" />
     <Compile Include="Mailing.vb" />
+    <Compile Include="MedicoBUS.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -88,15 +86,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Medico.vb" />
-    <Compile Include="Paciente.vb" />
+    <Compile Include="PacienteBUS.vb" />
     <Compile Include="Password.vb" />
-    <Compile Include="Horario.vb" />
-    <Compile Include="Persona.vb" />
-    <Compile Include="Recepcionista.vb" />
-    <Compile Include="RRHH.vb" />
-    <Compile Include="Sintoma.vb" />
-    <Compile Include="Sucursal.vb" />
+    <Compile Include="PersonaBUS.vb" />
+    <Compile Include="RecepcionistaBUS.vb" />
+    <Compile Include="RRHHBUS.vb" />
+    <Compile Include="SintomaBUS.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -121,6 +116,10 @@
     <ProjectReference Include="..\Datos\Datos.vbproj">
       <Project>{21889b1b-ccc2-4ce6-a8f6-9730b2f574e0}</Project>
       <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominio\Dominio.vbproj">
+      <Project>{7a51826e-e929-4a0f-947c-1efa59827ea5}</Project>
+      <Name>Dominio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

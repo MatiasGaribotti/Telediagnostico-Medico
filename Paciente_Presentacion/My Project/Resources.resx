@@ -118,85 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Ingresar_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\login\Ingresar Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cross_65x65" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\cross 65x65.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Right 32 Textbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Right 32 Textbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_filtrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-filtrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Síntomas R" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Síntomas R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_historial_clinico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-historial clinico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_finalizar_chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-finalizar chat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BtnAceptar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\BtnAceptar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_send" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-send.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="row_cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Seleccionar-Sintomas\row cross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="es-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\login\Es.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_no" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-no.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\login\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="row_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Seleccionar-Sintomas\row add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="img" xml:space="preserve">
     <value />
   </data>
-  <data name="btn_volver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-volver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="es-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\login\Es.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_cerrar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-cerrar sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BtnCancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\BtnCancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Left 32 Texbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Left 32 Texbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_65x65" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\search 65x65.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_si" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-si.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_historial_clinico_solapa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-historial clinico-solapa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_importar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-importar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Síntomas Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Síntomas Panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_terminar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>img\Botones\btn-terminar sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Síntomas L" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Síntomas L.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Kartoffel_Solutions_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\login\Kartoffel Solutions Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

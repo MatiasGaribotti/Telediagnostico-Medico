@@ -18,7 +18,7 @@ Public Class F_ABM
 
     Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
         'Reseteo la variable de entorno de usuario
-        Authentication.LogOut()
+        AuthenticationBUS.LogOut()
         F_Login.Show()
         Close()
     End Sub
