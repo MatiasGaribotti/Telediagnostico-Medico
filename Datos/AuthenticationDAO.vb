@@ -1,6 +1,6 @@
 ﻿Imports ADODB
 Imports Dominio
-Public Class DAuthentication
+Public Class AuthenticationDAO
     Inherits DBConnection
     Public Sub New()
         MyBase.New()

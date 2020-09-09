@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{21889B1B-CCC2-4CE6-A8F6-9730B2F574E0}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Datos2</RootNamespace>
-    <AssemblyName>Datos2</AssemblyName>
+    <RootNamespace>Datos</RootNamespace>
+    <AssemblyName>Datos</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -19,7 +19,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Datos2.xml</DocumentationFile>
+    <DocumentationFile>Datos.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -28,7 +28,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Datos2.xml</DocumentationFile>
+    <DocumentationFile>Datos.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -42,6 +42,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -64,18 +67,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAuthentication.vb" />
+    <Compile Include="AuthenticationDAO.vb" />
     <Compile Include="DBConnection.vb" />
-    <Compile Include="DChat.vb" />
-    <Compile Include="DConsulta.vb" />
-    <Compile Include="DDireccion.vb" />
-    <Compile Include="DEmpleado.vb" />
-    <Compile Include="DEnfermedad.vb" />
-    <Compile Include="DHorario.vb" />
-    <Compile Include="DMedico.vb" />
-    <Compile Include="DPaciente.vb" />
-    <Compile Include="DPersona.vb" />
-    <Compile Include="DSintoma.vb" />
+    <Compile Include="ChatDAO.vb" />
+    <Compile Include="ConsultaDAO.vb" />
+    <Compile Include="DireccionDAO.vb" />
+    <Compile Include="EmpleadoDAO.vb" />
+    <Compile Include="EnfermedadDAO.vb" />
+    <Compile Include="HorarioDAO.vb" />
+    <Compile Include="MedicoDAO.vb" />
+    <Compile Include="PacienteDAO.vb" />
+    <Compile Include="PersonaDAO.vb" />
+    <Compile Include="SintomaDAO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

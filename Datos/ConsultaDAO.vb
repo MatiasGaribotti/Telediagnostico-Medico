@@ -1,3 +1,3 @@
-﻿Public Class DConsulta
+﻿Public Class ConsultaDAO
     Inherits DBConnection
 End Class

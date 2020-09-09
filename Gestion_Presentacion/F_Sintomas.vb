@@ -1,4 +1,5 @@
 ﻿Imports Logica
+Imports Dominio
 Public Class F_Sintomas
     Public Sub New()
 
@@ -11,6 +12,8 @@ Public Class F_Sintomas
 
     Private Property Modo As Modos = Modos.Ingresar
     Private Property sintomaMod As Sintoma
+    Private SintomaBUS As New SintomaBUS
+
     Private Enum Modos
         Buscar
         Ingresar
@@ -27,7 +30,7 @@ Public Class F_Sintomas
             Case Modos.Ingresar
                 Try
                     Dim sintoma = GetSintoma()
-                    sintoma.Insert()
+                    SintomaBUS.Insert()
                     LoadDgv()
                     MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
                     ClearFields()
@@ -40,8 +43,8 @@ Public Class F_Sintomas
                 Try
                     Dim sintoma = GetSintoma()
                     sintoma.Id = sintomaMod.Id
-                    sintoma.Enfermedades = sintoma.GetEnfermedadesAsociadas()
-                    sintoma.Modify()
+                    sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas()
+                    SintomaBUS.Modify()
                     LoadDgv()
                     ClearFields()
                     MsgBox("Sintoma modificado correctamente.")

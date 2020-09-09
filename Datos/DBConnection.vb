@@ -3,12 +3,10 @@ Imports Dominio
 Public MustInherit Class DBConnection
 
     Protected Property Conn As Connection
-    Public Property DB_User() As String
-    Public Property DB_Password() As String
-    Public Property ConStr() As String
+    Private Property ConStr As String
+
     Public Sub New()
         CredentialsByUserType()
-        SetConnectionString()
     End Sub
 
     'Funcion que retorna una conexión a la base de datos
@@ -38,39 +36,35 @@ Public MustInherit Class DBConnection
 
     End Function
 
-    Protected Sub CredentialsByUserType()
-        Select Case Env.UserType
-            Case -1
-                Me.DB_User = "system"
-                Me.DB_Password = "kHzRj1&5"
-            'Paciente
-            Case 0
-                Me.DB_User = "paciente"
-                Me.DB_Password = "dbpacienteST"
-            'Medico
-            Case 1
+    Private Sub CredentialsByUserType()
+        If Env.CurrentUser.IsPaciente Then
+            SetConnectionString("paciente", "dbpacienteST")
 
+        ElseIf Env.CurrentUser.IsMedico Then
+            SetConnectionString("medico", "dbmedicoST")
 
-            'Administrador
-            Case 2
-                Me.DB_User = "administrador"
-                Me.DB_Password = "dbadminST"
-            'RRHH
-            Case 3
-                Me.DB_User = "rrhh"
-                Me.DB_Password = "dbrrhhST"
-            'Recepcionista
-            Case 4
-                Me.DB_User = "recepcionista"
-                Me.DB_Password = "dbrecepcionistaST"
-        End Select
+        ElseIf Env.CurrentUser.IsAdministrador Then
+            SetConnectionString("administrador", "dbadminST")
+
+        ElseIf Env.CurrentUser.IsRRHH Then
+            SetConnectionString("rrhh", "dbrrhhST")
+
+        ElseIf Env.CurrentUser.IsRecepcionista Then
+            SetConnectionString("recepcionista", "dbrecepcionistaST")
+
+        Else
+            SetConnectionString("system", "kHzRj1&5")
+
+        End If
+
     End Sub
-    Private Sub SetConnectionString()
-        Me.ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
+
+    Private Sub SetConnectionString(user As String, password As String)
+        ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
                                       "server=192.168.1.131;" &
                                       "port=3306;" &
                                       "database=sistema_telediagnostico;" &
-                                      "uid=" & Me.DB_User & ";" &
-                                      "pwd=" & Me.DB_Password & ";"
+                                      "uid=" & user & ";" &
+                                      "pwd=" & password & ";"
     End Sub
 End Class
