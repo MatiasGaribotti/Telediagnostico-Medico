@@ -140,11 +140,12 @@ Public Class F_Sintomas
         Dim nombre = TxtBSintoma.Text
         Dim tipo As String = [Enum].Parse(GetType(Sintoma.TiposSintomas), CmbBTipo.SelectedIndex + 1)
 
+        Dim SintomaBUS As New SintomaBUS()
         Dim sintoma As New Sintoma(nombre, tipo)
 
         For item As Integer = 0 To CmbBEnfermedad.Items.Count - 1
             Dim nombreEnfermedad As String = CmbIEnfermedad.Items.Item(item).ToString
-            sintoma.AsociarEnfermedad(New Enfermedad(nombreEnfermedad))
+            SintomaBUS.AsociarEnfermedad(sintoma, New Enfermedad(nombreEnfermedad))
         Next
         Return sintoma
     End Function
@@ -153,10 +154,10 @@ Public Class F_Sintomas
         Dim result = MsgBox("Está seguro de que desea eliminar el síntoma seleccionado?", MsgBoxStyle.YesNo)
         If result.Equals(vbYes) Then
             Dim idSintoma As Short = GetSintomaSelected().Id
-            Dim sintoma As New Sintoma(idSintoma)
+            Dim SintomaBUS As New SintomaBUS
 
             Try
-                sintoma.Delete()
+                SintomaBUS.Delete(idSintoma)
                 MsgBox("Baja del síntoma efectuada correctamente.", MsgBoxStyle.Information)
             Catch ex As Exception
                 MsgBox(ex.Message)

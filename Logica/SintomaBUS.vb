@@ -1,36 +1,34 @@
-﻿Imports Datos2
+﻿Imports Datos
 Imports Dominio
 Public Class SintomaBUS
-    Public Sub AsociarEnfermedad(enfermedad As Enfermedad)
-        Me.Enfermedades.Add(enfermedad)
+    Public Sub AsociarEnfermedad(ByRef sintoma As Sintoma, enfermedad As Enfermedad)
+        sintoma.Enfermedades.Add(enfermedad)
     End Sub
 
-    Public Sub Insert()
-        Dim DBSintoma As New DSintoma(Env.UserType, Nombre, Descripcion, Tipo)
-        Dim objEnfermedad As New Enfermedad()
-        Dim listDEnfermedades As New List(Of DEnfermedad)
+    Public Sub Insert(sintoma As Sintoma)
 
-        For Each enfermedad In GetEnfermedadesAsociadas()
-            Dim converted = objEnfermedad.ToDEnfermedad(enfermedad)
-            listDEnfermedades.Add(converted)
+        Dim DBSintoma As New SintomaDAO()
+        Dim objEnfermedad As New Enfermedad()
+
+        For Each enfermedad In GetEnfermedadesAsociadas(sintoma.Id)
+            sintoma.Enfermedades.Add(enfermedad)
         Next
-        DBSintoma.Enfermedades = listDEnfermedades
 
         Try
-            DBSintoma.Insert()
+            DBSintoma.Insert(sintoma)
         Catch ex As Exception
             Throw ex
         End Try
     End Sub
 
     Public Function GetSintomas() As DataTable
-        Dim db As New DSintoma()
-        Return db.GetSintomas()
+        Dim SintomaDAO As New SintomaDAO()
+        Return SintomaDAO.GetSintomas()
     End Function
 
-    Public Function GetSintomas(pattern As String, type As TiposSintomas) As DataTable
-        Dim db As New DSintoma()
-        Dim query = "SELECT id,nombre,descripcion,tipo FROM sintomas  WHERE ENABLED=1" & " AND nombre LIKE '%" & pattern & "%'" & " AND s.tipo=" & type.ToString & ";"
+    Public Function GetSintomas(pattern As String, type As Sintoma.TiposSintomas) As DataTable
+        Dim db As New SintomaDAO()
+
         If type = 0 Then
             query = "SELECT id,nombre,descripcion,tipo FROM sintomas  WHERE ENABLED=1" & " AND nombre LIKE '%" & pattern & "%';"
         End If
@@ -38,23 +36,23 @@ Public Class SintomaBUS
     End Function
 
     Public Function Filter() As DataTable
-        Dim db As New DSintoma(Env.UserType, Nombre, Tipo)
+        Dim db As New SintomaDAO(Env.UserType, Nombre, Tipo)
         Return db.Filter()
     End Function
 
-    Public Function GetEnfermedadesAsociadas() As List(Of Enfermedad)
-        Dim db As New DSintoma(Env.UserType, Id)
-        Dim DEnfermedades = db.GetEnfermedadesAsociadas()
-        Dim enfermedades As New List(Of Enfermedad)
-        For Each i In DEnfermedades
-            enfermedades.Add(New Enfermedad(i.Id, i.Nombre))
-        Next
-        Return enfermedades
+    Public Function GetEnfermedadesAsociadas(id As Short) As List(Of Enfermedad)
+        Dim SintomaDAO As New SintomaDAO()
+        Return SintomaDAO.GetEnfermedadesAsociadas(id)
     End Function
 
-    Public Sub Delete()
-        Dim db As New DSintoma(Env.UserType, Id)
-        db.Delete()
+    Public Sub Delete(id As Short)
+        Dim db As New SintomaDAO()
+        Try
+            db.Delete(id)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     Public Sub Modify()
@@ -71,9 +69,9 @@ Public Class SintomaBUS
         Next
 
         'Creo el objeto del sintoma con los datos modificados
-        Dim dsintoma As New DSintoma(Env.UserType, Id, Nombre, Descripcion, Tipo, DEnfermedades)
+        Dim SintomaDAO As New SintomaDAO(Env.UserType, Id, Nombre, Descripcion, Tipo, DEnfermedades)
         Try
-            dsintoma.Modify()
+            SintomaDAO.Modify()
 
         Catch ex As Exception
             Throw ex

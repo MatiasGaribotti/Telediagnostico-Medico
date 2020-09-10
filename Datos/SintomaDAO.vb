@@ -72,13 +72,15 @@ Public Class SintomaDAO
         Return dt
     End Function
 
-    Public Function GetSintomas(query As String) As DataTable
+    Public Function GetSintomas(name As String, type As Sintoma.TiposSintomas) As DataTable
         Try
             Conn = Conectar()
 
         Catch ex As Exception
             Throw ex
         End Try
+
+        Dim query = "SELECT id,nombre,descripcion,tipo FROM sintomas  WHERE ENABLED=1" & " AND nombre LIKE '%" & name & "%'" & " AND s.tipo=" & type & ";"
 
         Try
             Dim rs = Conn.Execute(query)
