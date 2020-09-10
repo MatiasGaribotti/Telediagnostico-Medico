@@ -35,9 +35,9 @@ Public Class SintomaBUS
         Return db.GetSintomas(query)
     End Function
 
-    Public Function Filter() As DataTable
-        Dim db As New SintomaDAO(Env.UserType, Nombre, Tipo)
-        Return db.Filter()
+    Public Function Filter(pattern As Sintoma) As DataTable
+        Dim db As New SintomaDAO()
+        Return db.Filter(pattern)
     End Function
 
     Public Function GetEnfermedadesAsociadas(id As Short) As List(Of Enfermedad)
@@ -55,23 +55,13 @@ Public Class SintomaBUS
         End Try
     End Sub
 
-    Public Sub Modify()
-        'objeto para utilizar las utilidades de la clase Enfermedad
-        Dim objEnfermedad As New Enfermedad()
-
-        'Lista de enfermedades pero adaptadas para ir hacia la BD
-        Dim DEnfermedades As New List(Of DEnfermedad)
-
-        'Para cada enfermedad, la convierto en una enfermedad compatible con la BD y la agrego a la lista
-        For Each enfermedad In Me.Enfermedades
-            Dim converted As DEnfermedad = objEnfermedad.ToDEnfermedad(enfermedad)
-            DEnfermedades.Add(converted)
-        Next
+    Public Sub Modify(sintoma As Sintoma)
 
         'Creo el objeto del sintoma con los datos modificados
-        Dim SintomaDAO As New SintomaDAO(Env.UserType, Id, Nombre, Descripcion, Tipo, DEnfermedades)
+        Dim SintomaDAO As New SintomaDAO()
+
         Try
-            SintomaDAO.Modify()
+            SintomaDAO.Modify(sintoma)
 
         Catch ex As Exception
             Throw ex

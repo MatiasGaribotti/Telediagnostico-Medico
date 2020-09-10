@@ -30,7 +30,7 @@ Public Class F_Sintomas
             Case Modos.Ingresar
                 Try
                     Dim sintoma = GetSintoma()
-                    SintomaBUS.Insert()
+                    SintomaBUS.Insert(sintoma)
                     LoadDgv()
                     MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
                     ClearFields()
@@ -43,8 +43,8 @@ Public Class F_Sintomas
                 Try
                     Dim sintoma = GetSintoma()
                     sintoma.Id = sintomaMod.Id
-                    sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas()
-                    SintomaBUS.Modify()
+                    sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
+                    SintomaBUS.Modify(sintoma)
                     LoadDgv()
                     ClearFields()
                     MsgBox("Sintoma modificado correctamente.")
@@ -81,7 +81,7 @@ Public Class F_Sintomas
 
             For item As Integer = 0 To cant_enfermedades - 1
                 Dim nombreEnfermedad As String = CmbIEnfermedad.Items.Item(item).ToString
-                sintoma.AsociarEnfermedad(New Enfermedad(nombreEnfermedad))
+                SintomaBUS.AsociarEnfermedad(sintoma, New Enfermedad(nombreEnfermedad))
             Next
             Return sintoma
 
@@ -119,8 +119,8 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
-        Dim sintoma = GetPatern()
-        Dim found As DataTable = sintoma.Filter()
+        Dim sintomaPattern = GetPatern()
+        Dim found As DataTable = SintomaBUS.Filter(sintomaPattern)
         LoadDgv(found)
     End Sub
 
