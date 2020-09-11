@@ -6,7 +6,7 @@ Public Class HorarioDAO
 
         'Abro la conexión con la base de datos
         Try
-            Conn = Conectar()
+            Conn = Connect()
         Catch ex As Exception
             Throw ex
         End Try

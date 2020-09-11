@@ -1,6 +1,7 @@
 ﻿Imports System.Threading
 Imports System.Globalization
 Imports Logica
+Imports Dominio
 Public Class F_Empleados_Horarios
     Private Sub Btn_volver_Click(sender As Object, e As EventArgs) Handles btn_volver.Click
         F_Empleados.Show()
@@ -21,8 +22,8 @@ Public Class F_Empleados_Horarios
                     TxtIHoraOut.Text
                     )
         Try
-            Dim objRRHHH As RRHH = Env.CurrentUser
-            objRRHHH.NuevoHorario(horario)
+            Dim RRHHBUS As New RRHHBUS
+            RRHHBUS.AddHorarioEmpleado(horario)
             MsgBox("Horario agregado con éxito", MsgBoxStyle.Information, "Información")
 
         Catch ex As Exception

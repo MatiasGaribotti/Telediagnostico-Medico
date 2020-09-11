@@ -1,5 +1,4 @@
-﻿Imports Datos2
-Public Class Enfermedad
+﻿Public Class Enfermedad
     Public Property Id As Short
     Public Property Nombre As String
     Public Property Descripcion As String

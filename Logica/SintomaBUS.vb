@@ -26,18 +26,17 @@ Public Class SintomaBUS
         Return SintomaDAO.GetSintomas()
     End Function
 
-    Public Function GetSintomas(pattern As String, type As Sintoma.TiposSintomas) As DataTable
+    Public Function GetSintomas(pattern As Sintoma) As DataTable
         Dim db As New SintomaDAO()
+        Dim dt As DataTable
 
-        If type = 0 Then
-            query = "SELECT id,nombre,descripcion,tipo FROM sintomas  WHERE ENABLED=1" & " AND nombre LIKE '%" & pattern & "%';"
+        If pattern.Enfermedades.Count > 0 Then
+            dt = db.GetSintomas(pattern.Nombre, pattern.Tipo, pattern.Enfermedades)
+        Else
+            dt = db.GetSintomas(pattern.Nombre, pattern.Tipo)
         End If
-        Return db.GetSintomas(query)
-    End Function
 
-    Public Function Filter(pattern As Sintoma) As DataTable
-        Dim db As New SintomaDAO()
-        Return db.Filter(pattern)
+        Return dt
     End Function
 
     Public Function GetEnfermedadesAsociadas(id As Short) As List(Of Enfermedad)

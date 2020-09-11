@@ -27,7 +27,7 @@ Public Class MedicoDAO
 
         'Abro la conexión con la base de datos
         Try
-            Conn = Conectar()
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
@@ -93,7 +93,7 @@ Public Class MedicoDAO
         Dim query As String = "SELECT * FROM Empleados;"
 
         Try
-            Conn = Conectar()
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
@@ -120,7 +120,7 @@ Public Class MedicoDAO
         Dim query = "SELECT * FROM especialidades;"
 
         Try
-            Conn = Conectar()
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
@@ -137,5 +137,27 @@ Public Class MedicoDAO
         End Try
 
     End Function
+
+    ''' <summary>
+    ''' Extiende los privilegios del médico a los de un administrador del sistema.
+    ''' </summary>
+    ''' <param name="pCI">Cédula de identidad del médico.</param>
+    Public Sub MakeAdministrator(pCI As Integer)
+        Dim query = "UPDATE personas SET extendido=True WHERE ci='" & pCI & "';"
+
+        Try
+            Conn = Connect()
+        Catch ex As ApplicationException
+            Throw ex
+        End Try
+
+        Try
+            Conn.Execute(query)
+        Catch ex As Exception
+            Throw New Exception("Error al intenter hacer administrador al usuario.")
+        Finally
+            Conn.Close()
+        End Try
+    End Sub
 
 End Class

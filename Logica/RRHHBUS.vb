@@ -1,12 +1,31 @@
 ﻿Imports Datos
 Imports Dominio
 Public Class RRHHBUS
+    Inherits EmpleadoBUS
 
     Private MedicoDAO As MedicoDAO
     Private HorarioDAO As HorarioDAO
     Private EmpleadoDAO As EmpleadoDAO
 
-    Public Sub IngresarMedico(medico As Medico)
+
+    Public Sub InsertEmployee(pEmpleado As Empleado)
+        If pEmpleado.IsMedico Then
+            InsertMedico(pEmpleado)
+        ElseIf pEmpleado.IsRecepcionista Then
+            insertRRHH(pEmpleado)
+
+        End If
+    End Sub
+
+    Public Sub ModifyEmployee(pEmployee As Empleado)
+
+    End Sub
+
+    Public Sub DeleteEmployee(ci As Integer)
+        MyBase.DeletePersona(ci)
+    End Sub
+
+    Public Sub InsertMedico(medico As Medico)
         Try
             MedicoDAO = New MedicoDAO
             MedicoDAO.Insert(medico)
@@ -17,46 +36,60 @@ Public Class RRHHBUS
 
     End Sub
 
-    Public Sub ModificarMedico(old As Medico, newMedico As Medico)
+    Public Sub ModifyMedico(pMedico As Medico)
 
     End Sub
 
-    Public Sub EliminarMedico(ci As Integer)
+    Public Sub InsertRRHH(pRRHH As RRHH)
 
     End Sub
 
-    Public Sub NuevoHorario(horario As Horario)
+    Public Sub ModifyRRHH(pRRHH As RRHH)
+        ModifyEmployee(pRRHH)
+    End Sub
+
+    Public Sub InsertRecepcionista(pRecepcionista As Recepcionista)
+
+    End Sub
+
+    Public Sub ModifyRecepcionista(pRecepcionista As Recepcionista)
+        ModifyEmployee(pRecepcionista)
+    End Sub
+
+
+    Public Sub AddHorarioEmpleado(pHorario As Horario)
 
         Try
             HorarioDAO = New HorarioDAO()
-            HorarioDAO.Insert(horario)
+            HorarioDAO.Insert(pHorario)
 
         Catch ex As Exception
             Throw ex
         End Try
     End Sub
 
-    Public Sub ModificarHorario(newHorario As Horario)
+    Public Sub ModifyHorarioEmpleado(pHorario As Horario)
 
     End Sub
 
-    Public Sub EliminarHorario(horario As Horario)
+    Public Sub DeleteHorarioEmpleado(horario As Horario)
 
     End Sub
 
-    Public Sub ResetPassword(empleado As Empleado)
+    Public Sub ResetPassword(pEmpleado As Empleado)
         EmpleadoDAO = New EmpleadoDAO()
 
-        empleado.Password = Logica.Password.Generate(New Random)
+        pEmpleado.Password = Logica.Password.Generate(New Random)
         Try
-            EmpleadoDAO.ActualizarContraseña(empleado.Ci, empleado.Password)
+            EmpleadoDAO.UpdatePassword(pEmpleado.Ci, pEmpleado.Password)
 
         Catch ex As Exception
             Throw ex
         End Try
     End Sub
 
-    Public Sub DoAdministrator(medico As Medico)
-
+    Public Sub MakeAdministrator(ci As Integer)
+        Dim MedicoDAO As New MedicoDAO
+        MedicoDAO.MakeAdministrator(ci)
     End Sub
 End Class

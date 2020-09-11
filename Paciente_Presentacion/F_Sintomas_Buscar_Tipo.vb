@@ -1,24 +1,27 @@
-﻿Imports Logica.Sintoma
+﻿Imports Dominio
+Imports Logica
+
 Public Class F_Sintomas_Buscar_Tipo
+    Private Property Pattern As Sintoma
+
     Public Sub New()
         InitializeComponent()
 
     End Sub
-    Dim filtro As String = ""
-    Dim type As TiposSintomas = 0
+
     Private Sub BtnCross_Click(sender As Object, e As EventArgs) Handles BtnCross.Click
         TxtBuscador.Text = ""
     End Sub
 
     Private Sub PicTorso_Click(sender As Object, e As EventArgs) Handles PicTorso.Click
-        type = TiposSintomas.Torso
+        Pattern.Tipo = Sintoma.TiposSintomas.Torso
     End Sub
 
     Private Sub PicExtremidades_Click(sender As Object, e As EventArgs) Handles PicExtremidades.Click
-        type = TiposSintomas.Extremidades
+        Pattern.Tipo = Sintoma.TiposSintomas.Extremidades
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
-        type = TiposSintomas.Cabeza
+        Pattern.Tipo = Sintoma.TiposSintomas.Cabeza
     End Sub
 End Class

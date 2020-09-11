@@ -1,5 +1,4 @@
-﻿Imports Datos2
-Public Class Administrador
+﻿Public Class Administrador
     Inherits Medico
 
     Public Sub New(ci As Integer)

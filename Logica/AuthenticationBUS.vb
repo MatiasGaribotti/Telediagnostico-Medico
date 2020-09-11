@@ -1,4 +1,4 @@
-﻿Imports Datos2
+﻿Imports Datos
 Imports Dominio
 Public Class AuthenticationBUS
     Public Shared Sub LogOut()
@@ -9,7 +9,7 @@ Public Class AuthenticationBUS
     Public Shared Function Authenticate(user As Persona) As Boolean
         Dim user_found As Persona
         Dim authenticated = False
-        Dim DAuth As New DAuthentication()
+        Dim DAuth As New AuthenticationDAO()
 
         ' NOT IMPLEMENTED 
         'user.Password = Password.Hash(user.Password)

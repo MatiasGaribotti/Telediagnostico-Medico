@@ -12,7 +12,7 @@ Public Class AuthenticationDAO
         Dim query As String = "SELECT esPaciente, esEmpleado, esMedico, extendido, esRRHH, esRecepcionista FROM personas WHERE ci='" & ci & "' AND password='" & password & "';"
 
 
-        Dim con = Conectar()
+        Dim con = Connect()
         Try
             rs = con.Execute(query)
 

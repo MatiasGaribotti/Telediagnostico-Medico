@@ -35,9 +35,13 @@ Public Class F_Login
             Dim user = New Persona(CInt(TxtCi.Text), TxtPassword.Text)
 
             If AuthenticationBUS.Authenticate(user) Then
-                'Abre el formulario de ABM y cierra este
-                F_Sintomas.Show()
-                Me.Close()
+                If Password.IsGenerated(user.Password) Then
+                    F_ContrasennaAutogenerada.Show()
+                Else
+                    F_Sintomas.Show()
+                    Me.Close()
+
+                End If
             Else
                 MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
             End If

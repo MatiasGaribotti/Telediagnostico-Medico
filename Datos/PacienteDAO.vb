@@ -25,7 +25,7 @@ Public Class PacienteDAO
 
         'Abro la conexión con la base de datos
         Try
-            Conn = Conectar()
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
@@ -95,6 +95,32 @@ Public Class PacienteDAO
         End Try
     End Sub
 
+    Public Function GetPacienteByCi(ci As Integer) As DataTable
+        Dim dt As New DataTable
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter
+
+        Dim query = "SELECT * FROM pacientes WHERE ci=" & ci & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+            Return dt
+
+        Catch ex As Exception
+            Throw New Exception("Error al obtener el paciente.")
+
+        Finally
+            Conn.Close()
+        End Try
+    End Function
+
     Public Function GetPacientes() As DataTable
         Dim dt As New DataTable()
         Dim rs As Recordset
@@ -104,7 +130,7 @@ Public Class PacienteDAO
         Dim query As String = "SELECT * FROM Pacientes;"
 
         Try
-            Conn = Conectar()
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
@@ -120,15 +146,4 @@ Public Class PacienteDAO
 
         Return dt
     End Function
-
-
-    Public Function Find(ci As Integer) As Paciente
-        Dim paciente As Paciente
-
-        Dim con = Conectar()
-        Dim query As String = ""
-
-        Return paciente
-    End Function
-
 End Class

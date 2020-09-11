@@ -4,7 +4,7 @@ Public Class EnfermedadBUS
     Public Sub Insert(enfermedad As Enfermedad)
 
         Dim EnfermedadDAO As New EnfermedadDAO()
-        Dim idFound = EnfermedadDAO.Find(enfermedad.Nombre)
+        Dim idFound = EnfermedadDAO.GetEnfermedadByName(enfermedad.Nombre)
 
         ' Si la enfermedad no se está en la BD la ingreso
         If idFound = -1 Then
@@ -22,7 +22,7 @@ Public Class EnfermedadBUS
 
         'Veifico que existan las enfermedades y las agrego a la lista de enfermedades
         For Each enfermedad In enfermedades
-            Dim id = DBEnfermedad.Find(enfermedad.Nombre)
+            Dim id = DBEnfermedad.GetEnfermedadByName(enfermedad.Nombre)
             found.Add(New Enfermedad(id, enfermedad.Nombre))
         Next
         Return found

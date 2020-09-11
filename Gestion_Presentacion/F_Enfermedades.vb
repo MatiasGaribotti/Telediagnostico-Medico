@@ -1,5 +1,7 @@
-﻿Imports Logica
+﻿Imports Dominio
+Imports Logica
 Public Class F_Enfermedades
+    Private EnfermedadBUS As New EnfermedadBUS
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         F_ABM.Show()
@@ -7,27 +9,22 @@ Public Class F_Enfermedades
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
-        If ValidateFields() Then
-            Dim enfermedad As Enfermedad = GetEnfermedad()
-            Try
-                enfermedad.Insert()
-                MsgBox("Enfermedad ingresada con éxito.", MsgBoxStyle.Information)
-                ClearFields()
-            Catch ex As Exception
-                MsgBox(ex.Message)
 
-            End Try
-        End If
+        Dim enfermedad As Enfermedad = GetEnfermedad()
+        Try
+            ValidateFields()
+            EnfermedadBUS.Insert(enfermedad)
+            MsgBox("Enfermedad ingresada con éxito.", MsgBoxStyle.Information)
+            ClearFields()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
     End Sub
 
     'Función que valida los campos
-    Private Function ValidateFields() As Boolean
-        Dim valid = False
-
-
-        'Return valid
-        Return True
-    End Function
+    Private Sub ValidateFields()
+    End Sub
 
     'Función que obtiene la información contenida en los campos
     Private Function GetEnfermedad() As Enfermedad
@@ -38,9 +35,9 @@ Public Class F_Enfermedades
     End Function
 
     Public Sub ClearFields()
-        TxtIEnfermedad.Text = Nothing
+        TxtIEnfermedad.ResetText()
         CmbBUrgencia.SelectedIndex = 0
-        TxtIDescripcion.Text = Nothing
+        TxtIDescripcion.ResetText()
     End Sub
 
     Private Sub F_Enfermedades_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -51,8 +48,13 @@ Public Class F_Enfermedades
 
     Public Sub LoadDgv()
         Dim objEnfermedad As New Enfermedad()
-        Dim dt As DataTable = objEnfermedad.GetEnfermedades()
-        DgvEnfermedades.DataSource = dt
-        DgvEnfermedades.Refresh()
+        Try
+            Dim dt As DataTable = EnfermedadBUS.GetEnfermedades()
+            DgvEnfermedades.DataSource = dt
+            DgvEnfermedades.Refresh()
+
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
 End Class

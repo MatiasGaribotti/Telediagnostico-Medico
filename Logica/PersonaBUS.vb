@@ -1,35 +1,49 @@
-﻿Public MustInherit Class PersonaBUS
-    Public Function ValidateCi(ciAValidar As Integer) As Boolean
-        'Valida que la cédula de identidad sea válida
-        Dim valida As Boolean = True
-        Dim ci As String = ciAValidar.ToString()
+﻿Imports Dominio
+Imports Datos
 
-        If (ci.Length <> 8) Then
+''' <summary>
+''' Clase madre de la lógica de personas.
+''' </summary>
+Public MustInherit Class PersonaBUS
 
-            valida = False
+    ''' <summary>
+    ''' Comprueba que la cédula de identidad sea válida.
+    ''' </summary>
+    ''' <param name="pCi">Cédula de identidad a verificar</param>
+    Public Sub ValidateCi(pCi As Integer)
+        Dim matriz As Char() = "2987634".ToCharArray
+        Dim ci As Char() = pCi.ToString.ToCharArray
+        Dim verifyingDigit As Integer = Integer.Parse(ci.Last())
 
-        ElseIf valida Then
-
-            Dim digitoVerificador As Integer = Integer.Parse(ci.ToCharArray.Last.ToString)
-
-            'ElseIF
+        If ci.Length <> 8 Then
+            Throw New FormatException("La cédula de identidad debe tener una longitud de 8 dígitos.")
         End If
 
-        Return valida
-    End Function
+        Dim sum As Integer
+        For i As Integer = 0 To 6
+            Dim CIdigit = Integer.Parse(ci.ElementAt(i))
+            Dim ArrayDigit = Integer.Parse(matriz.ElementAt(i))
+
+            sum += CIdigit * ArrayDigit
+        Next
+
+        If sum <> verifyingDigit Then
+            Throw New FormatException("La cédula ingresada no es válida.")
+        End If
+
+    End Sub
 
     ''' <summary>
     ''' Valida los datos de entrada.
     ''' </summary>
-    ''' <param name="ci"></param>
-    ''' <param name="nombres"></param>
-    ''' <param name="apellidoP"></param>
-    ''' <param name="ApellidoM"></param>
-    ''' <param name="calle"></param>
-    ''' <param name="numero"></param>
-    ''' <param name="localidad"></param>
-    ''' <param name="detalle"></param>
-    ''' <param name="telefono"></param>
+    ''' <param name="ci">Cédula de identidad</param>
+    ''' <param name="nombres">Nombre de la persona</param>
+    ''' <param name="apellidoP">Apellido paterno o primero de la persona</param>
+    ''' <param name="ApellidoM">Apellido materno o segundo de la persona</param>
+    ''' <param name="calle">Calle en la que se encuentra la residencia en la que vive la persona</param>
+    ''' <param name="numero">Numero de puerta del lugar de residencia de la persona</param>
+    ''' <param name="localidad">Localidad del lugar donde la persona reside</param>
+    ''' <param name="telefono">Teléfono móvil de la persona</param>
     Public Overloads Sub ValidateFields(ci As String,
                               nombres As String,
                               apellidoP As String,
@@ -37,14 +51,11 @@
                               calle As String,
                               numero As String,
                               localidad As String,
-                              detalle As String,
                               telefono As String
                               )
-        'Longitud de la cédula
         If String.IsNullOrWhiteSpace(ci) Then
             Throw New FormatException("El campo cédula es obligatorio.")
-        ElseIf ci.Length <> 8 Then
-            Throw New FormatException("La cédula de identidad debe tener una longitud de 8 dígitos.")
+
         ElseIf Not IsNumerical(ci) Then
             ' CI contiene letras o símbolos
             Throw New FormatException("La cédula de identidad solo puede contener dígitos.")
@@ -89,9 +100,20 @@
             Throw New FormatException("El formato del campo localidad no es correcto.")
         End If
 
+        Try
+            ValidateCi(ci)
+        Catch ex As FormatException
+            Throw ex
+        End Try
+
     End Sub
 
-    Protected Function ContainsSymbol(text As String) As Boolean
+    ''' <summary>
+    ''' Función que evalua si una cadena de caracteres contiene símbolos.
+    ''' </summary>
+    ''' <param name="text">Cadena de caracteres a evaluar.</param>
+    ''' <returns>Retorna True si contiene símbolos, de lo contrario retorna Flase.</returns>
+    Public Function ContainsSymbol(text As String) As Boolean
 
         For Each caracter In text.ToCharArray
             If Char.IsSymbol(caracter) Then
@@ -101,7 +123,12 @@
         Return False
     End Function
 
-    Protected Function IsNumerical(text As String) As Boolean
+    ''' <summary>
+    ''' Función que evalua si una cadena de caracteres contiene únicamente dígitos numéricos.
+    ''' </summary>
+    ''' <param name="text">Cadena de caracteres a evaluar.</param>
+    ''' <returns>Retorna True si contiene solamente caracteres numéricos, de lo contrario retorna false.</returns>
+    Public Function IsNumerical(text As String) As Boolean
         For Each caracter In text.ToCharArray
             If Not Char.IsDigit(caracter) Then
                 Return False
@@ -109,4 +136,9 @@
         Next
         Return True
     End Function
+
+    Protected Sub DeletePersona(ci As Integer)
+        Dim PersonaDAO As New PersonaDAO
+        PersonaDAO.DeletePersona(ci)
+    End Sub
 End Class

@@ -13,6 +13,12 @@ Public Class Env
 
     End Sub
 
+    Public Enum Roles
+        Medico
+        Recursos_Humanos
+        Recepcionista
+    End Enum
+
     Public Enum Cultures
         Espannol
         Ingles

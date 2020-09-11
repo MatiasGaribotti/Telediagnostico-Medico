@@ -1,5 +1,4 @@
-﻿
-Public Class Persona
+﻿Public Class Persona
     Public Property Ci As Integer
     Public Property Nombre As String
     Public Property ApellidoP As String

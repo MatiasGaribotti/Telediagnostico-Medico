@@ -1,5 +1,4 @@
-﻿Imports Datos2
-Public Class Recepcionista
+﻿Public Class Recepcionista
     Inherits Empleado
 
     Public Sub New()

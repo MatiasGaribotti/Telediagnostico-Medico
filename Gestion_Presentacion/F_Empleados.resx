@@ -768,34 +768,34 @@
   <data name="&gt;&gt;CmbIDepartamento.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="CmbEspecialidadesIng.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="CmbIngresadasEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
-  <data name="CmbEspecialidadesIng.ItemHeight" type="System.Int32, mscorlib">
+  <data name="CmbIngresadasEspecialidades.ItemHeight" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="CmbEspecialidadesIng.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="CmbIngresadasEspecialidades.Location" type="System.Drawing.Point, System.Drawing">
     <value>216, 922</value>
   </data>
-  <data name="CmbEspecialidadesIng.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="CmbIngresadasEspecialidades.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="CmbEspecialidadesIng.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CmbIngresadasEspecialidades.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 36</value>
   </data>
-  <data name="CmbEspecialidadesIng.TabIndex" type="System.Int32, mscorlib">
+  <data name="CmbIngresadasEspecialidades.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
-  <data name="&gt;&gt;CmbEspecialidadesIng.Name" xml:space="preserve">
-    <value>CmbEspecialidadesIng</value>
+  <data name="&gt;&gt;CmbIngresadasEspecialidades.Name" xml:space="preserve">
+    <value>CmbIngresadasEspecialidades</value>
   </data>
-  <data name="&gt;&gt;CmbEspecialidadesIng.Type" xml:space="preserve">
+  <data name="&gt;&gt;CmbIngresadasEspecialidades.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;CmbEspecialidadesIng.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CmbIngresadasEspecialidades.Parent" xml:space="preserve">
     <value>pnl_ingresarFiltrar</value>
   </data>
-  <data name="&gt;&gt;CmbEspecialidadesIng.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CmbIngresadasEspecialidades.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
   <data name="CmbBEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
@@ -1747,7 +1747,7 @@
     <value>Form1</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>F_Medicos</value>
+    <value>F_Empleados</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

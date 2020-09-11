@@ -1,18 +1,16 @@
 ﻿Imports Logica
-Imports Logica.Sintoma
+Imports Dominio
 
 Public Class F_Sintomas_Buscar
-    Public Property Tipo As TiposSintomas = Nothing
-    Public Property Patron As String = ""
+    Private Property pattern As Sintoma
     Public Sub New()
         InitializeComponent()
         LoadDgv()
     End Sub
 
-    Public Sub New(patron As String, tipo As TiposSintomas)
+    Public Sub New(patron As String, tipo As Sintoma.TiposSintomas)
         InitializeComponent()
-        Me.Tipo = tipo
-        Me.Patron = patron
+        pattern = New Sintoma
         LoadDgv()
 
     End Sub
@@ -20,9 +18,9 @@ Public Class F_Sintomas_Buscar
     ' "SELECT id,nombre,descripcion,tipo FROM sintomas WHERE ENABLED=1"
 #Region "Tabla"
     Private Sub LoadDgv()
-        Dim objSintoma As New Sintoma()
+        Dim objSintoma As New SintomaBUS()
         Try
-            Dim dt As DataTable = objSintoma.GetSintomas(Patron, Tipo)
+            Dim dt As DataTable = objSintoma.GetSintomas(pattern)
             DgvSintomas.DataSource = dt
         Catch ex As Exception
             MsgBox(ex.Message)

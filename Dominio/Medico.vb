@@ -1,20 +1,23 @@
-﻿
-Public Class Medico
+﻿Public Class Medico
     Inherits Empleado
-    Public Property Especialidad As String
+    Public Property Especialidades As List(Of Especialidad)
 
     'Constructor por defecto
     Public Sub New()
         MyBase.New()
-        Especialidad = "Default"
+        Me.IsMedico = True
+        Especialidades = New List(Of Especialidad)
     End Sub
 
     Public Sub New(ci As Integer)
         MyBase.New(ci)
+        Me.IsMedico = True
+        Especialidades = New List(Of Especialidad)
     End Sub
     Public Sub New(ci As Integer, password As String)
         MyBase.New(ci, password)
-        Horarios = New List(Of Horario)
+        Me.IsMedico = True
+        Especialidades = New List(Of Especialidad)
     End Sub
 
     'Constructor comúm completo
@@ -25,12 +28,13 @@ Public Class Medico
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
-                   especialidad As String,
+                   especialidades As List(Of Especialidad),
                    horarios As List(Of Horario),
-                   password As String
+                   Password As String
                    )
-        MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, horarios, password)
-        Me.Especialidad = especialidad
+        MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, horarios, Password)
+        Me.IsMedico = True
+        Me.Especialidades = especialidades
     End Sub
 
     Public Sub New(ci As Integer,
@@ -40,11 +44,12 @@ Public Class Medico
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
-                   especialidad As String,
+                   especialidades As List(Of Especialidad),
                    password As String
                    )
         MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
-        Me.Especialidad = especialidad
+        Me.IsMedico = True
+        Me.Especialidades = especialidades
     End Sub
 
 
@@ -65,5 +70,7 @@ Public Class Medico
                    telefono,
                    fecha_nacimiento,
                    password)
+        IsMedico = True
+        Me.Especialidades = New List(Of Especialidad)
     End Sub
 End Class

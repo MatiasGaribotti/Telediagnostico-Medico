@@ -1,4 +1,5 @@
-﻿Imports Dominio
+﻿Imports Datos
+Imports Dominio
 Public Class EmpleadoBUS
     Inherits PersonaBUS
     ''' <summary>
@@ -11,10 +12,8 @@ Public Class EmpleadoBUS
     ''' <param name="calle"></param>
     ''' <param name="numero"></param>
     ''' <param name="localidad"></param>
-    ''' <param name="detalle"></param>
     ''' <param name="telefono"></param>
     ''' <param name="rol"></param>
-    ''' <param name="especialidades"></param>
     Public Overloads Sub ValidateFields(ci As String,
                               nombres As String,
                               apellidoP As String,
@@ -22,10 +21,8 @@ Public Class EmpleadoBUS
                               calle As String,
                               numero As String,
                               localidad As String,
-                              detalle As String,
                               telefono As String,
-                              rol As String,
-                              especialidades As List(Of String)
+                              rol As String
                               )
         MyBase.ValidateFields(ci,
                               nombres,
@@ -34,35 +31,25 @@ Public Class EmpleadoBUS
                               calle,
                               numero,
                               localidad,
-                              detalle,
                               telefono
                               )
 
         If Not RoleExists(rol) Then
             Throw New ArgumentException("El rol '" & rol & " ' no existe.")
-        Else
-            If rol = Env.UserTypes.Medico Then
-                Try
-                    ValidateEspecialidades(especialidades)
-
-                Catch ex As KeyNotFoundException
-                    Throw ex
-                End Try
-            End If
         End If
 
     End Sub
 
     Public Function GetRoles() As List(Of String)
-        Dim roles = [Enum].GetNames(GetType(Env.UserTypes))
+        Dim roles = [Enum].GetNames(GetType(Env.Roles))
         Return roles.ToList
     End Function
 
     Protected Function RoleExists(rol As String) As Boolean
-        Dim ROLES = [Enum].GetValues(GetType(Env.UserTypes))
+        Dim roles = GetRoles()
         Dim exist As Boolean = False
 
-        For Each systemRole In ROLES
+        For Each systemRole In roles
             If systemRole.Equals(rol) Then
                 exist = True
             End If
@@ -71,31 +58,14 @@ Public Class EmpleadoBUS
         Return exist
     End Function
 
-    Public Function GetEspecialidades() As List(Of Especialidad)
-        Dim MedicoDBO As New DMedico(Env.UserType)
-        Dim data = MedicoDBO.GetEspecialidades()
-        Dim especialidades As New List(Of Especialidad)
+    Public Function GetEmpleados() As DataTable
+        Dim db As New MedicoBUS
+        Try
+            Dim dt = db.GetEmpleados()
+            Return dt
 
-
-        For Each row As DataRow In data.Rows
-            Dim especialidad As New Especialidad
-            especialidad.Id = row.Field(Of Integer)(0)
-            especialidad.Nombre = row.Field(Of String)(1)
-
-            especialidades.Add(especialidad)
-        Next
-        Return especialidades
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
-
-    Protected Sub ValidateEspecialidades(pEspecialidades As List(Of String))
-        Dim ListaEspecialidades As List(Of Especialidad) = GetEspecialidades()
-
-        For Each especialidad In pEspecialidades
-            If Not ListaEspecialidades.Contains(New Logica.Especialidad(especialidad)) Then
-                Throw New KeyNotFoundException("Especialidad '" & especialidad & "' no encontrada")
-
-            End If
-        Next
-
-    End Sub
 End Class

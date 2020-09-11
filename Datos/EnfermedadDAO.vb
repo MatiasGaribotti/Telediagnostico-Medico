@@ -1,17 +1,26 @@
 ﻿Imports ADODB
 Imports Dominio
+''' <summary>
+''' Clase de accesso a la base de datos para patologías.
+''' </summary>
 Public Class EnfermedadDAO
     Inherits DBConnection
 
-    Public Function Find(nombre As String) As Short
+    ''' <summary>
+    ''' Obtiene el ID de una enfermedad a partir de su nombre.
+    ''' </summary>
+    ''' <param name="nombre">Nombre de la enfermedad a buscar.</param>
+    ''' <returns>Retorna el ID de la enfermedad engcontrada. Si encuentra más de una </returns>
+    ''' <exception cref="Exception">Tirada cuando se encuentra más de una enfermedad con el nombre pasado como parámetro.</exception>
+    ''' <exception cref="KeyNotFoundException">Tirada cuando no se encuentra ninguna enfermedad con el nombre pasado como parámetro.</exception>
+    Public Function GetEnfermedadByName(nombre As String) As Short
         Dim id As Short = -1
         Dim recordSet As Recordset
         Dim query = "SELECT id FROM enfermedades " &
                     "WHERE nombre='" & nombre & "';"
 
-        'Obtengo la conexión
         Try
-            Conn = Conectar()
+            Conn = Connect()
         Catch ex As Exception
             Throw ex
         End Try
@@ -56,12 +65,17 @@ Public Class EnfermedadDAO
         End Try
     End Function
 
-    Public Function Insert(enfermedad As Enfermedad) As Boolean
-        Dim saved = False
+    ''' <summary>
+    ''' Ingresa una nueva enfermedad a la base de datos.
+    ''' </summary>
+    ''' <param name="enfermedad">Enfermedad a ingresar.</param>
+    ''' <exception cref="ApplicationException">Tirada cuando no se pudo conectar con la base de datos.</exception>
+    ''' <exception cref="Exception">Tirada cuando hubo un error en el ingreso de la enfermedad.</exception>
+    Public Sub Insert(enfermedad As Enfermedad)
 
         Try
-            Conn = Conectar()
-        Catch ex As Exception
+            Conn = Connect()
+        Catch ex As ApplicationException
             Throw ex
         End Try
 
@@ -70,21 +84,40 @@ Public Class EnfermedadDAO
 
         Try
             Conn.Execute(insertQuery)
-            saved = True
         Catch ex As Exception
-            Console.WriteLine("Exception at DEnfermedad insert" & vbCrLf & ex.Message)
-            saved = False
+            Throw New Exception("Error al ingresar la enfermedad " & enfermedad.Nombre & ".")
+        Finally
+            Conn.Close()
+
         End Try
-        Conn.Close()
 
-        Return saved
-    End Function
+    End Sub
 
-    ' Funcion que obtiene de la BD las enfermedades
-    ' que se encuentran en el sistema
+    ''' <summary>
+    ''' Función que obtiene las enferemedades desde la base de datos.
+    ''' </summary>
+    ''' <returns>Retorna un objeto DataTable con las enfermedades halladas.</returns>
+    ''' <exception cref="ApplicationException">Tirada cuando no se pudo conectar con la base de datos.</exception>
+    ''' <exception cref="Exception">Tirada cuando hubo un error en la obtención de las enferemedades.</exception>
     Public Function GetEnfermedades() As DataTable
-        Dim dt As DataTable
+        Dim dt As New DataTable
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim query = "SELECT id, nombre, descripcion, urgencia, cronica FROM enfermedades;"
 
+        Try
+            Conn = Connect()
+        Catch ex As ApplicationException
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+
+        Catch ex As Exception
+            Throw New Exception("Error al intener obtener enfermedades.")
+        End Try
 
         Return dt
     End Function

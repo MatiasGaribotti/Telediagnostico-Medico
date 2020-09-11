@@ -1,5 +1,4 @@
-﻿Imports Datos2
-Public Class Paciente
+﻿Public Class Paciente
     Inherits Persona
     Public Property Email As String
     Public Property NucleoFlia As String

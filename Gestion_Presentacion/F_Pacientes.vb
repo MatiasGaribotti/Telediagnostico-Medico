@@ -1,11 +1,12 @@
 ﻿Imports System.Threading
 Imports System.Globalization
 Imports Logica
+Imports Dominio
 
 Public Class F_Pacientes
 
     Public Sub New()
-        Thread.CurrentThread.CurrentUICulture = Logica.Env.CurrentLangugage
+        Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
         ' Fecha de nacimiento posterior a la actual no permitida
         'DTPickerFNac.MaxDate = Date.Now()
@@ -20,32 +21,35 @@ Public Class F_Pacientes
     End Enum
 
     Public Sub ConfigMode()
-        Select Case Env.UserType
-            Case Env.UserTypes.Recepcionista
-                'Buttons
-                BtnModificar.Enabled = False
-                BtnEliminar.Enabled = False
+
+        If Env.CurrentUser.IsRecepcionista Then
+            'Buttons
+            BtnModificar.Enabled = False
+            BtnEliminar.Enabled = False
 
 
-                'Fields
-                TxtINFam.Enabled = False
-                TxtIAntFam.Enabled = False
-                TxtIAntLab.Enabled = False
+            'Fields
+            TxtINFam.Enabled = False
+            TxtIAntFam.Enabled = False
+            TxtIAntLab.Enabled = False
 
-            Case Env.UserTypes.RRHH
-                BtnIngresar.Enabled = False
-                BtnModificar.Enabled = False
-                BtnEliminar.Enabled = False
-                BtnResetPassword.Enabled = False
 
-                'Fields
-                TxtINFam.Enabled = False
-                TxtIAntFam.Enabled = False
-                TxtIAntLab.Enabled = False
+        ElseIf Env.CurrentUser.IsRRHH Then
+            BtnIngresar.Enabled = False
+            BtnModificar.Enabled = False
+            BtnEliminar.Enabled = False
+            BtnResetPassword.Enabled = False
 
-            Case Env.UserTypes.Administrador
-                BtnResetPassword.Enabled = False
-        End Select
+            'Fields
+            TxtINFam.Enabled = False
+            TxtIAntFam.Enabled = False
+            TxtIAntLab.Enabled = False
+
+
+        ElseIf Env.CurrentUser.IsAdministrador Then
+            BtnResetPassword.Enabled = False
+
+        End If
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
@@ -53,29 +57,28 @@ Public Class F_Pacientes
             ValidateIngresarFields()
             Dim paciente = GetPaciente()
 
-            Select Case Env.UserType
-                Case Env.UserTypes.Recepcionista
-                    Dim recepcionista As Recepcionista = Env.CurrentUser
-                    Try
-                        recepcionista.IngresarPaciente(paciente)
-                        MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
-                        LoadDgv()
-                        ClearFields()
-                    Catch ex As Exception
-                        MsgBox(ex.Message)
-                    End Try
+            If Env.CurrentUser.IsRecepcionista Then
+                Dim recepcionista As New RecepcionistaBUS
+                Try
+                    recepcionista.IngresarPaciente(paciente)
+                    MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
+                    LoadDgv()
+                    ClearFields()
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
 
-                Case Env.UserTypes.Administrador
-                    Dim administrador As Administrador = Env.CurrentUser
-                    Try
-                        administrador.IngresarPaciente(paciente)
-                        MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
-                        LoadDgv()
-                        ClearFields()
-                    Catch ex As Exception
-                        MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-                    End Try
-            End Select
+            Else
+                Try
+                    Dim administrador As New AdministradoBUS
+                    administrador.IngresarPaciente(paciente)
+                    MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
+                    LoadDgv()
+                    ClearFields()
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+                End Try
+            End If
 
         Catch ex As FormatException
             MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Formato")
@@ -120,76 +123,43 @@ Public Class F_Pacientes
 
     ' Valida los campos de ingreso de pacientes
     Private Sub ValidateIngresarFields()
-        'Longitud de la cédula
-        If String.IsNullOrWhiteSpace(TxtICi.Text) Then
-            Throw New FormatException("El campo cédula es obligatorio.")
-        ElseIf TxtICi.TextLength <> 8 Then
-            Throw New FormatException("La cédula de identidad debe tener una longitud de 8 dígitos.")
-        ElseIf Not IsNumerical(TxtICi.Text) Then
-            ' CI contiene letras o símbolos
-            Throw New FormatException("La cédula de identidad solo puede contener dígitos.")
+        Dim PacienteBUS As New PacienteBUS
+        Try
+            PacienteBUS.ValidateFields(TxtICi.Text,
+                                   TxtINombre.Text,
+                                   TxtIApellidoP.Text,
+                                   TxtIApellidoM.Text,
+                                   TxtICalle.Text,
+                                   TxtINumero.Text,
+                                   TxtILocalidad.Text,
+                                   TxtITelefono.Text
+                                   )
 
-        ElseIf String.IsNullOrWhiteSpace(TxtINombre.Text) Then
-            ' Nombre Vacio
-            Throw New FormatException("El campo nombre es obligatorio.")
-
-        ElseIf ContainsSymbol(TxtINombre.Text) Then
-            Throw New FormatException("El formato del campo nombre no es correcto.")
-
-        ElseIf String.IsNullOrWhiteSpace(TxtIApellidoP.Text) And String.IsNullOrWhiteSpace(TxtIApellidoM.Text) Then
-            ' Ningún apellido ingresado
-            Throw New FormatException("Por favor ingrese por lo menos un apellido.")
-
-        ElseIf Not IsNumerical(TxtITelefono.Text) Then
-            ' Teléfono contiene caracteres que no sean numéricos
-            Throw New FormatException("El teléfono solo puede contener dígitos.")
-
-        ElseIf String.IsNullOrWhiteSpace(TxtICalle.Text) Then
-            ' Calle vacía
-            Throw New FormatException("El campo calle es obligatorio.")
-
-        ElseIf ContainsSymbol(TxtICalle.Text) Then
-            ' Calle contiene símbolos
-            Throw New FormatException("El formato del campo calle no es correcto.")
-
-        ElseIf String.IsNullOrWhiteSpace(TxtINumero.Text) Then
-            ' Campo numero vacío
-            Throw New FormatException("El campo número es obligatorio.")
-
-        ElseIf Not IsNumerical(TxtINumero.Text) Then
-            ' Numero de puerta contiene caracteres que no sean numéricos
-            Throw New FormatException("El formato del campo número no es correcto.")
-
-        ElseIf String.IsNullOrWhiteSpace(TxtILocalidad.Text) Then
-            ' Localidad vacía
-            Throw New FormatException("El campo localidad es obligatorio.")
-
-        ElseIf ContainsSymbol(TxtILocalidad.Text) Then
-            ' Localidad contiene símbolos
-            Throw New FormatException("El formato del campo localidad no es correcto.")
-
-        ElseIf ContainsSymbol(TxtINFam.Text) Then
-            ' Núcleo Familiar contiene símbolos
-            Throw New FormatException("El formato del campo núcleo familiar no es correcto.")
-
-        ElseIf ContainsSymbol(TxtIAntFam.Text) Then
-            ' Antecedentes familiares contiene símbolos
-            Throw New FormatException("El formato del campo antecedentes familiares no es correcto.")
-
-
-        ElseIf ContainsSymbol(TxtIAntLab.Text) Then
-            ' Antecedentes laborales contiene símbolos
-            Throw New FormatException("El formato del campo antecedentes laborales no es correcto.")
-
-            ' Enfermedades ingresadas no existen
-            'ElseIf Not EnfermedadesExisten() Then
-
-
-        End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     ' Valida los campos de búsqueda
     Private Sub ValidateFiltrarFields()
+        Dim PacienteBUS As New PacienteBUS
+
+        Try
+            PacienteBUS.ValidateFields(TxtBCi.Text,
+                                   TxtBNombre.Text,
+                                   TxtBApellidoP.Text,
+                                   TxtBApellidoM.Text,
+                                   TxtBCalle.Text,
+                                   TxtBNumero.Text,
+                                   TxtBLocalidad.Text,
+                                   TxtBTelefono.Text
+                                   )
+            If Not PacienteBUS.IsNumerical(TxtBEdad.Text) Then
+                Throw New FormatException("La edad debe ser un valor numérico.")
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
 
     End Sub
 
@@ -228,35 +198,15 @@ Public Class F_Pacientes
         Dim paciente As Paciente
 
         ' Si el teléfono no fue ingresado, tendrá el valor -1
-        Dim telefono As Integer
-        If String.IsNullOrWhiteSpace(TxtITelefono.Text) Then
-            telefono = -1
-        Else
+        Dim telefono As Integer = -1
+        If Not String.IsNullOrWhiteSpace(TxtITelefono.Text) Then
             telefono = CInt(TxtITelefono.Text)
+
         End If
 
         Dim pwd As String = Password.Hash(Password.Generate(New Random))
 
-        Select Case Env.UserType
-            Case Env.UserTypes.Recepcionista
-                paciente = New Paciente(
-                    CInt(TxtICi.Text),
-                    TxtINombre.Text,
-                    TxtIApellidoP.Text,
-                    TxtIApellidoM.Text,
-                    New Direccion(TxtICalle.Text,
-                                    CInt(TxtINumero.Text),
-                                    TxtILocalidad.Text,
-                                    CmbIDepartamento.SelectedIndex + 1),
-                    telefono,
-                    Format(DTPickerFNac.Value, "yyyy-MM-dd"),
-                    pwd,
-                    TxtIEmail.Text
-                    )
-
-            Case Env.UserTypes.Administrador
-
-                paciente = New Paciente(
+        paciente = New Paciente(
                             CInt(TxtICi.Text),
                             TxtINombre.Text,
                             TxtIApellidoP.Text,
@@ -266,7 +216,7 @@ Public Class F_Pacientes
                                             TxtILocalidad.Text,
                                             CmbIDepartamento.SelectedIndex + 1,
                                             TxtIDetalle.Text),
-                            CInt(TxtITelefono.Text),
+                            telefono,
                             Format(DTPickerFNac.Value, "yyyy-MM-dd"),
                             pwd,
                             TxtIEmail.Text,
@@ -274,12 +224,10 @@ Public Class F_Pacientes
                             TxtIAntFam.Text,
                             TxtIAntLab.Text
                             )
-
-        End Select
         Return paciente
     End Function
     Private Sub LoadDgv()
-        Dim objPaciente As New Paciente()
+        Dim objPaciente As New PacienteBUS()
         Try
             Dim dt As DataTable = objPaciente.GetPacientes()
             DgvPacientes.DataSource = dt
@@ -291,7 +239,7 @@ Public Class F_Pacientes
     End Sub
 
     Private Sub BtnResetPassword_Click(sender As Object, e As EventArgs) Handles BtnResetPassword.Click
-        Dim objRecepcionista As Recepcionista = Env.CurrentUser
+        Dim objRecepcionista As New RecepcionistaBUS
         Try
             Dim paciente = GetSelected()
             objRecepcionista.ResetPassword(paciente)
@@ -391,4 +339,11 @@ Public Class F_Pacientes
 
     End Sub
 
+    Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
+        Try
+            ValidateFiltrarFields()
+        Catch ex As FormatException
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Formato")
+        End Try
+    End Sub
 End Class

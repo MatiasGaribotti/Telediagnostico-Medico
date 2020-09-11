@@ -2,6 +2,11 @@
 Imports Dominio
 Public Class SintomaDAO
     Inherits DBConnection
+
+    ''' <summary>
+    ''' Ingresa un nuevo síntoma al sistema.
+    ''' </summary>
+    ''' <param name="sintoma">Objeto síntoma a ingresar.</param>
     Public Sub Insert(sintoma As Sintoma)
 
         Dim recordSet As Recordset
@@ -17,7 +22,7 @@ Public Class SintomaDAO
                                 "WHERE nombre='" & sintoma.Nombre & "' AND descripcion='" & sintoma.Descripcion & "' AND tipo=" & sintoma.Tipo & ";"
 
         Try
-            Conn = Conectar()
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
@@ -44,6 +49,11 @@ Public Class SintomaDAO
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Asocia una síntoma a una enfermedad.
+    ''' </summary>
+    ''' <param name="idSintoma">ID del síntoma a asociar.</param>
+    ''' <param name="idEnfermedad">ID de la enfermedad con la que se asocia el sítnoma.</param>
     Public Sub AddSintomaEnfermedad(idSintoma As Short, idEnfermedad As Short)
         Dim insert = "INSERT INTO enfermedades_sintomas(idSintoma, idEnfermedad) " &
                      "VALUES(" & idSintoma & "," & idEnfermedad & ");"
@@ -63,8 +73,12 @@ Public Class SintomaDAO
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Obtiene todos los síntomas almacenados en la base de datos.
+    ''' </summary>
+    ''' <returns>Retorna un DataTable con los síntomas recuperados</returns>
     Public Function GetSintomas() As DataTable
-        Conn = Conectar()
+        Conn = Connect()
         Dim rs = Conn.Execute("SELECT id,nombre,descripcion,tipo FROM sintomas WHERE ENABLED=1")
         Dim da As New OleDb.OleDbDataAdapter()
         Dim dt As New DataTable
@@ -72,9 +86,16 @@ Public Class SintomaDAO
         Return dt
     End Function
 
+
+    ''' <summary>
+    ''' Obtiene de la base de datos aquellos síntomas que cumplan con los parámetros pasados.
+    ''' </summary>
+    ''' <param name="name">Parte del contenido del nombre del síntoma</param>
+    ''' <param name="type">Tipo de síntoma</param>
+    ''' <returns>Retorna un DataTable con los datos recuperados</returns>
     Public Function GetSintomas(name As String, type As Sintoma.TiposSintomas) As DataTable
         Try
-            Conn = Conectar()
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
@@ -97,8 +118,18 @@ Public Class SintomaDAO
     End Function
 
 
-    Public Function Filter(pattern As Sintoma) As DataTable
+    ''' <summary>
+    ''' Obtiene de la base de datos aquellos síntomas que cumplan con los parámetros pasados.
+    ''' </summary>
+    ''' <param name="name">Parte del contenido del nombre</param>
+    ''' <param name="type">Tipo de síntoma</param>
+    ''' <param name="enfermedades">Enfermedades asociadas</param>
+    ''' <returns>Retorna un DataTable con los datos recuperados</returns>
+    Public Function GetSintomas(name As String, type As Sintoma.TiposSintomas, enfermedades As List(Of Enfermedad)) As DataTable
         Dim dt As New DataTable()
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter
+
         Dim query As String = "SELECT S.id AS ID," &
                                 "S.nombre AS Sintoma, " &
                                 "S.descripcion AS Descripcion, " &
@@ -106,23 +137,31 @@ Public Class SintomaDAO
                                 "FROM sintomas AS S " &
                                 "LEFT JOIN enfermedades_sintomas AS ES " &
                                 "ON (S.ID = ES.idSintoma) " &
-                                "WHERE S.nombre LIKE '%" & pattern.Nombre & "%' AND S.tipo=" & pattern.Tipo & " "
+                                "WHERE S.nombre LIKE '%" & name & "%' AND S.tipo=" & type & " "
 
-        If pattern.Enfermedades.Count > 0 Then
-            For Each enfermedad As Enfermedad In pattern.Enfermedades
-                query += " OR E.nombre LIKE '%" & enfermedad.Nombre & "%' "
-            Next
-        End If
+        For Each enfermedad As Enfermedad In enfermedades
+            query += " OR E.nombre LIKE '%" & enfermedad.Nombre & "%' "
+        Next
         query += "AND ENABLED=1 ORDER BY S.nombre;"
 
         Try
-            GetSintomas(query)
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
         End Try
 
-        Return dt
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+            Return dt
+
+        Catch ex As Exception
+            Throw New Exception("Error al filtrar síntomas.")
+
+        Finally
+            Conn.Close()
+        End Try
     End Function
 
     ''' <summary>
@@ -131,7 +170,7 @@ Public Class SintomaDAO
     Public Sub Delete(id As Short)
         Dim query As String = "UPDATE sintomas SET ENABLED=0 WHERE id=" & id & ";"
         Try
-            Conn = Conectar()
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
@@ -154,7 +193,7 @@ Public Class SintomaDAO
         Dim Updatequery As String = "UPDATE sintomas SET nombre='" & sintoma.Nombre & "', descripcion='" & sintoma.Descripcion & "', tipo=" & sintoma.Tipo & " WHERE id= " & sintoma.Id & ""
 
         Try
-            Conn = Conectar()
+            Conn = Connect()
 
         Catch ex As Exception
             Throw ex
@@ -178,12 +217,17 @@ Public Class SintomaDAO
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Obtiene una lista de enfermedades asociadas al síntoma con el ID ingresado.
+    ''' </summary>
+    ''' <param name="id">ID del síntoma</param>
+    ''' <returns>Retorna una lista de enfermedades asociadas al síntoma.</returns>
     Public Function GetEnfermedadesAsociadas(id As Short) As List(Of Enfermedad)
         Dim rs As New Recordset()
         Dim query = "SELECT ES.idEnfermedad, E.nombre, E.urgencia FROM enfermedades_sintomas AS ES JOIN enfermedades AS E ON(ES.idEnfermedad = E.id) WHERE idSintoma=" & id & ";"
         Dim enfermedades As New List(Of Enfermedad)
         Try
-            Dim Conn = Conectar()
+            Dim Conn = Connect()
 
         Catch ex As Exception
             Throw ex

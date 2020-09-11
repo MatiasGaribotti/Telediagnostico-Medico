@@ -10,7 +10,12 @@ Public MustInherit Class DBConnection
     End Sub
 
     'Funcion que retorna una conexión a la base de datos
-    Protected Function Conectar() As Connection
+    ''' <summary>
+    ''' Función que inicia una conexión con la base de datos.
+    ''' </summary>
+    ''' <returns>Retorna una conexión abierta con la base de datos</returns>
+    ''' <exception cref="ApplicationException">Tirada cuando no ocurre un error al conectar con la base de datos o cuando no hay conexión con el servidor de bases de datos.</exception>
+    Protected Function Connect() As Connection
         Conn = New Connection() With {.ConnectionString = ConStr}
         If HasConnection() Then
             Try
@@ -24,6 +29,10 @@ Public MustInherit Class DBConnection
         End If
     End Function
 
+    ''' <summary>
+    ''' Función que evalua si hay conexión con el servidor de bases de datos.
+    ''' </summary>
+    ''' <returns>Retorna True si hay conexión con el servidor de bases de datos, de lo contrario retorna False.</returns>
     Private Function HasConnection() As Boolean
         Try
             'Intento abrir la conexión
@@ -36,6 +45,9 @@ Public MustInherit Class DBConnection
 
     End Function
 
+    ''' <summary>
+    ''' Procedimiento que configura las credenciales para el acceso a la base de datos, dependiendo de qué tipo de usuario sea el que va a ingresar.
+    ''' </summary>
     Private Sub CredentialsByUserType()
         If Env.CurrentUser.IsPaciente Then
             SetConnectionString("paciente", "dbpacienteST")
@@ -59,6 +71,11 @@ Public MustInherit Class DBConnection
 
     End Sub
 
+    ''' <summary>
+    ''' Función que configura el string de conexión con la base de datos.
+    ''' </summary>
+    ''' <param name="user">Usuario de la base de datos.</param>
+    ''' <param name="password">Contaseña del usuario de la base de datos.</param>
     Private Sub SetConnectionString(user As String, password As String)
         ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
                                       "server=192.168.1.131;" &

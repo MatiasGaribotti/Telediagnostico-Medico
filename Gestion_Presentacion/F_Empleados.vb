@@ -1,11 +1,12 @@
 ﻿Imports System.Threading
 Imports System.Globalization
+Imports Dominio
 Imports Logica
 
 Public Class F_Empleados
 
     Public Sub New()
-        Thread.CurrentThread.CurrentUICulture = Logica.Env.CurrentLangugage
+        Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
         ConfigMode()
     End Sub
@@ -15,26 +16,19 @@ Public Class F_Empleados
     Private empleado As Empleado
 
     ''' <summary>
-    ''' Configura los controles de acuerdo con el usuario que ingresa
-    ''' a la ventana, dado que ciertos usuarios no pueden realizar
-    ''' determinadas tareas(Permisos en la base de datos).
+    ''' Configura los controles de acuerdo con el usuario que a la ventana, dado que ciertos usuarios no pueden realizar determinadas tareas(Permisos en la base de datos).
     ''' </summary>
     Public Sub ConfigMode()
-        Select Case Env.UserType
-            Case Env.UserType = Env.UserTypes.Recepcionista Or Env.UserType = Env.UserTypes.Administrador
-                BtnModificar.Enabled = False
-                BtnEliminar.Enabled = False
-                BtnResetPassword.Enabled = False
-                BtnHacerAdmin.Enabled = False
-                BtnIngresar.Enabled = False
-            Case Env.UserType = Env.UserTypes.RRHH
-                'La ventana, por defecto está configurada
-                'para RRHH, por tanto, no hago nada
-            Case Else
 
-        End Select
+        If Env.CurrentUser.IsRecepcionista Or Env.CurrentUser.IsAdministrador Then
+            BtnModificar.Enabled = False
+            BtnEliminar.Enabled = False
+            BtnResetPassword.Enabled = False
+            BtnHacerAdmin.Enabled = False
+            BtnIngresar.Enabled = False
 
-        BtnHacerAdmin.Visible = False
+        End If
+
     End Sub
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
@@ -43,44 +37,67 @@ Public Class F_Empleados
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
+        Dim EmpleadoBUS As New EmpleadoBUS
+        Dim empleado As Empleado
 
-        Dim empleado = GetEmpleado()
-        Dim medico As New Medico(
-                            CInt(TxtICi.Text),
-                            TxtINombre.Text,
-                            TxtIApellidoP.Text,
-                            TxtIApellidoM.Text,
-                            New Direccion(TxtICalle.Text,
-                                            CInt(TxtINumero.Text),
-                                            TxtILocalidad.Text,
-                                            CmbIDepartamento.SelectedItem.ToString),
-                            CInt(TxtITelefono.Text),
-                            Format(DTPickerFNac.Value, "yyyy-MM-dd"),
-                            "Medicina In General",
-                            "password"
-                            )
         Try
-            Dim objRRHH As RRHH = Env.CurrentUser
-            objRRHH.IngresarMedico(medico)
+            EmpleadoBUS.ValidateFields(TxtICi.Text,
+                                     TxtINombre.Text,
+                                     TxtIApellidoP.Text,
+                                     TxtIApellidoM.Text,
+                                     TxtICalle.Text,
+                                     TxtINumero.Text,
+                                     TxtILocalidad.Text,
+                                     TxtITelefono.Text,
+                                     CmbRol.SelectedText
+                                     )
+            empleado = GetEmpleado()
+            Dim RRHHBUS As New RRHHBUS
+            RRHHBUS.InsertEmployee(empleado)
             LoadDgv()
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 
-    Public Function GetEmpleado() As Empleado
-        Try
-            ValidateFields()
+    Private Function GetEmpleado() As Empleado
+        Dim EmpleadoVO As Empleado
 
-        Catch ex As Exception
+        Dim ci = CInt(TxtICi.Text)
+        Dim nombre = TxtINombre.Text
+        Dim apellidoP = TxtIApellidoP.Text
+        Dim apellidoM = TxtIApellidoM.Text
+        Dim fechaNacimiento As Date = Format(DTPickerFNac.Value, "yyyy-MM-dd")
+        Dim calle = TxtICalle.Text
+        Dim numero = CInt(TxtINumero.Text)
+        Dim localidad = TxtILocalidad.Text
+        Dim departamento = [Enum].Parse(GetType(Direccion.Departamentos), CmbIDepartamento.SelectedItem)
+        Dim direccion As New Direccion(calle, numero, localidad, departamento)
+        Dim telefono = CInt(TxtITelefono.Text)
+        Dim password = Logica.Password.Hash(Logica.Password.Generate(New Random))
 
-        End Try
+
+        If CmbRol.SelectedItem = "Medico" Then
+            Dim especialidades As New List(Of Especialidad)
+
+            For Each item In CmbIngresadasEspecialidades.Items
+                especialidades.Add(New Especialidad(item.ToString))
+            Next
+            EmpleadoVO = New Medico(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, especialidades, password)
+
+        Else
+
+            EmpleadoVO = New Empleado(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, password)
+            If CmbRol.SelectedItem = "Recursos_Humanos" Then
+                EmpleadoVO.IsRRHH = True
+            ElseIf CmbRol.SelectedItem = "Recepcionista" Then
+                EmpleadoVO.IsRecepcionista = True
+            End If
+        End If
+
+        Return EmpleadoVO
     End Function
-
-    Public Sub ValidateFields()
-
-    End Sub
 
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
         CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
@@ -95,9 +112,9 @@ Public Class F_Empleados
     End Sub
 
     Private Sub LoadDgv()
-        Dim objMedico As New Medico()
+        Dim MedicoBUS As New MedicoBUS()
         Try
-            Dim dt As DataTable = objMedico.GetEmpleados()
+            Dim dt As DataTable = MedicoBUS.GetEmpleados()
             DgvMedicos.DataSource = dt
             HideBooleansDgv()
         Catch ex As Exception
@@ -121,15 +138,15 @@ Public Class F_Empleados
     End Sub
 
     Private Sub ConfigRoles()
-        Dim LogicaEmpleado As New Empleado
-        Dim roles As List(Of String) = LogicaEmpleado.GetRoles()
+        Dim EmpleadoBUS As New EmpleadoBUS
+        Dim roles As List(Of String) = EmpleadoBUS.GetRoles()
         CmbBRol.DataSource = roles
         CmbRol.DataSource = roles
     End Sub
 
     Public Sub ConfigComboBox()
-        Dim LogicaMedico As New Medico
-        Dim especialidades As List(Of Especialidad) = LogicaMedico.GetEspecialidades()
+        Dim MedicoBUS As New MedicoBUS
+        Dim especialidades As List(Of Especialidad) = MedicoBUS.GetEspecialidades()
 
         For Each i As Especialidad In especialidades
             CmbBEspecialidades.Items.Add(i.Nombre)

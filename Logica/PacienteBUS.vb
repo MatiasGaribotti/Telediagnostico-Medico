@@ -1,61 +1,28 @@
 ﻿Imports Dominio
-Imports Datos2
+Imports Datos
 Public Class PacienteBUS
     Inherits PersonaBUS
 
     Public Sub Insert(pPaciente As Paciente)
-        Dim DPaciente As DPaciente
-
-        If Env.UserType = Env.UserTypes.Recepcionista Then
-            DPaciente = New DPaciente(
-                Env.UserType,
-                Ci,
-                Nombre,
-                ApellidoP,
-                ApellidoM,
-                New DDireccion(
-                                Direccion.Calle,
-                                Direccion.Nro,
-                                Direccion.Localidad,
-                                Direccion.Departamento,
-                                Direccion.Detalle),
-                Telefono,
-                Fecha_Nacimiento,
-                Password,
-                Email)
-
-        ElseIf Env.UserType = Env.UserTypes.Administrador Then
-            DPaciente = New DPaciente(Env.UserType, Ci,
-                Nombre,
-                ApellidoP,
-                ApellidoM,
-                New DDireccion(
-                                Direccion.Calle,
-                                Direccion.Nro,
-                                Direccion.Localidad,
-                                Direccion.Departamento,
-                                Direccion.Detalle),
-                Telefono,
-                Fecha_Nacimiento,
-                Password,
-                Email,
-                NucleoFlia,
-                AntecedentesFlia,
-                AntecedentesLab)
-
+        Dim PacienteDAO As New PacienteDAO
+        If Env.CurrentUser.IsRecepcionista Then
+            pPaciente.NucleoFlia = "Default"
+            pPaciente.AntecedentesFlia = "Sin ingresar"
+            pPaciente.AntecedentesLab = "Sin ingresar"
         End If
+
         Try
-            DPaciente.Insert()
+            PacienteDAO.Insert(pPaciente)
         Catch ex As Exception
             Throw ex
         End Try
     End Sub
 
     Public Function GetPacientes() As DataTable
-        Dim db As New DPaciente(Env.UserType)
+        Dim PacienteDAO As New PacienteDAO
         Dim dt As DataTable
         Try
-            dt = db.GetPacientes()
+            dt = PacienteDAO.GetPacientes()
 
         Catch ex As Exception
             Throw ex
@@ -70,7 +37,6 @@ Public Class PacienteBUS
                                         calle As String,
                                         numero As String,
                                         localidad As String,
-                                        detalle As String,
                                         telefono As String,
                                         nucleoFlia As String,
                                         AntFam As String,
@@ -82,7 +48,6 @@ Public Class PacienteBUS
                               calle,
                               numero,
                               localidad,
-                              detalle,
                               telefono)
 
         If ContainsSymbol(nucleoFlia) Then
@@ -99,4 +64,5 @@ Public Class PacienteBUS
             Throw New FormatException("El formato del campo antecedentes laborales no es correcto.")
         End If
     End Sub
+
 End Class

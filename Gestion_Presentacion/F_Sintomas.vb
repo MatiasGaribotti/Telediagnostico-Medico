@@ -11,7 +11,7 @@ Public Class F_Sintomas
     End Sub
 
     Private Property Modo As Modos = Modos.Ingresar
-    Private Property sintomaMod As Sintoma
+    Private Property SintomaMod As Sintoma
     Private SintomaBUS As New SintomaBUS
 
     Private Enum Modos
@@ -42,7 +42,7 @@ Public Class F_Sintomas
                 'Cargo el id en el nuevo síntoma
                 Try
                     Dim sintoma = GetSintoma()
-                    sintoma.Id = sintomaMod.Id
+                    sintoma.Id = SintomaMod.Id
                     sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
                     SintomaBUS.Modify(sintoma)
                     LoadDgv()
@@ -120,13 +120,12 @@ Public Class F_Sintomas
 
     Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
         Dim sintomaPattern = GetPatern()
-        Dim found As DataTable = SintomaBUS.Filter(sintomaPattern)
+        Dim found As DataTable = SintomaBUS.GetSintomas(sintomaPattern)
         LoadDgv(found)
     End Sub
 
     Public Sub LoadDgv()
-        Dim logica As New Sintoma()
-        Dim dt As DataTable = logica.GetSintomas()
+        Dim dt As DataTable = SintomaBUS.GetSintomas()
         DgvSintomas.DataSource = dt
         DgvSintomas.Refresh()
     End Sub
@@ -168,7 +167,6 @@ Public Class F_Sintomas
     End Sub
 
     Private Function GetSintomaSelected() As Sintoma
-
         Dim id = DgvSintomas.SelectedRows.Item(0).Cells.Item(0).Value
         Dim nombre = DgvSintomas.SelectedRows.Item(0).Cells.Item(1).Value
         Dim descripcion = DgvSintomas.SelectedRows.Item(0).Cells.Item(2).Value
@@ -180,11 +178,11 @@ Public Class F_Sintomas
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         Modo = Modos.Modificar
         Dim sintoma = GetSintomaSelected()
-        sintoma.Enfermedades = sintoma.GetEnfermedadesAsociadas()
+        sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
 
         'Variable que alamcena el síntoma que
         'se está modificando
-        sintomaMod = sintoma
+        SintomaMod = sintoma
 
         TxtISintoma.Text = sintoma.Nombre
         TxtIEnfermedad.Text = ""
@@ -194,5 +192,9 @@ Public Class F_Sintomas
         For Each enf In sintoma.Enfermedades
             CmbIEnfermedad.Items.Add(enf.Nombre)
         Next
+    End Sub
+
+    Private Sub DgvSintomas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSintomas.CellDoubleClick
+        MsgBox(GetSintomaSelected.Id)
     End Sub
 End Class
