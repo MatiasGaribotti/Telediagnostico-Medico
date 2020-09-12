@@ -3,7 +3,11 @@ Public Class Env
 
     Public Shared Property CurrentApp As Apps
     Public Shared Property CurrentLangugage As CultureInfo = New CultureInfo("es-UY")
-    Public Shared Property CurrentUser As Persona
+    Public Shared Property CurrentUser As New Persona()
+
+    Private Sub New()
+
+    End Sub
     Public Shared Sub ChangeLanguage(culture As Cultures)
         If culture = Cultures.Espannol Then
             CurrentLangugage = New CultureInfo("es-UY")

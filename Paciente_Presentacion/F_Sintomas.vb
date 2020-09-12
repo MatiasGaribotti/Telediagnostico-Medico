@@ -7,7 +7,7 @@
         OpenMainRightPanel()
     End Sub
 
-    Private Sub Btn_Cancelar_Click(sender As Object, e As EventArgs) Handles Btn_Cancelar.Click
+    Private Sub Btn_Cancelar_Click(sender As Object, e As EventArgs)
         OpenMainRightPanel()
     End Sub
 
@@ -32,12 +32,12 @@
         frmSintomasTipo.AutoScroll = False
     End Sub
 
-    Private Sub Btn_HC_Click(sender As Object, e As EventArgs) Handles Btn_HC.Click
+    Private Sub Btn_HC_Click(sender As Object, e As EventArgs)
         F_Login.Show()
         Close()
     End Sub
 
-    Private Sub Btn_Aceptar_Click(sender As Object, e As EventArgs) Handles Btn_Aceptar.Click
+    Private Sub Btn_Aceptar_Click(sender As Object, e As EventArgs)
         OpenMainRightPanel2()
     End Sub
 

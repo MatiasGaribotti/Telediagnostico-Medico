@@ -26,10 +26,10 @@ Partial Class F_Sintomas
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lbl_SintomasIng = New System.Windows.Forms.Label()
-        Me.Btn_HC = New System.Windows.Forms.Button()
         Me.LeftPanel = New System.Windows.Forms.Panel()
-        Me.Btn_Cancelar = New System.Windows.Forms.Button()
-        Me.Btn_Aceptar = New System.Windows.Forms.Button()
+        Me.BtnHCE = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnAceptar = New Guna.UI2.WinForms.Guna2Button()
         Me.DgvSintomas = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.LeftPanel.SuspendLayout()
         CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,64 +45,76 @@ Partial Class F_Sintomas
         Me.lbl_SintomasIng.TabIndex = 3
         Me.lbl_SintomasIng.Text = "Síntomas Ingresados"
         '
-        'Btn_HC
-        '
-        Me.Btn_HC.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_HC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_HC.FlatAppearance.BorderSize = 0
-        Me.Btn_HC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_HC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_HC.Image = Global.Presentacion.My.Resources.Resources.btn_historial_clinico_solapa
-        Me.Btn_HC.Location = New System.Drawing.Point(50, -1)
-        Me.Btn_HC.Margin = New System.Windows.Forms.Padding(0)
-        Me.Btn_HC.Name = "Btn_HC"
-        Me.Btn_HC.Size = New System.Drawing.Size(193, 47)
-        Me.Btn_HC.TabIndex = 1
-        Me.Btn_HC.UseVisualStyleBackColor = False
-        '
         'LeftPanel
         '
         Me.LeftPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.LeftPanel.Controls.Add(Me.BtnHCE)
+        Me.LeftPanel.Controls.Add(Me.BtnCancelar)
+        Me.LeftPanel.Controls.Add(Me.BtnAceptar)
         Me.LeftPanel.Controls.Add(Me.DgvSintomas)
         Me.LeftPanel.Controls.Add(Me.lbl_SintomasIng)
-        Me.LeftPanel.Controls.Add(Me.Btn_Cancelar)
-        Me.LeftPanel.Controls.Add(Me.Btn_Aceptar)
-        Me.LeftPanel.Controls.Add(Me.Btn_HC)
         Me.LeftPanel.Location = New System.Drawing.Point(0, 0)
         Me.LeftPanel.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.LeftPanel.Name = "LeftPanel"
         Me.LeftPanel.Size = New System.Drawing.Size(960, 1080)
         Me.LeftPanel.TabIndex = 4
         '
-        'Btn_Cancelar
+        'BtnHCE
         '
-        Me.Btn_Cancelar.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Cancelar.FlatAppearance.BorderSize = 0
-        Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Cancelar.Image = Global.Presentacion.My.Resources.Resources.BtnCancelar
-        Me.Btn_Cancelar.Location = New System.Drawing.Point(57, 744)
-        Me.Btn_Cancelar.Margin = New System.Windows.Forms.Padding(0)
-        Me.Btn_Cancelar.Name = "Btn_Cancelar"
-        Me.Btn_Cancelar.Size = New System.Drawing.Size(162, 54)
-        Me.Btn_Cancelar.TabIndex = 1
-        Me.Btn_Cancelar.UseVisualStyleBackColor = False
+        Me.BtnHCE.Animated = True
+        Me.BtnHCE.AutoRoundedCorners = True
+        Me.BtnHCE.BorderRadius = 17
+        Me.BtnHCE.CheckedState.Parent = Me.BtnHCE
+        Me.BtnHCE.CustomImages.Parent = Me.BtnHCE
+        Me.BtnHCE.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnHCE.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnHCE.ForeColor = System.Drawing.Color.White
+        Me.BtnHCE.HoverState.Parent = Me.BtnHCE
+        Me.BtnHCE.Location = New System.Drawing.Point(49, 3)
+        Me.BtnHCE.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
+        Me.BtnHCE.Name = "BtnHCE"
+        Me.BtnHCE.ShadowDecoration.Parent = Me.BtnHCE
+        Me.BtnHCE.Size = New System.Drawing.Size(188, 36)
+        Me.BtnHCE.TabIndex = 117
+        Me.BtnHCE.Text = "Historial Clínico"
         '
-        'Btn_Aceptar
+        'BtnCancelar
         '
-        Me.Btn_Aceptar.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_Aceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Aceptar.FlatAppearance.BorderSize = 0
-        Me.Btn_Aceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Aceptar.Image = Global.Presentacion.My.Resources.Resources.BtnAceptar
-        Me.Btn_Aceptar.Location = New System.Drawing.Point(740, 744)
-        Me.Btn_Aceptar.Margin = New System.Windows.Forms.Padding(0)
-        Me.Btn_Aceptar.Name = "Btn_Aceptar"
-        Me.Btn_Aceptar.Size = New System.Drawing.Size(162, 54)
-        Me.Btn_Aceptar.TabIndex = 1
-        Me.Btn_Aceptar.UseVisualStyleBackColor = False
+        Me.BtnCancelar.Animated = True
+        Me.BtnCancelar.AutoRoundedCorners = True
+        Me.BtnCancelar.BorderRadius = 17
+        Me.BtnCancelar.CheckedState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.CustomImages.Parent = Me.BtnCancelar
+        Me.BtnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnCancelar.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelar.HoverState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.Location = New System.Drawing.Point(49, 734)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
+        Me.BtnCancelar.Size = New System.Drawing.Size(147, 36)
+        Me.BtnCancelar.TabIndex = 116
+        Me.BtnCancelar.Text = "Cancelar"
+        '
+        'BtnAceptar
+        '
+        Me.BtnAceptar.Animated = True
+        Me.BtnAceptar.AutoRoundedCorners = True
+        Me.BtnAceptar.BorderRadius = 17
+        Me.BtnAceptar.CheckedState.Parent = Me.BtnAceptar
+        Me.BtnAceptar.CustomImages.Parent = Me.BtnAceptar
+        Me.BtnAceptar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnAceptar.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnAceptar.ForeColor = System.Drawing.Color.White
+        Me.BtnAceptar.HoverState.Parent = Me.BtnAceptar
+        Me.BtnAceptar.Location = New System.Drawing.Point(749, 734)
+        Me.BtnAceptar.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
+        Me.BtnAceptar.Name = "BtnAceptar"
+        Me.BtnAceptar.ShadowDecoration.Parent = Me.BtnAceptar
+        Me.BtnAceptar.Size = New System.Drawing.Size(147, 36)
+        Me.BtnAceptar.TabIndex = 115
+        Me.BtnAceptar.Text = "Aceptar"
         '
         'DgvSintomas
         '
@@ -174,7 +186,6 @@ Partial Class F_Sintomas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.BackgroundImage = Global.Presentacion.My.Resources.Resources.Síntomas_Panel
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1920, 1080)
         Me.Controls.Add(Me.LeftPanel)
@@ -189,10 +200,10 @@ Partial Class F_Sintomas
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Btn_HC As Button
     Friend WithEvents lbl_SintomasIng As Label
     Friend WithEvents LeftPanel As Panel
-    Friend WithEvents Btn_Cancelar As Button
-    Friend WithEvents Btn_Aceptar As Button
     Friend WithEvents DgvSintomas As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents BtnHCE As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnCancelar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnAceptar As Guna.UI2.WinForms.Guna2Button
 End Class

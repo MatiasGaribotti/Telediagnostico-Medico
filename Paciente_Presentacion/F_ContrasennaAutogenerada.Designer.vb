@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class F_ContrasennaAutogenerada
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,15 @@ Partial Class F_ContrasennaAutogenerada
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TxtNewPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TxtConfirmPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblContraseña = New System.Windows.Forms.Label()
         Me.LblConfirm = New System.Windows.Forms.Label()
         Me.LblSeDetecto = New System.Windows.Forms.Label()
-        Me.Btn_Aceptar = New System.Windows.Forms.Button()
-        Me.Btn_Cancelar = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnAceptar = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'TxtNewPassword
@@ -109,35 +109,43 @@ Partial Class F_ContrasennaAutogenerada
         Me.LblSeDetecto.TabIndex = 16
         Me.LblSeDetecto.Text = "Se detectó una contraseña autogenerada"
         '
-        'Btn_Aceptar
+        'BtnCancelar
         '
-        Me.Btn_Aceptar.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_Aceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Aceptar.FlatAppearance.BorderSize = 0
-        Me.Btn_Aceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Aceptar.Image = Global.Presentacion.My.Resources.Resources.BtnAceptar
-        Me.Btn_Aceptar.Location = New System.Drawing.Point(438, 134)
-        Me.Btn_Aceptar.Margin = New System.Windows.Forms.Padding(0)
-        Me.Btn_Aceptar.Name = "Btn_Aceptar"
-        Me.Btn_Aceptar.Size = New System.Drawing.Size(178, 38)
-        Me.Btn_Aceptar.TabIndex = 17
-        Me.Btn_Aceptar.UseVisualStyleBackColor = False
+        Me.BtnCancelar.Animated = True
+        Me.BtnCancelar.AutoRoundedCorners = True
+        Me.BtnCancelar.BorderRadius = 17
+        Me.BtnCancelar.CheckedState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.CustomImages.Parent = Me.BtnCancelar
+        Me.BtnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnCancelar.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelar.HoverState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.Location = New System.Drawing.Point(321, 143)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
+        Me.BtnCancelar.Size = New System.Drawing.Size(147, 36)
+        Me.BtnCancelar.TabIndex = 118
+        Me.BtnCancelar.Text = "Cancelar"
         '
-        'Btn_Cancelar
+        'BtnAceptar
         '
-        Me.Btn_Cancelar.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Cancelar.FlatAppearance.BorderSize = 0
-        Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Cancelar.Image = Global.Presentacion.My.Resources.Resources.BtnCancelar
-        Me.Btn_Cancelar.Location = New System.Drawing.Point(616, 134)
-        Me.Btn_Cancelar.Margin = New System.Windows.Forms.Padding(0)
-        Me.Btn_Cancelar.Name = "Btn_Cancelar"
-        Me.Btn_Cancelar.Size = New System.Drawing.Size(178, 38)
-        Me.Btn_Cancelar.TabIndex = 18
-        Me.Btn_Cancelar.UseVisualStyleBackColor = False
+        Me.BtnAceptar.Animated = True
+        Me.BtnAceptar.AutoRoundedCorners = True
+        Me.BtnAceptar.BorderRadius = 17
+        Me.BtnAceptar.CheckedState.Parent = Me.BtnAceptar
+        Me.BtnAceptar.CustomImages.Parent = Me.BtnAceptar
+        Me.BtnAceptar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnAceptar.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnAceptar.ForeColor = System.Drawing.Color.White
+        Me.BtnAceptar.HoverState.Parent = Me.BtnAceptar
+        Me.BtnAceptar.Location = New System.Drawing.Point(486, 143)
+        Me.BtnAceptar.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
+        Me.BtnAceptar.Name = "BtnAceptar"
+        Me.BtnAceptar.ShadowDecoration.Parent = Me.BtnAceptar
+        Me.BtnAceptar.Size = New System.Drawing.Size(147, 36)
+        Me.BtnAceptar.TabIndex = 117
+        Me.BtnAceptar.Text = "Aceptar"
         '
         'F_ContrasennaAutogenerada
         '
@@ -145,8 +153,8 @@ Partial Class F_ContrasennaAutogenerada
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(804, 218)
-        Me.Controls.Add(Me.Btn_Cancelar)
-        Me.Controls.Add(Me.Btn_Aceptar)
+        Me.Controls.Add(Me.BtnCancelar)
+        Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.LblSeDetecto)
         Me.Controls.Add(Me.LblConfirm)
         Me.Controls.Add(Me.LblContraseña)
@@ -165,6 +173,6 @@ Partial Class F_ContrasennaAutogenerada
     Friend WithEvents LblContraseña As Label
     Friend WithEvents LblConfirm As Label
     Friend WithEvents LblSeDetecto As Label
-    Friend WithEvents Btn_Aceptar As Button
-    Friend WithEvents Btn_Cancelar As Button
+    Friend WithEvents BtnCancelar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnAceptar As Guna.UI2.WinForms.Guna2Button
 End Class

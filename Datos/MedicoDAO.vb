@@ -6,82 +6,82 @@ Public Class MedicoDAO
 
     Public Sub Insert(medico As Medico)
 
-        Dim rs As Recordset
+        'Dim rs As Recordset
 
-        ' Sentencia para ingresar la direccion
-        Dim insertDireccion = "INSERT INTO direcciones" &
-                               "(calle, numero, localidad, departamento, detalle)" &
-                               "VALUES ('" &
-                               medico.Direccion.Calle & "'," &
-                               medico.Direccion.Nro & ",'" &
-                               medico.Direccion.Localidad & "','" &
-                               medico.Direccion.Departamento & "','" &
-                               medico.Direccion.Detalle & "');"
+        '' Sentencia para ingresar la direccion
+        'Dim insertDireccion = "INSERT INTO direcciones" &
+        '                       "(calle, numero, localidad, departamento, detalle)" &
+        '                       "VALUES ('" &
+        '                       medico.Direccion.Calle & "'," &
+        '                       medico.Direccion.Nro & ",'" &
+        '                       medico.Direccion.Localidad & "','" &
+        '                       medico.Direccion.Departamento & "','" &
+        '                       medico.Direccion.Detalle & "');"
 
-        ' Consulta para obtener el id de la dirección ingresada
-        Dim getIdDireccion = "SELECT id FROM direcciones" &
-                              " WHERE calle='" & medico.Direccion.Calle & "'" &
-                              " AND numero='" & medico.Direccion.Nro & "'" &
-                              " AND localidad='" & medico.Direccion.Localidad & "'" &
-                              " AND departamento='" & medico.Direccion.Departamento & "';"
+        '' Consulta para obtener el id de la dirección ingresada
+        'Dim getIdDireccion = "SELECT id FROM direcciones" &
+        '                      " WHERE calle='" & medico.Direccion.Calle & "'" &
+        '                      " AND numero='" & medico.Direccion.Nro & "'" &
+        '                      " AND localidad='" & medico.Direccion.Localidad & "'" &
+        '                      " AND departamento='" & medico.Direccion.Departamento & "';"
 
-        'Abro la conexión con la base de datos
-        Try
-            Conn = Connect()
+        ''Abro la conexión con la base de datos
+        'Try
+        '    Conn = Connect()
 
-        Catch ex As Exception
-            Throw ex
-        End Try
+        'Catch ex As Exception
+        '    Throw ex
+        'End Try
 
-        Try
-            'Abro transacción
-            Conn.BeginTrans()
-            MsgBox(insertDireccion)
-            'Ingreso la dirección a la DB
-            Conn.Execute(insertDireccion)
+        'Try
+        '    'Abro transacción
+        '    Conn.BeginTrans()
+        '    MsgBox(insertDireccion)
+        '    'Ingreso la dirección a la DB
+        '    Conn.Execute(insertDireccion)
 
-            'Obtener idDireccion
-            MsgBox(getIdDireccion)
-            rs = Conn.Execute(getIdDireccion)
-            MsgBox("ID Direccion: " & rs.Fields("id").Value)
-            Dim idDireccion As Integer = rs.Fields("id").Value
+        '    'Obtener idDireccion
+        '    MsgBox(getIdDireccion)
+        '    rs = Conn.Execute(getIdDireccion)
+        '    MsgBox("ID Direccion: " & rs.Fields("id").Value)
+        '    Dim idDireccion As Integer = rs.Fields("id").Value
 
-            ' Sentencia para ingresar un paciente
-            Dim insertMedico = "INSERT INTO personas(" &
-                              "ci," &
-                              "nombre," &
-                              " apellidoP," &
-                              " apellidoM," &
-                              " fechaNacimiento," &
-                              " telefono," &
-                              " esMedico," &
-                              " especialidad," &
-                              " password," &
-                              " idDireccion)" &
-                              "VALUES(" &
-                              medico.Ci & ",'" &
-                              medico.Nombre & "','" &
-                              medico.ApellidoP & "','" &
-                              medico.ApellidoM & "','" &
-                              Format(medico.Fecha_Nacimiento, "yyyy-MM-dd") & "'," &
-                              medico.Telefono & "," &
-                              "True" & ",'" &
-                              medico.Especialidad & "','" &
-                              medico.Password & "'," &
-                              idDireccion &
-                              ");"
-            'Ingreso los datos del médico a la DB
-            Conn.Execute(insertMedico)
-            Conn.CommitTrans()
+        '    ' Sentencia para ingresar un paciente
+        '    Dim insertMedico = "INSERT INTO personas(" &
+        '                      "ci," &
+        '                      "nombre," &
+        '                      " apellidoP," &
+        '                      " apellidoM," &
+        '                      " fechaNacimiento," &
+        '                      " telefono," &
+        '                      " esMedico," &
+        '                      " especialidad," &
+        '                      " password," &
+        '                      " idDireccion)" &
+        '                      "VALUES(" &
+        '                      medico.Ci & ",'" &
+        '                      medico.Nombre & "','" &
+        '                      medico.ApellidoP & "','" &
+        '                      medico.ApellidoM & "','" &
+        '                      Format(medico.Fecha_Nacimiento, "yyyy-MM-dd") & "'," &
+        '                      medico.Telefono & "," &
+        '                      "True" & ",'" &
+        '                      medico.Especialidad & "','" &
+        '                      medico.Password & "'," &
+        '                      idDireccion &
+        '                      ");"
+        '    'Ingreso los datos del médico a la DB
+        '    Conn.Execute(insertMedico)
+        '    Conn.CommitTrans()
 
-        Catch ex As Exception
-            'Hubo una excepción, por lo que debo hacer un rollback
-            'para mantener la integridad de los datos.
-            Conn.RollbackTrans()
-            Throw New Exception("No se pudo insertar el médico.")
-        Finally
-            Conn.Close()
-        End Try
+        'Catch ex As Exception
+        '    'Hubo una excepción, por lo que debo hacer un rollback
+        '    'para mantener la integridad de los datos.
+        '    Conn.RollbackTrans()
+        '    Throw New Exception("No se pudo insertar el médico.")
+        'Finally
+        '    Conn.Close()
+        'End Try
     End Sub
 
     Public Function GetEmpleados() As DataTable

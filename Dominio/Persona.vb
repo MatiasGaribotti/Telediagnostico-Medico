@@ -14,7 +14,7 @@
     Public Property IsRRHH As Boolean
     Public Property IsRecepcionista As Boolean
 
-    Protected Sub New()
+    Public Sub New()
         Me.Ci = 11111111
         Me.Nombre = "Default"
         Me.ApellidoP = "Default"

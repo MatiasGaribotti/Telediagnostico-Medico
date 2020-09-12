@@ -86,7 +86,7 @@ Public Class F_Sintomas
             Return sintoma
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            Throw ex
         End Try
     End Function
 

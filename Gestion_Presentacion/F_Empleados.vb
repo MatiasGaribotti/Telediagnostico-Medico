@@ -146,12 +146,17 @@ Public Class F_Empleados
 
     Public Sub ConfigComboBox()
         Dim MedicoBUS As New MedicoBUS
-        Dim especialidades As List(Of Especialidad) = MedicoBUS.GetEspecialidades()
+        Try
+            Dim especialidades As List(Of Especialidad) = MedicoBUS.GetEspecialidades()
 
-        For Each i As Especialidad In especialidades
-            CmbBEspecialidades.Items.Add(i.Nombre)
-            CmbIEspecialidades.Items.Add(i.Nombre)
-        Next
+            For Each i As Especialidad In especialidades
+                CmbBEspecialidades.Items.Add(i.Nombre)
+                CmbIEspecialidades.Items.Add(i.Nombre)
+            Next
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 End Class
