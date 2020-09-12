@@ -29,6 +29,7 @@ Partial Class F_Sintomas
         Me.btn_minimizar = New System.Windows.Forms.Button()
         Me.btn_cerrar = New System.Windows.Forms.Button()
         Me.PnlSide = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtBEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TxtIEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblImportar = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -93,6 +94,7 @@ Partial Class F_Sintomas
         'PnlSide
         '
         Me.PnlSide.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.PnlSide.Controls.Add(Me.BtnCancelar)
         Me.PnlSide.Controls.Add(Me.TxtBEnfermedad)
         Me.PnlSide.Controls.Add(Me.TxtIEnfermedad)
         Me.PnlSide.Controls.Add(Me.LblImportar)
@@ -127,6 +129,28 @@ Partial Class F_Sintomas
         Me.PnlSide.ShadowDecoration.Parent = Me.PnlSide
         Me.PnlSide.Size = New System.Drawing.Size(573, 1080)
         Me.PnlSide.TabIndex = 23
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.Animated = True
+        Me.BtnCancelar.AutoRoundedCorners = True
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BorderRadius = 15
+        Me.BtnCancelar.CheckedState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.CustomImages.Parent = Me.BtnCancelar
+        Me.BtnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnCancelar.Font = New System.Drawing.Font("Roboto", 14.0!)
+        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelar.HoverState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.ImageSize = New System.Drawing.Size(0, 0)
+        Me.BtnCancelar.Location = New System.Drawing.Point(349, 568)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
+        Me.BtnCancelar.Size = New System.Drawing.Size(91, 32)
+        Me.BtnCancelar.TabIndex = 83
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.UseTransparentBackground = True
         '
         'TxtBEnfermedad
         '
@@ -211,6 +235,7 @@ Partial Class F_Sintomas
         Me.TxtImportar.Name = "TxtImportar"
         Me.TxtImportar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtImportar.PlaceholderText = ""
+        Me.TxtImportar.ReadOnly = True
         Me.TxtImportar.SelectedText = ""
         Me.TxtImportar.ShadowDecoration.Parent = Me.TxtImportar
         Me.TxtImportar.Size = New System.Drawing.Size(382, 32)
@@ -823,4 +848,5 @@ Partial Class F_Sintomas
     Friend WithEvents TxtIEnfermedad As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnCancelar As Guna.UI2.WinForms.Guna2Button
 End Class

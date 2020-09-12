@@ -3,11 +3,12 @@
 ## Funciones Incluidas
 
 ### Síntomas
-* [ ] Alta Síntoma
-* [ ] Modificacación de Síntoma
-* [ ] Baja Síntoma
-* [ ] Listar Síntomas
-* [ ] Búscar Síntoma
+* [X] Alta Síntoma
+* [X] Modificacación de Síntoma
+* [X] Baja Síntoma
+* [X] Listar Síntomas
+* [X] Búscar Síntoma
+* [ ] Importar Síntomas
 
 ### Enfermedades
 * [ ] Alta Enfermedad
@@ -15,6 +16,7 @@
 * [ ] Baja Enfermedad
 * [ ] Listar Enfermedades
 * [ ] Buscar Enfermedades
+* [ ] Importar Enfermedades
 
 ### Usuarios
 ##### Empleados

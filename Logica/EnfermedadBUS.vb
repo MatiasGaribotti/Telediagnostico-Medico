@@ -15,15 +15,24 @@ Public Class EnfermedadBUS
 
     End Sub
 
-    'Funcion que retorna la información de las enfermedades asociadas a un síntoma, si es que existen
+    ''' <summary>
+    ''' Funcion que retorna la información de las enfermedades asociadas a un síntoma, si es que existen
+    ''' </summary>
+    ''' <param name="enfermedades"></param>
+    ''' <returns></returns>
     Public Function GetInfoEnfermedades(enfermedades As List(Of Enfermedad)) As List(Of Enfermedad)
-        Dim DBEnfermedad As New EnfermedadDAO()
+        Dim EnfermedadDAO As New EnfermedadDAO()
         Dim found As New List(Of Enfermedad)
 
         'Veifico que existan las enfermedades y las agrego a la lista de enfermedades
         For Each enfermedad In enfermedades
-            Dim id = DBEnfermedad.GetEnfermedadByName(enfermedad.Nombre)
-            found.Add(New Enfermedad(id, enfermedad.Nombre))
+            Try
+                Dim id = EnfermedadDAO.GetEnfermedadByName(enfermedad.Nombre)
+                found.Add(New Enfermedad(id, enfermedad.Nombre))
+
+            Catch ex As Exception
+                Throw ex
+            End Try
         Next
         Return found
     End Function

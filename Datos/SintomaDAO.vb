@@ -8,7 +8,7 @@ Public Class SintomaDAO
     ''' </summary>
     ''' <param name="sintoma">Objeto síntoma a ingresar.</param>
     Public Sub Insert(sintoma As Sintoma)
-
+        Dim EnfermedadDAO As New EnfermedadDAO
         Dim recordSet As Recordset
         Dim idSintoma As Short
 
@@ -37,6 +37,7 @@ Public Class SintomaDAO
             idSintoma = recordSet.Fields("id").Value
 
             For Each enfermedad In sintoma.Enfermedades
+                enfermedad.Id = EnfermedadDAO.GetEnfermedadByName(enfermedad.Nombre)
                 AddSintomaEnfermedad(idSintoma, enfermedad.Id)
             Next
             Conn.CommitTrans()
@@ -64,8 +65,8 @@ Public Class SintomaDAO
         End Try
     End Sub
 
-    Public Sub DelSintomaEnfermedad(sintoma As Sintoma)
-        Dim query = "DELETE FROM enfermedades_sintomas WHERE idSintoma=" & sintoma.Id & ";"
+    Public Sub DelSintomaEnfermedad(idSintoma As Integer)
+        Dim query = "DELETE FROM enfermedades_sintomas WHERE idSintoma=" & idSintoma & ";"
         Try
             Conn.Execute(query)
         Catch ex As Exception
@@ -86,6 +87,63 @@ Public Class SintomaDAO
         Return dt
     End Function
 
+    ''' <summary>
+    ''' Obtiene de la base de datos aquellos síntomas que cumplan con los parámetros pasados.
+    ''' </summary>
+    ''' <param name="name">Parte del contenido del nombre del síntoma</param>
+    ''' <returns>Retorna un DataTable con los datos recuperados</returns>
+    Public Function GetSintomas(name As String) As DataTable
+        Try
+            Conn = Connect()
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Dim query = "SELECT id,nombre,descripcion,tipo FROM sintomas AS S WHERE ENABLED=1" & " AND nombre LIKE '%" & name & "%';"
+
+        Try
+            Dim rs = Conn.Execute(query)
+            Dim da As New OleDb.OleDbDataAdapter()
+            Dim dt As New DataTable
+            da.Fill(dt, rs)
+            Return dt
+
+        Catch ex As Exception
+            Throw ex
+        Finally
+            Conn.Close()
+        End Try
+    End Function
+
+    ''' <summary>
+    ''' Obtiene de la base de datos aquellos síntomas que cumplan con los parámetros pasados.
+    ''' </summary>
+    ''' <param name="type">Tipo de sítntoma.</param>
+    ''' <returns>Retorna un DataTable con los datos recuperados</returns>
+    Public Function GetSintomas(type As Sintoma.TiposSintomas) As DataTable
+        Try
+            Conn = Connect()
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Dim query = "SELECT id,nombre,descripcion,tipo FROM sintomas AS S WHERE ENABLED=1" & " AND S.tipo=" & type & ";"
+
+        Try
+            Dim rs = Conn.Execute(query)
+            Dim da As New OleDb.OleDbDataAdapter()
+            Dim dt As New DataTable
+            da.Fill(dt, rs)
+            Return dt
+
+        Catch ex As Exception
+            Throw ex
+        Finally
+            Conn.Close()
+        End Try
+    End Function
 
     ''' <summary>
     ''' Obtiene de la base de datos aquellos síntomas que cumplan con los parámetros pasados.
@@ -101,7 +159,7 @@ Public Class SintomaDAO
             Throw ex
         End Try
 
-        Dim query = "SELECT id,nombre,descripcion,tipo FROM sintomas  WHERE ENABLED=1" & " AND nombre LIKE '%" & name & "%'" & " AND s.tipo=" & type & ";"
+        Dim query = "SELECT id,nombre,descripcion,tipo FROM sintomas AS S WHERE ENABLED=1" & " AND nombre LIKE '%" & name & "%'" & " AND S.tipo=" & type & ";"
 
         Try
             Dim rs = Conn.Execute(query)
@@ -137,12 +195,22 @@ Public Class SintomaDAO
                                 "FROM sintomas AS S " &
                                 "LEFT JOIN enfermedades_sintomas AS ES " &
                                 "ON (S.ID = ES.idSintoma) " &
-                                "WHERE S.nombre LIKE '%" & name & "%' AND S.tipo=" & type & " "
+                                "JOIN enfermedades AS E " &
+                                "ON (ES.idEnfermedad = E.id) " &
+                                "WHERE S.nombre LIKE '%" & name & "%' AND S.tipo=" & type & " AND ("
+
+        Dim counter As Integer = 0
 
         For Each enfermedad As Enfermedad In enfermedades
-            query += " OR E.nombre LIKE '%" & enfermedad.Nombre & "%' "
+            If counter = 0 Then
+                query += " E.nombre LIKE '%" & enfermedad.Nombre & "%' "
+            Else
+                query += " OR E.nombre LIKE '%" & enfermedad.Nombre & "%' "
+
+            End If
+            counter += 1
         Next
-        query += "AND ENABLED=1 ORDER BY S.nombre;"
+        query += ") AND S.ENABLED=1 AND E.ENABLED=1 ORDER BY S.nombre;"
 
         Try
             Conn = Connect()
@@ -202,7 +270,7 @@ Public Class SintomaDAO
         Try
             Conn.BeginTrans()
             Conn.Execute(Updatequery)
-            DelSintomaEnfermedad(Conn)
+            DelSintomaEnfermedad(sintoma.Id)
 
             For Each enfermeadad In sintoma.Enfermedades
                 AddSintomaEnfermedad(sintoma.Id, enfermeadad.Id)
@@ -224,7 +292,7 @@ Public Class SintomaDAO
     ''' <returns>Retorna una lista de enfermedades asociadas al síntoma.</returns>
     Public Function GetEnfermedadesAsociadas(id As Short) As List(Of Enfermedad)
         Dim rs As New Recordset()
-        Dim query = "SELECT ES.idEnfermedad, E.nombre, E.urgencia FROM enfermedades_sintomas AS ES JOIN enfermedades AS E ON(ES.idEnfermedad = E.id) WHERE idSintoma=" & id & ";"
+        Dim query = "SELECT ES.idEnfermedad, E.nombre, E.descripcion, E.urgencia FROM enfermedades_sintomas AS ES JOIN enfermedades AS E ON(ES.idEnfermedad = E.id) WHERE idSintoma=" & id & ";"
         Dim enfermedades As New List(Of Enfermedad)
         Try
             Dim Conn = Connect()
@@ -238,9 +306,10 @@ Public Class SintomaDAO
             While Not rs.EOF
                 Dim idEnfermedad = CShort(rs.Fields("idEnfermedad").Value)
                 Dim nombre = rs.Fields("nombre").Value.ToString
-                Dim urgencia = rs.Fields("urgencia").Value
+                Dim descripcion = rs.Fields("descripcion").Value.ToString
+                Dim urgencia = [Enum].Parse(GetType(Enfermedad.Urgencias), rs.Fields("urgencia").Value)
 
-                enfermedades.Add(New Enfermedad(id, nombre, urgencia))
+                enfermedades.Add(New Enfermedad(id, nombre, descripcion, urgencia))
                 rs.MoveNext()
             End While
         Catch ex As Exception

@@ -87,7 +87,7 @@ Partial Class F_Enfermedades
         '
         Me.LblImportar.BackColor = System.Drawing.Color.Transparent
         Me.LblImportar.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblImportar.Location = New System.Drawing.Point(56, 692)
+        Me.LblImportar.Location = New System.Drawing.Point(56, 604)
         Me.LblImportar.Name = "LblImportar"
         Me.LblImportar.Size = New System.Drawing.Size(83, 27)
         Me.LblImportar.TabIndex = 106
@@ -110,7 +110,7 @@ Partial Class F_Enfermedades
         Me.TxtImportar.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.TxtImportar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtImportar.HoverState.Parent = Me.TxtImportar
-        Me.TxtImportar.Location = New System.Drawing.Point(236, 689)
+        Me.TxtImportar.Location = New System.Drawing.Point(236, 601)
         Me.TxtImportar.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.TxtImportar.Name = "TxtImportar"
         Me.TxtImportar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -132,7 +132,7 @@ Partial Class F_Enfermedades
         Me.BtnIngresar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnIngresar.ForeColor = System.Drawing.Color.White
         Me.BtnIngresar.HoverState.Parent = Me.BtnIngresar
-        Me.BtnIngresar.Location = New System.Drawing.Point(446, 564)
+        Me.BtnIngresar.Location = New System.Drawing.Point(446, 476)
         Me.BtnIngresar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnIngresar.Name = "BtnIngresar"
         Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
@@ -158,7 +158,7 @@ Partial Class F_Enfermedades
         Me.TxtIDescripcion.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.TxtIDescripcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtIDescripcion.HoverState.Parent = Me.TxtIDescripcion
-        Me.TxtIDescripcion.Location = New System.Drawing.Point(236, 470)
+        Me.TxtIDescripcion.Location = New System.Drawing.Point(236, 382)
         Me.TxtIDescripcion.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.TxtIDescripcion.Multiline = True
         Me.TxtIDescripcion.Name = "TxtIDescripcion"
@@ -173,7 +173,7 @@ Partial Class F_Enfermedades
         '
         Me.LblIDescripcion.BackColor = System.Drawing.Color.Transparent
         Me.LblIDescripcion.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIDescripcion.Location = New System.Drawing.Point(56, 470)
+        Me.LblIDescripcion.Location = New System.Drawing.Point(56, 382)
         Me.LblIDescripcion.Name = "LblIDescripcion"
         Me.LblIDescripcion.Size = New System.Drawing.Size(114, 27)
         Me.LblIDescripcion.TabIndex = 102
@@ -191,7 +191,7 @@ Partial Class F_Enfermedades
         Me.BtnImportar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnImportar.ForeColor = System.Drawing.Color.White
         Me.BtnImportar.HoverState.Parent = Me.BtnImportar
-        Me.BtnImportar.Location = New System.Drawing.Point(449, 748)
+        Me.BtnImportar.Location = New System.Drawing.Point(449, 660)
         Me.BtnImportar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnImportar.Name = "BtnImportar"
         Me.BtnImportar.ShadowDecoration.Parent = Me.BtnImportar
@@ -204,7 +204,7 @@ Partial Class F_Enfermedades
         '
         Me.LblIngresar.BackColor = System.Drawing.Color.Transparent
         Me.LblIngresar.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIngresar.Location = New System.Drawing.Point(56, 334)
+        Me.LblIngresar.Location = New System.Drawing.Point(56, 246)
         Me.LblIngresar.Margin = New System.Windows.Forms.Padding(3, 3, 3, 18)
         Me.LblIngresar.Name = "LblIngresar"
         Me.LblIngresar.Size = New System.Drawing.Size(88, 27)
@@ -226,7 +226,7 @@ Partial Class F_Enfermedades
         Me.CmbIUrgencia.HoverState.Parent = Me.CmbIUrgencia
         Me.CmbIUrgencia.ItemHeight = 30
         Me.CmbIUrgencia.ItemsAppearance.Parent = Me.CmbIUrgencia
-        Me.CmbIUrgencia.Location = New System.Drawing.Point(236, 418)
+        Me.CmbIUrgencia.Location = New System.Drawing.Point(236, 330)
         Me.CmbIUrgencia.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.CmbIUrgencia.Name = "CmbIUrgencia"
         Me.CmbIUrgencia.ShadowDecoration.Parent = Me.CmbIUrgencia
@@ -237,7 +237,7 @@ Partial Class F_Enfermedades
         '
         Me.LblIUrgencia.BackColor = System.Drawing.Color.Transparent
         Me.LblIUrgencia.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIUrgencia.Location = New System.Drawing.Point(56, 423)
+        Me.LblIUrgencia.Location = New System.Drawing.Point(56, 335)
         Me.LblIUrgencia.Name = "LblIUrgencia"
         Me.LblIUrgencia.Size = New System.Drawing.Size(86, 27)
         Me.LblIUrgencia.TabIndex = 94
@@ -247,7 +247,7 @@ Partial Class F_Enfermedades
         '
         Me.LblIEnfermedad.BackColor = System.Drawing.Color.Transparent
         Me.LblIEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIEnfermedad.Location = New System.Drawing.Point(56, 382)
+        Me.LblIEnfermedad.Location = New System.Drawing.Point(56, 294)
         Me.LblIEnfermedad.Name = "LblIEnfermedad"
         Me.LblIEnfermedad.Size = New System.Drawing.Size(116, 27)
         Me.LblIEnfermedad.TabIndex = 93
@@ -270,7 +270,7 @@ Partial Class F_Enfermedades
         Me.TxtIEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.TxtIEnfermedad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtIEnfermedad.HoverState.Parent = Me.TxtIEnfermedad
-        Me.TxtIEnfermedad.Location = New System.Drawing.Point(236, 379)
+        Me.TxtIEnfermedad.Location = New System.Drawing.Point(236, 291)
         Me.TxtIEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.TxtIEnfermedad.Name = "TxtIEnfermedad"
         Me.TxtIEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)

@@ -5,7 +5,7 @@ Public Class F_Sintomas
 
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
-
+        BtnCancelar.Visible = False
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
     End Sub
@@ -41,14 +41,16 @@ Public Class F_Sintomas
             Case Modos.Modificar
                 'Cargo el id en el nuevo síntoma
                 Try
+                    Dim EnfermedadBUS As New EnfermedadBUS
                     Dim sintoma = GetSintoma()
                     sintoma.Id = SintomaMod.Id
-                    sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
+                    sintoma.Enfermedades = EnfermedadBUS.GetInfoEnfermedades(sintoma.Enfermedades)
+
                     SintomaBUS.Modify(sintoma)
                     LoadDgv()
                     ClearFields()
                     MsgBox("Sintoma modificado correctamente.")
-                    Modo = Modos.Ingresar
+                    ChangeMode(Modos.Ingresar)
                 Catch ex As Exception
                     MsgBox(ex.Message)
 
@@ -98,7 +100,7 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub BtnBAddItem_Click(sender As Object, e As EventArgs) Handles BtnBAddItem.Click
-        If Not IsNothing(CmbBEnfermedad.Text) And Not CmbBEnfermedad.Text = "" Then
+        If Not String.IsNullOrEmpty(TxtBEnfermedad.Text) And Not String.IsNullOrWhiteSpace(TxtBEnfermedad.Text) Then
             CmbBEnfermedad.Items.Add(TxtBEnfermedad.Text)
             TxtBEnfermedad.Text = ""
         End If
@@ -142,9 +144,8 @@ Public Class F_Sintomas
         Dim SintomaBUS As New SintomaBUS()
         Dim sintoma As New Sintoma(nombre, tipo)
 
-        For item As Integer = 0 To CmbBEnfermedad.Items.Count - 1
-            Dim nombreEnfermedad As String = CmbIEnfermedad.Items.Item(item).ToString
-            SintomaBUS.AsociarEnfermedad(sintoma, New Enfermedad(nombreEnfermedad))
+        For Each enfermedad In CmbBEnfermedad.Items
+            SintomaBUS.AsociarEnfermedad(sintoma, New Enfermedad(enfermedad.ToString))
         Next
         Return sintoma
     End Function
@@ -176,9 +177,15 @@ Public Class F_Sintomas
     End Function
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
-        Modo = Modos.Modificar
+        ClearFields()
+        ChangeMode(Modos.Modificar)
         Dim sintoma = GetSintomaSelected()
-        sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
+        Try
+            sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
         'Variable que alamcena el síntoma que
         'se está modificando
@@ -194,7 +201,20 @@ Public Class F_Sintomas
         Next
     End Sub
 
-    Private Sub DgvSintomas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSintomas.CellDoubleClick
-        MsgBox(GetSintomaSelected.Id)
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+        ChangeMode(Modos.Ingresar)
+        ClearFields()
     End Sub
+
+    Private Sub ChangeMode(pMode As Modos)
+        Modo = pMode
+        BtnIngresar.Text = Modo.ToString
+
+        If pMode = Modos.Ingresar Then
+            BtnCancelar.Visible = False
+        Else
+            BtnCancelar.Visible = True
+        End If
+    End Sub
+
 End Class

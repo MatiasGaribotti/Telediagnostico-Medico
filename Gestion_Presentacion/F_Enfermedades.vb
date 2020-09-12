@@ -1,7 +1,34 @@
 ﻿Imports Dominio
 Imports Logica
+Imports System.Threading
 Public Class F_Enfermedades
     Private EnfermedadBUS As New EnfermedadBUS
+
+    Public Sub New()
+
+        Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
+    Private Sub F_Enfermedades_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CmbIUrgencia.DataSource = [Enum].GetValues(GetType(Enfermedad.Urgencias))
+        CmbBUrgencia.DataSource = [Enum].GetValues(GetType(Enfermedad.Urgencias))
+        LoadDgv()
+    End Sub
+
+    Public Sub LoadDgv()
+        Dim objEnfermedad As New Enfermedad()
+        Try
+            Dim dt As DataTable = EnfermedadBUS.GetEnfermedades()
+            DgvEnfermedades.DataSource = dt
+            DgvEnfermedades.Refresh()
+
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         F_ABM.Show()
@@ -40,21 +67,4 @@ Public Class F_Enfermedades
         TxtIDescripcion.ResetText()
     End Sub
 
-    Private Sub F_Enfermedades_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CmbIUrgencia.DataSource = [Enum].GetValues(GetType(Enfermedad.Urgencias))
-        CmbBUrgencia.DataSource = [Enum].GetValues(GetType(Enfermedad.Urgencias))
-        LoadDgv()
-    End Sub
-
-    Public Sub LoadDgv()
-        Dim objEnfermedad As New Enfermedad()
-        Try
-            Dim dt As DataTable = EnfermedadBUS.GetEnfermedades()
-            DgvEnfermedades.DataSource = dt
-            DgvEnfermedades.Refresh()
-
-        Catch ex As Exception
-            MsgBox(ex, MsgBoxStyle.Critical, "Error")
-        End Try
-    End Sub
 End Class

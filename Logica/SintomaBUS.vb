@@ -29,19 +29,28 @@ Public Class SintomaBUS
     Public Function GetSintomas(pattern As Sintoma) As DataTable
         Dim db As New SintomaDAO()
         Dim dt As DataTable
+        Try '=======================================
+            If pattern.Enfermedades.Count > 0 Then
+                dt = db.GetSintomas(pattern.Nombre, pattern.Tipo, pattern.Enfermedades)
+            Else
+                dt = db.GetSintomas(pattern.Nombre, pattern.Tipo)
+            End If
 
-        If pattern.Enfermedades.Count > 0 Then
-            dt = db.GetSintomas(pattern.Nombre, pattern.Tipo, pattern.Enfermedades)
-        Else
-            dt = db.GetSintomas(pattern.Nombre, pattern.Tipo)
-        End If
+        Catch ex As Exception
+            MsgBox(ex.Message & vbCrLf & ex.StackTrace)
+        End Try
 
         Return dt
     End Function
 
     Public Function GetEnfermedadesAsociadas(id As Short) As List(Of Enfermedad)
         Dim SintomaDAO As New SintomaDAO()
-        Return SintomaDAO.GetEnfermedadesAsociadas(id)
+        Try
+            Return SintomaDAO.GetEnfermedadesAsociadas(id)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     Public Sub Delete(id As Short)

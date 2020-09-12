@@ -53,19 +53,21 @@ Public MustInherit Class DBConnection
             SetConnectionString("paciente", "dbpacienteST")
 
         ElseIf Env.CurrentUser.IsMedico Then
-            SetConnectionString("medico", "dbmedicoST")
+            If Env.CurrentUser.IsAdministrador And Env.CurrentApp = Env.Apps.Gestion Then
+                SetConnectionString("administrador", "dbadminST")
+            Else
+                SetConnectionString("medico", "dbmedicoST")
 
-        ElseIf Env.CurrentUser.IsAdministrador Then
-            SetConnectionString("administrador", "dbadminST")
+            End If
 
         ElseIf Env.CurrentUser.IsRRHH Then
-            SetConnectionString("rrhh", "dbrrhhST")
+                SetConnectionString("rrhh", "dbrrhhST")
 
-        ElseIf Env.CurrentUser.IsRecepcionista Then
-            SetConnectionString("recepcionista", "dbrecepcionistaST")
+            ElseIf Env.CurrentUser.IsRecepcionista Then
+                SetConnectionString("recepcionista", "dbrecepcionistaST")
 
-        Else
-            SetConnectionString("system", "kHzRj1&5")
+            Else
+                SetConnectionString("system", "kHzRj1&5")
 
         End If
 
