@@ -12,6 +12,7 @@ Public Class F_Sintomas
 
     Private Property Modo As Modos = Modos.Ingresar
     Private Property SintomaMod As Sintoma
+    Private AdministradorBUS As New AdministradoBUS
     Private SintomaBUS As New SintomaBUS
 
     Private Enum Modos
@@ -30,7 +31,7 @@ Public Class F_Sintomas
             Case Modos.Ingresar
                 Try
                     Dim sintoma = GetSintoma()
-                    SintomaBUS.Insert(sintoma)
+                    AdministradorBUS.InsertSintoma(sintoma)
                     LoadDgv()
                     MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
                     ClearFields()
@@ -46,7 +47,7 @@ Public Class F_Sintomas
                     sintoma.Id = SintomaMod.Id
                     sintoma.Enfermedades = EnfermedadBUS.GetInfoEnfermedades(sintoma.Enfermedades)
 
-                    SintomaBUS.Modify(sintoma)
+                    AdministradorBUS.ModifySintoma(sintoma)
                     LoadDgv()
                     ClearFields()
                     MsgBox("Sintoma modificado correctamente.")
@@ -83,7 +84,7 @@ Public Class F_Sintomas
 
             For item As Integer = 0 To cant_enfermedades - 1
                 Dim nombreEnfermedad As String = CmbIEnfermedad.Items.Item(item).ToString
-                SintomaBUS.AsociarEnfermedad(sintoma, New Enfermedad(nombreEnfermedad))
+                AdministradorBUS.AsociarEnfermedad(sintoma, New Enfermedad(nombreEnfermedad))
             Next
             Return sintoma
 
@@ -145,7 +146,7 @@ Public Class F_Sintomas
         Dim sintoma As New Sintoma(nombre, tipo)
 
         For Each enfermedad In CmbBEnfermedad.Items
-            SintomaBUS.AsociarEnfermedad(sintoma, New Enfermedad(enfermedad.ToString))
+            AdministradorBUS.AsociarEnfermedad(sintoma, New Enfermedad(enfermedad.ToString))
         Next
         Return sintoma
     End Function
@@ -157,7 +158,7 @@ Public Class F_Sintomas
             Dim SintomaBUS As New SintomaBUS
 
             Try
-                SintomaBUS.Delete(idSintoma)
+                AdministradorBUS.DeleteSintoma(idSintoma)
                 MsgBox("Baja del síntoma efectuada correctamente.", MsgBoxStyle.Information)
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -181,7 +182,7 @@ Public Class F_Sintomas
         ChangeMode(Modos.Modificar)
         Dim sintoma = GetSintomaSelected()
         Try
-            sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
+            sintoma.Enfermedades = AdministradorBUS.GetEnfermedadesAsociadas(sintoma.Id)
 
         Catch ex As Exception
             MsgBox(ex.Message)

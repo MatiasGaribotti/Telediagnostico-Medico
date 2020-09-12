@@ -678,7 +678,7 @@ Partial Class F_Sintomas
         Me.BtnEliminar.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEliminar.ForeColor = System.Drawing.Color.White
         Me.BtnEliminar.HoverState.Parent = Me.BtnEliminar
-        Me.BtnEliminar.Location = New System.Drawing.Point(180, 58)
+        Me.BtnEliminar.Location = New System.Drawing.Point(180, 67)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.ShadowDecoration.Parent = Me.BtnEliminar
         Me.BtnEliminar.Size = New System.Drawing.Size(137, 36)
@@ -696,7 +696,7 @@ Partial Class F_Sintomas
         Me.BtnModificar.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModificar.ForeColor = System.Drawing.Color.White
         Me.BtnModificar.HoverState.Parent = Me.BtnModificar
-        Me.BtnModificar.Location = New System.Drawing.Point(23, 58)
+        Me.BtnModificar.Location = New System.Drawing.Point(23, 67)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.ShadowDecoration.Parent = Me.BtnModificar
         Me.BtnModificar.Size = New System.Drawing.Size(137, 36)
@@ -753,14 +753,14 @@ Partial Class F_Sintomas
         Me.DgvSintomas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DgvSintomas.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvSintomas.EnableHeadersVisualStyles = False
-        Me.DgvSintomas.GridColor = System.Drawing.Color.Gray
+        Me.DgvSintomas.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSintomas.Location = New System.Drawing.Point(23, 121)
         Me.DgvSintomas.Name = "DgvSintomas"
         Me.DgvSintomas.ReadOnly = True
@@ -775,7 +775,7 @@ Partial Class F_Sintomas
         Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
         Me.DgvSintomas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
         Me.DgvSintomas.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.DgvSintomas.ThemeStyle.GridColor = System.Drawing.Color.Gray
+        Me.DgvSintomas.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSintomas.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
         Me.DgvSintomas.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DgvSintomas.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -785,10 +785,10 @@ Partial Class F_Sintomas
         Me.DgvSintomas.ThemeStyle.ReadOnly = True
         Me.DgvSintomas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.DgvSintomas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvSintomas.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvSintomas.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DgvSintomas.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.DgvSintomas.ThemeStyle.RowsStyle.Height = 22
-        Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'F_Sintomas

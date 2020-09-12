@@ -3,19 +3,36 @@ Imports Logica
 Imports System.Threading
 Public Class F_Enfermedades
     Private EnfermedadBUS As New EnfermedadBUS
+    Private AdministradorBUS As New AdministradoBUS
+    Private Modo As Modos = Modos.Ingresar
 
+    Private Enum Modos
+        Ingresar
+        Modificar
+    End Enum
     Public Sub New()
 
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
+        BtnCancelar.Visible = False
     End Sub
+
     Private Sub F_Enfermedades_Load(sender As Object, e As EventArgs) Handles Me.Load
         CmbIUrgencia.DataSource = [Enum].GetValues(GetType(Enfermedad.Urgencias))
         CmbBUrgencia.DataSource = [Enum].GetValues(GetType(Enfermedad.Urgencias))
         LoadDgv()
+    End Sub
+    Private Sub ChangeMode(pMode As Modos)
+        Modo = pMode
+        BtnIngresar.Text = Modo.ToString
+
+        If pMode = Modos.Ingresar Then
+            BtnCancelar.Visible = False
+        Else
+            BtnCancelar.Visible = True
+        End If
     End Sub
 
     Public Sub LoadDgv()
@@ -36,13 +53,21 @@ Public Class F_Enfermedades
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
-
-        Dim enfermedad As Enfermedad = GetEnfermedad()
         Try
             ValidateFields()
-            EnfermedadBUS.Insert(enfermedad)
-            MsgBox("Enfermedad ingresada con éxito.", MsgBoxStyle.Information)
+            Dim enfermedad As Enfermedad = GetEnfermedad()
+            If Modo = Modos.Ingresar Then
+                AdministradorBUS.InsertEnfermedad(enfermedad)
+                MsgBox("Enfermedad ingresada con éxito.", MsgBoxStyle.Information)
+
+            ElseIf Modo = Modos.Modificar Then
+                AdministradorBUS.ModifyEnfermedad(enfermedad)
+                MsgBox("Enfermedad modificada con éxito.", MsgBoxStyle.Information, "Informacion")
+
+            End If
             ClearFields()
+            LoadDgv()
+
         Catch ex As Exception
             MsgBox(ex.Message)
 
@@ -51,20 +76,98 @@ Public Class F_Enfermedades
 
     'Función que valida los campos
     Private Sub ValidateFields()
+
     End Sub
 
     'Función que obtiene la información contenida en los campos
     Private Function GetEnfermedad() As Enfermedad
-        Dim urgencia As String = [Enum].Parse(GetType(Sintoma.TiposSintomas), CmbIUrgencia.SelectedIndex)
-        Dim enfermedad As New Enfermedad(TxtIEnfermedad.Text, TxtIDescripcion.Text, urgencia)
+        Dim urgencia As String = [Enum].Parse(GetType(Enfermedad.Urgencias), CmbIUrgencia.SelectedItem.ToString)
+        Dim enfermedad As New Enfermedad(TxtIEnfermedad.Text, TxtIDescripcion.Text, urgencia, ChkCronica.Checked)
 
         Return enfermedad
     End Function
 
-    Public Sub ClearFields()
+    Private Sub ClearFields()
         TxtIEnfermedad.ResetText()
-        CmbBUrgencia.SelectedIndex = 0
+        CmbBUrgencia.SelectedIndex = 1
         TxtIDescripcion.ResetText()
     End Sub
 
+    Private Sub LoadFields(pEnfermedad As Enfermedad)
+        TxtIEnfermedad.Text = pEnfermedad.Nombre
+        CmbIUrgencia.SelectedIndex = pEnfermedad.Urgencia
+        TxtIDescripcion.Text = pEnfermedad.Descripcion
+        ChkCronica.Checked = pEnfermedad.Cronica
+    End Sub
+
+    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+        ClearFields()
+        ChangeMode(Modos.Modificar)
+        Dim enfermedades = GetSelected()
+
+        If enfermedades.Count <> 1 Then
+            MsgBox("No se puede modificar más de una enfermedad a la vez.", MsgBoxStyle.Critical, "Error")
+        Else
+            LoadFields(enfermedades.First)
+            ChangeMode(Modos.Modificar)
+        End If
+    End Sub
+
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        Dim msg As String = " enfermedades eliminadas." & vbCrLf
+
+        Try
+            Dim enfermedades = GetSelected()
+            Dim count = enfermedades.Count
+            For Each enfermedad In enfermedades
+                Try
+                    AdministradorBUS.DeleteEnfermedad(enfermedad.Id)
+                Catch ex As Exception
+                    msg += ex.Message & enfermedad.Nombre & "." & vbCrLf
+                    count -= 1
+                End Try
+            Next
+            msg = count & msg
+
+            If msg.Contains("No se pudo") Then
+                MsgBox(msg, MsgBoxStyle.Exclamation, "Advertencia")
+            Else
+                MsgBox(msg, MsgBoxStyle.Information, "Información")
+            End If
+
+            LoadDgv()
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Obtiene las enfermedades de las filas seleccionadas.
+    ''' </summary>
+    ''' <returns>Retorna la lista de enfermedades contenidas en las filas seleccionadas.</returns>
+    Private Function GetSelected() As List(Of Enfermedad)
+        Dim enfermedades As New List(Of Enfermedad)
+        Dim rows = DgvEnfermedades.SelectedRows
+        Try
+            For i As Integer = 0 To rows.Count - 1
+                Dim cells = rows.Item(i).Cells
+
+                Dim id As Short = CShort(cells.Item(0).Value)
+                Dim nombre As String = cells.Item(1).Value.ToString
+                Dim cronica As Boolean = CBool(cells.Item(2).Value)
+                Dim urgencia As Enfermedad.Urgencias = [Enum].Parse(GetType(Enfermedad.Urgencias), cells.Item(3).Value.ToString)
+                Dim descripcion As String = cells.Item(4).Value.ToString
+
+                enfermedades.Add(New Enfermedad(id, nombre, descripcion, urgencia, cronica))
+            Next
+
+            Return enfermedades
+
+        Catch ex As Exception
+            Throw New Exception("No se pudieron obtener las enfermedades seleccionadas.")
+        End Try
+
+    End Function
 End Class

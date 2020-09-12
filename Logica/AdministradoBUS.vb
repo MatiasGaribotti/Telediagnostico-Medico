@@ -75,4 +75,92 @@ Public Class AdministradoBUS
 
         Return New Paciente(ci, nombre, apellidoP, apellidoM, direccionVO, telefono, fechaNacimiento, "", email)
     End Function
+
+    ''' <summary>
+    ''' Ingresa una nueva enfermedad al sistema.
+    ''' </summary>
+    ''' <param name="enfermedad">Enfermedad a ingresar.</param>
+    Public Sub InsertEnfermedad(enfermedad As Enfermedad)
+        Dim EnfermedadDAO As New EnfermedadDAO
+
+        ' Si la enfermedad no se está en la BD la ingreso
+        If Not EnfermedadDAO.ExistsEnfermedad(enfermedad.Nombre) Then
+            EnfermedadDAO.Insert(enfermedad)
+        Else
+            Throw New DuplicateNameException("La enfermedad ya se encuentra en el sistema.")
+        End If
+    End Sub
+
+    Public Sub ModifyEnfermedad(enfermedad As Enfermedad)
+
+    End Sub
+
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="id"></param>
+    Public Sub DeleteEnfermedad(id As Short)
+        Dim EnfermedadDAO As New EnfermedadDAO
+        Try
+            EnfermedadDAO.Delete(id)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+
+    Public Sub InsertSintoma(sintoma As Sintoma)
+
+        Dim DBSintoma As New SintomaDAO()
+        Dim objEnfermedad As New Enfermedad()
+
+        For Each enfermedad In GetEnfermedadesAsociadas(sintoma.Id)
+            sintoma.Enfermedades.Add(enfermedad)
+        Next
+
+        Try
+            DBSintoma.Insert(sintoma)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+    Public Sub AsociarEnfermedad(ByRef sintoma As Sintoma, enfermedad As Enfermedad)
+        sintoma.Enfermedades.Add(enfermedad)
+    End Sub
+
+    Public Function GetEnfermedadesAsociadas(id As Short) As List(Of Enfermedad)
+        Dim SintomaDAO As New SintomaDAO()
+        Try
+            Return SintomaDAO.GetEnfermedadesAsociadas(id)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Sub DeleteSintoma(idSintoma As Short)
+        Dim db As New SintomaDAO()
+        Try
+            db.Delete(idSintoma)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    Public Sub ModifySintoma(sintoma As Sintoma)
+
+        'Creo el objeto del sintoma con los datos modificados
+        Dim SintomaDAO As New SintomaDAO()
+
+        Try
+            SintomaDAO.Modify(sintoma)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
 End Class

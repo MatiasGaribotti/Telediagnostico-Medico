@@ -66,6 +66,20 @@ Public Class EnfermedadDAO
     End Function
 
     ''' <summary>
+    ''' Comprueba si una enfermedad existe o no en el sistema.
+    ''' </summary>
+    ''' <param name="pName">Nombre de la enfermedad</param>
+    ''' <returns>Retorna True si existe, de lo contrario False.</returns>
+    Public Function ExistsEnfermedad(pName As String) As Boolean
+        Try
+            GetEnfermedadByName(pName)
+            Return True
+        Catch ex As KeyNotFoundException
+            Return False
+        End Try
+    End Function
+
+    ''' <summary>
     ''' Ingresa una nueva enfermedad a la base de datos.
     ''' </summary>
     ''' <param name="enfermedad">Enfermedad a ingresar.</param>
@@ -79,8 +93,8 @@ Public Class EnfermedadDAO
             Throw ex
         End Try
 
-        Dim insertQuery = "INSERT INTO enfermedades(nombre, descripcion, urgencia) " &
-                              "VALUES('" & enfermedad.Nombre & "','" & enfermedad.Descripcion & "'," & enfermedad.Urgencia & ");"
+        Dim insertQuery = "INSERT INTO enfermedades(nombre, descripcion, urgencia, cronica) " &
+                              "VALUES('" & enfermedad.Nombre & "','" & enfermedad.Descripcion & "'," & enfermedad.Urgencia & ", " & enfermedad.Cronica & ");"
 
         Try
             Conn.Execute(insertQuery)
@@ -93,6 +107,24 @@ Public Class EnfermedadDAO
 
     End Sub
 
+    Public Sub Delete(id As Short)
+        Dim query = "UPDATE enfermedades SET ENABLED=0 WHERE id=" & id & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As ApplicationException
+            Throw ex
+        End Try
+
+        Try
+            Conn.Execute(query)
+        Catch ex As Exception
+            Throw New Exception("Error al eliminar la enfermedad .")
+        Finally
+            Conn.Close()
+        End Try
+    End Sub
+
     ''' <summary>
     ''' Función que obtiene las enferemedades desde la base de datos.
     ''' </summary>
@@ -103,7 +135,7 @@ Public Class EnfermedadDAO
         Dim dt As New DataTable
         Dim rs As Recordset
         Dim da As New OleDb.OleDbDataAdapter
-        Dim query = "SELECT id, nombre, descripcion, urgencia, cronica FROM enfermedades;"
+        Dim query = "SELECT id, nombre, cronica, urgencia, descripcion FROM enfermedades WHERE ENABLED=1;"
 
         Try
             Conn = Connect()
@@ -117,6 +149,9 @@ Public Class EnfermedadDAO
 
         Catch ex As Exception
             Throw New Exception("Error al intener obtener enfermedades.")
+
+        Finally
+            Conn.Close()
         End Try
 
         Return dt
