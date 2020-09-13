@@ -92,7 +92,14 @@ Public Class AdministradoBUS
     End Sub
 
     Public Sub ModifyEnfermedad(enfermedad As Enfermedad)
+        Dim EnfermedadDAO As New EnfermedadDAO
 
+        Try
+            EnfermedadDAO.Modify(enfermedad)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
 
@@ -148,6 +155,29 @@ Public Class AdministradoBUS
         Catch ex As Exception
             Throw ex
         End Try
+    End Sub
+
+    Public Sub DeleteSintoma(pSintomas As List(Of Sintoma))
+        Dim SintomaDAO As New SintomaDAO()
+        Dim count = pSintomas.Count
+
+        Dim msg As String = ""
+
+        For Each sintoma In pSintomas
+            Try
+                DeleteSintoma(sintoma.Id)
+
+            Catch ex As Exception
+                msg += ex.Message & sintoma.Nombre & "." & vbCrLf
+                count -= 1
+            End Try
+        Next
+
+        msg = count & msg
+
+        If msg.Contains("No se pudo") Then
+            Throw New Exception(msg)
+        End If
     End Sub
 
     Public Sub ModifySintoma(sintoma As Sintoma)

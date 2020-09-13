@@ -107,6 +107,23 @@ Public Class EnfermedadDAO
 
     End Sub
 
+    Public Sub Modify(enfermedad As Enfermedad)
+        Dim query = "UPDATE enfermedades SET nombre='" & enfermedad.Nombre & "', descripcion='" & enfermedad.Descripcion & "', urgencia=" & enfermedad.Urgencia & ", cronica=" & enfermedad.Cronica & " WHERE id=" & enfermedad.Id & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            Conn.Execute(query)
+        Catch ex As Exception
+            Throw New Exception("No se pudo modificar la enfermedad.")
+        End Try
+
+    End Sub
+
     Public Sub Delete(id As Short)
         Dim query = "UPDATE enfermedades SET ENABLED=0 WHERE id=" & id & ";"
 

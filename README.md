@@ -11,10 +11,10 @@
 * [ ] Importar Síntomas
 
 ### Enfermedades
-* [ ] Alta Enfermedad
-* [ ] Modificación de Enfermedad
-* [ ] Baja Enfermedad
-* [ ] Listar Enfermedades
+* [X] Alta Enfermedad
+* [X] Modificación de Enfermedad
+* [X] Baja Enfermedad
+* [X] Listar Enfermedades
 * [ ] Buscar Enfermedades
 * [ ] Importar Enfermedades
 

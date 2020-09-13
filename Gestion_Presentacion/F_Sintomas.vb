@@ -11,7 +11,7 @@ Public Class F_Sintomas
     End Sub
 
     Private Property Modo As Modos = Modos.Ingresar
-    Private Property SintomaMod As Sintoma
+    Private Property IdSintomaMod As Short
     Private AdministradorBUS As New AdministradoBUS
     Private SintomaBUS As New SintomaBUS
 
@@ -21,43 +21,21 @@ Public Class F_Sintomas
         Modificar
     End Enum
 
-    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
-        F_ABM.Show()
-        Me.Close()
+    Private Sub F_Sintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CmbITipo.DataSource = [Enum].GetValues(GetType(Sintoma.TiposSintomas))
+        CmbBTipo.DataSource = [Enum].GetValues(GetType(Sintoma.TiposSintomas))
+        LoadDgv()
     End Sub
 
-    Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
-        Select Case Modo
-            Case Modos.Ingresar
-                Try
-                    Dim sintoma = GetSintoma()
-                    AdministradorBUS.InsertSintoma(sintoma)
-                    LoadDgv()
-                    MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
-                    ClearFields()
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
+    Private Sub ChangeMode(pMode As Modos)
+        Modo = pMode
+        BtnIngresar.Text = Modo.ToString
 
-            Case Modos.Modificar
-                'Cargo el id en el nuevo síntoma
-                Try
-                    Dim EnfermedadBUS As New EnfermedadBUS
-                    Dim sintoma = GetSintoma()
-                    sintoma.Id = SintomaMod.Id
-                    sintoma.Enfermedades = EnfermedadBUS.GetInfoEnfermedades(sintoma.Enfermedades)
-
-                    AdministradorBUS.ModifySintoma(sintoma)
-                    LoadDgv()
-                    ClearFields()
-                    MsgBox("Sintoma modificado correctamente.")
-                    ChangeMode(Modos.Ingresar)
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-
-                Finally
-                End Try
-        End Select
+        If pMode = Modos.Ingresar Then
+            BtnCancelar.Visible = False
+        Else
+            BtnCancelar.Visible = True
+        End If
     End Sub
 
     Private Sub ValidateFields()
@@ -65,6 +43,17 @@ Public Class F_Sintomas
             Throw New NoNullAllowedException("El nombre del síntoma no puede ser vacío.")
 
         End If
+    End Sub
+
+    Public Sub LoadFields(sintoma As Sintoma)
+        TxtISintoma.Text = sintoma.Nombre
+        TxtIEnfermedad.Text = ""
+        CmbITipo.SelectedIndex = sintoma.Tipo - 1
+        TxtIDescripcion.Text = sintoma.Descripcion
+
+        For Each enf In sintoma.Enfermedades
+            CmbIEnfermedad.Items.Add(enf.Nombre)
+        Next
     End Sub
 
     Private Sub ClearFields()
@@ -93,39 +82,28 @@ Public Class F_Sintomas
         End Try
     End Function
 
+    Private Function GetSelected() As List(Of Sintoma)
+        Dim sintomas As New List(Of Sintoma)
+        Dim rows = DgvSintomas.SelectedRows
 
-    Private Sub F_Sintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CmbITipo.DataSource = [Enum].GetValues(GetType(Sintoma.TiposSintomas))
-        CmbBTipo.DataSource = [Enum].GetValues(GetType(Sintoma.TiposSintomas))
-        LoadDgv()
-    End Sub
 
-    Private Sub BtnBAddItem_Click(sender As Object, e As EventArgs) Handles BtnBAddItem.Click
-        If Not String.IsNullOrEmpty(TxtBEnfermedad.Text) And Not String.IsNullOrWhiteSpace(TxtBEnfermedad.Text) Then
-            CmbBEnfermedad.Items.Add(TxtBEnfermedad.Text)
-            TxtBEnfermedad.Text = ""
-        End If
+        Try
+            For i As Integer = 0 To rows.Count - 1
+                Dim cells = rows.Item(i).Cells
 
-    End Sub
+                Dim id As Short = CShort(cells.Item(0).Value)
+                Dim nombre As String = cells.Item(1).Value.ToString
+                Dim descripcion As String = cells.Item(2).Value.ToString
+                Dim tipo As Sintoma.TiposSintomas = [Enum].Parse(GetType(Sintoma.TiposSintomas), cells.Item(3).Value)
 
-    Private Sub BtnIAddItem_Click(sender As Object, e As EventArgs) Handles BtnIAddItem.Click
-        CmbIEnfermedad.Items.Add(TxtIEnfermedad.Text)
-        TxtIEnfermedad.Text = ""
-    End Sub
+                sintomas.Add(New Sintoma(id, nombre, descripcion, tipo))
+            Next
 
-    Private Sub BtnBDelItem_Click(sender As Object, e As EventArgs) Handles BtnBDelItem.Click
-        CmbBEnfermedad.Items.Remove(CmbBEnfermedad.SelectedItem)
-    End Sub
-
-    Private Sub BtnIDelItem_Click(sender As Object, e As EventArgs) Handles BtnIDelItem.Click
-        CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
-    End Sub
-
-    Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
-        Dim sintomaPattern = GetPatern()
-        Dim found As DataTable = SintomaBUS.GetSintomas(sintomaPattern)
-        LoadDgv(found)
-    End Sub
+            Return sintomas
+        Catch ex As Exception
+            Throw New Exception("No se pudieron obtener los síntomas seleccionados.")
+        End Try
+    End Function
 
     Public Sub LoadDgv()
         Dim dt As DataTable = SintomaBUS.GetSintomas()
@@ -151,71 +129,142 @@ Public Class F_Sintomas
         Return sintoma
     End Function
 
-    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-        Dim result = MsgBox("Está seguro de que desea eliminar el síntoma seleccionado?", MsgBoxStyle.YesNo)
-        If result.Equals(vbYes) Then
-            Dim idSintoma As Short = GetSintomaSelected().Id
-            Dim SintomaBUS As New SintomaBUS
+    Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
+        Select Case Modo
+            Case Modos.Ingresar
+                Try
+                    Dim sintoma = GetSintoma()
+                    AdministradorBUS.InsertSintoma(sintoma)
+                    LoadDgv()
+                    MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
+                    ClearFields()
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
 
+            Case Modos.Modificar
+                'Cargo el id en el nuevo síntoma
+                Try
+                    Dim EnfermedadBUS As New EnfermedadBUS
+                    Dim sintoma = GetSintoma()
+                    sintoma.Id = IdSintomaMod
+                    sintoma.Enfermedades = EnfermedadBUS.GetInfoEnfermedades(sintoma.Enfermedades)
+
+                    AdministradorBUS.ModifySintoma(sintoma)
+                    LoadDgv()
+                    ClearFields()
+                    MsgBox("Sintoma modificado correctamente.")
+                    ChangeMode(Modos.Ingresar)
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+
+                Finally
+                End Try
+        End Select
+    End Sub
+
+    Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
+        Dim sintomaPattern = GetPatern()
+        Dim found As DataTable = SintomaBUS.GetSintomas(sintomaPattern)
+        LoadDgv(found)
+    End Sub
+
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        Dim count = DgvSintomas.SelectedRows.Count
+        Dim confirmation As Boolean
+
+        If count = 1 Then
+            confirmation = MsgBox("Está seguro de que desea eliminar el síntoma seleccionado?", MsgBoxStyle.YesNo)
+        ElseIf count > 1 Then
+            confirmation = MsgBox("¿Está seguro de que desea eliminar los " & count & " sintomas seleccionados?", MsgBoxStyle.YesNo)
+
+        End If
+
+
+        If confirmation Then
             Try
-                AdministradorBUS.DeleteSintoma(idSintoma)
-                MsgBox("Baja del síntoma efectuada correctamente.", MsgBoxStyle.Information)
+                Dim sintomas = GetSelected()
+                Dim AdministradorBUS As New AdministradoBUS
+
+                Dim msg As String = " sintomas eliminados." & vbCrLf
+                For Each sintoma In sintomas
+                    Try
+                        AdministradorBUS.DeleteSintoma(sintoma.Id)
+
+                    Catch ex As Exception
+                        msg += ex.Message & sintoma.Nombre & "." & vbCrLf
+                        count -= 1
+                    End Try
+                Next
+
+                msg = count & msg
+
+                If msg.Contains("No se pudo") Then
+                    MsgBox(msg, MsgBoxStyle.Exclamation, "Advertencia")
+                Else
+                    MsgBox(msg, MsgBoxStyle.Information, "Información")
+                End If
+                LoadDgv()
+
             Catch ex As Exception
-                MsgBox(ex.Message)
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
             End Try
-            LoadDgv()
         End If
 
     End Sub
 
-    Private Function GetSintomaSelected() As Sintoma
-        Dim id = DgvSintomas.SelectedRows.Item(0).Cells.Item(0).Value
-        Dim nombre = DgvSintomas.SelectedRows.Item(0).Cells.Item(1).Value
-        Dim descripcion = DgvSintomas.SelectedRows.Item(0).Cells.Item(2).Value
-        Dim tipo = DgvSintomas.SelectedRows.Item(0).Cells.Item(3).Value
-
-        Return New Sintoma(id, nombre, descripcion, [Enum].Parse(GetType(Sintoma.TiposSintomas), tipo))
-    End Function
-
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         ClearFields()
         ChangeMode(Modos.Modificar)
-        Dim sintoma = GetSintomaSelected()
         Try
-            sintoma.Enfermedades = AdministradorBUS.GetEnfermedadesAsociadas(sintoma.Id)
+            Dim listSintomas = GetSelected()
+
+            If listSintomas.Count <> 1 Then
+                ChangeMode(Modos.Ingresar)
+                MsgBox("No se puede modificar más de un síntoma a la vez.", MsgBoxStyle.Exclamation, "Modificar Síntoma")
+            Else
+                Dim sintoma = listSintomas.First
+                sintoma.Enfermedades = AdministradorBUS.GetEnfermedadesAsociadas(sintoma.Id)
+                IdSintomaMod = sintoma.Id
+                LoadFields(sintoma)
+
+            End If
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+
         End Try
-
-        'Variable que alamcena el síntoma que
-        'se está modificando
-        SintomaMod = sintoma
-
-        TxtISintoma.Text = sintoma.Nombre
-        TxtIEnfermedad.Text = ""
-        CmbITipo.SelectedIndex = sintoma.Tipo - 1
-        TxtIDescripcion.Text = sintoma.Descripcion
-
-        For Each enf In sintoma.Enfermedades
-            CmbIEnfermedad.Items.Add(enf.Nombre)
-        Next
     End Sub
 
+
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
+        F_ABM.Show()
+        Me.Close()
+    End Sub
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
         ChangeMode(Modos.Ingresar)
         ClearFields()
     End Sub
 
-    Private Sub ChangeMode(pMode As Modos)
-        Modo = pMode
-        BtnIngresar.Text = Modo.ToString
-
-        If pMode = Modos.Ingresar Then
-            BtnCancelar.Visible = False
-        Else
-            BtnCancelar.Visible = True
+    Private Sub BtnBAddItem_Click(sender As Object, e As EventArgs) Handles BtnBAddItem.Click
+        If Not String.IsNullOrEmpty(TxtBEnfermedad.Text) And Not String.IsNullOrWhiteSpace(TxtBEnfermedad.Text) Then
+            CmbBEnfermedad.Items.Add(TxtBEnfermedad.Text)
+            TxtBEnfermedad.Text = ""
         End If
+
     End Sub
 
+    Private Sub BtnIAddItem_Click(sender As Object, e As EventArgs) Handles BtnIAddItem.Click
+        CmbIEnfermedad.Items.Add(TxtIEnfermedad.Text)
+        TxtIEnfermedad.Text = ""
+    End Sub
+
+    Private Sub BtnBDelItem_Click(sender As Object, e As EventArgs) Handles BtnBDelItem.Click
+        CmbBEnfermedad.Items.Remove(CmbBEnfermedad.SelectedItem)
+    End Sub
+
+    Private Sub BtnIDelItem_Click(sender As Object, e As EventArgs) Handles BtnIDelItem.Click
+        CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
+    End Sub
 End Class

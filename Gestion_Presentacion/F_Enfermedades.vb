@@ -5,6 +5,7 @@ Public Class F_Enfermedades
     Private EnfermedadBUS As New EnfermedadBUS
     Private AdministradorBUS As New AdministradoBUS
     Private Modo As Modos = Modos.Ingresar
+    Private IdEnfermedadMod As Short
 
     Private Enum Modos
         Ingresar
@@ -61,8 +62,10 @@ Public Class F_Enfermedades
                 MsgBox("Enfermedad ingresada con éxito.", MsgBoxStyle.Information)
 
             ElseIf Modo = Modos.Modificar Then
+                enfermedad.Id = IdEnfermedadMod
                 AdministradorBUS.ModifyEnfermedad(enfermedad)
                 MsgBox("Enfermedad modificada con éxito.", MsgBoxStyle.Information, "Informacion")
+                ChangeMode(Modos.Ingresar)
 
             End If
             ClearFields()
@@ -91,11 +94,12 @@ Public Class F_Enfermedades
         TxtIEnfermedad.ResetText()
         CmbBUrgencia.SelectedIndex = 1
         TxtIDescripcion.ResetText()
+        ChkCronica.Checked = False
     End Sub
 
     Private Sub LoadFields(pEnfermedad As Enfermedad)
         TxtIEnfermedad.Text = pEnfermedad.Nombre
-        CmbIUrgencia.SelectedIndex = pEnfermedad.Urgencia
+        CmbIUrgencia.SelectedIndex = pEnfermedad.Urgencia - 1
         TxtIDescripcion.Text = pEnfermedad.Descripcion
         ChkCronica.Checked = pEnfermedad.Cronica
     End Sub
@@ -103,14 +107,21 @@ Public Class F_Enfermedades
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         ClearFields()
         ChangeMode(Modos.Modificar)
-        Dim enfermedades = GetSelected()
+        Try
+            Dim enfermedades = GetSelected()
+            If enfermedades.Count <> 1 Then
+                MsgBox("No se puede modificar más de una enfermedad a la vez.", MsgBoxStyle.Critical, "Error")
+                ChangeMode(Modos.Ingresar)
+            Else
+                LoadFields(enfermedades.First)
+                IdEnfermedadMod = enfermedades.First.Id
+                ChangeMode(Modos.Modificar)
+            End If
 
-        If enfermedades.Count <> 1 Then
-            MsgBox("No se puede modificar más de una enfermedad a la vez.", MsgBoxStyle.Critical, "Error")
-        Else
-            LoadFields(enfermedades.First)
-            ChangeMode(Modos.Modificar)
-        End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
     End Sub
 
 
@@ -170,4 +181,9 @@ Public Class F_Enfermedades
         End Try
 
     End Function
+
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+        ChangeMode(Modos.Ingresar)
+        ClearFields()
+    End Sub
 End Class

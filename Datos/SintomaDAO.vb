@@ -247,7 +247,7 @@ Public Class SintomaDAO
         Try
             Conn.Execute(query)
         Catch ex As Exception
-            Throw New Exception("Error al eliminar síntoma.")
+            Throw New Exception("Error al eliminar el síntoma ")
         Finally
             Conn.Close()
         End Try
@@ -310,7 +310,7 @@ Public Class SintomaDAO
                 Dim urgencia = [Enum].Parse(GetType(Enfermedad.Urgencias), rs.Fields("urgencia").Value)
                 Dim cronica = CBool(rs.Fields("cronica").Value)
 
-                enfermedades.Add(New Enfermedad(id, nombre, descripcion, urgencia))
+                enfermedades.Add(New Enfermedad(id, nombre, descripcion, urgencia, cronica))
                 rs.MoveNext()
             End While
         Catch ex As Exception
