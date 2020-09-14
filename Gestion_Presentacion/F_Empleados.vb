@@ -11,10 +11,6 @@ Public Class F_Empleados
         ConfigMode()
     End Sub
 
-
-    Private especialidades As List(Of Especialidad)
-    Private empleado As Empleado
-
     ''' <summary>
     ''' Configura los controles de acuerdo con el usuario que a la ventana, dado que ciertos usuarios no pueden realizar determinadas tareas(Permisos en la base de datos).
     ''' </summary>
@@ -31,10 +27,22 @@ Public Class F_Empleados
 
     End Sub
 
-    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
-        F_ABM.Show()
-        Me.Close()
+    Public Sub ClearFields()
+        TxtICi.ResetText()
+        TxtINombre.ResetText()
+        TxtIApellidoP.ResetText()
+        TxtIApellidoM.ResetText()
+        DTPickerFNac.Value = Date.Now
+        TxtICalle.ResetText()
+        TxtINumero.ResetText()
+        TxtIDetalle.ResetText()
+        TxtILocalidad.ResetText()
+        CmbIDepartamento.SelectedIndex = 1
+        TxtITelefono.ResetText()
+        CmbIRol.SelectedIndex = 1
+        CmbIngresadasEspecialidades.Items.Clear()
     End Sub
+
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         Dim EmpleadoBUS As New EmpleadoBUS
@@ -49,12 +57,27 @@ Public Class F_Empleados
                                      TxtINumero.Text,
                                      TxtILocalidad.Text,
                                      TxtITelefono.Text,
-                                     CmbRol.SelectedItem.ToString
+                                     CmbIRol.SelectedItem.ToString
                                      )
             empleado = GetEmpleado()
             Dim RRHHBUS As New RRHHBUS
             RRHHBUS.InsertEmployee(empleado)
             LoadDgv()
+
+            Dim exitMessage = " ingresado con éxito."
+            If empleado.IsMedico Then
+                exitMessage = "Medico" & exitMessage
+
+            ElseIf empleado.IsRRHH Then
+                exitMessage = "Personal de Recursos humanos" & exitMessage
+
+            ElseIf empleado.IsRecepcionista Then
+                exitMessage = "Recepcionista" & exitMessage
+
+            End If
+
+            MsgBox(exitMessage, MsgBoxStyle.Information, "Empleado Ingresado")
+            ClearFields()
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
@@ -78,7 +101,7 @@ Public Class F_Empleados
         Dim password = Logica.Password.Generate(New Random)
 
 
-        If CmbRol.SelectedItem = "Medico" Then
+        If CmbIRol.SelectedItem = "Medico" Then
             Dim especialidades As New List(Of Especialidad)
 
             For Each item In CmbIngresadasEspecialidades.Items
@@ -88,11 +111,11 @@ Public Class F_Empleados
 
         Else
 
-            EmpleadoVO = New Empleado(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, password)
-            If CmbRol.SelectedItem = "Recursos_Humanos" Then
-                EmpleadoVO.IsRRHH = True
-            ElseIf CmbRol.SelectedItem = "Recepcionista" Then
-                EmpleadoVO.IsRecepcionista = True
+            If CmbIRol.SelectedItem = "Recursos_Humanos" Then
+                EmpleadoVO = New RRHH(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, password)
+
+            ElseIf CmbIRol.SelectedItem = "Recepcionista" Then
+                EmpleadoVO = New Recepcionista(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, password)
             End If
         End If
 
@@ -100,10 +123,9 @@ Public Class F_Empleados
     End Function
 
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
-        ConfigRoles()
         ConfigComboBox()
         LoadDgv()
+        ConfigDgvAppearance()
     End Sub
 
     Private Sub BtnHorarios_Click(sender As Object, e As EventArgs) Handles BtnHorarios.Click
@@ -122,6 +144,18 @@ Public Class F_Empleados
         End Try
     End Sub
 
+    Private Sub ConfigDgvAppearance()
+        Dim fill As Integer = DgvMedicos.Width
+
+        DgvMedicos.Columns.Item(0).Width = 50
+        DgvMedicos.Columns.Item(1).Width = 130
+        DgvMedicos.Columns.Item(2).Width = 80
+        DgvMedicos.Columns.Item(3).Width = 80
+        DgvMedicos.Columns.Item(4).Width = 150
+        DgvMedicos.Columns.Item(5).Width = 300
+
+    End Sub
+
     Public Sub HideBooleansDgv()
         Dim count = DgvMedicos.Columns.Count
         DgvMedicos.Columns.Item(count - 1).Visible = False
@@ -131,22 +165,11 @@ Public Class F_Empleados
 
     End Sub
 
-    Private Sub CmbBRol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbBRol.SelectedIndexChanged
-        ' Si el rol seleccionado es el de médico, el ComboBox
-        ' de Especialidades se habilita
-
-    End Sub
-
-    Private Sub ConfigRoles()
-        Dim EmpleadoBUS As New EmpleadoBUS
-        Dim roles As List(Of String) = EmpleadoBUS.GetRoles()
-        CmbBRol.DataSource = roles
-        CmbRol.DataSource = roles
-    End Sub
-
     Public Sub ConfigComboBox()
         Dim MedicoBUS As New MedicoBUS
         Try
+            CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
+
             Dim especialidades As List(Of Especialidad) = MedicoBUS.GetEspecialidades()
 
             For Each i As Especialidad In especialidades
@@ -154,6 +177,20 @@ Public Class F_Empleados
                 CmbIEspecialidades.Items.Add(i.Nombre)
             Next
 
+            ' Roles
+            Dim EmpleadoBUS As New EmpleadoBUS
+
+            ' Es necesario que llame a GetRoles dos veces
+            ' para que no se me linkeen los datasources y
+            ' cuando cambie el item seleccionado en uno
+            ' también cambie en el otro.
+
+            Dim rolesIngreso As List(Of String) = EmpleadoBUS.GetRoles()
+            Dim rolesBuscar As List(Of String) = EmpleadoBUS.GetRoles()
+            rolesBuscar.Insert(0, "Todos")
+
+            CmbIRol.DataSource = rolesIngreso
+            CmbBRol.DataSource = rolesBuscar
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -166,5 +203,27 @@ Public Class F_Empleados
 
     Private Sub BtnDelEspecialidad_Click(sender As Object, e As EventArgs) Handles BtnDelEspecialidad.Click
         CmbIngresadasEspecialidades.Items.RemoveAt(CmbIngresadasEspecialidades.SelectedIndex)
+    End Sub
+
+    Private Sub CmbRol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbIRol.SelectedIndexChanged
+        If CmbIRol.SelectedItem.ToString = "Medico" Then
+            CmbIEspecialidades.Enabled = True
+            CmbIngresadasEspecialidades.Enabled = True
+            BtnAddEspecialidad.Enabled = True
+            BtnDelEspecialidad.Enabled = True
+        Else
+            CmbIEspecialidades.Enabled = False
+            CmbIngresadasEspecialidades.Enabled = False
+            BtnAddEspecialidad.Enabled = False
+            BtnDelEspecialidad.Enabled = False
+        End If
+    End Sub
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
+        F_ABM.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+
     End Sub
 End Class

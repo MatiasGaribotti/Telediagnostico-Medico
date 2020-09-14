@@ -38,6 +38,7 @@
                    fecha_nacimiento,
                    password)
         IsEmpleado = True
+        Horarios = New List(Of Horario)
     End Sub
 
     Public Sub New(ci As Integer,

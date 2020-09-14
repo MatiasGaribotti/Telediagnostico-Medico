@@ -35,13 +35,14 @@ Partial Class F_Empleados
         Me.BtnEliminar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnModificar = New Guna.UI2.WinForms.Guna2Button()
         Me.pnl_ingresarFiltrar = New System.Windows.Forms.Panel()
+        Me.BtnVolver = New Guna.UI2.WinForms.Guna2Button()
         Me.CmbIEspecialidades = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TxtBTelefono = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CmbBRol = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.LblBRol = New System.Windows.Forms.Label()
         Me.TxtIDetalle = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.CmbRol = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CmbIRol = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.lblRol = New System.Windows.Forms.Label()
         Me.BtnHorarios = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
@@ -65,7 +66,6 @@ Partial Class F_Empleados
         Me.TxtINombre = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtb_nombresF = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtb_ciF = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.BtnVolver = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_fecha = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -132,7 +132,6 @@ Partial Class F_Empleados
         Me.DgvMedicos.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvMedicos.EnableHeadersVisualStyles = False
         Me.DgvMedicos.GridColor = System.Drawing.Color.Gray
-        Me.DgvMedicos.MultiSelect = False
         Me.DgvMedicos.Name = "DgvMedicos"
         Me.DgvMedicos.ReadOnly = True
         Me.DgvMedicos.RowHeadersVisible = False
@@ -240,13 +239,14 @@ Partial Class F_Empleados
         'pnl_ingresarFiltrar
         '
         Me.pnl_ingresarFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnVolver)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbIEspecialidades)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtBTelefono)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label2)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbBRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.LblBRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtIDetalle)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbRol)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbIRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lblRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnHorarios)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnFiltrar)
@@ -270,7 +270,6 @@ Partial Class F_Empleados
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtINombre)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_nombresF)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.txtb_ciF)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnVolver)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label1)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_fecha)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label3)
@@ -289,6 +288,20 @@ Partial Class F_Empleados
         Me.pnl_ingresarFiltrar.Controls.Add(Me.lbl_busqueda)
         resources.ApplyResources(Me.pnl_ingresarFiltrar, "pnl_ingresarFiltrar")
         Me.pnl_ingresarFiltrar.Name = "pnl_ingresarFiltrar"
+        '
+        'BtnVolver
+        '
+        Me.BtnVolver.Animated = True
+        Me.BtnVolver.AutoRoundedCorners = True
+        Me.BtnVolver.BorderRadius = 13
+        Me.BtnVolver.CheckedState.Parent = Me.BtnVolver
+        Me.BtnVolver.CustomImages.Parent = Me.BtnVolver
+        Me.BtnVolver.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnVolver, "BtnVolver")
+        Me.BtnVolver.ForeColor = System.Drawing.Color.White
+        Me.BtnVolver.HoverState.Parent = Me.BtnVolver
+        Me.BtnVolver.Name = "BtnVolver"
+        Me.BtnVolver.ShadowDecoration.Parent = Me.BtnVolver
         '
         'CmbIEspecialidades
         '
@@ -374,21 +387,21 @@ Partial Class F_Empleados
         Me.TxtIDetalle.SelectedText = ""
         Me.TxtIDetalle.ShadowDecoration.Parent = Me.TxtIDetalle
         '
-        'CmbRol
+        'CmbIRol
         '
-        Me.CmbRol.BackColor = System.Drawing.Color.Transparent
-        Me.CmbRol.BorderRadius = 6
-        Me.CmbRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmbRol.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbRol.FocusedState.Parent = Me.CmbRol
-        resources.ApplyResources(Me.CmbRol, "CmbRol")
-        Me.CmbRol.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmbRol.HoverState.Parent = Me.CmbRol
-        Me.CmbRol.ItemsAppearance.Parent = Me.CmbRol
-        Me.CmbRol.Name = "CmbRol"
-        Me.CmbRol.ShadowDecoration.Parent = Me.CmbRol
+        Me.CmbIRol.BackColor = System.Drawing.Color.Transparent
+        Me.CmbIRol.BorderRadius = 6
+        Me.CmbIRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbIRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbIRol.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CmbIRol.FocusedState.Parent = Me.CmbIRol
+        resources.ApplyResources(Me.CmbIRol, "CmbIRol")
+        Me.CmbIRol.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CmbIRol.HoverState.Parent = Me.CmbIRol
+        Me.CmbIRol.ItemsAppearance.Parent = Me.CmbIRol
+        Me.CmbIRol.Name = "CmbIRol"
+        Me.CmbIRol.ShadowDecoration.Parent = Me.CmbIRol
         '
         'lblRol
         '
@@ -796,22 +809,6 @@ Partial Class F_Empleados
         Me.txtb_ciF.SelectedText = ""
         Me.txtb_ciF.ShadowDecoration.Parent = Me.txtb_ciF
         '
-        'BtnVolver
-        '
-        Me.BtnVolver.Animated = True
-        Me.BtnVolver.BackColor = System.Drawing.Color.Transparent
-        Me.BtnVolver.BorderRadius = 16
-        Me.BtnVolver.CheckedState.Parent = Me.BtnVolver
-        Me.BtnVolver.CustomImages.Parent = Me.BtnVolver
-        Me.BtnVolver.FillColor = System.Drawing.Color.DarkCyan
-        resources.ApplyResources(Me.BtnVolver, "BtnVolver")
-        Me.BtnVolver.ForeColor = System.Drawing.Color.White
-        Me.BtnVolver.HoverState.Parent = Me.BtnVolver
-        Me.BtnVolver.Name = "BtnVolver"
-        Me.BtnVolver.ShadowDecoration.Enabled = True
-        Me.BtnVolver.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnVolver.ShadowDecoration.Parent = Me.BtnVolver
-        '
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
@@ -928,7 +925,6 @@ Partial Class F_Empleados
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents BtnVolver As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents cmb_sucursalesF As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents TxtITelefono As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TxtINumero As Guna.UI2.WinForms.Guna2TextBox
@@ -961,9 +957,10 @@ Partial Class F_Empleados
     Friend WithEvents CmbBRol As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents LblBRol As Label
     Friend WithEvents TxtIDetalle As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents CmbRol As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CmbIRol As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents lblRol As Label
     Friend WithEvents TxtBTelefono As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents CmbIEspecialidades As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents BtnVolver As Guna.UI2.WinForms.Guna2Button
 End Class

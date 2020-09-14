@@ -78,6 +78,8 @@
     <Compile Include="MedicoDAO.vb" />
     <Compile Include="PacienteDAO.vb" />
     <Compile Include="PersonaDAO.vb" />
+    <Compile Include="RecepcionistaDAO.vb" />
+    <Compile Include="RRHHDAO.vb" />
     <Compile Include="SintomaDAO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

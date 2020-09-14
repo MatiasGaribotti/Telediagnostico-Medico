@@ -9,6 +9,8 @@ Public Class RRHHBUS
 
 
     Public Sub InsertEmployee(pEmpleado As Empleado)
+        pEmpleado.Password = Password.Hash(pEmpleado.Password)
+
         If pEmpleado.IsMedico Then
             InsertMedico(pEmpleado)
         ElseIf pEmpleado.IsRRHH Then
@@ -63,6 +65,13 @@ Public Class RRHHBUS
     End Sub
 
     Public Sub InsertRRHH(pRRHH As RRHH)
+        Dim RRHHDAO As New RRHHDAO
+        Try
+            RRHHDAO.Insert(pRRHH)
+        Catch ex As Exception
+            Throw ex
+        End Try
+
     End Sub
 
     Public Sub ModifyRRHH(pRRHH As RRHH)
@@ -70,7 +79,12 @@ Public Class RRHHBUS
     End Sub
 
     Public Sub InsertRecepcionista(pRecepcionista As Recepcionista)
-
+        Dim RecepcionistaDAO As New RecepcionistaDAO
+        Try
+            RecepcionistaDAO.Insert(pRecepcionista)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     Public Sub ModifyRecepcionista(pRecepcionista As Recepcionista)

@@ -26,6 +26,10 @@ Partial Class F_Login
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Login))
         Me.PicBackground = New System.Windows.Forms.PictureBox()
         Me.Pnl_Login = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnAdm = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnRec = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnRRHH = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnChangeLang = New Guna.UI2.WinForms.Guna2Button()
         Me.PicLogin = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.LblPassword = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -38,7 +42,6 @@ Partial Class F_Login
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.PicBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_Login.SuspendLayout()
         CType(Me.PicLogin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +56,9 @@ Partial Class F_Login
         '
         'Pnl_Login
         '
+        Me.Pnl_Login.Controls.Add(Me.BtnAdm)
+        Me.Pnl_Login.Controls.Add(Me.BtnRec)
+        Me.Pnl_Login.Controls.Add(Me.BtnRRHH)
         Me.Pnl_Login.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Pnl_Login.Controls.Add(Me.BtnChangeLang)
         Me.Pnl_Login.Controls.Add(Me.PicLogin)
@@ -65,6 +71,60 @@ Partial Class F_Login
         resources.ApplyResources(Me.Pnl_Login, "Pnl_Login")
         Me.Pnl_Login.Name = "Pnl_Login"
         Me.Pnl_Login.ShadowDecoration.Parent = Me.Pnl_Login
+        '
+        'BtnAdm
+        '
+        Me.BtnAdm.Animated = True
+        Me.BtnAdm.AutoRoundedCorners = True
+        Me.BtnAdm.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAdm.BorderRadius = 15
+        Me.BtnAdm.CheckedState.Parent = Me.BtnAdm
+        Me.BtnAdm.CustomImages.Parent = Me.BtnAdm
+        Me.BtnAdm.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnAdm, "BtnAdm")
+        Me.BtnAdm.ForeColor = System.Drawing.Color.White
+        Me.BtnAdm.HoverState.Parent = Me.BtnAdm
+        Me.BtnAdm.Name = "BtnAdm"
+        Me.BtnAdm.ShadowDecoration.Parent = Me.BtnAdm
+        Me.BtnAdm.UseTransparentBackground = True
+        '
+        'BtnRec
+        '
+        Me.BtnRec.Animated = True
+        Me.BtnRec.AutoRoundedCorners = True
+        Me.BtnRec.BackColor = System.Drawing.Color.Transparent
+        Me.BtnRec.BorderRadius = 15
+        Me.BtnRec.CheckedState.Parent = Me.BtnRec
+        Me.BtnRec.CustomImages.Parent = Me.BtnRec
+        Me.BtnRec.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnRec, "BtnRec")
+        Me.BtnRec.ForeColor = System.Drawing.Color.White
+        Me.BtnRec.HoverState.Parent = Me.BtnRec
+        Me.BtnRec.Name = "BtnRec"
+        Me.BtnRec.ShadowDecoration.Parent = Me.BtnRec
+        Me.BtnRec.UseTransparentBackground = True
+        '
+        'BtnRRHH
+        '
+        Me.BtnRRHH.Animated = True
+        Me.BtnRRHH.AutoRoundedCorners = True
+        Me.BtnRRHH.BackColor = System.Drawing.Color.Transparent
+        Me.BtnRRHH.BorderRadius = 15
+        Me.BtnRRHH.CheckedState.Parent = Me.BtnRRHH
+        Me.BtnRRHH.CustomImages.Parent = Me.BtnRRHH
+        Me.BtnRRHH.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnRRHH, "BtnRRHH")
+        Me.BtnRRHH.ForeColor = System.Drawing.Color.White
+        Me.BtnRRHH.HoverState.Parent = Me.BtnRRHH
+        Me.BtnRRHH.Name = "BtnRRHH"
+        Me.BtnRRHH.ShadowDecoration.Parent = Me.BtnRRHH
+        Me.BtnRRHH.UseTransparentBackground = True
+        '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        resources.ApplyResources(Me.Guna2HtmlLabel1, "Guna2HtmlLabel1")
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         '
         'BtnChangeLang
         '
@@ -208,12 +268,6 @@ Partial Class F_Login
         Me.Btn_Exit.Name = "Btn_Exit"
         Me.Btn_Exit.ShadowDecoration.Parent = Me.Btn_Exit
         '
-        'Guna2HtmlLabel1
-        '
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        resources.ApplyResources(Me.Guna2HtmlLabel1, "Guna2HtmlLabel1")
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        '
         'F_Login
         '
         resources.ApplyResources(Me, "$this")
@@ -250,4 +304,7 @@ Partial Class F_Login
     Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents BtnAdm As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnRec As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnRRHH As Guna.UI2.WinForms.Guna2Button
 End Class

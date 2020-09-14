@@ -48,4 +48,54 @@ Public Class F_Login
         Me.Close()
     End Sub
 
+    Private Sub BtnAdm_Click(sender As Object, e As EventArgs) Handles BtnAdm.Click
+        Try
+            Dim user = New Persona(CInt(12121212), "123")
+
+            If AuthenticationBUS.Authenticate(user) Then
+                'Abre el formulario de ABM y cierra este
+                F_ABM.Show()
+                Me.Close()
+            Else
+                MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
+        End Try
+    End Sub
+
+    Private Sub BtnRRHH_Click(sender As Object, e As EventArgs) Handles BtnRRHH.Click
+        Try
+            Dim user = New Persona(CInt(12162092), "123")
+
+            If AuthenticationBUS.Authenticate(user) Then
+                'Abre el formulario de ABM y cierra este
+                F_ABM.Show()
+                Me.Close()
+            Else
+                MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
+        End Try
+    End Sub
+
+    Private Sub BtnRec_Click(sender As Object, e As EventArgs) Handles BtnRec.Click
+        Try
+            Dim user = New Persona(CInt(15879868), "123")
+
+            If AuthenticationBUS.Authenticate(user) Then
+                'Abre el formulario de ABM y cierra este
+                F_ABM.Show()
+                Me.Close()
+            Else
+                MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
+        End Try
+    End Sub
 End Class

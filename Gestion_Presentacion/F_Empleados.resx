@@ -330,6 +330,36 @@
   <metadata name="pnl_ingresarFiltrar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="BtnVolver.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="BtnVolver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="BtnVolver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 15, 15</value>
+  </data>
+  <data name="BtnVolver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 29</value>
+  </data>
+  <data name="BtnVolver.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="BtnVolver.Text" xml:space="preserve">
+    <value>Volver</value>
+  </data>
+  <data name="&gt;&gt;BtnVolver.Name" xml:space="preserve">
+    <value>BtnVolver</value>
+  </data>
+  <data name="&gt;&gt;BtnVolver.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BtnVolver.Parent" xml:space="preserve">
+    <value>pnl_ingresarFiltrar</value>
+  </data>
+  <data name="&gt;&gt;BtnVolver.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="CmbIEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
@@ -358,7 +388,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbIEspecialidades.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="TxtBTelefono.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -385,7 +415,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtBTelefono.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -418,7 +448,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="CmbBRol.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -448,7 +478,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbBRol.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="LblBRol.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -481,7 +511,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;LblBRol.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="TxtIDetalle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -508,37 +538,37 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtIDetalle.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
-  <data name="CmbRol.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="CmbIRol.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
-  <data name="CmbRol.ItemHeight" type="System.Int32, mscorlib">
+  <data name="CmbIRol.ItemHeight" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="CmbRol.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="CmbIRol.Location" type="System.Drawing.Point, System.Drawing">
     <value>216, 834</value>
   </data>
-  <data name="CmbRol.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="CmbIRol.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="CmbRol.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CmbIRol.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 36</value>
   </data>
-  <data name="CmbRol.TabIndex" type="System.Int32, mscorlib">
+  <data name="CmbIRol.TabIndex" type="System.Int32, mscorlib">
     <value>117</value>
   </data>
-  <data name="&gt;&gt;CmbRol.Name" xml:space="preserve">
-    <value>CmbRol</value>
+  <data name="&gt;&gt;CmbIRol.Name" xml:space="preserve">
+    <value>CmbIRol</value>
   </data>
-  <data name="&gt;&gt;CmbRol.Type" xml:space="preserve">
+  <data name="&gt;&gt;CmbIRol.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;CmbRol.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CmbIRol.Parent" xml:space="preserve">
     <value>pnl_ingresarFiltrar</value>
   </data>
-  <data name="&gt;&gt;CmbRol.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;CmbIRol.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="lblRol.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -571,7 +601,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lblRol.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="BtnHorarios.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -598,7 +628,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnHorarios.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -628,7 +658,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="BtnIngresar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -655,7 +685,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnIngresar.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="BtnDelEspecialidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
@@ -682,7 +712,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnDelEspecialidad.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="BtnAddEspecialidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
@@ -709,7 +739,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnAddEspecialidad.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="DTPickerFNac.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -736,7 +766,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;DTPickerFNac.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="CmbIDepartamento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -766,7 +796,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbIDepartamento.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="CmbIngresadasEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -796,7 +826,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbIngresadasEspecialidades.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="CmbBEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 12pt</value>
@@ -826,7 +856,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbBEspecialidades.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="cmb_sucursalesF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -856,7 +886,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;cmb_sucursalesF.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="TxtITelefono.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -883,7 +913,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtITelefono.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="TxtINumero.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -910,7 +940,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtINumero.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="TxtICalle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -937,7 +967,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtICalle.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="TxtILocalidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -964,7 +994,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtILocalidad.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="TxtIApellidoP.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -991,7 +1021,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtIApellidoP.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="TxtIApellidoM.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1018,7 +1048,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtIApellidoM.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="txtb_apellidoPF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1045,7 +1075,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_apellidoPF.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="txtb_apellidoMF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1072,7 +1102,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_apellidoMF.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="TxtICi.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1099,7 +1129,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtICi.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="TxtINombre.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1126,7 +1156,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtINombre.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="txtb_nombresF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1153,7 +1183,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_nombresF.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>29</value>
   </data>
   <data name="txtb_ciF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1180,33 +1210,6 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_ciF.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="BtnVolver.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
-  </data>
-  <data name="BtnVolver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 22</value>
-  </data>
-  <data name="BtnVolver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 33</value>
-  </data>
-  <data name="BtnVolver.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="BtnVolver.Text" xml:space="preserve">
-    <value>Volver</value>
-  </data>
-  <data name="&gt;&gt;BtnVolver.Name" xml:space="preserve">
-    <value>BtnVolver</value>
-  </data>
-  <data name="&gt;&gt;BtnVolver.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BtnVolver.Parent" xml:space="preserve">
-    <value>pnl_ingresarFiltrar</value>
-  </data>
-  <data name="&gt;&gt;BtnVolver.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">

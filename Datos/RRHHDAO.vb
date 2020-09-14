@@ -1,0 +1,32 @@
+﻿Imports ADODB
+Imports Dominio
+Public Class RRHHDAO
+    Inherits EmpleadoDAO
+
+    Public Sub Insert(pRRHH As RRHH)
+        Dim query As String = "UPDATE personas SET esRRHH=1 WHERE ci=" & pRRHH.Ci & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            Conn.BeginTrans()
+
+            MyBase.InsertEmpleado(pRRHH)
+            Conn.Execute(query)
+
+            Conn.CommitTrans()
+        Catch ex As Exception
+            Conn.RollbackTrans()
+            Throw New Exception("Error al ingresar nuevo personal de RRHH.")
+
+        Finally
+            Conn.Close()
+        End Try
+
+
+    End Sub
+End Class
