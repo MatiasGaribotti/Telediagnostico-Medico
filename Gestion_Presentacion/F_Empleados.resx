@@ -657,58 +657,58 @@
   <data name="&gt;&gt;BtnIngresar.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="cbtn_menosEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="BtnDelEspecialidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
-  <data name="cbtn_menosEspecialidades.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BtnDelEspecialidad.Location" type="System.Drawing.Point, System.Drawing">
     <value>459, 922</value>
   </data>
-  <data name="cbtn_menosEspecialidades.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BtnDelEspecialidad.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 28</value>
   </data>
-  <data name="cbtn_menosEspecialidades.TabIndex" type="System.Int32, mscorlib">
+  <data name="BtnDelEspecialidad.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
   </data>
-  <data name="cbtn_menosEspecialidades.Text" xml:space="preserve">
+  <data name="BtnDelEspecialidad.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="&gt;&gt;cbtn_menosEspecialidades.Name" xml:space="preserve">
-    <value>cbtn_menosEspecialidades</value>
+  <data name="&gt;&gt;BtnDelEspecialidad.Name" xml:space="preserve">
+    <value>BtnDelEspecialidad</value>
   </data>
-  <data name="&gt;&gt;cbtn_menosEspecialidades.Type" xml:space="preserve">
+  <data name="&gt;&gt;BtnDelEspecialidad.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2CircleButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;cbtn_menosEspecialidades.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BtnDelEspecialidad.Parent" xml:space="preserve">
     <value>pnl_ingresarFiltrar</value>
   </data>
-  <data name="&gt;&gt;cbtn_menosEspecialidades.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BtnDelEspecialidad.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="cbtn_masEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="BtnAddEspecialidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
-  <data name="cbtn_masEspecialidades.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BtnAddEspecialidad.Location" type="System.Drawing.Point, System.Drawing">
     <value>459, 878</value>
   </data>
-  <data name="cbtn_masEspecialidades.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BtnAddEspecialidad.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 28</value>
   </data>
-  <data name="cbtn_masEspecialidades.TabIndex" type="System.Int32, mscorlib">
+  <data name="BtnAddEspecialidad.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <data name="cbtn_masEspecialidades.Text" xml:space="preserve">
+  <data name="BtnAddEspecialidad.Text" xml:space="preserve">
     <value>+</value>
   </data>
-  <data name="&gt;&gt;cbtn_masEspecialidades.Name" xml:space="preserve">
-    <value>cbtn_masEspecialidades</value>
+  <data name="&gt;&gt;BtnAddEspecialidad.Name" xml:space="preserve">
+    <value>BtnAddEspecialidad</value>
   </data>
-  <data name="&gt;&gt;cbtn_masEspecialidades.Type" xml:space="preserve">
+  <data name="&gt;&gt;BtnAddEspecialidad.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2CircleButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;cbtn_masEspecialidades.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BtnAddEspecialidad.Parent" xml:space="preserve">
     <value>pnl_ingresarFiltrar</value>
   </data>
-  <data name="&gt;&gt;cbtn_masEspecialidades.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BtnAddEspecialidad.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="DTPickerFNac.Font" type="System.Drawing.Font, System.Drawing">

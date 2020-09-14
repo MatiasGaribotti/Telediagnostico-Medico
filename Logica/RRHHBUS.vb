@@ -11,9 +11,11 @@ Public Class RRHHBUS
     Public Sub InsertEmployee(pEmpleado As Empleado)
         If pEmpleado.IsMedico Then
             InsertMedico(pEmpleado)
-        ElseIf pEmpleado.IsRecepcionista Then
-            insertRRHH(pEmpleado)
+        ElseIf pEmpleado.IsRRHH Then
+            InsertRRHH(pEmpleado)
 
+        ElseIf pEmpleado.IsRecepcionista Then
+            InsertRecepcionista(pEmpleado)
         End If
     End Sub
 
@@ -28,20 +30,39 @@ Public Class RRHHBUS
     Public Sub InsertMedico(medico As Medico)
         Try
             MedicoDAO = New MedicoDAO
-            MedicoDAO.Insert(medico)
 
+            For Each especialidad In medico.Especialidades
+                especialidad.Id = GetEspecialidad(especialidad.Nombre).Id
+
+            Next
+
+            MedicoDAO.Insert(medico)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    Private Function GetEspecialidad(pNombre As String) As Especialidad
+        Try
+            Dim dt = MedicoDAO.GetEspecialidad(pNombre)
+            Dim row = dt.Rows.Item(0)
+
+            Dim id As Short = row.Field(Of Integer)("id")
+            Dim nombre As String = row.Field(Of String)("nombre")
+
+            Return New Especialidad(id, nombre)
         Catch ex As Exception
             Throw ex
         End Try
 
-    End Sub
+
+    End Function
 
     Public Sub ModifyMedico(pMedico As Medico)
 
     End Sub
 
     Public Sub InsertRRHH(pRRHH As RRHH)
-
     End Sub
 
     Public Sub ModifyRRHH(pRRHH As RRHH)

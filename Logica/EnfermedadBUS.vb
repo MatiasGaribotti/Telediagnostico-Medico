@@ -33,4 +33,15 @@ Public Class EnfermedadBUS
         Return EnfermedadDAO.GetEnfermedades()
     End Function
 
+    Public Function GetEnfermedades(pattern As Enfermedad) As DataTable
+        Dim EnfermedadDAO As New EnfermedadDAO()
+        Try
+            Return EnfermedadDAO.GetEnfermedades(pattern.Nombre, pattern.Urgencia, pattern.Cronica)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Function
+
 End Class

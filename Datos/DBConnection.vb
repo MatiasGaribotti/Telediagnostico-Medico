@@ -2,7 +2,7 @@ Imports ADODB
 Imports Dominio
 Public MustInherit Class DBConnection
 
-    Protected Property Conn As Connection
+    Protected Shared Property Conn As Connection
     Private Property ConStr As String
 
     Public Sub New()

@@ -174,4 +174,34 @@ Public Class EnfermedadDAO
         Return dt
     End Function
 
+    Public Function GetEnfermedades(nombre As String, urgencia As Enfermedad.Urgencias, cronica As Boolean) As DataTable
+        Dim dt As New DataTable
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim query = "SELECT id, nombre, cronica, urgencia, descripcion FROM enfermedades WHERE ENABLED=1 AND " &
+            "nombre LIKE '%" & nombre & "%' AND " &
+            "urgencia=" & urgencia & " AND " &
+            "cronica=" & cronica & "" &
+            ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As ApplicationException
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+
+        Catch ex As Exception
+            Throw New Exception("Error al intener obtener enfermedades.")
+
+        Finally
+            Conn.Close()
+        End Try
+
+        Return dt
+    End Function
+
 End Class

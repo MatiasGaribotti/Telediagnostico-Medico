@@ -59,7 +59,7 @@ Public Class EmpleadoBUS
     End Function
 
     Public Function GetEmpleados() As DataTable
-        Dim db As New MedicoBUS
+        Dim db As New MedicoDAO
         Try
             Dim dt = db.GetEmpleados()
             Return dt

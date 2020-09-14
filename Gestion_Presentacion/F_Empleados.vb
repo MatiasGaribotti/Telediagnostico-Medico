@@ -49,7 +49,7 @@ Public Class F_Empleados
                                      TxtINumero.Text,
                                      TxtILocalidad.Text,
                                      TxtITelefono.Text,
-                                     CmbRol.SelectedText
+                                     CmbRol.SelectedItem.ToString
                                      )
             empleado = GetEmpleado()
             Dim RRHHBUS As New RRHHBUS
@@ -75,7 +75,7 @@ Public Class F_Empleados
         Dim departamento = [Enum].Parse(GetType(Direccion.Departamentos), CmbIDepartamento.SelectedItem)
         Dim direccion As New Direccion(calle, numero, localidad, departamento)
         Dim telefono = CInt(TxtITelefono.Text)
-        Dim password = Logica.Password.Hash(Logica.Password.Generate(New Random))
+        Dim password = Logica.Password.Generate(New Random)
 
 
         If CmbRol.SelectedItem = "Medico" Then
@@ -158,5 +158,13 @@ Public Class F_Empleados
             MsgBox(ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub BtnAddEspecialidad_Click(sender As Object, e As EventArgs) Handles BtnAddEspecialidad.Click
+        CmbIngresadasEspecialidades.Items.Add(CmbIEspecialidades.SelectedItem)
+    End Sub
+
+    Private Sub BtnDelEspecialidad_Click(sender As Object, e As EventArgs) Handles BtnDelEspecialidad.Click
+        CmbIngresadasEspecialidades.Items.RemoveAt(CmbIngresadasEspecialidades.SelectedIndex)
     End Sub
 End Class

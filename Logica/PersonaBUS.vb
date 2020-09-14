@@ -19,15 +19,23 @@ Public MustInherit Class PersonaBUS
             Throw New FormatException("La cédula de identidad debe tener una longitud de 8 dígitos.")
         End If
 
-        Dim sum As Integer
+        Dim validDigit As Integer
         For i As Integer = 0 To 6
             Dim CIdigit = Integer.Parse(ci.ElementAt(i))
             Dim ArrayDigit = Integer.Parse(matriz.ElementAt(i))
 
-            sum += CIdigit * ArrayDigit
+            validDigit += CIdigit * ArrayDigit
         Next
 
-        If sum <> verifyingDigit Then
+        If validDigit Mod 10 = 0 Then
+            validDigit = 0
+
+        Else
+            validDigit = 10 - (validDigit Mod 10)
+
+        End If
+
+        If validDigit <> verifyingDigit Then
             Throw New FormatException("La cédula ingresada no es válida.")
         End If
 

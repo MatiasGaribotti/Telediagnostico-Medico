@@ -46,8 +46,8 @@ Partial Class F_Empleados
         Me.BtnHorarios = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnFiltrar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
-        Me.cbtn_menosEspecialidades = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.cbtn_masEspecialidades = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.BtnDelEspecialidad = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.BtnAddEspecialidad = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.DTPickerFNac = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.CmbIDepartamento = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.CmbIngresadasEspecialidades = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -251,8 +251,8 @@ Partial Class F_Empleados
         Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnHorarios)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnFiltrar)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnIngresar)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.cbtn_menosEspecialidades)
-        Me.pnl_ingresarFiltrar.Controls.Add(Me.cbtn_masEspecialidades)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnDelEspecialidad)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnAddEspecialidad)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.DTPickerFNac)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbIDepartamento)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbIngresadasEspecialidades)
@@ -441,29 +441,29 @@ Partial Class F_Empleados
         Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
         Me.BtnIngresar.UseTransparentBackground = True
         '
-        'cbtn_menosEspecialidades
+        'BtnDelEspecialidad
         '
-        Me.cbtn_menosEspecialidades.CheckedState.Parent = Me.cbtn_menosEspecialidades
-        Me.cbtn_menosEspecialidades.CustomImages.Parent = Me.cbtn_menosEspecialidades
-        Me.cbtn_menosEspecialidades.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        resources.ApplyResources(Me.cbtn_menosEspecialidades, "cbtn_menosEspecialidades")
-        Me.cbtn_menosEspecialidades.ForeColor = System.Drawing.Color.White
-        Me.cbtn_menosEspecialidades.HoverState.Parent = Me.cbtn_menosEspecialidades
-        Me.cbtn_menosEspecialidades.Name = "cbtn_menosEspecialidades"
-        Me.cbtn_menosEspecialidades.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.cbtn_menosEspecialidades.ShadowDecoration.Parent = Me.cbtn_menosEspecialidades
+        Me.BtnDelEspecialidad.CheckedState.Parent = Me.BtnDelEspecialidad
+        Me.BtnDelEspecialidad.CustomImages.Parent = Me.BtnDelEspecialidad
+        Me.BtnDelEspecialidad.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnDelEspecialidad, "BtnDelEspecialidad")
+        Me.BtnDelEspecialidad.ForeColor = System.Drawing.Color.White
+        Me.BtnDelEspecialidad.HoverState.Parent = Me.BtnDelEspecialidad
+        Me.BtnDelEspecialidad.Name = "BtnDelEspecialidad"
+        Me.BtnDelEspecialidad.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnDelEspecialidad.ShadowDecoration.Parent = Me.BtnDelEspecialidad
         '
-        'cbtn_masEspecialidades
+        'BtnAddEspecialidad
         '
-        Me.cbtn_masEspecialidades.CheckedState.Parent = Me.cbtn_masEspecialidades
-        Me.cbtn_masEspecialidades.CustomImages.Parent = Me.cbtn_masEspecialidades
-        Me.cbtn_masEspecialidades.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        resources.ApplyResources(Me.cbtn_masEspecialidades, "cbtn_masEspecialidades")
-        Me.cbtn_masEspecialidades.ForeColor = System.Drawing.Color.White
-        Me.cbtn_masEspecialidades.HoverState.Parent = Me.cbtn_masEspecialidades
-        Me.cbtn_masEspecialidades.Name = "cbtn_masEspecialidades"
-        Me.cbtn_masEspecialidades.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.cbtn_masEspecialidades.ShadowDecoration.Parent = Me.cbtn_masEspecialidades
+        Me.BtnAddEspecialidad.CheckedState.Parent = Me.BtnAddEspecialidad
+        Me.BtnAddEspecialidad.CustomImages.Parent = Me.BtnAddEspecialidad
+        Me.BtnAddEspecialidad.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnAddEspecialidad, "BtnAddEspecialidad")
+        Me.BtnAddEspecialidad.ForeColor = System.Drawing.Color.White
+        Me.BtnAddEspecialidad.HoverState.Parent = Me.BtnAddEspecialidad
+        Me.BtnAddEspecialidad.Name = "BtnAddEspecialidad"
+        Me.BtnAddEspecialidad.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnAddEspecialidad.ShadowDecoration.Parent = Me.BtnAddEspecialidad
         '
         'DTPickerFNac
         '
@@ -943,8 +943,8 @@ Partial Class F_Empleados
     Friend WithEvents txtb_nombresF As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtb_ciF As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CmbBEspecialidades As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents cbtn_menosEspecialidades As Guna.UI2.WinForms.Guna2CircleButton
-    Friend WithEvents cbtn_masEspecialidades As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents BtnDelEspecialidad As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents BtnAddEspecialidad As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents DTPickerFNac As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents CmbIDepartamento As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CmbIngresadasEspecialidades As Guna.UI2.WinForms.Guna2ComboBox

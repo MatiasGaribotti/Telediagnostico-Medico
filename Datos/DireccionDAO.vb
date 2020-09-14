@@ -16,4 +16,28 @@ Public Class DireccionDAO
             Throw New ApplicationException("No se pudo ingresar la dirección del paciente.")
         End Try
     End Sub
+
+    Public Function GetId(direccion As Direccion) As Integer
+        Dim rs As Recordset
+        Dim id As Integer
+        ' Consulta para obtener el id de la dirección ingresada
+        Dim query = "SELECT id FROM direcciones" &
+                              " WHERE calle='" & direccion.Calle & "'" &
+                              " AND numero='" & direccion.Nro & "'" &
+                              " AND localidad='" & direccion.Localidad & "'" &
+                              " AND departamento=" & direccion.Departamento & ";"
+        Try
+            rs = Conn.Execute(query)
+            If Not rs.BOF Then
+                id = rs.Fields("id").Value
+                Return id
+            Else
+                Throw New Exception("Error al obtener el ID de la dirección.")
+            End If
+
+
+        Catch ex As Exception
+            Throw New Exception("Error al obtener el ID de la dirección.")
+        End Try
+    End Function
 End Class

@@ -41,6 +41,13 @@
         Me.Cronica = cronica
     End Sub
 
+    Public Sub New(nombre As String, urgencia As Urgencias, cronica As Boolean)
+        Me.Nombre = nombre
+        Me.Descripcion = "Default"
+        Me.Urgencia = urgencia
+        Me.Cronica = cronica
+    End Sub
+
     Public Sub New(id As Short, nombre As String, descripcion As String, urgencia As Urgencias, cronica As Boolean)
         Me.Id = id
         Me.Nombre = nombre

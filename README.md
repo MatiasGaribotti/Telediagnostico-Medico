@@ -15,7 +15,7 @@
 * [X] Modificación de Enfermedad
 * [X] Baja Enfermedad
 * [X] Listar Enfermedades
-* [ ] Buscar Enfermedades
+* [X] Buscar Enfermedades
 * [ ] Importar Enfermedades
 
 ### Usuarios

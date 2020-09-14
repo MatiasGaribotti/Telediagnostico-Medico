@@ -44,8 +44,12 @@ Public Class F_Enfermedades
             DgvEnfermedades.Refresh()
 
         Catch ex As Exception
-            MsgBox(ex, MsgBoxStyle.Critical, "Error")
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
+    End Sub
+    Public Sub LoadDgv(dt As DataTable)
+        DgvEnfermedades.DataSource = dt
+        DgvEnfermedades.Refresh()
     End Sub
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
@@ -84,24 +88,32 @@ Public Class F_Enfermedades
 
     'Función que obtiene la información contenida en los campos
     Private Function GetEnfermedad() As Enfermedad
-        Dim urgencia As String = [Enum].Parse(GetType(Enfermedad.Urgencias), CmbIUrgencia.SelectedItem.ToString)
-        Dim enfermedad As New Enfermedad(TxtIEnfermedad.Text, TxtIDescripcion.Text, urgencia, ChkCronica.Checked)
+        Dim enfermedad As Enfermedad
 
+        Dim urgencia As Enfermedad.Urgencias = [Enum].Parse(GetType(Enfermedad.Urgencias), CmbIUrgencia.SelectedItem.ToString)
+        enfermedad = New Enfermedad(TxtIEnfermedad.Text, TxtIDescripcion.Text, urgencia, ChkICronica.Checked)
         Return enfermedad
+
+    End Function
+
+    Private Function GetPattern() As Enfermedad
+        Dim urgencia As Enfermedad.Urgencias = [Enum].Parse(GetType(Enfermedad.Urgencias), CmbBUrgencia.SelectedItem.ToString)
+        Return New Enfermedad(TxtBEnfermedad.Text, urgencia, ChkBCronica.Checked)
+
     End Function
 
     Private Sub ClearFields()
         TxtIEnfermedad.ResetText()
         CmbBUrgencia.SelectedIndex = 1
         TxtIDescripcion.ResetText()
-        ChkCronica.Checked = False
+        ChkICronica.Checked = False
     End Sub
 
     Private Sub LoadFields(pEnfermedad As Enfermedad)
         TxtIEnfermedad.Text = pEnfermedad.Nombre
         CmbIUrgencia.SelectedIndex = pEnfermedad.Urgencia - 1
         TxtIDescripcion.Text = pEnfermedad.Descripcion
-        ChkCronica.Checked = pEnfermedad.Cronica
+        ChkICronica.Checked = pEnfermedad.Cronica
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
@@ -185,5 +197,17 @@ Public Class F_Enfermedades
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
         ChangeMode(Modos.Ingresar)
         ClearFields()
+    End Sub
+
+    Private Sub BtnFiltrar_Click(sender As Object, e As EventArgs) Handles BtnFiltrar.Click
+        Dim pattern As Enfermedad = GetPattern()
+        Dim dt As DataTable
+        Try
+            dt = EnfermedadBUS.GetEnfermedades(pattern)
+            LoadDgv(dt)
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
