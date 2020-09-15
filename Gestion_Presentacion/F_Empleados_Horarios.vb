@@ -4,8 +4,14 @@ Imports Logica
 Imports Dominio
 Public Class F_Empleados_Horarios
     Private Sub Btn_volver_Click(sender As Object, e As EventArgs) Handles btn_volver.Click
-        F_Empleados.Show()
-        Me.Close()
+        If Env.CurrentUser.IsRecepcionista Then
+            F_ABM.Show()
+
+        Else
+            F_Empleados.Show()
+        End If
+
+        Close()
     End Sub
 
     Private Sub Btn_ingresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click

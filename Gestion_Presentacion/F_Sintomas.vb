@@ -106,9 +106,14 @@ Public Class F_Sintomas
     End Function
 
     Public Sub LoadDgv()
-        Dim dt As DataTable = SintomaBUS.GetSintomas()
-        DgvSintomas.DataSource = dt
-        DgvSintomas.Refresh()
+        Try
+            Dim dt As DataTable = SintomaBUS.GetSintomas()
+            DgvSintomas.DataSource = dt
+            DgvSintomas.Refresh()
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
 
     Public Sub LoadDgv(dt As DataTable)

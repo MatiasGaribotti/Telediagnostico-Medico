@@ -5,7 +5,12 @@ Public Class SintomaBUS
 
     Public Function GetSintomas() As DataTable
         Dim SintomaDAO As New SintomaDAO()
-        Return SintomaDAO.GetSintomas()
+        Try
+            Return SintomaDAO.GetSintomas()
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     Public Function GetSintomas(pattern As Sintoma) As DataTable

@@ -16,7 +16,7 @@
                    direccion As Direccion,
                    telefono As Integer,
                    Fecha_Nacimiento As Date,
-                   password As String
+                   Optional password As String = ""
                    )
         MyBase.New(ci,
                    nombre,

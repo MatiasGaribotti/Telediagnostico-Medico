@@ -62,7 +62,7 @@ Public Class PersonaDAO
     End Sub
 
     Public Sub DeletePersona(pCi As Integer)
-        Dim query = "UPDATE personas SET ENABLE=0 WHERE ci='" & pCi & "';"
+        Dim query = "UPDATE personas SET ENABLED=0 WHERE ci='" & pCi & "';"
 
         Try
             Conn = Connect()
@@ -73,7 +73,7 @@ Public Class PersonaDAO
         Try
             Conn.Execute(query)
         Catch ex As Exception
-            Throw New Exception("Error al dar de baja la persona.")
+            Throw New Exception("Error al dar de baja la persona ")
         Finally
             Conn.Close()
         End Try

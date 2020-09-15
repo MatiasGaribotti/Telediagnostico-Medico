@@ -1,4 +1,5 @@
-﻿Imports Datos
+﻿Imports System.Text
+Imports Datos
 Imports Dominio
 Public Class RRHHBUS
     Inherits EmpleadoBUS
@@ -25,9 +26,36 @@ Public Class RRHHBUS
 
     End Sub
 
-    Public Sub DeleteEmployee(ci As Integer)
-        MyBase.DeletePersona(ci)
+    Public Sub DeleteEmpleado(ci As Integer)
+        Try
+            MyBase.DeletePersona(ci)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
+
+    Public Function DeleteEmpleados(pEmpleados As List(Of Empleado)) As String
+        Dim count As Integer = pEmpleados.Count
+        Dim outputMessage As String = " empleados eliminados exitosamente." & vbCrLf
+
+        For Each empleado In pEmpleados
+            Try
+                DeleteEmpleado(empleado.Ci)
+
+            Catch ex As Exception
+                outputMessage += ex.Message & empleado.Nombre & vbCrLf
+                count -= 1
+            End Try
+        Next
+        outputMessage = count & outputMessage
+
+        Dim strb As New StringBuilder
+        strb.Append(outputMessage)
+        strb.Replace("persona", "Empleado")
+
+        Return strb.ToString
+    End Function
 
     Public Sub InsertMedico(medico As Medico)
         Try

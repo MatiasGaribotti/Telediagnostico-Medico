@@ -45,7 +45,7 @@
                    telefono As Integer,
                    fecha_nacimiento As Date,
                    especialidades As List(Of Especialidad),
-                   password As String
+                   Optional password As String = ""
                    )
         MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
         Me.IsMedico = True
@@ -60,7 +60,7 @@
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
-                   password As String
+                   Optional password As String = ""
                    )
         MyBase.New(ci,
                    nombre,

@@ -43,6 +43,75 @@ Public Class F_Empleados
         CmbIngresadasEspecialidades.Items.Clear()
     End Sub
 
+    Public Function GetSelected() As List(Of Empleado)
+        Dim listaEmpleados As New List(Of Empleado)
+        Dim rows = DgvMedicos.SelectedRows
+        Try
+            For i As Integer = 0 To rows.Count - 1
+                Dim cells = rows.Item(i).Cells
+
+                Dim ci As Integer = CInt(cells.Item(0).Value)
+                Dim tempNombre = cells.Item(1).Value.ToString.Split(",")
+                Dim tempFecha = cells.Item(2).Value.ToString.Substring(0, 10).Split(".")
+                Dim telefono As Integer = CInt(cells.Item(3).Value)
+                Dim tempEspecialidades = cells.Item(4).Value.ToString
+                Dim tempDireccion = cells.Item(5).Value.ToString.Split(",")
+                Dim isMedico As Boolean = CBool(cells.Item(6).Value)
+                Dim isAdministrador As Boolean = CBool(cells.Item(7).Value)
+                Dim isRecepcionista As Boolean = CBool(cells.Item(8).Value)
+                Dim isRRHH As Boolean = CBool(cells.Item(9).Value)
+
+
+                Dim nombre As String = tempNombre.ElementAt(0)
+                Dim apellidoP As String = tempNombre.ElementAt(1)
+                Dim apellidoM As String = tempNombre.ElementAt(2)
+
+
+                ' Obtengo la fecha de nacimiento
+                Dim year, month, day As Integer
+                year = tempFecha.ElementAt(2)
+                month = tempFecha.ElementAt(1)
+                day = tempFecha.ElementAt(0)
+
+                Dim fechaNacimiento As Date = New Date(year, month, day)
+
+                Dim calle As String = tempDireccion.ElementAt(0).ToString
+                Dim numero As Integer = CInt(tempDireccion.ElementAt(1).ToString)
+                Dim localidad As String = tempDireccion.ElementAt(2).ToString
+                Dim departamento As Direccion.Departamentos = [Enum].Parse(GetType(Direccion.Departamentos), tempDireccion.ElementAt(3).ToString)
+                Dim detalle As String = tempDireccion.ElementAt(4).ToString
+
+                Dim direccion As New Direccion(calle, numero, localidad, departamento, detalle)
+
+                If isMedico Then
+                    Dim MedicoBUS As New MedicoBUS
+                    Dim especialidades As List(Of Especialidad) = MedicoBUS.ParseEspecialidades(tempEspecialidades, ";")
+
+
+
+                    If isAdministrador Then
+                        listaEmpleados.Add(New Administrador(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, especialidades))
+                    Else
+                        listaEmpleados.Add(New Medico(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, especialidades))
+                    End If
+
+                ElseIf isRecepcionista Then
+                    listaEmpleados.Add(New Recepcionista(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento))
+
+                ElseIf isRRHH Then
+                    listaEmpleados.Add(New RRHH(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento))
+
+                End If
+
+            Next
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Return listaEmpleados
+    End Function
+
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         Dim EmpleadoBUS As New EmpleadoBUS
@@ -116,6 +185,9 @@ Public Class F_Empleados
 
             ElseIf CmbIRol.SelectedItem = "Recepcionista" Then
                 EmpleadoVO = New Recepcionista(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, password)
+
+            Else
+                Throw New Exception("Error al obtener el empleado.")
             End If
         End If
 
@@ -123,6 +195,7 @@ Public Class F_Empleados
     End Function
 
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
+        DTPickerFNac.MaxDate = Date.Now
         ConfigComboBox()
         LoadDgv()
         ConfigDgvAppearance()
@@ -138,21 +211,20 @@ Public Class F_Empleados
         Try
             Dim dt As DataTable = MedicoBUS.GetEmpleados()
             DgvMedicos.DataSource = dt
-            HideBooleansDgv()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
     Private Sub ConfigDgvAppearance()
-        Dim fill As Integer = DgvMedicos.Width
-
-        DgvMedicos.Columns.Item(0).Width = 50
-        DgvMedicos.Columns.Item(1).Width = 130
-        DgvMedicos.Columns.Item(2).Width = 80
-        DgvMedicos.Columns.Item(3).Width = 80
-        DgvMedicos.Columns.Item(4).Width = 150
-        DgvMedicos.Columns.Item(5).Width = 300
+        'Revisar
+        DgvMedicos.Columns.Item(0).Width = 80
+        DgvMedicos.Columns.Item(1).Width = 180
+        DgvMedicos.Columns.Item(2).Width = 100
+        DgvMedicos.Columns.Item(3).Width = 110
+        DgvMedicos.Columns.Item(4).Width = 200
+        DgvMedicos.Columns.Item(5).Width = 350
+        'HideBooleansDgv()
 
     End Sub
 
@@ -224,6 +296,20 @@ Public Class F_Empleados
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        Dim RRHHBUS As New RRHHBUS
+
+        Try
+            Dim seleccionados = GetSelected()
+            Dim output As String = RRHHBUS.DeleteEmpleados(seleccionados)
+            LoadDgv()
+            MsgBox(output, MsgBoxStyle.Information, "Eliminación de Empleados")
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
 
     End Sub
 End Class

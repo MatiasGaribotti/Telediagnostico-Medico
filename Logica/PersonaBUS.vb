@@ -147,6 +147,11 @@ Public MustInherit Class PersonaBUS
 
     Protected Sub DeletePersona(ci As Integer)
         Dim PersonaDAO As New PersonaDAO
-        PersonaDAO.DeletePersona(ci)
+        Try
+            PersonaDAO.DeletePersona(ci)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 End Class

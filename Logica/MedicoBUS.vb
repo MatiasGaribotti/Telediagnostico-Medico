@@ -69,4 +69,20 @@ Public Class MedicoBUS
         End Try
     End Function
 
+    Public Function ParseEspecialidades(pPspecialidades As String, separator As Char) As List(Of Especialidad)
+        Dim listaEspecialidades As New List(Of Especialidad)
+
+        Try
+            Dim tempEspecialidades = pPspecialidades.Split(separator)
+            For Each especialidad In tempEspecialidades
+                listaEspecialidades.Add(New Especialidad(especialidad))
+            Next
+
+            Return listaEspecialidades
+        Catch ex As Exception
+            Throw New Exception("Ha ocurrido un error en la conversión de especialidades.")
+        End Try
+
+    End Function
+
 End Class

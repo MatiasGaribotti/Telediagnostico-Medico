@@ -35,6 +35,7 @@
         Nro = -1
         Localidad = "Default"
         Departamento = Departamentos.Montevideo
+        Detalle = "N/A"
     End Sub
 
     Public Sub New(
