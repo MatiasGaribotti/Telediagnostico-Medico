@@ -1,4 +1,7 @@
 # Sistema de Telediagnóstico Médico
+Para poder utilizar este software es necesario tener la base de datos creada y con un mínimo de juego de datos cargados.
+[Descarga el script de creación de la base de datos](https://drive.google.com/file/d/1Wa-81Zs0v3jUI-lFl-98kFYDzePanjoe/view?usp=sharing).
+[Descarga el script con juego de datos](https://drive.google.com/file/d/1E0IeifHZ-bJKOj9EIEuKCc4xhb1Sn0cf/view?usp=sharing).
 
 ## Funciones Incluidas
 
