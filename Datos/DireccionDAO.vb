@@ -40,4 +40,24 @@ Public Class DireccionDAO
             Throw New Exception("Error al obtener el ID de la dirección.")
         End Try
     End Function
+
+    Public Function GetIdByCi(pCi As Integer) As Integer
+        Dim rs As Recordset
+        Dim id As Integer
+        ' Consulta para obtener el id de la dirección ingresada
+        Dim query = "SELECT id FROM personas AS P JOIN direcciones AS D ON (P.idDireccion = D.id AND P.ci=" & pCi & ");"
+        Try
+            rs = Conn.Execute(query)
+            If Not rs.BOF Then
+                id = rs.Fields("id").Value
+                Return id
+            Else
+                Throw New Exception("Error al obtener el ID de la dirección.")
+            End If
+
+
+        Catch ex As Exception
+            Throw New Exception("Error al obtener el ID de la dirección.")
+        End Try
+    End Function
 End Class

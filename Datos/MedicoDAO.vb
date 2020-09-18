@@ -34,7 +34,7 @@ Public Class MedicoDAO
         End Try
     End Sub
 
-    Private Sub InsertMedicoEspecialidad(ci As Integer, idEspecialidad As Integer)
+    Public Sub InsertMedicoEspecialidad(ci As Integer, idEspecialidad As Integer)
         Dim query As String = "INSERT INTO medicos_especialidades(ciMedico, idEspecialidad) " &
                               "VALUES(" & ci & ", " & idEspecialidad & ");"
 
@@ -42,6 +42,44 @@ Public Class MedicoDAO
             Conn.Execute(query)
         Catch ex As Exception
             Throw ex
+        End Try
+    End Sub
+
+    Public Sub DeleteMedicoEspecialidades(ci As Integer)
+        Dim query As String = "DELETE FROM medicos_especialidades WHERE ciMedico=" & ci & ";"
+
+        Try
+            Conn.Execute(query)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    Public Sub ModifyMedico(pMedico As Medico)
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            Conn.BeginTrans()
+            ModifyPersona(pMedico)
+            DeleteMedicoEspecialidades(pMedico.Ci)
+
+            For Each especialidad In pMedico.Especialidades
+                InsertMedicoEspecialidad(pMedico.Ci, especialidad.Id)
+
+            Next
+
+            Conn.CommitTrans
+        Catch ex As Exception
+            Conn.RollbackTrans()
+            Throw New Exception("No se pudo modificar el médico.")
+
+        Finally
+            Conn.Close()
         End Try
     End Sub
 
@@ -116,6 +154,31 @@ Public Class MedicoDAO
             Return dt
         Catch ex As Exception
             Throw New Exception("Error al obtener la especialidad " & pNombre & ".")
+        End Try
+    End Function
+
+    Public Function GetMedicoEspecialidades(pCi As Integer) As DataTable
+        Dim dt As New DataTable
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim rs As Recordset
+
+        Dim query As String = "SELECT idEspecialidad, nombre " &
+                              "FROM medicos_especialidades AS ME" &
+                              "JOIN especialidades AS E " &
+                              "ON (ME.idEspecialidad = E.id) WHERE ci=" & pCi & ";"
+
+        Try
+            Conn = Connect
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al obtener las especialidades del médico.")
         End Try
     End Function
 

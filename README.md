@@ -21,7 +21,7 @@
 ### Usuarios
 ##### Empleados
 * [X] Alta Empleado (Medico, Recursos Humanos, Recepcionista)
-* [ ] Modificación Empleado
+* [X] Modificación Empleado
 * [X] Baja Empleado
 * [ ] Extender permisos a Médicos
 * [X] Listar Empleados

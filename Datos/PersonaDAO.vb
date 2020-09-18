@@ -61,6 +61,34 @@ Public Class PersonaDAO
         End Try
     End Sub
 
+    Public Sub ModifyPersona(pPersona As Persona)
+        Dim DireccionDAO As New DireccionDAO
+        Dim modifyPersona As String = "UPDATE personas SET " &
+                              "nombre='" & pPersona.Nombre & "', " &
+                              "apellidoP='" & pPersona.ApellidoP & "', " &
+                              "apellidoM='" & pPersona.ApellidoM & "', " &
+                              "fechaNacimiento='" & Format(pPersona.Fecha_Nacimiento, "yyyy-MM-dd") & "', " &
+                              "telefono=" & pPersona.Telefono &
+                              " WHERE ci=" & pPersona.Ci & ";"
+
+        Dim idDireccion = DireccionDAO.GetIdByCi(pPersona.Ci)
+
+        Dim modifyDireccion As String = "UPDATE direcciones SET " &
+                                        "calle='" & pPersona.Direccion.Calle & "', " &
+                                        "numero=" & pPersona.Direccion.Nro & ", " &
+                                        "localidad='" & pPersona.Direccion.Localidad & "', " &
+                                        "departamento=" & pPersona.Direccion.Departamento & ", " &
+                                        "detalle='" & pPersona.Direccion.Detalle & "'" &
+                                        " WHERE id=" & idDireccion & ";"
+        Try
+
+            Conn.Execute(modifyPersona)
+            Conn.Execute(modifyDireccion)
+
+        Catch ex As Exception
+            Throw New Exception("Error al modificar la persona.")
+        End Try
+    End Sub
     Public Sub DeletePersona(pCi As Integer)
         Dim query = "UPDATE personas SET ENABLED=0 WHERE ci='" & pCi & "';"
 

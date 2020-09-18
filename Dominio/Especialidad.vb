@@ -8,6 +8,11 @@
         Me.Nombre = ""
     End Sub
 
+    Public Sub New(id As Integer)
+        Me.Id = id
+        Me.Nombre = ""
+    End Sub
+
     Public Sub New(nombre As String)
         Me.Id = -1
         Me.Nombre = nombre

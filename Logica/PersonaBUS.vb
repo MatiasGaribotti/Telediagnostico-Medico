@@ -145,6 +145,17 @@ Public MustInherit Class PersonaBUS
         Return True
     End Function
 
+    Public Sub ModifyPersona(pPersona As Persona)
+        Dim PersonaDAO As New PersonaDAO
+
+        Try
+            PersonaDAO.ModifyPersona(pPersona)
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Sub
+
     Protected Sub DeletePersona(ci As Integer)
         Dim PersonaDAO As New PersonaDAO
         Try

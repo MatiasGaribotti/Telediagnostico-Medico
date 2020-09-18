@@ -16,7 +16,6 @@ Public Class F_Sintomas
     Private SintomaBUS As New SintomaBUS
 
     Private Enum Modos
-        Buscar
         Ingresar
         Modificar
     End Enum

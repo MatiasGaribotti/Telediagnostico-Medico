@@ -9,7 +9,7 @@ Public Class RRHHBUS
     Private EmpleadoDAO As EmpleadoDAO
 
 
-    Public Sub InsertEmployee(pEmpleado As Empleado)
+    Public Sub InsertEmpleado(pEmpleado As Empleado)
         pEmpleado.Password = Password.Hash(pEmpleado.Password)
 
         If pEmpleado.IsMedico Then
@@ -22,8 +22,15 @@ Public Class RRHHBUS
         End If
     End Sub
 
-    Public Sub ModifyEmployee(pEmployee As Empleado)
+    Public Sub ModifyEmpleado(pEmpleado As Empleado)
+        If pEmpleado.IsMedico Then
+            ModifyMedico(pEmpleado)
+        ElseIf pEmpleado.IsRRHH Then
+            ModifyRRHH(pEmpleado)
 
+        ElseIf pEmpleado.IsRecepcionista Then
+            ModifyRecepcionista(pEmpleado)
+        End If
     End Sub
 
     Public Sub DeleteEmpleado(ci As Integer)
@@ -72,24 +79,18 @@ Public Class RRHHBUS
         End Try
     End Sub
 
-    Private Function GetEspecialidad(pNombre As String) As Especialidad
+    Public Sub ModifyMedico(pMedico As Medico)
+        Dim MedicoDAO As New MedicoDAO
+
         Try
-            Dim dt = MedicoDAO.GetEspecialidad(pNombre)
-            Dim row = dt.Rows.Item(0)
+            For Each especialidad In pMedico.Especialidades
+                especialidad.Id = GetEspecialidad(especialidad.Nombre).Id
 
-            Dim id As Short = row.Field(Of Integer)("id")
-            Dim nombre As String = row.Field(Of String)("nombre")
-
-            Return New Especialidad(id, nombre)
+            Next
+            MedicoDAO.ModifyMedico(pMedico)
         Catch ex As Exception
             Throw ex
         End Try
-
-
-    End Function
-
-    Public Sub ModifyMedico(pMedico As Medico)
-
     End Sub
 
     Public Sub InsertRRHH(pRRHH As RRHH)
@@ -103,7 +104,13 @@ Public Class RRHHBUS
     End Sub
 
     Public Sub ModifyRRHH(pRRHH As RRHH)
-        ModifyEmployee(pRRHH)
+        Dim RRHHDAO As New RRHHDAO
+        Try
+            RRHHDAO.Modify(pRRHH)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     Public Sub InsertRecepcionista(pRecepcionista As Recepcionista)
@@ -116,7 +123,14 @@ Public Class RRHHBUS
     End Sub
 
     Public Sub ModifyRecepcionista(pRecepcionista As Recepcionista)
-        ModifyEmployee(pRecepcionista)
+        Dim RecepcionistaDAO As New RecepcionistaDAO
+
+        Try
+            RecepcionistaDAO.Modify(pRecepcionista)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
 
@@ -138,6 +152,22 @@ Public Class RRHHBUS
     Public Sub DeleteHorarioEmpleado(horario As Horario)
 
     End Sub
+
+    Private Function GetEspecialidad(pNombre As String) As Especialidad
+        MedicoDAO = New MedicoDAO
+
+        Try
+            Dim dt = MedicoDAO.GetEspecialidad(pNombre)
+            Dim row = dt.Rows.Item(0)
+
+            Dim id As Short = row.Field(Of Integer)("id")
+            Dim nombre As String = row.Field(Of String)("nombre")
+
+            Return New Especialidad(id, nombre)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 
     Public Sub ResetPassword(pEmpleado As Empleado)
         EmpleadoDAO = New EmpleadoDAO()

@@ -8,13 +8,21 @@ Public Class F_Empleados
     Public Sub New()
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
-        ConfigMode()
+        ConfigAccess()
+
     End Sub
+
+    Private Enum Modos
+        Ingresar
+        Modificar
+    End Enum
+
+    Private Modo As Modos
 
     ''' <summary>
     ''' Configura los controles de acuerdo con el usuario que a la ventana, dado que ciertos usuarios no pueden realizar determinadas tareas(Permisos en la base de datos).
     ''' </summary>
-    Public Sub ConfigMode()
+    Public Sub ConfigAccess()
 
         If Env.CurrentUser.IsRecepcionista Or Env.CurrentUser.IsAdministrador Then
             BtnModificar.Enabled = False
@@ -27,19 +35,34 @@ Public Class F_Empleados
 
     End Sub
 
+    Private Sub ChangeMode(pMode As Modos)
+        Modo = pMode
+
+        If Modo = Modos.Modificar Then
+            BtnIngresar.Text = "Modificar"
+            BtnHorarios.Text = "Cancelar"
+
+        Else
+            BtnIngresar.Text = "Ingresar"
+            BtnHorarios.Text = "Horarios"
+
+        End If
+    End Sub
+
     Public Sub ClearFields()
         TxtICi.ResetText()
         TxtINombre.ResetText()
         TxtIApellidoP.ResetText()
         TxtIApellidoM.ResetText()
-        DTPickerFNac.Value = Date.Now
+        DTPickerFNac.Value = New Date(Today.Year, Today.Month, Today.Day)
         TxtICalle.ResetText()
         TxtINumero.ResetText()
         TxtIDetalle.ResetText()
         TxtILocalidad.ResetText()
-        CmbIDepartamento.SelectedIndex = 1
+        CmbIDepartamento.SelectedIndex = 0
         TxtITelefono.ResetText()
-        CmbIRol.SelectedIndex = 1
+        CmbIRol.SelectedIndex = 0
+        CmbIEspecialidades.SelectedIndex = 0
         CmbIngresadasEspecialidades.Items.Clear()
     End Sub
 
@@ -130,23 +153,33 @@ Public Class F_Empleados
                                      )
             empleado = GetEmpleado()
             Dim RRHHBUS As New RRHHBUS
-            RRHHBUS.InsertEmployee(empleado)
-            LoadDgv()
 
-            Dim exitMessage = " ingresado con éxito."
-            If empleado.IsMedico Then
-                exitMessage = "Medico" & exitMessage
+            If Modo = Modos.Ingresar Then
+                RRHHBUS.InsertEmpleado(empleado)
+                ClearFields()
+                LoadDgv()
 
-            ElseIf empleado.IsRRHH Then
-                exitMessage = "Personal de Recursos humanos" & exitMessage
+                Dim exitMessage = " ingresado con éxito."
+                If empleado.IsMedico Then
+                    exitMessage = "Medico" & exitMessage
 
-            ElseIf empleado.IsRecepcionista Then
-                exitMessage = "Recepcionista" & exitMessage
+                ElseIf empleado.IsRRHH Then
+                    exitMessage = "Personal de Recursos humanos" & exitMessage
 
+                ElseIf empleado.IsRecepcionista Then
+                    exitMessage = "Recepcionista" & exitMessage
+
+                End If
+
+                MsgBox(exitMessage, MsgBoxStyle.Information, "Empleado Ingresado")
+
+            ElseIf Modo = Modos.Modificar Then
+                RRHHBUS.ModifyEmpleado(empleado)
+                ClearFields()
+                LoadDgv()
+                MsgBox("Empleado modificado con éxito.", MsgBoxStyle.Information, "Información")
             End If
 
-            MsgBox(exitMessage, MsgBoxStyle.Information, "Empleado Ingresado")
-            ClearFields()
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
@@ -202,8 +235,14 @@ Public Class F_Empleados
     End Sub
 
     Private Sub BtnHorarios_Click(sender As Object, e As EventArgs) Handles BtnHorarios.Click
-        F_Empleados_Horarios.Show()
-        Close()
+        If Not Modo = Modos.Modificar Then
+            F_Empleados_Horarios.Show()
+            Close()
+
+        Else
+            ChangeMode(Modos.Ingresar)
+            ClearFields()
+        End If
     End Sub
 
     Private Sub LoadDgv()
@@ -213,6 +252,48 @@ Public Class F_Empleados
             DgvMedicos.DataSource = dt
         Catch ex As Exception
             MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub LoadFields(pEmpleado As Empleado)
+        Try
+            TxtICi.Text = pEmpleado.Ci
+            TxtINombre.Text = pEmpleado.Nombre
+            TxtIApellidoP.Text = pEmpleado.ApellidoP
+            TxtIApellidoM.Text = pEmpleado.ApellidoM
+            DTPickerFNac.Value = pEmpleado.Fecha_Nacimiento
+            TxtICalle.Text = pEmpleado.Direccion.Calle
+            TxtINumero.Text = pEmpleado.Direccion.Nro
+            TxtIDetalle.Text = pEmpleado.Direccion.Detalle
+            TxtILocalidad.Text = pEmpleado.Direccion.Localidad
+            CmbIDepartamento.SelectedItem = pEmpleado.Direccion.Departamento
+            TxtITelefono.Text = pEmpleado.Telefono
+
+            If pEmpleado.IsMedico Then
+                CmbIRol.SelectedItem = Env.Roles.Medico.ToString
+                LoadEspecialidades(pEmpleado)
+                CmbIngresadasEspecialidades.SelectedItem = CmbIEspecialidades.Items.Item(1)
+
+            ElseIf pEmpleado.IsRRHH Then
+                CmbIRol.SelectedItem = Env.Roles.Recursos_Humanos.ToString
+
+            ElseIf pEmpleado.IsRecepcionista Then
+                CmbIRol.SelectedItem = Env.Roles.Recepcionista.ToString
+
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub LoadEspecialidades(pMedico As Medico)
+        Try
+            For Each especialidad In pMedico.Especialidades
+                CmbIngresadasEspecialidades.Items.Add(especialidad.Nombre)
+            Next
+
+        Catch ex As Exception
+            Throw ex
         End Try
     End Sub
 
@@ -296,7 +377,22 @@ Public Class F_Empleados
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+        Dim RRHHBUS As New RRHHBUS
+        ChangeMode(Modos.Modificar)
+        Try
+            Dim seleccionados = GetSelected()
+            If seleccionados.Count > 1 Then
+                Throw New Exception("No se puede modificar más de un empleado a la vez.")
 
+            Else
+                LoadFields(seleccionados.First)
+
+            End If
+
+        Catch ex As Exception
+            ChangeMode(Modos.Ingresar)
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click

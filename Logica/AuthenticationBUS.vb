@@ -2,7 +2,7 @@
 Imports Dominio
 Public Class AuthenticationBUS
     Public Shared Sub LogOut()
-        Env.CurrentUser = Nothing
+        Env.CurrentUser = New Persona()
         Env.ChangeLanguage(Env.Cultures.Espannol)
     End Sub
 
@@ -11,7 +11,6 @@ Public Class AuthenticationBUS
         Dim authenticated = False
         Dim DAuth As New AuthenticationDAO()
 
-        ' NOT IMPLEMENTED 
         'user.Password = Password.Hash(user.Password)
 
         Try

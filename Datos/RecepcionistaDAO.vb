@@ -27,4 +27,24 @@ Public Class RecepcionistaDAO
             Conn.Close()
         End Try
     End Sub
+
+    Public Sub Modify(pRecepcionista As Recepcionista)
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            Conn.BeginTrans()
+            ModifyPersona(pRecepcionista)
+            Conn.CommitTrans()
+        Catch ex As Exception
+            Conn.RollbackTrans()
+            Throw New Exception("No se pudo modificar el recepcionista.")
+
+        Finally
+            Conn.Close()
+        End Try
+    End Sub
 End Class
