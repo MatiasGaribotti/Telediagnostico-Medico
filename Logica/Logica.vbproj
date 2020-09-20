@@ -64,7 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministradoBUS.vb" />
+    <Compile Include="AdministradorBUS.vb" />
     <Compile Include="AuthenticationBUS.vb" />
     <Compile Include="EmpleadoBUS.vb" />
     <Compile Include="EnfermedadBUS.vb" />

@@ -12,7 +12,27 @@ Public Class RecepcionistaBUS
         Catch ex As Exception
             Throw ex
         End Try
+    End Sub
 
+    Public Sub ModifyPaciente(pPaciente As Paciente)
+        Dim PacienteDAO As New PacienteDAO
+        Try
+            PacienteDAO.Modify(pPaciente)
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Sub
+
+    Public Sub DeletePaciente(pPaciente As Paciente)
+        Dim PacienteDAO As New PacienteDAO
+
+        Try
+            DeletePersona(pPaciente.Ci)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     Public Sub ResetPassword(paciente As Paciente)

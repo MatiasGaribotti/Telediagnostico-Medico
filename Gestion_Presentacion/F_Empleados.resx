@@ -121,36 +121,36 @@
     <value>True</value>
   </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DgvMedicos.ColumnHeadersHeight" type="System.Int32, mscorlib">
+  <data name="DgvEmpleados.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="DgvMedicos.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DgvEmpleados.Location" type="System.Drawing.Point, System.Drawing">
     <value>597, 120</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DgvMedicos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="DgvEmpleados.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>20, 20, 20, 20</value>
   </data>
-  <data name="DgvMedicos.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+  <data name="DgvEmpleados.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
-  <data name="DgvMedicos.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DgvEmpleados.Size" type="System.Drawing.Size, System.Drawing">
     <value>1300, 839</value>
   </data>
-  <data name="DgvMedicos.TabIndex" type="System.Int32, mscorlib">
+  <data name="DgvEmpleados.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
   </data>
-  <data name="&gt;&gt;DgvMedicos.Name" xml:space="preserve">
-    <value>DgvMedicos</value>
+  <data name="&gt;&gt;DgvEmpleados.Name" xml:space="preserve">
+    <value>DgvEmpleados</value>
   </data>
-  <data name="&gt;&gt;DgvMedicos.Type" xml:space="preserve">
+  <data name="&gt;&gt;DgvEmpleados.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;DgvMedicos.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DgvEmpleados.Parent" xml:space="preserve">
     <value>pnl_fondo</value>
   </data>
-  <data name="&gt;&gt;DgvMedicos.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DgvEmpleados.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="BtnMinimize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">

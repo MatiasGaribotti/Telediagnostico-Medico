@@ -187,7 +187,7 @@ Public Class MedicoDAO
     ''' </summary>
     ''' <param name="pCI">Cédula de identidad del médico.</param>
     Public Sub MakeAdministrator(pCI As Integer)
-        Dim query = "UPDATE personas SET extendido=True WHERE ci='" & pCI & "';"
+        Dim query = "UPDATE personas SET extendido=TRUE WHERE ci='" & pCI & "';"
 
         Try
             Conn = Connect()

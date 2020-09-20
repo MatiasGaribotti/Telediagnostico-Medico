@@ -4,14 +4,14 @@ Imports Dominio
 ''' <summary>
 ''' Clase que contiene la lógica de administradores.
 ''' </summary>
-Public Class AdministradoBUS
+Public Class AdministradorBUS
     Inherits EmpleadoBUS
 
     ''' <summary>
     ''' Procedimiento que ingresa un paciente.
     ''' </summary>
     ''' <param name="paciente">Paciente a ingresar.</param>
-    Public Sub IngresarPaciente(paciente As Paciente)
+    Public Sub InsertPaciente(paciente As Paciente)
         Dim PacienteDAO As New PacienteDAO()
         Try
             PacienteDAO.Insert(paciente)
@@ -19,7 +19,27 @@ Public Class AdministradoBUS
         Catch ex As Exception
             Throw ex
         End Try
+    End Sub
 
+    Public Sub ModifyPaciente(pPaciente As Paciente)
+        Dim PacienteDAO As New PacienteDAO
+        Try
+            PacienteDAO.Modify(pPaciente)
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Sub
+
+    Public Sub DeletePaciente(pPaciente As Paciente)
+        Dim PacienteDAO As New PacienteDAO
+
+        Try
+            DeletePersona(pPaciente.Ci)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>

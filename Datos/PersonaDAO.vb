@@ -101,7 +101,7 @@ Public Class PersonaDAO
         Try
             Conn.Execute(query)
         Catch ex As Exception
-            Throw New Exception("Error al dar de baja la persona ")
+            Throw New Exception("No se pudo eliminar la persona ")
         Finally
             Conn.Close()
         End Try

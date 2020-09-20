@@ -2,6 +2,7 @@
 Imports System.Globalization
 Imports Logica
 Imports Dominio
+Imports System.Text
 
 Public Class F_Pacientes
 
@@ -23,33 +24,18 @@ Public Class F_Pacientes
     Public Sub ConfigMode()
 
         If Env.CurrentUser.IsRecepcionista Then
-            'Buttons
-            BtnModificar.Enabled = False
-            BtnEliminar.Enabled = False
-
 
             'Fields
             TxtINFam.Enabled = False
             TxtIAntFam.Enabled = False
             TxtIAntLab.Enabled = False
-
-
-        ElseIf Env.CurrentUser.IsRRHH Then
-            BtnIngresar.Enabled = False
-            BtnModificar.Enabled = False
-            BtnEliminar.Enabled = False
-            BtnResetPassword.Enabled = False
-
-            'Fields
-            TxtINFam.Enabled = False
-            TxtIAntFam.Enabled = False
-            TxtIAntLab.Enabled = False
-
 
         ElseIf Env.CurrentUser.IsAdministrador Then
             BtnResetPassword.Enabled = False
 
         End If
+
+        ChangeMode(Modos.Ingresar)
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
@@ -57,27 +43,47 @@ Public Class F_Pacientes
             ValidateIngresarFields()
             Dim paciente = GetPaciente()
 
-            If Env.CurrentUser.IsRecepcionista Then
-                Dim recepcionista As New RecepcionistaBUS
-                Try
-                    recepcionista.IngresarPaciente(paciente)
-                    MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
-                    LoadDgv()
-                    ClearFields()
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
+            If Modo = Modos.Ingresar Then
+                If Env.CurrentUser.IsRecepcionista Then
+                    Dim recepcionista As New RecepcionistaBUS
+                    Try
+                        recepcionista.IngresarPaciente(paciente)
+                        MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
+                        LoadDgv()
+                        ClearFields()
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
 
-            Else
-                Try
-                    Dim administrador As New AdministradoBUS
-                    administrador.IngresarPaciente(paciente)
-                    MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
-                    LoadDgv()
-                    ClearFields()
-                Catch ex As Exception
-                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-                End Try
+                Else
+                    Try
+                        Dim administrador As New AdministradorBUS
+                        administrador.InsertPaciente(paciente)
+                        MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
+                        LoadDgv()
+                        ClearFields()
+                    Catch ex As Exception
+                        MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+                    End Try
+                End If
+            ElseIf Modo = Modos.Modificar Then
+
+                If Env.CurrentUser.IsRecepcionista Then
+                    Dim RecepcionistaBUS As New RecepcionistaBUS
+                    RecepcionistaBUS.ModifyPaciente(paciente)
+
+
+                ElseIf Env.CurrentUser.IsAdministrador Then
+                    Dim AdministradorBUS As New AdministradorBUS
+                    AdministradorBUS.ModifyPaciente(paciente)
+
+                End If
+
+                ChangeMode(Modos.Ingresar)
+                ClearFields()
+                LoadDgv()
+                MsgBox("Paciente modificado con éxito.", MsgBoxStyle.Information, "Información")
+
             End If
 
         Catch ex As FormatException
@@ -132,7 +138,10 @@ Public Class F_Pacientes
                                    TxtICalle.Text,
                                    TxtINumero.Text,
                                    TxtILocalidad.Text,
-                                   TxtITelefono.Text
+                                   TxtITelefono.Text,
+                                   TxtINFam.Text,
+                                   TxtIAntFam.Text,
+                                   TxtIAntLab.Text
                                    )
 
         Catch ex As Exception
@@ -241,101 +250,135 @@ Public Class F_Pacientes
     Private Sub BtnResetPassword_Click(sender As Object, e As EventArgs) Handles BtnResetPassword.Click
         Dim objRecepcionista As New RecepcionistaBUS
         Try
-            Dim paciente = GetSelected()
-            objRecepcionista.ResetPassword(paciente)
-            MsgBox("Contraseña restablecida correctamente.", MsgBoxStyle.Information, "Información")
+            Dim listaPacientes = GetSelected()
+            If listaPacientes.Count = 1 Then
+                objRecepcionista.ResetPassword(listaPacientes.First)
+                MsgBox("Contraseña restablecida correctamente.", MsgBoxStyle.Information, "Información")
+
+            Else
+                MsgBox("No se puede restablecer la contraseña de más de un paciente a la vez.")
+            End If
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 
-    Private Function GetSelected() As Paciente
-        Dim paciente As New Paciente()
-        Dim direccion As New Direccion()
-        Dim cells As DataGridViewCellCollection = DgvPacientes.SelectedRows.Item(0).Cells
+    Private Function GetSelected() As List(Of Paciente)
+        Dim listaPacientes As New List(Of Paciente)
 
         Try
-            paciente.Ci = cells.Item(0).Value
+            For i As Integer = 0 To DgvPacientes.SelectedRows.Count - 1
 
-            ' La consulta concatena el la información de la siguiente manera
-            ' nombre,apellidoP,apellidoM
-            Dim nombreCompleto = cells.Item(1).Value.ToString.Split(" ")
+                Dim paciente As New Paciente()
+                Dim direccion As New Direccion()
+                Dim cells As DataGridViewCellCollection = DgvPacientes.SelectedRows.Item(i).Cells
+
+                paciente.Ci = cells.Item(0).Value
+
+                ' La consulta concatena el la información de la siguiente manera
+                ' nombre,apellidoP,apellidoM
+                Dim nombreCompleto = cells.Item(1).Value.ToString.Split(",")
 
 
-            paciente.Nombre = nombreCompleto.ElementAt(0)
-            paciente.ApellidoP = nombreCompleto.ElementAt(1)
-            paciente.ApellidoM = nombreCompleto.ElementAt(2)
+                paciente.Nombre = nombreCompleto.ElementAt(0)
+                paciente.ApellidoP = nombreCompleto.ElementAt(1)
+                paciente.ApellidoM = nombreCompleto.ElementAt(2)
 
-            Dim tmpFechaNacimiento = cells.Item(2).Value.ToString.Substring(0, 10).Split(".")
+                Dim tmpFechaNacimiento = cells.Item(2).Value.ToString.Substring(0, 10).Split(".")
 
 
-            ' Obtengo la fecha de nacimiento
-            Dim year, month, day As Integer
-            year = tmpFechaNacimiento.ElementAt(2)
-            month = tmpFechaNacimiento.ElementAt(1)
-            day = tmpFechaNacimiento.ElementAt(0)
+                ' Obtengo la fecha de nacimiento
+                Dim year, month, day As Integer
+                year = tmpFechaNacimiento.ElementAt(2)
+                month = tmpFechaNacimiento.ElementAt(1)
+                day = tmpFechaNacimiento.ElementAt(0)
 
-            paciente.Fecha_Nacimiento = New Date(year, month, day)
+                paciente.Fecha_Nacimiento = New Date(year, month, day)
 
-            paciente.Telefono = cells.Item(3).Value
-            paciente.Email = cells.Item(4).Value
+                paciente.Telefono = cells.Item(3).Value
+                paciente.Email = cells.Item(4).Value
 
-            ' Direccion
-            ' Formato: calle,numero,localidad,departamento,detalle
+                ' Direccion
+                ' Formato: calle,numero,localidad,departamento,detalle
 
-            Dim tmpDireccion = cells.Item(5).Value.ToString.Split(",")
+                Dim tmpDireccion = cells.Item(5).Value.ToString.Split(",")
 
-            direccion.Calle = tmpDireccion.ElementAt(0)
-            direccion.Nro = Integer.Parse(tmpDireccion.ElementAt(1))
-            direccion.Localidad = tmpDireccion.ElementAt(2)
-            direccion.Departamento = [Enum].Parse(GetType(Direccion.Departamentos), tmpDireccion.ElementAt(3))
-            direccion.Detalle = tmpDireccion.ElementAt(4)
+                direccion.Calle = tmpDireccion.ElementAt(0)
+                direccion.Nro = Integer.Parse(tmpDireccion.ElementAt(1))
+                direccion.Localidad = tmpDireccion.ElementAt(2)
+                direccion.Departamento = [Enum].Parse(GetType(Direccion.Departamentos), tmpDireccion.ElementAt(3))
+                direccion.Detalle = tmpDireccion.ElementAt(4)
 
-            ' Nucleo Familiar
-            paciente.NucleoFlia = cells.Item(6).Value.ToString
+                paciente.Direccion = direccion
 
-            ' Antecedentes Familiares
-            paciente.AntecedentesFlia = cells.Item(7).Value.ToString
+                ' Nucleo Familiar
+                paciente.NucleoFlia = cells.Item(6).Value.ToString
 
-            'Antecedentes Laborales
-            paciente.AntecedentesLab = cells.Item(8).Value.ToString
+                ' Antecedentes Familiares
+                paciente.AntecedentesFlia = cells.Item(7).Value.ToString
+
+                'Antecedentes Laborales
+                paciente.AntecedentesLab = cells.Item(8).Value.ToString
+
+                listaPacientes.Add(paciente)
+            Next
 
         Catch ex As Exception
             Throw New Exception("Error al procesar los datos del paciente.")
         End Try
-        Return paciente
+
+        Return listaPacientes
     End Function
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
-        ' NOT IMPLEMENTED
-        Dim admin As Administrador = Env.CurrentUser
+        Dim AdministradorBUS As New AdministradorBUS
+
         Try
-            Dim paciente As Paciente = GetSelected()
-            'Dim enfermedades As List(Of Enfermedad) = admin.GetPaciente(ci)
-            'LoadFields(paciente)
+
+            Dim listaPacientes As List(Of Paciente) = GetSelected()
+
+            If listaPacientes.Count = 1 Then
+                ChangeMode(Modos.Modificar)
+                LoadFields(listaPacientes.First)
+
+            Else
+                MsgBox("No se puede modificar más de un paciente a la vez.")
+            End If
 
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    Private Sub LoadFields(p As Paciente, enfermedades As List(Of Enfermedad))
+    Private Sub ChangeMode(pMode As Modos)
+        Modo = pMode
+        BtnIngresar.Text = Modo.ToString
 
-        TxtICi.Text = p.Ci
-        TxtINombre.Text = p.Nombre
-        TxtIApellidoP.Text = p.ApellidoP
-        TxtIApellidoM.Text = p.ApellidoM
-        DTPickerFNac.Value = p.Fecha_Nacimiento
-        TxtITelefono.Text = p.Telefono
-        TxtICalle.Text = p.Direccion.Calle
-        TxtINumero.Text = p.Direccion.Nro
-        CmbIDepartamento.SelectedIndex = p.Direccion.Departamento
-        TxtIDetalle.Text = p.Direccion.Detalle
-        TxtIEmail.Text = p.Email
-        TxtINFam.Text = p.NucleoFlia
-        TxtIAntFam.Text = p.AntecedentesFlia
-        TxtIAntLab.Text = p.AntecedentesLab
+        If pMode = Modos.Ingresar Then
+            BtnCancelar.Visible = False
+        Else
+            BtnCancelar.Visible = True
+        End If
+    End Sub
+
+    Private Sub LoadFields(paciente As Paciente)
+
+        TxtICi.Text = paciente.Ci
+        TxtINombre.Text = paciente.Nombre
+        TxtIApellidoP.Text = paciente.ApellidoP
+        TxtIApellidoM.Text = paciente.ApellidoM
+        DTPickerFNac.Value = paciente.Fecha_Nacimiento
+        TxtITelefono.Text = paciente.Telefono
+        TxtICalle.Text = paciente.Direccion.Calle
+        TxtINumero.Text = paciente.Direccion.Nro
+        TxtILocalidad.Text = paciente.Direccion.Localidad
+        CmbIDepartamento.SelectedIndex = paciente.Direccion.Departamento
+        TxtIDetalle.Text = paciente.Direccion.Detalle
+        TxtIEmail.Text = paciente.Email
+        TxtINFam.Text = paciente.NucleoFlia
+        TxtIAntFam.Text = paciente.AntecedentesFlia
+        TxtIAntLab.Text = paciente.AntecedentesLab
 
     End Sub
 
@@ -345,5 +388,61 @@ Public Class F_Pacientes
         Catch ex As FormatException
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Formato")
         End Try
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        Try
+            Dim count As Integer = DgvPacientes.SelectedRows.Count
+            Dim confirmation As Boolean
+
+            If count = 1 Then
+                confirmation = MsgBox("¿Está seguro de que desea eliminar al paciente seleccionado?", MsgBoxStyle.YesNo, "Confirmación")
+
+            ElseIf count > 1 Then
+                confirmation = MsgBox("¿Está seguro de que desea eliminar al paciente seleccionado?", MsgBoxStyle.YesNo, "Confirmación")
+
+            End If
+
+            If confirmation Then
+                Dim listaPacientes As List(Of Paciente) = GetSelected()
+                Dim RecepcionistaBUS As New RecepcionistaBUS
+
+                Dim msg As String = " pacientes eliminados."
+
+                For Each paciente In listaPacientes
+                    Try
+                        RecepcionistaBUS.DeletePaciente(paciente)
+
+                    Catch ex As Exception
+                        msg += ex.Message & paciente.Nombre & "." & vbCrLf
+                        count -= 1
+                    End Try
+                Next
+
+                msg = count & msg
+                Dim strbuilder As New StringBuilder
+                strbuilder.Append(msg)
+                strbuilder.Replace("persona", "paciente")
+
+                msg = strbuilder.ToString
+
+                If msg.Contains("No se pudo") Then
+                    MsgBox(msg, MsgBoxStyle.Exclamation, "Advertencia")
+
+                Else
+                    MsgBox(msg, MsgBoxStyle.Information, "Información")
+
+                End If
+                LoadDgv()
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+        ChangeMode(Modos.Ingresar)
+        ClearFields()
     End Sub
 End Class

@@ -26,14 +26,14 @@ Para poder utilizar este software es necesario tener la base de datos creada y c
 * [X] Alta Empleado (Medico, Recursos Humanos, Recepcionista)
 * [X] Modificación Empleado
 * [X] Baja Empleado
-* [ ] Extender permisos a Médicos
+* [X] Extender permisos a Médicos
 * [X] Listar Empleados
 * [ ] Buscar Empleados
 
 #### Pacientes
-* [ ] Alta Completa Pacientes
-* [ ] Alta Parcial Pacientes
-* [ ] Modificación Pacientes
-* [ ] Baja Pacientes
-* [ ] Listar Pacientes
+* [X] Alta Completa Pacientes
+* [X] Alta Parcial Pacientes
+* [X] Modificación Pacientes
+* [X] Baja Pacientes
+* [X] Listar Pacientes
 * [ ] Buscar Pacientes

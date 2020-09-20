@@ -12,7 +12,7 @@ Public Class F_Sintomas
 
     Private Property Modo As Modos = Modos.Ingresar
     Private Property IdSintomaMod As Short
-    Private AdministradorBUS As New AdministradoBUS
+    Private AdministradorBUS As New AdministradorBUS
     Private SintomaBUS As New SintomaBUS
 
     Private Enum Modos
@@ -189,7 +189,7 @@ Public Class F_Sintomas
         If confirmation Then
             Try
                 Dim sintomas = GetSelected()
-                Dim AdministradorBUS As New AdministradoBUS
+                Dim AdministradorBUS As New AdministradorBUS
 
                 Dim msg As String = " sintomas eliminados." & vbCrLf
                 For Each sintoma In sintomas

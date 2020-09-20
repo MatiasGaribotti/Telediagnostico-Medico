@@ -68,7 +68,7 @@ Public Class F_Empleados
 
     Public Function GetSelected() As List(Of Empleado)
         Dim listaEmpleados As New List(Of Empleado)
-        Dim rows = DgvMedicos.SelectedRows
+        Dim rows = DgvEmpleados.SelectedRows
         Try
             For i As Integer = 0 To rows.Count - 1
                 Dim cells = rows.Item(i).Cells
@@ -249,7 +249,7 @@ Public Class F_Empleados
         Dim MedicoBUS As New MedicoBUS()
         Try
             Dim dt As DataTable = MedicoBUS.GetEmpleados()
-            DgvMedicos.DataSource = dt
+            DgvEmpleados.DataSource = dt
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -299,22 +299,22 @@ Public Class F_Empleados
 
     Private Sub ConfigDgvAppearance()
         'Revisar
-        DgvMedicos.Columns.Item(0).Width = 80
-        DgvMedicos.Columns.Item(1).Width = 180
-        DgvMedicos.Columns.Item(2).Width = 100
-        DgvMedicos.Columns.Item(3).Width = 110
-        DgvMedicos.Columns.Item(4).Width = 200
-        DgvMedicos.Columns.Item(5).Width = 350
+        DgvEmpleados.Columns.Item(0).Width = 80
+        DgvEmpleados.Columns.Item(1).Width = 180
+        DgvEmpleados.Columns.Item(2).Width = 100
+        DgvEmpleados.Columns.Item(3).Width = 110
+        DgvEmpleados.Columns.Item(4).Width = 200
+        DgvEmpleados.Columns.Item(5).Width = 350
         'HideBooleansDgv()
 
     End Sub
 
     Public Sub HideBooleansDgv()
-        Dim count = DgvMedicos.Columns.Count
-        DgvMedicos.Columns.Item(count - 1).Visible = False
-        DgvMedicos.Columns.Item(count - 2).Visible = False
-        DgvMedicos.Columns.Item(count - 3).Visible = False
-        DgvMedicos.Columns.Item(count - 4).Visible = False
+        Dim count = DgvEmpleados.Columns.Count
+        DgvEmpleados.Columns.Item(count - 1).Visible = False
+        DgvEmpleados.Columns.Item(count - 2).Visible = False
+        DgvEmpleados.Columns.Item(count - 3).Visible = False
+        DgvEmpleados.Columns.Item(count - 4).Visible = False
 
     End Sub
 
@@ -407,5 +407,28 @@ Public Class F_Empleados
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
 
+    End Sub
+
+    Private Sub BtnHacerAdmin_Click(sender As Object, e As EventArgs) Handles BtnHacerAdmin.Click
+        Dim RRHHBUS As New RRHHBUS
+        Dim count As Integer = DgvEmpleados.SelectedRows.Count
+
+        Try
+            If count = 1 Then
+                Dim empleado = GetSelected().First
+                If empleado.IsMedico Then
+                    RRHHBUS.MakeAdministrator(empleado.Ci)
+                    LoadDgv()
+                    MsgBox(empleado.Nombre & " ascendido a administrador.", MsgBoxStyle.Information, "Información")
+                Else
+                    Throw New Exception("Solo los médicos pueden ser administradores.")
+                End If
+
+            Else
+                Throw New Exception("No se puede hacer administrado a más de un médico a la vez.")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
 End Class

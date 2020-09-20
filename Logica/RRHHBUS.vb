@@ -183,6 +183,11 @@ Public Class RRHHBUS
 
     Public Sub MakeAdministrator(ci As Integer)
         Dim MedicoDAO As New MedicoDAO
-        MedicoDAO.MakeAdministrator(ci)
+        Try
+            MedicoDAO.MakeAdministrator(ci)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 End Class

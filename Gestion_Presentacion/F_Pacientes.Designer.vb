@@ -91,6 +91,7 @@ Partial Class F_Pacientes
         Me.lbl_fechaNacimiento = New System.Windows.Forms.Label()
         Me.lbl_apellidos = New System.Windows.Forms.Label()
         Me.lbl_nombre = New System.Windows.Forms.Label()
+        Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.pnl_contenedor.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DgvPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -169,7 +170,6 @@ Partial Class F_Pacientes
         Me.DgvPacientes.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvPacientes.EnableHeadersVisualStyles = False
         Me.DgvPacientes.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvPacientes.MultiSelect = False
         Me.DgvPacientes.Name = "DgvPacientes"
         Me.DgvPacientes.ReadOnly = True
         Me.DgvPacientes.RowHeadersVisible = False
@@ -614,6 +614,7 @@ Partial Class F_Pacientes
         'pnl_ingresar
         '
         Me.pnl_ingresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_ingresar.Controls.Add(Me.BtnCancelar)
         Me.pnl_ingresar.Controls.Add(Me.TxtIDetalle)
         Me.pnl_ingresar.Controls.Add(Me.TxtICi)
         Me.pnl_ingresar.Controls.Add(Me.LblCi)
@@ -809,7 +810,6 @@ Partial Class F_Pacientes
         resources.ApplyResources(Me.TxtINFam, "TxtINFam")
         Me.TxtINFam.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtINFam.HoverState.Parent = Me.TxtINFam
-        Me.TxtINFam.Multiline = True
         Me.TxtINFam.Name = "TxtINFam"
         Me.TxtINFam.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtINFam.PlaceholderText = ""
@@ -1086,6 +1086,23 @@ Partial Class F_Pacientes
         Me.lbl_nombre.BackColor = System.Drawing.Color.Transparent
         Me.lbl_nombre.Name = "lbl_nombre"
         '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.Animated = True
+        Me.BtnCancelar.AutoRoundedCorners = True
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BorderRadius = 17
+        Me.BtnCancelar.CheckedState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.CustomImages.Parent = Me.BtnCancelar
+        Me.BtnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnCancelar, "BtnCancelar")
+        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelar.HoverState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.ImageSize = New System.Drawing.Size(0, 0)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
+        Me.BtnCancelar.UseTransparentBackground = True
+        '
         'F_Pacientes
         '
         resources.ApplyResources(Me, "$this")
@@ -1171,4 +1188,5 @@ Partial Class F_Pacientes
     Friend WithEvents DgvPacientes As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents TxtIDetalle As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TxtBDetalle As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents BtnCancelar As Guna.UI2.WinForms.Guna2Button
 End Class

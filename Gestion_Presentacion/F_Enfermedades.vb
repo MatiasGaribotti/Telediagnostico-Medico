@@ -3,7 +3,7 @@ Imports Logica
 Imports System.Threading
 Public Class F_Enfermedades
     Private EnfermedadBUS As New EnfermedadBUS
-    Private AdministradorBUS As New AdministradoBUS
+    Private AdministradorBUS As New AdministradorBUS
     Private Modo As Modos = Modos.Ingresar
     Private IdEnfermedadMod As Short
 
