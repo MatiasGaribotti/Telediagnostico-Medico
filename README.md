@@ -3,8 +3,7 @@ Para poder utilizar este software es necesario tener la base de datos creada y c
 [Descarga el script de creación de la base de datos](https://drive.google.com/file/d/1Wa-81Zs0v3jUI-lFl-98kFYDzePanjoe/view?usp=sharing).
 [Descarga el script con juego de datos](https://drive.google.com/file/d/1E0IeifHZ-bJKOj9EIEuKCc4xhb1Sn0cf/view?usp=sharing).
 
-## Funciones Incluidas
-
+## Aplicación de Gestión
 ### Síntomas
 * [X] Alta Síntoma
 * [X] Modificacación de Síntoma
@@ -37,3 +36,17 @@ Para poder utilizar este software es necesario tener la base de datos creada y c
 * [X] Baja Pacientes
 * [X] Listar Pacientes
 * [ ] Buscar Pacientes
+
+## Aplicación Paciente
+* [ ] Seleccionar síntomas
+* [X] Obtener Diagnóstico
+* [ ] Ver HCE
+* [ ] Iniciar Chat
+* [ ] Enviar copia chat por mail
+* [ ] Establecer contraseña
+
+## Aplicación Médico
+* [ ] Ver solicitudes de chat
+* [ ] Iniciar chat
+* [ ] Ver HCE paciente
+* [ ] Establecer contraseña

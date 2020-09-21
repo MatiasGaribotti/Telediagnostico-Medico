@@ -65,6 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.vb" />
+    <Compile Include="Chat.vb" />
+    <Compile Include="Consulta.vb" />
+    <Compile Include="ConsultaMedica.vb" />
+    <Compile Include="Diagnostico.vb" />
     <Compile Include="Direccion.vb" />
     <Compile Include="Empleado.vb" />
     <Compile Include="Enfermedad.vb" />
@@ -93,6 +97,7 @@
     <Compile Include="RRHH.vb" />
     <Compile Include="Sintoma.vb" />
     <Compile Include="Sucursal.vb" />
+    <Compile Include="Tratamiento.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

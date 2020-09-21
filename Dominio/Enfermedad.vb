@@ -4,6 +4,7 @@
     Public Property Descripcion As String
     Public Property Urgencia As Urgencias
     Public Property Cronica As Boolean
+    Public Property Sintomas As List(Of Sintoma)
     Public Enum Urgencias
         Baja = 1 'inicializo en 1 el primer miembro para que coincida con la BD.
         Media

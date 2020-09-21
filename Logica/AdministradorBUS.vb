@@ -140,15 +140,16 @@ Public Class AdministradorBUS
 
     Public Sub InsertSintoma(sintoma As Sintoma)
 
-        Dim DBSintoma As New SintomaDAO()
+        Dim SintomaDAO As New SintomaDAO()
+        Dim SintomaBUS As New SintomaBUS
         Dim objEnfermedad As New Enfermedad()
 
-        For Each enfermedad In GetEnfermedadesAsociadas(sintoma.Id)
+        For Each enfermedad In SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
             sintoma.Enfermedades.Add(enfermedad)
         Next
 
         Try
-            DBSintoma.Insert(sintoma)
+            SintomaDAO.Insert(sintoma)
         Catch ex As Exception
             Throw ex
         End Try
@@ -156,16 +157,6 @@ Public Class AdministradorBUS
     Public Sub AsociarEnfermedad(ByRef sintoma As Sintoma, enfermedad As Enfermedad)
         sintoma.Enfermedades.Add(enfermedad)
     End Sub
-
-    Public Function GetEnfermedadesAsociadas(id As Short) As List(Of Enfermedad)
-        Dim SintomaDAO As New SintomaDAO()
-        Try
-            Return SintomaDAO.GetEnfermedadesAsociadas(id)
-
-        Catch ex As Exception
-            Throw ex
-        End Try
-    End Function
 
     Public Sub DeleteSintoma(idSintoma As Short)
         Dim db As New SintomaDAO()

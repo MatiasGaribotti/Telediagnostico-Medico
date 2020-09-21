@@ -37,6 +37,7 @@ Partial Class F_Login
         Me.pic_background = New System.Windows.Forms.PictureBox()
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.BtnPaciente = New Guna.UI2.WinForms.Guna2Button()
         Me.pnl_login.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.PicLogin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +55,7 @@ Partial Class F_Login
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.BtnPaciente)
         Me.Guna2Panel1.Controls.Add(Me.Btn_Ingresar)
         Me.Guna2Panel1.Controls.Add(Me.PicLogin)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel3)
@@ -247,6 +249,26 @@ Partial Class F_Login
         Me.Btn_Exit.Size = New System.Drawing.Size(45, 29)
         Me.Btn_Exit.TabIndex = 9
         '
+        'BtnPaciente
+        '
+        Me.BtnPaciente.Animated = True
+        Me.BtnPaciente.AutoRoundedCorners = True
+        Me.BtnPaciente.BackColor = System.Drawing.Color.Transparent
+        Me.BtnPaciente.BorderRadius = 22
+        Me.BtnPaciente.CheckedState.Parent = Me.BtnPaciente
+        Me.BtnPaciente.CustomImages.Parent = Me.BtnPaciente
+        Me.BtnPaciente.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.BtnPaciente.ForeColor = System.Drawing.Color.White
+        Me.BtnPaciente.HoverState.Parent = Me.BtnPaciente
+        Me.BtnPaciente.Location = New System.Drawing.Point(202, 830)
+        Me.BtnPaciente.Name = "BtnPaciente"
+        Me.BtnPaciente.ShadowDecoration.Parent = Me.BtnPaciente
+        Me.BtnPaciente.Size = New System.Drawing.Size(154, 46)
+        Me.BtnPaciente.TabIndex = 24
+        Me.BtnPaciente.Text = "Paciente"
+        Me.BtnPaciente.UseTransparentBackground = True
+        '
         'F_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -285,4 +307,5 @@ Partial Class F_Login
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PicLogin As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Btn_Ingresar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnPaciente As Guna.UI2.WinForms.Guna2Button
 End Class

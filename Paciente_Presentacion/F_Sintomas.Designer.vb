@@ -27,6 +27,7 @@ Partial Class F_Sintomas
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lbl_SintomasIng = New System.Windows.Forms.Label()
         Me.LeftPanel = New System.Windows.Forms.Panel()
+        Me.BtnDiagnosticoTest = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnHCE = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnAceptar = New Guna.UI2.WinForms.Guna2Button()
@@ -48,6 +49,7 @@ Partial Class F_Sintomas
         'LeftPanel
         '
         Me.LeftPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.LeftPanel.Controls.Add(Me.BtnDiagnosticoTest)
         Me.LeftPanel.Controls.Add(Me.BtnHCE)
         Me.LeftPanel.Controls.Add(Me.BtnCancelar)
         Me.LeftPanel.Controls.Add(Me.BtnAceptar)
@@ -58,6 +60,25 @@ Partial Class F_Sintomas
         Me.LeftPanel.Name = "LeftPanel"
         Me.LeftPanel.Size = New System.Drawing.Size(960, 1080)
         Me.LeftPanel.TabIndex = 4
+        '
+        'BtnDiagnosticoTest
+        '
+        Me.BtnDiagnosticoTest.Animated = True
+        Me.BtnDiagnosticoTest.AutoRoundedCorners = True
+        Me.BtnDiagnosticoTest.BorderRadius = 21
+        Me.BtnDiagnosticoTest.CheckedState.Parent = Me.BtnDiagnosticoTest
+        Me.BtnDiagnosticoTest.CustomImages.Parent = Me.BtnDiagnosticoTest
+        Me.BtnDiagnosticoTest.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnDiagnosticoTest.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnDiagnosticoTest.ForeColor = System.Drawing.Color.White
+        Me.BtnDiagnosticoTest.HoverState.Parent = Me.BtnDiagnosticoTest
+        Me.BtnDiagnosticoTest.Location = New System.Drawing.Point(726, 992)
+        Me.BtnDiagnosticoTest.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
+        Me.BtnDiagnosticoTest.Name = "BtnDiagnosticoTest"
+        Me.BtnDiagnosticoTest.ShadowDecoration.Parent = Me.BtnDiagnosticoTest
+        Me.BtnDiagnosticoTest.Size = New System.Drawing.Size(170, 44)
+        Me.BtnDiagnosticoTest.TabIndex = 118
+        Me.BtnDiagnosticoTest.Text = "Diagnóstico Test"
         '
         'BtnHCE
         '
@@ -206,4 +227,5 @@ Partial Class F_Sintomas
     Friend WithEvents BtnHCE As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnCancelar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnAceptar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnDiagnosticoTest As Guna.UI2.WinForms.Guna2Button
 End Class

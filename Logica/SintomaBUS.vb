@@ -25,5 +25,13 @@ Public Class SintomaBUS
         Return dt
     End Function
 
+    Public Function GetEnfermedadesAsociadas(idSintoma As Short) As List(Of Enfermedad)
+        Dim SintomaDAO As New SintomaDAO()
+        Try
+            Return SintomaDAO.GetEnfermedadesAsociadas(idSintoma)
 
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

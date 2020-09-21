@@ -204,4 +204,26 @@ Public Class EnfermedadDAO
         Return dt
     End Function
 
+    Public Function GetSintomasAsociados(pIdEnfermedad As Short) As DataTable
+        Dim dt As New DataTable
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim query As String = "SELECT ES.idSintoma, S.nombre, S.descripcion, S.tipo FROM enfermedades_sintomas AS ES JOIN sintomas AS S ON(ES.idSintoma = S.id) WHERE idEnfermedad=" & pIdEnfermedad & " AND ENABLED=TRUE;"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+            Return dt
+
+        Catch ex As Exception
+            Throw New Exception("No se pudo obtener los síntomas asociados.")
+        End Try
+    End Function
+
 End Class

@@ -292,7 +292,7 @@ Public Class SintomaDAO
     ''' <returns>Retorna una lista de enfermedades asociadas al síntoma.</returns>
     Public Function GetEnfermedadesAsociadas(id As Short) As List(Of Enfermedad)
         Dim rs As New Recordset()
-        Dim query = "SELECT ES.idEnfermedad, E.nombre, E.descripcion, E.urgencia, E.cronica FROM enfermedades_sintomas AS ES JOIN enfermedades AS E ON(ES.idEnfermedad = E.id) WHERE idSintoma=" & id & ";"
+        Dim query = "SELECT ES.idEnfermedad, E.nombre, E.descripcion, E.urgencia, E.cronica FROM enfermedades_sintomas AS ES JOIN enfermedades AS E ON(ES.idEnfermedad = E.id) WHERE idSintoma=" & id & " AND ENABLED=TRUE;"
         Dim enfermedades As New List(Of Enfermedad)
         Try
             Dim Conn = Connect()
@@ -310,7 +310,7 @@ Public Class SintomaDAO
                 Dim urgencia = [Enum].Parse(GetType(Enfermedad.Urgencias), rs.Fields("urgencia").Value)
                 Dim cronica = CBool(rs.Fields("cronica").Value)
 
-                enfermedades.Add(New Enfermedad(id, nombre, descripcion, urgencia, cronica))
+                enfermedades.Add(New Enfermedad(idEnfermedad, nombre, descripcion, urgencia, cronica))
                 rs.MoveNext()
             End While
         Catch ex As Exception

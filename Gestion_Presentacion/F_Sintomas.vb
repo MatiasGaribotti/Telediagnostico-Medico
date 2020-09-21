@@ -228,8 +228,9 @@ Public Class F_Sintomas
                 ChangeMode(Modos.Ingresar)
                 MsgBox("No se puede modificar más de un síntoma a la vez.", MsgBoxStyle.Exclamation, "Modificar Síntoma")
             Else
+                Dim SintomaBUS As New SintomaBUS()
                 Dim sintoma = listSintomas.First
-                sintoma.Enfermedades = AdministradorBUS.GetEnfermedadesAsociadas(sintoma.Id)
+                sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
                 IdSintomaMod = sintoma.Id
                 LoadFields(sintoma)
 

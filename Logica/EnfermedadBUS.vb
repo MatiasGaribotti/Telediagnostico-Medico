@@ -44,4 +44,32 @@ Public Class EnfermedadBUS
 
     End Function
 
+    Public Function GetSintomasAsociados(pIdEnfermedad As Short) As List(Of Sintoma)
+        Dim EnfermedadDAO As New EnfermedadDAO
+        Dim dt As DataTable
+        Dim listaSintomas As New List(Of Sintoma)
+
+        Try
+            dt = EnfermedadDAO.GetSintomasAsociados(pIdEnfermedad)
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            For row As Integer = 0 To dt.Rows.Count - 1
+                Dim column = dt.Rows.Item(row)
+                Dim id As Short = CShort(column.Field(Of Integer)("idSintoma"))
+                Dim nombre As String = column.Field(Of String)("nombre")
+                Dim descripcion As String = column.Field(Of String)("descripcion")
+                Dim tipo As Sintoma.TiposSintomas = [Enum].Parse(GetType(Sintoma.TiposSintomas), column.Field(Of String)("tipo"))
+
+                listaSintomas.Add(New Sintoma(id, nombre, descripcion, tipo))
+
+            Next
+            Return listaSintomas
+        Catch ex As Exception
+            Throw New Exception("Error al convertir la información obtenida.")
+        End Try
+    End Function
+
 End Class

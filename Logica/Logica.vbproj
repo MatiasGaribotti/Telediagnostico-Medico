@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="AdministradorBUS.vb" />
     <Compile Include="AuthenticationBUS.vb" />
+    <Compile Include="AutoconsultaBUS.vb" />
     <Compile Include="EmpleadoBUS.vb" />
     <Compile Include="EnfermedadBUS.vb" />
     <Compile Include="Mailing.vb" />
