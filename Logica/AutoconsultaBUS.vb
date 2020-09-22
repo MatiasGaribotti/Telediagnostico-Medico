@@ -3,7 +3,18 @@ Imports Dominio
 
 Public Class AutoconsultaBUS
 
-    Public Function GetDiagnosis(selectedSintomas As List(Of Sintoma)) As List(Of Diagnostico)
+    Public Shared instance As New AutoconsultaBUS
+    Public Property selectedSintomas As New List(Of Sintoma)
+    Private Sub New()
+
+    End Sub
+
+    Public Sub AddSintoma(pSintoma As Sintoma)
+        selectedSintomas.Add(pSintoma)
+    End Sub
+
+
+    Public Function GetDiagnosis() As List(Of Diagnostico)
         Dim diagnosis As New List(Of Diagnostico)
 
         Dim EnfermedadBUS As New EnfermedadBUS
@@ -59,7 +70,7 @@ Public Class AutoconsultaBUS
         Return diagnosis
     End Function
 
-    Public Function Contains(pId As Short, list As List(Of Enfermedad))
+    Private Function Contains(pId As Short, list As List(Of Enfermedad))
         For Each item In list
             If item.Id = pId Then
                 Return True

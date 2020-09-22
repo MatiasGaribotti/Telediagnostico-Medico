@@ -2,33 +2,34 @@
 Imports Dominio
 
 Public Class F_Sintomas_Buscar
-    Private Property pattern As Sintoma
-    Public Sub New()
-        InitializeComponent()
-        LoadDgv()
-    End Sub
+    Public Property pattern As Sintoma
 
-    Public Sub New(patron As String, tipo As Sintoma.TiposSintomas)
+    Public Sub New()
         InitializeComponent()
         pattern = New Sintoma
         LoadDgv()
+    End Sub
+
+    Public Sub New(pNombre As String, pTipo As Sintoma.TiposSintomas)
+        InitializeComponent()
+        pattern = New Sintoma(pNombre, pTipo)
+        LoadDgv()
 
     End Sub
 
-    ' "SELECT id,nombre,descripcion,tipo FROM sintomas WHERE ENABLED=1"
-#Region "Tabla"
+    ' "SELECT id,nombre,descripcion,tipo FROM sintomas WHERE ENABLED=1""
+
     Private Sub LoadDgv()
-        Dim objSintoma As New SintomaBUS()
+        Dim SintomaBUS As New SintomaBUS()
         Try
-            Dim dt As DataTable = objSintoma.GetSintomas(pattern)
+            Dim dt As DataTable = SintomaBUS.GetSintomas(pattern)
             DgvSintomas.DataSource = dt
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
-#End Region
 
-    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs)
         Close()
     End Sub
 
@@ -37,6 +38,18 @@ Public Class F_Sintomas_Buscar
     End Sub
 
     Private Sub BtnCross_Click(sender As Object, e As EventArgs) Handles BtnCross.Click
-        TxtBuscador.Text = ""
+        TxtSearch.Text = ""
+    End Sub
+
+    Private Sub BtnCabeza_Click(sender As Object, e As EventArgs) Handles BtnCabeza.Click
+
+    End Sub
+
+    Private Sub BtnTorso_Click(sender As Object, e As EventArgs) Handles BtnTorso.Click
+
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles BtnExtremidades.Click
+
     End Sub
 End Class

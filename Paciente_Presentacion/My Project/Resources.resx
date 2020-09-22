@@ -142,4 +142,22 @@
   <data name="BtnAceptar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>img\Botones\BtnAceptar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="arms_legs_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Botones\arms-legs-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnCross" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Botones\BtnCross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Botones\BtnSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chest_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Botones\chest-100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="full_body_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Botones\full-body-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="head_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>img\Botones\head-100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -272,5 +272,23 @@
   <ItemGroup>
     <None Include="My Project\img\login\Kartoffel Solutions Logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\img\Botones\BtnSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\img\Botones\BtnCross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\img\Botones\chest-100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\img\Botones\head-100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\img\Botones\arms-legs-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\img\Botones\full-body-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

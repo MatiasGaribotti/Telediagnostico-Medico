@@ -6,11 +6,11 @@ Public Class F_Sintomas_Buscar_Tipo
 
     Public Sub New()
         InitializeComponent()
-
+        Pattern = New Sintoma
     End Sub
 
-    Private Sub BtnCross_Click(sender As Object, e As EventArgs) Handles BtnCross.Click
-        TxtBuscador.Text = ""
+    Private Sub PicCabeza_Click(sender As Object, e As EventArgs) Handles PicCabeza.Click
+        Pattern.Tipo = Sintoma.TiposSintomas.Cabeza
     End Sub
 
     Private Sub PicTorso_Click(sender As Object, e As EventArgs) Handles PicTorso.Click
@@ -22,6 +22,10 @@ Public Class F_Sintomas_Buscar_Tipo
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
-        Pattern.Tipo = Sintoma.TiposSintomas.Cabeza
+
+    End Sub
+
+    Private Sub BtnCross_Click(sender As Object, e As EventArgs) Handles BtnCross.Click
+        TxtSearch.Text = ""
     End Sub
 End Class
