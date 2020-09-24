@@ -79,9 +79,8 @@ Public MustInherit Class DBConnection
     ''' <param name="user">Usuario de la base de datos.</param>
     ''' <param name="password">Contaseña del usuario de la base de datos.</param>
     Private Sub SetConnectionString(user As String, password As String)
-        ConStr = "Driver={MYSQL ODBC 5.3 Unicode Driver};" &
-                                      "server=192.168.1.131;" &
-                                      "port=3306;" &
+        ConStr = "Driver={MYSQL ODBC 8.0 Unicode Driver};" &
+                                      "dsn=dsn_st;" &
                                       "database=sistema_telediagnostico;" &
                                       "uid=" & user & ";" &
                                       "pwd=" & password & ";"

@@ -35,6 +35,10 @@ Partial Class F_Sintomas
         Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnAceptar = New Guna.UI2.WinForms.Guna2Button()
         Me.DgvSelectedSintomas = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblTodo = New System.Windows.Forms.Label()
         Me.BtnFullBody = New Guna.UI2.WinForms.Guna2Button()
@@ -48,10 +52,6 @@ Partial Class F_Sintomas
         Me.BtnSearch = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.TxtSearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DgvAllSintomas = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LeftPanel.SuspendLayout()
         CType(Me.DgvSelectedSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
@@ -91,7 +91,7 @@ Partial Class F_Sintomas
         Me.BtnDiagnosticoTest.CheckedState.Parent = Me.BtnDiagnosticoTest
         Me.BtnDiagnosticoTest.CustomImages.Parent = Me.BtnDiagnosticoTest
         Me.BtnDiagnosticoTest.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnDiagnosticoTest.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnDiagnosticoTest.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.BtnDiagnosticoTest.ForeColor = System.Drawing.Color.White
         Me.BtnDiagnosticoTest.HoverState.Parent = Me.BtnDiagnosticoTest
         Me.BtnDiagnosticoTest.Location = New System.Drawing.Point(726, 992)
@@ -110,7 +110,7 @@ Partial Class F_Sintomas
         Me.BtnHCE.CheckedState.Parent = Me.BtnHCE
         Me.BtnHCE.CustomImages.Parent = Me.BtnHCE
         Me.BtnHCE.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnHCE.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnHCE.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.BtnHCE.ForeColor = System.Drawing.Color.White
         Me.BtnHCE.HoverState.Parent = Me.BtnHCE
         Me.BtnHCE.Location = New System.Drawing.Point(49, 3)
@@ -129,7 +129,7 @@ Partial Class F_Sintomas
         Me.BtnCancelar.CheckedState.Parent = Me.BtnCancelar
         Me.BtnCancelar.CustomImages.Parent = Me.BtnCancelar
         Me.BtnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnCancelar.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.BtnCancelar.ForeColor = System.Drawing.Color.White
         Me.BtnCancelar.HoverState.Parent = Me.BtnCancelar
         Me.BtnCancelar.Location = New System.Drawing.Point(49, 734)
@@ -148,7 +148,7 @@ Partial Class F_Sintomas
         Me.BtnAceptar.CheckedState.Parent = Me.BtnAceptar
         Me.BtnAceptar.CustomImages.Parent = Me.BtnAceptar
         Me.BtnAceptar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnAceptar.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.BtnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.BtnAceptar.ForeColor = System.Drawing.Color.White
         Me.BtnAceptar.HoverState.Parent = Me.BtnAceptar
         Me.BtnAceptar.Location = New System.Drawing.Point(749, 734)
@@ -185,7 +185,7 @@ Partial Class F_Sintomas
         Me.DgvSelectedSintomas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.nombre, Me.descripcion, Me.tipo})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -221,11 +221,46 @@ Partial Class F_Sintomas
         Me.DgvSelectedSintomas.ThemeStyle.ReadOnly = True
         Me.DgvSelectedSintomas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.DgvSelectedSintomas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvSelectedSintomas.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DgvSelectedSintomas.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DgvSelectedSintomas.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.DgvSelectedSintomas.ThemeStyle.RowsStyle.Height = 50
         Me.DgvSelectedSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         Me.DgvSelectedSintomas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'id
+        '
+        Me.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.id.FillWeight = 1.0!
+        Me.id.HeaderText = "id"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        '
+        'nombre
+        '
+        Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.nombre.FillWeight = 1000.0!
+        Me.nombre.HeaderText = "nombre"
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 1000
+        '
+        'descripcion
+        '
+        Me.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.descripcion.FillWeight = 1.0!
+        Me.descripcion.HeaderText = "descripcion"
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        '
+        'tipo
+        '
+        Me.tipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.tipo.FillWeight = 1.0!
+        Me.tipo.HeaderText = "tipo"
+        Me.tipo.MinimumWidth = 2
+        Me.tipo.Name = "tipo"
+        Me.tipo.ReadOnly = True
+        Me.tipo.Width = 2
         '
         'Guna2Panel1
         '
@@ -252,10 +287,10 @@ Partial Class F_Sintomas
         'LblTodo
         '
         Me.LblTodo.AutoSize = True
-        Me.LblTodo.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.LblTodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.LblTodo.Location = New System.Drawing.Point(242, 189)
         Me.LblTodo.Name = "LblTodo"
-        Me.LblTodo.Size = New System.Drawing.Size(53, 23)
+        Me.LblTodo.Size = New System.Drawing.Size(55, 24)
         Me.LblTodo.TabIndex = 116
         Me.LblTodo.Text = "Todo"
         Me.LblTodo.Visible = False
@@ -284,10 +319,10 @@ Partial Class F_Sintomas
         'LblExtremidades
         '
         Me.LblExtremidades.AutoSize = True
-        Me.LblExtremidades.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.LblExtremidades.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.LblExtremidades.Location = New System.Drawing.Point(626, 189)
         Me.LblExtremidades.Name = "LblExtremidades"
-        Me.LblExtremidades.Size = New System.Drawing.Size(126, 23)
+        Me.LblExtremidades.Size = New System.Drawing.Size(126, 24)
         Me.LblExtremidades.TabIndex = 114
         Me.LblExtremidades.Text = "Extremidades"
         Me.LblExtremidades.Visible = False
@@ -295,10 +330,10 @@ Partial Class F_Sintomas
         'LblTorso
         '
         Me.LblTorso.AutoSize = True
-        Me.LblTorso.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.LblTorso.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.LblTorso.Location = New System.Drawing.Point(521, 189)
         Me.LblTorso.Name = "LblTorso"
-        Me.LblTorso.Size = New System.Drawing.Size(58, 23)
+        Me.LblTorso.Size = New System.Drawing.Size(59, 24)
         Me.LblTorso.TabIndex = 113
         Me.LblTorso.Text = "Torso"
         Me.LblTorso.Visible = False
@@ -306,10 +341,10 @@ Partial Class F_Sintomas
         'LblCabeza
         '
         Me.LblCabeza.AutoSize = True
-        Me.LblCabeza.Font = New System.Drawing.Font("Roboto", 14.25!)
+        Me.LblCabeza.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.LblCabeza.Location = New System.Drawing.Point(377, 189)
         Me.LblCabeza.Name = "LblCabeza"
-        Me.LblCabeza.Size = New System.Drawing.Size(72, 23)
+        Me.LblCabeza.Size = New System.Drawing.Size(74, 24)
         Me.LblCabeza.TabIndex = 112
         Me.LblCabeza.Text = "Cabeza"
         Me.LblCabeza.Visible = False
@@ -426,11 +461,11 @@ Partial Class F_Sintomas
         Me.TxtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.TxtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtSearch.FocusedState.Parent = Me.TxtSearch
-        Me.TxtSearch.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtSearch.HoverState.Parent = Me.TxtSearch
         Me.TxtSearch.Location = New System.Drawing.Point(219, 242)
-        Me.TxtSearch.Margin = New System.Windows.Forms.Padding(9, 9, 9, 9)
+        Me.TxtSearch.Margin = New System.Windows.Forms.Padding(9)
         Me.TxtSearch.Name = "TxtSearch"
         Me.TxtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtSearch.PlaceholderText = ""
@@ -464,7 +499,7 @@ Partial Class F_Sintomas
         Me.DgvAllSintomas.ColumnHeadersVisible = False
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -500,46 +535,11 @@ Partial Class F_Sintomas
         Me.DgvAllSintomas.ThemeStyle.ReadOnly = True
         Me.DgvAllSintomas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.DgvAllSintomas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvAllSintomas.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DgvAllSintomas.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DgvAllSintomas.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.DgvAllSintomas.ThemeStyle.RowsStyle.Height = 50
         Me.DgvAllSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         Me.DgvAllSintomas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'id
-        '
-        Me.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.id.FillWeight = 1.0!
-        Me.id.HeaderText = "id"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        '
-        'nombre
-        '
-        Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.nombre.FillWeight = 1000.0!
-        Me.nombre.HeaderText = "nombre"
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 1000
-        '
-        'descripcion
-        '
-        Me.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.descripcion.FillWeight = 1.0!
-        Me.descripcion.HeaderText = "descripcion"
-        Me.descripcion.Name = "descripcion"
-        Me.descripcion.ReadOnly = True
-        '
-        'tipo
-        '
-        Me.tipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.tipo.FillWeight = 1.0!
-        Me.tipo.HeaderText = "tipo"
-        Me.tipo.MinimumWidth = 2
-        Me.tipo.Name = "tipo"
-        Me.tipo.ReadOnly = True
-        Me.tipo.Width = 2
         '
         'F_Sintomas
         '
@@ -547,7 +547,7 @@ Partial Class F_Sintomas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(1920, 1080)
+        Me.ClientSize = New System.Drawing.Size(1300, 1044)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.LeftPanel)
         Me.DoubleBuffered = True

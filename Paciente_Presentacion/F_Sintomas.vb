@@ -115,7 +115,7 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub DgvAllSintomas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvAllSintomas.CellClick
-        'Dim sintomaSelected = GetSelected()
+        Dim sintomaSelected = GetSelected()
         Try
             DgvSelectedSintomas.Rows.Add("1", "test", "desccc", "tipo")
             DgvSelectedSintomas.Refresh()
@@ -123,4 +123,13 @@ Public Class F_Sintomas
 
         End Try
     End Sub
+
+    Private Function GetSelected()
+        Dim cells = DgvAllSintomas.SelectedRows.Item(0).Cells
+
+        Dim id As Integer = CInt(cells.Item(0).Value)
+        Dim nombre As String = cells.Item(1).ToString
+        Dim descripcion As String = cells.Item(2).ToString
+
+    End Function
 End Class
