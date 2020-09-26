@@ -25,6 +25,7 @@
                    nombre As String,
                    apellidoP As String,
                    apellidoM As String,
+                   sexo As Sexos,
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
@@ -32,7 +33,7 @@
                    horarios As List(Of Horario),
                    Password As String
                    )
-        MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, horarios, Password)
+        MyBase.New(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fecha_nacimiento, horarios, Password)
         Me.IsMedico = True
         Me.Especialidades = especialidades
     End Sub
@@ -41,13 +42,14 @@
                    nombre As String,
                    apellidoP As String,
                    apellidoM As String,
+                   sexo As Sexos,
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
                    especialidades As List(Of Especialidad),
                    Optional password As String = ""
                    )
-        MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
+        MyBase.New(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fecha_nacimiento, password)
         Me.IsMedico = True
         Me.Especialidades = especialidades
     End Sub
@@ -57,7 +59,8 @@
                    nombre As String,
                    apellidoP As String,
                    apellidoM As String,
-                   direccion As Direccion,
+                   sexo As Sexos,
+                   Direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
                    Optional password As String = ""
@@ -66,7 +69,8 @@
                    nombre,
                    apellidoP,
                    apellidoM,
-                   direccion,
+                   sexo,
+                   Direccion,
                    telefono,
                    fecha_nacimiento,
                    password)

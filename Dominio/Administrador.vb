@@ -9,6 +9,7 @@
                    nombre As String,
                    apellidoP As String,
                    apellidoM As String,
+                   sexo As Sexos,
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
@@ -16,7 +17,7 @@
                    horarios As List(Of Horario),
                    Optional Password As String = ""
                    )
-        MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, especialidades, horarios, Password)
+        MyBase.New(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fecha_nacimiento, especialidades, horarios, Password)
         Me.IsAdministrador = True
     End Sub
 
@@ -24,13 +25,14 @@
                    nombre As String,
                    apellidoP As String,
                    apellidoM As String,
+                   sexo As Sexos,
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
                    especialidades As List(Of Especialidad),
                    Optional password As String = ""
                    )
-        MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, especialidades, password)
+        MyBase.New(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fecha_nacimiento, especialidades, password)
         Me.IsAdministrador = True
     End Sub
 

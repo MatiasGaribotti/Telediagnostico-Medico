@@ -23,9 +23,9 @@ Partial Class F_Pacientes
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Pacientes))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnl_contenedor = New System.Windows.Forms.Panel()
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
@@ -60,6 +60,11 @@ Partial Class F_Pacientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnl_ingresar = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.RadioIOtro = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.RadioIF = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.RadioIM = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtIDetalle = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TxtICi = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblCi = New System.Windows.Forms.Label()
@@ -91,7 +96,6 @@ Partial Class F_Pacientes
         Me.lbl_fechaNacimiento = New System.Windows.Forms.Label()
         Me.lbl_apellidos = New System.Windows.Forms.Label()
         Me.lbl_nombre = New System.Windows.Forms.Label()
-        Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.pnl_contenedor.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DgvPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,31 +147,31 @@ Partial Class F_Pacientes
         Me.DgvPacientes.AllowUserToAddRows = False
         Me.DgvPacientes.AllowUserToDeleteRows = False
         Me.DgvPacientes.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.DgvPacientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.DgvPacientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvPacientes.BackgroundColor = System.Drawing.Color.White
         Me.DgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         resources.ApplyResources(Me.DgvPacientes, "DgvPacientes")
         Me.DgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 11.25!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvPacientes.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 11.25!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvPacientes.DefaultCellStyle = DataGridViewCellStyle9
         Me.DgvPacientes.EnableHeadersVisualStyles = False
         Me.DgvPacientes.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvPacientes.Name = "DgvPacientes"
@@ -614,6 +618,10 @@ Partial Class F_Pacientes
         'pnl_ingresar
         '
         Me.pnl_ingresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_ingresar.Controls.Add(Me.Label11)
+        Me.pnl_ingresar.Controls.Add(Me.RadioIOtro)
+        Me.pnl_ingresar.Controls.Add(Me.RadioIF)
+        Me.pnl_ingresar.Controls.Add(Me.RadioIM)
         Me.pnl_ingresar.Controls.Add(Me.BtnCancelar)
         Me.pnl_ingresar.Controls.Add(Me.TxtIDetalle)
         Me.pnl_ingresar.Controls.Add(Me.TxtICi)
@@ -648,6 +656,73 @@ Partial Class F_Pacientes
         Me.pnl_ingresar.Controls.Add(Me.lbl_nombre)
         resources.ApplyResources(Me.pnl_ingresar, "pnl_ingresar")
         Me.pnl_ingresar.Name = "pnl_ingresar"
+        '
+        'Label11
+        '
+        resources.ApplyResources(Me.Label11, "Label11")
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Name = "Label11"
+        '
+        'RadioIOtro
+        '
+        resources.ApplyResources(Me.RadioIOtro, "RadioIOtro")
+        Me.RadioIOtro.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIOtro.CheckedState.BorderThickness = 0
+        Me.RadioIOtro.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIOtro.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.RadioIOtro.CheckedState.InnerOffset = -4
+        Me.RadioIOtro.Name = "RadioIOtro"
+        Me.RadioIOtro.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RadioIOtro.UncheckedState.BorderThickness = 2
+        Me.RadioIOtro.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RadioIOtro.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'RadioIF
+        '
+        resources.ApplyResources(Me.RadioIF, "RadioIF")
+        Me.RadioIF.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIF.CheckedState.BorderThickness = 0
+        Me.RadioIF.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIF.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.RadioIF.CheckedState.InnerOffset = -4
+        Me.RadioIF.Name = "RadioIF"
+        Me.RadioIF.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RadioIF.UncheckedState.BorderThickness = 2
+        Me.RadioIF.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RadioIF.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'RadioIM
+        '
+        resources.ApplyResources(Me.RadioIM, "RadioIM")
+        Me.RadioIM.Checked = True
+        Me.RadioIM.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIM.CheckedState.BorderThickness = 0
+        Me.RadioIM.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIM.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.RadioIM.CheckedState.InnerOffset = -4
+        Me.RadioIM.Name = "RadioIM"
+        Me.RadioIM.TabStop = True
+        Me.RadioIM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RadioIM.UncheckedState.BorderThickness = 2
+        Me.RadioIM.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RadioIM.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.Animated = True
+        Me.BtnCancelar.AutoRoundedCorners = True
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BorderRadius = 17
+        Me.BtnCancelar.CheckedState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.CustomImages.Parent = Me.BtnCancelar
+        Me.BtnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        resources.ApplyResources(Me.BtnCancelar, "BtnCancelar")
+        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelar.HoverState.Parent = Me.BtnCancelar
+        Me.BtnCancelar.ImageSize = New System.Drawing.Size(0, 0)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
+        Me.BtnCancelar.UseTransparentBackground = True
         '
         'TxtIDetalle
         '
@@ -1086,23 +1161,6 @@ Partial Class F_Pacientes
         Me.lbl_nombre.BackColor = System.Drawing.Color.Transparent
         Me.lbl_nombre.Name = "lbl_nombre"
         '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.Animated = True
-        Me.BtnCancelar.AutoRoundedCorners = True
-        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.BorderRadius = 17
-        Me.BtnCancelar.CheckedState.Parent = Me.BtnCancelar
-        Me.BtnCancelar.CustomImages.Parent = Me.BtnCancelar
-        Me.BtnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        resources.ApplyResources(Me.BtnCancelar, "BtnCancelar")
-        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
-        Me.BtnCancelar.HoverState.Parent = Me.BtnCancelar
-        Me.BtnCancelar.ImageSize = New System.Drawing.Size(0, 0)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
-        Me.BtnCancelar.UseTransparentBackground = True
-        '
         'F_Pacientes
         '
         resources.ApplyResources(Me, "$this")
@@ -1189,4 +1247,8 @@ Partial Class F_Pacientes
     Friend WithEvents TxtIDetalle As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TxtBDetalle As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents BtnCancelar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents RadioIOtro As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents RadioIF As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents RadioIM As Guna.UI2.WinForms.Guna2RadioButton
 End Class

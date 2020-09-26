@@ -101,6 +101,9 @@ Public Class F_Pacientes
                 TxtINombre.ResetText()
                 TxtIApellidoP.ResetText()
                 TxtIApellidoM.ResetText()
+                RadioIM.Checked = True
+                RadioIF.Checked = False
+                RadioIOtro.Checked = False
                 TxtITelefono.ResetText()
                 TxtICalle.ResetText()
                 TxtINumero.ResetText()
@@ -213,6 +216,18 @@ Public Class F_Pacientes
 
         End If
 
+        Dim sexo As Persona.Sexos
+
+        If RadioIM.Checked Then
+            sexo = Persona.Sexos.M
+
+        ElseIf RadioIF.Checked Then
+            sexo = Persona.Sexos.F
+
+        Else
+            sexo = Persona.Sexos.Otro
+        End If
+
         Dim pwd As String = Password.Hash(Password.Generate(New Random))
 
         paciente = New Paciente(
@@ -220,6 +235,7 @@ Public Class F_Pacientes
                             TxtINombre.Text,
                             TxtIApellidoP.Text,
                             TxtIApellidoM.Text,
+                            sexo,
                             New Direccion(TxtICalle.Text,
                                             CInt(TxtINumero.Text),
                                             TxtILocalidad.Text,
@@ -285,7 +301,9 @@ Public Class F_Pacientes
                 paciente.ApellidoP = nombreCompleto.ElementAt(1)
                 paciente.ApellidoM = nombreCompleto.ElementAt(2)
 
-                Dim tmpFechaNacimiento = cells.Item(2).Value.ToString.Substring(0, 10).Split(".")
+                paciente.Sexo = [Enum].Parse(GetType(Persona.Sexos), cells.Item(2).Value.ToString)
+
+                Dim tmpFechaNacimiento = cells.Item(3).Value.ToString.Substring(0, 10).Split(".")
 
 
                 ' Obtengo la fecha de nacimiento
@@ -296,13 +314,13 @@ Public Class F_Pacientes
 
                 paciente.Fecha_Nacimiento = New Date(year, month, day)
 
-                paciente.Telefono = cells.Item(3).Value
-                paciente.Email = cells.Item(4).Value
+                paciente.Telefono = cells.Item(4).Value
+                paciente.Email = cells.Item(5).Value
 
                 ' Direccion
                 ' Formato: calle,numero,localidad,departamento,detalle
 
-                Dim tmpDireccion = cells.Item(5).Value.ToString.Split(",")
+                Dim tmpDireccion = cells.Item(6).Value.ToString.Split(",")
 
                 direccion.Calle = tmpDireccion.ElementAt(0)
                 direccion.Nro = Integer.Parse(tmpDireccion.ElementAt(1))
@@ -313,13 +331,13 @@ Public Class F_Pacientes
                 paciente.Direccion = direccion
 
                 ' Nucleo Familiar
-                paciente.NucleoFlia = cells.Item(6).Value.ToString
+                paciente.NucleoFlia = cells.Item(7).Value.ToString
 
                 ' Antecedentes Familiares
-                paciente.AntecedentesFlia = cells.Item(7).Value.ToString
+                paciente.AntecedentesFlia = cells.Item(8).Value.ToString
 
                 'Antecedentes Laborales
-                paciente.AntecedentesLab = cells.Item(8).Value.ToString
+                paciente.AntecedentesLab = cells.Item(9).Value.ToString
 
                 listaPacientes.Add(paciente)
             Next
@@ -368,6 +386,24 @@ Public Class F_Pacientes
         TxtINombre.Text = paciente.Nombre
         TxtIApellidoP.Text = paciente.ApellidoP
         TxtIApellidoM.Text = paciente.ApellidoM
+
+        If paciente.Sexo = Persona.Sexos.M Then
+            RadioIM.Checked = True
+            RadioIF.Checked = False
+            RadioIOtro.Checked = False
+
+        ElseIf paciente.Sexo = Persona.Sexos.F Then
+            RadioIM.Checked = False
+            RadioIF.Checked = True
+            RadioIOtro.Checked = False
+
+        Else
+            RadioIM.Checked = False
+            RadioIF.Checked = False
+            RadioIOtro.Checked = True
+
+        End If
+
         DTPickerFNac.Value = paciente.Fecha_Nacimiento
         TxtITelefono.Text = paciente.Telefono
         TxtICalle.Text = paciente.Direccion.Calle

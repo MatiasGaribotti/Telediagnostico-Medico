@@ -3,10 +3,12 @@
     Public Property Nombre As String
     Public Property ApellidoP As String
     Public Property ApellidoM As String
+    Public Property Sexo As Sexos
     Public Property Direccion As Direccion
     Public Property Telefono As Integer
     Public Property Fecha_Nacimiento As Date
     Public Property Password As String
+    Public Property Vivo As Boolean
     Public Property IsPaciente As Boolean
     Public Property IsEmpleado As Boolean
     Public Property IsMedico As Boolean
@@ -19,10 +21,12 @@
         Me.Nombre = "Default"
         Me.ApellidoP = "Default"
         Me.ApellidoM = "Default"
+        Me.Sexo = Sexos.M
         Me.Direccion = New Direccion()
         Me.Telefono = -1
         Me.Fecha_Nacimiento = New Date(1, 1, 1)
         Me.Password = "Default"
+        Me.Vivo = True
         Me.IsPaciente = False
         Me.IsEmpleado = False
         Me.IsMedico = False
@@ -36,10 +40,12 @@
         Me.Nombre = "Default"
         Me.ApellidoP = "Default"
         Me.ApellidoM = "Default"
+        Me.Sexo = Sexos.M
         Me.Direccion = New Direccion()
         Me.Telefono = -1
         Me.Fecha_Nacimiento = New Date(1, 1, 1)
         Me.Password = "Default"
+        Me.Vivo = True
         Me.IsPaciente = False
         Me.IsEmpleado = False
         Me.IsMedico = False
@@ -81,6 +87,7 @@
                    nombre As String,
                    apellidoP As String,
                    apellidoM As String,
+                   sexo As Sexos,
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_Nacimiento As Date,
@@ -89,6 +96,7 @@
         Me.Nombre = nombre
         Me.ApellidoP = apellidoP
         Me.ApellidoM = apellidoM
+        Me.Sexo = sexo
         Me.Direccion = direccion
         Me.Telefono = telefono
         Me.Fecha_Nacimiento = fecha_Nacimiento
@@ -100,4 +108,10 @@
         Me.IsRRHH = False
         Me.IsRecepcionista = False
     End Sub
+
+    Public Enum Sexos
+        M = 1
+        F
+        Otro
+    End Enum
 End Class

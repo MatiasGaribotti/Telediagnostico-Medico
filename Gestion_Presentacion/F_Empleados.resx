@@ -330,6 +330,72 @@
   <metadata name="pnl_ingresarFiltrar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="Label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 618</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 23</value>
+  </data>
+  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Sexo:</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>pnl_ingresarFiltrar</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadioIOtro.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RadioIOtro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="RadioIOtro.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RadioIOtro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 616</value>
+  </data>
+  <data name="RadioIOtro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 27</value>
+  </data>
+  <data name="RadioIOtro.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
+  <data name="RadioIOtro.Text" xml:space="preserve">
+    <value>Otro</value>
+  </data>
+  <data name="&gt;&gt;RadioIOtro.Name" xml:space="preserve">
+    <value>RadioIOtro</value>
+  </data>
+  <data name="&gt;&gt;RadioIOtro.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RadioIOtro.Parent" xml:space="preserve">
+    <value>pnl_ingresarFiltrar</value>
+  </data>
+  <data name="&gt;&gt;RadioIOtro.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="BtnVolver.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
@@ -358,7 +424,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnVolver.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="CmbIEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -367,7 +433,7 @@
     <value>30</value>
   </data>
   <data name="CmbIEspecialidades.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 878</value>
+    <value>222, 920</value>
   </data>
   <data name="CmbIEspecialidades.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -388,7 +454,40 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbIEspecialidades.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="RadioIF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RadioIF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="RadioIF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RadioIF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 616</value>
+  </data>
+  <data name="RadioIF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 27</value>
+  </data>
+  <data name="RadioIF.TabIndex" type="System.Int32, mscorlib">
+    <value>127</value>
+  </data>
+  <data name="RadioIF.Text" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="&gt;&gt;RadioIF.Name" xml:space="preserve">
+    <value>RadioIF</value>
+  </data>
+  <data name="&gt;&gt;RadioIF.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RadioIF.Parent" xml:space="preserve">
+    <value>pnl_ingresarFiltrar</value>
+  </data>
+  <data name="&gt;&gt;RadioIF.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="TxtBTelefono.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -415,7 +514,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtBTelefono.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -448,7 +547,40 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
+  </data>
+  <data name="RadioIM.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RadioIM.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 14.25pt</value>
+  </data>
+  <data name="RadioIM.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RadioIM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 616</value>
+  </data>
+  <data name="RadioIM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 27</value>
+  </data>
+  <data name="RadioIM.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="RadioIM.Text" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="&gt;&gt;RadioIM.Name" xml:space="preserve">
+    <value>RadioIM</value>
+  </data>
+  <data name="&gt;&gt;RadioIM.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RadioIM.Parent" xml:space="preserve">
+    <value>pnl_ingresarFiltrar</value>
+  </data>
+  <data name="&gt;&gt;RadioIM.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="CmbBRol.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -478,7 +610,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbBRol.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="LblBRol.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -511,13 +643,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;LblBRol.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="TxtIDetalle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtIDetalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>471, 657</value>
+    <value>477, 699</value>
   </data>
   <data name="TxtIDetalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -538,7 +670,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtIDetalle.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="CmbIRol.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -547,7 +679,7 @@
     <value>30</value>
   </data>
   <data name="CmbIRol.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 834</value>
+    <value>222, 876</value>
   </data>
   <data name="CmbIRol.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -568,7 +700,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbIRol.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="lblRol.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -580,7 +712,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblRol.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 841</value>
+    <value>74, 883</value>
   </data>
   <data name="lblRol.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 23</value>
@@ -601,13 +733,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lblRol.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="BtnHorarios.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="BtnHorarios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 978</value>
+    <value>311, 1020</value>
   </data>
   <data name="BtnHorarios.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 36</value>
@@ -628,7 +760,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnHorarios.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -658,13 +790,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="BtnIngresar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="BtnIngresar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>411, 978</value>
+    <value>417, 1020</value>
   </data>
   <data name="BtnIngresar.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 36</value>
@@ -685,13 +817,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnIngresar.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="BtnDelEspecialidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="BtnDelEspecialidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>459, 922</value>
+    <value>465, 964</value>
   </data>
   <data name="BtnDelEspecialidad.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 28</value>
@@ -712,13 +844,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnDelEspecialidad.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="BtnAddEspecialidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="BtnAddEspecialidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>459, 878</value>
+    <value>465, 920</value>
   </data>
   <data name="BtnAddEspecialidad.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 28</value>
@@ -739,13 +871,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;BtnAddEspecialidad.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="DTPickerFNac.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="DTPickerFNac.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 613</value>
+    <value>311, 655</value>
   </data>
   <data name="DTPickerFNac.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -766,7 +898,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;DTPickerFNac.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <data name="CmbIDepartamento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -775,7 +907,7 @@
     <value>30</value>
   </data>
   <data name="CmbIDepartamento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 745</value>
+    <value>222, 787</value>
   </data>
   <data name="CmbIDepartamento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -796,7 +928,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbIDepartamento.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="CmbIngresadasEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -805,7 +937,7 @@
     <value>30</value>
   </data>
   <data name="CmbIngresadasEspecialidades.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 922</value>
+    <value>222, 964</value>
   </data>
   <data name="CmbIngresadasEspecialidades.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -826,7 +958,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbIngresadasEspecialidades.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="CmbBEspecialidades.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 12pt</value>
@@ -856,7 +988,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;CmbBEspecialidades.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="cmb_sucursalesF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -886,13 +1018,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;cmb_sucursalesF.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="TxtITelefono.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtITelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 790</value>
+    <value>222, 832</value>
   </data>
   <data name="TxtITelefono.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -913,13 +1045,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtITelefono.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="TxtINumero.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtINumero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 657</value>
+    <value>359, 699</value>
   </data>
   <data name="TxtINumero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -940,13 +1072,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtINumero.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="TxtICalle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtICalle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 657</value>
+    <value>222, 699</value>
   </data>
   <data name="TxtICalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -967,13 +1099,13 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtICalle.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>25</value>
   </data>
   <data name="TxtILocalidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="TxtILocalidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 701</value>
+    <value>222, 743</value>
   </data>
   <data name="TxtILocalidad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -994,7 +1126,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtILocalidad.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>26</value>
   </data>
   <data name="TxtIApellidoP.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1021,7 +1153,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtIApellidoP.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>27</value>
   </data>
   <data name="TxtIApellidoM.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1048,7 +1180,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtIApellidoM.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>28</value>
   </data>
   <data name="txtb_apellidoPF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1075,7 +1207,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_apellidoPF.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>29</value>
   </data>
   <data name="txtb_apellidoMF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1102,7 +1234,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_apellidoMF.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>30</value>
   </data>
   <data name="TxtICi.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1129,7 +1261,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtICi.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>31</value>
   </data>
   <data name="TxtINombre.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1156,7 +1288,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;TxtINombre.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>32</value>
   </data>
   <data name="txtb_nombresF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1183,7 +1315,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_nombresF.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>33</value>
   </data>
   <data name="txtb_ciF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 14.25pt</value>
@@ -1210,7 +1342,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;txtb_ciF.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>34</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1219,7 +1351,7 @@
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 885</value>
+    <value>74, 927</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 23</value>
@@ -1240,7 +1372,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>35</value>
   </data>
   <data name="lbl_fecha.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1249,7 +1381,7 @@
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_fecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 620</value>
+    <value>74, 662</value>
   </data>
   <data name="lbl_fecha.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 23</value>
@@ -1270,7 +1402,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_fecha.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>36</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1279,7 +1411,7 @@
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 576</value>
+    <value>74, 576</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 23</value>
@@ -1300,7 +1432,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>37</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1309,7 +1441,7 @@
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 529</value>
+    <value>74, 529</value>
   </data>
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 29</value>
@@ -1330,7 +1462,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>38</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1339,7 +1471,7 @@
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 488</value>
+    <value>74, 488</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 23</value>
@@ -1360,7 +1492,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>39</value>
   </data>
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1369,7 +1501,7 @@
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 797</value>
+    <value>74, 839</value>
   </data>
   <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 23</value>
@@ -1390,7 +1522,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>40</value>
   </data>
   <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1399,7 +1531,7 @@
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 745</value>
+    <value>74, 787</value>
   </data>
   <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 23</value>
@@ -1420,7 +1552,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>41</value>
   </data>
   <data name="lbl_localidad.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1429,7 +1561,7 @@
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_localidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 705</value>
+    <value>74, 747</value>
   </data>
   <data name="lbl_localidad.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 23</value>
@@ -1450,7 +1582,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_localidad.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>42</value>
   </data>
   <data name="lbl_dirección.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1459,7 +1591,7 @@
     <value>Roboto, 14.25pt</value>
   </data>
   <data name="lbl_dirección.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 664</value>
+    <value>74, 706</value>
   </data>
   <data name="lbl_dirección.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 23</value>
@@ -1480,7 +1612,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_dirección.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>43</value>
   </data>
   <data name="lbl_especialidad.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1510,7 +1642,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_especialidad.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>44</value>
   </data>
   <data name="lbl_sucursales.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1540,7 +1672,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_sucursales.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>45</value>
   </data>
   <data name="lbl_ingresar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1570,7 +1702,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_ingresar.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>46</value>
   </data>
   <data name="lbl_apellidos.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1600,7 +1732,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_apellidos.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>47</value>
   </data>
   <data name="lbl_nombres.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1630,7 +1762,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_nombres.ZOrder" xml:space="preserve">
-    <value>44</value>
+    <value>48</value>
   </data>
   <data name="lbl_CI.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1660,7 +1792,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_CI.ZOrder" xml:space="preserve">
-    <value>45</value>
+    <value>49</value>
   </data>
   <data name="lbl_busqueda.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1690,7 +1822,7 @@
     <value>pnl_ingresarFiltrar</value>
   </data>
   <data name="&gt;&gt;lbl_busqueda.ZOrder" xml:space="preserve">
-    <value>46</value>
+    <value>50</value>
   </data>
   <data name="pnl_ingresarFiltrar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>

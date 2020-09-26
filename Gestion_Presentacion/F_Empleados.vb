@@ -54,6 +54,9 @@ Public Class F_Empleados
         TxtINombre.ResetText()
         TxtIApellidoP.ResetText()
         TxtIApellidoM.ResetText()
+        RadioIM.Checked = True
+        RadioIF.Checked = False
+        RadioIOtro.Checked = False
         DTPickerFNac.Value = New Date(Today.Year, Today.Month, Today.Day)
         TxtICalle.ResetText()
         TxtINumero.ResetText()
@@ -75,14 +78,15 @@ Public Class F_Empleados
 
                 Dim ci As Integer = CInt(cells.Item(0).Value)
                 Dim tempNombre = cells.Item(1).Value.ToString.Split(",")
-                Dim tempFecha = cells.Item(2).Value.ToString.Substring(0, 10).Split(".")
-                Dim telefono As Integer = CInt(cells.Item(3).Value)
-                Dim tempEspecialidades = cells.Item(4).Value.ToString
-                Dim tempDireccion = cells.Item(5).Value.ToString.Split(",")
-                Dim isMedico As Boolean = CBool(cells.Item(6).Value)
-                Dim isAdministrador As Boolean = CBool(cells.Item(7).Value)
-                Dim isRecepcionista As Boolean = CBool(cells.Item(8).Value)
-                Dim isRRHH As Boolean = CBool(cells.Item(9).Value)
+                Dim sexo As Persona.Sexos = [Enum].Parse(GetType(Persona.Sexos), cells.Item(2).Value.ToString)
+                Dim tempFecha = cells.Item(3).Value.ToString.Substring(0, 10).Split(".")
+                Dim telefono As Integer = CInt(cells.Item(4).Value)
+                Dim tempEspecialidades = cells.Item(5).Value.ToString
+                Dim tempDireccion = cells.Item(6).Value.ToString.Split(",")
+                Dim isMedico As Boolean = CBool(cells.Item(7).Value)
+                Dim isAdministrador As Boolean = CBool(cells.Item(8).Value)
+                Dim isRecepcionista As Boolean = CBool(cells.Item(9).Value)
+                Dim isRRHH As Boolean = CBool(cells.Item(10).Value)
 
 
                 Dim nombre As String = tempNombre.ElementAt(0)
@@ -113,16 +117,16 @@ Public Class F_Empleados
 
 
                     If isAdministrador Then
-                        listaEmpleados.Add(New Administrador(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, especialidades))
+                        listaEmpleados.Add(New Administrador(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fechaNacimiento, especialidades))
                     Else
-                        listaEmpleados.Add(New Medico(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, especialidades))
+                        listaEmpleados.Add(New Medico(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fechaNacimiento, especialidades))
                     End If
 
                 ElseIf isRecepcionista Then
-                    listaEmpleados.Add(New Recepcionista(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento))
+                    listaEmpleados.Add(New Recepcionista(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fechaNacimiento))
 
                 ElseIf isRRHH Then
-                    listaEmpleados.Add(New RRHH(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento))
+                    listaEmpleados.Add(New RRHH(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fechaNacimiento))
 
                 End If
 
@@ -193,6 +197,18 @@ Public Class F_Empleados
         Dim nombre = TxtINombre.Text
         Dim apellidoP = TxtIApellidoP.Text
         Dim apellidoM = TxtIApellidoM.Text
+        Dim sexo As Persona.Sexos
+
+        If RadioIM.Checked Then
+            sexo = Persona.Sexos.M
+
+        ElseIf RadioIF.Checked Then
+            sexo = Persona.Sexos.F
+
+        Else
+            sexo = Persona.Sexos.Otro
+        End If
+
         Dim fechaNacimiento As Date = Format(DTPickerFNac.Value, "yyyy-MM-dd")
         Dim calle = TxtICalle.Text
         Dim numero = CInt(TxtINumero.Text)
@@ -209,15 +225,15 @@ Public Class F_Empleados
             For Each item In CmbIngresadasEspecialidades.Items
                 especialidades.Add(New Especialidad(item.ToString))
             Next
-            EmpleadoVO = New Medico(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, especialidades, password)
+            EmpleadoVO = New Medico(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fechaNacimiento, especialidades, password)
 
         Else
 
             If CmbIRol.SelectedItem = "Recursos_Humanos" Then
-                EmpleadoVO = New RRHH(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, password)
+                EmpleadoVO = New RRHH(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fechaNacimiento, password)
 
             ElseIf CmbIRol.SelectedItem = "Recepcionista" Then
-                EmpleadoVO = New Recepcionista(ci, nombre, apellidoP, apellidoM, direccion, telefono, fechaNacimiento, password)
+                EmpleadoVO = New Recepcionista(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fechaNacimiento, password)
 
             Else
                 Throw New Exception("Error al obtener el empleado.")
@@ -261,6 +277,24 @@ Public Class F_Empleados
             TxtINombre.Text = pEmpleado.Nombre
             TxtIApellidoP.Text = pEmpleado.ApellidoP
             TxtIApellidoM.Text = pEmpleado.ApellidoM
+
+            If pEmpleado.Sexo = Persona.Sexos.M Then
+                RadioIM.Checked = True
+                RadioIF.Checked = False
+                RadioIOtro.Checked = False
+
+            ElseIf pEmpleado.Sexo = Persona.Sexos.F Then
+                RadioIM.Checked = False
+                RadioIF.Checked = True
+                RadioIOtro.Checked = False
+
+            Else
+                RadioIM.Checked = False
+                RadioIF.Checked = False
+                RadioIOtro.Checked = True
+
+            End If
+
             DTPickerFNac.Value = pEmpleado.Fecha_Nacimiento
             TxtICalle.Text = pEmpleado.Direccion.Calle
             TxtINumero.Text = pEmpleado.Direccion.Nro

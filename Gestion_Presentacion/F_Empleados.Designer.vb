@@ -82,6 +82,10 @@ Partial Class F_Empleados
         Me.lbl_nombres = New System.Windows.Forms.Label()
         Me.lbl_CI = New System.Windows.Forms.Label()
         Me.lbl_busqueda = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.RadioIOtro = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.RadioIF = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.RadioIM = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.pnl_fondo.SuspendLayout()
         CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_ingresarFiltrar.SuspendLayout()
@@ -239,10 +243,14 @@ Partial Class F_Empleados
         'pnl_ingresarFiltrar
         '
         Me.pnl_ingresarFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.Label6)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.RadioIOtro)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.BtnVolver)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbIEspecialidades)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.RadioIF)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtBTelefono)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.Label2)
+        Me.pnl_ingresarFiltrar.Controls.Add(Me.RadioIM)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.CmbBRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.LblBRol)
         Me.pnl_ingresarFiltrar.Controls.Add(Me.TxtIDetalle)
@@ -891,6 +899,56 @@ Partial Class F_Empleados
         resources.ApplyResources(Me.lbl_busqueda, "lbl_busqueda")
         Me.lbl_busqueda.Name = "lbl_busqueda"
         '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Name = "Label6"
+        '
+        'RadioIOtro
+        '
+        resources.ApplyResources(Me.RadioIOtro, "RadioIOtro")
+        Me.RadioIOtro.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIOtro.CheckedState.BorderThickness = 0
+        Me.RadioIOtro.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIOtro.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.RadioIOtro.CheckedState.InnerOffset = -4
+        Me.RadioIOtro.Name = "RadioIOtro"
+        Me.RadioIOtro.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RadioIOtro.UncheckedState.BorderThickness = 2
+        Me.RadioIOtro.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RadioIOtro.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'RadioIF
+        '
+        resources.ApplyResources(Me.RadioIF, "RadioIF")
+        Me.RadioIF.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIF.CheckedState.BorderThickness = 0
+        Me.RadioIF.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIF.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.RadioIF.CheckedState.InnerOffset = -4
+        Me.RadioIF.Name = "RadioIF"
+        Me.RadioIF.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RadioIF.UncheckedState.BorderThickness = 2
+        Me.RadioIF.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RadioIF.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'RadioIM
+        '
+        resources.ApplyResources(Me.RadioIM, "RadioIM")
+        Me.RadioIM.Checked = True
+        Me.RadioIM.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIM.CheckedState.BorderThickness = 0
+        Me.RadioIM.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RadioIM.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.RadioIM.CheckedState.InnerOffset = -4
+        Me.RadioIM.Name = "RadioIM"
+        Me.RadioIM.TabStop = True
+        Me.RadioIM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RadioIM.UncheckedState.BorderThickness = 2
+        Me.RadioIM.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RadioIM.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
         'F_Empleados
         '
         resources.ApplyResources(Me, "$this")
@@ -963,4 +1021,8 @@ Partial Class F_Empleados
     Friend WithEvents Label2 As Label
     Friend WithEvents CmbIEspecialidades As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents BtnVolver As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents RadioIOtro As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents RadioIF As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents RadioIM As Guna.UI2.WinForms.Guna2RadioButton
 End Class

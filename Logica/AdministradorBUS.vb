@@ -54,6 +54,7 @@ Public Class AdministradorBUS
         Dim ci, telefono, numero As Integer
         Dim nombreCompleto, nombre, apellidoP, apellidoM, email, direccion, calle, localidad, departamento, detalle, NucFamiliar, AntFamiliares, AntLaborales As String
         Dim fechaNacimiento As Date
+        Dim sexo As Persona.Sexos
 
         Try
             dt = PacienteDAO.GetPacienteByCi(pCi)
@@ -68,6 +69,7 @@ Public Class AdministradorBUS
             ci = row.Field(Of Integer)("Cedula")
             nombreCompleto = row.Field(Of String)("Nombre Completo")
             fechaNacimiento = row.Field(Of Date)("Fecha Nacimiento")
+            sexo = [Enum].Parse(GetType(Persona.Sexos), row.Field(Of String)("Sexo"))
             telefono = row.Field(Of Integer)("Telefono")
             email = row.Field(Of Integer)("Email")
             direccion = row.Field(Of Integer)("Direccion")
@@ -93,7 +95,7 @@ Public Class AdministradorBUS
 
         Dim direccionVO As New Direccion(calle, numero, localidad, departamento, detalle)
 
-        Return New Paciente(ci, nombre, apellidoP, apellidoM, direccionVO, telefono, fechaNacimiento, "", email)
+        Return New Paciente(ci, nombre, apellidoP, apellidoM, sexo, direccionVO, telefono, fechaNacimiento, "", email)
     End Function
 
     ''' <summary>

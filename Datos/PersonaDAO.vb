@@ -41,6 +41,7 @@ Public Class PersonaDAO
                               "nombre," &
                               " apellidoP," &
                               " apellidoM," &
+                              " sexo," &
                               " fechaNacimiento," &
                               " telefono," &
                               " password," &
@@ -49,7 +50,8 @@ Public Class PersonaDAO
                               pPersona.Ci & ",'" &
                               pPersona.Nombre & "','" &
                               pPersona.ApellidoP & "','" &
-                              pPersona.ApellidoM & "','" &
+                              pPersona.ApellidoM & "'," &
+                              pPersona.Sexo & ",'" &
                               Format(pPersona.Fecha_Nacimiento, "yyyy-MM-dd") & "'," &
                               pPersona.Telefono & ",'" &
                               pPersona.Password & "'," &
@@ -67,6 +69,7 @@ Public Class PersonaDAO
                               "nombre='" & pPersona.Nombre & "', " &
                               "apellidoP='" & pPersona.ApellidoP & "', " &
                               "apellidoM='" & pPersona.ApellidoM & "', " &
+                              "sexo=" & pPersona.Sexo & ", " &
                               "fechaNacimiento='" & Format(pPersona.Fecha_Nacimiento, "yyyy-MM-dd") & "', " &
                               "telefono=" & pPersona.Telefono &
                               " WHERE ci=" & pPersona.Ci & ";"

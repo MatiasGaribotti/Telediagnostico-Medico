@@ -34,6 +34,7 @@
                    nombre As String,
                    apellidoP As String,
                    apellidoM As String,
+                   sexo As Sexos,
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
@@ -42,14 +43,7 @@
                    NucleoFlia As String,
                    AntecedentesFlia As String,
                    antecedentesLab As String)
-        Me.Ci = ci
-        Me.Nombre = nombre
-        Me.ApellidoP = apellidoP
-        Me.ApellidoM = apellidoM
-        Me.Direccion = direccion
-        Me.Telefono = telefono
-        Me.Fecha_Nacimiento = fecha_nacimiento
-        Me.Password = password
+        MyBase.New(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fecha_nacimiento, password)
         Me.Email = email
         Me.NucleoFlia = NucleoFlia
         Me.AntecedentesFlia = AntecedentesFlia
@@ -61,12 +55,13 @@
                    nombre As String,
                    apellidoP As String,
                    apellidoM As String,
+                   sexo As Sexos,
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_nacimiento As Date,
                    password As String,
                    email As String)
-        MyBase.New(ci, nombre, apellidoP, apellidoM, direccion, telefono, fecha_nacimiento, password)
+        MyBase.New(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fecha_nacimiento, password)
         Me.Email = email
         Me.NucleoFlia = "Sin ingresar"
         Me.AntecedentesFlia = "Sin ingresar"
