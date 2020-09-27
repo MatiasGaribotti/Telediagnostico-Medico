@@ -1,9 +1,10 @@
 Imports System.Globalization
 Public Class Env
 
+    Public Shared Property CurrentSucursal As New Sucursal(1)
     Public Shared Property CurrentApp As Apps
-    Public Shared Property CurrentLangugage As CultureInfo = New CultureInfo("es-UY")
     Public Shared Property CurrentUser As New Persona()
+    Public Shared Property CurrentLangugage As CultureInfo = New CultureInfo("es-UY")
 
     Private Sub New()
 

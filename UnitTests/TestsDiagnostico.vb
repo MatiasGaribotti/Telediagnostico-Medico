@@ -1,0 +1,35 @@
+﻿Imports System.Text
+Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports Dominio
+Imports Logica
+<TestClass()> Public Class TestsDiagnostico
+
+    '<ClassInitialize> Public Sub ClassInitialize()
+
+    'End Sub
+
+    <TestMethod()> Public Sub GetDiagnostico()
+
+        AutoconsultaBUS.instance.AddSintoma(New Sintoma(1, "Dolor de Cabeza", "", Sintoma.TiposSintomas.Cabeza))
+        AutoconsultaBUS.instance.AddSintoma(New Sintoma(5, "Fiebre", "", Sintoma.TiposSintomas.Cabeza))
+        AutoconsultaBUS.instance.AddSintoma(New Sintoma(6, "Tos", "", Sintoma.TiposSintomas.Cabeza))
+        AutoconsultaBUS.instance.AddSintoma(New Sintoma(7, "Flemas", "", Sintoma.TiposSintomas.Cabeza))
+        AutoconsultaBUS.instance.AddSintoma(New Sintoma(10, "Fatiga", "", Sintoma.TiposSintomas.Cabeza))
+        AutoconsultaBUS.instance.AddSintoma(New Sintoma(11, "Falta de apetito", "", Sintoma.TiposSintomas.Cabeza))
+        AutoconsultaBUS.instance.AddSintoma(New Sintoma(12, "Dificultad para respirar", "", Sintoma.TiposSintomas.Cabeza))
+        AutoconsultaBUS.instance.AddSintoma(New Sintoma(13, "Escalofríos", "", Sintoma.TiposSintomas.Cabeza))
+        AutoconsultaBUS.instance.AddSintoma(New Sintoma(14, "Dolor muscular generalizado", "", Sintoma.TiposSintomas.Cabeza))
+
+        Dim successful As Boolean = True
+        Try
+            AutoconsultaBUS.instance.consulta.Diagnosticos = AutoconsultaBUS.instance.GetDiagnosis()
+            AutoconsultaBUS.instance.Insert()
+
+        Catch ex As Exception
+            successful = False
+        End Try
+
+        Assert.AreEqual(True, successful)
+    End Sub
+
+End Class

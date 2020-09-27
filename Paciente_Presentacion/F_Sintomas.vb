@@ -11,7 +11,6 @@ Public Class F_Sintomas
         ConfigureSelectedColumnVisibility()
         SwitchSelection()
         LoadDgv()
-
     End Sub
 
     Private Sub Btn_Cancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
@@ -126,13 +125,13 @@ Public Class F_Sintomas
 
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
         Try
-            Dim diagnosticos As List(Of Diagnostico) = AutoconsultaBUS.instance.GetDiagnosis()
+            Dim diagnosticos As List(Of Enfermedad) = AutoconsultaBUS.instance.GetDiagnosis()
 
             If diagnosticos.Count > 0 Then
                 Dim outmsg As String = "Se diagnosticaron las siguientes enfermedades:" & vbCrLf & vbCrLf
 
                 For Each diagnostico In diagnosticos
-                    outmsg += "     -" & diagnostico.Enfermedad.Nombre & vbCrLf
+                    outmsg += "     -" & diagnostico.Nombre & vbCrLf
 
                 Next
 
@@ -143,9 +142,12 @@ Public Class F_Sintomas
                 Dim result = MsgBox(outmsg, MsgBoxStyle.YesNo, "Diagnóstico")
 
                 If result = MsgBoxResult.Yes Then
+                    AutoconsultaBUS.instance.Insert()
+
                     MsgBox("Su consulta esta a la espera de ser atendidad por uno de nuestros profesionales. Por favor aguarde.", MsgBoxStyle.Information, "Consulta Ingresada")
 
                 Else
+                    AutoconsultaBUS.instance.Insert()
                     Reset()
                     MsgBox("¡Adiós!", MsgBoxStyle.Information, "Consulta Finalizada")
                 End If
@@ -220,7 +222,7 @@ Public Class F_Sintomas
     End Sub
 
     Public Sub Reset()
-        AutoconsultaBUS.instance.selectedSintomas.Clear()
+        AutoconsultaBUS.instance.consulta = New Autoconsulta
         DgvSelectedSintomas.Rows.Clear()
     End Sub
 End Class

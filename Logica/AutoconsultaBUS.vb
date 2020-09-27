@@ -4,29 +4,31 @@ Imports Dominio
 Public Class AutoconsultaBUS
 
     Public Shared instance As New AutoconsultaBUS
-    Public Property selectedSintomas As New List(Of Sintoma)
-    Private Sub New()
+    Public Property consulta As Autoconsulta
 
+    Private Sub New()
+        consulta = New Autoconsulta()
     End Sub
 
+
     Public Sub AddSintoma(pSintoma As Sintoma)
-        selectedSintomas.Add(pSintoma)
+        consulta.Sintomas.Add(pSintoma)
     End Sub
 
     Public Sub RemSintoma(pSintoma As Sintoma)
-        selectedSintomas.Remove(pSintoma)
+        consulta.Sintomas.Remove(pSintoma)
     End Sub
 
 
-    Public Function GetDiagnosis() As List(Of Diagnostico)
-        Dim diagnosis As New List(Of Diagnostico)
+    Public Function GetDiagnosis() As List(Of Enfermedad)
+        Dim diagnosis As New List(Of Enfermedad)
 
         Dim EnfermedadBUS As New EnfermedadBUS
         Dim SintomaBUS As New SintomaBUS
         Dim listaEnfermedades As New List(Of Enfermedad)
         Dim summary As New List(Of Enfermedad)
 
-        For Each sintoma As Sintoma In selectedSintomas
+        For Each sintoma As Sintoma In consulta.Sintomas
             'sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
 
             For Each enfermedad In SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
@@ -38,12 +40,8 @@ Public Class AutoconsultaBUS
         Next
 
         For Each enfermedad In summary
-            Try
-                enfermedad.Sintomas = EnfermedadBUS.GetSintomasAsociados(enfermedad.Id)
+            enfermedad.Sintomas = EnfermedadBUS.GetSintomasAsociados(enfermedad.Id)
 
-            Catch ex As Exception
-
-            End Try
         Next
 
 
@@ -57,7 +55,7 @@ Public Class AutoconsultaBUS
             Dim matches As Integer = 0
 
             For Each sintoma As Sintoma In enfermedad.Sintomas
-                For Each selection In selectedSintomas
+                For Each selection In consulta.Sintomas
                     If sintoma.Id = selection.Id Then
                         matches += 1
                     End If
@@ -65,7 +63,7 @@ Public Class AutoconsultaBUS
             Next
 
             If matches >= threshold Then
-                diagnosis.Add(New Diagnostico(enfermedad))
+                diagnosis.Add(enfermedad)
             End If
 
         Next
@@ -82,11 +80,20 @@ Public Class AutoconsultaBUS
         Return False
     End Function
     Public Function SintomaAlreadySelected(pId As Short) As Boolean
-        For Each item In selectedSintomas
+        For Each item In consulta.Sintomas
             If item.Id = pId Then
                 Return True
             End If
         Next
         Return False
     End Function
+
+    Public Sub Insert()
+        Dim AutoconsultaDAO As New ConsultaDAO
+        Try
+            consulta = AutoconsultaDAO.Insert(consulta)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 End Class

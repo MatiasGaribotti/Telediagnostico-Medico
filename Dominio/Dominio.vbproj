@@ -65,10 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.vb" />
+    <Compile Include="Autoconsulta.vb" />
     <Compile Include="Chat.vb" />
     <Compile Include="Consulta.vb" />
     <Compile Include="ConsultaMedica.vb" />
-    <Compile Include="Diagnostico.vb" />
     <Compile Include="Direccion.vb" />
     <Compile Include="Empleado.vb" />
     <Compile Include="Enfermedad.vb" />
