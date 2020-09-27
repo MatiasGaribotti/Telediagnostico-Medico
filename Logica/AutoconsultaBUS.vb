@@ -13,6 +13,10 @@ Public Class AutoconsultaBUS
         selectedSintomas.Add(pSintoma)
     End Sub
 
+    Public Sub RemSintoma(pSintoma As Sintoma)
+        selectedSintomas.Remove(pSintoma)
+    End Sub
+
 
     Public Function GetDiagnosis() As List(Of Diagnostico)
         Dim diagnosis As New List(Of Diagnostico)
@@ -26,7 +30,7 @@ Public Class AutoconsultaBUS
             'sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
 
             For Each enfermedad In SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
-                If Not Contains(enfermedad.Id, summary) Then
+                If Not ContainsEnfermedad(enfermedad.Id, summary) Then
                     summary.Add(enfermedad)
 
                 End If
@@ -34,12 +38,11 @@ Public Class AutoconsultaBUS
         Next
 
         For Each enfermedad In summary
-            Console.WriteLine("ID: {0}, Nombre: {1}", enfermedad.Id, enfermedad.Nombre)
             Try
                 enfermedad.Sintomas = EnfermedadBUS.GetSintomasAsociados(enfermedad.Id)
 
             Catch ex As Exception
-                Console.WriteLine(ex.Message & vbCrLf & ex.StackTrace)
+
             End Try
         Next
 
@@ -70,8 +73,16 @@ Public Class AutoconsultaBUS
         Return diagnosis
     End Function
 
-    Private Function Contains(pId As Short, list As List(Of Enfermedad))
+    Private Function ContainsEnfermedad(pId As Short, list As List(Of Enfermedad)) As Boolean
         For Each item In list
+            If item.Id = pId Then
+                Return True
+            End If
+        Next
+        Return False
+    End Function
+    Public Function SintomaAlreadySelected(pId As Short) As Boolean
+        For Each item In selectedSintomas
             If item.Id = pId Then
                 Return True
             End If

@@ -96,18 +96,6 @@
     <Compile Include="F_Sintomas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Sintomas_Buscar.Designer.vb">
-      <DependentUpon>F_Sintomas_Buscar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="F_Sintomas_Buscar.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_Sintomas_Buscar_Tipo.Designer.vb">
-      <DependentUpon>F_Sintomas_Buscar_Tipo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="F_Sintomas_Buscar_Tipo.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -134,12 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Sintomas.resx">
       <DependentUpon>F_Sintomas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_Sintomas_Buscar.resx">
-      <DependentUpon>F_Sintomas_Buscar.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_Sintomas_Buscar_Tipo.resx">
-      <DependentUpon>F_Sintomas_Buscar_Tipo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

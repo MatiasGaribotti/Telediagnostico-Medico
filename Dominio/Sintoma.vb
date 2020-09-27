@@ -13,16 +13,16 @@
 
     Public Sub New()
         Me.Id = -1
-        Me.Nombre = "Default"
-        Me.Descripcion = "Default"
+        Me.Nombre = ""
+        Me.Descripcion = ""
         Me.Tipo = TiposSintomas.Cabeza
         Me.Enfermedades = New List(Of Enfermedad)
     End Sub
 
     Public Sub New(id As Short)
         Me.Id = id
-        Me.Nombre = "Default"
-        Me.Descripcion = "Default"
+        Me.Nombre = ""
+        Me.Descripcion = ""
         Me.Tipo = TiposSintomas.Cabeza
         Me.Enfermedades = New List(Of Enfermedad)
     End Sub

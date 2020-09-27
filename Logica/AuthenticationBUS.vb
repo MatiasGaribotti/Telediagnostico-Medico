@@ -11,7 +11,7 @@ Public Class AuthenticationBUS
         Dim authenticated = False
         Dim DAuth As New AuthenticationDAO()
 
-        'user.Password = Password.Hash(user.Password)
+        user.Password = Password.Hash(user.Password)
 
         Try
             user_found = DAuth.Find(user.Ci, user.Password)

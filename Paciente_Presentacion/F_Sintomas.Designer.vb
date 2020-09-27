@@ -22,15 +22,15 @@ Partial Class F_Sintomas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lbl_SintomasIng = New System.Windows.Forms.Label()
         Me.LeftPanel = New System.Windows.Forms.Panel()
-        Me.BtnDiagnosticoTest = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnHCE = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnAceptar = New Guna.UI2.WinForms.Guna2Button()
@@ -71,7 +71,6 @@ Partial Class F_Sintomas
         'LeftPanel
         '
         Me.LeftPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.LeftPanel.Controls.Add(Me.BtnDiagnosticoTest)
         Me.LeftPanel.Controls.Add(Me.BtnHCE)
         Me.LeftPanel.Controls.Add(Me.BtnCancelar)
         Me.LeftPanel.Controls.Add(Me.BtnAceptar)
@@ -83,41 +82,21 @@ Partial Class F_Sintomas
         Me.LeftPanel.Size = New System.Drawing.Size(960, 1080)
         Me.LeftPanel.TabIndex = 4
         '
-        'BtnDiagnosticoTest
-        '
-        Me.BtnDiagnosticoTest.Animated = True
-        Me.BtnDiagnosticoTest.AutoRoundedCorners = True
-        Me.BtnDiagnosticoTest.BorderRadius = 21
-        Me.BtnDiagnosticoTest.CheckedState.Parent = Me.BtnDiagnosticoTest
-        Me.BtnDiagnosticoTest.CustomImages.Parent = Me.BtnDiagnosticoTest
-        Me.BtnDiagnosticoTest.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnDiagnosticoTest.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnDiagnosticoTest.ForeColor = System.Drawing.Color.White
-        Me.BtnDiagnosticoTest.HoverState.Parent = Me.BtnDiagnosticoTest
-        Me.BtnDiagnosticoTest.Location = New System.Drawing.Point(726, 992)
-        Me.BtnDiagnosticoTest.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
-        Me.BtnDiagnosticoTest.Name = "BtnDiagnosticoTest"
-        Me.BtnDiagnosticoTest.ShadowDecoration.Parent = Me.BtnDiagnosticoTest
-        Me.BtnDiagnosticoTest.Size = New System.Drawing.Size(170, 44)
-        Me.BtnDiagnosticoTest.TabIndex = 118
-        Me.BtnDiagnosticoTest.Text = "Diagnóstico Test"
-        '
         'BtnHCE
         '
         Me.BtnHCE.Animated = True
-        Me.BtnHCE.AutoRoundedCorners = True
-        Me.BtnHCE.BorderRadius = 17
+        Me.BtnHCE.BorderRadius = 15
         Me.BtnHCE.CheckedState.Parent = Me.BtnHCE
         Me.BtnHCE.CustomImages.Parent = Me.BtnHCE
         Me.BtnHCE.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
         Me.BtnHCE.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.BtnHCE.ForeColor = System.Drawing.Color.White
         Me.BtnHCE.HoverState.Parent = Me.BtnHCE
-        Me.BtnHCE.Location = New System.Drawing.Point(49, 3)
+        Me.BtnHCE.Location = New System.Drawing.Point(49, -12)
         Me.BtnHCE.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
         Me.BtnHCE.Name = "BtnHCE"
         Me.BtnHCE.ShadowDecoration.Parent = Me.BtnHCE
-        Me.BtnHCE.Size = New System.Drawing.Size(188, 36)
+        Me.BtnHCE.Size = New System.Drawing.Size(188, 44)
         Me.BtnHCE.TabIndex = 117
         Me.BtnHCE.Text = "Historial Clínico"
         '
@@ -164,33 +143,33 @@ Partial Class F_Sintomas
         Me.DgvSelectedSintomas.AllowUserToAddRows = False
         Me.DgvSelectedSintomas.AllowUserToDeleteRows = False
         Me.DgvSelectedSintomas.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DgvSelectedSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.White
+        Me.DgvSelectedSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle22
         Me.DgvSelectedSintomas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvSelectedSintomas.BackgroundColor = System.Drawing.Color.White
         Me.DgvSelectedSintomas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvSelectedSintomas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvSelectedSintomas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvSelectedSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvSelectedSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
         Me.DgvSelectedSintomas.ColumnHeadersHeight = 40
         Me.DgvSelectedSintomas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DgvSelectedSintomas.ColumnHeadersVisible = False
         Me.DgvSelectedSintomas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.nombre, Me.descripcion, Me.tipo})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvSelectedSintomas.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvSelectedSintomas.DefaultCellStyle = DataGridViewCellStyle25
         Me.DgvSelectedSintomas.EnableHeadersVisualStyles = False
         Me.DgvSelectedSintomas.GridColor = System.Drawing.Color.Gray
         Me.DgvSelectedSintomas.Location = New System.Drawing.Point(50, 320)
@@ -238,11 +217,13 @@ Partial Class F_Sintomas
         'nombre
         '
         Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.nombre.DefaultCellStyle = DataGridViewCellStyle24
         Me.nombre.FillWeight = 1000.0!
         Me.nombre.HeaderText = "nombre"
         Me.nombre.Name = "nombre"
         Me.nombre.ReadOnly = True
-        Me.nombre.Width = 1000
+        Me.nombre.Width = 876
         '
         'descripcion
         '
@@ -479,32 +460,32 @@ Partial Class F_Sintomas
         Me.DgvAllSintomas.AllowUserToAddRows = False
         Me.DgvAllSintomas.AllowUserToDeleteRows = False
         Me.DgvAllSintomas.AllowUserToResizeRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.DgvAllSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.White
+        Me.DgvAllSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle26
         Me.DgvAllSintomas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvAllSintomas.BackgroundColor = System.Drawing.Color.White
         Me.DgvAllSintomas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvAllSintomas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvAllSintomas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvAllSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvAllSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle27
         Me.DgvAllSintomas.ColumnHeadersHeight = 40
         Me.DgvAllSintomas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DgvAllSintomas.ColumnHeadersVisible = False
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvAllSintomas.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvAllSintomas.DefaultCellStyle = DataGridViewCellStyle28
         Me.DgvAllSintomas.EnableHeadersVisualStyles = False
         Me.DgvAllSintomas.GridColor = System.Drawing.Color.Gray
         Me.DgvAllSintomas.Location = New System.Drawing.Point(57, 335)
@@ -543,17 +524,18 @@ Partial Class F_Sintomas
         '
         'F_Sintomas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(1300, 1044)
+        Me.ClientSize = New System.Drawing.Size(1920, 1080)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.LeftPanel)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "F_Sintomas"
         Me.Text = "Seleccionar Síntomas"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.LeftPanel.ResumeLayout(False)
         Me.LeftPanel.PerformLayout()
         CType(Me.DgvSelectedSintomas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -569,7 +551,6 @@ Partial Class F_Sintomas
     Friend WithEvents BtnHCE As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnCancelar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnAceptar As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BtnDiagnosticoTest As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents LblTodo As Label
     Friend WithEvents BtnFullBody As Guna.UI2.WinForms.Guna2Button

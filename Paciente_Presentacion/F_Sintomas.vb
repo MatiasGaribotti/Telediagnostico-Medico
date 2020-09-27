@@ -2,13 +2,14 @@
 Imports Logica
 Imports System.Threading
 Public Class F_Sintomas
-
+    Private table As New DataTable
     Private pattern As Sintoma
     Public Sub New()
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
         pattern = New Sintoma
         ConfigureSelectedColumnVisibility()
+        SwitchSelection()
         LoadDgv()
 
     End Sub
@@ -52,6 +53,8 @@ Public Class F_Sintomas
         For i As Integer = 0 To DgvAllSintomas.Columns.Count - 1
             If Not i = 1 Then
                 DgvAllSintomas.Columns.Item(i).Visible = False
+            Else
+                DgvAllSintomas.Columns.Item(i).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             End If
         Next
     End Sub
@@ -66,48 +69,9 @@ Public Class F_Sintomas
         DgvSelectedSintomas.Refresh()
     End Sub
 
-    Private Sub OpenMainRightPanel()
-
-        Dim frmSintomasTipo As New F_Sintomas_Buscar With {
-           .MdiParent = Me
-       }
-        frmSintomasTipo.Show()
-        frmSintomasTipo.SetBounds(960, 0, 955, 1075) ' 5px menos de ancho y alto para que no aparezcan las scrollbars
-        frmSintomasTipo.AutoScroll = False
-    End Sub
-
     Private Sub Btn_HC_Click(sender As Object, e As EventArgs)
         F_Login.Show()
         Close()
-    End Sub
-
-    Private Sub DgvPacientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSelectedSintomas.CellContentClick
-
-    End Sub
-
-    Private Sub BtnDiagnosticoTest_Click(sender As Object, e As EventArgs) Handles BtnDiagnosticoTest.Click
-
-        AutoconsultaBUS.instance.AddSintoma(New Sintoma(1, "Dolor de Cabeza", "", Sintoma.TiposSintomas.Cabeza))
-        AutoconsultaBUS.instance.AddSintoma(New Sintoma(5, "Fiebre", "", Sintoma.TiposSintomas.Cabeza))
-        AutoconsultaBUS.instance.AddSintoma(New Sintoma(6, "Tos", "", Sintoma.TiposSintomas.Cabeza))
-        AutoconsultaBUS.instance.AddSintoma(New Sintoma(7, "Flemas", "", Sintoma.TiposSintomas.Cabeza))
-        AutoconsultaBUS.instance.AddSintoma(New Sintoma(10, "Fatiga", "", Sintoma.TiposSintomas.Cabeza))
-        AutoconsultaBUS.instance.AddSintoma(New Sintoma(11, "Falta de apetito", "", Sintoma.TiposSintomas.Cabeza))
-        AutoconsultaBUS.instance.AddSintoma(New Sintoma(12, "Dificultad para respirar", "", Sintoma.TiposSintomas.Cabeza))
-        AutoconsultaBUS.instance.AddSintoma(New Sintoma(13, "Escalofríos", "", Sintoma.TiposSintomas.Cabeza))
-        AutoconsultaBUS.instance.AddSintoma(New Sintoma(14, "Dolor muscular generalizado", "", Sintoma.TiposSintomas.Cabeza))
-
-        Try
-
-            Dim diagnosisList = AutoconsultaBUS.instance.GetDiagnosis()
-
-            For Each diagnosis In diagnosisList
-                Console.WriteLine("Se diagnosticó: {0}", diagnosis.Enfermedad.Nombre)
-            Next
-
-        Catch ex As Exception
-
-        End Try
     End Sub
 
     Private Sub BtnCross_Click(sender As Object, e As EventArgs) Handles BtnCross.Click
@@ -115,21 +79,148 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub DgvAllSintomas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvAllSintomas.CellClick
-        Dim sintomaSelected = GetSelected()
+        Dim sintomaSelected = GetSelectedToAdd()
         Try
-            DgvSelectedSintomas.Rows.Add("1", "test", "desccc", "tipo")
-            DgvSelectedSintomas.Refresh()
+            If Not AutoconsultaBUS.instance.SintomaAlreadySelected(sintomaSelected.Id) Then
+                AutoconsultaBUS.instance.AddSintoma(sintomaSelected)
+                DgvSelectedSintomas.Rows.Add(sintomaSelected.Id.ToString, sintomaSelected.Nombre.ToString, sintomaSelected.Descripcion.ToString, sintomaSelected.Tipo.ToString)
+                DgvSelectedSintomas.Refresh()
+
+            End If
         Catch ex As Exception
 
         End Try
     End Sub
 
-    Private Function GetSelected()
+    Private Sub DgvSelectedSintomas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSelectedSintomas.CellClick
+        Dim sintoma = GetSelectedToRemove()
+        Try
+            AutoconsultaBUS.instance.RemSintoma(sintoma)
+            DgvSelectedSintomas.Rows.Remove(DgvSelectedSintomas.SelectedRows.Item(0))
+            DgvSelectedSintomas.Refresh()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Function GetSelectedToAdd() As Sintoma
         Dim cells = DgvAllSintomas.SelectedRows.Item(0).Cells
 
         Dim id As Integer = CInt(cells.Item(0).Value)
-        Dim nombre As String = cells.Item(1).ToString
-        Dim descripcion As String = cells.Item(2).ToString
-
+        Dim nombre As String = cells.Item(1).Value.ToString
+        Dim descripcion As String = cells.Item(2).Value.ToString
+        Dim tipo As Sintoma.TiposSintomas = [Enum].Parse(GetType(Sintoma.TiposSintomas), cells.Item(3).Value)
+        Return New Sintoma(id, nombre, descripcion, tipo)
     End Function
+
+    Private Function GetSelectedToRemove() As Sintoma
+        Dim cells = DgvSelectedSintomas.SelectedRows.Item(0).Cells
+
+        Dim id As Integer = CInt(cells.Item(0).Value)
+        Dim nombre As String = cells.Item(1).Value.ToString
+        Dim descripcion As String = cells.Item(2).Value.ToString
+        Dim tipo As Sintoma.TiposSintomas = [Enum].Parse(GetType(Sintoma.TiposSintomas), cells.Item(3).Value)
+        Return New Sintoma(id, nombre, descripcion, tipo)
+    End Function
+
+    Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
+        Try
+            Dim diagnosticos As List(Of Diagnostico) = AutoconsultaBUS.instance.GetDiagnosis()
+
+            If diagnosticos.Count > 0 Then
+                Dim outmsg As String = "Se diagnosticaron las siguientes enfermedades:" & vbCrLf & vbCrLf
+
+                For Each diagnostico In diagnosticos
+                    outmsg += "     -" & diagnostico.Enfermedad.Nombre & vbCrLf
+
+                Next
+
+                outmsg += vbCrLf & "Recuerde que solamente es un diagnóstico primario." & vbCrLf & vbCrLf &
+                          "¿Desea establecer un chat con un médico para obtener un diagnóstico más certero?"
+
+
+                Dim result = MsgBox(outmsg, MsgBoxStyle.YesNo, "Diagnóstico")
+
+                If result = MsgBoxResult.Yes Then
+                    MsgBox("Su consulta esta a la espera de ser atendidad por uno de nuestros profesionales. Por favor aguarde.", MsgBoxStyle.Information, "Consulta Ingresada")
+
+                Else
+                    Reset()
+                    MsgBox("¡Adiós!", MsgBoxStyle.Information, "Consulta Finalizada")
+                End If
+
+
+            Else
+                    MsgBox("Los sintomas provistos concluyeron en un diagnóstico demasiado ambiguo." &
+                       " Por favor de ser lo más específico posible con los síntomas ingresados.",
+                        MsgBoxStyle.Exclamation, "Diagnóstico")
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub BtnFullBody_Click(sender As Object, e As EventArgs) Handles BtnFullBody.Click
+        SwitchSelection()
+        LoadDgv()
+    End Sub
+
+    Private Sub BtnCabeza_Click(sender As Object, e As EventArgs) Handles BtnCabeza.Click
+        pattern.Tipo = Sintoma.TiposSintomas.Cabeza
+        SwitchSelection(pattern.Tipo)
+        LoadDgv(pattern)
+    End Sub
+
+    Private Sub BtnTorso_Click(sender As Object, e As EventArgs) Handles BtnTorso.Click
+        pattern.Tipo = Sintoma.TiposSintomas.Torso
+        SwitchSelection(pattern.Tipo)
+        LoadDgv(pattern)
+    End Sub
+
+    Private Sub BtnExtremidades_Click(sender As Object, e As EventArgs) Handles BtnExtremidades.Click
+        pattern.Tipo = Sintoma.TiposSintomas.Extremidades
+        SwitchSelection(pattern.Tipo)
+        LoadDgv(pattern)
+    End Sub
+
+    Public Sub SwitchSelection(type As Sintoma.TiposSintomas)
+        Select Case type
+            Case Sintoma.TiposSintomas.Cabeza
+                LblTodo.Visible = False
+                LblCabeza.Visible = True
+                LblTorso.Visible = False
+                LblExtremidades.Visible = False
+            Case Sintoma.TiposSintomas.Torso
+                LblTodo.Visible = False
+                LblCabeza.Visible = False
+                LblTorso.Visible = True
+                LblExtremidades.Visible = False
+            Case Sintoma.TiposSintomas.Extremidades
+                LblTodo.Visible = False
+                LblCabeza.Visible = False
+                LblTorso.Visible = False
+                LblExtremidades.Visible = True
+
+            Case Else
+                LblTodo.Visible = True
+                LblCabeza.Visible = False
+                LblTorso.Visible = False
+                LblExtremidades.Visible = False
+        End Select
+    End Sub
+
+    Public Sub SwitchSelection()
+        LblTodo.Visible = True
+        LblCabeza.Visible = False
+        LblTorso.Visible = False
+        LblExtremidades.Visible = False
+    End Sub
+
+    Public Sub Reset()
+        AutoconsultaBUS.instance.selectedSintomas.Clear()
+        DgvSelectedSintomas.Rows.Clear()
+    End Sub
 End Class
