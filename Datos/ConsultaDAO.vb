@@ -24,10 +24,12 @@ Public Class ConsultaDAO
             Next
 
             For Each enfermedad In pConsulta.Diagnosticos
-                    InsertDiagnostico(pConsulta.Id, enfermedad.Id, True)
-                Next
+                InsertDiagnostico(pConsulta.Id, enfermedad.Id, True)
+            Next
 
-                Conn.CommitTrans()
+            InsertChat(pConsulta.Id)
+
+            Conn.CommitTrans()
 
         Catch ex As Exception
             Conn.RollbackTrans()
@@ -76,4 +78,43 @@ Public Class ConsultaDAO
 
         End If
     End Sub
+
+    Public Sub InsertChat(idConsulta As Int64)
+        Dim query As String = "INSERT INTO chats(idConsulta) VALUES(" & idConsulta & ");"
+
+        If Conn.State = ObjectStateEnum.adStateOpen Then
+            Try
+                Conn.Execute(query)
+            Catch ex As Exception
+                Throw ex
+            End Try
+        Else
+            Throw New Exception("Conexión con la base de datos cerrada.")
+        End If
+    End Sub
+
+    Public Function GetChats() As DataTable
+        Dim dt As New DataTable
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter
+
+        Dim query As String = "SELECT * FROM Solicitudes_Chats;"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+            Return dt
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Return dt
+    End Function
+
 End Class

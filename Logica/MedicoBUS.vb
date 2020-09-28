@@ -2,6 +2,7 @@
 Imports Dominio
 Public Class MedicoBUS
     Inherits EmpleadoBUS
+
     Public Overloads Sub ValidateFields(ci As String,
                               nombres As String,
                               apellidoP As String,
@@ -82,7 +83,18 @@ Public Class MedicoBUS
         Catch ex As Exception
             Throw New Exception("Ha ocurrido un error en la conversión de especialidades.")
         End Try
+    End Function
 
+    Public Function GetChats() As DataTable
+        Dim ConsultaDAO As New ConsultaDAO
+
+        Try
+            Return ConsultaDAO.GetChats()
+
+        Catch ex As Exception
+            Console.WriteLine("Error: {0}" & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
+            Throw New Exception("Error al obtener las solicitudes de chats.")
+        End Try
     End Function
 
 End Class

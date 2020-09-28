@@ -15,6 +15,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Dominio", "Dominio\Dominio.
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UnitTests", "UnitTests\UnitTests.vbproj", "{D4093B7B-518E-4650-A321-8E955AB6CD73}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Medico_Presentacion", "Medico_Presentacion\Medico_Presentacion.vbproj", "{63051765-3817-4183-A788-F21A1836D6E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D4093B7B-518E-4650-A321-8E955AB6CD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4093B7B-518E-4650-A321-8E955AB6CD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4093B7B-518E-4650-A321-8E955AB6CD73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63051765-3817-4183-A788-F21A1836D6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63051765-3817-4183-A788-F21A1836D6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63051765-3817-4183-A788-F21A1836D6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63051765-3817-4183-A788-F21A1836D6E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

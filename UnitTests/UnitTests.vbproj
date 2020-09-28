@@ -94,6 +94,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TestsSintomas.vb" />
+    <Compile Include="TestsEnfermedades.vb" />
+    <Compile Include="TestsPersonas.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

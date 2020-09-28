@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{62E202A0-3A87-4795-B5EE-AA19E81E41BF}</ProjectGuid>
+    <ProjectGuid>{63051765-3817-4183-A788-F21A1836D6E5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Presentacion.My.MyApplication</StartupObject>
-    <RootNamespace>Presentacion</RootNamespace>
-    <AssemblyName>Presentacion</AssemblyName>
+    <StartupObject>Medico_Presentacion.My.MyApplication</StartupObject>
+    <RootNamespace>Medico_Presentacion</RootNamespace>
+    <AssemblyName>Medico_Presentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -23,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Presentacion.xml</DocumentationFile>
+    <DocumentationFile>Medico_Presentacion.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -33,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Presentacion.xml</DocumentationFile>
+    <DocumentationFile>Medico_Presentacion.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -77,29 +76,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="F_ContrasennaAutogenerada.Designer.vb">
-      <DependentUpon>F_ContrasennaAutogenerada.vb</DependentUpon>
-    </Compile>
-    <Compile Include="F_ContrasennaAutogenerada.vb">
-      <SubType>Form</SubType>
+    <Compile Include="F_Login.Designer.vb">
+      <DependentUpon>F_Login.vb</DependentUpon>
     </Compile>
     <Compile Include="F_Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Login.Designer.vb">
-      <DependentUpon>F_Login.vb</DependentUpon>
-      <SubType>Form</SubType>
+    <Compile Include="F_Main.Designer.vb">
+      <DependentUpon>F_Main.vb</DependentUpon>
     </Compile>
-    <Compile Include="F_Chat.Designer.vb">
-      <DependentUpon>F_Chat.vb</DependentUpon>
-    </Compile>
-    <Compile Include="F_Chat.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_Sintomas.Designer.vb">
-      <DependentUpon>F_Sintomas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="F_Sintomas.vb">
+    <Compile Include="F_Main.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -120,23 +106,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="F_ContrasennaAutogenerada.resx">
-      <DependentUpon>F_ContrasennaAutogenerada.vb</DependentUpon>
+    <EmbeddedResource Include="F_Login.en-US.resx">
+      <DependentUpon>F_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Login.es-UY.resx">
+      <DependentUpon>F_Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Login.resx">
       <DependentUpon>F_Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Chat.resx">
-      <DependentUpon>F_Chat.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_Sintomas.resx">
-      <DependentUpon>F_Sintomas.vb</DependentUpon>
+    <EmbeddedResource Include="F_Main.resx">
+      <DependentUpon>F_Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -152,102 +138,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\img\login\background-image.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\login\Es.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\login\background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\login\Ingresar Button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\cross.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\left-rounded.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\right-rounded.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-buscar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-cerrar sesion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-filtrar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-finalizar chat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-historial clinico.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-historial clinico-solapa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-importar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-no.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-send.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-si.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-terminar sesion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\btn-volver.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Seleccionar-Sintomas\row.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Left 32 Texbox.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Seleccionar-Sintomas\row add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Seleccionar-Sintomas\row cross.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\cross 65x65.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\search 65x65.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\BtnAceptar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\BtnCancelar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Right 32 Textbox.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Síntomas Panel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Síntomas R.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Síntomas L.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.vbproj">
       <Project>{7a51826e-e929-4a0f-947c-1efa59827ea5}</Project>
       <Name>Dominio</Name>
@@ -258,34 +148,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Kartoffel Solutions Logo.png" />
+    <None Include="My Project\img\login\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\img\login\Es.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\img\login\Kartoffel Solutions Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\img\Botones\BtnSearch.png" />
+    <None Include="My Project\img\male-avatar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\img\Botones\BtnCross.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\chest-100px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\head-100px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\arms-legs-100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\img\Botones\full-body-100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\male-avatar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\send-icon.png" />
+    <None Include="My Project\img\send-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
