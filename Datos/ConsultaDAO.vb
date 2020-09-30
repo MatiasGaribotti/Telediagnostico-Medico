@@ -112,9 +112,84 @@ Public Class ConsultaDAO
             Return dt
         Catch ex As Exception
             Throw ex
+
+        Finally
+            Conn.Close()
         End Try
 
         Return dt
     End Function
 
+    Public Sub StartChat(idConsulta As Int64, ciMedico As Integer)
+        Dim query As String = "INSERT INTO atienden(idConsulta,ciMedico)" &
+                               "VALUES(" & idConsulta & "," & ciMedico & ");"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            Conn.Execute(query)
+        Catch ex As Exception
+            Throw ex
+
+        Finally
+            Conn.Close()
+        End Try
+
+    End Sub
+
+    Public Function GetChatId(idConsulta As Long) As DataTable
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim dt As New DataTable
+
+        Dim query As String = "SELECT id FROM chats WHERE idConsulta=" & idConsulta & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+        Catch ex As Exception
+            Throw ex
+        Finally
+            Conn.Close()
+        End Try
+
+        Return dt
+    End Function
+
+    Public Function GetMensajesChat(idChat As Long) As DataTable
+        Dim rs As Recordset
+        Dim dt As New DataTable
+        Dim da As New OleDb.OleDbDataAdapter
+
+        Dim query As String = "SELECT id, ciPersona, fechaHora WHERE idChat=" & idChat & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+
+        Catch ex As Exception
+            Throw ex
+
+        Finally
+            Conn.Close()
+        End Try
+
+        Return dt
+    End Function
 End Class

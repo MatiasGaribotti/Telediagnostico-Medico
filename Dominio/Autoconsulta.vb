@@ -5,6 +5,11 @@
         MyBase.New
     End Sub
 
+    Public Sub New(id As Int64, paciente As Paciente)
+        MyBase.New(id, paciente)
+
+    End Sub
+
     Public Sub New(sucursal As Sucursal, paciente As Paciente, fechaHora As Date, sintomas As List(Of Sintoma), diagnosticos As List(Of Enfermedad))
         MyBase.New(sucursal, paciente, fechaHora, sintomas, diagnosticos)
     End Sub

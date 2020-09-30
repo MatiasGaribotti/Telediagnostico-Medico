@@ -7,6 +7,15 @@
     Public Property Sintomas As List(Of Sintoma)
     Public Property Diagnosticos As List(Of Enfermedad)
 
+    Protected Sub New(id As Int64, paciente As Paciente)
+        Me.Id = id
+        Me.Sucursal = Env.CurrentSucursal
+        Me.Paciente = paciente
+        Me.FechaHora = Date.Now
+        Me.Sintomas = New List(Of Sintoma)
+        Me.Diagnosticos = New List(Of Enfermedad)
+    End Sub
+
     Protected Sub New()
         Me.Id = -1
         Me.Sucursal = Env.CurrentSucursal

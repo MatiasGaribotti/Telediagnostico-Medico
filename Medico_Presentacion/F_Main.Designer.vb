@@ -22,6 +22,7 @@ Partial Class F_Main
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -42,28 +43,30 @@ Partial Class F_Main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblSintomasRegistrados = New System.Windows.Forms.Label()
         Me.Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.PicAvatar = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Pnl_info_paciente = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblEdadPaciente = New System.Windows.Forms.Label()
         Me.LblNamePaciente = New System.Windows.Forms.Label()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.BtnSend = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.PicAvatar = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DgvChats = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.DgvChats = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.BtnSend = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.ChatTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Panel1.SuspendLayout()
         Me.PnlDiagnosticos.SuspendLayout()
         CType(Me.DgvDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlSintomas.SuspendLayout()
         CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Pnl_info_paciente.SuspendLayout()
         CType(Me.PicAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Pnl_info_paciente.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DgvChats, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Panel1
@@ -310,6 +313,19 @@ Partial Class F_Main
         Me.Separator1.Size = New System.Drawing.Size(440, 10)
         Me.Separator1.TabIndex = 2
         '
+        'PicAvatar
+        '
+        Me.PicAvatar.BackColor = System.Drawing.Color.Transparent
+        Me.PicAvatar.FillColor = System.Drawing.Color.Transparent
+        Me.PicAvatar.Image = Global.Medico_Presentacion.My.Resources.Resources.male_avatar
+        Me.PicAvatar.Location = New System.Drawing.Point(20, 20)
+        Me.PicAvatar.Name = "PicAvatar"
+        Me.PicAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.PicAvatar.ShadowDecoration.Parent = Me.PicAvatar
+        Me.PicAvatar.Size = New System.Drawing.Size(150, 150)
+        Me.PicAvatar.TabIndex = 0
+        Me.PicAvatar.TabStop = False
+        '
         'Pnl_info_paciente
         '
         Me.Pnl_info_paciente.AutoRoundedCorners = True
@@ -345,64 +361,6 @@ Partial Class F_Main
         Me.LblNamePaciente.TabIndex = 0
         Me.LblNamePaciente.Text = "Nombre Paciente"
         '
-        'Guna2TextBox1
-        '
-        Me.Guna2TextBox1.Animated = True
-        Me.Guna2TextBox1.AutoRoundedCorners = True
-        Me.Guna2TextBox1.BorderRadius = 34
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.HoverState.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(500, 998)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(20, 15, 20, 15)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = ""
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.ShadowDecoration.Parent = Me.Guna2TextBox1
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(1300, 70)
-        Me.Guna2TextBox1.TabIndex = 1
-        '
-        'BtnSend
-        '
-        Me.BtnSend.CheckedState.Parent = Me.BtnSend
-        Me.BtnSend.CustomImages.Parent = Me.BtnSend
-        Me.BtnSend.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnSend.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BtnSend.ForeColor = System.Drawing.Color.White
-        Me.BtnSend.HoverState.Parent = Me.BtnSend
-        Me.BtnSend.Image = Global.Medico_Presentacion.My.Resources.Resources.send_icon
-        Me.BtnSend.ImageOffset = New System.Drawing.Point(2, 0)
-        Me.BtnSend.ImageSize = New System.Drawing.Size(38, 34)
-        Me.BtnSend.Location = New System.Drawing.Point(1823, 998)
-        Me.BtnSend.Margin = New System.Windows.Forms.Padding(3, 25, 3, 25)
-        Me.BtnSend.Name = "BtnSend"
-        Me.BtnSend.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
-        Me.BtnSend.Size = New System.Drawing.Size(70, 70)
-        Me.BtnSend.TabIndex = 2
-        '
-        'PicAvatar
-        '
-        Me.PicAvatar.BackColor = System.Drawing.Color.Transparent
-        Me.PicAvatar.FillColor = System.Drawing.Color.Transparent
-        Me.PicAvatar.Image = Global.Medico_Presentacion.My.Resources.Resources.male_avatar
-        Me.PicAvatar.Location = New System.Drawing.Point(20, 20)
-        Me.PicAvatar.Name = "PicAvatar"
-        Me.PicAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.PicAvatar.ShadowDecoration.Parent = Me.PicAvatar
-        Me.PicAvatar.Size = New System.Drawing.Size(150, 150)
-        Me.PicAvatar.TabIndex = 0
-        Me.PicAvatar.TabStop = False
-        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -424,8 +382,68 @@ Partial Class F_Main
         Me.TabPage1.Text = "Chats"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'DgvChats
+        '
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.DgvChats.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        Me.DgvChats.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvChats.BackgroundColor = System.Drawing.Color.White
+        Me.DgvChats.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvChats.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvChats.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvChats.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.DgvChats.ColumnHeadersHeight = 25
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvChats.DefaultCellStyle = DataGridViewCellStyle9
+        Me.DgvChats.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgvChats.EnableHeadersVisualStyles = False
+        Me.DgvChats.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvChats.Location = New System.Drawing.Point(3, 3)
+        Me.DgvChats.Name = "DgvChats"
+        Me.DgvChats.RowHeadersVisible = False
+        Me.DgvChats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvChats.Size = New System.Drawing.Size(1423, 1028)
+        Me.DgvChats.TabIndex = 0
+        Me.DgvChats.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
+        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvChats.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DgvChats.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvChats.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.DgvChats.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvChats.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DgvChats.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvChats.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DgvChats.ThemeStyle.HeaderStyle.Height = 25
+        Me.DgvChats.ThemeStyle.ReadOnly = False
+        Me.DgvChats.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvChats.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvChats.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvChats.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DgvChats.ThemeStyle.RowsStyle.Height = 22
+        Me.DgvChats.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvChats.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.BtnSend)
+        Me.TabPage2.Controls.Add(Me.Guna2TextBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -463,63 +481,54 @@ Partial Class F_Main
         Me.Btn_Exit.Size = New System.Drawing.Size(45, 29)
         Me.Btn_Exit.TabIndex = 7
         '
-        'DgvChats
+        'BtnSend
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.DgvChats.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
-        Me.DgvChats.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvChats.BackgroundColor = System.Drawing.Color.White
-        Me.DgvChats.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DgvChats.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvChats.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvChats.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.DgvChats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvChats.DefaultCellStyle = DataGridViewCellStyle9
-        Me.DgvChats.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvChats.EnableHeadersVisualStyles = False
-        Me.DgvChats.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvChats.Location = New System.Drawing.Point(3, 3)
-        Me.DgvChats.Name = "DgvChats"
-        Me.DgvChats.RowHeadersVisible = False
-        Me.DgvChats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvChats.Size = New System.Drawing.Size(1423, 1028)
-        Me.DgvChats.TabIndex = 0
-        Me.DgvChats.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
-        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.DgvChats.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.DgvChats.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.DgvChats.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvChats.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvChats.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvChats.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvChats.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.DgvChats.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvChats.ThemeStyle.HeaderStyle.Height = 4
-        Me.DgvChats.ThemeStyle.ReadOnly = False
-        Me.DgvChats.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvChats.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvChats.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvChats.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.DgvChats.ThemeStyle.RowsStyle.Height = 22
-        Me.DgvChats.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvChats.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.BtnSend.CheckedState.Parent = Me.BtnSend
+        Me.BtnSend.CustomImages.Parent = Me.BtnSend
+        Me.BtnSend.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnSend.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnSend.ForeColor = System.Drawing.Color.White
+        Me.BtnSend.HoverState.Parent = Me.BtnSend
+        Me.BtnSend.Image = Global.Medico_Presentacion.My.Resources.Resources.send_icon
+        Me.BtnSend.ImageOffset = New System.Drawing.Point(2, 0)
+        Me.BtnSend.ImageSize = New System.Drawing.Size(38, 34)
+        Me.BtnSend.Location = New System.Drawing.Point(1346, 956)
+        Me.BtnSend.Margin = New System.Windows.Forms.Padding(3, 25, 3, 25)
+        Me.BtnSend.Name = "BtnSend"
+        Me.BtnSend.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
+        Me.BtnSend.Size = New System.Drawing.Size(70, 70)
+        Me.BtnSend.TabIndex = 6
+        '
+        'Guna2TextBox1
+        '
+        Me.Guna2TextBox1.Animated = True
+        Me.Guna2TextBox1.AutoRoundedCorners = True
+        Me.Guna2TextBox1.BorderRadius = 34
+        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TextBox1.DefaultText = ""
+        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.FocusedState.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.HoverState.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(23, 956)
+        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(20, 15, 20, 15)
+        Me.Guna2TextBox1.Name = "Guna2TextBox1"
+        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TextBox1.PlaceholderText = ""
+        Me.Guna2TextBox1.SelectedText = ""
+        Me.Guna2TextBox1.ShadowDecoration.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(1300, 70)
+        Me.Guna2TextBox1.TabIndex = 5
+        '
+        'ChatTimer
+        '
+        Me.ChatTimer.Interval = 1000
         '
         'F_Main
         '
@@ -530,8 +539,6 @@ Partial Class F_Main
         Me.Controls.Add(Me.Btn_Minimize)
         Me.Controls.Add(Me.Btn_Exit)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.BtnSend)
-        Me.Controls.Add(Me.Guna2TextBox1)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "F_Main"
@@ -542,12 +549,13 @@ Partial Class F_Main
         CType(Me.DgvDiagnosticos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlSintomas.ResumeLayout(False)
         CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_info_paciente.ResumeLayout(False)
         Me.Pnl_info_paciente.PerformLayout()
-        CType(Me.PicAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.DgvChats, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -567,12 +575,13 @@ Partial Class F_Main
     Friend WithEvents PnlDiagnosticos As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents DgvDiagnosticos As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents BtnHistorialClinico As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents BtnSend As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents DgvChats As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents BtnSend As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents ChatTimer As Timer
 End Class

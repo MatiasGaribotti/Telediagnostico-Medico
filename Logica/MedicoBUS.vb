@@ -97,4 +97,59 @@ Public Class MedicoBUS
         End Try
     End Function
 
+    Public Sub StartChat(idConsulta As Int64, ciMedico As Integer)
+        Dim ConsultaDAO As New ConsultaDAO
+
+        Try
+            ConsultaDAO.StartChat(idConsulta, ciMedico)
+        Catch ex As Exception
+            Console.WriteLine("Error: {0}" & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
+            Throw New Exception("No se pudo iniciar el chat.")
+        End Try
+    End Sub
+
+    Public Function GetChat(idConsulta As Int64) As Chat
+        Dim chat As New Chat()
+        Dim ConsultaDAO As New ConsultaDAO
+        Dim dt As DataTable
+
+        Try
+            dt = ConsultaDAO.GetChatId(idConsulta)
+            chat.Id = dt.Rows.Item(0).Field(Of Long)("id")
+
+        Catch ex As Exception
+            Console.WriteLine("Error: {0}" & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
+            Throw New Exception("Error al obtener el chat.")
+        End Try
+
+        Return chat
+    End Function
+
+    Public Function GetMensajesChat(idChat As Long, Optional startIndex As Long = 1) As List(Of Mensaje)
+        Dim ConsultaDAO As New ConsultaDAO
+        Dim mensajes As New List(Of Mensaje)
+        Dim dt As DataTable
+
+        Try
+            dt = ConsultaDAO.GetMensajesChat(idChat)
+            Dim rows = dt.Rows
+
+            For i As Integer = 0 To rows.Count - 1
+                Dim cells = rows.Item(i)
+
+                Dim id As Long = cells.Field(Of Long)("id")
+                Dim ciPersona As Integer = cells.Field(Of Integer)("ciPersona")
+                Dim texto As String = cells.Field(Of String)("mensaje")
+                Dim timestamp As Date = cells.Field(Of Date)("fechaHora")
+
+                mensajes.Add(New Mensaje(id, ciPersona, texto, timestamp))
+            Next
+
+        Catch ex As Exception
+            Throw New Exception("No se pudieron obtener los mensajes del chat.")
+
+        End Try
+
+        Return mensajes
+    End Function
 End Class
