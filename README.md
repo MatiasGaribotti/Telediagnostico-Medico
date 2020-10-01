@@ -7,7 +7,8 @@ Para poder utilizar este software es necesario tener la base de datos creada y c
 
 ## Usuarios del Sistema
 
-| CI | Password | Tipo de Usuario |
+| CI       | Password | Tipo de Usuario |
+|----------|----------|-----------------|
 | 11111111 | 123 | Paciente |
 | 12121212 | 123 | Médico |
 | 12121212 | 123 | Administrador |
