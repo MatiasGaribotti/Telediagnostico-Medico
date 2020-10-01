@@ -1,13 +1,13 @@
 ﻿Public MustInherit Class Consulta
 
-    Public Property Id As Int64
+    Public Property Id As Long
     Public Property Sucursal As Sucursal
     Public Property Paciente As Paciente
     Public Property FechaHora As Date
     Public Property Sintomas As List(Of Sintoma)
     Public Property Diagnosticos As List(Of Enfermedad)
 
-    Protected Sub New(id As Int64, paciente As Paciente)
+    Protected Sub New(id As Long, paciente As Paciente)
         Me.Id = id
         Me.Sucursal = Env.CurrentSucursal
         Me.Paciente = paciente
@@ -33,7 +33,7 @@
         Me.Diagnosticos = diagnosticos
     End Sub
 
-    Protected Sub New(id As Integer, sucursal As Sucursal, paciente As Paciente, fechaHora As Date, sintomas As List(Of Sintoma), diagnosticos As List(Of Enfermedad))
+    Protected Sub New(id As Long, sucursal As Sucursal, paciente As Paciente, fechaHora As Date, sintomas As List(Of Sintoma), diagnosticos As List(Of Enfermedad))
         Me.Id = id
         Me.Sucursal = sucursal
         Me.Paciente = paciente

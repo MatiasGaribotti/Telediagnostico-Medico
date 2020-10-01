@@ -115,7 +115,7 @@ Public Class MedicoBUS
 
         Try
             dt = ConsultaDAO.GetChatId(idConsulta)
-            chat.Id = dt.Rows.Item(0).Field(Of Long)("id")
+            chat.Id = Long.Parse(dt.Rows.Item(0).Field(Of Decimal)("id"))
 
         Catch ex As Exception
             Console.WriteLine("Error: {0}" & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
@@ -125,25 +125,26 @@ Public Class MedicoBUS
         Return chat
     End Function
 
-    Public Function GetMensajesChat(idChat As Long, Optional startIndex As Long = 1) As List(Of Mensaje)
+    Public Function GetMensajesChat(idChat As Long, Optional startIndex As Long = 0) As List(Of Mensaje)
         Dim ConsultaDAO As New ConsultaDAO
         Dim mensajes As New List(Of Mensaje)
         Dim dt As DataTable
 
         Try
-            dt = ConsultaDAO.GetMensajesChat(idChat)
-            Dim rows = dt.Rows
+            dt = ConsultaDAO.GetMensajesChat(idChat, startIndex)
+            If dt.Rows.Count > 0 Then
+                For i As Integer = 0 To dt.Rows.Count - 1
+                    Dim cells = dt.Rows.Item(i)
 
-            For i As Integer = 0 To rows.Count - 1
-                Dim cells = rows.Item(i)
+                    Dim id As Long = cells.Field(Of Long)("id")
+                    Dim ciPersona As Integer = cells.Field(Of Integer)("ciPersona")
+                    Dim texto As String = cells.Field(Of String)("mensaje")
+                    Dim timestamp As Date = cells.Field(Of Date)("fechaHora")
 
-                Dim id As Long = cells.Field(Of Long)("id")
-                Dim ciPersona As Integer = cells.Field(Of Integer)("ciPersona")
-                Dim texto As String = cells.Field(Of String)("mensaje")
-                Dim timestamp As Date = cells.Field(Of Date)("fechaHora")
+                    mensajes.Add(New Mensaje(id, ciPersona, texto, timestamp))
+                Next
 
-                mensajes.Add(New Mensaje(id, ciPersona, texto, timestamp))
-            Next
+            End If
 
         Catch ex As Exception
             Throw New Exception("No se pudieron obtener los mensajes del chat.")
@@ -152,4 +153,14 @@ Public Class MedicoBUS
 
         Return mensajes
     End Function
+
+    Public Sub SendMsg(idChat As Long, msg As Mensaje)
+        Dim ConsultaDAO As New ConsultaDAO
+        Try
+            ConsultaDAO.SendMsg(idChat, msg)
+
+        Catch ex As Exception
+            Throw New Exception("No se pudo enviar el mensaje.")
+        End Try
+    End Sub
 End Class

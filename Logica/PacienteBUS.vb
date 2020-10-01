@@ -65,4 +65,68 @@ Public Class PacienteBUS
         End If
     End Sub
 
+    Public Sub SendMsg(idChat As Long, msg As Mensaje)
+        Dim ConsultaDAO As New ConsultaDAO
+
+        Try
+            ConsultaDAO.SendMsg(idChat, msg)
+        Catch ex As Exception
+            Console.WriteLine("Error: {0} " & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
+            Throw New Exception("No se pudo enviar el mensaje.")
+        End Try
+    End Sub
+
+    Public Function GetChatIfActive(idConsulta As Long) As Chat
+        Dim ConsultaDAO As New ConsultaDAO
+        Dim dt As DataTable
+
+        Try
+            dt = ConsultaDAO.GetChat(idConsulta)
+        Catch ex As Exception
+            Console.WriteLine("Error: {0} " & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
+            Throw New Exception("Error al obtener la consulta.")
+        End Try
+
+        If dt.Rows.Count = 0 Then
+            Return Nothing
+
+        Else
+            Dim row = dt.Rows.Item(0)
+
+            Dim idChat As Long = Long.Parse(row.Field(Of Decimal)("id"))
+            Dim ciMedico As Integer = row.Field(Of Integer)("ciMedico")
+
+            Return New Chat(idChat)
+
+        End If
+    End Function
+
+    Public Function GetMensajes(idChat As Long, Optional startIndex As Long = 0) As List(Of Mensaje)
+        Dim ConsultaDAO As New ConsultaDAO
+        Dim dt As DataTable
+        Dim mensajes As New List(Of Mensaje)
+
+
+        Try
+            dt = ConsultaDAO.GetMensajesChat(idChat, startIndex)
+        Catch ex As Exception
+            Console.WriteLine("Error: {0} " & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
+            Throw New Exception("Error al obtener los mensajes del chat.")
+        End Try
+
+        If dt.Rows.Count > 0 Then
+            For i As Integer = 0 To dt.Rows.Count - 1
+                Dim cells = dt.Rows.Item(i)
+
+                Dim id As Long = cells.Field(Of Long)("id")
+                Dim ciPersona As Integer = cells.Field(Of Integer)("ciPersona")
+                Dim texto As String = cells.Field(Of String)("mensaje")
+                Dim timestamp As Date = cells.Field(Of Date)("fechaHora")
+
+                mensajes.Add(New Mensaje(id, ciPersona, texto, timestamp))
+            Next
+
+        End If
+        Return mensajes
+    End Function
 End Class

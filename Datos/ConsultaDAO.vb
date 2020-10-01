@@ -166,12 +166,60 @@ Public Class ConsultaDAO
         Return dt
     End Function
 
-    Public Function GetMensajesChat(idChat As Long) As DataTable
+    Public Function GetMensajesChat(idChat As Long, Optional startIndex As Long = 0) As DataTable
         Dim rs As Recordset
         Dim dt As New DataTable
         Dim da As New OleDb.OleDbDataAdapter
 
-        Dim query As String = "SELECT id, ciPersona, fechaHora WHERE idChat=" & idChat & ";"
+        Dim query As String = "SELECT id, ciPersona, fechaHora FROM mensajes WHERE idChat=" & idChat & " AND id > " & startIndex & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+
+        Catch ex As Exception
+            Throw ex
+
+        Finally
+            Conn.Close()
+        End Try
+
+        Return dt
+    End Function
+
+    Public Sub SendMsg(idChat As Long, msg As Mensaje)
+        Dim query As String = "INSERT INTO mensajes(idChat,ciPersona,fechaHora,mensaje) VALUES(" & idChat & ", " & msg.CiPersona & ", '" & msg.Timestamp.ToString("yyyy-MM-dd H:mm:ss") & "','" & msg.Texto & "');"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            Conn.Execute(query)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    Public Function GetChat(idConsulta As Long) As DataTable
+        Dim rs As Recordset
+        Dim dt As New DataTable
+        Dim da As New OleDb.OleDbDataAdapter
+
+        Dim query As String = "SELECT CH.id, A.ciMedico " &
+                              "FROM consultas AS C " &
+                               "JOIN chats AS CH " &
+                                   "ON(C.id = CH.idConsulta) " &
+                               "JOIN atienden AS A " &
+                                   "ON(C.id = A.idConsulta) WHERE C.id=" & idConsulta & ";"
 
         Try
             Conn = Connect()

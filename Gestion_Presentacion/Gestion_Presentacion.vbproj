@@ -63,6 +63,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>st-logo 256x256.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
       <HintPath>dll\Guna.UI2.dll</HintPath>
@@ -301,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\img\login\Kartoffel Solutions Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="st-logo 256x256.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -1,12 +1,29 @@
 ﻿Imports Dominio
 Imports Logica
+Imports System.Threading
 
 Public Class F_Main
-    Private Property consultasActivas As New List(Of ConsultaMedica)
+    Private Property ConsultasActivas As New List(Of ConsultaMedica)
+    Private Property TemplateChat As TabPage
+
+    Public Sub New()
+        Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
+
+        InitializeComponent()
+
+        Me.TemplateChat = TabTemplateChat
+        TabControl1.TabPages.Remove(TabTemplateChat)
+
+    End Sub
 
     Private Sub F_Main_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadDgv()
+
     End Sub
+
+    Private Function GetTemplateChat() As TabPage
+        Return TemplateChat
+    End Function
 
     Private Sub LoadDgv()
         Dim MedicoBUS As New MedicoBUS
@@ -25,8 +42,8 @@ Public Class F_Main
 
         If result = vbYes Then
             StartChat()
-            TabControl1.SelectedTab = TabPage2
-
+            SetUpChat(consultasActivas.Last)
+            LoadDgv()
         End If
     End Sub
 
@@ -47,13 +64,33 @@ Public Class F_Main
     Public Function GetSelected() As Autoconsulta
         Dim cells = DgvChats.SelectedRows.Item(0).Cells
 
-        Dim id As Int64 = Int64.Parse(cells.Item(0).Value)
+        Dim id As Long = Long.Parse(cells.Item(0).Value)
         Dim ciPaciente As Integer = Integer.Parse(cells.Item(1).Value)
-
         Return New Autoconsulta(id, New Paciente(ciPaciente))
     End Function
 
-    'Public Sub SetUpChat()
+    Public Sub SetUpChat(consulta As ConsultaMedica)
 
-    'End Sub
+        'Dim tab As TabPage = GetTemplateChat()
+        Dim tab As New TabPage
+
+        tab.BackColor = Color.White
+        Dim chatControls As New ChatUtilities
+        tab.Controls.Add(chatControls)
+        chatControls.Location = New Point(20, TabSolicitudesChats.Height - 90)
+        tab.Name = "TabChat-" & consulta.Chat.Id
+        tab.Text = consulta.Paciente.Nombre
+
+        tab.BringToFront()
+        tab.Refresh()
+        TabControl1.TabPages.Add(tab)
+
+        ' Selecciono la última tab
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(TabControl1.TabPages.Count - 1)
+        TabControl1.Refresh()
+    End Sub
+
+    Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
+        MsgBox(TabControl1.SelectedTab.Name)
+    End Sub
 End Class

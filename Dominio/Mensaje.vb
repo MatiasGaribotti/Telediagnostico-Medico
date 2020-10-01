@@ -10,4 +10,10 @@
         Me.Texto = texto
         Me.Timestamp = timestamp
     End Sub
+
+    Public Sub New(ciPersona As Integer, texto As String, timestamp As Date)
+        Me.CiPersona = ciPersona
+        Me.Texto = texto
+        Me.Timestamp = timestamp
+    End Sub
 End Class

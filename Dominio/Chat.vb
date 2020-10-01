@@ -7,4 +7,9 @@
         Id = -1
         Mensajes = New List(Of Mensaje)
     End Sub
+
+    Public Sub New(id As Long)
+        Me.Id = id
+        Mensajes = New List(Of Mensaje)
+    End Sub
 End Class
