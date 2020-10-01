@@ -118,34 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BtnMed.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
-  </data>
-  <data name="BtnMed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 856</value>
-  </data>
-  <data name="BtnMed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 33</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BtnMed.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="BtnMed.Text" xml:space="preserve">
-    <value>Médico</value>
-  </data>
-  <data name="&gt;&gt;BtnMed.Name" xml:space="preserve">
-    <value>BtnMed</value>
-  </data>
-  <data name="&gt;&gt;BtnMed.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BtnMed.Parent" xml:space="preserve">
-    <value>Pnl_Login</value>
-  </data>
-  <data name="&gt;&gt;BtnMed.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="Guna2HtmlLabel1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 16pt</value>
   </data>
@@ -155,6 +127,7 @@
   <data name="Guna2HtmlLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 27</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Guna2HtmlLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
@@ -171,7 +144,7 @@
     <value>Pnl_Login</value>
   </data>
   <data name="&gt;&gt;Guna2HtmlLabel1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="BtnChangeLang.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -254,7 +227,7 @@
     <value>Pnl_Login</value>
   </data>
   <data name="&gt;&gt;BtnChangeLang.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PicLogin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -279,7 +252,7 @@
     <value>Pnl_Login</value>
   </data>
   <data name="&gt;&gt;PicLogin.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="LblPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 16pt</value>
@@ -306,7 +279,7 @@
     <value>Pnl_Login</value>
   </data>
   <data name="&gt;&gt;LblPassword.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="LblCi.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 16pt</value>
@@ -333,7 +306,7 @@
     <value>Pnl_Login</value>
   </data>
   <data name="&gt;&gt;LblCi.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="Btn_Ingresar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16pt</value>
@@ -360,7 +333,7 @@
     <value>Pnl_Login</value>
   </data>
   <data name="&gt;&gt;Btn_Ingresar.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="TxtPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>232, 687</value>
@@ -381,7 +354,7 @@
     <value>Pnl_Login</value>
   </data>
   <data name="&gt;&gt;TxtPassword.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="TxtCi.Location" type="System.Drawing.Point, System.Drawing">
     <value>232, 624</value>
@@ -402,7 +375,7 @@
     <value>Pnl_Login</value>
   </data>
   <data name="&gt;&gt;TxtCi.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="Pnl_Login.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>

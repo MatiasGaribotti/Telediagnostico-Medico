@@ -50,25 +50,4 @@ Public Class F_Login
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
         End Try
     End Sub
-
-    Private Sub BtnPaciente_Click(sender As Object, e As EventArgs) Handles BtnPaciente.Click
-        Try
-            Dim user = New Persona(11111111, 123)
-
-            If AuthenticationBUS.Authenticate(user) Then
-                If Password.IsGenerated(user.Password) Then
-                    F_ContrasennaAutogenerada.Show()
-                Else
-                    F_Sintomas.Show()
-                    Me.Close()
-
-                End If
-            Else
-                MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
-            End If
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
-        End Try
-    End Sub
 End Class

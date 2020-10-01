@@ -25,7 +25,6 @@ Partial Class F_Login
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Login))
         Me.Pnl_Login = New Guna.UI2.WinForms.Guna2Panel()
-        Me.BtnMed = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnChangeLang = New Guna.UI2.WinForms.Guna2Button()
         Me.PicLogin = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -51,7 +50,6 @@ Partial Class F_Login
         '
         'Pnl_Login
         '
-        Me.Pnl_Login.Controls.Add(Me.BtnMed)
         Me.Pnl_Login.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Pnl_Login.Controls.Add(Me.BtnChangeLang)
         Me.Pnl_Login.Controls.Add(Me.PicLogin)
@@ -64,22 +62,6 @@ Partial Class F_Login
         resources.ApplyResources(Me.Pnl_Login, "Pnl_Login")
         Me.Pnl_Login.Name = "Pnl_Login"
         Me.Pnl_Login.ShadowDecoration.Parent = Me.Pnl_Login
-        '
-        'BtnMed
-        '
-        Me.BtnMed.Animated = True
-        Me.BtnMed.AutoRoundedCorners = True
-        Me.BtnMed.BackColor = System.Drawing.Color.Transparent
-        Me.BtnMed.BorderRadius = 15
-        Me.BtnMed.CheckedState.Parent = Me.BtnMed
-        Me.BtnMed.CustomImages.Parent = Me.BtnMed
-        Me.BtnMed.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        resources.ApplyResources(Me.BtnMed, "BtnMed")
-        Me.BtnMed.ForeColor = System.Drawing.Color.White
-        Me.BtnMed.HoverState.Parent = Me.BtnMed
-        Me.BtnMed.Name = "BtnMed"
-        Me.BtnMed.ShadowDecoration.Parent = Me.BtnMed
-        Me.BtnMed.UseTransparentBackground = True
         '
         'Guna2HtmlLabel1
         '
@@ -303,7 +285,6 @@ Partial Class F_Login
     Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents BtnMed As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PicBoxBackground As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2ControlBox3 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox4 As Guna.UI2.WinForms.Guna2ControlBox

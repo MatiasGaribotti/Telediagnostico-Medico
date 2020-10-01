@@ -21,7 +21,7 @@ Public Class F_Login
 
             If AuthenticationBUS.Authenticate(user) Then
                 'Abre el formulario de ABM y cierra este
-                'F_ABM.Show()
+                F_Main.Show()
                 Me.Close()
             Else
                 MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
@@ -46,22 +46,5 @@ Public Class F_Login
         Dim window As New F_Login()
         window.Show()
         Me.Close()
-    End Sub
-
-    Private Sub BtnAdm_Click(sender As Object, e As EventArgs) Handles BtnMed.Click
-        Try
-            Dim user = New Persona(CInt(12121212), "123")
-
-            If AuthenticationBUS.Authenticate(user) Then
-                'Abre el formulario de ABM y cierra este
-                F_Main.Show()
-                Me.Close()
-            Else
-                MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
-            End If
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
-        End Try
     End Sub
 End Class

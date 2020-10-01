@@ -3,6 +3,19 @@ Para poder utilizar este software es necesario tener la base de datos creada y c
 [Descarga el script de creación de la base de datos](https://drive.google.com/file/d/1Wa-81Zs0v3jUI-lFl-98kFYDzePanjoe/view?usp=sharing).
 [Descarga el script con juego de datos](https://drive.google.com/file/d/1E0IeifHZ-bJKOj9EIEuKCc4xhb1Sn0cf/view?usp=sharing).
 
+---
+
+## Usuarios del Sistema
+
+| CI | Password | Tipo de Usuario |
+| 11111111 | 123 | Paciente |
+| 12121212 | 123 | Médico |
+| 12121212 | 123 | Administrador |
+| 31541142 | 123 | RRHH |
+| 23520049 | 123 | Recepcionista |
+
+---
+
 ## Aplicación de Gestión
 ### Síntomas
 * [X] Alta Síntoma
@@ -38,15 +51,15 @@ Para poder utilizar este software es necesario tener la base de datos creada y c
 * [ ] Buscar Pacientes
 
 ## Aplicación Paciente
-* [ ] Seleccionar síntomas
+* [X] Seleccionar síntomas
 * [X] Obtener Diagnóstico
 * [ ] Ver HCE
-* [ ] Iniciar Chat
+* [X] Iniciar Chat
 * [ ] Enviar copia chat por mail
 * [ ] Establecer contraseña
 
 ## Aplicación Médico
-* [ ] Ver solicitudes de chat
-* [ ] Iniciar chat
+* [X] Ver solicitudes de chat
+* [X] Iniciar chat
 * [ ] Ver HCE paciente
 * [ ] Establecer contraseña
