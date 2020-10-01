@@ -93,8 +93,8 @@ Public Class PacienteBUS
         Else
             Dim row = dt.Rows.Item(0)
 
-            Dim idChat As Long = Long.Parse(row.Field(Of Decimal)("id"))
-            Dim ciMedico As Integer = row.Field(Of Integer)("ciMedico")
+            Dim idChat = row.Field(Of Decimal)("id")
+            Dim ciMedico As Integer = row.Field(Of Int64)("ciMedico")
 
             Return New Chat(idChat)
 
@@ -115,16 +115,21 @@ Public Class PacienteBUS
         End Try
 
         If dt.Rows.Count > 0 Then
-            For i As Integer = 0 To dt.Rows.Count - 1
-                Dim cells = dt.Rows.Item(i)
+            Try
+                For i As Integer = 0 To dt.Rows.Count - 1
+                    Dim cells = dt.Rows.Item(i)
 
-                Dim id As Long = cells.Field(Of Long)("id")
-                Dim ciPersona As Integer = cells.Field(Of Integer)("ciPersona")
-                Dim texto As String = cells.Field(Of String)("mensaje")
-                Dim timestamp As Date = cells.Field(Of Date)("fechaHora")
+                    Dim id As Long = cells.Field(Of Decimal)("id")
+                    Dim ciPersona As Integer = cells.Field(Of Int64)("ciPersona")
+                    Dim texto As String = cells.Field(Of String)("mensaje")
+                    Dim timestamp As Date = cells.Field(Of System.DateTime)("fechaHora")
 
-                mensajes.Add(New Mensaje(id, ciPersona, texto, timestamp))
-            Next
+                    mensajes.Add(New Mensaje(id, ciPersona, texto, timestamp))
+                Next
+
+            Catch ex As Exception
+
+            End Try
 
         End If
         Return mensajes

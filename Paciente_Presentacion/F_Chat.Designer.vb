@@ -44,12 +44,12 @@ Partial Class F_Chat
         Me.Pnl_info_paciente = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblEdadPaciente = New System.Windows.Forms.Label()
         Me.LblNamePaciente = New System.Windows.Forms.Label()
-        Me.TxtMsg = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.BtnSend = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.LblWaiting = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TimerChat = New System.Windows.Forms.Timer(Me.components)
         Me.PnlChat = New Guna.UI2.WinForms.Guna2Panel()
         Me.PicWaiting = New System.Windows.Forms.PictureBox()
+        Me.BtnSend = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.TxtMsg = New Guna.UI2.WinForms.Guna2TextBox()
         Me.PnlSide.SuspendLayout()
         Me.PnlDiagnosticos.SuspendLayout()
         CType(Me.DgvDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -352,53 +352,6 @@ Partial Class F_Chat
         Me.LblNamePaciente.TabIndex = 0
         Me.LblNamePaciente.Text = "Nombre Paciente"
         '
-        'TxtMsg
-        '
-        Me.TxtMsg.Animated = True
-        Me.TxtMsg.AutoRoundedCorners = True
-        Me.TxtMsg.BackColor = System.Drawing.Color.Transparent
-        Me.TxtMsg.BorderRadius = 34
-        Me.TxtMsg.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtMsg.DefaultText = ""
-        Me.TxtMsg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtMsg.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtMsg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtMsg.DisabledState.Parent = Me.TxtMsg
-        Me.TxtMsg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtMsg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtMsg.FocusedState.Parent = Me.TxtMsg
-        Me.TxtMsg.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtMsg.HoverState.Parent = Me.TxtMsg
-        Me.TxtMsg.Location = New System.Drawing.Point(20, 998)
-        Me.TxtMsg.Margin = New System.Windows.Forms.Padding(20, 15, 20, 15)
-        Me.TxtMsg.Name = "TxtMsg"
-        Me.TxtMsg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtMsg.PlaceholderText = ""
-        Me.TxtMsg.SelectedText = ""
-        Me.TxtMsg.ShadowDecoration.Parent = Me.TxtMsg
-        Me.TxtMsg.Size = New System.Drawing.Size(1300, 70)
-        Me.TxtMsg.TabIndex = 1
-        '
-        'BtnSend
-        '
-        Me.BtnSend.BackColor = System.Drawing.Color.Transparent
-        Me.BtnSend.CheckedState.Parent = Me.BtnSend
-        Me.BtnSend.CustomImages.Parent = Me.BtnSend
-        Me.BtnSend.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnSend.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BtnSend.ForeColor = System.Drawing.Color.White
-        Me.BtnSend.HoverState.Parent = Me.BtnSend
-        Me.BtnSend.Image = Global.Presentacion.My.Resources.Resources.send_icon
-        Me.BtnSend.ImageOffset = New System.Drawing.Point(2, 0)
-        Me.BtnSend.ImageSize = New System.Drawing.Size(38, 34)
-        Me.BtnSend.Location = New System.Drawing.Point(1343, 998)
-        Me.BtnSend.Margin = New System.Windows.Forms.Padding(3, 25, 3, 25)
-        Me.BtnSend.Name = "BtnSend"
-        Me.BtnSend.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
-        Me.BtnSend.Size = New System.Drawing.Size(70, 70)
-        Me.BtnSend.TabIndex = 2
-        '
         'LblWaiting
         '
         Me.LblWaiting.BackColor = System.Drawing.Color.Transparent
@@ -417,13 +370,11 @@ Partial Class F_Chat
         '
         Me.PnlChat.Controls.Add(Me.LblWaiting)
         Me.PnlChat.Controls.Add(Me.PicWaiting)
-        Me.PnlChat.Controls.Add(Me.BtnSend)
-        Me.PnlChat.Controls.Add(Me.TxtMsg)
         Me.PnlChat.FillColor = System.Drawing.Color.White
         Me.PnlChat.Location = New System.Drawing.Point(480, 0)
         Me.PnlChat.Name = "PnlChat"
         Me.PnlChat.ShadowDecoration.Parent = Me.PnlChat
-        Me.PnlChat.Size = New System.Drawing.Size(1440, 1080)
+        Me.PnlChat.Size = New System.Drawing.Size(1440, 980)
         Me.PnlChat.TabIndex = 5
         '
         'PicWaiting
@@ -436,12 +387,61 @@ Partial Class F_Chat
         Me.PicWaiting.TabIndex = 4
         Me.PicWaiting.TabStop = False
         '
+        'BtnSend
+        '
+        Me.BtnSend.BackColor = System.Drawing.Color.Transparent
+        Me.BtnSend.CheckedState.Parent = Me.BtnSend
+        Me.BtnSend.CustomImages.Parent = Me.BtnSend
+        Me.BtnSend.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnSend.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnSend.ForeColor = System.Drawing.Color.White
+        Me.BtnSend.HoverState.Parent = Me.BtnSend
+        Me.BtnSend.Image = Global.Presentacion.My.Resources.Resources.send_icon
+        Me.BtnSend.ImageOffset = New System.Drawing.Point(2, 0)
+        Me.BtnSend.ImageSize = New System.Drawing.Size(38, 34)
+        Me.BtnSend.Location = New System.Drawing.Point(1823, 986)
+        Me.BtnSend.Margin = New System.Windows.Forms.Padding(3, 25, 3, 25)
+        Me.BtnSend.Name = "BtnSend"
+        Me.BtnSend.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
+        Me.BtnSend.Size = New System.Drawing.Size(70, 70)
+        Me.BtnSend.TabIndex = 7
+        '
+        'TxtMsg
+        '
+        Me.TxtMsg.Animated = True
+        Me.TxtMsg.AutoRoundedCorners = True
+        Me.TxtMsg.BackColor = System.Drawing.Color.Transparent
+        Me.TxtMsg.BorderRadius = 34
+        Me.TxtMsg.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtMsg.DefaultText = ""
+        Me.TxtMsg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtMsg.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtMsg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtMsg.DisabledState.Parent = Me.TxtMsg
+        Me.TxtMsg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtMsg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtMsg.FocusedState.Parent = Me.TxtMsg
+        Me.TxtMsg.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtMsg.HoverState.Parent = Me.TxtMsg
+        Me.TxtMsg.Location = New System.Drawing.Point(500, 986)
+        Me.TxtMsg.Margin = New System.Windows.Forms.Padding(20, 15, 20, 15)
+        Me.TxtMsg.Name = "TxtMsg"
+        Me.TxtMsg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtMsg.PlaceholderText = ""
+        Me.TxtMsg.SelectedText = ""
+        Me.TxtMsg.ShadowDecoration.Parent = Me.TxtMsg
+        Me.TxtMsg.Size = New System.Drawing.Size(1300, 70)
+        Me.TxtMsg.TabIndex = 6
+        '
         'F_Chat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1920, 1080)
+        Me.Controls.Add(Me.BtnSend)
+        Me.Controls.Add(Me.TxtMsg)
         Me.Controls.Add(Me.PnlSide)
         Me.Controls.Add(Me.PnlChat)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -478,10 +478,10 @@ Partial Class F_Chat
     Friend WithEvents PnlDiagnosticos As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents DgvDiagnosticos As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents BtnHistorialClinico As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents TxtMsg As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents BtnSend As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents LblWaiting As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents TimerChat As Timer
     Friend WithEvents PnlChat As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents PicWaiting As PictureBox
+    Friend WithEvents BtnSend As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents TxtMsg As Guna.UI2.WinForms.Guna2TextBox
 End Class

@@ -128,6 +128,7 @@ Public Class F_Sintomas
             Dim diagnosticos As List(Of Enfermedad) = AutoconsultaBUS.instance.GetDiagnosis()
 
             If diagnosticos.Count > 0 Then
+                AutoconsultaBUS.instance.consulta.Diagnosticos = diagnosticos
                 Dim outmsg As String = "Se diagnosticaron las siguientes enfermedades:" & vbCrLf & vbCrLf
 
                 For Each diagnostico In diagnosticos
@@ -145,7 +146,10 @@ Public Class F_Sintomas
                     AutoconsultaBUS.instance.Insert()
 
                     MsgBox("Su consulta esta a la espera de ser atendidad por uno de nuestros profesionales. Por favor aguarde.", MsgBoxStyle.Information, "Consulta Ingresada")
-
+                    'Iniciamos el chat
+                    Dim chat As New F_Chat(AutoconsultaBUS.instance.consulta)
+                    chat.Show()
+                    Me.Close()
                 Else
                     AutoconsultaBUS.instance.Insert()
                     Reset()
@@ -154,7 +158,7 @@ Public Class F_Sintomas
 
 
             Else
-                    MsgBox("Los sintomas provistos concluyeron en un diagnóstico demasiado ambiguo." &
+                MsgBox("Los sintomas provistos concluyeron en un diagnóstico demasiado ambiguo." &
                        " Por favor de ser lo más específico posible con los síntomas ingresados.",
                         MsgBoxStyle.Exclamation, "Diagnóstico")
 

@@ -41,7 +41,7 @@ Public Class ConsultaDAO
         Return pConsulta
     End Function
 
-    Public Sub InsertDiagnostico(idConsulta As Int64, idEnfermedad As Short, autoconsulta As Boolean)
+    Public Sub InsertDiagnostico(idConsulta As Long, idEnfermedad As Short, autoconsulta As Boolean)
         Dim query As String = "INSERT INTO diagnostica(idConsulta, idEnfermedad, tipoConsulta) VALUES(" & idConsulta & "," & idEnfermedad & ","
 
         If autoconsulta Then
@@ -63,7 +63,7 @@ Public Class ConsultaDAO
         End If
     End Sub
 
-    Public Sub InsertRegistra(idConsulta As Int64, idSintoma As Short)
+    Public Sub InsertRegistra(idConsulta As Long, idSintoma As Short)
         Dim query As String = "INSERT INTO registra(idConsulta, idSintoma) VALUES(" & idConsulta & "," & idSintoma & ");"
 
         If Conn.State = ObjectStateEnum.adStateOpen Then
@@ -79,7 +79,7 @@ Public Class ConsultaDAO
         End If
     End Sub
 
-    Public Sub InsertChat(idConsulta As Int64)
+    Public Sub InsertChat(idConsulta As Long)
         Dim query As String = "INSERT INTO chats(idConsulta) VALUES(" & idConsulta & ");"
 
         If Conn.State = ObjectStateEnum.adStateOpen Then
@@ -171,7 +171,7 @@ Public Class ConsultaDAO
         Dim dt As New DataTable
         Dim da As New OleDb.OleDbDataAdapter
 
-        Dim query As String = "SELECT id, ciPersona, fechaHora FROM mensajes WHERE idChat=" & idChat & " AND id > " & startIndex & ";"
+        Dim query As String = "SELECT id, ciPersona, mensaje, fechaHora FROM mensajes WHERE idChat=" & idChat & " AND id > " & startIndex & ";"
 
         Try
             Conn = Connect()

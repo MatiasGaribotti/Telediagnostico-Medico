@@ -93,4 +93,8 @@ Public Class F_Main
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
         MsgBox(TabControl1.SelectedTab.Name)
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        LoadDgv()
+    End Sub
 End Class

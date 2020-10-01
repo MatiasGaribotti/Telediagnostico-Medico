@@ -43,6 +43,7 @@ Partial Class F_Main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblSintomasRegistrados = New System.Windows.Forms.Label()
         Me.Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.PicAvatar = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Pnl_info_paciente = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblEdadPaciente = New System.Windows.Forms.Label()
         Me.LblNamePaciente = New System.Windows.Forms.Label()
@@ -50,28 +51,29 @@ Partial Class F_Main
         Me.TabSolicitudesChats = New System.Windows.Forms.TabPage()
         Me.DgvChats = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.TabTemplateChat = New System.Windows.Forms.TabPage()
+        Me.BtnSend = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.TxtMsg = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.ChatTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.BtnSend = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.PicAvatar = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.PnlDiagnosticos.SuspendLayout()
         CType(Me.DgvDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlSintomas.SuspendLayout()
         CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_info_paciente.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabSolicitudesChats.SuspendLayout()
         CType(Me.DgvChats, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabTemplateChat.SuspendLayout()
-        CType(Me.PicAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Guna2Panel1.Controls.Add(Me.Button1)
         Me.Guna2Panel1.Controls.Add(Me.BtnCerrarSesion)
         Me.Guna2Panel1.Controls.Add(Me.BtnFinalizarChat)
         Me.Guna2Panel1.Controls.Add(Me.PnlDiagnosticos)
@@ -313,6 +315,19 @@ Partial Class F_Main
         Me.Separator1.Size = New System.Drawing.Size(440, 10)
         Me.Separator1.TabIndex = 2
         '
+        'PicAvatar
+        '
+        Me.PicAvatar.BackColor = System.Drawing.Color.Transparent
+        Me.PicAvatar.FillColor = System.Drawing.Color.Transparent
+        Me.PicAvatar.Image = Global.Medico_Presentacion.My.Resources.Resources.male_avatar
+        Me.PicAvatar.Location = New System.Drawing.Point(20, 20)
+        Me.PicAvatar.Name = "PicAvatar"
+        Me.PicAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.PicAvatar.ShadowDecoration.Parent = Me.PicAvatar
+        Me.PicAvatar.Size = New System.Drawing.Size(150, 150)
+        Me.PicAvatar.TabIndex = 0
+        Me.PicAvatar.TabStop = False
+        '
         'Pnl_info_paciente
         '
         Me.Pnl_info_paciente.AutoRoundedCorners = True
@@ -439,6 +454,25 @@ Partial Class F_Main
         Me.TabTemplateChat.TabIndex = 1
         Me.TabTemplateChat.UseVisualStyleBackColor = True
         '
+        'BtnSend
+        '
+        Me.BtnSend.CheckedState.Parent = Me.BtnSend
+        Me.BtnSend.CustomImages.Parent = Me.BtnSend
+        Me.BtnSend.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.BtnSend.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnSend.ForeColor = System.Drawing.Color.White
+        Me.BtnSend.HoverState.Parent = Me.BtnSend
+        Me.BtnSend.Image = Global.Medico_Presentacion.My.Resources.Resources.send_icon
+        Me.BtnSend.ImageOffset = New System.Drawing.Point(2, 0)
+        Me.BtnSend.ImageSize = New System.Drawing.Size(38, 34)
+        Me.BtnSend.Location = New System.Drawing.Point(1346, 956)
+        Me.BtnSend.Margin = New System.Windows.Forms.Padding(3, 25, 3, 25)
+        Me.BtnSend.Name = "BtnSend"
+        Me.BtnSend.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
+        Me.BtnSend.Size = New System.Drawing.Size(70, 70)
+        Me.BtnSend.TabIndex = 6
+        '
         'TxtMsg
         '
         Me.TxtMsg.Animated = True
@@ -499,37 +533,14 @@ Partial Class F_Main
         '
         Me.ChatTimer.Interval = 1000
         '
-        'BtnSend
+        'Button1
         '
-        Me.BtnSend.CheckedState.Parent = Me.BtnSend
-        Me.BtnSend.CustomImages.Parent = Me.BtnSend
-        Me.BtnSend.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnSend.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BtnSend.ForeColor = System.Drawing.Color.White
-        Me.BtnSend.HoverState.Parent = Me.BtnSend
-        Me.BtnSend.Image = Global.Medico_Presentacion.My.Resources.Resources.send_icon
-        Me.BtnSend.ImageOffset = New System.Drawing.Point(2, 0)
-        Me.BtnSend.ImageSize = New System.Drawing.Size(38, 34)
-        Me.BtnSend.Location = New System.Drawing.Point(1346, 956)
-        Me.BtnSend.Margin = New System.Windows.Forms.Padding(3, 25, 3, 25)
-        Me.BtnSend.Name = "BtnSend"
-        Me.BtnSend.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
-        Me.BtnSend.Size = New System.Drawing.Size(70, 70)
-        Me.BtnSend.TabIndex = 6
-        '
-        'PicAvatar
-        '
-        Me.PicAvatar.BackColor = System.Drawing.Color.Transparent
-        Me.PicAvatar.FillColor = System.Drawing.Color.Transparent
-        Me.PicAvatar.Image = Global.Medico_Presentacion.My.Resources.Resources.male_avatar
-        Me.PicAvatar.Location = New System.Drawing.Point(20, 20)
-        Me.PicAvatar.Name = "PicAvatar"
-        Me.PicAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.PicAvatar.ShadowDecoration.Parent = Me.PicAvatar
-        Me.PicAvatar.Size = New System.Drawing.Size(150, 150)
-        Me.PicAvatar.TabIndex = 0
-        Me.PicAvatar.TabStop = False
+        Me.Button1.Location = New System.Drawing.Point(352, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 74
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'F_Main
         '
@@ -550,13 +561,13 @@ Partial Class F_Main
         CType(Me.DgvDiagnosticos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlSintomas.ResumeLayout(False)
         CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_info_paciente.ResumeLayout(False)
         Me.Pnl_info_paciente.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabSolicitudesChats.ResumeLayout(False)
         CType(Me.DgvChats, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabTemplateChat.ResumeLayout(False)
-        CType(Me.PicAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -585,4 +596,5 @@ Partial Class F_Main
     Friend WithEvents BtnSend As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents TxtMsg As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents ChatTimer As Timer
+    Friend WithEvents Button1 As Button
 End Class

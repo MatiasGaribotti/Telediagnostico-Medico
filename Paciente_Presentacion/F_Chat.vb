@@ -12,7 +12,7 @@ Public Class F_Chat
 
     End Sub
 
-    Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
+    Private Sub BtnSend_Click(sender As Object, e As EventArgs)
         If TxtMsg.Text.Length > 0 And Not String.IsNullOrWhiteSpace(TxtMsg.Text) Then
 
             Dim PacienteBUS As New PacienteBUS
@@ -43,11 +43,16 @@ Public Class F_Chat
 
     Private Sub TimerChat_Tick(sender As Object, e As EventArgs) Handles TimerChat.Tick
         If Me.ConsultaMedica.Chat Is Nothing Then
-            Dim output As Chat = GetChatIfActive(ConsultaMedica.Id)
+            Try
+                Dim output As Chat = GetChatIfActive(ConsultaMedica.Id)
+                If Not output Is Nothing Then
+                    Me.ConsultaMedica.Chat = output
+                End If
 
-            If Not output Is Nothing Then
-                Me.ConsultaMedica.Chat = output
-            End If
+            Catch ex As Exception
+
+            End Try
+
 
         Else
 
@@ -64,28 +69,31 @@ Public Class F_Chat
 
         PnlChat.Controls.Clear()
 
-        Dim LastPoint As Point
+        Dim LastPoint As Point = New Point(20, 20)
 
         For Each mensaje As Mensaje In mensajes
 
-            Dim txtMsj = mensaje.CiPersona & ": " & mensaje.Texto & vbCrLf
-
-            If IsNothing(LastPoint) Then
-                LastPoint = New Point(5, 0)
-
-            End If
+            Dim txtMsj = mensaje.CiPersona & ": " & mensaje.Texto
 
             Dim label As New Label With {.Text = txtMsj, .Location = LastPoint, .Font = New Font("Roboto", 16, FontStyle.Regular, GraphicsUnit.Pixel)}
-
-            PnlChat.Controls.Add(label)
+            label.AutoSize = True
+            label.BackColor = Color.White
             label.BringToFront()
-            LastPoint.Y += label.Height - 5
+            PnlChat.Controls.Add(label)
+
+            LastPoint.Y += label.Height + 5
 
             PnlChat.Refresh()
         Next
     End Sub
 
-    Private Sub PrintMensaje(mensaje As Mensaje)
+    Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
+        Dim result = MsgBox("¿Está seguro que desea cerrar sesión?", MsgBoxStyle.YesNo, "Confirmación")
 
+        If result = MsgBoxResult.Yes Then
+            AuthenticationBUS.LogOut()
+            F_Login.Show()
+            Close()
+        End If
     End Sub
 End Class
