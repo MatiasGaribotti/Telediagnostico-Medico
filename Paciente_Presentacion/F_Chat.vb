@@ -12,11 +12,11 @@ Public Class F_Chat
 
     End Sub
 
-    Private Sub BtnSend_Click(sender As Object, e As EventArgs)
+    Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
         If TxtMsg.Text.Length > 0 And Not String.IsNullOrWhiteSpace(TxtMsg.Text) Then
 
             Dim PacienteBUS As New PacienteBUS
-            'PacienteBUS.SendMsg()
+            PacienteBUS.SendMsg(ConsultaMedica.Chat.Id, New Mensaje(Env.CurrentUser.Ci, TxtMsg.Text, Date.Now))
 
         End If
     End Sub
@@ -43,16 +43,10 @@ Public Class F_Chat
 
     Private Sub TimerChat_Tick(sender As Object, e As EventArgs) Handles TimerChat.Tick
         If Me.ConsultaMedica.Chat Is Nothing Then
-            Try
-                Dim output As Chat = GetChatIfActive(ConsultaMedica.Id)
-                If Not output Is Nothing Then
-                    Me.ConsultaMedica.Chat = output
-                End If
-
-            Catch ex As Exception
-
-            End Try
-
+            Dim output As Chat = GetChatIfActive(ConsultaMedica.Id)
+            If Not output Is Nothing Then
+                Me.ConsultaMedica.Chat = output
+            End If
 
         Else
 
@@ -91,7 +85,9 @@ Public Class F_Chat
         Dim result = MsgBox("¿Está seguro que desea cerrar sesión?", MsgBoxStyle.YesNo, "Confirmación")
 
         If result = MsgBoxResult.Yes Then
+            AutoconsultaBUS.instance.ResetInstance()
             AuthenticationBUS.LogOut()
+
             F_Login.Show()
             Close()
         End If

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class F_Main
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class F_Main
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -50,13 +50,10 @@ Partial Class F_Main
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabSolicitudesChats = New System.Windows.Forms.TabPage()
         Me.DgvChats = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.TabTemplateChat = New System.Windows.Forms.TabPage()
-        Me.BtnSend = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.TxtMsg = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.ChatTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TimerMensajes = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerSolicitudes = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Panel1.SuspendLayout()
         Me.PnlDiagnosticos.SuspendLayout()
         CType(Me.DgvDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,13 +64,11 @@ Partial Class F_Main
         Me.TabControl1.SuspendLayout()
         Me.TabSolicitudesChats.SuspendLayout()
         CType(Me.DgvChats, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabTemplateChat.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.Guna2Panel1.Controls.Add(Me.Button1)
         Me.Guna2Panel1.Controls.Add(Me.BtnCerrarSesion)
         Me.Guna2Panel1.Controls.Add(Me.BtnFinalizarChat)
         Me.Guna2Panel1.Controls.Add(Me.PnlDiagnosticos)
@@ -366,7 +361,6 @@ Partial Class F_Main
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabSolicitudesChats)
-        Me.TabControl1.Controls.Add(Me.TabTemplateChat)
         Me.TabControl1.Location = New System.Drawing.Point(483, 20)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -443,63 +437,6 @@ Partial Class F_Main
         Me.DgvChats.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvChats.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'TabTemplateChat
-        '
-        Me.TabTemplateChat.Controls.Add(Me.BtnSend)
-        Me.TabTemplateChat.Controls.Add(Me.TxtMsg)
-        Me.TabTemplateChat.Location = New System.Drawing.Point(4, 22)
-        Me.TabTemplateChat.Name = "TabTemplateChat"
-        Me.TabTemplateChat.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabTemplateChat.Size = New System.Drawing.Size(1429, 1034)
-        Me.TabTemplateChat.TabIndex = 1
-        Me.TabTemplateChat.UseVisualStyleBackColor = True
-        '
-        'BtnSend
-        '
-        Me.BtnSend.CheckedState.Parent = Me.BtnSend
-        Me.BtnSend.CustomImages.Parent = Me.BtnSend
-        Me.BtnSend.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnSend.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BtnSend.ForeColor = System.Drawing.Color.White
-        Me.BtnSend.HoverState.Parent = Me.BtnSend
-        Me.BtnSend.Image = Global.Medico_Presentacion.My.Resources.Resources.send_icon
-        Me.BtnSend.ImageOffset = New System.Drawing.Point(2, 0)
-        Me.BtnSend.ImageSize = New System.Drawing.Size(38, 34)
-        Me.BtnSend.Location = New System.Drawing.Point(1346, 956)
-        Me.BtnSend.Margin = New System.Windows.Forms.Padding(3, 25, 3, 25)
-        Me.BtnSend.Name = "BtnSend"
-        Me.BtnSend.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
-        Me.BtnSend.Size = New System.Drawing.Size(70, 70)
-        Me.BtnSend.TabIndex = 6
-        '
-        'TxtMsg
-        '
-        Me.TxtMsg.Animated = True
-        Me.TxtMsg.AutoRoundedCorners = True
-        Me.TxtMsg.BorderRadius = 34
-        Me.TxtMsg.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtMsg.DefaultText = ""
-        Me.TxtMsg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtMsg.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtMsg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtMsg.DisabledState.Parent = Me.TxtMsg
-        Me.TxtMsg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtMsg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtMsg.FocusedState.Parent = Me.TxtMsg
-        Me.TxtMsg.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMsg.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtMsg.HoverState.Parent = Me.TxtMsg
-        Me.TxtMsg.Location = New System.Drawing.Point(33, 956)
-        Me.TxtMsg.Margin = New System.Windows.Forms.Padding(40, 29, 40, 29)
-        Me.TxtMsg.Name = "TxtMsg"
-        Me.TxtMsg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtMsg.PlaceholderText = ""
-        Me.TxtMsg.SelectedText = ""
-        Me.TxtMsg.ShadowDecoration.Parent = Me.TxtMsg
-        Me.TxtMsg.Size = New System.Drawing.Size(1295, 70)
-        Me.TxtMsg.TabIndex = 5
-        '
         'Btn_Minimize
         '
         Me.Btn_Minimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -529,18 +466,13 @@ Partial Class F_Main
         Me.Btn_Exit.Size = New System.Drawing.Size(45, 29)
         Me.Btn_Exit.TabIndex = 7
         '
-        'ChatTimer
+        'TimerMensajes
         '
-        Me.ChatTimer.Interval = 1000
+        Me.TimerMensajes.Interval = 1000
         '
-        'Button1
+        'TimerSolicitudes
         '
-        Me.Button1.Location = New System.Drawing.Point(352, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 74
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TimerSolicitudes.Interval = 5000
         '
         'F_Main
         '
@@ -567,7 +499,6 @@ Partial Class F_Main
         Me.TabControl1.ResumeLayout(False)
         Me.TabSolicitudesChats.ResumeLayout(False)
         CType(Me.DgvChats, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabTemplateChat.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -589,12 +520,9 @@ Partial Class F_Main
     Friend WithEvents BtnHistorialClinico As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabSolicitudesChats As TabPage
-    Friend WithEvents TabTemplateChat As TabPage
     Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents DgvChats As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents BtnSend As Guna.UI2.WinForms.Guna2CircleButton
-    Friend WithEvents TxtMsg As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents ChatTimer As Timer
-    Friend WithEvents Button1 As Button
+    Friend WithEvents TimerMensajes As Timer
+    Friend WithEvents TimerSolicitudes As Timer
 End Class

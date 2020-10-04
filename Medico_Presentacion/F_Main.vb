@@ -4,28 +4,20 @@ Imports System.Threading
 
 Public Class F_Main
     Private Property ConsultasActivas As New List(Of ConsultaMedica)
-    Private Property TemplateChat As TabPage
 
     Public Sub New()
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
-
         InitializeComponent()
-
-        Me.TemplateChat = TabTemplateChat
-        TabControl1.TabPages.Remove(TabTemplateChat)
 
     End Sub
 
     Private Sub F_Main_Load(sender As Object, e As EventArgs) Handles Me.Load
-        LoadDgv()
-
+        LoadSolicitudesChats()
+        TimerSolicitudes.Start()
+        TimerMensajes.Start()
     End Sub
 
-    Private Function GetTemplateChat() As TabPage
-        Return TemplateChat
-    End Function
-
-    Private Sub LoadDgv()
+    Private Sub LoadSolicitudesChats()
         Dim MedicoBUS As New MedicoBUS
 
         Try
@@ -36,14 +28,24 @@ Public Class F_Main
 
         End Try
     End Sub
+    Private Sub TimerSolicitudes_Tick(sender As Object, e As EventArgs) Handles TimerSolicitudes.Tick
+        LoadSolicitudesChats()
+    End Sub
+    Private Sub TimerMensajes_Tick(sender As Object, e As EventArgs) Handles TimerMensajes.Tick
+        LoadSolicitudesChats()
+
+        Dim MedicoBUS As New MedicoBUS
+        MedicoBUS.UpdateChats(ConsultasActivas)
+        RefreshChats()
+    End Sub
 
     Private Sub DgvChats_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvChats.CellDoubleClick
         Dim result = MsgBox("¿Está seguro de que desea iniciar el chat con el paciente seleccionado?", MsgBoxStyle.YesNo, "Confirmación")
 
         If result = vbYes Then
             StartChat()
-            SetUpChat(consultasActivas.Last)
-            LoadDgv()
+            SetUpChat(ConsultasActivas.Last)
+            LoadSolicitudesChats()
         End If
     End Sub
 
@@ -54,7 +56,7 @@ Public Class F_Main
         Try
             consulta.Chat = MedicoBUS.GetChat(consulta.Id)
             MedicoBUS.StartChat(consulta.Id, Env.CurrentUser.Ci)
-            consultasActivas.Add(consulta)
+            ConsultasActivas.Add(consulta)
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -70,31 +72,101 @@ Public Class F_Main
     End Function
 
     Public Sub SetUpChat(consulta As ConsultaMedica)
+        Dim tab As New TabPage With {
+            .Name = "TabChat-" & consulta.Id, 'Modified consulta.Chat.Id
+            .BackColor = Color.White,
+            .Text = consulta.Paciente.Nombre
+        }
 
-        'Dim tab As TabPage = GetTemplateChat()
-        Dim tab As New TabPage
+        Dim PnlChat As New Guna.UI2.WinForms.Guna2Panel With {
+            .Name = "PnlChat",
+            .BackColor = Color.White,
+            .Location = New Point(0, 0),
+            .Width = TabControl1.Width,
+            .Height = TabControl1.Height - 110,
+            .AutoScroll = True
+        }
+        PnlChat.BringToFront()
 
-        tab.BackColor = Color.White
-        Dim chatControls As New ChatUtilities
+        Dim chatControls As New ChatUtilities With {
+            .Location = New Point(20, TabControl1.Height - 110)
+        }
+
+        tab.Controls.Add(PnlChat)
         tab.Controls.Add(chatControls)
-        chatControls.Location = New Point(20, TabSolicitudesChats.Height - 90)
-        tab.Name = "TabChat-" & consulta.Chat.Id
-        tab.Text = consulta.Paciente.Nombre
+        TabControl1.TabPages.Add(tab)
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(TabControl1.TabPages.Count - 1)
 
+        TabControl1.Refresh()
         tab.BringToFront()
         tab.Refresh()
-        TabControl1.TabPages.Add(tab)
-
-        ' Selecciono la última tab
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(TabControl1.TabPages.Count - 1)
-        TabControl1.Refresh()
     End Sub
 
-    Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
-        MsgBox(TabControl1.SelectedTab.Name)
+    Private Function GetConsultaActivaById(idConsulta As Long) As ConsultaMedica
+        For Each consulta In ConsultasActivas
+            If consulta.Id = idConsulta Then
+                Return consulta
+            End If
+        Next
+        Return Nothing
+    End Function
+
+    Private Sub RefreshChats()
+
+        ' Recorro todas las tabs para actualizar todos los chats activos
+        For Each tabPage As TabPage In TabControl1.TabPages
+
+            ' La tab con el nombre "TabSolicitudesChats" no corresponde a un chat
+            If Not tabPage.Name = "TabSolicitudesChats" Then
+
+                ' Limpio el panel en donde van los mensajes del chat.
+                For Each control As Control In tabPage.Controls
+                    If TypeOf control Is Panel Then
+                        Dim panel As Panel = DirectCast(control, Panel)
+                        panel.Controls.Clear()
+                    End If
+                Next
+
+
+                ' Obtengo el id de la consulta
+                Dim currentIdConsulta As Long
+
+                If Long.TryParse(tabPage.Name.Split("-").ElementAt(1), currentIdConsulta) Then
+
+                    Dim consultaActual As ConsultaMedica = GetConsultaActivaById(currentIdConsulta)
+
+                    ' Evaluo que la consulta no sea nula.
+                    If Not consultaActual Is Nothing Then
+
+                        Dim LastPoint As Point = New Point(20, 20)
+
+                        ' Imprimo todos los mensajes.
+                        For Each mensaje As Mensaje In consultaActual.Chat.Mensajes
+                            PrintMensaje(mensaje, tabPage, LastPoint)
+
+                        Next
+
+                        tabPage.Refresh()
+                    End If
+
+                End If
+            End If
+        Next
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        LoadDgv()
+    Private Sub PrintMensaje(ByVal mensaje As Mensaje, ByRef containter As TabPage, ByRef lastPoint As Point)
+        Dim txtMsj = mensaje.CiPersona & ": " & mensaje.Texto
+
+        Dim label As New Label With {
+            .Text = txtMsj,
+            .Location = lastPoint,
+            .Font = New Font("Roboto", 16, FontStyle.Regular, GraphicsUnit.Pixel),
+            .AutoSize = True
+        }
+
+        containter.Controls.Add(label)
+        label.BringToFront()
+
+        lastPoint.Y += label.Height + 5
     End Sub
 End Class

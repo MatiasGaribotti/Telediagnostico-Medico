@@ -97,7 +97,7 @@ Public Class MedicoBUS
         End Try
     End Function
 
-    Public Sub StartChat(idConsulta As Int64, ciMedico As Integer)
+    Public Sub StartChat(idConsulta As Long, ciMedico As Integer)
         Dim ConsultaDAO As New ConsultaDAO
 
         Try
@@ -108,7 +108,7 @@ Public Class MedicoBUS
         End Try
     End Sub
 
-    Public Function GetChat(idConsulta As Int64) As Chat
+    Public Function GetChat(idConsulta As Long) As Chat
         Dim chat As New Chat()
         Dim ConsultaDAO As New ConsultaDAO
         Dim dt As DataTable
@@ -127,30 +127,35 @@ Public Class MedicoBUS
 
     Public Function GetMensajesChat(idChat As Long, Optional startIndex As Long = 0) As List(Of Mensaje)
         Dim ConsultaDAO As New ConsultaDAO
-        Dim mensajes As New List(Of Mensaje)
         Dim dt As DataTable
+        Dim mensajes As New List(Of Mensaje)
+
 
         Try
             dt = ConsultaDAO.GetMensajesChat(idChat, startIndex)
-            If dt.Rows.Count > 0 Then
+        Catch ex As Exception
+            Console.WriteLine("Error: {0} " & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
+            Throw New Exception("Error al obtener los mensajes del chat.")
+        End Try
+
+        If dt.Rows.Count > 0 Then
+            Try
                 For i As Integer = 0 To dt.Rows.Count - 1
                     Dim cells = dt.Rows.Item(i)
 
-                    Dim id As Long = cells.Field(Of Long)("id")
-                    Dim ciPersona As Integer = cells.Field(Of Integer)("ciPersona")
+                    Dim id As Long = cells.Field(Of Decimal)("id")
+                    Dim ciPersona As Integer = cells.Field(Of Int64)("ciPersona")
                     Dim texto As String = cells.Field(Of String)("mensaje")
-                    Dim timestamp As Date = cells.Field(Of Date)("fechaHora")
+                    Dim timestamp As Date = cells.Field(Of System.DateTime)("fechaHora")
 
                     mensajes.Add(New Mensaje(id, ciPersona, texto, timestamp))
                 Next
 
-            End If
+            Catch ex As Exception
 
-        Catch ex As Exception
-            Throw New Exception("No se pudieron obtener los mensajes del chat.")
+            End Try
 
-        End Try
-
+        End If
         Return mensajes
     End Function
 
@@ -163,4 +168,31 @@ Public Class MedicoBUS
             Throw New Exception("No se pudo enviar el mensaje.")
         End Try
     End Sub
+
+    Public Sub UpdateChats(ByRef consultasActivas As List(Of ConsultaMedica))
+
+        For Each consulta In consultasActivas
+            Dim greatestIndex As Long = GetGreatestMsgIndex(consulta.Chat.Mensajes)
+            Try
+                Dim mensajesObtenidos = GetMensajesChat(consulta.Chat.Id, greatestIndex)
+                For Each mensaje In mensajesObtenidos
+                    consulta.Chat.Mensajes.Add(mensaje)
+                Next
+
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            End Try
+        Next
+    End Sub
+
+    Private Function GetGreatestMsgIndex(mensajes As List(Of Mensaje)) As Long
+        Dim greatest As Long = 1
+        For Each mensaje In mensajes
+            If mensaje.Id > greatest Then
+                greatest = mensaje.Id
+            End If
+        Next
+
+        Return greatest
+    End Function
 End Class

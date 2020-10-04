@@ -226,7 +226,7 @@ Public Class F_Sintomas
     End Sub
 
     Public Sub Reset()
-        AutoconsultaBUS.instance.consulta = New Autoconsulta
+        AutoconsultaBUS.instance.ResetInstance()
         DgvSelectedSintomas.Rows.Clear()
     End Sub
 End Class

@@ -10,6 +10,9 @@ Public Class AutoconsultaBUS
         consulta = New Autoconsulta()
     End Sub
 
+    Public Sub ResetInstance()
+        consulta = New Autoconsulta
+    End Sub
 
     Public Sub AddSintoma(pSintoma As Sintoma)
         consulta.Sintomas.Add(pSintoma)

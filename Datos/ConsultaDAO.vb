@@ -17,7 +17,8 @@ Public Class ConsultaDAO
         Try
             Conn.BeginTrans()
             Conn.Execute(query)
-            pConsulta.Id = Int64.Parse(Conn.Execute(getIdConsulta).Fields.Item(0).Value)
+            Dim idConsulta = Int64.Parse(Conn.Execute(getIdConsulta).Fields.Item(0).Value)
+            pConsulta.Id = idConsulta
 
             For Each sintoma In pConsulta.Sintomas
                 InsertRegistra(pConsulta.Id, sintoma.Id)
