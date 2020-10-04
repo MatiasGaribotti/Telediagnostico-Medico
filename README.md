@@ -1,13 +1,17 @@
 # Sistema de Telediagnóstico Médico
-Para poder utilizar este software es necesario tener la base de datos creada y con un mínimo de juego de datos cargados.
-[Descarga el script de creación de la base de datos](https://drive.google.com/file/d/1Wa-81Zs0v3jUI-lFl-98kFYDzePanjoe/view?usp=sharing).
+Para poder utilizar este software es necesario tener la base de datos creada y con un mínimo de juego de datos cargados.  
+  
+[Descarga el script de creación de la base de datos](https://drive.google.com/file/d/1Wa-81Zs0v3jUI-lFl-98kFYDzePanjoe/view?usp=sharing).  
 [Descarga el script con juego de datos](https://drive.google.com/file/d/1E0IeifHZ-bJKOj9EIEuKCc4xhb1Sn0cf/view?usp=sharing).
-
+  
+## Remarks
+El software está configurado para acceder a un servidor remoto, mediante una data source name (dsn) de ODBC, y no de manera local. Se deberá cambiar esta configuración para poder hacer uso del sistema.
 ---
 
 ## Usuarios del Sistema
 
-| CI | Password | Tipo de Usuario |
+| CI       | Password | Tipo de Usuario |
+|----------|----------|-----------------|
 | 11111111 | 123 | Paciente |
 | 12121212 | 123 | Médico |
 | 12121212 | 123 | Administrador |
