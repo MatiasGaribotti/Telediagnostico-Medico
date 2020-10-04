@@ -83,6 +83,23 @@
         Me.IsRecepcionista = isRecepcionista
     End Sub
 
+    Protected Sub New(ci As Integer, nombre As String)
+        Me.Ci = ci
+        Me.Nombre = nombre
+        Me.ApellidoP = "Default"
+        Me.ApellidoM = "Default"
+        Me.Direccion = New Direccion()
+        Me.Telefono = -1
+        Me.Fecha_Nacimiento = New Date(1, 1, 1)
+        Me.Password = "Default"
+        Me.IsPaciente = False
+        Me.IsEmpleado = False
+        Me.IsMedico = False
+        Me.IsAdministrador = False
+        Me.IsRRHH = False
+        Me.IsRecepcionista = False
+    End Sub
+
     Protected Sub New(ci As Integer,
                    nombre As String,
                    apellidoP As String,

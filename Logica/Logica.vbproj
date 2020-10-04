@@ -67,6 +67,7 @@
     <Compile Include="AdministradorBUS.vb" />
     <Compile Include="AuthenticationBUS.vb" />
     <Compile Include="AutoconsultaBUS.vb" />
+    <Compile Include="ChatBUS.vb" />
     <Compile Include="ConsultaBUS.vb" />
     <Compile Include="EmpleadoBUS.vb" />
     <Compile Include="EnfermedadBUS.vb" />

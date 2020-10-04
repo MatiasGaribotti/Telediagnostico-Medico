@@ -14,8 +14,8 @@
         Horarios = New List(Of Horario)
     End Sub
 
-    Public Sub New(ci As Integer, password As String)
-        MyBase.New(ci, password)
+    Public Sub New(ci As Integer, nombre As String)
+        MyBase.New(ci, nombre)
         IsEmpleado = True
         Horarios = New List(Of Horario)
     End Sub

@@ -24,9 +24,8 @@
         MyBase.New(ci)
     End Sub
 
-    Public Sub New(ci As Integer, pass As String)
-        MyBase.Ci = ci
-        MyBase.Password = pass
+    Public Sub New(ci As Integer, nombre As String)
+        MyBase.New(ci, nombre)
     End Sub
 
     'Constructor comúm completo

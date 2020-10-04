@@ -13,7 +13,11 @@ Public Class F_Main
 
     Private Sub F_Main_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadSolicitudesChats()
+
+        TimerSolicitudes.Interval = 5000
         TimerSolicitudes.Start()
+
+        TimerMensajes.Interval = 1000
         TimerMensajes.Start()
     End Sub
 
@@ -32,10 +36,15 @@ Public Class F_Main
         LoadSolicitudesChats()
     End Sub
     Private Sub TimerMensajes_Tick(sender As Object, e As EventArgs) Handles TimerMensajes.Tick
-        LoadSolicitudesChats()
 
         Dim MedicoBUS As New MedicoBUS
-        MedicoBUS.UpdateChats(ConsultasActivas)
+
+        Try
+            MedicoBUS.UpdateChats(ConsultasActivas)
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
         RefreshChats()
     End Sub
 
@@ -155,7 +164,7 @@ Public Class F_Main
     End Sub
 
     Private Sub PrintMensaje(ByVal mensaje As Mensaje, ByRef containter As TabPage, ByRef lastPoint As Point)
-        Dim txtMsj = mensaje.CiPersona & ": " & mensaje.Texto
+        Dim txtMsj = mensaje.Persona.Nombre & ": " & mensaje.Texto
 
         Dim label As New Label With {
             .Text = txtMsj,

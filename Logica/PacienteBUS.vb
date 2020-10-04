@@ -64,74 +64,81 @@ Public Class PacienteBUS
             Throw New FormatException("El formato del campo antecedentes laborales no es correcto.")
         End If
     End Sub
-
     Public Sub SendMsg(idChat As Long, msg As Mensaje)
-        Dim ConsultaDAO As New ConsultaDAO
-
         Try
-            ConsultaDAO.SendMsg(idChat, msg)
+            ChatBUS.SendMsg(idChat, msg)
         Catch ex As Exception
-            Console.WriteLine("Error: {0} " & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
-            Throw New Exception("No se pudo enviar el mensaje.")
+            Throw ex
         End Try
     End Sub
 
-    Public Function GetChatIfActive(idConsulta As Long) As Chat
-        Dim ConsultaDAO As New ConsultaDAO
-        Dim dt As DataTable
+    Public Function GetChatIfBeingDealt(idConsulta As Long) As Chat
 
+        Dim ConsultaDAO As New ConsultaDAO
+        Dim active As Boolean
         Try
-            dt = ConsultaDAO.GetChat(idConsulta)
+            active = ConsultaDAO.IsBeingDealt(idConsulta)
         Catch ex As Exception
-            Console.WriteLine("Error: {0} " & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
-            Throw New Exception("Error al obtener la consulta.")
+            Throw New Exception("No se pudo determinar si la consulta fué atendida o no.")
         End Try
 
-        If dt.Rows.Count = 0 Then
-            Return Nothing
+        If active Then
+            Return ChatBUS.GetChat(idConsulta)
 
         Else
-            Dim row = dt.Rows.Item(0)
-
-            Dim idChat = row.Field(Of Decimal)("id")
-            Dim ciMedico As Integer = row.Field(Of Int64)("ciMedico")
-
-            Return New Chat(idChat)
-
+            Return Nothing
         End If
+
     End Function
 
     Public Function GetMensajes(idChat As Long, Optional startIndex As Long = 0) As List(Of Mensaje)
+        Try
+            Return ChatBUS.GetMensajesChat(idChat, startIndex)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function GetGreatestMsgIndex(mensajes As List(Of Mensaje)) As Long
+        Return ChatBUS.GetGreatestMsgIndex(mensajes)
+    End Function
+
+    Public Function GetMedico(consulta As ConsultaMedica) As Medico
         Dim ConsultaDAO As New ConsultaDAO
         Dim dt As DataTable
-        Dim mensajes As New List(Of Mensaje)
-
-
         Try
-            dt = ConsultaDAO.GetMensajesChat(idChat, startIndex)
+            dt = ConsultaDAO.GetMedico(consulta.Id)
         Catch ex As Exception
-            Console.WriteLine("Error: {0} " & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
-            Throw New Exception("Error al obtener los mensajes del chat.")
+            Throw New Exception("Error al obtener el médico.")
         End Try
 
-        If dt.Rows.Count > 0 Then
-            Try
-                For i As Integer = 0 To dt.Rows.Count - 1
-                    Dim cells = dt.Rows.Item(i)
+        If dt.Rows.Count = 1 Then
+            Dim row = dt.Rows.Item(0)
+            Dim ciMedico As Integer = row.Field(Of Int64)("ci")
+            Dim nombre As String = row.Field(Of String)("nombre")
+            Dim apellidoP As String = row.Field(Of String)("apellidoP")
+            Dim apellidoM As String = row.Field(Of String)("apellidoM")
+            Dim sexo As Persona.Sexos = [Enum].Parse(GetType(Persona.Sexos), row.Field(Of String)("sexo"))
+            Dim fechaNacimiento As Date = row.Field(Of Date)("fechaNacimiento")
+            Dim telefono As Integer = row.Field(Of Int32)("telefono")
+            Dim idEspecialidad As Integer = row.Field(Of Int32)("idEspecialidad")
+            Dim especialidad As String = row.Field(Of String)("especialidad")
 
-                    Dim id As Long = cells.Field(Of Decimal)("id")
-                    Dim ciPersona As Integer = cells.Field(Of Int64)("ciPersona")
-                    Dim texto As String = cells.Field(Of String)("mensaje")
-                    Dim timestamp As Date = cells.Field(Of System.DateTime)("fechaHora")
+            Return New Medico(
+                ciMedico,
+                nombre,
+                apellidoP,
+                apellidoM,
+                sexo,
+                telefono,
+                fechaNacimiento,
+                New List(Of Especialidad)({New Especialidad(idEspecialidad, especialidad)})
+                )
 
-                    mensajes.Add(New Mensaje(id, ciPersona, texto, timestamp))
-                Next
-
-            Catch ex As Exception
-
-            End Try
-
+        Else
+            Return Nothing
         End If
-        Return mensajes
     End Function
+
 End Class

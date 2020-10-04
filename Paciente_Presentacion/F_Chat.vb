@@ -16,7 +16,7 @@ Public Class F_Chat
         If TxtMsg.Text.Length > 0 And Not String.IsNullOrWhiteSpace(TxtMsg.Text) Then
 
             Dim PacienteBUS As New PacienteBUS
-            PacienteBUS.SendMsg(ConsultaMedica.Chat.Id, New Mensaje(Env.CurrentUser.Ci, TxtMsg.Text, Date.Now))
+            PacienteBUS.SendMsg(ConsultaMedica.Chat.Id, New Mensaje(Env.CurrentUser, TxtMsg.Text, Date.Now))
 
         End If
     End Sub
@@ -42,43 +42,90 @@ Public Class F_Chat
     End Sub
 
     Private Sub TimerChat_Tick(sender As Object, e As EventArgs) Handles TimerChat.Tick
+
         If Me.ConsultaMedica.Chat Is Nothing Then
-            Dim output As Chat = GetChatIfActive(ConsultaMedica.Id)
+            Dim output As Chat = GetChatIfBeingDealt(ConsultaMedica.Id)
+
             If Not output Is Nothing Then
                 Me.ConsultaMedica.Chat = output
+                ConsultaMedica.Medico = PacienteBUS.GetMedico(ConsultaMedica)
+                If Not ConsultaMedica.Medico Is Nothing Then
+                    LoadInfoConsulta()
+
+                End If
+
             End If
 
         Else
-
+            SetWaitingRoom(False)
             RefreshChat()
         End If
     End Sub
 
-    Private Function GetChatIfActive(idConsulta As Long) As Chat
-        Return PacienteBUS.GetChatIfActive(idConsulta)
+    Private Function GetChatIfBeingDealt(idConsulta As Long) As Chat
+        Return PacienteBUS.GetChatIfBeingDealt(idConsulta)
     End Function
 
-    Private Sub RefreshChat(Optional startIndex As Long = 0)
-        Dim mensajes As List(Of Mensaje) = PacienteBUS.GetMensajes(Me.ConsultaMedica.Chat.Id, startIndex)
+    Private Sub LoadInfoConsulta()
+        ' Información del Médico
+        LblNameMedico.Text = ConsultaMedica.Medico.Nombre
+        LblEspecialidadMedico.Text = ConsultaMedica.Medico.Especialidades.First.Nombre
 
-        PnlChat.Controls.Clear()
+        ' Diagnósticos
+        For Each diagnostico As Enfermedad In ConsultaMedica.Diagnosticos
+            DgvDiagnosticos.Rows.Add(
+                diagnostico.Id.ToString,
+                diagnostico.Nombre,
+                diagnostico.Descripcion,
+                diagnostico.Urgencia.ToString
+            )
 
-        Dim LastPoint As Point = New Point(20, 20)
-
-        For Each mensaje As Mensaje In mensajes
-
-            Dim txtMsj = mensaje.CiPersona & ": " & mensaje.Texto
-
-            Dim label As New Label With {.Text = txtMsj, .Location = LastPoint, .Font = New Font("Roboto", 16, FontStyle.Regular, GraphicsUnit.Pixel)}
-            label.AutoSize = True
-            label.BackColor = Color.White
-            label.BringToFront()
-            PnlChat.Controls.Add(label)
-
-            LastPoint.Y += label.Height + 5
-
-            PnlChat.Refresh()
         Next
+
+        ' Síntomas
+        For Each sintoma In ConsultaMedica.Sintomas
+            DgvSintomas.Rows.Add(
+                sintoma.Id.ToString,
+                sintoma.Nombre,
+                sintoma.Tipo.ToString()
+            )
+        Next
+    End Sub
+
+
+    Private Sub RefreshChat()
+        Dim startIndex As Long = PacienteBUS.GetGreatestMsgIndex(ConsultaMedica.Chat.Mensajes)
+        Dim newMensajes As List(Of Mensaje) = PacienteBUS.GetMensajes(Me.ConsultaMedica.Chat.Id, startIndex)
+
+        If newMensajes.Count > 0 Then
+            For Each newMensaje As Mensaje In newMensajes
+                ConsultaMedica.Chat.Mensajes.Add(newMensaje)
+            Next
+
+            PnlChat.Controls.Clear()
+
+            Dim LastPoint As Point = New Point(20, 20)
+
+            For Each mensaje As Mensaje In ConsultaMedica.Chat.Mensajes
+                PrintMensaje(mensaje, LastPoint)
+
+            Next
+
+        End If
+    End Sub
+
+    Private Sub PrintMensaje(mensaje As Mensaje, ByRef lastpoint As Point)
+        Dim txtMsj = mensaje.Persona.Nombre & ": " & mensaje.Texto
+
+        Dim label As New Label With {.Text = txtMsj, .Location = lastpoint, .Font = New Font("Roboto", 16, FontStyle.Regular, GraphicsUnit.Pixel)}
+        label.AutoSize = True
+        label.BackColor = Color.White
+        label.BringToFront()
+        PnlChat.Controls.Add(label)
+
+        lastpoint.Y += label.Height + 5
+
+        PnlChat.Refresh()
     End Sub
 
     Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click

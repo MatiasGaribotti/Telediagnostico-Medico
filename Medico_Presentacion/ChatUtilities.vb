@@ -10,7 +10,7 @@ Public Class ChatUtilities
             Dim idConsulta As Long = Long.Parse(Me.Parent.Name.Split("-").ElementAt(1))
             Dim idChat As Long = MedicoBUS.GetChat(idConsulta).Id
             Try
-                MedicoBUS.SendMsg(idChat, New Mensaje(Env.CurrentUser.Ci, TxtMsg.Text, Date.Now))
+                MedicoBUS.SendMsg(idChat, New Mensaje(Env.CurrentUser, TxtMsg.Text, Date.Now))
 
             Catch ex As Exception
                 MsgBox(ex.Message)

@@ -94,7 +94,7 @@ Public Class ConsultaDAO
         End If
     End Sub
 
-    Public Function GetChats() As DataTable
+    Public Function GetSolicitudesChats() As DataTable
         Dim dt As New DataTable
         Dim rs As Recordset
         Dim da As New OleDb.OleDbDataAdapter
@@ -172,7 +172,7 @@ Public Class ConsultaDAO
         Dim dt As New DataTable
         Dim da As New OleDb.OleDbDataAdapter
 
-        Dim query As String = "SELECT id, ciPersona, mensaje, fechaHora FROM mensajes WHERE idChat=" & idChat & " AND id > " & startIndex & ";"
+        Dim query As String = "SELECT M.id, M.ciPersona, P.nombre, M.mensaje, M.fechaHora FROM mensajes AS M JOIN personas AS P ON(M.ciPersona = P.ci) WHERE idChat=" & idChat & " AND id > " & startIndex & ";"
 
         Try
             Conn = Connect()
@@ -195,7 +195,7 @@ Public Class ConsultaDAO
     End Function
 
     Public Sub SendMsg(idChat As Long, msg As Mensaje)
-        Dim query As String = "INSERT INTO mensajes(idChat,ciPersona,fechaHora,mensaje) VALUES(" & idChat & ", " & msg.CiPersona & ", '" & msg.Timestamp.ToString("yyyy-MM-dd H:mm:ss") & "','" & msg.Texto & "');"
+        Dim query As String = "INSERT INTO mensajes(idChat,ciPersona,fechaHora,mensaje) VALUES(" & idChat & ", " & msg.Persona.Ci & ", '" & msg.Timestamp.ToString("yyyy-MM-dd H:mm:ss") & "','" & msg.Texto & "');"
 
         Try
             Conn = Connect()
@@ -221,6 +221,70 @@ Public Class ConsultaDAO
                                    "ON(C.id = CH.idConsulta) " &
                                "JOIN atienden AS A " &
                                    "ON(C.id = A.idConsulta) WHERE C.id=" & idConsulta & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+
+        Catch ex As Exception
+            Throw ex
+
+        Finally
+            Conn.Close()
+        End Try
+
+        Return dt
+    End Function
+
+    Public Function IsBeingDealt(idConsulta As Long) As Boolean
+        Dim rs As Recordset
+        Dim query As String = "SELECT * FROM Solicitudes_Chats WHERE ID=" & idConsulta & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            If rs.BOF Then
+                ' La solicitud de chat sigue pendiente
+                Return True
+            Else
+                ' La consulta fue atendida
+                Return False
+            End If
+        Catch ex As Exception
+            Throw ex
+
+        Finally
+            Conn.Close()
+        End Try
+
+
+    End Function
+
+    Public Function GetMedico(idConsulta As Long) As DataTable
+        Dim rs As Recordset
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim dt As New DataTable
+        Dim query As String = "SELECT P.ci, P.nombre, P.apellidoP, P.apellidoM, P.sexo, P.fechaNacimiento, P.telefono, E.id AS idEspecialidad, E.nombre AS especialidad" &
+            " FROM atienden AS A" &
+            " JOIN personas AS P" &
+            " ON (A.ciMedico = P.ci)" &
+            " JOIN medicos_especialidades AS ME" &
+            " ON (P.ci = ME.ciMedico)" &
+            " JOIN especialidades AS E" &
+            " ON (ME.idEspecialidad = E.id) " &
+            " WHERE A.idConsulta=" & idConsulta & "" &
+            " LIMIT 1;"
 
         Try
             Conn = Connect()

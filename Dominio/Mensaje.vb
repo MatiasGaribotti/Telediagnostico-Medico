@@ -1,18 +1,18 @@
 ﻿Public Class Mensaje
     Public Property Id As Long
-    Public Property CiPersona As Integer
+    Public Property Persona As Persona
     Public Property Texto As String
     Public Property Timestamp As Date
 
-    Public Sub New(id As Long, ciPersona As Integer, texto As String, timestamp As Date)
+    Public Sub New(id As Long, persona As Persona, texto As String, timestamp As Date)
         Me.Id = id
-        Me.CiPersona = ciPersona
+        Me.Persona = persona
         Me.Texto = texto
         Me.Timestamp = timestamp
     End Sub
 
-    Public Sub New(ciPersona As Integer, texto As String, timestamp As Date)
-        Me.CiPersona = ciPersona
+    Public Sub New(persona As Persona, texto As String, timestamp As Date)
+        Me.Persona = persona
         Me.Texto = texto
         Me.Timestamp = timestamp
     End Sub
