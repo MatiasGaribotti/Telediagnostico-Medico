@@ -65,6 +65,27 @@ Public Class F_Main
         Try
             consulta.Chat = MedicoBUS.GetChat(consulta.Id)
             MedicoBUS.StartChat(consulta.Id, Env.CurrentUser.Ci)
+
+
+            Dim paciente As Paciente = MedicoBUS.GetPacienteByCi(consulta.Paciente.Ci)
+            Dim sintomas As List(Of Sintoma) = MedicoBUS.GetSintomasRegistrados(consulta.Id)
+            Dim diagnosticos As List(Of Enfermedad) = MedicoBUS.GetDiagnosticos(consulta.Id)
+
+            If Not paciente Is Nothing Then
+                consulta.Paciente = paciente
+                LoadInfoPaciente(paciente)
+            End If
+
+            If Not sintomas Is Nothing Then
+                consulta.Sintomas = sintomas
+                LoadDgvSintomas(sintomas)
+            End If
+
+            If Not diagnosticos Is Nothing Then
+                consulta.Diagnosticos = diagnosticos
+                LoadDgvDiagnosticos(diagnosticos)
+            End If
+
             ConsultasActivas.Add(consulta)
 
         Catch ex As Exception
@@ -177,5 +198,37 @@ Public Class F_Main
         label.BringToFront()
 
         lastPoint.Y += label.Height + 5
+    End Sub
+
+    Private Sub LoadInfoPaciente(paciente As Paciente)
+        ' Información del paciente
+        Dim edad As Integer = paciente.Fecha_Nacimiento.CompareTo(Date.Now)
+
+        LblNamePaciente.Text = paciente.Nombre
+        LblEdadPaciente.Text = edad
+    End Sub
+
+    Private Sub LoadDgvSintomas(sintomas As List(Of Sintoma))
+        ' Síntomas
+        For Each sintoma In sintomas
+            DgvSintomas.Rows.Add(
+                sintoma.Id.ToString,
+                sintoma.Nombre,
+                sintoma.Tipo.ToString()
+            )
+        Next
+    End Sub
+
+    Private Sub LoadDgvDiagnosticos(diagnosticos As List(Of Enfermedad))
+        ' Diagnósticos
+        For Each diagnostico As Enfermedad In diagnosticos
+            DgvDiagnosticos.Rows.Add(
+                diagnostico.Id.ToString,
+                diagnostico.Nombre,
+                diagnostico.Descripcion,
+                diagnostico.Urgencia.ToString
+            )
+
+        Next
     End Sub
 End Class

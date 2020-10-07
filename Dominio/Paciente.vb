@@ -49,6 +49,25 @@
         Me.AntecedentesLab = antecedentesLab
     End Sub
 
+    Public Sub New(ci As Integer,
+                   nombre As String,
+                   apellidoP As String,
+                   apellidoM As String,
+                   sexo As Sexos,
+                   direccion As Direccion,
+                   telefono As Integer,
+                   fecha_nacimiento As Date,
+                   email As String,
+                   NucleoFlia As String,
+                   AntecedentesFlia As String,
+                   antecedentesLab As String)
+        MyBase.New(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fecha_nacimiento)
+        Me.Email = email
+        Me.NucleoFlia = NucleoFlia
+        Me.AntecedentesFlia = AntecedentesFlia
+        Me.AntecedentesLab = antecedentesLab
+    End Sub
+
     ' Constructor común Parcial
     Public Sub New(ci As Integer,
                    nombre As String,

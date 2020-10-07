@@ -305,4 +305,61 @@ Public Class ConsultaDAO
 
         Return dt
     End Function
+
+    Public Function GetSintomasRegistrados(idConsulta As Long) As DataTable
+        Dim rs As Recordset
+        Dim dt As New DataTable
+        Dim da As New OleDb.OleDbDataAdapter
+
+        Dim query As String = "SELECT S.id, S.nombre, S.descripcion, S.tipo FROM sintomas AS S " &
+                              "JOIN registra AS R " &
+                              "ON (S.id = R.idSintoma) WHERE idConsulta=" & idConsulta & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+
+        Catch ex As Exception
+            Throw ex
+
+        Finally
+            Conn.Close()
+        End Try
+
+        Return dt
+    End Function
+
+    Public Function GetDiagnosticos(idConsulta As Long) As DataTable
+        Dim rs As Recordset
+        Dim dt As New DataTable
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim query As String = "SELECT E.id, E.nombre, E.descripcion, E.urgencia, E.cronica FROM enfermedades AS E " &
+                              "JOIN diagnostica AS D " &
+                              "ON (E.id = D.idEnfermedad) WHERE idConsulta=" & idConsulta & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+
+        Catch ex As Exception
+            Throw ex
+
+        Finally
+            Conn.Close()
+        End Try
+        Return dt
+    End Function
 End Class

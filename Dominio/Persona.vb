@@ -108,7 +108,7 @@
                    direccion As Direccion,
                    telefono As Integer,
                    fecha_Nacimiento As Date,
-                   password As String)
+                   Optional password As String = "")
         Me.Ci = ci
         Me.Nombre = nombre
         Me.ApellidoP = apellidoP
