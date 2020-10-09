@@ -34,11 +34,13 @@ Partial Class F_ABM
         Me.Btn_Enfermedades = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_Sitnomas = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_Pacientes = New Guna.UI2.WinForms.Guna2Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.Button1)
         Me.Guna2Panel1.Controls.Add(Me.LblEmpleados)
         Me.Guna2Panel1.Controls.Add(Me.Btn_Empleados)
         Me.Guna2Panel1.Controls.Add(Me.BtnCerrarSesion)
@@ -61,10 +63,10 @@ Partial Class F_ABM
         'LblEmpleados
         '
         Me.LblEmpleados.BackColor = System.Drawing.Color.Transparent
-        Me.LblEmpleados.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmpleados.Location = New System.Drawing.Point(969, 478)
         Me.LblEmpleados.Name = "LblEmpleados"
-        Me.LblEmpleados.Size = New System.Drawing.Size(162, 40)
+        Me.LblEmpleados.Size = New System.Drawing.Size(163, 39)
         Me.LblEmpleados.TabIndex = 93
         Me.LblEmpleados.Text = "Empleados"
         '
@@ -94,7 +96,7 @@ Partial Class F_ABM
         Me.BtnCerrarSesion.CheckedState.Parent = Me.BtnCerrarSesion
         Me.BtnCerrarSesion.CustomImages.Parent = Me.BtnCerrarSesion
         Me.BtnCerrarSesion.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.BtnCerrarSesion.Font = New System.Drawing.Font("Roboto", 18.0!)
+        Me.BtnCerrarSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.BtnCerrarSesion.ForeColor = System.Drawing.Color.White
         Me.BtnCerrarSesion.HoverState.Parent = Me.BtnCerrarSesion
         Me.BtnCerrarSesion.Location = New System.Drawing.Point(809, 855)
@@ -138,30 +140,30 @@ Partial Class F_ABM
         'Guna2HtmlLabel5
         '
         Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(942, 795)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(210, 40)
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(210, 39)
         Me.Guna2HtmlLabel5.TabIndex = 2
         Me.Guna2HtmlLabel5.Text = "Enfermedades"
         '
         'Guna2HtmlLabel4
         '
         Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(706, 795)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(138, 40)
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(137, 39)
         Me.Guna2HtmlLabel4.TabIndex = 2
         Me.Guna2HtmlLabel4.Text = "Sintomas"
         '
         'LblPacientes
         '
         Me.LblPacientes.BackColor = System.Drawing.Color.Transparent
-        Me.LblPacientes.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPacientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPacientes.Location = New System.Drawing.Point(709, 478)
         Me.LblPacientes.Name = "LblPacientes"
-        Me.LblPacientes.Size = New System.Drawing.Size(144, 40)
+        Me.LblPacientes.Size = New System.Drawing.Size(142, 39)
         Me.LblPacientes.TabIndex = 2
         Me.LblPacientes.Text = "Pacientes"
         '
@@ -215,11 +217,20 @@ Partial Class F_ABM
         Me.Btn_Pacientes.Size = New System.Drawing.Size(250, 250)
         Me.Btn_Pacientes.TabIndex = 1
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(544, 125)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 94
+        Me.Button1.Text = "BtnHorariosTemp"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'F_ABM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1920, 1080)
+        Me.ClientSize = New System.Drawing.Size(1386, 788)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "F_ABM"
@@ -243,4 +254,5 @@ Partial Class F_ABM
     Friend WithEvents BtnCerrarSesion As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LblEmpleados As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Btn_Empleados As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Button1 As Button
 End Class

@@ -1,11 +1,12 @@
 ﻿Public Class Horario
 
     Public Property Ci As Integer
-    Public Property Sucursal As String
-    Public Property Dia As Dias
-    Public Property HoraInicio As String
-    Public Property HoraFin As String
-    Public Enum Dias
+    Public Property Sucursal As Sucursal
+    Public Property Dias As List(Of DiasSemana)
+    Public Property HoraInicio As Date
+    Public Property HoraFin As Date
+
+    Public Enum DiasSemana
         Lunes = 1
         Martes
         Miercoles
@@ -16,13 +17,13 @@
     End Enum
 
     Public Sub New(ci As String,
-                   sucursal As String,
-                   dia As Dias,
-                   horaInicio As String,
-                   horaFin As String)
+                   sucursal As Sucursal,
+                   dias As List(Of DiasSemana),
+                   horaInicio As Date,
+                   horaFin As Date)
         Me.Ci = ci
         Me.Sucursal = sucursal
-        Me.Dia = dia
+        Me.Dias = dias
         Me.HoraInicio = horaInicio
         Me.HoraFin = horaFin
 
