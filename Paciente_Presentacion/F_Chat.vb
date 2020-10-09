@@ -139,4 +139,17 @@ Public Class F_Chat
             Close()
         End If
     End Sub
+
+    Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
+        Dim result = MsgBox("¿Está seguro de que desea finalizar el chat?", MsgBoxStyle.YesNo)
+
+        If result = MsgBoxResult.Yes Then
+            Dim PacienteBUS As New PacienteBUS
+            PacienteBUS.EndChat(ConsultaMedica.Chat.Id)
+
+            AutoconsultaBUS.instance.ResetInstance()
+            F_Sintomas.Show()
+            Close()
+        End If
+    End Sub
 End Class

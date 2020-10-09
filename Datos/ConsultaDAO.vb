@@ -142,6 +142,22 @@ Public Class ConsultaDAO
 
     End Sub
 
+    Public Sub EndChat(idChat As Long)
+        Dim query As String = "UPDATE chats SET finalizado=1 WHERE id=" & idChat & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            Conn.Execute(query)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
     Public Function GetChatId(idConsulta As Long) As DataTable
         Dim rs As Recordset
         Dim da As New OleDb.OleDbDataAdapter

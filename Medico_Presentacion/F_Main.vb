@@ -40,6 +40,7 @@ Public Class F_Main
         Dim MedicoBUS As New MedicoBUS
 
         Try
+
             MedicoBUS.UpdateChats(ConsultasActivas)
 
         Catch ex As Exception
@@ -202,14 +203,26 @@ Public Class F_Main
 
     Private Sub LoadInfoPaciente(paciente As Paciente)
         ' Información del paciente
-        Dim edad As Integer = paciente.Fecha_Nacimiento.CompareTo(Date.Now)
+        Dim age = GetAge(paciente.Fecha_Nacimiento)
 
         LblNamePaciente.Text = paciente.Nombre
-        LblEdadPaciente.Text = edad
+        LblEdadPaciente.Text = age & " Años"
     End Sub
+
+    Private Function GetAge(birthday As Date) As Byte
+        Dim today As Date = Date.Now
+        Dim age = today.Year - birthday.Year
+
+        If birthday > today.AddYears(-age) Then
+            age -= 1
+        End If
+
+        Return age
+    End Function
 
     Private Sub LoadDgvSintomas(sintomas As List(Of Sintoma))
         ' Síntomas
+        DgvSintomas.Rows.Clear()
         For Each sintoma In sintomas
             DgvSintomas.Rows.Add(
                 sintoma.Id.ToString,
@@ -221,6 +234,7 @@ Public Class F_Main
 
     Private Sub LoadDgvDiagnosticos(diagnosticos As List(Of Enfermedad))
         ' Diagnósticos
+        DgvDiagnosticos.Rows.Clear()
         For Each diagnostico As Enfermedad In diagnosticos
             DgvDiagnosticos.Rows.Add(
                 diagnostico.Id.ToString,
@@ -230,5 +244,39 @@ Public Class F_Main
             )
 
         Next
+    End Sub
+
+    Private Sub TabControl1_TabIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.TabIndexChanged
+        Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
+        Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
+
+        LoadInfoPaciente(consulta.Paciente)
+        LoadDgvSintomas(consulta.Sintomas)
+        LoadDgvDiagnosticos(consulta.Diagnosticos)
+
+    End Sub
+
+    Private Function GetIdConsultaFromSelectedTab() As Long
+        Return CLng(TabControl1.SelectedTab.Name.Split("-").ElementAt(1))
+    End Function
+
+    Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
+        Dim result = MsgBox("¿Está seguro de que desea finalizar el chat con el paciente '" & TabControl1.SelectedTab.Text & "' ?", MsgBoxStyle.YesNo, "Confirmación")
+
+        If result = MsgBoxResult.Yes Then
+            Dim MedicoBUS As New MedicoBUS
+            Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
+            Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
+
+            Try
+                MedicoBUS.EndChat(consulta.Chat.Id)
+                ConsultasActivas.Remove(consulta)
+                TabControl1.TabPages.Remove(TabControl1.SelectedTab)
+
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            End Try
+
+        End If
     End Sub
 End Class

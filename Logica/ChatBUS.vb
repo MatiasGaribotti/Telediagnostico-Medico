@@ -8,8 +8,17 @@ Public Class ChatBUS
         Try
             ConsultaDAO.StartChat(idConsulta, ciMedico)
         Catch ex As Exception
-            Console.WriteLine("Error: {0}" & vbCrLf & "StackTrace: {1}", ex.Message, ex.StackTrace)
             Throw New Exception("No se pudo iniciar el chat.")
+        End Try
+    End Sub
+
+    Friend Shared Sub EndChat(idChat As Long)
+        Dim ConsultaDAO As New ConsultaDAO
+
+        Try
+            ConsultaDAO.EndChat(idChat)
+        Catch ex As Exception
+            Throw New Exception("No se pudo finalizar el chat.")
         End Try
     End Sub
 

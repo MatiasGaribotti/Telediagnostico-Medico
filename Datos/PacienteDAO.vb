@@ -82,7 +82,7 @@ Public Class PacienteDAO
         Dim rs As Recordset
         Dim da As New OleDb.OleDbDataAdapter
 
-        Dim query = "SELECT * FROM pacientes WHERE ci=" & ci & ";"
+        Dim query = "SELECT * FROM Pacientes WHERE Cedula=" & ci & ";"
 
         Try
             Conn = Connect()

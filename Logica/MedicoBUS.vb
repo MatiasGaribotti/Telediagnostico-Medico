@@ -106,6 +106,15 @@ Public Class MedicoBUS
         End Try
     End Sub
 
+    Public Sub EndChat(idChat As Long)
+        Try
+            ChatBUS.EndChat(idChat)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
     Public Function GetChat(idConsulta As Long) As Chat
         Return ChatBUS.GetChat(idConsulta)
     End Function
@@ -162,9 +171,9 @@ Public Class MedicoBUS
             Try
                 Dim row = dt.Rows.Item(0)
 
-                Dim ci As Integer = row.Field(Of Int32)("Cedula")
+                Dim ci As Integer = row.Field(Of Int64)("Cedula")
                 Dim tempNombre As String() = row.Field(Of String)("Nombre Completo").Split(",")
-                Dim sexo As Persona.Sexos = row.Field(Of String)("Sexo")
+                Dim sexo As Persona.Sexos = [Enum].Parse(GetType(Persona.Sexos), row.Field(Of String)("Sexo"))
                 Dim fechaNacimiento As Date = row.Field(Of Date)("Fecha de Nacimiento")
                 Dim telefono As Integer = row.Field(Of Integer)("Telefono")
                 Dim email As String = row.Field(Of String)("Email")
@@ -180,7 +189,7 @@ Public Class MedicoBUS
                 Dim direccion As New Direccion(tempDireccion.ElementAt(0),
                                            tempDireccion.ElementAt(1),
                                            tempDireccion.ElementAt(2),
-                                           tempDireccion.ElementAt(3)
+                                           [Enum].Parse(GetType(Direccion.Departamentos), tempDireccion.ElementAt(3))
                                            )
 
                 Return New Paciente(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fechaNacimiento, email, nucleoFamiliar, antecedentesFamiliares, antecedentesLaborales)
@@ -206,7 +215,7 @@ Public Class MedicoBUS
 
         If dt.Rows.Count > 0 Then
             For Each row As DataRow In dt.Rows
-                Dim idSintoma As Short = row.Field(Of Int16)("id")
+                Dim idSintoma As Short = row.Field(Of Int32)("id")
                 Dim nombre As String = row.Field(Of String)("nombre")
                 Dim descripcion As String = row.Field(Of String)("descripcion")
                 Dim tipo As Sintoma.TiposSintomas = [Enum].Parse(GetType(Sintoma.TiposSintomas), row.Field(Of String)("tipo"))
@@ -240,7 +249,7 @@ Public Class MedicoBUS
                 Dim nombre As String = row.Field(Of String)("nombre")
                 Dim descripcion As String = row.Field(Of String)("descripcion")
                 Dim urgencia As Enfermedad.Urgencias = [Enum].Parse(GetType(Enfermedad.Urgencias), row.Field(Of String)("urgencia"))
-                Dim cronica As Boolean = CBool(row.Field(Of Byte)("cronica"))
+                Dim cronica As Boolean = CBool(row.Field(Of Int16)("cronica"))
 
                 listaDiagnosticos.Add(New Enfermedad(idEnfermedad, nombre, descripcion, urgencia, cronica))
             Next

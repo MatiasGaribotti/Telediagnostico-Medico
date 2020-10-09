@@ -64,6 +64,15 @@ Public Class PacienteBUS
             Throw New FormatException("El formato del campo antecedentes laborales no es correcto.")
         End If
     End Sub
+    Public Sub EndChat(idChat As Long)
+        Try
+            ChatBUS.EndChat(idChat)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
     Public Sub SendMsg(idChat As Long, msg As Mensaje)
         Try
             ChatBUS.SendMsg(idChat, msg)
