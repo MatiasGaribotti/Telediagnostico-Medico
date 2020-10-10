@@ -141,7 +141,7 @@ Public Class RRHHBUS
             HorarioDAO.Insert(pHorario)
 
         Catch ex As Exception
-            Throw ex
+            Throw New Exception("No se pudo insertar el horario.")
         End Try
     End Sub
 
@@ -152,6 +152,16 @@ Public Class RRHHBUS
     Public Sub DeleteHorarioEmpleado(horario As Horario)
 
     End Sub
+
+    Public Function GetHorariosEmpleados() As DataTable
+        Try
+            Dim HorarioDAO As New HorarioDAO
+            Return HorarioDAO.GetHorariosEmpleados()
+        Catch ex As Exception
+            Throw New Exception("No se pudo obtener los horarios de los empleados.")
+
+        End Try
+    End Function
 
     Private Function GetEspecialidad(pNombre As String) As Especialidad
         MedicoDAO = New MedicoDAO

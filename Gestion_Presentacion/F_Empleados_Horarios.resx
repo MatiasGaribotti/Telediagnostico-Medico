@@ -120,11 +120,42 @@
   <metadata name="pnl_fondo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DgvEmpleados.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="DgvEmpleados.Location" type="System.Drawing.Point, System.Drawing">
+    <value>596, 129</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DgvEmpleados.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>20, 20, 20, 20</value>
+  </data>
+  <data name="DgvEmpleados.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="DgvEmpleados.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1300, 839</value>
+  </data>
+  <data name="DgvEmpleados.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="&gt;&gt;DgvEmpleados.Name" xml:space="preserve">
+    <value>DgvEmpleados</value>
+  </data>
+  <data name="&gt;&gt;DgvEmpleados.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;DgvEmpleados.Parent" xml:space="preserve">
+    <value>pnl_fondo</value>
+  </data>
+  <data name="&gt;&gt;DgvEmpleados.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="BtnMinimize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BtnMinimize.Location" type="System.Drawing.Point, System.Drawing">
     <value>1830, 0</value>
   </data>
@@ -134,7 +165,6 @@
   <data name="BtnMinimize.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 29</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnMinimize.TabIndex" type="System.Int32, mscorlib">
     <value>113</value>
   </data>
@@ -148,7 +178,7 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnMinimize.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BtnExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -175,10 +205,10 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnExit.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="BtnEliminar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14.25pt</value>
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="BtnEliminar.Location" type="System.Drawing.Point, System.Drawing">
     <value>714, 66</value>
@@ -205,10 +235,10 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnEliminar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="BtnModificar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14.25pt</value>
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="BtnModificar.Location" type="System.Drawing.Point, System.Drawing">
     <value>597, 66</value>
@@ -235,40 +265,478 @@
     <value>pnl_fondo</value>
   </data>
   <data name="&gt;&gt;BtnModificar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="dgw_horarios.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="dgw_horarios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>597, 120</value>
-  </data>
-  <data name="dgw_horarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1300, 839</value>
-  </data>
-  <data name="dgw_horarios.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;dgw_horarios.Name" xml:space="preserve">
-    <value>dgw_horarios</value>
-  </data>
-  <data name="&gt;&gt;dgw_horarios.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;dgw_horarios.Parent" xml:space="preserve">
-    <value>pnl_fondo</value>
-  </data>
-  <data name="&gt;&gt;dgw_horarios.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <metadata name="pnl_ingresar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="TxtISalida.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 228</value>
+  </data>
+  <data name="TxtISalida.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 35</value>
+  </data>
+  <data name="TxtISalida.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
+  <data name="&gt;&gt;TxtISalida.Name" xml:space="preserve">
+    <value>TxtISalida</value>
+  </data>
+  <data name="&gt;&gt;TxtISalida.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtISalida.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;TxtISalida.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TxtIEntrada.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 228</value>
+  </data>
+  <data name="TxtIEntrada.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 35</value>
+  </data>
+  <data name="TxtIEntrada.TabIndex" type="System.Int32, mscorlib">
+    <value>127</value>
+  </data>
+  <data name="&gt;&gt;TxtIEntrada.Name" xml:space="preserve">
+    <value>TxtIEntrada</value>
+  </data>
+  <data name="&gt;&gt;TxtIEntrada.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtIEntrada.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;TxtIEntrada.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ChkIDomingo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkIDomingo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ChkIDomingo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 188</value>
+  </data>
+  <data name="ChkIDomingo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 17</value>
+  </data>
+  <data name="ChkIDomingo.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="ChkIDomingo.Text" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="&gt;&gt;ChkIDomingo.Name" xml:space="preserve">
+    <value>ChkIDomingo</value>
+  </data>
+  <data name="&gt;&gt;ChkIDomingo.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ChkIDomingo.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;ChkIDomingo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ChkISabado.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkISabado.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ChkISabado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 188</value>
+  </data>
+  <data name="ChkISabado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 17</value>
+  </data>
+  <data name="ChkISabado.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="ChkISabado.Text" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="&gt;&gt;ChkISabado.Name" xml:space="preserve">
+    <value>ChkISabado</value>
+  </data>
+  <data name="&gt;&gt;ChkISabado.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ChkISabado.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;ChkISabado.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ChkIViernes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkIViernes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ChkIViernes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 188</value>
+  </data>
+  <data name="ChkIViernes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 17</value>
+  </data>
+  <data name="ChkIViernes.TabIndex" type="System.Int32, mscorlib">
+    <value>124</value>
+  </data>
+  <data name="ChkIViernes.Text" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="&gt;&gt;ChkIViernes.Name" xml:space="preserve">
+    <value>ChkIViernes</value>
+  </data>
+  <data name="&gt;&gt;ChkIViernes.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ChkIViernes.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;ChkIViernes.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ChkIJueves.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkIJueves.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ChkIJueves.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 188</value>
+  </data>
+  <data name="ChkIJueves.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 17</value>
+  </data>
+  <data name="ChkIJueves.TabIndex" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="ChkIJueves.Text" xml:space="preserve">
+    <value>J</value>
+  </data>
+  <data name="&gt;&gt;ChkIJueves.Name" xml:space="preserve">
+    <value>ChkIJueves</value>
+  </data>
+  <data name="&gt;&gt;ChkIJueves.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ChkIJueves.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;ChkIJueves.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ChkIMiercoles.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkIMiercoles.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ChkIMiercoles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 188</value>
+  </data>
+  <data name="ChkIMiercoles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 17</value>
+  </data>
+  <data name="ChkIMiercoles.TabIndex" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
+  <data name="ChkIMiercoles.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;ChkIMiercoles.Name" xml:space="preserve">
+    <value>ChkIMiercoles</value>
+  </data>
+  <data name="&gt;&gt;ChkIMiercoles.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ChkIMiercoles.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;ChkIMiercoles.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ChkIMartes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkIMartes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ChkIMartes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 188</value>
+  </data>
+  <data name="ChkIMartes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 17</value>
+  </data>
+  <data name="ChkIMartes.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="ChkIMartes.Text" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="&gt;&gt;ChkIMartes.Name" xml:space="preserve">
+    <value>ChkIMartes</value>
+  </data>
+  <data name="&gt;&gt;ChkIMartes.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ChkIMartes.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;ChkIMartes.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ChkILunes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkILunes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ChkILunes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 188</value>
+  </data>
+  <data name="ChkILunes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 17</value>
+  </data>
+  <data name="ChkILunes.TabIndex" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="ChkILunes.Text" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="&gt;&gt;ChkILunes.Name" xml:space="preserve">
+    <value>ChkILunes</value>
+  </data>
+  <data name="&gt;&gt;ChkILunes.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ChkILunes.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;ChkILunes.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Guna2CheckBox5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2CheckBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Guna2CheckBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 430</value>
+  </data>
+  <data name="Guna2CheckBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 17</value>
+  </data>
+  <data name="Guna2CheckBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="Guna2CheckBox5.Text" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox5.Name" xml:space="preserve">
+    <value>Guna2CheckBox5</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox5.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox5.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox5.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Guna2CheckBox6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2CheckBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Guna2CheckBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 430</value>
+  </data>
+  <data name="Guna2CheckBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 17</value>
+  </data>
+  <data name="Guna2CheckBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="Guna2CheckBox6.Text" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox6.Name" xml:space="preserve">
+    <value>Guna2CheckBox6</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox6.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox6.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox6.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Guna2CheckBox7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2CheckBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Guna2CheckBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 430</value>
+  </data>
+  <data name="Guna2CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 17</value>
+  </data>
+  <data name="Guna2CheckBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="Guna2CheckBox7.Text" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox7.Name" xml:space="preserve">
+    <value>Guna2CheckBox7</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox7.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox7.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox7.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Guna2CheckBox2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2CheckBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Guna2CheckBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 430</value>
+  </data>
+  <data name="Guna2CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 17</value>
+  </data>
+  <data name="Guna2CheckBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="Guna2CheckBox2.Text" xml:space="preserve">
+    <value>J</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox2.Name" xml:space="preserve">
+    <value>Guna2CheckBox2</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox2.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Guna2CheckBox3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2CheckBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="Guna2CheckBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Guna2CheckBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 430</value>
+  </data>
+  <data name="Guna2CheckBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 17</value>
+  </data>
+  <data name="Guna2CheckBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="Guna2CheckBox3.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox3.Name" xml:space="preserve">
+    <value>Guna2CheckBox3</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox3.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox3.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="Guna2CheckBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Guna2CheckBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Guna2CheckBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 430</value>
+  </data>
+  <data name="Guna2CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 17</value>
+  </data>
+  <data name="Guna2CheckBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="Guna2CheckBox1.Text" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox1.Name" xml:space="preserve">
+    <value>Guna2CheckBox1</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox1.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;Guna2CheckBox1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="ChkL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 430</value>
+  </data>
+  <data name="ChkL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 17</value>
+  </data>
+  <data name="ChkL.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
+  <data name="ChkL.Text" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="&gt;&gt;ChkL.Name" xml:space="preserve">
+    <value>ChkL</value>
+  </data>
+  <data name="&gt;&gt;ChkL.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ChkL.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;ChkL.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
   <data name="BtnFiltrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14.25pt</value>
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="BtnFiltrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 375</value>
+    <value>373, 533</value>
   </data>
   <data name="BtnFiltrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 15, 15</value>
@@ -292,13 +760,13 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;BtnFiltrar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>16</value>
   </data>
   <data name="BtnIngresar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14.25pt</value>
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="BtnIngresar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 706</value>
+    <value>366, 270</value>
   </data>
   <data name="BtnIngresar.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 36</value>
@@ -319,28 +787,28 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;BtnIngresar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>17</value>
   </data>
-  <data name="TxtBCi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 517</value>
+  <data name="TxtICi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 86</value>
   </data>
-  <data name="TxtBCi.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="TxtICi.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 36</value>
   </data>
-  <data name="TxtBCi.TabIndex" type="System.Int32, mscorlib">
+  <data name="TxtICi.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
-  <data name="&gt;&gt;TxtBCi.Name" xml:space="preserve">
-    <value>TxtBCi</value>
+  <data name="&gt;&gt;TxtICi.Name" xml:space="preserve">
+    <value>TxtICi</value>
   </data>
-  <data name="&gt;&gt;TxtBCi.Type" xml:space="preserve">
+  <data name="&gt;&gt;TxtICi.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;TxtBCi.Parent" xml:space="preserve">
+  <data name="&gt;&gt;TxtICi.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
-  <data name="&gt;&gt;TxtBCi.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;TxtICi.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="LblBCi.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -352,7 +820,7 @@
     <value>NoControl</value>
   </data>
   <data name="LblBCi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 517</value>
+    <value>57, 86</value>
   </data>
   <data name="LblBCi.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 25</value>
@@ -373,10 +841,10 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;LblBCi.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>19</value>
   </data>
   <data name="TxtIHoraOut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 330</value>
+    <value>195, 500</value>
   </data>
   <data name="TxtIHoraOut.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 27</value>
@@ -394,10 +862,10 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;TxtIHoraOut.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>20</value>
   </data>
   <data name="TxtIHoraIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 290</value>
+    <value>195, 460</value>
   </data>
   <data name="TxtIHoraIn.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 25</value>
@@ -415,7 +883,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;TxtIHoraIn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>21</value>
   </data>
   <data name="btn_volver.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16pt</value>
@@ -442,508 +910,7 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;btn_volver.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="dtp_rangoSalida.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="dtp_rangoSalida.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 655</value>
-  </data>
-  <data name="dtp_rangoSalida.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 31</value>
-  </data>
-  <data name="dtp_rangoSalida.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
-  </data>
-  <data name="&gt;&gt;dtp_rangoSalida.Name" xml:space="preserve">
-    <value>dtp_rangoSalida</value>
-  </data>
-  <data name="&gt;&gt;dtp_rangoSalida.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DateTimePicker, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;dtp_rangoSalida.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;dtp_rangoSalida.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="dtp_rangoEntrada.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="dtp_rangoEntrada.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 655</value>
-  </data>
-  <data name="dtp_rangoEntrada.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 31</value>
-  </data>
-  <data name="dtp_rangoEntrada.TabIndex" type="System.Int32, mscorlib">
-    <value>55</value>
-  </data>
-  <data name="&gt;&gt;dtp_rangoEntrada.Name" xml:space="preserve">
-    <value>dtp_rangoEntrada</value>
-  </data>
-  <data name="&gt;&gt;dtp_rangoEntrada.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DateTimePicker, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;dtp_rangoEntrada.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;dtp_rangoEntrada.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="cmb_sucursalF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
-  </data>
-  <data name="cmb_sucursalF.ItemHeight" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="cmb_sucursalF.Items" xml:space="preserve">
-    <value>Sucursal Central</value>
-  </data>
-  <data name="cmb_sucursalF.Items1" xml:space="preserve">
-    <value>Policlínica del Congo</value>
-  </data>
-  <data name="cmb_sucursalF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 559</value>
-  </data>
-  <data name="cmb_sucursalF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 36</value>
-  </data>
-  <data name="cmb_sucursalF.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="&gt;&gt;cmb_sucursalF.Name" xml:space="preserve">
-    <value>cmb_sucursalF</value>
-  </data>
-  <data name="&gt;&gt;cmb_sucursalF.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cmb_sucursalF.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;cmb_sucursalF.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="rbtn_dF.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtn_dF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="rbtn_dF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 619</value>
-  </data>
-  <data name="rbtn_dF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 17</value>
-  </data>
-  <data name="rbtn_dF.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="rbtn_dF.Text" xml:space="preserve">
-    <value>D</value>
-  </data>
-  <data name="&gt;&gt;rbtn_dF.Name" xml:space="preserve">
-    <value>rbtn_dF</value>
-  </data>
-  <data name="&gt;&gt;rbtn_dF.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rbtn_dF.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;rbtn_dF.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="rbtn_mF.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtn_mF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="rbtn_mF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 619</value>
-  </data>
-  <data name="rbtn_mF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 17</value>
-  </data>
-  <data name="rbtn_mF.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="rbtn_mF.Text" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="&gt;&gt;rbtn_mF.Name" xml:space="preserve">
-    <value>rbtn_mF</value>
-  </data>
-  <data name="&gt;&gt;rbtn_mF.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rbtn_mF.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;rbtn_mF.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="rbtn_xF.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtn_xF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="rbtn_xF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>317, 619</value>
-  </data>
-  <data name="rbtn_xF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 17</value>
-  </data>
-  <data name="rbtn_xF.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="rbtn_xF.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;rbtn_xF.Name" xml:space="preserve">
-    <value>rbtn_xF</value>
-  </data>
-  <data name="&gt;&gt;rbtn_xF.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rbtn_xF.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;rbtn_xF.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="rbtn_jF.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtn_jF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="rbtn_jF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 619</value>
-  </data>
-  <data name="rbtn_jF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 17</value>
-  </data>
-  <data name="rbtn_jF.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="rbtn_jF.Text" xml:space="preserve">
-    <value>J</value>
-  </data>
-  <data name="&gt;&gt;rbtn_jF.Name" xml:space="preserve">
-    <value>rbtn_jF</value>
-  </data>
-  <data name="&gt;&gt;rbtn_jF.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rbtn_jF.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;rbtn_jF.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="rbnt_vF.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbnt_vF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="rbnt_vF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 619</value>
-  </data>
-  <data name="rbnt_vF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 17</value>
-  </data>
-  <data name="rbnt_vF.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="rbnt_vF.Text" xml:space="preserve">
-    <value>V</value>
-  </data>
-  <data name="&gt;&gt;rbnt_vF.Name" xml:space="preserve">
-    <value>rbnt_vF</value>
-  </data>
-  <data name="&gt;&gt;rbnt_vF.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rbnt_vF.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;rbnt_vF.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="rbtn_sF.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtn_sF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="rbtn_sF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 619</value>
-  </data>
-  <data name="rbtn_sF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 17</value>
-  </data>
-  <data name="rbtn_sF.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="rbtn_sF.Text" xml:space="preserve">
-    <value>S</value>
-  </data>
-  <data name="&gt;&gt;rbtn_sF.Name" xml:space="preserve">
-    <value>rbtn_sF</value>
-  </data>
-  <data name="&gt;&gt;rbtn_sF.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rbtn_sF.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;rbtn_sF.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="rbtn_lF.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtn_lF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="rbtn_lF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 619</value>
-  </data>
-  <data name="rbtn_lF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 17</value>
-  </data>
-  <data name="rbtn_lF.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="rbtn_lF.Text" xml:space="preserve">
-    <value>L</value>
-  </data>
-  <data name="&gt;&gt;rbtn_lF.Name" xml:space="preserve">
-    <value>rbtn_lF</value>
-  </data>
-  <data name="&gt;&gt;rbtn_lF.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rbtn_lF.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;rbtn_lF.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="RbtnD.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RbtnD.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="RbtnD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>463, 260</value>
-  </data>
-  <data name="RbtnD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 17</value>
-  </data>
-  <data name="RbtnD.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="RbtnD.Text" xml:space="preserve">
-    <value>D</value>
-  </data>
-  <data name="&gt;&gt;RbtnD.Name" xml:space="preserve">
-    <value>RbtnD</value>
-  </data>
-  <data name="&gt;&gt;RbtnD.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;RbtnD.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;RbtnD.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="RbtnM.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RbtnM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="RbtnM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 260</value>
-  </data>
-  <data name="RbtnM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 17</value>
-  </data>
-  <data name="RbtnM.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="RbtnM.Text" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="&gt;&gt;RbtnM.Name" xml:space="preserve">
-    <value>RbtnM</value>
-  </data>
-  <data name="&gt;&gt;RbtnM.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;RbtnM.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;RbtnM.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="RbtnX.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RbtnX.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="RbtnX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 260</value>
-  </data>
-  <data name="RbtnX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 17</value>
-  </data>
-  <data name="RbtnX.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="RbtnX.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;RbtnX.Name" xml:space="preserve">
-    <value>RbtnX</value>
-  </data>
-  <data name="&gt;&gt;RbtnX.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;RbtnX.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;RbtnX.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="RbtnJ.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RbtnJ.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="RbtnJ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 260</value>
-  </data>
-  <data name="RbtnJ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 17</value>
-  </data>
-  <data name="RbtnJ.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="RbtnJ.Text" xml:space="preserve">
-    <value>J</value>
-  </data>
-  <data name="&gt;&gt;RbtnJ.Name" xml:space="preserve">
-    <value>RbtnJ</value>
-  </data>
-  <data name="&gt;&gt;RbtnJ.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;RbtnJ.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;RbtnJ.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="RbtnV.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RbtnV.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="RbtnV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 260</value>
-  </data>
-  <data name="RbtnV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 17</value>
-  </data>
-  <data name="RbtnV.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="RbtnV.Text" xml:space="preserve">
-    <value>V</value>
-  </data>
-  <data name="&gt;&gt;RbtnV.Name" xml:space="preserve">
-    <value>RbtnV</value>
-  </data>
-  <data name="&gt;&gt;RbtnV.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;RbtnV.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;RbtnV.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="RbtnS.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RbtnS.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="RbtnS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 260</value>
-  </data>
-  <data name="RbtnS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 17</value>
-  </data>
-  <data name="RbtnS.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="RbtnS.Text" xml:space="preserve">
-    <value>S</value>
-  </data>
-  <data name="&gt;&gt;RbtnS.Name" xml:space="preserve">
-    <value>RbtnS</value>
-  </data>
-  <data name="&gt;&gt;RbtnS.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;RbtnS.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;RbtnS.ZOrder" xml:space="preserve">
     <value>22</value>
-  </data>
-  <data name="RbtnL.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RbtnL.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="RbtnL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 260</value>
-  </data>
-  <data name="RbtnL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 17</value>
-  </data>
-  <data name="RbtnL.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="RbtnL.Text" xml:space="preserve">
-    <value>L</value>
-  </data>
-  <data name="&gt;&gt;RbtnL.Name" xml:space="preserve">
-    <value>RbtnL</value>
-  </data>
-  <data name="&gt;&gt;RbtnL.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;RbtnL.Parent" xml:space="preserve">
-    <value>pnl_ingresar</value>
-  </data>
-  <data name="&gt;&gt;RbtnL.ZOrder" xml:space="preserve">
-    <value>23</value>
   </data>
   <data name="CmbISucursal.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -952,19 +919,19 @@
     <value>30</value>
   </data>
   <data name="CmbISucursal.Items" xml:space="preserve">
-    <value>0</value>
+    <value>Sucursal Central</value>
   </data>
   <data name="CmbISucursal.Items1" xml:space="preserve">
-    <value>1</value>
+    <value>Policlínica del Congo</value>
   </data>
   <data name="CmbISucursal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 213</value>
+    <value>188, 128</value>
   </data>
   <data name="CmbISucursal.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 36</value>
   </data>
   <data name="CmbISucursal.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+    <value>54</value>
   </data>
   <data name="&gt;&gt;CmbISucursal.Name" xml:space="preserve">
     <value>CmbISucursal</value>
@@ -976,27 +943,60 @@
     <value>pnl_ingresar</value>
   </data>
   <data name="&gt;&gt;CmbISucursal.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>23</value>
   </data>
-  <data name="TxtICi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 171</value>
+  <data name="CmbBSucursal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
   </data>
-  <data name="TxtICi.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CmbBSucursal.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="CmbBSucursal.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CmbBSucursal.Items1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CmbBSucursal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 383</value>
+  </data>
+  <data name="CmbBSucursal.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 36</value>
   </data>
-  <data name="TxtICi.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+  <data name="CmbBSucursal.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
   </data>
-  <data name="&gt;&gt;TxtICi.Name" xml:space="preserve">
-    <value>TxtICi</value>
+  <data name="&gt;&gt;CmbBSucursal.Name" xml:space="preserve">
+    <value>CmbBSucursal</value>
   </data>
-  <data name="&gt;&gt;TxtICi.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;CmbBSucursal.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;TxtICi.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CmbBSucursal.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
-  <data name="&gt;&gt;TxtICi.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CmbBSucursal.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="TxtBCi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 341</value>
+  </data>
+  <data name="TxtBCi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 36</value>
+  </data>
+  <data name="TxtBCi.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;TxtBCi.Name" xml:space="preserve">
+    <value>TxtBCi</value>
+  </data>
+  <data name="&gt;&gt;TxtBCi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TxtBCi.Parent" xml:space="preserve">
+    <value>pnl_ingresar</value>
+  </data>
+  <data name="&gt;&gt;TxtBCi.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
   <data name="lbl_a.AutoSize" type="System.Boolean, mscorlib">
@@ -1006,7 +1006,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lbl_a.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 659</value>
+    <value>312, 228</value>
   </data>
   <data name="lbl_a.Size" type="System.Drawing.Size, System.Drawing">
     <value>22, 25</value>
@@ -1036,7 +1036,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lbl_rango.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 659</value>
+    <value>55, 228</value>
   </data>
   <data name="lbl_rango.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 25</value>
@@ -1066,7 +1066,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lbl_diasB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 611</value>
+    <value>54, 180</value>
   </data>
   <data name="lbl_diasB.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 25</value>
@@ -1096,7 +1096,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lbl_sucursalB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 559</value>
+    <value>54, 128</value>
   </data>
   <data name="lbl_sucursalB.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 25</value>
@@ -1119,34 +1119,34 @@
   <data name="&gt;&gt;lbl_sucursalB.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
-  <data name="lbl_busqueda.AutoSize" type="System.Boolean, mscorlib">
+  <data name="LblIngreso.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_busqueda.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="LblIngreso.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt, style=Bold</value>
   </data>
-  <data name="lbl_busqueda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 479</value>
+  <data name="LblIngreso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 48</value>
   </data>
-  <data name="lbl_busqueda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
+  <data name="LblIngreso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 25</value>
   </data>
-  <data name="lbl_busqueda.TabIndex" type="System.Int32, mscorlib">
+  <data name="LblIngreso.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="lbl_busqueda.Text" xml:space="preserve">
-    <value>Búsqueda</value>
+  <data name="LblIngreso.Text" xml:space="preserve">
+    <value>Ingreso</value>
   </data>
-  <data name="&gt;&gt;lbl_busqueda.Name" xml:space="preserve">
-    <value>lbl_busqueda</value>
+  <data name="&gt;&gt;LblIngreso.Name" xml:space="preserve">
+    <value>LblIngreso</value>
   </data>
-  <data name="&gt;&gt;lbl_busqueda.Type" xml:space="preserve">
+  <data name="&gt;&gt;LblIngreso.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_busqueda.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LblIngreso.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
-  <data name="&gt;&gt;lbl_busqueda.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LblIngreso.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
   <data name="lbl_horaSalida.AutoSize" type="System.Boolean, mscorlib">
@@ -1156,7 +1156,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lbl_horaSalida.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 330</value>
+    <value>55, 500</value>
   </data>
   <data name="lbl_horaSalida.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 25</value>
@@ -1186,7 +1186,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lbl_horaEntrada.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 290</value>
+    <value>55, 460</value>
   </data>
   <data name="lbl_horaEntrada.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 25</value>
@@ -1216,7 +1216,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lbl_dias.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 252</value>
+    <value>55, 422</value>
   </data>
   <data name="lbl_dias.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 25</value>
@@ -1246,7 +1246,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lbl_sucursal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 218</value>
+    <value>55, 388</value>
   </data>
   <data name="lbl_sucursal.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 25</value>
@@ -1269,64 +1269,64 @@
   <data name="&gt;&gt;lbl_sucursal.ZOrder" xml:space="preserve">
     <value>34</value>
   </data>
-  <data name="lbl_ingresoHorarios.AutoSize" type="System.Boolean, mscorlib">
+  <data name="LblBusqueda.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_ingresoHorarios.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="LblBusqueda.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt, style=Bold</value>
   </data>
-  <data name="lbl_ingresoHorarios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 129</value>
+  <data name="LblBusqueda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 299</value>
   </data>
-  <data name="lbl_ingresoHorarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 25</value>
+  <data name="LblBusqueda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
   </data>
-  <data name="lbl_ingresoHorarios.TabIndex" type="System.Int32, mscorlib">
+  <data name="LblBusqueda.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="lbl_ingresoHorarios.Text" xml:space="preserve">
-    <value>Ingreso de Horarios</value>
+  <data name="LblBusqueda.Text" xml:space="preserve">
+    <value>Búsqueda</value>
   </data>
-  <data name="&gt;&gt;lbl_ingresoHorarios.Name" xml:space="preserve">
-    <value>lbl_ingresoHorarios</value>
+  <data name="&gt;&gt;LblBusqueda.Name" xml:space="preserve">
+    <value>LblBusqueda</value>
   </data>
-  <data name="&gt;&gt;lbl_ingresoHorarios.Type" xml:space="preserve">
+  <data name="&gt;&gt;LblBusqueda.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_ingresoHorarios.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LblBusqueda.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
-  <data name="&gt;&gt;lbl_ingresoHorarios.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LblBusqueda.ZOrder" xml:space="preserve">
     <value>35</value>
   </data>
-  <data name="lbl_ci.AutoSize" type="System.Boolean, mscorlib">
+  <data name="LblCi.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_ci.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="LblCi.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
-  <data name="lbl_ci.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 171</value>
+  <data name="LblCi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 341</value>
   </data>
-  <data name="lbl_ci.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="LblCi.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 25</value>
   </data>
-  <data name="lbl_ci.TabIndex" type="System.Int32, mscorlib">
+  <data name="LblCi.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="lbl_ci.Text" xml:space="preserve">
+  <data name="LblCi.Text" xml:space="preserve">
     <value>C.I:</value>
   </data>
-  <data name="&gt;&gt;lbl_ci.Name" xml:space="preserve">
-    <value>lbl_ci</value>
+  <data name="&gt;&gt;LblCi.Name" xml:space="preserve">
+    <value>LblCi</value>
   </data>
-  <data name="&gt;&gt;lbl_ci.Type" xml:space="preserve">
+  <data name="&gt;&gt;LblCi.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_ci.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LblCi.Parent" xml:space="preserve">
     <value>pnl_ingresar</value>
   </data>
-  <data name="&gt;&gt;lbl_ci.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LblCi.ZOrder" xml:space="preserve">
     <value>36</value>
   </data>
   <data name="pnl_ingresar.Location" type="System.Drawing.Point, System.Drawing">
@@ -1378,13 +1378,13 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1920, 1080</value>
+    <value>1386, 788</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Form1</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>F_Medicos_Horarios</value>
+    <value>F_Empleados_Horarios</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
