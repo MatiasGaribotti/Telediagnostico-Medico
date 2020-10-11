@@ -156,7 +156,7 @@ Public Class RRHHBUS
     Public Function GetHorariosEmpleados() As DataTable
         Try
             Dim HorarioDAO As New HorarioDAO
-            Return HorarioDAO.GetHorariosEmpleados()
+            'Return HorarioDAO.GetHorariosEmpleados()
         Catch ex As Exception
             Throw New Exception("No se pudo obtener los horarios de los empleados.")
 

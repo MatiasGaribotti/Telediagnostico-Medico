@@ -17,6 +17,9 @@ Public Class F_Main
         TimerSolicitudes.Interval = 5000
         TimerSolicitudes.Start()
 
+        TimerChatStatus.Interval = 1000
+        TimerChatStatus.Start()
+
         TimerMensajes.Interval = 1000
         TimerMensajes.Start()
     End Sub
@@ -32,6 +35,39 @@ Public Class F_Main
 
         End Try
     End Sub
+
+    Private Sub TimerChatStatus_Tick(sender As Object, e As EventArgs) Handles TimerChatStatus.Tick
+        Dim MedicoBUS As New MedicoBUS
+        Dim deleteConsultas As New List(Of ConsultaMedica)
+
+        For Each consulta In ConsultasActivas
+            Dim status = MedicoBUS.GetChatStatusByIdConsulta(consulta.Id)
+
+            If status = Chat.ChatStatus.Ended Then
+                deleteConsultas.Add(consulta)
+
+            End If
+        Next
+
+        For Each consulta In deleteConsultas
+            EndConsulta(consulta)
+
+        Next
+    End Sub
+
+    Public Sub EndConsulta(consulta As ConsultaMedica)
+        ConsultasActivas.Remove(consulta)
+        Dim tab = GetTabByIdConsulta(consulta.Id)
+
+        If tab IsNot Nothing Then
+            TabControl1.TabPages.Remove(tab)
+            TabControl1.Refresh()
+
+        End If
+
+        MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
+    End Sub
+
     Private Sub TimerSolicitudes_Tick(sender As Object, e As EventArgs) Handles TimerSolicitudes.Tick
         LoadSolicitudesChats()
     End Sub
@@ -40,13 +76,18 @@ Public Class F_Main
         Dim MedicoBUS As New MedicoBUS
 
         Try
+            For Each consulta In ConsultasActivas
+                Dim nuevosMensajes = MedicoBUS.UpdateChat(consulta)
+                RefreshChat(consulta, nuevosMensajes)
 
-            MedicoBUS.UpdateChats(ConsultasActivas)
+                For Each nuevoMensaje In nuevosMensajes
+                    consulta.Chat.Mensajes.Add(nuevoMensaje)
+                Next
+            Next
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
-        RefreshChats()
     End Sub
 
     Private Sub DgvChats_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvChats.CellDoubleClick
@@ -142,53 +183,45 @@ Public Class F_Main
         Return Nothing
     End Function
 
-    Private Sub RefreshChats()
+    Private Sub RefreshChat(consulta As ConsultaMedica, mensajes As List(Of Mensaje))
+        If mensajes.Count > 0 Then
+            Dim tab As TabPage = GetTabByIdConsulta(consulta.Id)
 
-        ' Recorro todas las tabs para actualizar todos los chats activos
-        For Each tabPage As TabPage In TabControl1.TabPages
+            Dim panelMensajes As Panel = DirectCast(tab.Controls.Find("PnlChat", True).First, Panel)
+            Dim lastPoint As Point = GetLastPoint(panelMensajes)
 
-            ' La tab con el nombre "TabSolicitudesChats" no corresponde a un chat
-            If Not tabPage.Name = "TabSolicitudesChats" Then
+            For Each mensaje In mensajes
+                PrintMensaje(mensaje, panelMensajes, lastPoint)
+            Next
 
-                ' Limpio el panel en donde van los mensajes del chat.
-                For Each control As Control In tabPage.Controls
-                    If TypeOf control Is Panel Then
-                        Dim panel As Panel = DirectCast(control, Panel)
-                        panel.Controls.Clear()
-                    End If
-                Next
-
-
-                ' Obtengo el id de la consulta
-                Dim currentIdConsulta As Long
-
-                If Long.TryParse(tabPage.Name.Split("-").ElementAt(1), currentIdConsulta) Then
-
-                    Dim consultaActual As ConsultaMedica = GetConsultaActivaById(currentIdConsulta)
-
-                    ' Evaluo que la consulta no sea nula.
-                    If Not consultaActual Is Nothing Then
-
-                        Dim LastPoint As Point = New Point(20, 20)
-
-                        ' Imprimo todos los mensajes.
-                        For Each mensaje As Mensaje In consultaActual.Chat.Mensajes
-                            PrintMensaje(mensaje, tabPage, LastPoint)
-
-                        Next
-
-                        tabPage.Refresh()
-                    End If
-
-                End If
-            End If
-        Next
+            tab.Refresh()
+        End If
     End Sub
 
-    Private Sub PrintMensaje(ByVal mensaje As Mensaje, ByRef containter As TabPage, ByRef lastPoint As Point)
+    Private Function GetLastPoint(panel As Panel) As Point
+        If panel.Controls.Count > 0 Then
+            Dim point = panel.Controls.Item(0).Location
+            point.Y += panel.Controls.Item(0).Height + 5
+            Return point
+        Else
+            Return New Point(20, 20)
+        End If
+    End Function
+
+    Private Function GetTabByIdConsulta(idConsulta As Long) As TabPage
+        For Each tab As TabPage In TabControl1.TabPages
+            If tab.Name = "TabChat-" & idConsulta Then
+                Return tab
+            End If
+        Next
+        Return Nothing
+    End Function
+
+    Private Sub PrintMensaje(ByVal mensaje As Mensaje, ByRef containter As Panel, ByRef lastPoint As Point)
         Dim txtMsj = mensaje.Persona.Nombre & ": " & mensaje.Texto
 
         Dim label As New Label With {
+            .Name = mensaje.Id,
             .Text = txtMsj,
             .Location = lastPoint,
             .Font = New Font("Roboto", 16, FontStyle.Regular, GraphicsUnit.Pixel),
@@ -247,13 +280,15 @@ Public Class F_Main
     End Sub
 
     Private Sub TabControl1_TabIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.TabIndexChanged
-        Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
-        Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
+        If TabControl1.SelectedTab.Name <> "TabSolicitudesChats" And TabControl1.SelectedTab.Name.Length > 0 Then
+            Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
+            Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
 
-        LoadInfoPaciente(consulta.Paciente)
-        LoadDgvSintomas(consulta.Sintomas)
-        LoadDgvDiagnosticos(consulta.Diagnosticos)
+            LoadInfoPaciente(consulta.Paciente)
+            LoadDgvSintomas(consulta.Sintomas)
+            LoadDgvDiagnosticos(consulta.Diagnosticos)
 
+        End If
     End Sub
 
     Private Function GetIdConsultaFromSelectedTab() As Long
@@ -272,7 +307,8 @@ Public Class F_Main
                 MedicoBUS.EndChat(consulta.Chat.Id)
                 ConsultasActivas.Remove(consulta)
                 TabControl1.TabPages.Remove(TabControl1.SelectedTab)
-
+                TabControl1.Refresh()
+                MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
             End Try

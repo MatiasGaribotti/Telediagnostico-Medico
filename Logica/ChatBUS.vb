@@ -22,8 +22,40 @@ Public Class ChatBUS
         End Try
     End Sub
 
+    Friend Shared Function GetChatStatusByIdConsulta(idConsulta As Long) As Chat.ChatStatus
+        Dim ConsultaDAO As New ConsultaDAO
+        Dim dt As DataTable
+
+        Try
+            dt = ConsultaDAO.GetChatStatus(idConsulta)
+        Catch ex As Exception
+            Throw New Exception("Error al obtener el estado del chat.")
+        End Try
+
+        Dim row = dt.Rows.Item(0)
+        Dim ciMedico As Long = 0
+
+        Try
+            ciMedico = row.Field(Of Int64)("ciMedico")
+
+        Catch ex As Exception
+
+        End Try
+
+        Dim finalizado = CBool(row.Field(Of Int16)("finalizado"))
+
+        If ciMedico = 0 Then
+            Return Chat.ChatStatus.Waiting
+
+        ElseIf ciMedico <> 0 And finalizado = False Then
+            Return Chat.ChatStatus.Active
+
+        Else
+            Return Chat.ChatStatus.Ended
+        End If
+    End Function
+
     Friend Shared Function GetChat(idConsulta As Long) As Chat
-        Dim chat As New Chat()
         Dim ConsultaDAO As New ConsultaDAO
         Dim dt As DataTable
 
@@ -31,8 +63,9 @@ Public Class ChatBUS
             dt = ConsultaDAO.GetChatId(idConsulta)
 
             If dt.Rows.Count > 0 Then
-                chat.Id = Long.Parse(dt.Rows.Item(0).Field(Of Decimal)("id"))
-                Return chat
+                Dim idChat = Long.Parse(dt.Rows.Item(0).Field(Of Decimal)("id"))
+
+                Return New Chat(idChat)
             Else
                 Return Nothing
             End If

@@ -114,6 +114,9 @@ Public Class MedicoBUS
             Throw ex
         End Try
     End Sub
+    Public Function GetChatStatusByIdConsulta(idConsulta As Long) As Chat.ChatStatus
+        Return ChatBUS.GetChatStatusByIdConsulta(idConsulta)
+    End Function
 
     Public Function GetChat(idConsulta As Long) As Chat
         Return ChatBUS.GetChat(idConsulta)
@@ -137,21 +140,22 @@ Public Class MedicoBUS
         End Try
     End Sub
 
-    Public Sub UpdateChats(ByRef consultasActivas As List(Of ConsultaMedica))
+    Public Function UpdateChat(consulta As ConsultaMedica) As List(Of Mensaje)
+        Dim nuevosMensajes As New List(Of Mensaje)
+        Dim greatestIndex As Long = GetGreatestMsgIndex(consulta.Chat.Mensajes)
 
-        For Each consulta In consultasActivas
-            Dim greatestIndex As Long = GetGreatestMsgIndex(consulta.Chat.Mensajes)
-            Try
-                Dim mensajesObtenidos = GetMensajesChat(consulta.Chat.Id, greatestIndex)
-                For Each mensaje In mensajesObtenidos
-                    consulta.Chat.Mensajes.Add(mensaje)
-                Next
+        Try
+            Dim mensajesObtenidos = GetMensajesChat(consulta.Chat.Id, greatestIndex)
+            For Each mensaje In mensajesObtenidos
+                nuevosMensajes.Add(mensaje)
+            Next
 
-            Catch ex As Exception
-                Throw ex
-            End Try
-        Next
-    End Sub
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Return nuevosMensajes
+    End Function
 
     Private Function GetGreatestMsgIndex(mensajes As List(Of Mensaje)) As Long
         Return ChatBUS.GetGreatestMsgIndex(mensajes)

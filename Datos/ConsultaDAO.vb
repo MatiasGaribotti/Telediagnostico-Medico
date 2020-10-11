@@ -258,6 +258,32 @@ Public Class ConsultaDAO
         Return dt
     End Function
 
+    Public Function GetChatStatus(idConsulta As Long) As DataTable
+        Dim rs As Recordset
+        Dim dt As New DataTable
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim query As String = "SELECT * FROM ChatStatus WHERE idConsulta=" & idConsulta & ";"
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            rs = Conn.Execute(query)
+            da.Fill(dt, rs)
+        Catch ex As Exception
+            Throw ex
+
+        Finally
+            Conn.Close()
+        End Try
+
+        Return dt
+    End Function
+
+    ' ELIMINAR
     Public Function IsBeingDealt(idConsulta As Long) As Boolean
         Dim rs As Recordset
         Dim query As String = "SELECT * FROM Solicitudes_Chats WHERE ID=" & idConsulta & ";"
@@ -283,8 +309,6 @@ Public Class ConsultaDAO
         Finally
             Conn.Close()
         End Try
-
-
     End Function
 
     Public Function GetMedico(idConsulta As Long) As DataTable

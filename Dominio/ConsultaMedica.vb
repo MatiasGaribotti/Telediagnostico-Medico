@@ -7,7 +7,7 @@
     Public Sub New(autoconsulta As Autoconsulta)
         MyBase.New(autoconsulta.Id, autoconsulta.Sucursal, autoconsulta.Paciente, autoconsulta.FechaHora, autoconsulta.Sintomas, autoconsulta.Diagnosticos)
         Me.Medico = New Medico
-
+        Me.Chat = New Chat
     End Sub
 
     Public Sub New(id As Long, sucursal As Sucursal, paciente As Paciente, fechaHora As Date, sintomas As List(Of Sintoma), diagnosticos As List(Of Enfermedad), medico As Medico, desarrollo As String, chat As Chat)

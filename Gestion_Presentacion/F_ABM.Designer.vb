@@ -23,6 +23,7 @@ Partial Class F_ABM
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.LblEmpleados = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Btn_Empleados = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnCerrarSesion = New Guna.UI2.WinForms.Guna2Button()
@@ -34,7 +35,6 @@ Partial Class F_ABM
         Me.Btn_Enfermedades = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_Sitnomas = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_Pacientes = New Guna.UI2.WinForms.Guna2Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,6 +59,15 @@ Partial Class F_ABM
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(1920, 1080)
         Me.Guna2Panel1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(544, 125)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 94
+        Me.Button1.Text = "BtnHorariosTemp"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'LblEmpleados
         '
@@ -217,20 +226,11 @@ Partial Class F_ABM
         Me.Btn_Pacientes.Size = New System.Drawing.Size(250, 250)
         Me.Btn_Pacientes.TabIndex = 1
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(544, 125)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 94
-        Me.Button1.Text = "BtnHorariosTemp"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'F_ABM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1386, 788)
+        Me.ClientSize = New System.Drawing.Size(1920, 1080)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "F_ABM"

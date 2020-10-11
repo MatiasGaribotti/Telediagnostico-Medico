@@ -81,23 +81,13 @@ Public Class PacienteBUS
         End Try
     End Sub
 
-    Public Function GetChatIfBeingDealt(idConsulta As Long) As Chat
+    Public Function GetChatStatusByIdConsulta(idConsulta As Long) As Chat.ChatStatus
+        Return ChatBUS.GetChatStatusByIdConsulta(idConsulta)
+    End Function
 
+    Public Function GetChat(idConsulta As Long) As Chat
         Dim ConsultaDAO As New ConsultaDAO
-        Dim active As Boolean
-        Try
-            active = ConsultaDAO.IsBeingDealt(idConsulta)
-        Catch ex As Exception
-            Throw New Exception("No se pudo determinar si la consulta fué atendida o no.")
-        End Try
-
-        If active Then
-            Return ChatBUS.GetChat(idConsulta)
-
-        Else
-            Return Nothing
-        End If
-
+        Return ChatBUS.GetChat(idConsulta)
     End Function
 
     Public Function GetMensajes(idChat As Long, Optional startIndex As Long = 0) As List(Of Mensaje)

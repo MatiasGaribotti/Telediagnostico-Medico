@@ -8,8 +8,50 @@ Public Class F_Chat
 
     Public Sub New(autoconsulta As Autoconsulta)
         InitializeComponent()
-        ConsultaMedica = New ConsultaMedica(autoconsulta) With {.Chat = Nothing}
+        ConsultaMedica = New ConsultaMedica(autoconsulta)
 
+    End Sub
+
+    Private Sub F_Chat_Load(sender As Object, e As EventArgs) Handles Me.Load
+        TimerChat.Interval = 1000
+        TimerChat.Start()
+    End Sub
+
+    Private Sub TimerChatStatus_Tick(sender As Object, e As EventArgs) Handles TimerChatStatus.Tick
+        Try
+            ConsultaMedica.Chat.Status = PacienteBUS.GetChatStatusByIdConsulta(ConsultaMedica.Id)
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TimerChat_Tick(sender As Object, e As EventArgs) Handles TimerChat.Tick
+        If ConsultaMedica.Chat.Status = Chat.ChatStatus.Waiting Then
+
+            If TimerChatStatus.Enabled = False Then
+                TimerChatStatus.Start()
+
+            End If
+
+        ElseIf ConsultaMedica.Chat.Status = Chat.ChatStatus.Active Then
+            ' Si es la primera iteración en la que se detectó que el
+            ' estado del chat es activo, paro el timer y cargo la
+            ' información de la consulta
+            If TimerChatStatus.Enabled = True Then
+                TimerChatStatus.Stop()
+                ConsultaMedica.Chat = PacienteBUS.GetChat(ConsultaMedica.Id)
+                ConsultaMedica.Medico = PacienteBUS.GetMedico(ConsultaMedica)
+                LoadInfoConsulta()
+                UnSetWaitingRoom()
+            Else
+                RefreshChat()
+
+            End If
+
+        Else
+            MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
+        End If
     End Sub
 
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
@@ -21,50 +63,40 @@ Public Class F_Chat
         End If
     End Sub
 
-    Private Sub F_Chat_Load(sender As Object, e As EventArgs) Handles Me.Load
-        SetWaitingRoom(True)
-        TimerChat.Interval = 1000
-        TimerChat.Start()
-    End Sub
+    Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
+        Dim result = MsgBox("¿Está seguro que desea cerrar sesión?", MsgBoxStyle.YesNo, "Confirmación")
 
-    Private Sub SetWaitingRoom(value As Boolean)
-        If value Then
-            BtnHistorialClinico.Enabled = False
-            BtnFinalizarChat.Enabled = False
-            PicWaiting.Visible = True
-            LblWaiting.Visible = True
-        Else
-            BtnHistorialClinico.Enabled = True
-            BtnFinalizarChat.Enabled = True
-            PicWaiting.Visible = False
-            LblWaiting.Visible = False
+        If result = MsgBoxResult.Yes Then
+            AutoconsultaBUS.instance.ResetInstance()
+            AuthenticationBUS.LogOut()
+
+            F_Login.Show()
+            Close()
         End If
     End Sub
 
-    Private Sub TimerChat_Tick(sender As Object, e As EventArgs) Handles TimerChat.Tick
+    Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
+        Dim result = MsgBox("¿Está seguro de que desea finalizar el chat?", MsgBoxStyle.YesNo)
 
-        If Me.ConsultaMedica.Chat Is Nothing Then
-            Dim output As Chat = GetChatIfBeingDealt(ConsultaMedica.Id)
+        If result = MsgBoxResult.Yes Then
+            Dim PacienteBUS As New PacienteBUS
+            PacienteBUS.EndChat(ConsultaMedica.Chat.Id)
 
-            If Not output Is Nothing Then
-                Me.ConsultaMedica.Chat = output
-                ConsultaMedica.Medico = PacienteBUS.GetMedico(ConsultaMedica)
-                If Not ConsultaMedica.Medico Is Nothing Then
-                    LoadInfoConsulta()
-
-                End If
-
-            End If
-
-        Else
-            SetWaitingRoom(False)
-            RefreshChat()
+            AutoconsultaBUS.instance.ResetInstance()
+            F_Sintomas.Show()
+            Close()
         End If
     End Sub
 
-    Private Function GetChatIfBeingDealt(idConsulta As Long) As Chat
-        Return PacienteBUS.GetChatIfBeingDealt(idConsulta)
-    End Function
+
+    Private Sub UnSetWaitingRoom()
+        BtnSend.Enabled = True
+        TxtMsg.Enabled = True
+        BtnHistorialClinico.Enabled = True
+        BtnFinalizarChat.Enabled = True
+        PnlChat.Controls.Remove(PicWaiting)
+        PnlChat.Controls.Remove(LblWaiting)
+    End Sub
 
     Private Sub LoadInfoConsulta()
         ' Información del Médico
@@ -102,17 +134,26 @@ Public Class F_Chat
                 ConsultaMedica.Chat.Mensajes.Add(newMensaje)
             Next
 
-            PnlChat.Controls.Clear()
+            Dim LastPoint As Point = GetLastPoint(PnlChat)
 
-            Dim LastPoint As Point = New Point(20, 20)
-
-            For Each mensaje As Mensaje In ConsultaMedica.Chat.Mensajes
+            For Each mensaje As Mensaje In newMensajes
                 PrintMensaje(mensaje, LastPoint)
 
             Next
 
         End If
     End Sub
+
+    Private Function GetLastPoint(panel As Panel)
+        If panel.Controls.Count > 0 Then
+            Dim point = panel.Controls.Item(panel.Controls.Count - 1).Location
+            point.Y += panel.Controls.Item(0).Height + 5
+            Return point
+
+        Else
+            Return New Point(20, 20)
+        End If
+    End Function
 
     Private Sub PrintMensaje(mensaje As Mensaje, ByRef lastpoint As Point)
         Dim txtMsj = mensaje.Persona.Nombre & ": " & mensaje.Texto
@@ -126,30 +167,5 @@ Public Class F_Chat
         lastpoint.Y += label.Height + 5
 
         PnlChat.Refresh()
-    End Sub
-
-    Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
-        Dim result = MsgBox("¿Está seguro que desea cerrar sesión?", MsgBoxStyle.YesNo, "Confirmación")
-
-        If result = MsgBoxResult.Yes Then
-            AutoconsultaBUS.instance.ResetInstance()
-            AuthenticationBUS.LogOut()
-
-            F_Login.Show()
-            Close()
-        End If
-    End Sub
-
-    Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
-        Dim result = MsgBox("¿Está seguro de que desea finalizar el chat?", MsgBoxStyle.YesNo)
-
-        If result = MsgBoxResult.Yes Then
-            Dim PacienteBUS As New PacienteBUS
-            PacienteBUS.EndChat(ConsultaMedica.Chat.Id)
-
-            AutoconsultaBUS.instance.ResetInstance()
-            F_Sintomas.Show()
-            Close()
-        End If
     End Sub
 End Class

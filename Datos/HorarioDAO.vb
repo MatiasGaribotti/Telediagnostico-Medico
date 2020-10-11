@@ -43,7 +43,4 @@ Public Class HorarioDAO
 
         End Try
     End Sub
-
-    Public Function
-
 End Class
