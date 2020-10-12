@@ -24,18 +24,6 @@ Public Class F_Main
         TimerMensajes.Start()
     End Sub
 
-    Private Sub LoadSolicitudesChats()
-        Dim MedicoBUS As New MedicoBUS
-
-        Try
-            Dim dt = MedicoBUS.GetChats()
-            DgvChats.DataSource = dt
-            DgvChats.Refresh()
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
     Private Sub TimerChatStatus_Tick(sender As Object, e As EventArgs) Handles TimerChatStatus.Tick
         Dim MedicoBUS As New MedicoBUS
         Dim deleteConsultas As New List(Of ConsultaMedica)
@@ -55,22 +43,10 @@ Public Class F_Main
         Next
     End Sub
 
-    Public Sub EndConsulta(consulta As ConsultaMedica)
-        ConsultasActivas.Remove(consulta)
-        Dim tab = GetTabByIdConsulta(consulta.Id)
-
-        If tab IsNot Nothing Then
-            TabControl1.TabPages.Remove(tab)
-            TabControl1.Refresh()
-
-        End If
-
-        MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
-    End Sub
-
     Private Sub TimerSolicitudes_Tick(sender As Object, e As EventArgs) Handles TimerSolicitudes.Tick
         LoadSolicitudesChats()
     End Sub
+
     Private Sub TimerMensajes_Tick(sender As Object, e As EventArgs) Handles TimerMensajes.Tick
 
         Dim MedicoBUS As New MedicoBUS
@@ -99,6 +75,86 @@ Public Class F_Main
             LoadSolicitudesChats()
         End If
     End Sub
+
+    Private Sub TabControl1_TabIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.TabIndexChanged
+        If TabControl1.SelectedTab.Name <> "TabSolicitudesChats" And TabControl1.SelectedTab.Name.Length > 0 Then
+            Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
+            Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
+
+            LoadInfoPaciente(consulta.Paciente)
+            LoadDgvSintomas(consulta.Sintomas)
+            LoadDgvDiagnosticos(consulta.Diagnosticos)
+
+        End If
+    End Sub
+
+    Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
+        Dim result = MsgBox("logout_confirmation", MsgBoxStyle.YesNo, "confirmation_title")
+
+        If result = MsgBoxResult.Yes Then
+            TimerChatStatus.Stop()
+            TimerMensajes.Stop()
+
+            Dim MedicoBUS As New MedicoBUS
+            For Each consulta In ConsultasActivas
+                MedicoBUS.EndChat(consulta.Chat.Id)
+            Next
+
+            AuthenticationBUS.LogOut()
+            F_Login.Show()
+            Close()
+        End If
+    End Sub
+
+    Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
+        If TabControl1.SelectedTab.Name <> "TabSolicitudesChats" Then
+            Dim result = MsgBox("¿Está seguro de que desea finalizar el chat con el paciente '" & TabControl1.SelectedTab.Text & "' ?", MsgBoxStyle.YesNo, "Confirmación")
+
+            If result = MsgBoxResult.Yes Then
+                Dim MedicoBUS As New MedicoBUS
+                Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
+                Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
+
+                Try
+                    MedicoBUS.EndChat(consulta.Chat.Id)
+                    ConsultasActivas.Remove(consulta)
+                    TabControl1.TabPages.Remove(TabControl1.SelectedTab)
+                    TabControl1.Refresh()
+                    MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+                End Try
+
+            End If
+
+        End If
+    End Sub
+
+    Private Sub LoadSolicitudesChats()
+        Dim MedicoBUS As New MedicoBUS
+
+        Try
+            Dim dt = MedicoBUS.GetChats()
+            DgvChats.DataSource = dt
+            DgvChats.Refresh()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Public Sub EndConsulta(consulta As ConsultaMedica)
+        ConsultasActivas.Remove(consulta)
+        Dim tab = GetTabByIdConsulta(consulta.Id)
+
+        If tab IsNot Nothing Then
+            TabControl1.TabPages.Remove(tab)
+            TabControl1.Refresh()
+
+        End If
+
+        MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
+    End Sub
+
 
     Private Sub StartChat()
         Dim MedicoBUS As New MedicoBUS
@@ -279,40 +335,7 @@ Public Class F_Main
         Next
     End Sub
 
-    Private Sub TabControl1_TabIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.TabIndexChanged
-        If TabControl1.SelectedTab.Name <> "TabSolicitudesChats" And TabControl1.SelectedTab.Name.Length > 0 Then
-            Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
-            Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
-
-            LoadInfoPaciente(consulta.Paciente)
-            LoadDgvSintomas(consulta.Sintomas)
-            LoadDgvDiagnosticos(consulta.Diagnosticos)
-
-        End If
-    End Sub
-
     Private Function GetIdConsultaFromSelectedTab() As Long
         Return CLng(TabControl1.SelectedTab.Name.Split("-").ElementAt(1))
     End Function
-
-    Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
-        Dim result = MsgBox("¿Está seguro de que desea finalizar el chat con el paciente '" & TabControl1.SelectedTab.Text & "' ?", MsgBoxStyle.YesNo, "Confirmación")
-
-        If result = MsgBoxResult.Yes Then
-            Dim MedicoBUS As New MedicoBUS
-            Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
-            Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
-
-            Try
-                MedicoBUS.EndChat(consulta.Chat.Id)
-                ConsultasActivas.Remove(consulta)
-                TabControl1.TabPages.Remove(TabControl1.SelectedTab)
-                TabControl1.Refresh()
-                MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-            End Try
-
-        End If
-    End Sub
 End Class

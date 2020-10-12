@@ -35,21 +35,25 @@ Public Class F_Chat
             End If
 
         ElseIf ConsultaMedica.Chat.Status = Chat.ChatStatus.Active Then
+            Static iteration = 0
             ' Si es la primera iteración en la que se detectó que el
             ' estado del chat es activo, paro el timer y cargo la
             ' información de la consulta
-            If TimerChatStatus.Enabled = True Then
-                TimerChatStatus.Stop()
+            If iteration = 0 Then
                 ConsultaMedica.Chat = PacienteBUS.GetChat(ConsultaMedica.Id)
                 ConsultaMedica.Medico = PacienteBUS.GetMedico(ConsultaMedica)
                 LoadInfoConsulta()
                 UnSetWaitingRoom()
+                iteration += 1
             Else
                 RefreshChat()
 
             End If
 
         Else
+            TimerChatStatus.Stop()
+            F_Sintomas.Show()
+            Close()
             MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
         End If
     End Sub
@@ -67,7 +71,8 @@ Public Class F_Chat
         Dim result = MsgBox("¿Está seguro que desea cerrar sesión?", MsgBoxStyle.YesNo, "Confirmación")
 
         If result = MsgBoxResult.Yes Then
-            AutoconsultaBUS.instance.ResetInstance()
+            Dim PacienteBUS As New PacienteBUS
+            PacienteBUS.EndChat(ConsultaMedica.Chat.Id)
             AuthenticationBUS.LogOut()
 
             F_Login.Show()
@@ -82,7 +87,6 @@ Public Class F_Chat
             Dim PacienteBUS As New PacienteBUS
             PacienteBUS.EndChat(ConsultaMedica.Chat.Id)
 
-            AutoconsultaBUS.instance.ResetInstance()
             F_Sintomas.Show()
             Close()
         End If

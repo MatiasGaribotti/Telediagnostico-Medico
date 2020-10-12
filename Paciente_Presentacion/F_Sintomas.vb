@@ -7,6 +7,7 @@ Public Class F_Sintomas
     Public Sub New()
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
+        AutoconsultaBUS.instance.ResetInstance()
         pattern = New Sintoma
         ConfigureSelectedColumnVisibility()
         SwitchSelection()
