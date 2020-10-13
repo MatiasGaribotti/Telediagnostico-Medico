@@ -1,6 +1,6 @@
 ﻿Public Class Horario
 
-    Public Property Ci As Integer
+    Public Property Empleado As Empleado
     Public Property Sucursal As Sucursal
     Public Property Dias As List(Of DiasSemana)
     Public Property HoraInicio As Date
@@ -16,12 +16,12 @@
         Domingo
     End Enum
 
-    Public Sub New(ci As String,
+    Public Sub New(empleado As Empleado,
                    sucursal As Sucursal,
                    dias As List(Of DiasSemana),
                    horaInicio As Date,
                    horaFin As Date)
-        Me.Ci = ci
+        Me.Empleado = empleado
         Me.Sucursal = sucursal
         Me.Dias = dias
         Me.HoraInicio = horaInicio

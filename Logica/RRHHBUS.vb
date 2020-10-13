@@ -133,8 +133,59 @@ Public Class RRHHBUS
         End Try
     End Sub
 
+    Public Function GetSucursales() As List(Of Sucursal)
+        Dim SucursalDAO As New SucursalDAO
+        Dim dt As DataTable
+        Dim listaSucursales As New List(Of Sucursal)
 
-    Public Sub AddHorarioEmpleado(pHorario As Horario)
+        Try
+            dt = SucursalDAO.GetSucursales()
+        Catch ex As Exception
+            Throw New Exception("ex_get_sucursales")
+
+        End Try
+
+        For Each row As DataRow In dt.Rows
+            Dim idSucursal = row.Field(Of Byte)("idSucursal")
+            Dim nombreSucursal = row.Field(Of String)("nombreSucursal")
+
+            Dim idDireccion = row.Field(Of Int64)("idDireccion")
+            Dim calle = row.Field(Of String)("calle")
+            Dim numero = row.Field(Of Int32)("numero")
+            Dim localidad = row.Field(Of String)("localidad")
+            Dim departamento As Direccion.Departamentos = [Enum].Parse(GetType(Direccion.Departamentos), row.Field(Of String)("departamento"))
+            Dim detalle = row.Field(Of String)("detalle")
+            Dim direccion As New Direccion(idDireccion, calle, numero, localidad, departamento, detalle)
+
+            listaSucursales.Add(New Sucursal(idSucursal, nombreSucursal, direccion))
+        Next
+
+        Return listaSucursales
+    End Function
+
+    Public Function GetHorariosEmpleados() As DataTable
+        Try
+            Dim HorarioDAO As New HorarioDAO
+            Return HorarioDAO.GetHorariosEmpleados()
+
+        Catch ex As Exception
+            Throw New Exception("No se pudo obtener los horarios de los empleados.")
+
+        End Try
+    End Function
+
+    Public Function GetHorariosEmpleados(searchPattern As Horario) As DataTable
+        Try
+            Dim HorarioDAO As New HorarioDAO
+            Return HorarioDAO.GetHorariosEmpleados(searchPattern)
+
+        Catch ex As Exception
+            Throw New Exception("No se pudo obtener los horarios de los empleados.")
+
+        End Try
+    End Function
+
+    Public Sub InsertHorarioEmpleado(pHorario As Horario)
 
         Try
             HorarioDAO = New HorarioDAO()
@@ -145,23 +196,27 @@ Public Class RRHHBUS
         End Try
     End Sub
 
-    Public Sub ModifyHorarioEmpleado(pHorario As Horario)
+    Public Sub ModifyHorarioEmpleado(newHorario As Horario, oldHorario As Horario)
+        Dim HorarioDAO As New HorarioDAO
 
+        Try
+            HorarioDAO.Modify(newHorario, oldHorario)
+        Catch ex As Exception
+            Throw New Exception("error_horario_modify")
+        End Try
     End Sub
 
     Public Sub DeleteHorarioEmpleado(horario As Horario)
+        Dim HorarioDAO As New HorarioDAO
 
+        Try
+            HorarioDAO.Delete(horario)
+
+        Catch ex As Exception
+            Throw New Exception("error_horario_delete")
+        End Try
     End Sub
 
-    Public Function GetHorariosEmpleados() As DataTable
-        Try
-            Dim HorarioDAO As New HorarioDAO
-            'Return HorarioDAO.GetHorariosEmpleados()
-        Catch ex As Exception
-            Throw New Exception("No se pudo obtener los horarios de los empleados.")
-
-        End Try
-    End Function
 
     Private Function GetEspecialidad(pNombre As String) As Especialidad
         MedicoDAO = New MedicoDAO

@@ -51,7 +51,7 @@ Public Class F_ABM
         Close()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) 
         F_Empleados_Horarios.Show()
         Close()
     End Sub
