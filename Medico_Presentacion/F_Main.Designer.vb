@@ -180,7 +180,7 @@ Partial Class F_Main
         Me.DgvDiagnosticos.EnableHeadersVisualStyles = False
         Me.DgvDiagnosticos.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvDiagnosticos.Location = New System.Drawing.Point(10, 10)
-        Me.DgvDiagnosticos.Margin = New System.Windows.Forms.Padding(10, 10, 10, 10)
+        Me.DgvDiagnosticos.Margin = New System.Windows.Forms.Padding(10)
         Me.DgvDiagnosticos.Name = "DgvDiagnosticos"
         Me.DgvDiagnosticos.ReadOnly = True
         Me.DgvDiagnosticos.RowHeadersVisible = False
@@ -314,7 +314,7 @@ Partial Class F_Main
         Me.DgvSintomas.EnableHeadersVisualStyles = False
         Me.DgvSintomas.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSintomas.Location = New System.Drawing.Point(10, 10)
-        Me.DgvSintomas.Margin = New System.Windows.Forms.Padding(10, 10, 10, 10)
+        Me.DgvSintomas.Margin = New System.Windows.Forms.Padding(10)
         Me.DgvSintomas.Name = "DgvSintomas"
         Me.DgvSintomas.ReadOnly = True
         Me.DgvSintomas.RowHeadersVisible = False
@@ -469,7 +469,7 @@ Partial Class F_Main
         Me.TabSolicitudesChats.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabSolicitudesChats.Location = New System.Drawing.Point(4, 22)
         Me.TabSolicitudesChats.Name = "TabSolicitudesChats"
-        Me.TabSolicitudesChats.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabSolicitudesChats.Padding = New System.Windows.Forms.Padding(3)
         Me.TabSolicitudesChats.Size = New System.Drawing.Size(1429, 1034)
         Me.TabSolicitudesChats.TabIndex = 0
         Me.TabSolicitudesChats.Text = "Chats"
@@ -541,7 +541,7 @@ Partial Class F_Main
         Me.Btn_Minimize.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
         Me.Btn_Minimize.HoverState.Parent = Me.Btn_Minimize
         Me.Btn_Minimize.IconColor = System.Drawing.Color.White
-        Me.Btn_Minimize.Location = New System.Drawing.Point(2692, 0)
+        Me.Btn_Minimize.Location = New System.Drawing.Point(1830, 0)
         Me.Btn_Minimize.Margin = New System.Windows.Forms.Padding(0)
         Me.Btn_Minimize.Name = "Btn_Minimize"
         Me.Btn_Minimize.ShadowDecoration.Parent = Me.Btn_Minimize
@@ -555,7 +555,7 @@ Partial Class F_Main
         Me.Btn_Exit.FillColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(123, Byte), Integer))
         Me.Btn_Exit.HoverState.Parent = Me.Btn_Exit
         Me.Btn_Exit.IconColor = System.Drawing.Color.White
-        Me.Btn_Exit.Location = New System.Drawing.Point(2737, 0)
+        Me.Btn_Exit.Location = New System.Drawing.Point(1875, 0)
         Me.Btn_Exit.Margin = New System.Windows.Forms.Padding(0)
         Me.Btn_Exit.Name = "Btn_Exit"
         Me.Btn_Exit.ShadowDecoration.Parent = Me.Btn_Exit
@@ -584,7 +584,6 @@ Partial Class F_Main
         Me.Controls.Add(Me.Btn_Exit)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "F_Main"
         Me.Text = "F_Main"
