@@ -116,7 +116,7 @@ Public Class F_Empleados_Horarios
 
     Private Sub ClearFields()
         TxtICi.ResetText()
-        CmbISucursal.SelectedIndex = 1
+        CmbISucursal.SelectedIndex = 0
 
         ChkILunes.Checked = False
         ChkIMartes.Checked = False
@@ -224,8 +224,8 @@ Public Class F_Empleados_Horarios
             CmbISucursal.Items.Add(sucursal.Nombre)
         Next
 
-        CmbBSucursal.SelectedIndex = 1
-        CmbISucursal.SelectedIndex = 1
+        CmbBSucursal.SelectedIndex = 0
+        CmbISucursal.SelectedIndex = 0
     End Sub
 
     Private Sub LoadDgv()

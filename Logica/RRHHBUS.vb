@@ -180,12 +180,21 @@ Public Class RRHHBUS
 
             Dim parsedCi As String = ParseCi(searchPattern.Empleado.Ci)
             Dim rangoHorario As String() = ParseRangoHorario(searchPattern.HoraInicio, searchPattern.HoraFin)
+            Dim sucursalNombre As String
 
-            If searchPattern.Dias.Count > 0 Then
-                Return HorarioDAO.GetHorariosEmpleados(searchPattern.Dias, parsedCi, rangoHorario.ElementAt(0), rangoHorario.ElementAt(1))
+            If searchPattern.Sucursal.Id = 0 Then
+                sucursalNombre = "%"
 
             Else
-                Return HorarioDAO.GetHorariosEmpleados(parsedCi, rangoHorario.ElementAt(0), rangoHorario.ElementAt(1))
+                sucursalNombre = searchPattern.Sucursal.Nombre
+            End If
+
+
+            If searchPattern.Dias.Count > 0 Then
+                Return HorarioDAO.GetHorariosEmpleados(searchPattern.Dias, parsedCi, rangoHorario.ElementAt(0), rangoHorario.ElementAt(1), sucursalNombre)
+
+            Else
+                Return HorarioDAO.GetHorariosEmpleados(parsedCi, rangoHorario.ElementAt(0), rangoHorario.ElementAt(1), sucursalNombre)
 
             End If
 
