@@ -4,6 +4,13 @@
     Public Property Telefonos As List(Of Integer)
     Public Property Direccion As Direccion
 
+    Public Sub New()
+        Me.Id = 0
+        Me.Nombre = ""
+        Me.Telefonos = New List(Of Integer)
+        Me.Direccion = New Direccion
+    End Sub
+
     Public Sub New(id As Byte)
         Me.Id = id
         Me.Nombre = ""

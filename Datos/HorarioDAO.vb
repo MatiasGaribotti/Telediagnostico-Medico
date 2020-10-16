@@ -29,7 +29,7 @@ Public Class HorarioDAO
         Return dt
     End Function
 
-    Public Function GetHorariosEmpleados(dias As List(Of String), Optional ci As String = "", Optional horaEntrada As String = "00:00", Optional horaSalida As String = "23:59") As DataTable
+    Public Function GetHorariosEmpleados(dias As List(Of Horario.DiasSemana), Optional ci As String = "", Optional horaEntrada As String = "00:00", Optional horaSalida As String = "23:59") As DataTable
         Dim rs As Recordset
         Dim dt As New DataTable
         Dim da As New OleDb.OleDbDataAdapter
@@ -38,10 +38,12 @@ Public Class HorarioDAO
         queryDias = " AND ("
 
         For i As Integer = 0 To dias.Count - 1
-            queryDias += "Dia='" & dias(i) & "'"
+            queryDias += "Dia=" & dias(i)
 
             If i < dias.Count - 1 Then
                 queryDias += " OR "
+            Else
+                queryDias += ")"
             End If
         Next
 
@@ -50,8 +52,8 @@ Public Class HorarioDAO
         Dim query As String = "SELECT * FROM Horarios_Empleados " &
                                 " WHERE ci LIKE '" & ci & "%'" &
                                 queryDias &
-                                " AND (Entrada BETWEEN '" & horaEntrada & "' AND '" & horaSalida & ")" &
-                                " AND (Salida BETWEEN '" & horaEntrada & "' AND '" & horaSalida & ")" &
+                                " AND (Entrada BETWEEN '" & horaEntrada & "' AND '" & horaSalida & "')" &
+                                " AND (Salida BETWEEN '" & horaEntrada & "' AND '" & horaSalida & "')" &
                                 " ORDER BY 'Nombre Completo';"
         Console.WriteLine(query)
 
@@ -81,8 +83,8 @@ Public Class HorarioDAO
         Dim da As New OleDb.OleDbDataAdapter
         Dim query As String = "SELECT * FROM Horarios_Empleados " &
                                 " WHERE CI Like '" & ci & "%'" &
-                                " AND (Entrada BETWEEN '" & horaEntrada & "' AND '" & horaSalida & ")" &
-                                " AND (Salida BETWEEN '" & horaEntrada & "' AND '" & horaSalida & ")" &
+                                " AND (Entrada BETWEEN '" & horaEntrada & "' AND '" & horaSalida & "')" &
+                                " AND (Salida BETWEEN '" & horaEntrada & "' AND '" & horaSalida & "')" &
                                 " ORDER BY 'Nombre Completo';"
         Try
             Conn = Connect()

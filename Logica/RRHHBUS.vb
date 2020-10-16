@@ -177,12 +177,44 @@ Public Class RRHHBUS
     Public Function GetHorariosEmpleados(searchPattern As Horario) As DataTable
         Try
             Dim HorarioDAO As New HorarioDAO
-            Return HorarioDAO.GetHorariosEmpleados(searchPattern)
+
+            Dim parsedCi As String = ParseCi(searchPattern.Empleado.Ci)
+            Dim rangoHorario As String() = ParseRangoHorario(searchPattern.HoraInicio, searchPattern.HoraFin)
+
+            If searchPattern.Dias.Count > 0 Then
+                Return HorarioDAO.GetHorariosEmpleados(searchPattern.Dias, parsedCi, rangoHorario.ElementAt(0), rangoHorario.ElementAt(1))
+
+            Else
+                Return HorarioDAO.GetHorariosEmpleados(parsedCi, rangoHorario.ElementAt(0), rangoHorario.ElementAt(1))
+
+            End If
+
 
         Catch ex As Exception
             Throw New Exception("No se pudo obtener los horarios de los empleados.")
 
         End Try
+    End Function
+
+    Private Function ParseCi(ci As Integer) As String
+        If ci = -1 Then
+            Return ""
+        Else
+            Return ci.ToString
+        End If
+    End Function
+
+    Private Function ParseRangoHorario(entrada As Date, salida As Date) As String()
+        Dim rangoHorario(2) As String
+
+        If entrada.Year = 1 And salida.Year = 1 Then
+            rangoHorario = {"00:00", "23:59"}
+
+        Else
+            rangoHorario = {entrada.ToShortTimeString, salida.ToShortTimeString}
+        End If
+
+        Return rangoHorario
     End Function
 
     Public Sub InsertHorarioEmpleado(pHorario As Horario)

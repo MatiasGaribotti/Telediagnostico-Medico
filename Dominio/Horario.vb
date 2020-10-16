@@ -16,6 +16,13 @@
         Domingo
     End Enum
 
+    Public Sub New()
+        Me.Empleado = New Empleado
+        Me.Sucursal = New Sucursal()
+        Me.Dias = New List(Of DiasSemana)
+
+    End Sub
+
     Public Sub New(empleado As Empleado,
                    sucursal As Sucursal,
                    dias As List(Of DiasSemana),

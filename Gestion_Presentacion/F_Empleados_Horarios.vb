@@ -41,8 +41,9 @@ Public Class F_Empleados_Horarios
         Dim dt As DataTable
 
         Try
-            Dim RRHHHBUS As New RRHHBUS
-
+            Dim RRHHBUS As New RRHHBUS
+            dt = RRHHBUS.GetHorariosEmpleados(pattern)
+            LoadDgv(dt)
         Catch ex As Exception
             MsgBox("error_horario_buscar",MsgBoxStyle.Critical,"error")
         End Try
@@ -152,25 +153,44 @@ Public Class F_Empleados_Horarios
     End Function
 
     Private Function GetSearchPattern() As Horario
+        Dim horario As New Horario
+        Const TIME_FORMAT As String = "##:##"
 
-        Dim ci As Integer = Integer.Parse(TxtBCi.Text)
+
+        If TxtBCi.Text.Length > 0 Then
+            Integer.TryParse(TxtBCi.Text, horario.Empleado.Ci)
+
+        End If
+
         Dim nombreSucursal As String = CmbBSucursal.SelectedItem.ToString
-        Dim strHorarioEntrada As String() = TxtBEntrada.Text.Split(":")
-        Dim horaEntrada As Integer = Integer.Parse(strHorarioEntrada.ElementAt(0))
-        Dim minutosEntrada As Integer = Integer.Parse(strHorarioEntrada.ElementAt(1))
+        horario.Sucursal = GetSucursalByName(nombreSucursal)
+        horario.Dias = GetCheckedDiasSearch()
 
-        Dim sucursal As Sucursal = GetSucursalByName(nombreSucursal)
 
-        Dim strHorarioSalida As String() = TxtBSalida.Text.Split(":")
-        Dim horaSalida As Integer = Integer.Parse(strHorarioSalida.ElementAt(0))
-        Dim minutosSalida As Integer = Integer.Parse(strHorarioSalida.ElementAt(1))
+        If TxtBEntrada.Text Like TIME_FORMAT And TxtBSalida.Text Like TIME_FORMAT Then
+            Dim strHorarioEntrada As String() = TxtBEntrada.Text.Split(":")
+            Dim horaEntrada, minutosEntrada, horaSalida, minutosSalida As Integer
 
-        Dim horarioEntrada As New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, horaEntrada, minutosEntrada, 0)
-        Dim horarioSalida As New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, horaSalida, minutosSalida, 0)
+            Dim horarioEntrada As New Date
+            Dim horarioSalida As New Date
 
-        Dim diasGuardia As List(Of Horario.DiasSemana) = GetCheckedDiasInsert()
+            horaEntrada = Integer.Parse(strHorarioEntrada.ElementAt(0))
+            minutosEntrada = Integer.Parse(strHorarioEntrada.ElementAt(1))
 
-        Return New Horario(New Empleado(ci), sucursal, diasGuardia, horarioEntrada, horarioSalida)
+            Dim strHorarioSalida As String() = TxtBSalida.Text.Split(":")
+
+            horaSalida = Integer.Parse(strHorarioSalida.ElementAt(0))
+            minutosSalida = Integer.Parse(strHorarioSalida.ElementAt(1))
+
+            If horaEntrada < 24 And horaSalida < 24 And minutosEntrada < 60 And minutosSalida < 60 Then
+                horario.HoraInicio = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, horaEntrada, minutosEntrada, 0)
+                horario.HoraFin = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, horaSalida, minutosSalida, 0)
+
+            End If
+
+        End If
+
+        Return horario
     End Function
 
     Private Sub GetSucursales()
@@ -190,7 +210,7 @@ Public Class F_Empleados_Horarios
             If sucursal.Nombre = name Then Return sucursal
         Next
 
-        Return Nothing
+        Return New Sucursal(0)
     End Function
 
     Private Sub LoadCmbSucursales()
@@ -203,6 +223,9 @@ Public Class F_Empleados_Horarios
             CmbBSucursal.Items.Add(sucursal.Nombre)
             CmbISucursal.Items.Add(sucursal.Nombre)
         Next
+
+        CmbBSucursal.SelectedIndex = 1
+        CmbISucursal.SelectedIndex = 1
     End Sub
 
     Private Sub LoadDgv()
@@ -211,6 +234,17 @@ Public Class F_Empleados_Horarios
 
         Try
             dt = RRHHBUS.GetHorariosEmpleados()
+            DgvHorarios.DataSource = dt
+            DgvHorarios.Refresh()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub LoadDgv(dt As DataTable)
+
+        Try
             DgvHorarios.DataSource = dt
             DgvHorarios.Refresh()
 

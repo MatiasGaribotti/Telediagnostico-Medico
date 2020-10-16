@@ -17,7 +17,7 @@
     Public Property IsRecepcionista As Boolean
 
     Public Sub New()
-        Me.Ci = 11111111
+        Me.Ci = -1
         Me.Nombre = "Default"
         Me.ApellidoP = "Default"
         Me.ApellidoM = "Default"
