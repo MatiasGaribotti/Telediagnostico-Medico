@@ -72,13 +72,13 @@ Partial Class ChatUtilities
         Me.TxtMsg.Size = New System.Drawing.Size(1295, 70)
         Me.TxtMsg.TabIndex = 7
         '
-        'TextBoxForMsg
+        'ChatUtilities
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.BtnSend)
         Me.Controls.Add(Me.TxtMsg)
-        Me.Name = "TextBoxForMsg"
+        Me.Name = "ChatUtilities"
         Me.Size = New System.Drawing.Size(1387, 86)
         Me.ResumeLayout(False)
 

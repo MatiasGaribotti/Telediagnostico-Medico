@@ -32,7 +32,6 @@ Public Class AutoconsultaBUS
         Dim summary As New List(Of Enfermedad)
 
         For Each sintoma As Sintoma In consulta.Sintomas
-            'sintoma.Enfermedades = SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
 
             For Each enfermedad In SintomaBUS.GetEnfermedadesAsociadas(sintoma.Id)
                 If Not ContainsEnfermedad(enfermedad.Id, summary) Then
@@ -91,10 +90,10 @@ Public Class AutoconsultaBUS
         Return False
     End Function
 
-    Public Sub Insert()
+    Public Sub Insert(Optional createChat As Boolean = False)
         Dim AutoconsultaDAO As New ConsultaDAO
         Try
-            consulta = AutoconsultaDAO.Insert(consulta)
+            consulta = AutoconsultaDAO.Insert(consulta, createChat)
         Catch ex As Exception
             Throw ex
         End Try

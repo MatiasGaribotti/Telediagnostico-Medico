@@ -4,6 +4,18 @@ Imports Logica
 
 Public Class ChatUtilities
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
+        SendMsg()
+    End Sub
+
+    Private Sub TxtMsg_KeyUp(sender As Object, e As KeyEventArgs) Handles TxtMsg.KeyUp
+        If e.KeyCode = Keys.Enter Then
+            SendMsg()
+            TxtMsg.ResetText()
+
+        End If
+    End Sub
+
+    Private Sub SendMsg()
         If TxtMsg.Text.Length > 0 Then
             Dim MedicoBUS As New MedicoBUS
 
@@ -18,6 +30,4 @@ Public Class ChatUtilities
 
         End If
     End Sub
-
-
 End Class

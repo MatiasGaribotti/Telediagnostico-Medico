@@ -1,5 +1,6 @@
 ﻿Imports Dominio
 Imports Logica
+Imports System.ComponentModel
 Imports System.Threading
 
 Public Class F_Main
@@ -22,18 +23,6 @@ Public Class F_Main
 
         TimerMensajes.Interval = 1000
         TimerMensajes.Start()
-    End Sub
-
-    Private Sub LoadSolicitudesChats()
-        Dim MedicoBUS As New MedicoBUS
-
-        Try
-            Dim dt = MedicoBUS.GetChats()
-            DgvChats.DataSource = dt
-            DgvChats.Refresh()
-        Catch ex As Exception
-
-        End Try
     End Sub
 
     Private Sub TimerChatStatus_Tick(sender As Object, e As EventArgs) Handles TimerChatStatus.Tick
@@ -91,12 +80,59 @@ Public Class F_Main
     End Sub
 
     Private Sub DgvChats_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvChats.CellDoubleClick
-        Dim result = MsgBox("¿Está seguro de que desea iniciar el chat con el paciente seleccionado?", MsgBoxStyle.YesNo, "Confirmación")
+        If TabControl1.TabPages.Count <= 4 Then
+            Dim result = MsgBox("¿Está seguro de que desea iniciar el chat con el paciente seleccionado?", MsgBoxStyle.YesNo, "Confirmación")
 
-        If result = vbYes Then
-            StartChat()
-            SetUpChat(ConsultasActivas.Last)
-            LoadSolicitudesChats()
+            If result = vbYes Then
+                StartChat()
+                SetUpChat(ConsultasActivas.Last)
+                LoadSolicitudesChats()
+            End If
+
+        End If
+    End Sub
+
+    Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
+        Dim result = MsgBox("confirmacion_cerrar_sesion", MsgBoxStyle.YesNo, "confirmacion_titulo")
+
+        If result = MsgBoxResult.Yes Then
+            AuthenticationBUS.LogOut()
+
+            F_Login.Show()
+            Close()
+        End If
+    End Sub
+
+    Private Sub TabControl1_TabIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.TabIndexChanged
+        If TabControl1.SelectedTab.Name <> "TabSolicitudesChats" And TabControl1.SelectedTab.Name.Length > 0 Then
+            Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
+            Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
+
+            LoadInfoPaciente(consulta.Paciente)
+            LoadDgvSintomas(consulta.Sintomas)
+            LoadDgvDiagnosticos(consulta.Diagnosticos)
+
+        End If
+    End Sub
+
+    Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
+        Dim result = MsgBox("¿Está seguro de que desea finalizar el chat con el paciente '" & TabControl1.SelectedTab.Text & "' ?", MsgBoxStyle.YesNo, "Confirmación")
+
+        If result = MsgBoxResult.Yes Then
+            Dim MedicoBUS As New MedicoBUS
+            Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
+            Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
+
+            Try
+                MedicoBUS.EndChat(consulta.Chat.Id)
+                ConsultasActivas.Remove(consulta)
+                TabControl1.TabPages.Remove(TabControl1.SelectedTab)
+                TabControl1.Refresh()
+                MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            End Try
+
         End If
     End Sub
 
@@ -132,6 +168,18 @@ Public Class F_Main
 
         Catch ex As Exception
             MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub LoadSolicitudesChats()
+        Dim MedicoBUS As New MedicoBUS
+
+        Try
+            Dim dt = MedicoBUS.GetChats()
+            DgvChats.DataSource = dt
+            DgvChats.Refresh()
+        Catch ex As Exception
+
         End Try
     End Sub
 
@@ -279,40 +327,20 @@ Public Class F_Main
         Next
     End Sub
 
-    Private Sub TabControl1_TabIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.TabIndexChanged
-        If TabControl1.SelectedTab.Name <> "TabSolicitudesChats" And TabControl1.SelectedTab.Name.Length > 0 Then
-            Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
-            Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
-
-            LoadInfoPaciente(consulta.Paciente)
-            LoadDgvSintomas(consulta.Sintomas)
-            LoadDgvDiagnosticos(consulta.Diagnosticos)
-
-        End If
-    End Sub
-
     Private Function GetIdConsultaFromSelectedTab() As Long
         Return CLng(TabControl1.SelectedTab.Name.Split("-").ElementAt(1))
     End Function
 
-    Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
-        Dim result = MsgBox("¿Está seguro de que desea finalizar el chat con el paciente '" & TabControl1.SelectedTab.Text & "' ?", MsgBoxStyle.YesNo, "Confirmación")
+    Private Sub EndAllChats()
+        Dim MedicoBUS As New MedicoBUS
 
-        If result = MsgBoxResult.Yes Then
-            Dim MedicoBUS As New MedicoBUS
-            Dim idConsulta As Long = GetIdConsultaFromSelectedTab()
-            Dim consulta As ConsultaMedica = GetConsultaActivaById(idConsulta)
+        For Each consulta In ConsultasActivas
+            MedicoBUS.EndChat(consulta.Chat.Id)
 
-            Try
-                MedicoBUS.EndChat(consulta.Chat.Id)
-                ConsultasActivas.Remove(consulta)
-                TabControl1.TabPages.Remove(TabControl1.SelectedTab)
-                TabControl1.Refresh()
-                MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-            End Try
+        Next
+    End Sub
 
-        End If
+    Private Sub F_Main_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        EndAllChats()
     End Sub
 End Class

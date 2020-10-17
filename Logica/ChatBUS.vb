@@ -1,5 +1,8 @@
 ﻿Imports Dominio
 Imports Datos
+Imports System.IO
+Imports System.Text
+
 Public Class ChatBUS
 
     Friend Shared Sub StartChat(idConsulta As Long, ciMedico As Integer)
@@ -17,6 +20,8 @@ Public Class ChatBUS
 
         Try
             ConsultaDAO.EndChat(idChat)
+            SendChatCopyByEmail(idChat)
+
         Catch ex As Exception
             Throw New Exception("No se pudo finalizar el chat.")
         End Try
@@ -35,12 +40,10 @@ Public Class ChatBUS
         Dim row = dt.Rows.Item(0)
         Dim ciMedico As Long = 0
 
-        Try
+        If row.Field(Of Object)("ciMedico") IsNot Nothing Then
             ciMedico = row.Field(Of Int64)("ciMedico")
 
-        Catch ex As Exception
-
-        End Try
+        End If
 
         Dim finalizado = CBool(row.Field(Of Int16)("finalizado"))
 
@@ -132,4 +135,29 @@ Public Class ChatBUS
         Return greatest
     End Function
 
+    Friend Shared Sub SendChatCopyByEmail(idChat As Long)
+        Dim path = My.Computer.FileSystem.CurrentDirectory & "\" & Date.Now.ToShortDateString & "-" & Date.Now.ToLongTimeString.Replace(":", ".") & "-Copia_de_Chat.txt"
+
+        Try
+            Dim mensajes As List(Of Mensaje) = GetMensajesChat(idChat)
+            If mensajes.Count > 0 Then
+                Dim fs As FileStream = File.Create(path)
+
+                For Each mensaje In mensajes
+                    Dim text As String = mensaje.Timestamp & "-" & mensaje.Persona.Nombre & ": " & mensaje.Texto & vbCrLf
+                    Console.WriteLine(text)
+
+                    Dim info As Byte() = New UTF8Encoding(True).GetBytes(text)
+                    fs.Write(info, 0, info.Length)
+
+                Next
+
+                fs.Close()
+
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Sub
 End Class

@@ -143,9 +143,8 @@ Public Class F_Sintomas
                 Dim result = MsgBox(outmsg, MsgBoxStyle.YesNo, "Diagnóstico")
 
                 If result = MsgBoxResult.Yes Then
-                    AutoconsultaBUS.instance.Insert()
+                    AutoconsultaBUS.instance.Insert(True)
 
-                    MsgBox("Su consulta esta a la espera de ser atendidad por uno de nuestros profesionales. Por favor aguarde.", MsgBoxStyle.Information, "Consulta Ingresada")
                     'Iniciamos el chat
                     Dim chat As New F_Chat(AutoconsultaBUS.instance.consulta)
                     chat.Show()

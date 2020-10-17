@@ -35,38 +35,41 @@ Public Class F_Chat
             End If
 
         ElseIf ConsultaMedica.Chat.Status = Chat.ChatStatus.Active Then
+            Static iteration = 0
             ' Si es la primera iteración en la que se detectó que el
             ' estado del chat es activo, paro el timer y cargo la
             ' información de la consulta
-            If TimerChatStatus.Enabled = True Then
-                TimerChatStatus.Stop()
+            If iteration = 0 Then
                 ConsultaMedica.Chat = PacienteBUS.GetChat(ConsultaMedica.Id)
                 ConsultaMedica.Medico = PacienteBUS.GetMedico(ConsultaMedica)
                 LoadInfoConsulta()
                 UnSetWaitingRoom()
+                iteration += 1
             Else
                 RefreshChat()
 
             End If
 
         Else
+            AutoconsultaBUS.instance.ResetInstance()
+            TimerChatStatus.Stop()
+            TimerChat.Stop()
+            F_Sintomas.Show()
+            Close()
             MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
         End If
     End Sub
 
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
-        If TxtMsg.Text.Length > 0 And Not String.IsNullOrWhiteSpace(TxtMsg.Text) Then
-
-            Dim PacienteBUS As New PacienteBUS
-            PacienteBUS.SendMsg(ConsultaMedica.Chat.Id, New Mensaje(Env.CurrentUser, TxtMsg.Text, Date.Now))
-
-        End If
+        SendMsg()
     End Sub
 
     Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
         Dim result = MsgBox("¿Está seguro que desea cerrar sesión?", MsgBoxStyle.YesNo, "Confirmación")
 
         If result = MsgBoxResult.Yes Then
+            PacienteBUS.EndChat(ConsultaMedica.Chat.Id)
+
             AutoconsultaBUS.instance.ResetInstance()
             AuthenticationBUS.LogOut()
 
@@ -167,5 +170,21 @@ Public Class F_Chat
         lastpoint.Y += label.Height + 5
 
         PnlChat.Refresh()
+    End Sub
+
+    Private Sub SendMsg()
+        If TxtMsg.Text.Length > 0 And Not String.IsNullOrWhiteSpace(TxtMsg.Text) Then
+
+            Dim PacienteBUS As New PacienteBUS
+            PacienteBUS.SendMsg(ConsultaMedica.Chat.Id, New Mensaje(Env.CurrentUser, TxtMsg.Text, Date.Now))
+
+        End If
+    End Sub
+
+    Private Sub TxtMsg_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtMsg.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            SendMsg()
+            TxtMsg.ResetText()
+        End If
     End Sub
 End Class

@@ -3,7 +3,7 @@ Imports Dominio
 Public Class ConsultaDAO
     Inherits DBConnection
 
-    Public Function Insert(pConsulta As Autoconsulta) As Autoconsulta
+    Public Function Insert(pConsulta As Autoconsulta, Optional createChat As Boolean = False) As Autoconsulta
         Try
             Conn = Connect()
         Catch ex As Exception
@@ -28,7 +28,10 @@ Public Class ConsultaDAO
                 InsertDiagnostico(pConsulta.Id, enfermedad.Id, True)
             Next
 
-            InsertChat(pConsulta.Id)
+            If createChat Then
+                InsertChat(pConsulta.Id)
+
+            End If
 
             Conn.CommitTrans()
 
