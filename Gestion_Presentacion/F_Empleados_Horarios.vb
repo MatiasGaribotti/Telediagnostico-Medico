@@ -63,6 +63,7 @@ Public Class F_Empleados_Horarios
                     MsgBox("horario_ingresar_exito", MsgBoxStyle.Information, "str_informacion")
 
                 Case Modos.Modificar
+                    ChangeMode(Modos.Ingresar)
                     RRHHBUS.ModifyHorarioEmpleado(horario, tempHorario)
                     MsgBox("horario_modificar_exito", MsgBoxStyle.Information, "str_informacion")
             End Select

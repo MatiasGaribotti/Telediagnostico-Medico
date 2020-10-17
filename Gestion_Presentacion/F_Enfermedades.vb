@@ -138,32 +138,37 @@ Public Class F_Enfermedades
 
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-        Dim msg As String = " enfermedades eliminadas." & vbCrLf
+        Dim result = MsgBox("enfermedades_eliminar_confirmacion", MsgBoxStyle.YesNo, "confirmacion")
 
-        Try
-            Dim enfermedades = GetSelected()
-            Dim count = enfermedades.Count
-            For Each enfermedad In enfermedades
-                Try
-                    AdministradorBUS.DeleteEnfermedad(enfermedad.Id)
-                Catch ex As Exception
-                    msg += ex.Message & enfermedad.Nombre & "." & vbCrLf
-                    count -= 1
-                End Try
-            Next
-            msg = count & msg
+        If result = MsgBoxResult.Yes Then
+            Dim msg As String = " enfermedades eliminadas." & vbCrLf
 
-            If msg.Contains("No se pudo") Then
-                MsgBox(msg, MsgBoxStyle.Exclamation, "Advertencia")
-            Else
-                MsgBox(msg, MsgBoxStyle.Information, "Información")
-            End If
+            Try
+                Dim enfermedades = GetSelected()
+                Dim count = enfermedades.Count
+                For Each enfermedad In enfermedades
+                    Try
+                        AdministradorBUS.DeleteEnfermedad(enfermedad.Id)
+                    Catch ex As Exception
+                        msg += ex.Message & enfermedad.Nombre & "." & vbCrLf
+                        count -= 1
+                    End Try
+                Next
+                msg = count & msg
 
-            LoadDgv()
+                If msg.Contains("No se pudo") Then
+                    MsgBox(msg, MsgBoxStyle.Exclamation, "Advertencia")
+                Else
+                    MsgBox(msg, MsgBoxStyle.Information, "Información")
+                End If
 
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
+                LoadDgv()
+
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            End Try
+
+        End If
     End Sub
 
     ''' <summary>
@@ -209,5 +214,19 @@ Public Class F_Enfermedades
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub BtnImportar_Click(sender As Object, e As EventArgs) Handles BtnImportar.Click
+        OFDialogCSV.Filter = "Archivos CSV (*.csv)|*.csv"
+
+        If OFDialogCSV.ShowDialog() = DialogResult.OK Then
+            Try
+                EnfermedadBUS.ImportCSV(OFDialogCSV.FileName)
+                LoadDgv()
+                MsgBox("enfermedad_import_exito", MsgBoxStyle.Information, "informacion")
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "error_title")
+            End Try
+        End If
     End Sub
 End Class

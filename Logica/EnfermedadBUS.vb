@@ -1,5 +1,7 @@
 ﻿Imports Datos
 Imports Dominio
+Imports Microsoft.VisualBasic.FileIO
+
 Public Class EnfermedadBUS
 
     ''' <summary>
@@ -72,4 +74,35 @@ Public Class EnfermedadBUS
         End Try
     End Function
 
+    Public Sub ImportCSV(path As String)
+        Dim EnfermedadDAO As New EnfermedadDAO
+        Dim listaEnfermedades As New List(Of Enfermedad)
+        Dim tfp As New TextFieldParser(path)
+        tfp.SetDelimiters(";")
+
+        Try
+            'Salto los headers
+            tfp.ReadFields()
+
+            While Not tfp.EndOfData
+                Dim fields = tfp.ReadFields
+                Dim currentEnfermedad As Enfermedad
+
+                Dim nombre As String = fields(0)
+                Dim urgencia = [Enum].Parse(GetType(Enfermedad.Urgencias), fields(1))
+                Dim tipoEnfermedad = fields(2)
+                Dim descripcion As String = fields(3)
+
+                currentEnfermedad = New Enfermedad(nombre, descripcion, urgencia)
+
+                listaEnfermedades.Add(currentEnfermedad)
+            End While
+
+            EnfermedadDAO.Insert(listaEnfermedades)
+
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            Throw New Exception("ex_csv_file")
+        End Try
+    End Sub
 End Class

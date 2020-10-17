@@ -107,6 +107,38 @@ Public Class EnfermedadDAO
 
     End Sub
 
+    Public Sub Insert(enfermedades As List(Of Enfermedad))
+        Try
+            Conn = Connect()
+        Catch ex As ApplicationException
+            Throw ex
+        End Try
+
+        Conn.BeginTrans()
+        Try
+
+            For Each enfermedad In enfermedades
+
+                Dim insertQuery = "INSERT INTO enfermedades(nombre, descripcion, urgencia, cronica) " &
+                              "VALUES('" & enfermedad.Nombre & "','" & enfermedad.Descripcion & "'," & enfermedad.Urgencia & ", " & enfermedad.Cronica & ");"
+
+                Conn.Execute(insertQuery)
+
+            Next
+
+            Conn.CommitTrans()
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            Conn.RollbackTrans()
+            Throw New Exception(ex.Message)
+
+        Finally
+            Conn.Close()
+
+        End Try
+
+    End Sub
+
     Public Sub Modify(enfermedad As Enfermedad)
         Dim query = "UPDATE enfermedades SET nombre='" & enfermedad.Nombre & "', descripcion='" & enfermedad.Descripcion & "', urgencia=" & enfermedad.Urgencia & ", cronica=" & enfermedad.Cronica & " WHERE id=" & enfermedad.Id & ";"
 

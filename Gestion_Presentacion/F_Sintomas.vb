@@ -272,4 +272,18 @@ Public Class F_Sintomas
     Private Sub BtnIDelItem_Click(sender As Object, e As EventArgs) Handles BtnIDelItem.Click
         CmbIEnfermedad.Items.Remove(CmbIEnfermedad.SelectedItem)
     End Sub
+
+    Private Sub BtnImportar_Click(sender As Object, e As EventArgs) Handles BtnImportar.Click
+        OFDialogCSV.Filter = "Archivos CSV (*.csv)|*.csv"
+
+        If OFDialogCSV.ShowDialog() = DialogResult.OK Then
+            Try
+                SintomaBUS.ImportCSV(OFDialogCSV.FileName)
+                LoadDgv()
+                MsgBox("sintoma_import_exito", MsgBoxStyle.Information, "informacion")
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "error_title")
+            End Try
+        End If
+    End Sub
 End Class

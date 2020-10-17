@@ -26,10 +26,9 @@ Partial Class F_Enfermedades
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlSide = New Guna.UI2.WinForms.Guna2Panel()
+        Me.ChkBCronica = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.ChkICronica = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
-        Me.LblImportar = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.TxtImportar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtIDescripcion = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblIDescripcion = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -52,7 +51,7 @@ Partial Class F_Enfermedades
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.DgvEnfermedades = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.ChkBCronica = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.OFDialogCSV = New System.Windows.Forms.OpenFileDialog()
         Me.PnlSide.SuspendLayout()
         Me.PnlDgv.SuspendLayout()
         CType(Me.DgvEnfermedades, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,8 +62,6 @@ Partial Class F_Enfermedades
         Me.PnlSide.Controls.Add(Me.ChkBCronica)
         Me.PnlSide.Controls.Add(Me.ChkICronica)
         Me.PnlSide.Controls.Add(Me.BtnCancelar)
-        Me.PnlSide.Controls.Add(Me.LblImportar)
-        Me.PnlSide.Controls.Add(Me.TxtImportar)
         Me.PnlSide.Controls.Add(Me.BtnIngresar)
         Me.PnlSide.Controls.Add(Me.TxtIDescripcion)
         Me.PnlSide.Controls.Add(Me.LblIDescripcion)
@@ -88,6 +85,27 @@ Partial Class F_Enfermedades
         Me.PnlSide.ShadowDecoration.Parent = Me.PnlSide
         Me.PnlSide.Size = New System.Drawing.Size(573, 1080)
         Me.PnlSide.TabIndex = 0
+        '
+        'ChkBCronica
+        '
+        Me.ChkBCronica.Animated = True
+        Me.ChkBCronica.AutoSize = True
+        Me.ChkBCronica.BackColor = System.Drawing.Color.Transparent
+        Me.ChkBCronica.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ChkBCronica.CheckedState.BorderRadius = 0
+        Me.ChkBCronica.CheckedState.BorderThickness = 0
+        Me.ChkBCronica.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ChkBCronica.Font = New System.Drawing.Font("Roboto", 16.0!)
+        Me.ChkBCronica.Location = New System.Drawing.Point(237, 194)
+        Me.ChkBCronica.Name = "ChkBCronica"
+        Me.ChkBCronica.Size = New System.Drawing.Size(106, 31)
+        Me.ChkBCronica.TabIndex = 109
+        Me.ChkBCronica.Text = "Crónica"
+        Me.ChkBCronica.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.ChkBCronica.UncheckedState.BorderRadius = 0
+        Me.ChkBCronica.UncheckedState.BorderThickness = 0
+        Me.ChkBCronica.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.ChkBCronica.UseVisualStyleBackColor = False
         '
         'ChkICronica
         '
@@ -131,43 +149,6 @@ Partial Class F_Enfermedades
         Me.BtnCancelar.TabIndex = 107
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.UseTransparentBackground = True
-        '
-        'LblImportar
-        '
-        Me.LblImportar.BackColor = System.Drawing.Color.Transparent
-        Me.LblImportar.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblImportar.Location = New System.Drawing.Point(56, 616)
-        Me.LblImportar.Name = "LblImportar"
-        Me.LblImportar.Size = New System.Drawing.Size(83, 27)
-        Me.LblImportar.TabIndex = 106
-        Me.LblImportar.Text = "Importar"
-        '
-        'TxtImportar
-        '
-        Me.TxtImportar.Animated = True
-        Me.TxtImportar.BackColor = System.Drawing.Color.Transparent
-        Me.TxtImportar.BorderRadius = 6
-        Me.TxtImportar.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtImportar.DefaultText = ""
-        Me.TxtImportar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtImportar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtImportar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtImportar.DisabledState.Parent = Me.TxtImportar
-        Me.TxtImportar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtImportar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtImportar.FocusedState.Parent = Me.TxtImportar
-        Me.TxtImportar.Font = New System.Drawing.Font("Roboto", 16.0!)
-        Me.TxtImportar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtImportar.HoverState.Parent = Me.TxtImportar
-        Me.TxtImportar.Location = New System.Drawing.Point(236, 613)
-        Me.TxtImportar.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.TxtImportar.Name = "TxtImportar"
-        Me.TxtImportar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtImportar.PlaceholderText = ""
-        Me.TxtImportar.SelectedText = ""
-        Me.TxtImportar.ShadowDecoration.Parent = Me.TxtImportar
-        Me.TxtImportar.Size = New System.Drawing.Size(301, 32)
-        Me.TxtImportar.TabIndex = 105
         '
         'BtnIngresar
         '
@@ -240,7 +221,7 @@ Partial Class F_Enfermedades
         Me.BtnImportar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnImportar.ForeColor = System.Drawing.Color.White
         Me.BtnImportar.HoverState.Parent = Me.BtnImportar
-        Me.BtnImportar.Location = New System.Drawing.Point(449, 672)
+        Me.BtnImportar.Location = New System.Drawing.Point(236, 562)
         Me.BtnImportar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnImportar.Name = "BtnImportar"
         Me.BtnImportar.ShadowDecoration.Parent = Me.BtnImportar
@@ -593,26 +574,10 @@ Partial Class F_Enfermedades
         Me.DgvEnfermedades.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         Me.DgvEnfermedades.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'ChkBCronica
+        'OFDialogCSV
         '
-        Me.ChkBCronica.Animated = True
-        Me.ChkBCronica.AutoSize = True
-        Me.ChkBCronica.BackColor = System.Drawing.Color.Transparent
-        Me.ChkBCronica.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ChkBCronica.CheckedState.BorderRadius = 0
-        Me.ChkBCronica.CheckedState.BorderThickness = 0
-        Me.ChkBCronica.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ChkBCronica.Font = New System.Drawing.Font("Roboto", 16.0!)
-        Me.ChkBCronica.Location = New System.Drawing.Point(237, 194)
-        Me.ChkBCronica.Name = "ChkBCronica"
-        Me.ChkBCronica.Size = New System.Drawing.Size(106, 31)
-        Me.ChkBCronica.TabIndex = 109
-        Me.ChkBCronica.Text = "Crónica"
-        Me.ChkBCronica.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.ChkBCronica.UncheckedState.BorderRadius = 0
-        Me.ChkBCronica.UncheckedState.BorderThickness = 0
-        Me.ChkBCronica.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.ChkBCronica.UseVisualStyleBackColor = False
+        Me.OFDialogCSV.Filter = "Archivo CSV (*.csv)|*.csv"
+        Me.OFDialogCSV.Title = "Archivo CSV"
         '
         'F_Enfermedades
         '
@@ -638,8 +603,6 @@ Partial Class F_Enfermedades
     Friend WithEvents BtnMinimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents BtnExit As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents DgvEnfermedades As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents LblImportar As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents TxtImportar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents BtnIngresar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TxtIDescripcion As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents LblIDescripcion As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -661,4 +624,5 @@ Partial Class F_Enfermedades
     Friend WithEvents BtnCancelar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ChkICronica As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents ChkBCronica As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents OFDialogCSV As OpenFileDialog
 End Class

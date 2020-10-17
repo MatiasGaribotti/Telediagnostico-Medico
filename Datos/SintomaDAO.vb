@@ -50,6 +50,63 @@ Public Class SintomaDAO
         End Try
     End Sub
 
+    Public Sub Insert(listaSintomas As List(Of Sintoma))
+
+        For Each sintoma In listaSintomas
+            Dim EnfermedadDAO As New EnfermedadDAO
+
+            For Each enfermedad In sintoma.Enfermedades
+                enfermedad.Id = EnfermedadDAO.GetEnfermedadByName(enfermedad.Nombre.Trim)
+            Next
+
+        Next
+
+        Try
+            Conn = Connect()
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Try
+            Conn.BeginTrans()
+
+            For Each sintoma In listaSintomas
+                Dim recordSet As Recordset
+                Dim idSintoma As Short
+
+                Dim insertSintoma = "INSERT INTO sintomas(nombre,descripcion,tipo) " &
+                                    "VALUES('" &
+                sintoma.Nombre & "','" &
+                sintoma.Descripcion & "'," &
+                sintoma.Tipo & ");"
+
+                Dim selectSintoma = "SELECT id FROM sintomas " &
+                                    "WHERE nombre='" & sintoma.Nombre & "' AND descripcion='" & sintoma.Descripcion & "' AND tipo=" & sintoma.Tipo & ";"
+
+                Conn.Execute(insertSintoma)
+                recordSet = Conn.Execute(selectSintoma)
+
+                'Asigno el valor del campo id
+                'a la variable idSintoma
+                idSintoma = recordSet.Fields("id").Value
+
+                For Each enfermedad In sintoma.Enfermedades
+                    AddSintomaEnfermedad(idSintoma, enfermedad.Id)
+                Next
+
+            Next
+
+            Conn.CommitTrans()
+        Catch ex As Exception
+            Conn.RollbackTrans()
+            Throw ex
+
+        Finally
+            Conn.Close()
+        End Try
+
+    End Sub
+
     ''' <summary>
     ''' Asocia una síntoma a una enfermedad.
     ''' </summary>

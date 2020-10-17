@@ -32,8 +32,6 @@ Partial Class F_Sintomas
         Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtBEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TxtIEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.LblImportar = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.TxtImportar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.BtnIngresar = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtIDescripcion = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblIDescripcion = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -64,6 +62,7 @@ Partial Class F_Sintomas
         Me.BtnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.BtnExit = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.DgvSintomas = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.OFDialogCSV = New System.Windows.Forms.OpenFileDialog()
         Me.PnlSide.SuspendLayout()
         Me.PnlDgv.SuspendLayout()
         CType(Me.DgvSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,8 +96,6 @@ Partial Class F_Sintomas
         Me.PnlSide.Controls.Add(Me.BtnCancelar)
         Me.PnlSide.Controls.Add(Me.TxtBEnfermedad)
         Me.PnlSide.Controls.Add(Me.TxtIEnfermedad)
-        Me.PnlSide.Controls.Add(Me.LblImportar)
-        Me.PnlSide.Controls.Add(Me.TxtImportar)
         Me.PnlSide.Controls.Add(Me.BtnIngresar)
         Me.PnlSide.Controls.Add(Me.TxtIDescripcion)
         Me.PnlSide.Controls.Add(Me.LblIDescripcion)
@@ -204,43 +201,6 @@ Partial Class F_Sintomas
         Me.TxtIEnfermedad.Size = New System.Drawing.Size(230, 32)
         Me.TxtIEnfermedad.TabIndex = 81
         '
-        'LblImportar
-        '
-        Me.LblImportar.BackColor = System.Drawing.Color.Transparent
-        Me.LblImportar.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblImportar.Location = New System.Drawing.Point(56, 651)
-        Me.LblImportar.Name = "LblImportar"
-        Me.LblImportar.Size = New System.Drawing.Size(83, 27)
-        Me.LblImportar.TabIndex = 80
-        Me.LblImportar.Text = "Importar"
-        '
-        'TxtImportar
-        '
-        Me.TxtImportar.Animated = True
-        Me.TxtImportar.BorderRadius = 6
-        Me.TxtImportar.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtImportar.DefaultText = ""
-        Me.TxtImportar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtImportar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtImportar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtImportar.DisabledState.Parent = Me.TxtImportar
-        Me.TxtImportar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtImportar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtImportar.FocusedState.Parent = Me.TxtImportar
-        Me.TxtImportar.Font = New System.Drawing.Font("Roboto", 16.0!)
-        Me.TxtImportar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TxtImportar.HoverState.Parent = Me.TxtImportar
-        Me.TxtImportar.Location = New System.Drawing.Point(155, 648)
-        Me.TxtImportar.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.TxtImportar.Name = "TxtImportar"
-        Me.TxtImportar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtImportar.PlaceholderText = ""
-        Me.TxtImportar.ReadOnly = True
-        Me.TxtImportar.SelectedText = ""
-        Me.TxtImportar.ShadowDecoration.Parent = Me.TxtImportar
-        Me.TxtImportar.Size = New System.Drawing.Size(382, 32)
-        Me.TxtImportar.TabIndex = 79
-        '
         'BtnIngresar
         '
         Me.BtnIngresar.Animated = True
@@ -312,7 +272,7 @@ Partial Class F_Sintomas
         Me.BtnImportar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnImportar.ForeColor = System.Drawing.Color.White
         Me.BtnImportar.HoverState.Parent = Me.BtnImportar
-        Me.BtnImportar.Location = New System.Drawing.Point(449, 710)
+        Me.BtnImportar.Location = New System.Drawing.Point(252, 568)
         Me.BtnImportar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnImportar.Name = "BtnImportar"
         Me.BtnImportar.ShadowDecoration.Parent = Me.BtnImportar
@@ -791,6 +751,11 @@ Partial Class F_Sintomas
         Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(222, Byte), Integer))
         Me.DgvSintomas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
+        'OFDialogCSV
+        '
+        Me.OFDialogCSV.Filter = "Archivo CSV (*.csv)|*.csv"
+        Me.OFDialogCSV.Title = "Archivo CSV"
+        '
         'F_Sintomas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -814,8 +779,6 @@ Partial Class F_Sintomas
     Friend WithEvents btn_minimizar As Button
     Friend WithEvents btn_cerrar As Button
     Friend WithEvents PnlSide As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents LblImportar As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents TxtImportar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents BtnIngresar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TxtIDescripcion As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents LblIDescripcion As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -849,4 +812,5 @@ Partial Class F_Sintomas
     Friend WithEvents BtnModificar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnEliminar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnCancelar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents OFDialogCSV As OpenFileDialog
 End Class
