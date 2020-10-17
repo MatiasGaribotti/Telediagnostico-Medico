@@ -2,10 +2,12 @@
 Para poder utilizar este software es necesario tener la base de datos creada y con un mínimo de juego de datos cargados.  
   
 [Descarga el script de creación de la base de datos](https://drive.google.com/file/d/1Wa-81Zs0v3jUI-lFl-98kFYDzePanjoe/view?usp=sharing).  
-[Descarga el script con juego de datos](https://drive.google.com/file/d/1E0IeifHZ-bJKOj9EIEuKCc4xhb1Sn0cf/view?usp=sharing).
-  
+[Descarga el script con juego de datos](https://drive.google.com/file/d/1E0IeifHZ-bJKOj9EIEuKCc4xhb1Sn0cf/view?usp=sharing).  
+[CSV Enfermedades](https://drive.google.com/file/d/1oDi9c-q7lWjT1wv-sGSyVpgs1BI7kvlS/view?usp=sharingg).  
+[CSV Sintomas](https://drive.google.com/file/d/1rYiBN265EONdkviNCW6aBqQ5PGzyku8w/view?usp=sharing).  
+
 ## Remarks
-El software está configurado para acceder a un servidor remoto, mediante una data source name (dsn) de ODBC, y no de manera local. Se deberá cambiar esta configuración para poder hacer uso del sistema.
+El software está configurado para acceder a un servidor remoto en la dirección 192.168.1.131. Si desea tener la base de datos en un servidor local, deberá cambiar esta configuración.
 ---
 
 ## Usuarios del Sistema
