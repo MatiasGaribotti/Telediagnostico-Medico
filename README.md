@@ -2,10 +2,14 @@
 Para poder utilizar este software es necesario tener la base de datos creada y con un mínimo de juego de datos cargados.  
   
 [Descarga el script de creación de la base de datos](https://drive.google.com/file/d/1Wa-81Zs0v3jUI-lFl-98kFYDzePanjoe/view?usp=sharing).  
-[Descarga el script con juego de datos](https://drive.google.com/file/d/1E0IeifHZ-bJKOj9EIEuKCc4xhb1Sn0cf/view?usp=sharing).
-  
-## Remarks
-El software está configurado para acceder a un servidor remoto, mediante una data source name (dsn) de ODBC, y no de manera local. Se deberá cambiar esta configuración para poder hacer uso del sistema.
+[Descarga el script con juego de datos](https://drive.google.com/file/d/1E0IeifHZ-bJKOj9EIEuKCc4xhb1Sn0cf/view?usp=sharing).  
+[CSV Enfermedades](https://drive.google.com/file/d/1oDi9c-q7lWjT1wv-sGSyVpgs1BI7kvlS/view?usp=sharingg).  
+[CSV Sintomas](https://drive.google.com/file/d/1rYiBN265EONdkviNCW6aBqQ5PGzyku8w/view?usp=sharing).  
+
+## Importante
+
+El software está configurado para acceder a un servidor remoto en la dirección 192.168.1.131. Si desea tener la base de datos en un servidor local, deberá cambiar esta configuración.
+
 ---
 
 ## Usuarios del Sistema
@@ -21,13 +25,14 @@ El software está configurado para acceder a un servidor remoto, mediante una da
 ---
 
 ## Aplicación de Gestión
+
 ### Síntomas
 * [X] Alta Síntoma
 * [X] Modificacación de Síntoma
 * [X] Baja Síntoma
 * [X] Listar Síntomas
 * [X] Búscar Síntoma
-* [ ] Importar Síntomas
+* [X] Importar Síntomas
 
 ### Enfermedades
 * [X] Alta Enfermedad
@@ -35,7 +40,7 @@ El software está configurado para acceder a un servidor remoto, mediante una da
 * [X] Baja Enfermedad
 * [X] Listar Enfermedades
 * [X] Buscar Enfermedades
-* [ ] Importar Enfermedades
+* [X] Importar Enfermedades
 
 ### Usuarios
 ##### Empleados
@@ -45,6 +50,10 @@ El software está configurado para acceder a un servidor remoto, mediante una da
 * [X] Extender permisos a Médicos
 * [X] Listar Empleados
 * [ ] Buscar Empleados
+* [X] Alta Horario
+* [ ] Modificación Horario
+* [ ] Baja Horario
+* [X] Buscar Horario
 
 #### Pacientes
 * [X] Alta Completa Pacientes
