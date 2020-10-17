@@ -6,7 +6,7 @@ Para poder utilizar este software es necesario tener la base de datos creada y c
 [CSV Enfermedades](https://drive.google.com/file/d/1oDi9c-q7lWjT1wv-sGSyVpgs1BI7kvlS/view?usp=sharingg).  
 [CSV Sintomas](https://drive.google.com/file/d/1rYiBN265EONdkviNCW6aBqQ5PGzyku8w/view?usp=sharing).  
 
-## Remarks
+## Importante
 El software está configurado para acceder a un servidor remoto en la dirección 192.168.1.131. Si desea tener la base de datos en un servidor local, deberá cambiar esta configuración.
 ---
 
@@ -23,13 +23,14 @@ El software está configurado para acceder a un servidor remoto en la dirección
 ---
 
 ## Aplicación de Gestión
+
 ### Síntomas
 * [X] Alta Síntoma
 * [X] Modificacación de Síntoma
 * [X] Baja Síntoma
 * [X] Listar Síntomas
 * [X] Búscar Síntoma
-* [ ] Importar Síntomas
+* [X] Importar Síntomas
 
 ### Enfermedades
 * [X] Alta Enfermedad
@@ -37,7 +38,7 @@ El software está configurado para acceder a un servidor remoto en la dirección
 * [X] Baja Enfermedad
 * [X] Listar Enfermedades
 * [X] Buscar Enfermedades
-* [ ] Importar Enfermedades
+* [X] Importar Enfermedades
 
 ### Usuarios
 ##### Empleados
@@ -47,6 +48,10 @@ El software está configurado para acceder a un servidor remoto en la dirección
 * [X] Extender permisos a Médicos
 * [X] Listar Empleados
 * [ ] Buscar Empleados
+* [X] Alta Horario
+* [ ] Modificación Horario
+* [ ] Baja Horario
+* [X] Buscar Horario
 
 #### Pacientes
 * [X] Alta Completa Pacientes
