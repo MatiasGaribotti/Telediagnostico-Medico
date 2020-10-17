@@ -7,7 +7,9 @@ Para poder utilizar este software es necesario tener la base de datos creada y c
 [CSV Sintomas](https://drive.google.com/file/d/1rYiBN265EONdkviNCW6aBqQ5PGzyku8w/view?usp=sharing).  
 
 ## Importante
+
 El software está configurado para acceder a un servidor remoto en la dirección 192.168.1.131. Si desea tener la base de datos en un servidor local, deberá cambiar esta configuración.
+
 ---
 
 ## Usuarios del Sistema
