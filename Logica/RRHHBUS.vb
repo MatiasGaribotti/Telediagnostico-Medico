@@ -276,11 +276,9 @@ Public Class RRHHBUS
     End Function
 
     Public Sub ResetPassword(pEmpleado As Empleado)
-        EmpleadoDAO = New EmpleadoDAO()
-
         pEmpleado.Password = Logica.Password.Generate(New Random)
         Try
-            EmpleadoDAO.UpdatePassword(pEmpleado.Ci, pEmpleado.Password)
+            ChangePassword(pEmpleado.Ci, pEmpleado.Password)
 
         Catch ex As Exception
             Throw ex

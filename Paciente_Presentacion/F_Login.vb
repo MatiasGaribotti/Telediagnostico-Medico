@@ -35,7 +35,7 @@ Public Class F_Login
             Dim user = New Persona(CInt(TxtCi.Text), TxtPassword.Text)
 
             If AuthenticationBUS.Authenticate(user) Then
-                If Password.IsGenerated(user.Password) Then
+                If Password.IsGenerated(TxtPassword.Text) Then
                     F_ContrasennaAutogenerada.Show()
                 Else
                     F_Sintomas.Show()

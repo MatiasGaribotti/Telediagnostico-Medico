@@ -140,4 +140,12 @@ Public Class PacienteBUS
         End If
     End Function
 
+    Public Overloads Sub ChangePassword(ci As Integer, newPassword As String)
+        Try
+            MyBase.ChangePassword(ci, newPassword)
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 End Class

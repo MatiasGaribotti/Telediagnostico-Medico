@@ -35,20 +35,17 @@ Public Class RecepcionistaBUS
         End Try
     End Sub
 
-    Public Sub ResetPassword(paciente As Paciente)
-        Dim PacienteDAO As New PacienteDAO()
-        Dim password = Logica.Password.Generate(New Random)
-        Dim hashedPassword = Logica.Password.Hash(password)
-        paciente.Password = hashedPassword
+    Public Function ResetPassword(paciente As Paciente) As String
+        Dim plainTextPassword = Logica.Password.Generate(New Random)
+
+        Console.WriteLine("CI: {0} - Pass: {1}", paciente.Ci, plainTextPassword)
 
         Try
-            ' Implementar la impresión en una impresora POS
-            Console.WriteLine("Nueva contraseña: " & password & vbCrLf & "SHA256: " & hashedPassword)
-
-            PacienteDAO.UpdatePassword(paciente.Ci, paciente.Password)
+            ChangePassword(paciente.Ci, paciente.Password)
 
         Catch ex As Exception
             Throw ex
         End Try
-    End Sub
+        Return plainTextPassword
+    End Function
 End Class

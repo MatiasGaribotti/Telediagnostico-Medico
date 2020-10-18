@@ -138,6 +138,12 @@
     <Compile Include="F_Sintomas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="F_Template_Printing.Designer.vb">
+      <DependentUpon>F_Template_Printing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="F_Template_Printing.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Sintomas.resx">
       <DependentUpon>F_Sintomas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Template_Printing.resx">
+      <DependentUpon>F_Template_Printing.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -306,6 +315,7 @@
     <None Include="My Project\img\login\Kartoffel Solutions Logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\img\icon\st-logo 64x64.png" />
     <Content Include="st-logo 256x256.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

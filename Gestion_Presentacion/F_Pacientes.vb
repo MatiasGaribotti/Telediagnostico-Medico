@@ -268,7 +268,13 @@ Public Class F_Pacientes
         Try
             Dim listaPacientes = GetSelected()
             If listaPacientes.Count = 1 Then
-                objRecepcionista.ResetPassword(listaPacientes.First)
+                Dim password As String = objRecepcionista.ResetPassword(listaPacientes.First)
+
+                Dim printing As New F_Template_Printing(listaPacientes.First.Ci, password)
+                printing.Show()
+                printing.Print()
+                printing.Close()
+
                 MsgBox("Contraseña restablecida correctamente.", MsgBoxStyle.Information, "Información")
 
             Else

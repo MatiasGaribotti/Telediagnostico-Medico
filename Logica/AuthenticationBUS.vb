@@ -6,7 +6,7 @@ Public Class AuthenticationBUS
         Env.ChangeLanguage(Env.Cultures.Espannol)
     End Sub
 
-    Public Shared Function Authenticate(user As Persona) As Boolean
+    Public Shared Function Authenticate(ByVal user As Persona) As Boolean
         Dim user_found As Persona
         Dim authenticated = False
         Dim DAuth As New AuthenticationDAO()

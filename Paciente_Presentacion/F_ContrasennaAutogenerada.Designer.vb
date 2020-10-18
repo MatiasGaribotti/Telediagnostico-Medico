@@ -46,7 +46,7 @@ Partial Class F_ContrasennaAutogenerada
         Me.TxtNewPassword.FocusedState.Parent = Me.TxtNewPassword
         Me.TxtNewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtNewPassword.HoverState.Parent = Me.TxtNewPassword
-        Me.TxtNewPassword.Location = New System.Drawing.Point(372, 43)
+        Me.TxtNewPassword.Location = New System.Drawing.Point(333, 61)
         Me.TxtNewPassword.Name = "TxtNewPassword"
         Me.TxtNewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtNewPassword.PlaceholderText = ""
@@ -70,7 +70,7 @@ Partial Class F_ContrasennaAutogenerada
         Me.TxtConfirmPassword.FocusedState.Parent = Me.TxtConfirmPassword
         Me.TxtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtConfirmPassword.HoverState.Parent = Me.TxtConfirmPassword
-        Me.TxtConfirmPassword.Location = New System.Drawing.Point(372, 77)
+        Me.TxtConfirmPassword.Location = New System.Drawing.Point(333, 95)
         Me.TxtConfirmPassword.Name = "TxtConfirmPassword"
         Me.TxtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtConfirmPassword.PlaceholderText = ""
@@ -83,7 +83,7 @@ Partial Class F_ContrasennaAutogenerada
         '
         Me.LblContraseña.AutoSize = True
         Me.LblContraseña.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblContraseña.Location = New System.Drawing.Point(64, 43)
+        Me.LblContraseña.Location = New System.Drawing.Point(25, 61)
         Me.LblContraseña.Name = "LblContraseña"
         Me.LblContraseña.Size = New System.Drawing.Size(161, 23)
         Me.LblContraseña.TabIndex = 14
@@ -93,7 +93,7 @@ Partial Class F_ContrasennaAutogenerada
         '
         Me.LblConfirm.AutoSize = True
         Me.LblConfirm.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblConfirm.Location = New System.Drawing.Point(64, 77)
+        Me.LblConfirm.Location = New System.Drawing.Point(25, 95)
         Me.LblConfirm.Name = "LblConfirm"
         Me.LblConfirm.Size = New System.Drawing.Size(245, 23)
         Me.LblConfirm.TabIndex = 15
@@ -102,10 +102,10 @@ Partial Class F_ContrasennaAutogenerada
         'LblSeDetecto
         '
         Me.LblSeDetecto.AutoSize = True
-        Me.LblSeDetecto.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSeDetecto.Location = New System.Drawing.Point(47, 13)
+        Me.LblSeDetecto.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSeDetecto.Location = New System.Drawing.Point(112, 9)
         Me.LblSeDetecto.Name = "LblSeDetecto"
-        Me.LblSeDetecto.Size = New System.Drawing.Size(353, 23)
+        Me.LblSeDetecto.Size = New System.Drawing.Size(391, 23)
         Me.LblSeDetecto.TabIndex = 16
         Me.LblSeDetecto.Text = "Se detectó una contraseña autogenerada"
         '
@@ -120,7 +120,7 @@ Partial Class F_ContrasennaAutogenerada
         Me.BtnCancelar.Font = New System.Drawing.Font("Roboto", 14.25!)
         Me.BtnCancelar.ForeColor = System.Drawing.Color.White
         Me.BtnCancelar.HoverState.Parent = Me.BtnCancelar
-        Me.BtnCancelar.Location = New System.Drawing.Point(321, 143)
+        Me.BtnCancelar.Location = New System.Drawing.Point(251, 158)
         Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
@@ -139,7 +139,7 @@ Partial Class F_ContrasennaAutogenerada
         Me.BtnAceptar.Font = New System.Drawing.Font("Roboto", 14.25!)
         Me.BtnAceptar.ForeColor = System.Drawing.Color.White
         Me.BtnAceptar.HoverState.Parent = Me.BtnAceptar
-        Me.BtnAceptar.Location = New System.Drawing.Point(486, 143)
+        Me.BtnAceptar.Location = New System.Drawing.Point(416, 158)
         Me.BtnAceptar.Margin = New System.Windows.Forms.Padding(3, 3, 15, 15)
         Me.BtnAceptar.Name = "BtnAceptar"
         Me.BtnAceptar.ShadowDecoration.Parent = Me.BtnAceptar
@@ -151,8 +151,9 @@ Partial Class F_ContrasennaAutogenerada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(804, 218)
+        Me.ClientSize = New System.Drawing.Size(615, 218)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.LblSeDetecto)
@@ -160,9 +161,10 @@ Partial Class F_ContrasennaAutogenerada
         Me.Controls.Add(Me.LblContraseña)
         Me.Controls.Add(Me.TxtConfirmPassword)
         Me.Controls.Add(Me.TxtNewPassword)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "F_ContrasennaAutogenerada"
-        Me.Text = "F_ContrasennaAutogenerada"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Restablecer Contraseña"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

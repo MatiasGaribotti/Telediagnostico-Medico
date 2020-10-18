@@ -158,9 +158,21 @@ Public MustInherit Class PersonaBUS
 
     Protected Sub DeletePersona(ci As Integer)
         Dim PersonaDAO As New PersonaDAO
+
         Try
             PersonaDAO.DeletePersona(ci)
 
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    Protected Sub ChangePassword(ci As Integer, newPassword As String)
+        Dim PersonaDAO As New PersonaDAO
+
+        Try
+            newPassword = Password.Hash(newPassword)
+            PersonaDAO.UpdatePassword(ci, newPassword)
         Catch ex As Exception
             Throw ex
         End Try
