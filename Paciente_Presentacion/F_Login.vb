@@ -11,6 +11,7 @@ Public Class F_Login
         Env.CurrentApp = Env.Apps.Paciente
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
+
     End Sub
 
     Private Sub BtnChangeLang_Click(sender As Object, e As EventArgs) Handles BtnChangeLang.Click
@@ -43,11 +44,16 @@ Public Class F_Login
 
                 End If
             Else
-                MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
+                MsgBox(Translator.TranslateKey("error_credenciales_incorrectas"), MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
         End Try
+    End Sub
+
+    Private Sub F_Login_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Translator.TranslatePanel(PnlLogin)
+        Me.Refresh()
     End Sub
 End Class

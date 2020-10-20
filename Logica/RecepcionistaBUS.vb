@@ -38,10 +38,8 @@ Public Class RecepcionistaBUS
     Public Function ResetPassword(paciente As Paciente) As String
         Dim plainTextPassword = Logica.Password.Generate(New Random)
 
-        Console.WriteLine("CI: {0} - Pass: {1}", paciente.Ci, plainTextPassword)
-
         Try
-            ChangePassword(paciente.Ci, paciente.Password)
+            ChangePassword(paciente.Ci, plainTextPassword)
 
         Catch ex As Exception
             Throw ex

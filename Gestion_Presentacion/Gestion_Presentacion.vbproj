@@ -95,6 +95,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="F_ContrasennaAutogenerada.Designer.vb">
+      <DependentUpon>F_ContrasennaAutogenerada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="F_ContrasennaAutogenerada.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="F_Empleados_Horarios.Designer.vb">
       <DependentUpon>F_Empleados_Horarios.vb</DependentUpon>
     </Compile>
@@ -162,6 +168,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="F_ContrasennaAutogenerada.resx">
+      <DependentUpon>F_ContrasennaAutogenerada.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Login.en-US.resx">
       <DependentUpon>F_Login.vb</DependentUpon>
     </EmbeddedResource>

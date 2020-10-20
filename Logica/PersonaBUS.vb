@@ -167,7 +167,7 @@ Public MustInherit Class PersonaBUS
         End Try
     End Sub
 
-    Protected Sub ChangePassword(ci As Integer, newPassword As String)
+    Public Sub ChangePassword(ci As Integer, newPassword As String)
         Dim PersonaDAO As New PersonaDAO
 
         Try

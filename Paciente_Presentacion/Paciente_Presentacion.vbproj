@@ -80,6 +80,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="en-US.Designer.vb">
+      <DependentUpon>en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="es-UY.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>es-UY.resx</DependentUpon>
+    </Compile>
     <Compile Include="F_ContrasennaAutogenerada.Designer.vb">
       <DependentUpon>F_ContrasennaAutogenerada.vb</DependentUpon>
     </Compile>
@@ -121,8 +131,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Translator.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="es-UY.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>es-UY.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_ContrasennaAutogenerada.resx">
       <DependentUpon>F_ContrasennaAutogenerada.vb</DependentUpon>
     </EmbeddedResource>

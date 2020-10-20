@@ -1,12 +1,18 @@
 ﻿Imports Dominio
+Imports Guna.UI2.WinForms
 Imports Logica
 Imports System.Threading
 Public Class F_Sintomas
     Private table As New DataTable
     Private pattern As Sintoma
     Public Sub New()
+        Thread.CurrentThread.CurrentCulture = Env.CurrentLangugage
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
+
+        Translator.TranslatePanel(PnlLeft)
+        Translator.TranslatePanel(PnlRight)
+
         pattern = New Sintoma
         ConfigureSelectedColumnVisibility()
         SwitchSelection()
@@ -14,7 +20,7 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub Btn_Cancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
-        Dim result = MsgBox("¿Está seguro de que desea cerrar sesión?", MsgBoxStyle.YesNo, "Confirmación")
+        Dim result = MsgBox(Translator.TranslateKey("confirmacion_cerrar_sesion"), MsgBoxStyle.YesNo, Translator.TranslateKey("confirmacion"))
 
         If result = vbYes Then
             AuthenticationBUS.LogOut()
@@ -68,7 +74,7 @@ Public Class F_Sintomas
         DgvSelectedSintomas.Refresh()
     End Sub
 
-    Private Sub Btn_HC_Click(sender As Object, e As EventArgs)
+    Private Sub Btn_HC_Click(sender As Object, e As EventArgs) Handles BtnHCE.Click
         F_Login.Show()
         Close()
     End Sub
@@ -129,18 +135,18 @@ Public Class F_Sintomas
 
             If diagnosticos.Count > 0 Then
                 AutoconsultaBUS.instance.consulta.Diagnosticos = diagnosticos
-                Dim outmsg As String = "Se diagnosticaron las siguientes enfermedades:" & vbCrLf & vbCrLf
+                Dim outmsg As String = Translator.TranslateKey("diagnostico_primario_mensaje_salida_1") & vbCrLf & vbCrLf
 
                 For Each diagnostico In diagnosticos
                     outmsg += "     -" & diagnostico.Nombre & vbCrLf
 
                 Next
 
-                outmsg += vbCrLf & "Recuerde que solamente es un diagnóstico primario." & vbCrLf & vbCrLf &
-                          "¿Desea establecer un chat con un médico para obtener un diagnóstico más certero?"
+                outmsg += vbCrLf & Translator.TranslateKey("diagnostico_primario_mensaje_salida_2") & vbCrLf & vbCrLf &
+                          Translator.TranslateKey("confirmacion_iniciar_chat")
 
 
-                Dim result = MsgBox(outmsg, MsgBoxStyle.YesNo, "Diagnóstico")
+                Dim result = MsgBox(outmsg, MsgBoxStyle.YesNo, Translator.TranslateKey("diagnostico"))
 
                 If result = MsgBoxResult.Yes Then
                     AutoconsultaBUS.instance.Insert(True)
@@ -152,14 +158,13 @@ Public Class F_Sintomas
                 Else
                     AutoconsultaBUS.instance.Insert()
                     Reset()
-                    MsgBox("¡Adiós!", MsgBoxStyle.Information, "Consulta Finalizada")
+                    MsgBox(Translator.TranslateKey("mensaje_despedida"), MsgBoxStyle.Information, Translator.TranslateKey("consulta_finalizada"))
                 End If
 
 
             Else
-                MsgBox("Los sintomas provistos concluyeron en un diagnóstico demasiado ambiguo." &
-                       " Por favor de ser lo más específico posible con los síntomas ingresados.",
-                        MsgBoxStyle.Exclamation, "Diagnóstico")
+                MsgBox(Translator.TranslateKey("diagnostico_ambiguo"),
+                        MsgBoxStyle.Exclamation, Translator.TranslateKey("diagnostico"))
 
             End If
 

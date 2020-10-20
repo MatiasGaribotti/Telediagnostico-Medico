@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aceptar" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="autenticacion" xml:space="preserve">
+    <value>Autenticación</value>
+  </data>
+  <data name="cabeza" xml:space="preserve">
+    <value>Cabeza</value>
+  </data>
+  <data name="cancelar" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="cerrar_sesion" xml:space="preserve">
+    <value>Cerrar Sesión</value>
+  </data>
+  <data name="ci" xml:space="preserve">
+    <value>CI</value>
+  </data>
+  <data name="confirmacion" xml:space="preserve">
+    <value>Confirmación</value>
+  </data>
+  <data name="confirmacion_cambiar_contrasenna" xml:space="preserve">
+    <value>¿Está seguro que desea cambiar su cambiar su contraseña?</value>
+  </data>
+  <data name="confirmacion_cerrar_sesion" xml:space="preserve">
+    <value>¿Está seguro de que desea cerrar sesión?</value>
+  </data>
+  <data name="confirmacion_finalizar_chat" xml:space="preserve">
+    <value>¿Está seguro de que desea finalizar el chat?</value>
+  </data>
+  <data name="confirmacion_iniciar_chat" xml:space="preserve">
+    <value>¿Desea establecer un chat con un médico para obtener un diagnóstico más certero?</value>
+  </data>
+  <data name="confirmar_nueva_contrasenna" xml:space="preserve">
+    <value>Confirmar nueva nontraseña</value>
+  </data>
+  <data name="consulta_finalizada" xml:space="preserve">
+    <value>Consulta Finalizada</value>
+  </data>
+  <data name="contrasenna" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="contrasenna_autogenerada_detectada" xml:space="preserve">
+    <value>Se detectó una contraseña autogenerada</value>
+  </data>
+  <data name="contrasenna_cambiada_exito" xml:space="preserve">
+    <value>Contraseña cambiada con éxito</value>
+  </data>
+  <data name="diagnostico" xml:space="preserve">
+    <value>Diagnóstico</value>
+  </data>
+  <data name="diagnostico_ambiguo" xml:space="preserve">
+    <value>Los sintomas provistos concluyeron en un diagnóstico demasiado ambiguo. Por favor trate de ser lo más específico posible.</value>
+  </data>
+  <data name="diagnostico_primario_mensaje_salida_1" xml:space="preserve">
+    <value>Se diagnosticaron las siguientes enfermedades:</value>
+    <comment>_</comment>
+  </data>
+  <data name="diagnostico_primario_mensaje_salida_2" xml:space="preserve">
+    <value>Recuerde que solamente es un diagnóstico primario.</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="error_credenciales_incorrectas" xml:space="preserve">
+    <value>CI y/o contraseña incorrecta.</value>
+  </data>
+  <data name="extremidades" xml:space="preserve">
+    <value>Extremidades</value>
+  </data>
+  <data name="finalizar_chat" xml:space="preserve">
+    <value>Finalizar Chat</value>
+  </data>
+  <data name="historial_clinico" xml:space="preserve">
+    <value>Historial Clínico</value>
+  </data>
+  <data name="informacion" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="ingresar" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+  <data name="mensaje_chat_finalizado" xml:space="preserve">
+    <value>El chat con el médico ha finalizado.</value>
+  </data>
+  <data name="mensaje_despedida" xml:space="preserve">
+    <value>¡Adiós!</value>
+  </data>
+  <data name="mensaje_sala_espera" xml:space="preserve">
+    <value>Por favor aguarde a ser atendido por un médico</value>
+  </data>
+  <data name="nueva_contrasenna" xml:space="preserve">
+    <value>Nueva contraseña</value>
+  </data>
+  <data name="posibles_diagnosticos" xml:space="preserve">
+    <value>Posibles Diagnósticos</value>
+  </data>
+  <data name="restablecer_contrasenna" xml:space="preserve">
+    <value>Restablecer Contraseña</value>
+  </data>
+  <data name="sintomas_ingresados" xml:space="preserve">
+    <value>Síntomas Ingresados</value>
+  </data>
+  <data name="sintomas_registrados" xml:space="preserve">
+    <value>Síntomas Registrados</value>
+  </data>
+  <data name="titulo_chat_finalizado" xml:space="preserve">
+    <value>Chat Finalizado</value>
+  </data>
+  <data name="todo" xml:space="preserve">
+    <value>Todo</value>
+  </data>
+  <data name="torso" xml:space="preserve">
+    <value>Torso</value>
+  </data>
+</root>

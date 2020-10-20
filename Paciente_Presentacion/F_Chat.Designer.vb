@@ -22,6 +22,7 @@ Partial Class F_Chat
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -55,12 +56,12 @@ Partial Class F_Chat
         Me.LblEspecialidadMedico = New System.Windows.Forms.Label()
         Me.LblNameMedico = New System.Windows.Forms.Label()
         Me.LblWaiting = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.TimerChat = New System.Windows.Forms.Timer()
+        Me.TimerChat = New System.Windows.Forms.Timer(Me.components)
         Me.PnlChat = New Guna.UI2.WinForms.Guna2Panel()
         Me.PicWaiting = New System.Windows.Forms.PictureBox()
         Me.BtnSend = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.TxtMsg = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TimerChatStatus = New System.Windows.Forms.Timer()
+        Me.TimerChatStatus = New System.Windows.Forms.Timer(Me.components)
         Me.PnlSide.SuspendLayout()
         Me.PnlDiagnosticos.SuspendLayout()
         CType(Me.DgvDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,7 +109,7 @@ Partial Class F_Chat
         Me.BtnCerrarSesion.ShadowDecoration.Parent = Me.BtnCerrarSesion
         Me.BtnCerrarSesion.Size = New System.Drawing.Size(162, 36)
         Me.BtnCerrarSesion.TabIndex = 73
-        Me.BtnCerrarSesion.Text = "Cerrar Sesión"
+        Me.BtnCerrarSesion.Text = "cerrar_sesion"
         '
         'BtnFinalizarChat
         '
@@ -127,7 +128,7 @@ Partial Class F_Chat
         Me.BtnFinalizarChat.ShadowDecoration.Parent = Me.BtnFinalizarChat
         Me.BtnFinalizarChat.Size = New System.Drawing.Size(162, 36)
         Me.BtnFinalizarChat.TabIndex = 72
-        Me.BtnFinalizarChat.Text = "Finalizar Chat"
+        Me.BtnFinalizarChat.Text = "finalizar_chat"
         '
         'PnlDiagnosticos
         '
@@ -263,7 +264,7 @@ Partial Class F_Chat
         Me.BtnHistorialClinico.ShadowDecoration.Parent = Me.BtnHistorialClinico
         Me.BtnHistorialClinico.Size = New System.Drawing.Size(162, 36)
         Me.BtnHistorialClinico.TabIndex = 71
-        Me.BtnHistorialClinico.Text = "Historial Clínico"
+        Me.BtnHistorialClinico.Text = "historial_clinico"
         '
         'PnlSintomas
         '
@@ -379,9 +380,9 @@ Partial Class F_Chat
         Me.Label1.Location = New System.Drawing.Point(20, 603)
         Me.Label1.Margin = New System.Windows.Forms.Padding(20, 15, 0, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(200, 23)
+        Me.Label1.Size = New System.Drawing.Size(202, 23)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Posibles Diagnosticos"
+        Me.Label1.Text = "posibles_diagnosticos"
         '
         'LblSintomasRegistrados
         '
@@ -390,9 +391,9 @@ Partial Class F_Chat
         Me.LblSintomasRegistrados.Location = New System.Drawing.Point(20, 188)
         Me.LblSintomasRegistrados.Margin = New System.Windows.Forms.Padding(20, 15, 0, 15)
         Me.LblSintomasRegistrados.Name = "LblSintomasRegistrados"
-        Me.LblSintomasRegistrados.Size = New System.Drawing.Size(197, 23)
+        Me.LblSintomasRegistrados.Size = New System.Drawing.Size(194, 23)
         Me.LblSintomasRegistrados.TabIndex = 2
-        Me.LblSintomasRegistrados.Text = "Síntomas Registrados"
+        Me.LblSintomasRegistrados.Text = "sintomas_registrados"
         '
         'Separator1
         '
@@ -456,9 +457,9 @@ Partial Class F_Chat
         Me.LblWaiting.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblWaiting.Location = New System.Drawing.Point(238, 320)
         Me.LblWaiting.Name = "LblWaiting"
-        Me.LblWaiting.Size = New System.Drawing.Size(726, 40)
+        Me.LblWaiting.Size = New System.Drawing.Size(328, 40)
         Me.LblWaiting.TabIndex = 3
-        Me.LblWaiting.Text = "Por favor aguarde a ser atendido por un médico"
+        Me.LblWaiting.Text = "mensaje_sala_espera"
         '
         'TimerChat
         '

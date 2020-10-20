@@ -56,7 +56,7 @@ Public Class F_Chat
             TimerChat.Stop()
             F_Sintomas.Show()
             Close()
-            MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
+            MsgBox(Translator.TranslateKey("mensaje_chat_finalizado"), MsgBoxStyle.Information, Translator.TranslateKey("titulo_chat_finalizado"))
         End If
     End Sub
 
@@ -65,7 +65,7 @@ Public Class F_Chat
     End Sub
 
     Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
-        Dim result = MsgBox("¿Está seguro que desea cerrar sesión?", MsgBoxStyle.YesNo, "Confirmación")
+        Dim result = MsgBox(Translator.TranslateKey("confirmacion_cerrar_sesion"), MsgBoxStyle.YesNo, Translator.TranslateKey("confirmacion"))
 
         If result = MsgBoxResult.Yes Then
             PacienteBUS.EndChat(ConsultaMedica.Chat.Id)
@@ -79,7 +79,7 @@ Public Class F_Chat
     End Sub
 
     Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
-        Dim result = MsgBox("¿Está seguro de que desea finalizar el chat?", MsgBoxStyle.YesNo)
+        Dim result = MsgBox(Translator.TranslateKey("confirmacion_finalizar_chat"), MsgBoxStyle.YesNo)
 
         If result = MsgBoxResult.Yes Then
             Dim PacienteBUS As New PacienteBUS

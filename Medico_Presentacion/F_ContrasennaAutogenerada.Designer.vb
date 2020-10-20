@@ -88,9 +88,9 @@ Partial Class F_ContrasennaAutogenerada
         Me.LblContraseña.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblContraseña.Location = New System.Drawing.Point(25, 61)
         Me.LblContraseña.Name = "LblContraseña"
-        Me.LblContraseña.Size = New System.Drawing.Size(171, 23)
+        Me.LblContraseña.Size = New System.Drawing.Size(161, 23)
         Me.LblContraseña.TabIndex = 14
-        Me.LblContraseña.Text = "nueva_contrasenna"
+        Me.LblContraseña.Text = "Nueva contraseña"
         '
         'LblConfirm
         '
@@ -98,9 +98,9 @@ Partial Class F_ContrasennaAutogenerada
         Me.LblConfirm.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblConfirm.Location = New System.Drawing.Point(25, 95)
         Me.LblConfirm.Name = "LblConfirm"
-        Me.LblConfirm.Size = New System.Drawing.Size(261, 23)
+        Me.LblConfirm.Size = New System.Drawing.Size(245, 23)
         Me.LblConfirm.TabIndex = 15
-        Me.LblConfirm.Text = "confirmar_nueva_contrasenna"
+        Me.LblConfirm.Text = "Confirmar nueva nontraseña"
         '
         'LblSeDetecto
         '
@@ -108,9 +108,9 @@ Partial Class F_ContrasennaAutogenerada
         Me.LblSeDetecto.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSeDetecto.Location = New System.Drawing.Point(112, 9)
         Me.LblSeDetecto.Name = "LblSeDetecto"
-        Me.LblSeDetecto.Size = New System.Drawing.Size(364, 23)
+        Me.LblSeDetecto.Size = New System.Drawing.Size(391, 23)
         Me.LblSeDetecto.TabIndex = 16
-        Me.LblSeDetecto.Text = "contrasenna_autogenerada_detectada"
+        Me.LblSeDetecto.Text = "Se detectó una contraseña autogenerada"
         '
         'BtnCancelar
         '
@@ -130,7 +130,7 @@ Partial Class F_ContrasennaAutogenerada
         Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
         Me.BtnCancelar.Size = New System.Drawing.Size(147, 36)
         Me.BtnCancelar.TabIndex = 118
-        Me.BtnCancelar.Text = "cancelar"
+        Me.BtnCancelar.Text = "Cancelar"
         '
         'BtnAceptar
         '
@@ -149,7 +149,7 @@ Partial Class F_ContrasennaAutogenerada
         Me.BtnAceptar.ShadowDecoration.Parent = Me.BtnAceptar
         Me.BtnAceptar.Size = New System.Drawing.Size(147, 36)
         Me.BtnAceptar.TabIndex = 117
-        Me.BtnAceptar.Text = "aceptar"
+        Me.BtnAceptar.Text = "Aceptar"
         '
         'F_ContrasennaAutogenerada
         '
