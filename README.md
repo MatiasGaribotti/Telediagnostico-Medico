@@ -69,10 +69,10 @@ El software está configurado para acceder a un servidor remoto en la dirección
 * [ ] Ver HCE
 * [X] Iniciar Chat
 * [ ] Enviar copia chat por mail
-* [ ] Establecer contraseña
+* [X] Establecer contraseña
 
 ## Aplicación Médico
 * [X] Ver solicitudes de chat
 * [X] Iniciar chat
 * [ ] Ver HCE paciente
-* [ ] Establecer contraseña
+* [X] Establecer contraseña
