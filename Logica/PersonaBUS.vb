@@ -16,7 +16,7 @@ Public MustInherit Class PersonaBUS
         Dim verifyingDigit As Integer = Integer.Parse(ci.Last())
 
         If ci.Length <> 8 Then
-            Throw New FormatException("La cédula de identidad debe tener una longitud de 8 dígitos.")
+            Throw New FormatException("error_formato_ci_longitud")
         End If
 
         Dim validDigit As Integer
@@ -36,7 +36,7 @@ Public MustInherit Class PersonaBUS
         End If
 
         If validDigit <> verifyingDigit Then
-            Throw New FormatException("La cédula ingresada no es válida.")
+            Throw New FormatException("error_ci_invalida")
         End If
 
     End Sub
@@ -62,50 +62,50 @@ Public MustInherit Class PersonaBUS
                               telefono As String
                               )
         If String.IsNullOrWhiteSpace(ci) Then
-            Throw New FormatException("El campo cédula es obligatorio.")
+            Throw New FormatException("error_campo_obligatorio_ci.")
 
         ElseIf Not IsNumerical(ci) Then
             ' CI contiene letras o símbolos
-            Throw New FormatException("La cédula de identidad solo puede contener dígitos.")
+            Throw New FormatException("error_formato_ci_numerico")
 
         ElseIf String.IsNullOrWhiteSpace(nombres) Then
             ' Nombre Vacio
-            Throw New FormatException("El campo nombre es obligatorio.")
+            Throw New FormatException("error_campo_obligatorio_nombre")
 
         ElseIf ContainsSymbol(nombres) Then
-            Throw New FormatException("El formato del campo nombre no es correcto.")
+            Throw New FormatException("error_formato_nombre")
 
         ElseIf String.IsNullOrWhiteSpace(apellidoP) And String.IsNullOrWhiteSpace(ApellidoM) Then
             ' Ningún apellido ingresado
-            Throw New FormatException("Por favor ingrese por lo menos un apellido.")
+            Throw New FormatException("error_campo_obligatorio_apellidos")
 
         ElseIf Not IsNumerical(telefono) Then
             ' Teléfono contiene caracteres que no sean numéricos
-            Throw New FormatException("El teléfono solo puede contener dígitos.")
+            Throw New FormatException("error_formato_telefono")
 
         ElseIf String.IsNullOrWhiteSpace(calle) Then
             ' Calle vacía
-            Throw New FormatException("El campo calle es obligatorio.")
+            Throw New FormatException("error_campo_obligatorio_calle")
 
         ElseIf ContainsSymbol(calle) Then
             ' Calle contiene símbolos
-            Throw New FormatException("El formato del campo calle no es correcto.")
+            Throw New FormatException("error_formato_calle")
 
         ElseIf String.IsNullOrWhiteSpace(numero) Then
             ' Campo numero vacío
-            Throw New FormatException("El campo número es obligatorio.")
+            Throw New FormatException("error_campo_obligatorio_numero")
 
         ElseIf Not IsNumerical(numero) Then
             ' Numero de puerta contiene caracteres que no sean numéricos
-            Throw New FormatException("El formato del campo número no es correcto.")
+            Throw New FormatException("error_formato_numero")
 
         ElseIf String.IsNullOrWhiteSpace(localidad) Then
             ' Localidad vacía
-            Throw New FormatException("El campo localidad es obligatorio.")
+            Throw New FormatException("error_campo_obligatorio_localidad")
 
         ElseIf ContainsSymbol(localidad) Then
             ' Localidad contiene símbolos
-            Throw New FormatException("El formato del campo localidad no es correcto.")
+            Throw New FormatException("error_formato_localidad")
         End If
 
         Try

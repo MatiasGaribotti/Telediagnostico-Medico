@@ -12,6 +12,8 @@ Public Class F_Empleados
 
     End Sub
 
+
+
     Private Enum Modos
         Ingresar
         Modificar
@@ -39,13 +41,12 @@ Public Class F_Empleados
         Modo = pMode
 
         If Modo = Modos.Modificar Then
-            BtnIngresar.Text = "Modificar"
-            BtnHorarios.Text = "Cancelar"
+            BtnIngresar.Text = Translator.TranslateKey("modificar")
+            BtnHorarios.Text = Translator.TranslateKey("cancelar")
 
         Else
-            BtnIngresar.Text = "Ingresar"
-            BtnHorarios.Text = "Horarios"
-
+            BtnIngresar.Text = Translator.TranslateKey("ingreso_registro")
+            BtnHorarios.Text = Translator.TranslateKey("horarios")
         End If
     End Sub
 
@@ -163,15 +164,16 @@ Public Class F_Empleados
                 ClearFields()
                 LoadDgv()
 
-                Dim exitMessage = " ingresado con éxito."
+                Dim exitMessage = Translator.TranslateKey("empleado_ingresado_exito")
+
                 If empleado.IsMedico Then
-                    exitMessage = "Medico" & exitMessage
+                    exitMessage.Replace("[TIPO_EMPLEADO]", Translator.TranslateKey("medico"))
 
                 ElseIf empleado.IsRRHH Then
-                    exitMessage = "Personal de Recursos humanos" & exitMessage
+                    exitMessage.Replace("[TIPO_EMPLEADO]", Translator.TranslateKey("recursos_humanos"))
 
                 ElseIf empleado.IsRecepcionista Then
-                    exitMessage = "Recepcionista" & exitMessage
+                    exitMessage.Replace("[TIPO_EMPLEADO]", Translator.TranslateKey("recepcionista"))
 
                 End If
 
@@ -181,12 +183,12 @@ Public Class F_Empleados
                 RRHHBUS.ModifyEmpleado(empleado)
                 ClearFields()
                 LoadDgv()
-                MsgBox("Empleado modificado con éxito.", MsgBoxStyle.Information, "Información")
+                MsgBox(Translator.TranslateKey("empleado_modificado_exito"), MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
             End If
 
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
         End Try
     End Sub
 
@@ -236,7 +238,7 @@ Public Class F_Empleados
                 EmpleadoVO = New Recepcionista(ci, nombre, apellidoP, apellidoM, sexo, direccion, telefono, fechaNacimiento, password)
 
             Else
-                Throw New Exception("Error al obtener el empleado.")
+                Throw New Exception("error_obtener_empleado")
             End If
         End If
 
@@ -244,6 +246,7 @@ Public Class F_Empleados
     End Function
 
     Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Translator.TranslateForm(Me)
         DTPickerFNac.MaxDate = Date.Now
         ConfigComboBox()
         LoadDgv()
@@ -413,10 +416,11 @@ Public Class F_Empleados
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         Dim RRHHBUS As New RRHHBUS
         ChangeMode(Modos.Modificar)
+
         Try
             Dim seleccionados = GetSelected()
             If seleccionados.Count > 1 Then
-                Throw New Exception("No se puede modificar más de un empleado a la vez.")
+                Throw New Exception("error_modificar_varios")
 
             Else
                 LoadFields(seleccionados.First)
@@ -425,7 +429,9 @@ Public Class F_Empleados
 
         Catch ex As Exception
             ChangeMode(Modos.Ingresar)
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            Dim error_message = Translator.TranslateKey(ex.Message).Replace("[ENTIDAD]", Translator.TranslateKey("empleado"))
+            MsgBox(error_message, MsgBoxStyle.Critical, Translator.TranslateKey("error"))
+
         End Try
     End Sub
 
@@ -435,10 +441,14 @@ Public Class F_Empleados
         Try
             Dim seleccionados = GetSelected()
             Dim output As String = RRHHBUS.DeleteEmpleados(seleccionados)
+            output.Replace("empleados_eliminados_exito", Translator.TranslateKey("empleados_eliminados_exito"))
+            output.Replace("error_eliminar_persona", Translator.TranslateKey("error_eliminar_empleado"))
+
             LoadDgv()
-            MsgBox(output, MsgBoxStyle.Information, "Eliminación de Empleados")
+            MsgBox(output, MsgBoxStyle.Information, Translator.TranslateKey("titulo_eliminar_empleado"))
+
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
         End Try
 
     End Sub
@@ -453,16 +463,18 @@ Public Class F_Empleados
                 If empleado.IsMedico Then
                     RRHHBUS.MakeAdministrator(empleado.Ci)
                     LoadDgv()
-                    MsgBox(empleado.Nombre & " ascendido a administrador.", MsgBoxStyle.Information, "Información")
+
+                    Dim output_message = Translator.TranslateKey("mensaje_empleado_ascendido").Replace("[NOMBRE_EMPLEADO]", empleado.Nombre)
+                    MsgBox(output_message, MsgBoxStyle.Information, Translator.TranslateKey("información"))
                 Else
-                    Throw New Exception("Solo los médicos pueden ser administradores.")
+                    Throw New Exception("error_ascender_no_medico")
                 End If
 
             Else
-                Throw New Exception("No se puede hacer administrado a más de un médico a la vez.")
+                Throw New Exception("error_ascender_varios")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Translator.TranslateKey("error"))
         End Try
     End Sub
 End Class

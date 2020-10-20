@@ -99,7 +99,7 @@ Public Class EnfermedadDAO
         Try
             Conn.Execute(insertQuery)
         Catch ex As Exception
-            Throw New Exception("Error al ingresar la enfermedad " & enfermedad.Nombre & ".")
+            Throw New Exception("error_enfermedad_ingresar " & enfermedad.Nombre & ".")
         Finally
             Conn.Close()
 
@@ -128,7 +128,6 @@ Public Class EnfermedadDAO
 
             Conn.CommitTrans()
         Catch ex As Exception
-            Console.WriteLine(ex.Message)
             Conn.RollbackTrans()
             Throw New Exception(ex.Message)
 
@@ -151,7 +150,7 @@ Public Class EnfermedadDAO
         Try
             Conn.Execute(query)
         Catch ex As Exception
-            Throw New Exception("No se pudo modificar la enfermedad.")
+            Throw New Exception("error_enfermedad_modificar")
         End Try
 
     End Sub
@@ -168,9 +167,11 @@ Public Class EnfermedadDAO
         Try
             Conn.Execute(query)
         Catch ex As Exception
-            Throw New Exception("Error al eliminar la enfermedad .")
+            Throw New Exception("error_enfermedad_eliminar")
+
         Finally
             Conn.Close()
+
         End Try
     End Sub
 

@@ -15,7 +15,7 @@ Public Class PersonaDAO
         Try
             Conn.Execute(query)
         Catch ex As Exception
-            Throw New Exception("No se pudo actualizar la contraseña.")
+            Throw New Exception("error_actualizar_contrasenna")
         Finally
             Conn.Close()
         End Try
@@ -59,7 +59,7 @@ Public Class PersonaDAO
                               ");"
             Conn.Execute(query)
         Catch ex As Exception
-            Throw New Exception("No se pudo ingresar la persona.")
+            Throw New Exception("error_ingresar_persona")
         End Try
     End Sub
 
@@ -89,7 +89,7 @@ Public Class PersonaDAO
             Conn.Execute(modifyDireccion)
 
         Catch ex As Exception
-            Throw New Exception("Error al modificar la persona.")
+            Throw New Exception("error_modificar_persona")
         End Try
     End Sub
     Public Sub DeletePersona(pCi As Integer)
@@ -104,7 +104,7 @@ Public Class PersonaDAO
         Try
             Conn.Execute(query)
         Catch ex As Exception
-            Throw New Exception("No se pudo eliminar la persona ")
+            Throw New Exception("error_eliminar_persona")
         Finally
             Conn.Close()
         End Try

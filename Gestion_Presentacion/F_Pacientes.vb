@@ -1,25 +1,28 @@
 ﻿Imports System.Threading
-Imports System.Globalization
 Imports Logica
 Imports Dominio
-Imports System.Text
 
 Public Class F_Pacientes
+    Public Property Modo As Modos
+    Public Enum Modos
+        Ingresar
+        Modificar
+    End Enum
 
     Public Sub New()
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
         ' Fecha de nacimiento posterior a la actual no permitida
-        'DTPickerFNac.MaxDate = Date.Now()
+        DTPickerFNac.MaxDate = Date.Now()
         ConfigMode()
     End Sub
 
-    Public Property Modo As Modos
-
-    Public Enum Modos
-        Ingresar
-        Modificar
-    End Enum
+    Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Translator.TranslateForm(Me)
+        Refresh()
+        CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
+        LoadDgv()
+    End Sub
 
     Public Sub ConfigMode()
 
@@ -40,15 +43,15 @@ Public Class F_Pacientes
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         Try
-            ValidateIngresarFields()
             Dim paciente = GetPaciente()
 
             If Modo = Modos.Ingresar Then
+                ValidateIngresarFields()
                 If Env.CurrentUser.IsRecepcionista Then
                     Dim recepcionista As New RecepcionistaBUS
                     Try
                         recepcionista.IngresarPaciente(paciente)
-                        MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
+                        MsgBox(Translator.TranslateKey("paciente_ingresar_exito"), MsgBoxStyle.Information, Translator.TranslateKey("titulo_usuario_ingresado"))
                         LoadDgv()
                         ClearFields()
                     Catch ex As Exception
@@ -59,11 +62,13 @@ Public Class F_Pacientes
                     Try
                         Dim administrador As New AdministradorBUS
                         administrador.InsertPaciente(paciente)
-                        MsgBox("Paciente ingresado con éxito.", MsgBoxStyle.Information, "Usuario Ingresado")
+                        MsgBox(Translator.TranslateKey("paciente_ingresar_exito"), MsgBoxStyle.Information, Translator.TranslateKey("titulo_usuario_ingresado"))
                         LoadDgv()
                         ClearFields()
+
                     Catch ex As Exception
-                        MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+                        MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
+
                     End Try
                 End If
             ElseIf Modo = Modos.Modificar Then
@@ -82,12 +87,15 @@ Public Class F_Pacientes
                 ChangeMode(Modos.Ingresar)
                 ClearFields()
                 LoadDgv()
-                MsgBox("Paciente modificado con éxito.", MsgBoxStyle.Information, "Información")
+                MsgBox(Translator.TranslateKey("paciente_modificar_exito"), MsgBoxStyle.Information, Translator.TranslateKey("información"))
 
             End If
 
         Catch ex As FormatException
-            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Formato")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Exclamation, Translator.TranslateKey("error_formato"))
+
+        Catch ex As Exception
+            MsgBox(Translator.TranslateKey("error_inesperado"))
         End Try
 
     End Sub
@@ -148,7 +156,7 @@ Public Class F_Pacientes
                                    )
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            Throw ex
         End Try
     End Sub
 
@@ -174,32 +182,6 @@ Public Class F_Pacientes
         End Try
 
     End Sub
-
-
-    Private Function ContainsSymbol(text As String) As Boolean
-
-        For Each caracter In text.ToCharArray
-            If Char.IsSymbol(caracter) Then
-                Return True
-            End If
-        Next
-        Return False
-    End Function
-
-    Private Function IsNumerical(text As String) As Boolean
-        For Each caracter In text.ToCharArray
-            If Not Char.IsDigit(caracter) Then
-                Return False
-            End If
-        Next
-        Return True
-    End Function
-
-    Private Sub F_Pacientes_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CmbIDepartamento.DataSource = [Enum].GetValues(GetType(Direccion.Departamentos))
-        LoadDgv()
-    End Sub
-
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         F_ABM.Show()
@@ -377,7 +359,7 @@ Public Class F_Pacientes
 
     Private Sub ChangeMode(pMode As Modos)
         Modo = pMode
-        BtnIngresar.Text = Modo.ToString
+        BtnIngresar.Text = Translator.TranslateKey(Modo.ToString.ToLower)
 
         If pMode = Modos.Ingresar Then
             BtnCancelar.Visible = False
@@ -428,7 +410,7 @@ Public Class F_Pacientes
         Try
             ValidateFiltrarFields()
         Catch ex As FormatException
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Formato")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error_formato"))
         End Try
     End Sub
 
@@ -437,49 +419,34 @@ Public Class F_Pacientes
             Dim count As Integer = DgvPacientes.SelectedRows.Count
             Dim confirmation As Boolean
 
-            If count = 1 Then
-                confirmation = MsgBox("¿Está seguro de que desea eliminar al paciente seleccionado?", MsgBoxStyle.YesNo, "Confirmación")
 
-            ElseIf count > 1 Then
-                confirmation = MsgBox("¿Está seguro de que desea eliminar al paciente seleccionado?", MsgBoxStyle.YesNo, "Confirmación")
-
-            End If
+            confirmation = MsgBox(Translator.TranslateKey("confirmacion_paciente_eliminar"), MsgBoxStyle.YesNo, Translator.TranslateKey("confirmacion"))
 
             If confirmation Then
                 Dim listaPacientes As List(Of Paciente) = GetSelected()
                 Dim RecepcionistaBUS As New RecepcionistaBUS
 
-                Dim msg As String = " pacientes eliminados."
+                Dim output_message As String = Translator.TranslateKey("mensaje_paciente_eliminar") & vbCrLf
 
                 For Each paciente In listaPacientes
                     Try
                         RecepcionistaBUS.DeletePaciente(paciente)
 
                     Catch ex As Exception
-                        msg += ex.Message & paciente.Nombre & "." & vbCrLf
+                        output_message += Translator.TranslateKey(ex.Message) & paciente.Nombre & "." & vbCrLf
                         count -= 1
                     End Try
                 Next
 
-                msg = count & msg
-                Dim strbuilder As New StringBuilder
-                strbuilder.Append(msg)
-                strbuilder.Replace("persona", "paciente")
+                output_message.Replace("[COUNT]", count)
+                output_message.Replace(Translator.TranslateKey("persona"), Translator.TranslateKey("paciente"))
 
-                msg = strbuilder.ToString
-
-                If msg.Contains("No se pudo") Then
-                    MsgBox(msg, MsgBoxStyle.Exclamation, "Advertencia")
-
-                Else
-                    MsgBox(msg, MsgBoxStyle.Information, "Información")
-
-                End If
+                MsgBox(output_message, MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
                 LoadDgv()
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
         End Try
     End Sub
 

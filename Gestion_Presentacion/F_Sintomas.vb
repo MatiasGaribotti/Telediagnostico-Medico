@@ -1,26 +1,24 @@
 ﻿Imports Logica
 Imports Dominio
 Public Class F_Sintomas
-    Public Sub New()
-
-        ' Esta llamada es exigida por el diseñador.
-        InitializeComponent()
-        BtnCancelar.Visible = False
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
-    End Sub
 
     Private Property Modo As Modos = Modos.Ingresar
     Private Property IdSintomaMod As Short
     Private AdministradorBUS As New AdministradorBUS
-    Private SintomaBUS As New SintomaBUS
-
     Private Enum Modos
         Ingresar
         Modificar
     End Enum
+    Private SintomaBUS As New SintomaBUS
+    Public Sub New()
+        InitializeComponent()
+        BtnCancelar.Visible = False
+
+    End Sub
+
 
     Private Sub F_Sintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Translator.TranslateForm(Me)
         CmbITipo.DataSource = [Enum].GetValues(GetType(Sintoma.TiposSintomas))
         CmbBTipo.DataSource = [Enum].GetValues(GetType(Sintoma.TiposSintomas))
         LoadDgv()
@@ -28,7 +26,7 @@ Public Class F_Sintomas
 
     Private Sub ChangeMode(pMode As Modos)
         Modo = pMode
-        BtnIngresar.Text = Modo.ToString
+        BtnIngresar.Text = Translator.TranslateKey(Modo.ToString.ToLower)
 
         If pMode = Modos.Ingresar Then
             BtnCancelar.Visible = False
@@ -39,7 +37,7 @@ Public Class F_Sintomas
 
     Private Sub ValidateFields()
         If String.IsNullOrWhiteSpace(TxtISintoma.Text) Then
-            Throw New NoNullAllowedException("El nombre del síntoma no puede ser vacío.")
+            Throw New NoNullAllowedException("error_campo_obligatorio_nombre_sintoma")
 
         End If
     End Sub
@@ -100,7 +98,7 @@ Public Class F_Sintomas
 
             Return sintomas
         Catch ex As Exception
-            Throw New Exception("No se pudieron obtener los síntomas seleccionados.")
+            Throw New Exception("error_sintomas_obtener")
         End Try
     End Function
 
@@ -111,7 +109,7 @@ Public Class F_Sintomas
             DgvSintomas.Refresh()
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
         End Try
     End Sub
 
@@ -140,29 +138,32 @@ Public Class F_Sintomas
                     Dim sintoma = GetSintoma()
                     AdministradorBUS.InsertSintoma(sintoma)
                     LoadDgv()
-                    MsgBox("Sintoma ingresado correctamente.", MsgBoxStyle.Information)
+                    MsgBox("sintoma_ingresar_exito", MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
                     ClearFields()
+
                 Catch ex As Exception
-                    MsgBox(ex.Message)
+                    MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
+
                 End Try
 
             Case Modos.Modificar
-                'Cargo el id en el nuevo síntoma
                 Try
                     Dim EnfermedadBUS As New EnfermedadBUS
                     Dim sintoma = GetSintoma()
+
+                    'Cargo el id en el nuevo síntoma
                     sintoma.Id = IdSintomaMod
                     sintoma.Enfermedades = EnfermedadBUS.GetInfoEnfermedades(sintoma.Enfermedades)
 
                     AdministradorBUS.ModifySintoma(sintoma)
                     LoadDgv()
                     ClearFields()
-                    MsgBox("Sintoma modificado correctamente.")
+                    MsgBox(Translator.TranslateKey("sintoma_modificar_exito"), MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
                     ChangeMode(Modos.Ingresar)
+
                 Catch ex As Exception
                     MsgBox(ex.Message)
 
-                Finally
                 End Try
         End Select
     End Sub
@@ -179,9 +180,10 @@ Public Class F_Sintomas
         Dim confirmation As Boolean
 
         If count = 1 Then
-            confirmation = MsgBox("Está seguro de que desea eliminar el síntoma seleccionado?", MsgBoxStyle.YesNo)
+            confirmation = MsgBox(Translator.TranslateKey("confirmacion_sintoma_eliminar"), MsgBoxStyle.YesNo)
         ElseIf count > 1 Then
-            confirmation = MsgBox("¿Está seguro de que desea eliminar los " & count & " sintomas seleccionados?", MsgBoxStyle.YesNo)
+            Dim message As String = Translator.TranslateKey("confirmacion_sintoma_eliminar_varios").Replace("[COUNT]", count)
+            confirmation = MsgBox(message, MsgBoxStyle.YesNo, Translator.TranslateKey("confirmacion"))
 
         End If
 
@@ -191,28 +193,26 @@ Public Class F_Sintomas
                 Dim sintomas = GetSelected()
                 Dim AdministradorBUS As New AdministradorBUS
 
-                Dim msg As String = " sintomas eliminados." & vbCrLf
+                Dim output_message As String = Translator.TranslateKey("sintoma_eliminar_exito
+")
                 For Each sintoma In sintomas
                     Try
                         AdministradorBUS.DeleteSintoma(sintoma.Id)
 
                     Catch ex As Exception
-                        msg += ex.Message & sintoma.Nombre & "." & vbCrLf
+                        output_message += ex.Message & sintoma.Nombre & "." & vbCrLf
                         count -= 1
                     End Try
                 Next
 
-                msg = count & msg
+                output_message.Replace("[COUNT]", count.ToString)
 
-                If msg.Contains("No se pudo") Then
-                    MsgBox(msg, MsgBoxStyle.Exclamation, "Advertencia")
-                Else
-                    MsgBox(msg, MsgBoxStyle.Information, "Información")
-                End If
+                MsgBox(output_message, MsgBoxStyle.Information, Translator.TranslateKey("información"))
                 LoadDgv()
 
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+                MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
+
             End Try
         End If
 
@@ -226,7 +226,10 @@ Public Class F_Sintomas
 
             If listSintomas.Count <> 1 Then
                 ChangeMode(Modos.Ingresar)
-                MsgBox("No se puede modificar más de un síntoma a la vez.", MsgBoxStyle.Exclamation, "Modificar Síntoma")
+
+                Dim error_message As String = Translator.TranslateKey("error_modificar_varios").Replace("[ENTIDAD]", Translator.TranslateKey("sintoma"))
+
+                MsgBox(error_message, MsgBoxStyle.Exclamation, Translator.TranslateKey("error"))
             Else
                 Dim SintomaBUS As New SintomaBUS()
                 Dim sintoma = listSintomas.First
@@ -237,11 +240,10 @@ Public Class F_Sintomas
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
 
         End Try
     End Sub
-
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         F_ABM.Show()
@@ -274,15 +276,18 @@ Public Class F_Sintomas
     End Sub
 
     Private Sub BtnImportar_Click(sender As Object, e As EventArgs) Handles BtnImportar.Click
-        OFDialogCSV.Filter = "Archivos CSV (*.csv)|*.csv"
+        Dim previewFileExtension As String = Translator.TranslateKey("filtro_csv")
+        OFDialogCSV.Filter = previewFileExtension & "(*.csv)|*.csv"
 
         If OFDialogCSV.ShowDialog() = DialogResult.OK Then
             Try
                 SintomaBUS.ImportCSV(OFDialogCSV.FileName)
                 LoadDgv()
-                MsgBox("sintoma_import_exito", MsgBoxStyle.Information, "informacion")
+                MsgBox("sintoma_import_exito", MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
+
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "error_title")
+                MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
+
             End Try
         End If
     End Sub

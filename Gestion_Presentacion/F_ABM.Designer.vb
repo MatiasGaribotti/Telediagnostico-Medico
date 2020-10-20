@@ -22,6 +22,7 @@ Partial Class F_ABM
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_ABM))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblEmpleados = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Btn_Empleados = New Guna.UI2.WinForms.Guna2Button()
@@ -219,9 +220,13 @@ Partial Class F_ABM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(1920, 1080)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "F_ABM"
         Me.Text = "frmGestionABM"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

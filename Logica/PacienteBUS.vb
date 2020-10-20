@@ -52,16 +52,16 @@ Public Class PacienteBUS
 
         If ContainsSymbol(nucleoFlia) Then
             ' Núcleo Familiar contiene símbolos
-            Throw New FormatException("El formato del campo núcleo familiar no es correcto.")
+            Throw New FormatException("error_formato_nucleo_familiar")
 
         ElseIf ContainsSymbol(AntFam) Then
             ' Antecedentes familiares contiene símbolos
-            Throw New FormatException("El formato del campo antecedentes familiares no es correcto.")
+            Throw New FormatException("error_formato_antecedentes_familiares")
 
 
         ElseIf ContainsSymbol(AntLab) Then
             ' Antecedentes laborales contiene símbolos
-            Throw New FormatException("El formato del campo antecedentes laborales no es correcto.")
+            Throw New FormatException("error_formato_antecedentes_laborales")
         End If
     End Sub
     Public Sub EndChat(idChat As Long)

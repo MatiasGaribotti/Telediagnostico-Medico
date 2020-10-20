@@ -146,7 +146,7 @@ Partial Class F_Sintomas
         Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
         Me.BtnCancelar.Size = New System.Drawing.Size(91, 32)
         Me.BtnCancelar.TabIndex = 83
-        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.Text = "cancelar"
         Me.BtnCancelar.UseTransparentBackground = True
         '
         'TxtBEnfermedad
@@ -220,7 +220,7 @@ Partial Class F_Sintomas
         Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
         Me.BtnIngresar.Size = New System.Drawing.Size(91, 32)
         Me.BtnIngresar.TabIndex = 78
-        Me.BtnIngresar.Text = "Ingresar"
+        Me.BtnIngresar.Text = "ingreso_registro"
         Me.BtnIngresar.UseTransparentBackground = True
         '
         'TxtIDescripcion
@@ -256,9 +256,9 @@ Partial Class F_Sintomas
         Me.LblIDescripcion.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblIDescripcion.Location = New System.Drawing.Point(56, 491)
         Me.LblIDescripcion.Name = "LblIDescripcion"
-        Me.LblIDescripcion.Size = New System.Drawing.Size(114, 27)
+        Me.LblIDescripcion.Size = New System.Drawing.Size(112, 27)
         Me.LblIDescripcion.TabIndex = 76
-        Me.LblIDescripcion.Text = "Descripción"
+        Me.LblIDescripcion.Text = "descripcion"
         '
         'BtnImportar
         '
@@ -278,7 +278,7 @@ Partial Class F_Sintomas
         Me.BtnImportar.ShadowDecoration.Parent = Me.BtnImportar
         Me.BtnImportar.Size = New System.Drawing.Size(91, 32)
         Me.BtnImportar.TabIndex = 75
-        Me.BtnImportar.Text = "Importar"
+        Me.BtnImportar.Text = "importar"
         Me.BtnImportar.UseTransparentBackground = True
         '
         'LblIngresar
@@ -288,9 +288,9 @@ Partial Class F_Sintomas
         Me.LblIngresar.Location = New System.Drawing.Point(56, 281)
         Me.LblIngresar.Margin = New System.Windows.Forms.Padding(3, 3, 3, 18)
         Me.LblIngresar.Name = "LblIngresar"
-        Me.LblIngresar.Size = New System.Drawing.Size(88, 27)
+        Me.LblIngresar.Size = New System.Drawing.Size(170, 27)
         Me.LblIngresar.TabIndex = 74
-        Me.LblIngresar.Text = "Ingresar"
+        Me.LblIngresar.Text = "ingreso_registro"
         '
         'BtnIDelItem
         '
@@ -374,9 +374,9 @@ Partial Class F_Sintomas
         Me.LblIEnfermedades.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblIEnfermedades.Location = New System.Drawing.Point(56, 410)
         Me.LblIEnfermedades.Name = "LblIEnfermedades"
-        Me.LblIEnfermedades.Size = New System.Drawing.Size(138, 27)
+        Me.LblIEnfermedades.Size = New System.Drawing.Size(137, 27)
         Me.LblIEnfermedades.TabIndex = 69
-        Me.LblIEnfermedades.Text = "Enfermedades"
+        Me.LblIEnfermedades.Text = "enfermedades"
         '
         'LblITipo
         '
@@ -384,9 +384,9 @@ Partial Class F_Sintomas
         Me.LblITipo.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblITipo.Location = New System.Drawing.Point(56, 370)
         Me.LblITipo.Name = "LblITipo"
-        Me.LblITipo.Size = New System.Drawing.Size(45, 27)
+        Me.LblITipo.Size = New System.Drawing.Size(124, 27)
         Me.LblITipo.TabIndex = 68
-        Me.LblITipo.Text = "Tipo"
+        Me.LblITipo.Text = "tipo_sintoma"
         '
         'LblISintoma
         '
@@ -394,9 +394,9 @@ Partial Class F_Sintomas
         Me.LblISintoma.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblISintoma.Location = New System.Drawing.Point(56, 329)
         Me.LblISintoma.Name = "LblISintoma"
-        Me.LblISintoma.Size = New System.Drawing.Size(80, 27)
+        Me.LblISintoma.Size = New System.Drawing.Size(79, 27)
         Me.LblISintoma.TabIndex = 67
-        Me.LblISintoma.Text = "Síntoma"
+        Me.LblISintoma.Text = "sintoma"
         '
         'TxtISintoma
         '
@@ -442,7 +442,7 @@ Partial Class F_Sintomas
         Me.BtnFiltrar.ShadowDecoration.Parent = Me.BtnFiltrar
         Me.BtnFiltrar.Size = New System.Drawing.Size(81, 32)
         Me.BtnFiltrar.TabIndex = 65
-        Me.BtnFiltrar.Text = "Filtrar"
+        Me.BtnFiltrar.Text = "filtrar"
         Me.BtnFiltrar.UseTransparentBackground = True
         '
         'BtnVolver
@@ -472,9 +472,9 @@ Partial Class F_Sintomas
         Me.LblBusqueda.Location = New System.Drawing.Point(56, 67)
         Me.LblBusqueda.Margin = New System.Windows.Forms.Padding(3, 3, 3, 18)
         Me.LblBusqueda.Name = "LblBusqueda"
-        Me.LblBusqueda.Size = New System.Drawing.Size(105, 27)
+        Me.LblBusqueda.Size = New System.Drawing.Size(104, 27)
         Me.LblBusqueda.TabIndex = 63
-        Me.LblBusqueda.Text = "Búsqueda"
+        Me.LblBusqueda.Text = "busqueda"
         '
         'BtnBDelItem
         '
@@ -561,9 +561,9 @@ Partial Class F_Sintomas
         Me.LblEnfermedades.Location = New System.Drawing.Point(56, 196)
         Me.LblEnfermedades.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.LblEnfermedades.Name = "LblEnfermedades"
-        Me.LblEnfermedades.Size = New System.Drawing.Size(138, 27)
+        Me.LblEnfermedades.Size = New System.Drawing.Size(137, 27)
         Me.LblEnfermedades.TabIndex = 58
-        Me.LblEnfermedades.Text = "Enfermedades"
+        Me.LblEnfermedades.Text = "enfermedades"
         '
         'LblBTipo
         '
@@ -572,9 +572,9 @@ Partial Class F_Sintomas
         Me.LblBTipo.Location = New System.Drawing.Point(56, 153)
         Me.LblBTipo.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.LblBTipo.Name = "LblBTipo"
-        Me.LblBTipo.Size = New System.Drawing.Size(45, 27)
+        Me.LblBTipo.Size = New System.Drawing.Size(124, 27)
         Me.LblBTipo.TabIndex = 57
-        Me.LblBTipo.Text = "Tipo"
+        Me.LblBTipo.Text = "tipo_sintoma"
         '
         'LblBSintoma
         '
@@ -583,9 +583,9 @@ Partial Class F_Sintomas
         Me.LblBSintoma.Location = New System.Drawing.Point(56, 112)
         Me.LblBSintoma.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.LblBSintoma.Name = "LblBSintoma"
-        Me.LblBSintoma.Size = New System.Drawing.Size(80, 27)
+        Me.LblBSintoma.Size = New System.Drawing.Size(79, 27)
         Me.LblBSintoma.TabIndex = 56
-        Me.LblBSintoma.Text = "Síntoma"
+        Me.LblBSintoma.Text = "sintoma"
         '
         'TxtBSintoma
         '
@@ -643,7 +643,7 @@ Partial Class F_Sintomas
         Me.BtnEliminar.ShadowDecoration.Parent = Me.BtnEliminar
         Me.BtnEliminar.Size = New System.Drawing.Size(137, 36)
         Me.BtnEliminar.TabIndex = 68
-        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.Text = "eliminar"
         '
         'BtnModificar
         '
@@ -661,7 +661,7 @@ Partial Class F_Sintomas
         Me.BtnModificar.ShadowDecoration.Parent = Me.BtnModificar
         Me.BtnModificar.Size = New System.Drawing.Size(137, 36)
         Me.BtnModificar.TabIndex = 67
-        Me.BtnModificar.Text = "Modificar"
+        Me.BtnModificar.Text = "modificar"
         '
         'BtnMinimize
         '
@@ -760,12 +760,14 @@ Partial Class F_Sintomas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1920, 1080)
         Me.Controls.Add(Me.PnlDgv)
         Me.Controls.Add(Me.PnlSide)
         Me.Controls.Add(Me.btn_minimizar)
         Me.Controls.Add(Me.btn_cerrar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "F_Sintomas"
         Me.Text = "frm_SintomasIngresarFiltrar"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

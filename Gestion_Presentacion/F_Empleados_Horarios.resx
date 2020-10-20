@@ -460,13 +460,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkIDomingo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 27</value>
+    <value>140, 27</value>
   </data>
   <data name="ChkIDomingo.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
   </data>
   <data name="ChkIDomingo.Text" xml:space="preserve">
-    <value>D</value>
+    <value>dia_domingo</value>
   </data>
   <data name="&gt;&gt;ChkIDomingo.Name" xml:space="preserve">
     <value>ChkIDomingo</value>
@@ -496,13 +496,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkISabado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 27</value>
+    <value>127, 27</value>
   </data>
   <data name="ChkISabado.TabIndex" type="System.Int32, mscorlib">
     <value>125</value>
   </data>
   <data name="ChkISabado.Text" xml:space="preserve">
-    <value>S</value>
+    <value>dia_sabado</value>
   </data>
   <data name="&gt;&gt;ChkISabado.Name" xml:space="preserve">
     <value>ChkISabado</value>
@@ -532,13 +532,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkIViernes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 27</value>
+    <value>124, 27</value>
   </data>
   <data name="ChkIViernes.TabIndex" type="System.Int32, mscorlib">
     <value>124</value>
   </data>
   <data name="ChkIViernes.Text" xml:space="preserve">
-    <value>V</value>
+    <value>dia_viernes</value>
   </data>
   <data name="&gt;&gt;ChkIViernes.Name" xml:space="preserve">
     <value>ChkIViernes</value>
@@ -568,13 +568,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkIJueves.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 27</value>
+    <value>118, 27</value>
   </data>
   <data name="ChkIJueves.TabIndex" type="System.Int32, mscorlib">
     <value>123</value>
   </data>
   <data name="ChkIJueves.Text" xml:space="preserve">
-    <value>J</value>
+    <value>dia_jueves</value>
   </data>
   <data name="&gt;&gt;ChkIJueves.Name" xml:space="preserve">
     <value>ChkIJueves</value>
@@ -604,13 +604,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkIMiercoles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 27</value>
+    <value>148, 27</value>
   </data>
   <data name="ChkIMiercoles.TabIndex" type="System.Int32, mscorlib">
     <value>122</value>
   </data>
   <data name="ChkIMiercoles.Text" xml:space="preserve">
-    <value>X</value>
+    <value>dia_miercoles</value>
   </data>
   <data name="&gt;&gt;ChkIMiercoles.Name" xml:space="preserve">
     <value>ChkIMiercoles</value>
@@ -640,13 +640,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkIMartes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 27</value>
+    <value>123, 27</value>
   </data>
   <data name="ChkIMartes.TabIndex" type="System.Int32, mscorlib">
     <value>121</value>
   </data>
   <data name="ChkIMartes.Text" xml:space="preserve">
-    <value>M</value>
+    <value>dia_martes</value>
   </data>
   <data name="&gt;&gt;ChkIMartes.Name" xml:space="preserve">
     <value>ChkIMartes</value>
@@ -676,13 +676,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkILunes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 27</value>
+    <value>109, 27</value>
   </data>
   <data name="ChkILunes.TabIndex" type="System.Int32, mscorlib">
     <value>120</value>
   </data>
   <data name="ChkILunes.Text" xml:space="preserve">
-    <value>L</value>
+    <value>dia_lunes</value>
   </data>
   <data name="&gt;&gt;ChkILunes.Name" xml:space="preserve">
     <value>ChkILunes</value>
@@ -712,13 +712,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkBDomingo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 27</value>
+    <value>140, 27</value>
   </data>
   <data name="ChkBDomingo.TabIndex" type="System.Int32, mscorlib">
     <value>119</value>
   </data>
   <data name="ChkBDomingo.Text" xml:space="preserve">
-    <value>D</value>
+    <value>dia_domingo</value>
   </data>
   <data name="&gt;&gt;ChkBDomingo.Name" xml:space="preserve">
     <value>ChkBDomingo</value>
@@ -748,13 +748,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkBSabado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 27</value>
+    <value>127, 27</value>
   </data>
   <data name="ChkBSabado.TabIndex" type="System.Int32, mscorlib">
     <value>118</value>
   </data>
   <data name="ChkBSabado.Text" xml:space="preserve">
-    <value>S</value>
+    <value>dia_sabado</value>
   </data>
   <data name="&gt;&gt;ChkBSabado.Name" xml:space="preserve">
     <value>ChkBSabado</value>
@@ -784,13 +784,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkBViernes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 27</value>
+    <value>124, 27</value>
   </data>
   <data name="ChkBViernes.TabIndex" type="System.Int32, mscorlib">
     <value>117</value>
   </data>
   <data name="ChkBViernes.Text" xml:space="preserve">
-    <value>V</value>
+    <value>dia_viernes</value>
   </data>
   <data name="&gt;&gt;ChkBViernes.Name" xml:space="preserve">
     <value>ChkBViernes</value>
@@ -820,13 +820,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkBJueves.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 27</value>
+    <value>118, 27</value>
   </data>
   <data name="ChkBJueves.TabIndex" type="System.Int32, mscorlib">
     <value>116</value>
   </data>
   <data name="ChkBJueves.Text" xml:space="preserve">
-    <value>J</value>
+    <value>dia_jueves</value>
   </data>
   <data name="&gt;&gt;ChkBJueves.Name" xml:space="preserve">
     <value>ChkBJueves</value>
@@ -856,13 +856,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkBMiercoles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 27</value>
+    <value>148, 27</value>
   </data>
   <data name="ChkBMiercoles.TabIndex" type="System.Int32, mscorlib">
     <value>115</value>
   </data>
   <data name="ChkBMiercoles.Text" xml:space="preserve">
-    <value>X</value>
+    <value>dia_miercoles</value>
   </data>
   <data name="&gt;&gt;ChkBMiercoles.Name" xml:space="preserve">
     <value>ChkBMiercoles</value>
@@ -892,13 +892,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkBMartes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 27</value>
+    <value>123, 27</value>
   </data>
   <data name="ChkBMartes.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
   </data>
   <data name="ChkBMartes.Text" xml:space="preserve">
-    <value>M</value>
+    <value>dia_martes</value>
   </data>
   <data name="&gt;&gt;ChkBMartes.Name" xml:space="preserve">
     <value>ChkBMartes</value>
@@ -925,13 +925,13 @@
     <value>5, 0, 0, 10</value>
   </data>
   <data name="ChkBLunes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 27</value>
+    <value>109, 27</value>
   </data>
   <data name="ChkBLunes.TabIndex" type="System.Int32, mscorlib">
     <value>113</value>
   </data>
   <data name="ChkBLunes.Text" xml:space="preserve">
-    <value>L</value>
+    <value>dia_lunes</value>
   </data>
   <data name="&gt;&gt;ChkBLunes.Name" xml:space="preserve">
     <value>ChkBLunes</value>
@@ -988,7 +988,7 @@
     <value>110</value>
   </data>
   <data name="BtnIngresar.Text" xml:space="preserve">
-    <value>ingresar</value>
+    <value>ingresar_registro</value>
   </data>
   <data name="&gt;&gt;BtnIngresar.Name" xml:space="preserve">
     <value>BtnIngresar</value>
@@ -1282,13 +1282,13 @@
     <value>65, 331</value>
   </data>
   <data name="LblIngreso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 23</value>
+    <value>163, 23</value>
   </data>
   <data name="LblIngreso.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="LblIngreso.Text" xml:space="preserve">
-    <value>ingreso</value>
+    <value>ingreso_registro</value>
   </data>
   <data name="&gt;&gt;LblIngreso.Name" xml:space="preserve">
     <value>LblIngreso</value>
@@ -1500,6 +1500,9 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1920, 1080</value>
   </data>
@@ -1580,7 +1583,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
+    <value>Horarios</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>F_Empleados_Horarios</value>

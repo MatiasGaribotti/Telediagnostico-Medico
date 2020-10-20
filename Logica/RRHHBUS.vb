@@ -44,7 +44,7 @@ Public Class RRHHBUS
 
     Public Function DeleteEmpleados(pEmpleados As List(Of Empleado)) As String
         Dim count As Integer = pEmpleados.Count
-        Dim outputMessage As String = " empleados eliminados exitosamente." & vbCrLf
+        Dim outputMessage As String = "[COUNT] empleados eliminados exitosamente." & vbCrLf
 
         For Each empleado In pEmpleados
             Try
@@ -55,7 +55,7 @@ Public Class RRHHBUS
                 count -= 1
             End Try
         Next
-        outputMessage = count & outputMessage
+        outputMessage.Replace("[COUNT]", count.ToString)
 
         Dim strb As New StringBuilder
         strb.Append(outputMessage)

@@ -123,6 +123,12 @@
   <data name="aceptar" xml:space="preserve">
     <value>Accept</value>
   </data>
+  <data name="antecedentes_familiares" xml:space="preserve">
+    <value>Family Antecedents</value>
+  </data>
+  <data name="antecedentes_laborales" xml:space="preserve">
+    <value>Working Antecedents</value>
+  </data>
   <data name="apellidos" xml:space="preserve">
     <value>Last Name</value>
   </data>
@@ -134,6 +140,9 @@
   </data>
   <data name="cabeza" xml:space="preserve">
     <value>Head</value>
+  </data>
+  <data name="calle" xml:space="preserve">
+    <value>Street</value>
   </data>
   <data name="cancelar" xml:space="preserve">
     <value>Cancel</value>
@@ -153,11 +162,23 @@
   <data name="confirmacion_cerrar_sesion" xml:space="preserve">
     <value>Are you sure you want to close your session?</value>
   </data>
+  <data name="confirmacion_enfermedades_eliminar" xml:space="preserve">
+    <value>Are you sure you want to delete the selected desease?</value>
+  </data>
   <data name="confirmacion_finalizar_chat" xml:space="preserve">
     <value>Are you sure you want to end the chat?</value>
   </data>
   <data name="confirmacion_iniciar_chat" xml:space="preserve">
     <value>Do you want to have a chat with a doctor in order to get a more precise diagnosis?</value>
+  </data>
+  <data name="confirmacion_paciente_eliminar" xml:space="preserve">
+    <value>Are you sure you want to delete the selected patients?</value>
+  </data>
+  <data name="confirmacion_sintoma_eliminar" xml:space="preserve">
+    <value>Are you sure you want to delete the selected symptom?</value>
+  </data>
+  <data name="confirmacion_sintoma_eliminar_varios" xml:space="preserve">
+    <value>Are you sure you want to  delete the [COUNT] selected symptoms?</value>
   </data>
   <data name="confirmar_nueva_contrasenna" xml:space="preserve">
     <value>Confirm new password</value>
@@ -174,41 +195,176 @@
   <data name="contrasenna_cambiada_exito" xml:space="preserve">
     <value>Password changed succesfully</value>
   </data>
+  <data name="cronica" xml:space="preserve">
+    <value>Chronic</value>
+  </data>
+  <data name="cualquiera" xml:space="preserve">
+    <value>Any</value>
+  </data>
   <data name="departamento" xml:space="preserve">
     <value>Department</value>
   </data>
-  <data name="diagnostico" xml:space="preserve">
-    <value>Diagnosis</value>
+  <data name="descripcion" xml:space="preserve">
+    <value>Description</value>
   </data>
-  <data name="diagnostico_ambiguo" xml:space="preserve">
-    <value>The given symtoms concluded in an ambiguous diagnosis. Please try to be as specific as possible.</value>
+  <data name="detalles" xml:space="preserve">
+    <value>Details</value>
   </data>
-  <data name="diagnostico_primario_mensaje_salida_1" xml:space="preserve">
-    <value>The following illness were diagnosed:</value>
+  <data name="dias" xml:space="preserve">
+    <value>Days</value>
   </data>
-  <data name="diagnostico_primario_mensaje_salida_2" xml:space="preserve">
-    <value>Remember, this is only a primary diagnosis.</value>
+  <data name="dia_domingo" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="dia_jueves" xml:space="preserve">
+    <value>Th</value>
+  </data>
+  <data name="dia_lunes" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="dia_martes" xml:space="preserve">
+    <value>Tu</value>
+  </data>
+  <data name="dia_miercoles" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="dia_sabado" xml:space="preserve">
+    <value>Sat</value>
   </data>
   <data name="direccion" xml:space="preserve">
     <value>Address</value>
   </data>
+  <data name="direccion_numero" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="edad" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="eliminar" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="empleado" xml:space="preserve">
+    <value>Employee</value>
+  </data>
   <data name="empleados" xml:space="preserve">
     <value>Employees</value>
+  </data>
+  <data name="empleado_ingresado_exito" xml:space="preserve">
+    <value>[TIPO_EMPLEADO] successfully added.</value>
+  </data>
+  <data name="enfermedad" xml:space="preserve">
+    <value>Desease</value>
   </data>
   <data name="enfermedades" xml:space="preserve">
     <value>Disease</value>
   </data>
+  <data name="enfermedad_import_exito" xml:space="preserve">
+    <value>Desease successfully imported.</value>
+  </data>
+  <data name="enfermedad_ingresada_exito" xml:space="preserve">
+    <value>Desease successfully added.</value>
+  </data>
+  <data name="enfermedad_modificada_exito" xml:space="preserve">
+    <value>Desease successfully modified.</value>
+  </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
   </data>
-  <data name="error_copia_chat" xml:space="preserve">
-    <value>Failed to generate chat copy.</value>
+  <data name="error_campo_obligatorio_apellidos" xml:space="preserve">
+    <value>Please enter at least one last name.</value>
+  </data>
+  <data name="error_campo_obligatorio_calle" xml:space="preserve">
+    <value>Field 'Street' is mandatory.</value>
+  </data>
+  <data name="error_campo_obligatorio_ci" xml:space="preserve">
+    <value>Field 'ID' is mandatory</value>
+  </data>
+  <data name="error_campo_obligatorio_localidad" xml:space="preserve">
+    <value>Field 'Town' is mandatory.</value>
+  </data>
+  <data name="error_campo_obligatorio_nombre" xml:space="preserve">
+    <value>Field 'Name' is mandatory</value>
+  </data>
+  <data name="error_campo_obligatorio_nombre_sintoma" xml:space="preserve">
+    <value>Field 'Symptom' is mandatory.</value>
+  </data>
+  <data name="error_campo_obligatorio_numero" xml:space="preserve">
+    <value>Field 'Number' is mandatory.</value>
+  </data>
+  <data name="error_ci_invalida" xml:space="preserve">
+    <value>Invalid ID.</value>
   </data>
   <data name="error_credenciales_incorrectas" xml:space="preserve">
     <value>Incorrect ID or password</value>
   </data>
-  <data name="error_enviar_mensaje" xml:space="preserve">
-    <value>Failed to send the message.</value>
+  <data name="error_eliminar_empleado" xml:space="preserve">
+    <value>Failed to delete the employee.</value>
+  </data>
+  <data name="error_enfermedad_eliminar" xml:space="preserve">
+    <value>Failed to delete desease [NOMBRE_ENFERMEDAD] </value>
+  </data>
+  <data name="error_enfermedad_ingresar" xml:space="preserve">
+    <value>Failed to add desease</value>
+  </data>
+  <data name="error_enfermedad_modificar" xml:space="preserve">
+    <value>Failed to modify desease.</value>
+  </data>
+  <data name="error_enfermedad_obtener" xml:space="preserve">
+    <value>Failed to get the selected desease.</value>
+  </data>
+  <data name="error_formato" xml:space="preserve">
+    <value>Format Error</value>
+  </data>
+  <data name="error_formato_antecedentes_familiares" xml:space="preserve">
+    <value>Incorrect format of  field 'Family Antecedents'.</value>
+  </data>
+  <data name="error_formato_antecedentes_laborales" xml:space="preserve">
+    <value>Incorrect format of field 'Working Antecedents'.</value>
+  </data>
+  <data name="error_formato_calle" xml:space="preserve">
+    <value>Incorrect format of field 'Street'.</value>
+  </data>
+  <data name="error_formato_ci_longitud" xml:space="preserve">
+    <value>ID must be 8 characters long.</value>
+  </data>
+  <data name="error_formato_ci_numerico" xml:space="preserve">
+    <value>ID can only be numbers.</value>
+  </data>
+  <data name="error_formato_localidad" xml:space="preserve">
+    <value>Incorrect format of field 'Town'.</value>
+  </data>
+  <data name="error_formato_nombre" xml:space="preserve">
+    <value>Incorrect format of field 'Name' .</value>
+  </data>
+  <data name="error_formato_nucleo_familiar" xml:space="preserve">
+    <value>Incorrect format of field 'Nuclear Family'. </value>
+  </data>
+  <data name="error_formato_numero" xml:space="preserve">
+    <value>Incorrect format of field 'Number'.</value>
+  </data>
+  <data name="error_formato_telefono" xml:space="preserve">
+    <value>Phone can only be numbers.</value>
+  </data>
+  <data name="error_horario_buscar" xml:space="preserve">
+    <value>Failed to seach working hours</value>
+  </data>
+  <data name="error_inesperado" xml:space="preserve">
+    <value>We're sorry. Something went wrong. Please try again!</value>
+  </data>
+  <data name="error_ingresar_empleado" xml:space="preserve">
+    <value>Failed to add the employee.</value>
+  </data>
+  <data name="error_modificar_empleado" xml:space="preserve">
+    <value>Failed to modify the employee.</value>
+  </data>
+  <data name="error_modificar_varios" xml:space="preserve">
+    <value>Can't modify multiple [ENTIDAD] at once.</value>
+  </data>
+  <data name="error_sintomas_obtener" xml:space="preserve">
+    <value>Failed to get the selected symptoms.</value>
   </data>
   <data name="especialidad" xml:space="preserve">
     <value>Speciality</value>
@@ -216,11 +372,17 @@
   <data name="extremidades" xml:space="preserve">
     <value>Limbs</value>
   </data>
+  <data name="ex_csv_file" xml:space="preserve">
+    <value>Failed to import from CSV file.</value>
+  </data>
   <data name="fecha_nacimiento" xml:space="preserve">
     <value>Birth Date</value>
   </data>
   <data name="filtrar" xml:space="preserve">
     <value>Filter</value>
+  </data>
+  <data name="filtro_csv" xml:space="preserve">
+    <value>CSV files</value>
   </data>
   <data name="finalizar_chat" xml:space="preserve">
     <value>End Chat</value>
@@ -228,11 +390,29 @@
   <data name="gestion" xml:space="preserve">
     <value>Management</value>
   </data>
+  <data name="hacer_admin" xml:space="preserve">
+    <value>Make Admin</value>
+  </data>
   <data name="historial_clinico" xml:space="preserve">
     <value>Clinical History</value>
   </data>
   <data name="horarios" xml:space="preserve">
     <value>Working Hours</value>
+  </data>
+  <data name="horario_eliminar_confirmacion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected working hours?</value>
+  </data>
+  <data name="horario_eliminar_exito" xml:space="preserve">
+    <value>Working hours successfully deleted.</value>
+  </data>
+  <data name="horario_ingresar_exito" xml:space="preserve">
+    <value>Working hours successfully added.</value>
+  </data>
+  <data name="horario_modificar_exito" xml:space="preserve">
+    <value>Working hours successfully modified.</value>
+  </data>
+  <data name="importar" xml:space="preserve">
+    <value>Import</value>
   </data>
   <data name="informacion" xml:space="preserve">
     <value>Information</value>
@@ -246,26 +426,53 @@
   <data name="localidad" xml:space="preserve">
     <value>Town</value>
   </data>
-  <data name="mensaje_chat_finalizado" xml:space="preserve">
-    <value>The chat with the doctor has ended</value>
+  <data name="medico" xml:space="preserve">
+    <value>Doctor</value>
   </data>
-  <data name="mensaje_despedida" xml:space="preserve">
-    <value>Bye!</value>
+  <data name="mensaje_empleado_ascendido" xml:space="preserve">
+    <value>[NOMBRE_EMPLEADO] is now administrator.</value>
   </data>
-  <data name="mensaje_sala_espera" xml:space="preserve">
-    <value>Please wait for a doctor to handle your request.</value>
+  <data name="mensaje_paciente_eliminar" xml:space="preserve">
+    <value>[COUNT] deleted patients.</value>
+  </data>
+  <data name="modificar" xml:space="preserve">
+    <value>Modify</value>
   </data>
   <data name="nombres" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="nucleo_familiar" xml:space="preserve">
+    <value>Nuclear Family</value>
+  </data>
   <data name="nueva_contrasenna" xml:space="preserve">
     <value>New password</value>
+  </data>
+  <data name="otro" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="paciente" xml:space="preserve">
+    <value>patient</value>
   </data>
   <data name="pacientes" xml:space="preserve">
     <value>Patients</value>
   </data>
-  <data name="posibles_diagnosticos" xml:space="preserve">
-    <value>Possible Diagnosis</value>
+  <data name="paciente_ingresar_exito" xml:space="preserve">
+    <value>Paciente successfully added.</value>
+  </data>
+  <data name="paciente_modificar_exito" xml:space="preserve">
+    <value>Patient successfully modified.</value>
+  </data>
+  <data name="persona" xml:space="preserve">
+    <value>person</value>
+  </data>
+  <data name="rango_horario" xml:space="preserve">
+    <value>Working Hours</value>
+  </data>
+  <data name="recepcionista" xml:space="preserve">
+    <value>Receptionist</value>
+  </data>
+  <data name="recursos_humanos" xml:space="preserve">
+    <value>Human Resources</value>
   </data>
   <data name="restablecer_contrasenna" xml:space="preserve">
     <value>Reset Password</value>
@@ -276,6 +483,9 @@
   <data name="sexo" xml:space="preserve">
     <value>Sex</value>
   </data>
+  <data name="sintoma" xml:space="preserve">
+    <value>Symptom</value>
+  </data>
   <data name="sintomas" xml:space="preserve">
     <value>Symptoms</value>
   </data>
@@ -285,19 +495,49 @@
   <data name="sintomas_registrados" xml:space="preserve">
     <value>Given Symptoms</value>
   </data>
+  <data name="sintoma_eliminar_exito" xml:space="preserve">
+    <value>[COUNT] deleted symptoms.</value>
+  </data>
+  <data name="sintoma_import_exito" xml:space="preserve">
+    <value>Symptoms successfully imported.</value>
+  </data>
+  <data name="sintoma_ingresar_exito" xml:space="preserve">
+    <value>Symptom successfully added.</value>
+  </data>
+  <data name="sintoma_modificar_exito" xml:space="preserve">
+    <value>Symtom successfully modified.</value>
+  </data>
+  <data name="sucursal" xml:space="preserve">
+    <value>office</value>
+  </data>
   <data name="sucursales" xml:space="preserve">
     <value>Office</value>
   </data>
   <data name="telefono" xml:space="preserve">
     <value>Phone</value>
   </data>
-  <data name="titulo_chat_finalizado" xml:space="preserve">
-    <value>Chat Ended</value>
+  <data name="tipo_enfermedad" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="tipo_sintoma" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="titulo_empleado_ingresado" xml:space="preserve">
+    <value>Added Employee</value>
+  </data>
+  <data name="titulo_usuario_ingresado" xml:space="preserve">
+    <value>User Added</value>
   </data>
   <data name="todo" xml:space="preserve">
     <value>All</value>
   </data>
   <data name="torso" xml:space="preserve">
     <value>Torso</value>
+  </data>
+  <data name="urgencia" xml:space="preserve">
+    <value>Urgency</value>
+  </data>
+  <data name="volver" xml:space="preserve">
+    <value>Back</value>
   </data>
 </root>

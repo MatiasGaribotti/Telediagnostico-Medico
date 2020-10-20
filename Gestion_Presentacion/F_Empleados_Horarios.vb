@@ -20,6 +20,7 @@ Public Class F_Empleados_Horarios
     End Sub
 
     Private Sub F_Empleados_Horarios_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Translator.TranslateForm(Me)
         GetSucursales()
         LoadCmbSucursales()
         LoadDgv()
@@ -45,7 +46,7 @@ Public Class F_Empleados_Horarios
             dt = RRHHBUS.GetHorariosEmpleados(pattern)
             LoadDgv(dt)
         Catch ex As Exception
-            MsgBox("error_horario_buscar",MsgBoxStyle.Critical,"error")
+            MsgBox(Translator.TranslateKey("error_horario_buscar"), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
         End Try
 
     End Sub
@@ -60,12 +61,12 @@ Public Class F_Empleados_Horarios
             Select Case Modo
                 Case Modos.Ingresar
                     RRHHBUS.InsertHorarioEmpleado(horario)
-                    MsgBox("horario_ingresar_exito", MsgBoxStyle.Information, "str_informacion")
+                    MsgBox(Translator.TranslateKey("horario_ingresar_exito"), MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
 
                 Case Modos.Modificar
                     ChangeMode(Modos.Ingresar)
                     RRHHBUS.ModifyHorarioEmpleado(horario, tempHorario)
-                    MsgBox("horario_modificar_exito", MsgBoxStyle.Information, "str_informacion")
+                    MsgBox(Translator.TranslateKey("horario_modificar_exito"), MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
             End Select
 
             LoadDgv()
@@ -84,7 +85,7 @@ Public Class F_Empleados_Horarios
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         Dim selected As List(Of Horario) = GetSelected()
-        Dim result = MsgBox("horario_eliminar_confirmacion", MsgBoxStyle.YesNo, "confirmacion")
+        Dim result = MsgBox(Translator.TranslateKey("horario_eliminar_confirmacion"), MsgBoxStyle.YesNo, Translator.TranslateKey("confirmacion"))
 
         If result = MsgBoxResult.Yes Then
             Dim RRHHBUS As New RRHHBUS
@@ -98,7 +99,7 @@ Public Class F_Empleados_Horarios
                 End Try
             Next
             LoadDgv()
-            MsgBox("horario_eliminar_exito", MsgBoxStyle.Information, "informacion")
+            MsgBox(Translator.TranslateKey("horario_eliminar_exito"), MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
 
         End If
     End Sub
@@ -201,7 +202,7 @@ Public Class F_Empleados_Horarios
             Sucursales = RRHHBUS.GetSucursales()
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "error_titulo")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
         End Try
 
     End Sub
@@ -218,7 +219,7 @@ Public Class F_Empleados_Horarios
         CmbISucursal.Items.Clear()
         CmbBSucursal.Items.Clear()
 
-        CmbBSucursal.Items.Add("cualquiera")
+        CmbBSucursal.Items.Add(Translator.TranslateKey("cualquiera"))
 
         For Each sucursal In Sucursales
             CmbBSucursal.Items.Add(sucursal.Nombre)

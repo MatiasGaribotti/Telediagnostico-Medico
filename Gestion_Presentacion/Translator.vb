@@ -30,6 +30,9 @@ Public Class Translator
                 Dim panel As Guna2Panel = DirectCast(control, Guna2Panel)
                 TranslatePanel(panel)
 
+            ElseIf TypeOf control Is Panel Then
+                Dim panel As Panel = DirectCast(control, Panel)
+                TranslatePanel(panel)
             ElseIf TypeOf control Is Label Then
                 TranslateLabel(control)
 
@@ -46,7 +49,7 @@ Public Class Translator
         Next
     End Sub
 
-    Public Shared Sub TranslatePanel(ByRef panel As Panel)
+    Private Shared Sub TranslatePanel(ByRef panel As Panel)
         For Each control As Control In panel.Controls
 
             If TypeOf control Is Guna2HtmlLabel Then
@@ -60,6 +63,15 @@ Public Class Translator
 
             ElseIf TypeOf control Is Button Then
                 TranslateButton(control)
+
+            ElseIf TypeOf control Is Guna2CheckBox Then
+                TranslateGunaCheckBox(control)
+
+            ElseIf TypeOf control Is Panel Then
+                TranslatePanel(control)
+
+            ElseIf TypeOf control Is Guna2Panel Then
+                TranslatePanel(control)
 
             End If
         Next
@@ -83,5 +95,10 @@ Public Class Translator
     Private Shared Sub TranslateGunaButton(ByRef control As Control)
         Dim button As Guna2Button = DirectCast(control, Guna2Button)
         button.Text = TranslateKey(button.Text)
+    End Sub
+
+    Private Shared Sub TranslateGunaCheckBox(ByRef control As Control)
+        Dim checkbox As Guna2CheckBox = DirectCast(control, Guna2CheckBox)
+        checkbox.Text = TranslateKey(checkbox.Text)
     End Sub
 End Class
