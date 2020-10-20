@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="acceso_denegado" xml:space="preserve">
+    <value>Access Denied</value>
+  </data>
   <data name="aceptar" xml:space="preserve">
     <value>Accept</value>
   </data>
+  <data name="apellidos" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
   <data name="autenticacion" xml:space="preserve">
     <value>Authentication</value>
+  </data>
+  <data name="busqueda" xml:space="preserve">
+    <value>Search</value>
   </data>
   <data name="cabeza" xml:space="preserve">
     <value>Head</value>
@@ -165,6 +174,9 @@
   <data name="contrasenna_cambiada_exito" xml:space="preserve">
     <value>Password changed succesfully</value>
   </data>
+  <data name="departamento" xml:space="preserve">
+    <value>Department</value>
+  </data>
   <data name="diagnostico" xml:space="preserve">
     <value>Diagnosis</value>
   </data>
@@ -176,6 +188,15 @@
   </data>
   <data name="diagnostico_primario_mensaje_salida_2" xml:space="preserve">
     <value>Remember, this is only a primary diagnosis.</value>
+  </data>
+  <data name="direccion" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="empleados" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="enfermedades" xml:space="preserve">
+    <value>Disease</value>
   </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
@@ -189,23 +210,41 @@
   <data name="error_enviar_mensaje" xml:space="preserve">
     <value>Failed to send the message.</value>
   </data>
-  <data name="especialidad_medico" xml:space="preserve">
-    <value>Doctor's speciality</value>
+  <data name="especialidad" xml:space="preserve">
+    <value>Speciality</value>
   </data>
   <data name="extremidades" xml:space="preserve">
     <value>Limbs</value>
   </data>
+  <data name="fecha_nacimiento" xml:space="preserve">
+    <value>Birth Date</value>
+  </data>
+  <data name="filtrar" xml:space="preserve">
+    <value>Filter</value>
+  </data>
   <data name="finalizar_chat" xml:space="preserve">
     <value>End Chat</value>
   </data>
+  <data name="gestion" xml:space="preserve">
+    <value>Management</value>
+  </data>
   <data name="historial_clinico" xml:space="preserve">
     <value>Clinical History</value>
+  </data>
+  <data name="horarios" xml:space="preserve">
+    <value>Working Hours</value>
   </data>
   <data name="informacion" xml:space="preserve">
     <value>Information</value>
   </data>
   <data name="ingresar" xml:space="preserve">
     <value>Log In</value>
+  </data>
+  <data name="ingreso_registro" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="localidad" xml:space="preserve">
+    <value>Town</value>
   </data>
   <data name="mensaje_chat_finalizado" xml:space="preserve">
     <value>The chat with the doctor has ended</value>
@@ -216,14 +255,14 @@
   <data name="mensaje_sala_espera" xml:space="preserve">
     <value>Please wait for a doctor to handle your request.</value>
   </data>
-  <data name="nombre_medico" xml:space="preserve">
-    <value>Doctor's name</value>
+  <data name="nombres" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="nueva_contrasenna" xml:space="preserve">
     <value>New password</value>
   </data>
-  <data name="paciente" xml:space="preserve">
-    <value>Patient</value>
+  <data name="pacientes" xml:space="preserve">
+    <value>Patients</value>
   </data>
   <data name="posibles_diagnosticos" xml:space="preserve">
     <value>Possible Diagnosis</value>
@@ -231,11 +270,26 @@
   <data name="restablecer_contrasenna" xml:space="preserve">
     <value>Reset Password</value>
   </data>
+  <data name="rol" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="sexo" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="sintomas" xml:space="preserve">
+    <value>Symptoms</value>
+  </data>
   <data name="sintomas_ingresados" xml:space="preserve">
     <value>Given Symptoms</value>
   </data>
   <data name="sintomas_registrados" xml:space="preserve">
     <value>Given Symptoms</value>
+  </data>
+  <data name="sucursales" xml:space="preserve">
+    <value>Office</value>
+  </data>
+  <data name="telefono" xml:space="preserve">
+    <value>Phone</value>
   </data>
   <data name="titulo_chat_finalizado" xml:space="preserve">
     <value>Chat Ended</value>

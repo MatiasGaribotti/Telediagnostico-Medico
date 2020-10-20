@@ -43,7 +43,7 @@ Namespace My.Resources
         Friend Shared ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
-                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("Presentacion.en-US", GetType(en_US).Assembly)
+                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("Medico_Presentacion.en-US", GetType(en_US).Assembly)
                     resourceMan = temp
                 End If
                 Return resourceMan
@@ -83,20 +83,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Years old.
+        '''</summary>
+        Friend Shared ReadOnly Property annos() As String
+            Get
+                Return ResourceManager.GetString("annos", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Authentication.
         '''</summary>
         Friend Shared ReadOnly Property autenticacion() As String
             Get
                 Return ResourceManager.GetString("autenticacion", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Head.
-        '''</summary>
-        Friend Shared ReadOnly Property cabeza() As String
-            Get
-                Return ResourceManager.GetString("cabeza", resourceCulture)
             End Get
         End Property
         
@@ -155,7 +155,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Busca una cadena traducida similar a Are you sure you want to end the chat?.
+        '''  Busca una cadena traducida similar a Are you sure you want to end the chat with the patient [NOMBRE_PACIENTE]?.
         '''</summary>
         Friend Shared ReadOnly Property confirmacion_finalizar_chat() As String
             Get
@@ -164,7 +164,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Busca una cadena traducida similar a Do you want to have a chat with a doctor in order to get a more precise diagnosis?.
+        '''  Busca una cadena traducida similar a Are you sure you wanto to have a chat with the selected patient?.
         '''</summary>
         Friend Shared ReadOnly Property confirmacion_iniciar_chat() As String
             Get
@@ -227,33 +227,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Busca una cadena traducida similar a The given symtoms concluded in an ambiguous diagnosis. Please try to be as specific as possible..
-        '''</summary>
-        Friend Shared ReadOnly Property diagnostico_ambiguo() As String
-            Get
-                Return ResourceManager.GetString("diagnostico_ambiguo", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a The following illness were diagnosed:.
-        '''</summary>
-        Friend Shared ReadOnly Property diagnostico_primario_mensaje_salida_1() As String
-            Get
-                Return ResourceManager.GetString("diagnostico_primario_mensaje_salida_1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Remember, this is only a primary diagnosis..
-        '''</summary>
-        Friend Shared ReadOnly Property diagnostico_primario_mensaje_salida_2() As String
-            Get
-                Return ResourceManager.GetString("diagnostico_primario_mensaje_salida_2", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Busca una cadena traducida similar a Failed to generate chat copy..
         '''</summary>
         Friend Shared ReadOnly Property error_copia_chat() As String
@@ -277,24 +250,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property error_enviar_mensaje() As String
             Get
                 Return ResourceManager.GetString("error_enviar_mensaje", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Doctor&apos;s speciality.
-        '''</summary>
-        Friend Shared ReadOnly Property especialidad_medico() As String
-            Get
-                Return ResourceManager.GetString("especialidad_medico", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Limbs.
-        '''</summary>
-        Friend Shared ReadOnly Property extremidades() As String
-            Get
-                Return ResourceManager.GetString("extremidades", resourceCulture)
             End Get
         End Property
         
@@ -335,6 +290,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Doctor.
+        '''</summary>
+        Friend Shared ReadOnly Property medico() As String
+            Get
+                Return ResourceManager.GetString("medico", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a The chat with the doctor has ended.
         '''</summary>
         Friend Shared ReadOnly Property mensaje_chat_finalizado() As String
@@ -344,47 +308,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Busca una cadena traducida similar a Bye!.
-        '''</summary>
-        Friend Shared ReadOnly Property mensaje_despedida() As String
-            Get
-                Return ResourceManager.GetString("mensaje_despedida", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Please wait for a doctor to handle your request..
-        '''</summary>
-        Friend Shared ReadOnly Property mensaje_sala_espera() As String
-            Get
-                Return ResourceManager.GetString("mensaje_sala_espera", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Doctor&apos;s name.
-        '''</summary>
-        Friend Shared ReadOnly Property nombre_medico() As String
-            Get
-                Return ResourceManager.GetString("nombre_medico", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Busca una cadena traducida similar a New password.
         '''</summary>
         Friend Shared ReadOnly Property nueva_contrasenna() As String
             Get
                 Return ResourceManager.GetString("nueva_contrasenna", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Patient.
-        '''</summary>
-        Friend Shared ReadOnly Property paciente() As String
-            Get
-                Return ResourceManager.GetString("paciente", resourceCulture)
             End Get
         End Property
         
@@ -430,24 +358,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property titulo_chat_finalizado() As String
             Get
                 Return ResourceManager.GetString("titulo_chat_finalizado", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a All.
-        '''</summary>
-        Friend Shared ReadOnly Property todo() As String
-            Get
-                Return ResourceManager.GetString("todo", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Torso.
-        '''</summary>
-        Friend Shared ReadOnly Property torso() As String
-            Get
-                Return ResourceManager.GetString("torso", resourceCulture)
             End Get
         End Property
     End Class

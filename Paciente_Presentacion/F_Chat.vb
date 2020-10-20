@@ -15,6 +15,7 @@ Public Class F_Chat
     Private Sub F_Chat_Load(sender As Object, e As EventArgs) Handles Me.Load
         TimerChat.Interval = 1000
         TimerChat.Start()
+        Translator.TranslateForm(Me)
     End Sub
 
     Private Sub TimerChatStatus_Tick(sender As Object, e As EventArgs) Handles TimerChatStatus.Tick
@@ -64,6 +65,13 @@ Public Class F_Chat
         SendMsg()
     End Sub
 
+    Private Sub TxtMsg_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtMsg.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            SendMsg()
+            TxtMsg.ResetText()
+        End If
+    End Sub
+
     Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
         Dim result = MsgBox(Translator.TranslateKey("confirmacion_cerrar_sesion"), MsgBoxStyle.YesNo, Translator.TranslateKey("confirmacion"))
 
@@ -83,14 +91,18 @@ Public Class F_Chat
 
         If result = MsgBoxResult.Yes Then
             Dim PacienteBUS As New PacienteBUS
-            PacienteBUS.EndChat(ConsultaMedica.Chat.Id)
 
-            AutoconsultaBUS.instance.ResetInstance()
-            F_Sintomas.Show()
-            Close()
+            Try
+                PacienteBUS.EndChat(ConsultaMedica.Chat.Id)
+                AutoconsultaBUS.instance.ResetInstance()
+                F_Sintomas.Show()
+                Close()
+
+            Catch ex As Exception
+                MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
+            End Try
         End If
     End Sub
-
 
     Private Sub UnSetWaitingRoom()
         BtnSend.Enabled = True
@@ -126,7 +138,6 @@ Public Class F_Chat
             )
         Next
     End Sub
-
 
     Private Sub RefreshChat()
         Dim startIndex As Long = PacienteBUS.GetGreatestMsgIndex(ConsultaMedica.Chat.Mensajes)
@@ -176,15 +187,12 @@ Public Class F_Chat
         If TxtMsg.Text.Length > 0 And Not String.IsNullOrWhiteSpace(TxtMsg.Text) Then
 
             Dim PacienteBUS As New PacienteBUS
-            PacienteBUS.SendMsg(ConsultaMedica.Chat.Id, New Mensaje(Env.CurrentUser, TxtMsg.Text, Date.Now))
+            Try
+                PacienteBUS.SendMsg(ConsultaMedica.Chat.Id, New Mensaje(Env.CurrentUser, TxtMsg.Text, Date.Now))
 
-        End If
-    End Sub
-
-    Private Sub TxtMsg_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtMsg.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            SendMsg()
-            TxtMsg.ResetText()
+            Catch ex As Exception
+                MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
+            End Try
         End If
     End Sub
 End Class

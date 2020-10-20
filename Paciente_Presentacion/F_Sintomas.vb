@@ -10,9 +10,11 @@ Public Class F_Sintomas
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
 
-        Translator.TranslatePanel(PnlLeft)
-        Translator.TranslatePanel(PnlRight)
+    End Sub
 
+    Private Sub F_Sintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Translator.TranslateForm(Me)
+        Refresh()
         pattern = New Sintoma
         ConfigureSelectedColumnVisibility()
         SwitchSelection()

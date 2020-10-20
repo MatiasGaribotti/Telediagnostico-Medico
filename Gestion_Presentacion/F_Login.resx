@@ -151,16 +151,16 @@
     <value>Roboto, 16pt</value>
   </data>
   <data name="Guna2HtmlLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 1022</value>
+    <value>3, 1032</value>
   </data>
   <data name="Guna2HtmlLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 27</value>
+    <value>73, 27</value>
   </data>
   <data name="Guna2HtmlLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="Guna2HtmlLabel1.Text" xml:space="preserve">
-    <value>Gestión</value>
+    <value>gestion</value>
   </data>
   <data name="&gt;&gt;Guna2HtmlLabel1.Name" xml:space="preserve">
     <value>Guna2HtmlLabel1</value>
@@ -285,13 +285,13 @@
     <value>68, 687</value>
   </data>
   <data name="LblPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 27</value>
+    <value>120, 27</value>
   </data>
   <data name="LblPassword.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="LblPassword.Text" xml:space="preserve">
-    <value>Contraseña</value>
+    <value>contrasenna</value>
   </data>
   <data name="&gt;&gt;LblPassword.Name" xml:space="preserve">
     <value>LblPassword</value>
@@ -312,13 +312,13 @@
     <value>68, 624</value>
   </data>
   <data name="LblCi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 27</value>
+    <value>19, 27</value>
   </data>
   <data name="LblCi.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
   <data name="LblCi.Text" xml:space="preserve">
-    <value>CI</value>
+    <value>ci</value>
   </data>
   <data name="&gt;&gt;LblCi.Name" xml:space="preserve">
     <value>LblCi</value>
@@ -345,7 +345,7 @@
     <value>12</value>
   </data>
   <data name="Btn_Ingresar.Text" xml:space="preserve">
-    <value>Ingresar</value>
+    <value>ingresar</value>
   </data>
   <data name="&gt;&gt;Btn_Ingresar.Name" xml:space="preserve">
     <value>Btn_Ingresar</value>

@@ -120,7 +120,7 @@ Public Class ChatBUS
             ConsultaDAO.SendMsg(idChat, msg)
 
         Catch ex As Exception
-            Throw New Exception("No se pudo enviar el mensaje.")
+            Throw New Exception("error_enviar_mensaje")
         End Try
     End Sub
 
@@ -136,7 +136,7 @@ Public Class ChatBUS
     End Function
 
     Friend Shared Sub SendChatCopyByEmail(idChat As Long)
-        Dim path = My.Computer.FileSystem.CurrentDirectory & "\" & Date.Now.ToShortDateString & "-" & Date.Now.ToLongTimeString.Replace(":", ".") & "-Copia_de_Chat.txt"
+        Dim path = My.Computer.FileSystem.CurrentDirectory & "\" & Date.Now.ToShortDateString.Replace("/", ".") & "-" & Date.Now.ToLongTimeString.Replace(":", ".") & "-Copia_de_Chat.txt"
 
         Try
             Dim mensajes As List(Of Mensaje) = GetMensajesChat(idChat)
@@ -145,19 +145,15 @@ Public Class ChatBUS
 
                 For Each mensaje In mensajes
                     Dim text As String = mensaje.Timestamp & "-" & mensaje.Persona.Nombre & ": " & mensaje.Texto & vbCrLf
-                    Console.WriteLine(text)
-
                     Dim info As Byte() = New UTF8Encoding(True).GetBytes(text)
                     fs.Write(info, 0, info.Length)
 
                 Next
-
                 fs.Close()
 
             End If
         Catch ex As Exception
-            Throw ex
+            Throw New Exception("error_copia_chat")
         End Try
-
     End Sub
 End Class

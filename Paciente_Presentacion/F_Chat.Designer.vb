@@ -436,9 +436,9 @@ Partial Class F_Chat
         Me.LblEspecialidadMedico.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEspecialidadMedico.Location = New System.Drawing.Point(108, 44)
         Me.LblEspecialidadMedico.Name = "LblEspecialidadMedico"
-        Me.LblEspecialidadMedico.Size = New System.Drawing.Size(188, 23)
+        Me.LblEspecialidadMedico.Size = New System.Drawing.Size(191, 23)
         Me.LblEspecialidadMedico.TabIndex = 1
-        Me.LblEspecialidadMedico.Text = "Especialidad Médico"
+        Me.LblEspecialidadMedico.Text = "especialidad_medico"
         '
         'LblNameMedico
         '
@@ -449,7 +449,7 @@ Partial Class F_Chat
         Me.LblNameMedico.Name = "LblNameMedico"
         Me.LblNameMedico.Size = New System.Drawing.Size(148, 23)
         Me.LblNameMedico.TabIndex = 0
-        Me.LblNameMedico.Text = "Nombre Médico"
+        Me.LblNameMedico.Text = "nombre_medico"
         '
         'LblWaiting
         '

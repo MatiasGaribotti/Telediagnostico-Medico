@@ -13,6 +13,9 @@ Public Class F_Main
     End Sub
 
     Private Sub F_Main_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Translator.TranslateForm(Me)
+        Refresh()
+
         LoadSolicitudesChats()
 
         TimerSolicitudes.Interval = 5000
@@ -54,14 +57,13 @@ Public Class F_Main
 
         End If
 
-        MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
+        MsgBox(Translator.TranslateKey("mensaje_chat_finalizado"), MsgBoxStyle.Information, Translator.TranslateKey("titulo_chat_finalizado"))
     End Sub
 
     Private Sub TimerSolicitudes_Tick(sender As Object, e As EventArgs) Handles TimerSolicitudes.Tick
         LoadSolicitudesChats()
     End Sub
     Private Sub TimerMensajes_Tick(sender As Object, e As EventArgs) Handles TimerMensajes.Tick
-
         Dim MedicoBUS As New MedicoBUS
 
         Try
@@ -75,13 +77,14 @@ Public Class F_Main
             Next
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
+
         End Try
     End Sub
 
     Private Sub DgvChats_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvChats.CellDoubleClick
         If TabControl1.TabPages.Count <= 4 Then
-            Dim result = MsgBox("¿Está seguro de que desea iniciar el chat con el paciente seleccionado?", MsgBoxStyle.YesNo, "Confirmación")
+            Dim result = MsgBox(Translator.TranslateKey("confirmacion_iniciar_chat"), MsgBoxStyle.YesNo, Translator.TranslateKey("confirmacion"))
 
             If result = vbYes Then
                 StartChat()
@@ -93,7 +96,7 @@ Public Class F_Main
     End Sub
 
     Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
-        Dim result = MsgBox("confirmacion_cerrar_sesion", MsgBoxStyle.YesNo, "confirmacion_titulo")
+        Dim result = MsgBox(Translator.TranslateKey("confirmacion_cerrar_sesion"), MsgBoxStyle.YesNo, Translator.TranslateKey("confirmacion"))
 
         If result = MsgBoxResult.Yes Then
             AuthenticationBUS.LogOut()
@@ -116,7 +119,7 @@ Public Class F_Main
     End Sub
 
     Private Sub BtnFinalizarChat_Click(sender As Object, e As EventArgs) Handles BtnFinalizarChat.Click
-        Dim result = MsgBox("¿Está seguro de que desea finalizar el chat con el paciente '" & TabControl1.SelectedTab.Text & "' ?", MsgBoxStyle.YesNo, "Confirmación")
+        Dim result = MsgBox(Translator.TranslateKey("confirmacion_finalizar_chat").Replace("[NOMBRE_PACIENTE]", TabControl1.SelectedTab.Text), MsgBoxStyle.YesNo, "Confirmación")
 
         If result = MsgBoxResult.Yes Then
             Dim MedicoBUS As New MedicoBUS
@@ -128,11 +131,12 @@ Public Class F_Main
                 ConsultasActivas.Remove(consulta)
                 TabControl1.TabPages.Remove(TabControl1.SelectedTab)
                 TabControl1.Refresh()
-                MsgBox("chat_ended", MsgBoxStyle.Information, "title_chat_ended")
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-            End Try
+                MsgBox(Translator.TranslateKey("chat_finalizado"), MsgBoxStyle.Information, Translator.TranslateKey("titulo_chat_finalizado"))
 
+            Catch ex As Exception
+                MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
+
+            End Try
         End If
     End Sub
 
@@ -193,7 +197,7 @@ Public Class F_Main
 
     Public Sub SetUpChat(consulta As ConsultaMedica)
         Dim tab As New TabPage With {
-            .Name = "TabChat-" & consulta.Id, 'Modified consulta.Chat.Id
+            .Name = "TabChat-" & consulta.Id,
             .BackColor = Color.White,
             .Text = consulta.Paciente.Nombre
         }
@@ -287,7 +291,7 @@ Public Class F_Main
         Dim age = GetAge(paciente.Fecha_Nacimiento)
 
         LblNamePaciente.Text = paciente.Nombre
-        LblEdadPaciente.Text = age & " Años"
+        LblEdadPaciente.Text = age & " " & Translator.TranslateKey("annos")
     End Sub
 
     Private Function GetAge(birthday As Date) As Byte

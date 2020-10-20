@@ -120,11 +120,11 @@
   <data name="aceptar" xml:space="preserve">
     <value>Accept</value>
   </data>
+  <data name="annos" xml:space="preserve">
+    <value>Years old</value>
+  </data>
   <data name="autenticacion" xml:space="preserve">
     <value>Authentication</value>
-  </data>
-  <data name="cabeza" xml:space="preserve">
-    <value>Head</value>
   </data>
   <data name="cancelar" xml:space="preserve">
     <value>Cancel</value>
@@ -145,10 +145,10 @@
     <value>Are you sure you want to close your session?</value>
   </data>
   <data name="confirmacion_finalizar_chat" xml:space="preserve">
-    <value>Are you sure you want to end the chat?</value>
+    <value>Are you sure you want to end the chat with the patient [NOMBRE_PACIENTE]?</value>
   </data>
   <data name="confirmacion_iniciar_chat" xml:space="preserve">
-    <value>Do you want to have a chat with a doctor in order to get a more precise diagnosis?</value>
+    <value>Are you sure you wanto to have a chat with the selected patient?</value>
   </data>
   <data name="confirmar_nueva_contrasenna" xml:space="preserve">
     <value>Confirm new password</value>
@@ -168,15 +168,6 @@
   <data name="diagnostico" xml:space="preserve">
     <value>Diagnosis</value>
   </data>
-  <data name="diagnostico_ambiguo" xml:space="preserve">
-    <value>The given symtoms concluded in an ambiguous diagnosis. Please try to be as specific as possible.</value>
-  </data>
-  <data name="diagnostico_primario_mensaje_salida_1" xml:space="preserve">
-    <value>The following illness were diagnosed:</value>
-  </data>
-  <data name="diagnostico_primario_mensaje_salida_2" xml:space="preserve">
-    <value>Remember, this is only a primary diagnosis.</value>
-  </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
   </data>
@@ -188,12 +179,6 @@
   </data>
   <data name="error_enviar_mensaje" xml:space="preserve">
     <value>Failed to send the message.</value>
-  </data>
-  <data name="especialidad_medico" xml:space="preserve">
-    <value>Doctor's speciality</value>
-  </data>
-  <data name="extremidades" xml:space="preserve">
-    <value>Limbs</value>
   </data>
   <data name="finalizar_chat" xml:space="preserve">
     <value>End Chat</value>
@@ -207,23 +192,14 @@
   <data name="ingresar" xml:space="preserve">
     <value>Log In</value>
   </data>
+  <data name="medico" xml:space="preserve">
+    <value>Doctor</value>
+  </data>
   <data name="mensaje_chat_finalizado" xml:space="preserve">
     <value>The chat with the doctor has ended</value>
   </data>
-  <data name="mensaje_despedida" xml:space="preserve">
-    <value>Bye!</value>
-  </data>
-  <data name="mensaje_sala_espera" xml:space="preserve">
-    <value>Please wait for a doctor to handle your request.</value>
-  </data>
-  <data name="nombre_medico" xml:space="preserve">
-    <value>Doctor's name</value>
-  </data>
   <data name="nueva_contrasenna" xml:space="preserve">
     <value>New password</value>
-  </data>
-  <data name="paciente" xml:space="preserve">
-    <value>Patient</value>
   </data>
   <data name="posibles_diagnosticos" xml:space="preserve">
     <value>Possible Diagnosis</value>
@@ -239,11 +215,5 @@
   </data>
   <data name="titulo_chat_finalizado" xml:space="preserve">
     <value>Chat Ended</value>
-  </data>
-  <data name="todo" xml:space="preserve">
-    <value>All</value>
-  </data>
-  <data name="torso" xml:space="preserve">
-    <value>Torso</value>
   </data>
 </root>

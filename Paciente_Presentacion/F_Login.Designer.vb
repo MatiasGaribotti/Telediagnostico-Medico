@@ -95,7 +95,7 @@ Partial Class F_Login
         Me.PnlLogin.Margin = New System.Windows.Forms.Padding(0)
         Me.PnlLogin.Name = "PnlLogin"
         Me.PnlLogin.ShadowDecoration.Parent = Me.PnlLogin
-        Me.PnlLogin.Size = New System.Drawing.Size(500, 1040)
+        Me.PnlLogin.Size = New System.Drawing.Size(500, 1080)
         Me.PnlLogin.TabIndex = 11
         '
         'Btn_Ingresar
@@ -138,9 +138,9 @@ Partial Class F_Login
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(3, 1049)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(84, 27)
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(83, 27)
         Me.Guna2HtmlLabel3.TabIndex = 21
-        Me.Guna2HtmlLabel3.Text = "Paciente"
+        Me.Guna2HtmlLabel3.Text = "paciente"
         '
         'Guna2HtmlLabel2
         '

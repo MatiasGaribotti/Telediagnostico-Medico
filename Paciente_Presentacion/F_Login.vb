@@ -13,6 +13,10 @@ Public Class F_Login
         InitializeComponent()
 
     End Sub
+    Private Sub F_Login_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Translator.TranslateForm(Me)
+        Refresh()
+    End Sub
 
     Private Sub BtnChangeLang_Click(sender As Object, e As EventArgs) Handles BtnChangeLang.Click
 
@@ -45,15 +49,12 @@ Public Class F_Login
                 End If
             Else
                 MsgBox(Translator.TranslateKey("error_credenciales_incorrectas"), MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
+
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
         End Try
     End Sub
 
-    Private Sub F_Login_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Translator.TranslatePanel(PnlLogin)
-        Me.Refresh()
-    End Sub
 End Class

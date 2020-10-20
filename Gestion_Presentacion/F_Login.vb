@@ -1,6 +1,4 @@
-﻿'Requerido para soportar varios idiomas
-Imports System.Threading
-Imports System.Globalization
+﻿Imports System.Threading
 Imports Logica
 Imports Dominio
 Public Class F_Login
@@ -13,6 +11,10 @@ Public Class F_Login
         Thread.CurrentThread.CurrentUICulture = Env.CurrentLangugage
         InitializeComponent()
     End Sub
+    Private Sub F_Login_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Translator.TranslateForm(Me)
+        Refresh()
+    End Sub
 
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click
         Try
@@ -24,11 +26,13 @@ Public Class F_Login
                 F_ABM.Show()
                 Me.Close()
             Else
-                MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
+                MsgBox(Translator.TranslateKey("error_credenciales_incorrectas"), MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
+
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
+
         End Try
     End Sub
 

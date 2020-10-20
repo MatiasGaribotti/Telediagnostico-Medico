@@ -1,7 +1,6 @@
 ﻿Imports Dominio
 Imports Logica
 
-
 Public Class ChatUtilities
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
         SendMsg()
@@ -25,7 +24,7 @@ Public Class ChatUtilities
                 MedicoBUS.SendMsg(idChat, New Mensaje(Env.CurrentUser, TxtMsg.Text, Date.Now))
 
             Catch ex As Exception
-                MsgBox(ex.Message)
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "error")
             End Try
 
         End If

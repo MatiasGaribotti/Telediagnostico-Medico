@@ -64,9 +64,9 @@ Partial Class F_ABM
         Me.LblEmpleados.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmpleados.Location = New System.Drawing.Point(969, 478)
         Me.LblEmpleados.Name = "LblEmpleados"
-        Me.LblEmpleados.Size = New System.Drawing.Size(162, 40)
+        Me.LblEmpleados.Size = New System.Drawing.Size(161, 40)
         Me.LblEmpleados.TabIndex = 93
-        Me.LblEmpleados.Text = "Empleados"
+        Me.LblEmpleados.Text = "empleados"
         '
         'Btn_Empleados
         '
@@ -103,7 +103,7 @@ Partial Class F_ABM
         Me.BtnCerrarSesion.ShadowDecoration.Parent = Me.BtnCerrarSesion
         Me.BtnCerrarSesion.Size = New System.Drawing.Size(198, 46)
         Me.BtnCerrarSesion.TabIndex = 91
-        Me.BtnCerrarSesion.Text = "Cerrar Sesion"
+        Me.BtnCerrarSesion.Text = "cerrar_sesion"
         Me.BtnCerrarSesion.UseTransparentBackground = True
         '
         'Btn_Minimize
@@ -141,9 +141,9 @@ Partial Class F_ABM
         Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(942, 795)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(210, 40)
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(209, 40)
         Me.Guna2HtmlLabel5.TabIndex = 2
-        Me.Guna2HtmlLabel5.Text = "Enfermedades"
+        Me.Guna2HtmlLabel5.Text = "enfermedades"
         '
         'Guna2HtmlLabel4
         '
@@ -151,9 +151,9 @@ Partial Class F_ABM
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(706, 795)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(138, 40)
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(136, 40)
         Me.Guna2HtmlLabel4.TabIndex = 2
-        Me.Guna2HtmlLabel4.Text = "Sintomas"
+        Me.Guna2HtmlLabel4.Text = "sintomas"
         '
         'LblPacientes
         '
@@ -161,9 +161,9 @@ Partial Class F_ABM
         Me.LblPacientes.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPacientes.Location = New System.Drawing.Point(709, 478)
         Me.LblPacientes.Name = "LblPacientes"
-        Me.LblPacientes.Size = New System.Drawing.Size(144, 40)
+        Me.LblPacientes.Size = New System.Drawing.Size(142, 40)
         Me.LblPacientes.TabIndex = 2
-        Me.LblPacientes.Text = "Pacientes"
+        Me.LblPacientes.Text = "pacientes"
         '
         'Btn_Enfermedades
         '

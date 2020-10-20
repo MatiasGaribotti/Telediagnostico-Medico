@@ -14,6 +14,11 @@ Public Class F_Login
         InitializeComponent()
     End Sub
 
+    Private Sub F_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Translator.TranslateForm(Me)
+        Refresh()
+    End Sub
+
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click
         Try
             AuthenticationBUS.ValidateFields(TxtCi.Text, TxtPassword.Text)
@@ -24,11 +29,11 @@ Public Class F_Login
                 F_Main.Show()
                 Me.Close()
             Else
-                MsgBox("CI y/o contraseña incorrecta.", MsgBoxStyle.Critical, "Autenticación")
+                MsgBox(Translator.TranslateKey("error_credenciales_incorrectas"), MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Autenticación")
+            MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
         End Try
     End Sub
 

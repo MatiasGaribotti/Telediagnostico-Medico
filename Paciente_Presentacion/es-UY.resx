@@ -181,8 +181,17 @@
   <data name="error" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="error_copia_chat" xml:space="preserve">
+    <value>No se ha podido generar la copia del chat.</value>
+  </data>
   <data name="error_credenciales_incorrectas" xml:space="preserve">
     <value>CI y/o contraseña incorrecta.</value>
+  </data>
+  <data name="error_enviar_mensaje" xml:space="preserve">
+    <value>No se pudo enviar el mensaje.</value>
+  </data>
+  <data name="especialidad_medico" xml:space="preserve">
+    <value>Especialidad Médico</value>
   </data>
   <data name="extremidades" xml:space="preserve">
     <value>Extremidades</value>
@@ -208,8 +217,14 @@
   <data name="mensaje_sala_espera" xml:space="preserve">
     <value>Por favor aguarde a ser atendido por un médico</value>
   </data>
+  <data name="nombre_medico" xml:space="preserve">
+    <value>Nombre Médico</value>
+  </data>
   <data name="nueva_contrasenna" xml:space="preserve">
     <value>Nueva contraseña</value>
+  </data>
+  <data name="paciente" xml:space="preserve">
+    <value>Paciente</value>
   </data>
   <data name="posibles_diagnosticos" xml:space="preserve">
     <value>Posibles Diagnósticos</value>
