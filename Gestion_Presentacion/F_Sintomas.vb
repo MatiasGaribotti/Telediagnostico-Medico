@@ -162,7 +162,7 @@ Public Class F_Sintomas
                     ChangeMode(Modos.Ingresar)
 
                 Catch ex As Exception
-                    MsgBox(ex.Message)
+                    MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
 
                 End Try
         End Select
@@ -193,8 +193,7 @@ Public Class F_Sintomas
                 Dim sintomas = GetSelected()
                 Dim AdministradorBUS As New AdministradorBUS
 
-                Dim output_message As String = Translator.TranslateKey("sintoma_eliminar_exito
-")
+                Dim output_message As String = Translator.TranslateKey("sintoma_eliminar_exito")
                 For Each sintoma In sintomas
                     Try
                         AdministradorBUS.DeleteSintoma(sintoma.Id)

@@ -14,6 +14,7 @@ Public Class F_Login
     Private Sub F_Login_Load(sender As Object, e As EventArgs) Handles Me.Load
         Translator.TranslateForm(Me)
         Refresh()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click

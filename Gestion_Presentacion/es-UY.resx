@@ -296,7 +296,7 @@
     <value>Solo los médicos pueden ser administradores.</value>
   </data>
   <data name="error_ascender_varios" xml:space="preserve">
-    <value>No se puede hacer administrado a más de un médico a la vez.</value>
+    <value>No se puede hacer administrador a más de un médico a la vez.</value>
   </data>
   <data name="error_campo_obligatorio_apellidos" xml:space="preserve">
     <value>Por favor ingrese por lo menos un apellido.</value>
@@ -306,6 +306,9 @@
   </data>
   <data name="error_campo_obligatorio_ci" xml:space="preserve">
     <value>El campo cédula es obligatorio.</value>
+  </data>
+  <data name="error_campo_obligatorio_enfermedad_nombre" xml:space="preserve">
+    <value>El campo 'Enfermedad' es obligatorio.</value>
   </data>
   <data name="error_campo_obligatorio_localidad" xml:space="preserve">
     <value>El campo localidad es obligatorio.</value>
@@ -325,6 +328,9 @@
   <data name="error_credenciales_incorrectas" xml:space="preserve">
     <value>CI y/o contraseña incorrecta.</value>
   </data>
+  <data name="error_descripcion_larga" xml:space="preserve">
+    <value>La descripción es demasiado larga.</value>
+  </data>
   <data name="error_eliminar_empleado" xml:space="preserve">
     <value>Error al eliminar el empleado.</value>
   </data>
@@ -339,6 +345,9 @@
   </data>
   <data name="error_enfermedad_modificar" xml:space="preserve">
     <value>No se pudo modificar la enfermedad.</value>
+  </data>
+  <data name="error_enfermedad_nombre_largo" xml:space="preserve">
+    <value>El nombre de la enfermedad es demasiado largo.</value>
   </data>
   <data name="error_enfermedad_obtener" xml:space="preserve">
     <value>Error al obtener las enfermedades seleccionadas.</value>

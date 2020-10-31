@@ -282,6 +282,9 @@
   <data name="error_campo_obligatorio_ci" xml:space="preserve">
     <value>Field 'ID' is mandatory</value>
   </data>
+  <data name="error_campo_obligatorio_enfermedad_nombre" xml:space="preserve">
+    <value>Field 'Disease' is mandatory.</value>
+  </data>
   <data name="error_campo_obligatorio_localidad" xml:space="preserve">
     <value>Field 'Town' is mandatory.</value>
   </data>
@@ -300,6 +303,9 @@
   <data name="error_credenciales_incorrectas" xml:space="preserve">
     <value>Incorrect ID or password</value>
   </data>
+  <data name="error_descripcion_larga" xml:space="preserve">
+    <value>Description too long.</value>
+  </data>
   <data name="error_eliminar_empleado" xml:space="preserve">
     <value>Failed to delete the employee.</value>
   </data>
@@ -311,6 +317,9 @@
   </data>
   <data name="error_enfermedad_modificar" xml:space="preserve">
     <value>Failed to modify desease.</value>
+  </data>
+  <data name="error_enfermedad_nombre_largo" xml:space="preserve">
+    <value>Name of desease too long.</value>
   </data>
   <data name="error_enfermedad_obtener" xml:space="preserve">
     <value>Failed to get the selected desease.</value>

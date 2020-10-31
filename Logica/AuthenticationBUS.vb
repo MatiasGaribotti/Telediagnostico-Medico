@@ -54,7 +54,7 @@ Public Class AuthenticationBUS
     Public Shared Sub ValidateFields(ci As String, pwd As String)
 
         If Not ci.Length = 0 And Not pwd.Length = 0 Then
-            If Not ci.Length > 8 Then
+            If ci.Length = 8 Then
                 Dim chars = ci.ToCharArray
 
 
@@ -64,8 +64,9 @@ Public Class AuthenticationBUS
                     End If
                 Next
 
-            Else
-                Throw New FormatException("La cédula de identidad es obligatoria.")
+            ElseIf ci.Length < 8 Or ci.Length > 8 Then
+                Throw New FormatException("La cédula de debe ser de 8 dígitos.")
+
             End If
 
         Else

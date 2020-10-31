@@ -265,6 +265,7 @@ Partial Class F_Enfermedades
         Me.TxtIDescripcion.HoverState.Parent = Me.TxtIDescripcion
         Me.TxtIDescripcion.Location = New System.Drawing.Point(236, 523)
         Me.TxtIDescripcion.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.TxtIDescripcion.MaxLength = 511
         Me.TxtIDescripcion.Multiline = True
         Me.TxtIDescripcion.Name = "TxtIDescripcion"
         Me.TxtIDescripcion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -377,6 +378,7 @@ Partial Class F_Enfermedades
         Me.TxtIEnfermedad.HoverState.Parent = Me.TxtIEnfermedad
         Me.TxtIEnfermedad.Location = New System.Drawing.Point(236, 389)
         Me.TxtIEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.TxtIEnfermedad.MaxLength = 79
         Me.TxtIEnfermedad.Name = "TxtIEnfermedad"
         Me.TxtIEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtIEnfermedad.PlaceholderText = ""
@@ -500,6 +502,7 @@ Partial Class F_Enfermedades
         Me.TxtBEnfermedad.HoverState.Parent = Me.TxtBEnfermedad
         Me.TxtBEnfermedad.Location = New System.Drawing.Point(236, 109)
         Me.TxtBEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
+        Me.TxtBEnfermedad.MaxLength = 79
         Me.TxtBEnfermedad.Name = "TxtBEnfermedad"
         Me.TxtBEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtBEnfermedad.PlaceholderText = ""

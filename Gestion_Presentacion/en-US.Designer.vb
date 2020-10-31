@@ -560,6 +560,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Field &apos;Disease&apos; is mandatory..
+        '''</summary>
+        Friend Shared ReadOnly Property error_campo_obligatorio_enfermedad_nombre() As String
+            Get
+                Return ResourceManager.GetString("error_campo_obligatorio_enfermedad_nombre", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Field &apos;Town&apos; is mandatory..
         '''</summary>
         Friend Shared ReadOnly Property error_campo_obligatorio_localidad() As String
@@ -614,6 +623,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Description too long..
+        '''</summary>
+        Friend Shared ReadOnly Property error_descripcion_larga() As String
+            Get
+                Return ResourceManager.GetString("error_descripcion_larga", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Failed to delete the employee..
         '''</summary>
         Friend Shared ReadOnly Property error_eliminar_empleado() As String
@@ -646,6 +664,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property error_enfermedad_modificar() As String
             Get
                 Return ResourceManager.GetString("error_enfermedad_modificar", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Name of desease too long..
+        '''</summary>
+        Friend Shared ReadOnly Property error_enfermedad_nombre_largo() As String
+            Get
+                Return ResourceManager.GetString("error_enfermedad_nombre_largo", resourceCulture)
             End Get
         End Property
         

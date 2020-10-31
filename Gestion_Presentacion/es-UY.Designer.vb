@@ -596,7 +596,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Busca una cadena traducida similar a No se puede hacer administrado a más de un médico a la vez..
+        '''  Busca una cadena traducida similar a No se puede hacer administrador a más de un médico a la vez..
         '''</summary>
         Friend Shared ReadOnly Property error_ascender_varios() As String
             Get
@@ -628,6 +628,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property error_campo_obligatorio_ci() As String
             Get
                 Return ResourceManager.GetString("error_campo_obligatorio_ci", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a El campo &apos;Enfermedad&apos; es obligatorio..
+        '''</summary>
+        Friend Shared ReadOnly Property error_campo_obligatorio_enfermedad_nombre() As String
+            Get
+                Return ResourceManager.GetString("error_campo_obligatorio_enfermedad_nombre", resourceCulture)
             End Get
         End Property
         
@@ -686,6 +695,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a La descripción es demasiado larga..
+        '''</summary>
+        Friend Shared ReadOnly Property error_descripcion_larga() As String
+            Get
+                Return ResourceManager.GetString("error_descripcion_larga", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Error al eliminar el empleado..
         '''</summary>
         Friend Shared ReadOnly Property error_eliminar_empleado() As String
@@ -727,6 +745,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property error_enfermedad_modificar() As String
             Get
                 Return ResourceManager.GetString("error_enfermedad_modificar", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a El nombre de la enfermedad es demasiado largo..
+        '''</summary>
+        Friend Shared ReadOnly Property error_enfermedad_nombre_largo() As String
+            Get
+                Return ResourceManager.GetString("error_enfermedad_nombre_largo", resourceCulture)
             End Get
         End Property
         

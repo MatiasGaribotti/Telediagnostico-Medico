@@ -216,8 +216,8 @@ Partial Class F_Login
         '
         'F_Login
         '
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         resources.ApplyResources(Me, "$this")
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Controls.Add(Me.Btn_Minimize)
         Me.Controls.Add(Me.Btn_Exit)

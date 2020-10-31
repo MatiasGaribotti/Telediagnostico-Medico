@@ -4,6 +4,20 @@ Imports Microsoft.VisualBasic.FileIO
 
 Public Class EnfermedadBUS
 
+
+    Public Sub ValidateFields(nombre As String, tipo As String, urgencia As String, descripcion As String)
+        If nombre.Length = 0 Or String.IsNullOrWhiteSpace(nombre) Then
+            Throw New FormatException("error_campo_obligatorio_enfermedad_nombre")
+
+        ElseIf nombre.Length > 79 Then
+            Throw New FormatException("error_enfermedad_nombre_largo")
+
+        ElseIf descripcion.Length >= 512 Then
+            Throw New FormatException("error_descripcion_larga")
+        End If
+
+    End Sub
+
     ''' <summary>
     ''' Funcion que retorna la información de las enfermedades asociadas a un síntoma, si es que existen
     ''' </summary>
