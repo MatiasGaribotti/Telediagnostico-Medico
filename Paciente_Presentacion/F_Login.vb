@@ -37,18 +37,13 @@ Public Class F_Login
     Private Sub Btn_Ingresar_Click(sender As Object, e As EventArgs) Handles Btn_Ingresar.Click
         Try
             AuthenticationBUS.ValidateFields(TxtCi.Text, TxtPassword.Text)
-            Dim user = New Persona(CInt(TxtCi.Text), TxtPassword.Text)
+            AuthenticationBUS.LogIn(CInt(TxtCi.Text), TxtPassword.Text)
 
-            If AuthenticationBUS.Authenticate(user) Then
-                If Password.IsGenerated(TxtPassword.Text) Then
-                    F_ContrasennaAutogenerada.Show()
-                Else
-                    F_Sintomas.Show()
-                    Me.Close()
-
-                End If
+            If Password.IsGenerated(TxtPassword.Text) Then
+                F_ContrasennaAutogenerada.Show()
             Else
-                MsgBox(Translator.TranslateKey("error_credenciales_incorrectas"), MsgBoxStyle.Critical, Translator.TranslateKey("autenticacion"))
+                F_Sintomas.Show()
+                Me.Close()
 
             End If
 

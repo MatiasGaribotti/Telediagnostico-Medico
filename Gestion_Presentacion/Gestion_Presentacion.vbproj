@@ -254,9 +254,6 @@
     <None Include="My Project\img\login\background-image.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\img_btnIngresar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="My Project\img\login\Es.png" />
   </ItemGroup>
   <ItemGroup>
@@ -347,6 +344,9 @@
   <ItemGroup>
     <None Include="My Project\img\icon\st-logo 64x64.png" />
     <Content Include="st-logo 256x256.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

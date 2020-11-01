@@ -412,6 +412,9 @@
   <data name="error_obtener_empleado" xml:space="preserve">
     <value>Error al obtener el empleado.</value>
   </data>
+  <data name="error_persona_existente" xml:space="preserve">
+    <value>La persona ya se encuentra ingresada en el sistema.</value>
+  </data>
   <data name="error_sintomas_obtener" xml:space="preserve">
     <value>No se pudieron obtener los síntomas seleccionados.</value>
   </data>

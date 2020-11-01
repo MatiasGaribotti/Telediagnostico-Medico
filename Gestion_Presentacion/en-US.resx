@@ -372,6 +372,9 @@
   <data name="error_modificar_varios" xml:space="preserve">
     <value>Can't modify multiple [ENTIDAD] at once.</value>
   </data>
+  <data name="error_persona_existente" xml:space="preserve">
+    <value>Person already in the system.</value>
+  </data>
   <data name="error_sintomas_obtener" xml:space="preserve">
     <value>Failed to get the selected symptoms.</value>
   </data>

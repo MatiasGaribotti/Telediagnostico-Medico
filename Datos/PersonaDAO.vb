@@ -1,6 +1,13 @@
 ﻿Imports Dominio
+Imports ADODB
 Public Class PersonaDAO
     Inherits DBConnection
+
+    Private Enum SearchResult
+        NotFound
+        Enabled
+        Disabled
+    End Enum
 
     Public Sub UpdatePassword(ci As Integer, password As String)
         Dim query As String = "UPDATE personas SET password='" & password & "' WHERE ci='" & ci & "';"
@@ -31,12 +38,13 @@ Public Class PersonaDAO
         Dim DireccionDAO As New DireccionDAO
 
         Try
-            'Ingreso la dirección a la DB
-            DireccionDAO.Insert(pPersona.Direccion)
-            Dim idDireccion = DireccionDAO.GetId(pPersona.Direccion)
 
-            ' Sentencia para ingresar un paciente
-            Dim query = "INSERT INTO personas(" &
+            If GetPersona(pPersona.Ci) = SearchResult.NotFound Then
+                'Ingreso la dirección a la DB
+                DireccionDAO.Insert(pPersona.Direccion)
+                Dim idDireccion = DireccionDAO.GetId(pPersona.Direccion)
+                ' Sentencia para ingresar un paciente
+                Dim query = "INSERT INTO personas(" &
                               "ci," &
                               "nombre," &
                               " apellidoP," &
@@ -57,7 +65,14 @@ Public Class PersonaDAO
                               pPersona.Password & "'," &
                               idDireccion &
                               ");"
-            Conn.Execute(query)
+                Conn.Execute(query)
+
+            ElseIf GetPersona(pPersona.Ci) = SearchResult.Disabled Then
+                ModifyPersona(pPersona)
+
+            Else
+                Throw New Exception("error_persona_existente")
+            End If
         Catch ex As Exception
             Throw New Exception("error_ingresar_persona")
         End Try
@@ -71,7 +86,8 @@ Public Class PersonaDAO
                               "apellidoM='" & pPersona.ApellidoM & "', " &
                               "sexo=" & pPersona.Sexo & ", " &
                               "fechaNacimiento='" & Format(pPersona.Fecha_Nacimiento, "yyyy-MM-dd") & "', " &
-                              "telefono=" & pPersona.Telefono &
+                              "telefono=" & pPersona.Telefono & ", " &
+                              "ENABLED=1" &
                               " WHERE ci=" & pPersona.Ci & ";"
 
         Dim idDireccion = DireccionDAO.GetIdByCi(pPersona.Ci)
@@ -109,4 +125,27 @@ Public Class PersonaDAO
             Conn.Close()
         End Try
     End Sub
+
+    Private Function GetPersona(ci As Integer) As SearchResult
+        Dim query = "SELECT enabled FROM personas WHERE ci=" & ci & ";"
+        Dim rs As Recordset
+        Dim dt As New DataTable
+        Dim da As New OleDb.OleDbDataAdapter
+
+        rs = Conn.Execute(query)
+        da.Fill(dt, rs)
+
+        If dt.Rows.Count = 1 Then
+            Dim enabled = CBool(dt.Rows.Item(0).Field(Of Int16)("ENABLED"))
+            If enabled Then
+                Return SearchResult.Enabled
+            Else
+                Return SearchResult.Disabled
+
+            End If
+        Else
+            Return SearchResult.NotFound
+
+        End If
+    End Function
 End Class

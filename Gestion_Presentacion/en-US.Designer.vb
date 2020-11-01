@@ -830,6 +830,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Person already in the system..
+        '''</summary>
+        Friend Shared ReadOnly Property error_persona_existente() As String
+            Get
+                Return ResourceManager.GetString("error_persona_existente", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Failed to get the selected symptoms..
         '''</summary>
         Friend Shared ReadOnly Property error_sintomas_obtener() As String

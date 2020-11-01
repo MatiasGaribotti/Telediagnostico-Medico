@@ -76,4 +76,8 @@
         Me.New(id, nombre, descripcion, tipo)
         Me.Enabled = enabled
     End Sub
+
+    Public Overrides Function Equals(obj As Object) As Boolean
+        Return Me.Id = obj.id
+    End Function
 End Class

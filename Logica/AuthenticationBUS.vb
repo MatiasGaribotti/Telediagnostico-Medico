@@ -1,6 +1,14 @@
 ﻿Imports Datos
 Imports Dominio
 Public Class AuthenticationBUS
+
+    Public Shared Sub LogIn(ci As Integer, password As String)
+        Dim user As New Persona(ci, password)
+        If Not Authenticate(user) Then
+            Throw New Exception("error_credenciales_incorrectas")
+        End If
+    End Sub
+
     Public Shared Sub LogOut()
         Env.CurrentUser = New Persona()
         Env.ChangeLanguage(Env.Cultures.Espannol)

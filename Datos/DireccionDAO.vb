@@ -13,7 +13,7 @@ Public Class DireccionDAO
         Try
             Conn.Execute(query)
         Catch ex As Exception
-            Throw New ApplicationException("No se pudo ingresar la dirección del paciente.")
+            Throw New ApplicationException("No se pudo ingresar la dirección.")
         End Try
     End Sub
 

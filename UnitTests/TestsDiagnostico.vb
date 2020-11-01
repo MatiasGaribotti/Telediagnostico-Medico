@@ -5,6 +5,12 @@ Imports Logica
 Imports System.Threading
 <TestClass()> Public Class TestsDiagnostico
 
+
+    <ClassInitialize()> Public Shared Sub ClassInitialize()
+        'AuthenticationBUS.LogIn(11755149, "123")
+
+    End Sub
+
     <TestMethod()> Public Sub GetDiagnostico_1()
         Dim successful As Boolean = True
 

@@ -28,6 +28,7 @@ Partial Class F_Login
         Me.Pnl_Login = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnChangeLang = New Guna.UI2.WinForms.Guna2Button()
+        Me.PicLogin = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.LblPassword = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LblCi = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Btn_Ingresar = New Guna.UI2.WinForms.Guna2Button()
@@ -38,7 +39,6 @@ Partial Class F_Login
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.PicLogin = New Guna.UI2.WinForms.Guna2PictureBox()
         CType(Me.PicBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_Login.SuspendLayout()
         CType(Me.PicLogin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,6 +90,15 @@ Partial Class F_Login
         Me.BtnChangeLang.Name = "BtnChangeLang"
         Me.BtnChangeLang.ShadowDecoration.Parent = Me.BtnChangeLang
         Me.BtnChangeLang.UseTransparentBackground = True
+        '
+        'PicLogin
+        '
+        Me.PicLogin.BorderRadius = 33
+        Me.PicLogin.Image = Global.Presentacion.My.Resources.Resources.background
+        resources.ApplyResources(Me.PicLogin, "PicLogin")
+        Me.PicLogin.Name = "PicLogin"
+        Me.PicLogin.ShadowDecoration.Parent = Me.PicLogin
+        Me.PicLogin.TabStop = False
         '
         'LblPassword
         '
@@ -204,15 +213,6 @@ Partial Class F_Login
         Me.Btn_Exit.IconColor = System.Drawing.Color.White
         Me.Btn_Exit.Name = "Btn_Exit"
         Me.Btn_Exit.ShadowDecoration.Parent = Me.Btn_Exit
-        '
-        'PicLogin
-        '
-        Me.PicLogin.BorderRadius = 33
-        Me.PicLogin.Image = Global.Presentacion.My.Resources.Resources.background
-        resources.ApplyResources(Me.PicLogin, "PicLogin")
-        Me.PicLogin.Name = "PicLogin"
-        Me.PicLogin.ShadowDecoration.Parent = Me.PicLogin
-        Me.PicLogin.TabStop = False
         '
         'F_Login
         '
