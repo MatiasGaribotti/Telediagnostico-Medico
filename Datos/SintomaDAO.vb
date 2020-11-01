@@ -3,6 +3,7 @@ Imports Dominio
 Public Class SintomaDAO
     Inherits DBConnection
 
+
     ''' <summary>
     ''' Ingresa un nuevo síntoma al sistema.
     ''' </summary>
@@ -68,35 +69,49 @@ Public Class SintomaDAO
         End Try
 
         Try
-            Conn.BeginTrans()
 
             For Each sintoma In listaSintomas
-                Dim recordSet As Recordset
-                Dim idSintoma As Short
+                Conn.BeginTrans()
+                Dim search = GetSintomaByName(sintoma.Nombre)
+                If search IsNot Nothing Then
+                    If Not search.Enabled Then
+                        Dim enableSymptom = "UPDATE sintomas SET ENABLED=1 WHERE id=" & search.Id & ";"
+                    End If
 
-                Dim insertSintoma = "INSERT INTO sintomas(nombre,descripcion,tipo) " &
-                                    "VALUES('" &
-                sintoma.Nombre & "','" &
-                sintoma.Descripcion & "'," &
-                sintoma.Tipo & ");"
+                Else
+                    Dim recordSet As Recordset
 
-                Dim selectSintoma = "SELECT id FROM sintomas " &
-                                    "WHERE nombre='" & sintoma.Nombre & "' AND descripcion='" & sintoma.Descripcion & "' AND tipo=" & sintoma.Tipo & ";"
+                    Dim insertSintoma = "INSERT INTO sintomas(nombre,descripcion,tipo) " &
+                                        "VALUES('" &
+                    sintoma.Nombre & "','" &
+                    sintoma.Descripcion & "'," &
+                    sintoma.Tipo & ");"
 
-                Conn.Execute(insertSintoma)
-                recordSet = Conn.Execute(selectSintoma)
+                    Dim selectSintoma = "SELECT id FROM sintomas " &
+                                        "WHERE nombre='" & sintoma.Nombre & "';"
 
-                'Asigno el valor del campo id
-                'a la variable idSintoma
-                idSintoma = recordSet.Fields("id").Value
+
+                    Conn.Execute(insertSintoma)
+                    recordSet = Conn.Execute(selectSintoma)
+
+                    'Asigno el valor del campo id
+                    'a la variable idSintoma
+                    sintoma.Id = recordSet.Fields("id").Value
+
+                End If
 
                 For Each enfermedad In sintoma.Enfermedades
-                    AddSintomaEnfermedad(idSintoma, enfermedad.Id)
-                Next
+                    Try
+                        AddSintomaEnfermedad(sintoma.Id, enfermedad.Id)
 
+                    Catch ex As Exception
+
+                    End Try
+                Next
+                Conn.CommitTrans()
             Next
 
-            Conn.CommitTrans()
+
         Catch ex As Exception
             Conn.RollbackTrans()
             Throw ex
@@ -104,7 +119,6 @@ Public Class SintomaDAO
         Finally
             Conn.Close()
         End Try
-
     End Sub
 
     ''' <summary>
@@ -115,11 +129,7 @@ Public Class SintomaDAO
     Public Sub AddSintomaEnfermedad(idSintoma As Short, idEnfermedad As Short)
         Dim insert = "INSERT INTO enfermedades_sintomas(idSintoma, idEnfermedad) " &
                      "VALUES(" & idSintoma & "," & idEnfermedad & ");"
-        Try
-            Conn.Execute(insert)
-        Catch ex As Exception
-            Throw New Exception("Error al asociar el síntoma con una enfermedad.")
-        End Try
+        Conn.Execute(insert)
     End Sub
 
     Public Sub DelSintomaEnfermedad(idSintoma As Integer)
@@ -130,6 +140,29 @@ Public Class SintomaDAO
             Throw ex
         End Try
     End Sub
+
+    Private Function GetSintomaByName(name As String) As Sintoma
+        Dim query As String = "SELECT * FROM sintomas WHERE nombre='" & name & "';"
+        Dim rs As Recordset
+        Dim dt As New DataTable
+        Dim da As New OleDb.OleDbDataAdapter
+
+        rs = Conn.Execute(query)
+        da.Fill(dt, rs)
+
+        If dt.Rows.Count = 1 Then
+            Dim row = dt.Rows.Item(0)
+            Dim id = row.Field(Of Int32)("id")
+            Dim tipo = [Enum].Parse(GetType(Sintoma.TiposSintomas), row.Field(Of String)("tipo"))
+            Dim descripcion = row.Field(Of String)("descripcion")
+            Dim enabled = CBool(row.Field(Of Int16)("ENABLED"))
+
+            Return New Sintoma(id, name, descripcion, tipo, enabled)
+
+        Else
+            Return Nothing
+        End If
+    End Function
 
     ''' <summary>
     ''' Obtiene todos los síntomas almacenados en la base de datos.

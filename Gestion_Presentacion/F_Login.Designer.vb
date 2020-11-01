@@ -28,7 +28,6 @@ Partial Class F_Login
         Me.Pnl_Login = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnChangeLang = New Guna.UI2.WinForms.Guna2Button()
-        Me.PicLogin = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.LblPassword = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LblCi = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Btn_Ingresar = New Guna.UI2.WinForms.Guna2Button()
@@ -39,6 +38,7 @@ Partial Class F_Login
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.Btn_Minimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Btn_Exit = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.PicLogin = New Guna.UI2.WinForms.Guna2PictureBox()
         CType(Me.PicBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_Login.SuspendLayout()
         CType(Me.PicLogin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,15 +90,6 @@ Partial Class F_Login
         Me.BtnChangeLang.Name = "BtnChangeLang"
         Me.BtnChangeLang.ShadowDecoration.Parent = Me.BtnChangeLang
         Me.BtnChangeLang.UseTransparentBackground = True
-        '
-        'PicLogin
-        '
-        Me.PicLogin.BorderRadius = 33
-        Me.PicLogin.Image = Global.Presentacion.My.Resources.Resources.background
-        resources.ApplyResources(Me.PicLogin, "PicLogin")
-        Me.PicLogin.Name = "PicLogin"
-        Me.PicLogin.ShadowDecoration.Parent = Me.PicLogin
-        Me.PicLogin.TabStop = False
         '
         'LblPassword
         '
@@ -214,10 +205,19 @@ Partial Class F_Login
         Me.Btn_Exit.Name = "Btn_Exit"
         Me.Btn_Exit.ShadowDecoration.Parent = Me.Btn_Exit
         '
+        'PicLogin
+        '
+        Me.PicLogin.BorderRadius = 33
+        Me.PicLogin.Image = Global.Presentacion.My.Resources.Resources.background
+        resources.ApplyResources(Me.PicLogin, "PicLogin")
+        Me.PicLogin.Name = "PicLogin"
+        Me.PicLogin.ShadowDecoration.Parent = Me.PicLogin
+        Me.PicLogin.TabStop = False
+        '
         'F_Login
         '
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         resources.ApplyResources(Me, "$this")
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Controls.Add(Me.Btn_Minimize)
         Me.Controls.Add(Me.Btn_Exit)
@@ -227,7 +227,6 @@ Partial Class F_Login
         Me.Controls.Add(Me.PicBackground)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "F_Login"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PicBackground, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_Login.ResumeLayout(False)
         Me.Pnl_Login.PerformLayout()
@@ -238,7 +237,6 @@ Partial Class F_Login
     Friend WithEvents PicBackground As PictureBox
     Friend WithEvents Pnl_Login As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BtnChangeLang As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents PicLogin As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents LblPassword As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblCi As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Btn_Ingresar As Guna.UI2.WinForms.Guna2Button
@@ -250,4 +248,5 @@ Partial Class F_Login
     Friend WithEvents Btn_Minimize As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Btn_Exit As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents PicLogin As Guna.UI2.WinForms.Guna2PictureBox
 End Class

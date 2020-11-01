@@ -4,6 +4,7 @@
     Public Property Descripcion As String
     Public Property Tipo As TiposSintomas
     Public Property Enfermedades As List(Of Enfermedad)
+    Public Property Enabled As Boolean
 
     Public Enum TiposSintomas
         Cabeza = 1 'inicializo en 1 el primer miembro para que coincida con la BD.
@@ -17,6 +18,7 @@
         Me.Descripcion = ""
         Me.Tipo = TiposSintomas.Cabeza
         Me.Enfermedades = New List(Of Enfermedad)
+        Enabled = True
     End Sub
 
     Public Sub New(id As Short)
@@ -25,6 +27,7 @@
         Me.Descripcion = ""
         Me.Tipo = TiposSintomas.Cabeza
         Me.Enfermedades = New List(Of Enfermedad)
+        Enabled = True
     End Sub
 
     Public Sub New(id As Short,
@@ -36,6 +39,7 @@
         Me.Descripcion = descripcion
         Me.Tipo = tipo
         Me.Enfermedades = New List(Of Enfermedad)
+        Enabled = True
     End Sub
 
     Public Sub New(id As Short,
@@ -48,6 +52,7 @@
         Me.Descripcion = descripcion
         Me.Tipo = tipo
         Me.Enfermedades = enfermedades
+        Enabled = True
     End Sub
 
     Public Sub New(nombre As String, descripcion As String, Tipo As TiposSintomas)
@@ -56,6 +61,7 @@
         Me.Descripcion = descripcion
         Me.Tipo = Tipo
         Me.Enfermedades = New List(Of Enfermedad)
+        Enabled = True
     End Sub
 
     Public Sub New(nombre As String, Tipo As TiposSintomas)
@@ -64,5 +70,10 @@
         Me.Descripcion = Descripcion
         Me.Tipo = Tipo
         Me.Enfermedades = New List(Of Enfermedad)
+    End Sub
+
+    Public Sub New(id As Short, nombre As String, descripcion As String, tipo As TiposSintomas, enabled As Boolean)
+        Me.New(id, nombre, descripcion, tipo)
+        Me.Enabled = enabled
     End Sub
 End Class

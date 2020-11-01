@@ -282,7 +282,7 @@ Public Class F_Sintomas
             Try
                 SintomaBUS.ImportCSV(OFDialogCSV.FileName)
                 LoadDgv()
-                MsgBox("sintoma_import_exito", MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
+                MsgBox(Translator.TranslateKey("sintoma_import_exito"), MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
 
             Catch ex As Exception
                 MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))

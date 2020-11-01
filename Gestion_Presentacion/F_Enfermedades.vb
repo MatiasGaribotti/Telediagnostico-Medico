@@ -226,7 +226,7 @@ Public Class F_Enfermedades
             Try
                 EnfermedadBUS.ImportCSV(OFDialogCSV.FileName)
                 LoadDgv()
-                MsgBox("enfermedad_import_exito", MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
+                MsgBox(Translator.TranslateKey("enfermedad_import_exito"), MsgBoxStyle.Information, Translator.TranslateKey("informacion"))
             Catch ex As Exception
                 MsgBox(Translator.TranslateKey(ex.Message), MsgBoxStyle.Critical, Translator.TranslateKey("error"))
             End Try
