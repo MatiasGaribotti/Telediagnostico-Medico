@@ -27,10 +27,6 @@ Partial Class F_Enfermedades
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Enfermedades))
         Me.PnlSide = New Guna.UI2.WinForms.Guna2Panel()
-        Me.CmbITipoEnfermedad = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.LblITipoEnfermedad = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.CmbBTipoEnfermedad = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.LblBTipoEnfermedad = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.ChkBCronica = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.ChkICronica = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
@@ -64,10 +60,6 @@ Partial Class F_Enfermedades
         '
         'PnlSide
         '
-        Me.PnlSide.Controls.Add(Me.CmbITipoEnfermedad)
-        Me.PnlSide.Controls.Add(Me.LblITipoEnfermedad)
-        Me.PnlSide.Controls.Add(Me.CmbBTipoEnfermedad)
-        Me.PnlSide.Controls.Add(Me.LblBTipoEnfermedad)
         Me.PnlSide.Controls.Add(Me.ChkBCronica)
         Me.PnlSide.Controls.Add(Me.ChkICronica)
         Me.PnlSide.Controls.Add(Me.BtnCancelar)
@@ -95,72 +87,6 @@ Partial Class F_Enfermedades
         Me.PnlSide.Size = New System.Drawing.Size(573, 1080)
         Me.PnlSide.TabIndex = 0
         '
-        'CmbITipoEnfermedad
-        '
-        Me.CmbITipoEnfermedad.Animated = True
-        Me.CmbITipoEnfermedad.BackColor = System.Drawing.Color.Transparent
-        Me.CmbITipoEnfermedad.BorderRadius = 6
-        Me.CmbITipoEnfermedad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmbITipoEnfermedad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmbITipoEnfermedad.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbITipoEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbITipoEnfermedad.FocusedState.Parent = Me.CmbITipoEnfermedad
-        Me.CmbITipoEnfermedad.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.CmbITipoEnfermedad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmbITipoEnfermedad.HoverState.Parent = Me.CmbITipoEnfermedad
-        Me.CmbITipoEnfermedad.ItemHeight = 30
-        Me.CmbITipoEnfermedad.ItemsAppearance.Parent = Me.CmbITipoEnfermedad
-        Me.CmbITipoEnfermedad.Location = New System.Drawing.Point(236, 428)
-        Me.CmbITipoEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.CmbITipoEnfermedad.Name = "CmbITipoEnfermedad"
-        Me.CmbITipoEnfermedad.ShadowDecoration.Parent = Me.CmbITipoEnfermedad
-        Me.CmbITipoEnfermedad.Size = New System.Drawing.Size(230, 36)
-        Me.CmbITipoEnfermedad.TabIndex = 113
-        '
-        'LblITipoEnfermedad
-        '
-        Me.LblITipoEnfermedad.BackColor = System.Drawing.Color.Transparent
-        Me.LblITipoEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblITipoEnfermedad.Location = New System.Drawing.Point(57, 437)
-        Me.LblITipoEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.LblITipoEnfermedad.Name = "LblITipoEnfermedad"
-        Me.LblITipoEnfermedad.Size = New System.Drawing.Size(160, 27)
-        Me.LblITipoEnfermedad.TabIndex = 112
-        Me.LblITipoEnfermedad.Text = "tipo_enfermedad"
-        '
-        'CmbBTipoEnfermedad
-        '
-        Me.CmbBTipoEnfermedad.Animated = True
-        Me.CmbBTipoEnfermedad.BackColor = System.Drawing.Color.Transparent
-        Me.CmbBTipoEnfermedad.BorderRadius = 6
-        Me.CmbBTipoEnfermedad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CmbBTipoEnfermedad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmbBTipoEnfermedad.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbBTipoEnfermedad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CmbBTipoEnfermedad.FocusedState.Parent = Me.CmbBTipoEnfermedad
-        Me.CmbBTipoEnfermedad.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.CmbBTipoEnfermedad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CmbBTipoEnfermedad.HoverState.Parent = Me.CmbBTipoEnfermedad
-        Me.CmbBTipoEnfermedad.ItemHeight = 30
-        Me.CmbBTipoEnfermedad.ItemsAppearance.Parent = Me.CmbBTipoEnfermedad
-        Me.CmbBTipoEnfermedad.Location = New System.Drawing.Point(237, 148)
-        Me.CmbBTipoEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.CmbBTipoEnfermedad.Name = "CmbBTipoEnfermedad"
-        Me.CmbBTipoEnfermedad.ShadowDecoration.Parent = Me.CmbBTipoEnfermedad
-        Me.CmbBTipoEnfermedad.Size = New System.Drawing.Size(230, 36)
-        Me.CmbBTipoEnfermedad.TabIndex = 111
-        '
-        'LblBTipoEnfermedad
-        '
-        Me.LblBTipoEnfermedad.BackColor = System.Drawing.Color.Transparent
-        Me.LblBTipoEnfermedad.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBTipoEnfermedad.Location = New System.Drawing.Point(58, 157)
-        Me.LblBTipoEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.LblBTipoEnfermedad.Name = "LblBTipoEnfermedad"
-        Me.LblBTipoEnfermedad.Size = New System.Drawing.Size(160, 27)
-        Me.LblBTipoEnfermedad.TabIndex = 110
-        Me.LblBTipoEnfermedad.Text = "tipo_enfermedad"
-        '
         'ChkBCronica
         '
         Me.ChkBCronica.Animated = True
@@ -171,7 +97,7 @@ Partial Class F_Enfermedades
         Me.ChkBCronica.CheckedState.BorderThickness = 0
         Me.ChkBCronica.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ChkBCronica.Font = New System.Drawing.Font("Roboto", 16.0!)
-        Me.ChkBCronica.Location = New System.Drawing.Point(237, 237)
+        Me.ChkBCronica.Location = New System.Drawing.Point(236, 197)
         Me.ChkBCronica.Name = "ChkBCronica"
         Me.ChkBCronica.Size = New System.Drawing.Size(104, 31)
         Me.ChkBCronica.TabIndex = 109
@@ -192,7 +118,7 @@ Partial Class F_Enfermedades
         Me.ChkICronica.CheckedState.BorderThickness = 0
         Me.ChkICronica.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ChkICronica.Font = New System.Drawing.Font("Roboto", 16.0!)
-        Me.ChkICronica.Location = New System.Drawing.Point(237, 597)
+        Me.ChkICronica.Location = New System.Drawing.Point(238, 554)
         Me.ChkICronica.Name = "ChkICronica"
         Me.ChkICronica.Size = New System.Drawing.Size(104, 31)
         Me.ChkICronica.TabIndex = 108
@@ -216,7 +142,7 @@ Partial Class F_Enfermedades
         Me.BtnCancelar.ForeColor = System.Drawing.Color.White
         Me.BtnCancelar.HoverState.Parent = Me.BtnCancelar
         Me.BtnCancelar.ImageSize = New System.Drawing.Size(0, 0)
-        Me.BtnCancelar.Location = New System.Drawing.Point(349, 648)
+        Me.BtnCancelar.Location = New System.Drawing.Point(350, 605)
         Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.ShadowDecoration.Parent = Me.BtnCancelar
@@ -237,7 +163,7 @@ Partial Class F_Enfermedades
         Me.BtnIngresar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnIngresar.ForeColor = System.Drawing.Color.White
         Me.BtnIngresar.HoverState.Parent = Me.BtnIngresar
-        Me.BtnIngresar.Location = New System.Drawing.Point(446, 648)
+        Me.BtnIngresar.Location = New System.Drawing.Point(447, 605)
         Me.BtnIngresar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnIngresar.Name = "BtnIngresar"
         Me.BtnIngresar.ShadowDecoration.Parent = Me.BtnIngresar
@@ -263,9 +189,8 @@ Partial Class F_Enfermedades
         Me.TxtIDescripcion.Font = New System.Drawing.Font("Roboto", 16.0!)
         Me.TxtIDescripcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TxtIDescripcion.HoverState.Parent = Me.TxtIDescripcion
-        Me.TxtIDescripcion.Location = New System.Drawing.Point(236, 523)
+        Me.TxtIDescripcion.Location = New System.Drawing.Point(237, 480)
         Me.TxtIDescripcion.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.TxtIDescripcion.MaxLength = 511
         Me.TxtIDescripcion.Multiline = True
         Me.TxtIDescripcion.Name = "TxtIDescripcion"
         Me.TxtIDescripcion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -279,7 +204,7 @@ Partial Class F_Enfermedades
         '
         Me.LblIDescripcion.BackColor = System.Drawing.Color.Transparent
         Me.LblIDescripcion.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIDescripcion.Location = New System.Drawing.Point(56, 523)
+        Me.LblIDescripcion.Location = New System.Drawing.Point(57, 480)
         Me.LblIDescripcion.Name = "LblIDescripcion"
         Me.LblIDescripcion.Size = New System.Drawing.Size(112, 27)
         Me.LblIDescripcion.TabIndex = 102
@@ -297,7 +222,7 @@ Partial Class F_Enfermedades
         Me.BtnImportar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnImportar.ForeColor = System.Drawing.Color.White
         Me.BtnImportar.HoverState.Parent = Me.BtnImportar
-        Me.BtnImportar.Location = New System.Drawing.Point(236, 648)
+        Me.BtnImportar.Location = New System.Drawing.Point(237, 605)
         Me.BtnImportar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnImportar.Name = "BtnImportar"
         Me.BtnImportar.ShadowDecoration.Parent = Me.BtnImportar
@@ -332,7 +257,7 @@ Partial Class F_Enfermedades
         Me.CmbIUrgencia.HoverState.Parent = Me.CmbIUrgencia
         Me.CmbIUrgencia.ItemHeight = 30
         Me.CmbIUrgencia.ItemsAppearance.Parent = Me.CmbIUrgencia
-        Me.CmbIUrgencia.Location = New System.Drawing.Point(236, 471)
+        Me.CmbIUrgencia.Location = New System.Drawing.Point(237, 428)
         Me.CmbIUrgencia.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.CmbIUrgencia.Name = "CmbIUrgencia"
         Me.CmbIUrgencia.ShadowDecoration.Parent = Me.CmbIUrgencia
@@ -343,7 +268,7 @@ Partial Class F_Enfermedades
         '
         Me.LblIUrgencia.BackColor = System.Drawing.Color.Transparent
         Me.LblIUrgencia.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIUrgencia.Location = New System.Drawing.Point(56, 476)
+        Me.LblIUrgencia.Location = New System.Drawing.Point(57, 433)
         Me.LblIUrgencia.Name = "LblIUrgencia"
         Me.LblIUrgencia.Size = New System.Drawing.Size(84, 27)
         Me.LblIUrgencia.TabIndex = 94
@@ -378,7 +303,6 @@ Partial Class F_Enfermedades
         Me.TxtIEnfermedad.HoverState.Parent = Me.TxtIEnfermedad
         Me.TxtIEnfermedad.Location = New System.Drawing.Point(236, 389)
         Me.TxtIEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.TxtIEnfermedad.MaxLength = 79
         Me.TxtIEnfermedad.Name = "TxtIEnfermedad"
         Me.TxtIEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtIEnfermedad.PlaceholderText = ""
@@ -399,7 +323,7 @@ Partial Class F_Enfermedades
         Me.BtnFiltrar.Font = New System.Drawing.Font("Roboto", 14.0!)
         Me.BtnFiltrar.ForeColor = System.Drawing.Color.White
         Me.BtnFiltrar.HoverState.Parent = Me.BtnFiltrar
-        Me.BtnFiltrar.Location = New System.Drawing.Point(449, 267)
+        Me.BtnFiltrar.Location = New System.Drawing.Point(448, 227)
         Me.BtnFiltrar.Margin = New System.Windows.Forms.Padding(3, 23, 3, 3)
         Me.BtnFiltrar.Name = "BtnFiltrar"
         Me.BtnFiltrar.ShadowDecoration.Parent = Me.BtnFiltrar
@@ -454,7 +378,7 @@ Partial Class F_Enfermedades
         Me.CmbBUrgencia.HoverState.Parent = Me.CmbBUrgencia
         Me.CmbBUrgencia.ItemHeight = 30
         Me.CmbBUrgencia.ItemsAppearance.Parent = Me.CmbBUrgencia
-        Me.CmbBUrgencia.Location = New System.Drawing.Point(236, 191)
+        Me.CmbBUrgencia.Location = New System.Drawing.Point(235, 151)
         Me.CmbBUrgencia.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.CmbBUrgencia.Name = "CmbBUrgencia"
         Me.CmbBUrgencia.ShadowDecoration.Parent = Me.CmbBUrgencia
@@ -465,7 +389,7 @@ Partial Class F_Enfermedades
         '
         Me.LblBUrgencia.BackColor = System.Drawing.Color.Transparent
         Me.LblBUrgencia.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBUrgencia.Location = New System.Drawing.Point(56, 196)
+        Me.LblBUrgencia.Location = New System.Drawing.Point(55, 156)
         Me.LblBUrgencia.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
         Me.LblBUrgencia.Name = "LblBUrgencia"
         Me.LblBUrgencia.Size = New System.Drawing.Size(84, 27)
@@ -502,7 +426,6 @@ Partial Class F_Enfermedades
         Me.TxtBEnfermedad.HoverState.Parent = Me.TxtBEnfermedad
         Me.TxtBEnfermedad.Location = New System.Drawing.Point(236, 109)
         Me.TxtBEnfermedad.Margin = New System.Windows.Forms.Padding(0, 0, 0, 7)
-        Me.TxtBEnfermedad.MaxLength = 79
         Me.TxtBEnfermedad.Name = "TxtBEnfermedad"
         Me.TxtBEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtBEnfermedad.PlaceholderText = ""
@@ -705,8 +628,4 @@ Partial Class F_Enfermedades
     Friend WithEvents ChkICronica As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents ChkBCronica As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents OFDialogCSV As OpenFileDialog
-    Friend WithEvents CmbITipoEnfermedad As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents LblITipoEnfermedad As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents CmbBTipoEnfermedad As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents LblBTipoEnfermedad As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

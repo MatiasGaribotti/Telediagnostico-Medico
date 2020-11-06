@@ -31,6 +31,7 @@ Partial Class F_Chat
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Chat))
         Me.PnlSide = New Guna.UI2.WinForms.Guna2Panel()
         Me.BtnCerrarSesion = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnFinalizarChat = New Guna.UI2.WinForms.Guna2Button()
@@ -553,6 +554,7 @@ Partial Class F_Chat
         Me.Controls.Add(Me.PnlSide)
         Me.Controls.Add(Me.PnlChat)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "F_Chat"
         Me.Text = "F_Main"
         Me.PnlSide.ResumeLayout(False)

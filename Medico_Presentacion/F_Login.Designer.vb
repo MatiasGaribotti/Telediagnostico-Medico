@@ -90,7 +90,6 @@ Partial Class F_Login
         '
         'PicLogin
         '
-        Me.PicLogin.Image = Global.Medico_Presentacion.My.Resources.Resources.background
         resources.ApplyResources(Me.PicLogin, "PicLogin")
         Me.PicLogin.Name = "PicLogin"
         Me.PicLogin.ShadowDecoration.Parent = Me.PicLogin

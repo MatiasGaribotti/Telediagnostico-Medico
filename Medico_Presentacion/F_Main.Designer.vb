@@ -34,6 +34,7 @@ Partial Class F_Main
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Main))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.BtnCerrarSesion = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnFinalizarChat = New Guna.UI2.WinForms.Guna2Button()
@@ -586,6 +587,7 @@ Partial Class F_Main
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "F_Main"
         Me.Text = "F_Main"
         Me.Guna2Panel1.ResumeLayout(False)

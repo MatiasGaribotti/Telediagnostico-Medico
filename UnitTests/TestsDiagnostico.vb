@@ -6,8 +6,8 @@ Imports System.Threading
 <TestClass()> Public Class TestsDiagnostico
 
 
-    <ClassInitialize()> Public Shared Sub ClassInitialize()
-        'AuthenticationBUS.LogIn(11755149, "123")
+    <ClassInitialize()> Public Shared Sub ClassInitialize(context As TestContext)
+        AuthenticationBUS.LogIn(11755149, "123")
 
     End Sub
 

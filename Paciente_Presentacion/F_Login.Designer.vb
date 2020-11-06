@@ -236,6 +236,7 @@ Partial Class F_Login
         Me.Controls.Add(Me.Btn_Exit)
         Me.Controls.Add(Me.pic_background)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "F_Login"
         Me.Text = "Login"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

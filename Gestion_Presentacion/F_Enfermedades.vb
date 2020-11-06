@@ -86,7 +86,6 @@ Public Class F_Enfermedades
     'Función que valida los campos
     Private Sub ValidateFields()
         EnfermedadBUS.ValidateFields(TxtIEnfermedad.Text,
-                                     CmbITipoEnfermedad.SelectedItem.ToString,
                                      CmbIUrgencia.SelectedItem.ToString,
                                      TxtIDescripcion.Text)
     End Sub

@@ -5,7 +5,7 @@ Imports Microsoft.VisualBasic.FileIO
 Public Class EnfermedadBUS
 
 
-    Public Sub ValidateFields(nombre As String, tipo As String, urgencia As String, descripcion As String)
+    Public Sub ValidateFields(nombre As String, urgencia As String, descripcion As String)
         If nombre.Length = 0 Or String.IsNullOrWhiteSpace(nombre) Then
             Throw New FormatException("error_campo_obligatorio_enfermedad_nombre")
 

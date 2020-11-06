@@ -29,6 +29,7 @@ Partial Class F_Sintomas
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Sintomas))
         Me.PnlRight = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblTodo = New System.Windows.Forms.Label()
         Me.BtnFullBody = New Guna.UI2.WinForms.Guna2Button()
@@ -526,8 +527,8 @@ Partial Class F_Sintomas
         '
         'F_Sintomas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -536,6 +537,7 @@ Partial Class F_Sintomas
         Me.Controls.Add(Me.PnlRight)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "F_Sintomas"
         Me.Text = "Seleccionar Síntomas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
